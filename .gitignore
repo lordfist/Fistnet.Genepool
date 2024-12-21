@@ -1,0 +1,19 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/Fistnet.Genepool
+/Fistnet.Genepool.App/.vs
+/Fistnet.Genepool.App/bin/Debug
+/Fistnet.Genepool.App/obj/x86/Debug
+/Fistnet.Genepool.Control/bin/Debug
+/Fistnet.Genepool.Control/.vs
+/Fistnet.Genepool.Control/obj/Debug
+/Fistnet.Genepool.Dna/.vs
+/Fistnet.Genepool.Dna/bin/Debug
+/Fistnet.Genepool.Dna/obj/Debug
+/Fistnet.Genepool.Visualization/.vs
+/Fistnet.Genepool.Visualization/bin/Debug
+/Fistnet.Genepool.Visualization/obj/Debug
+/Libraries
+*.suo
