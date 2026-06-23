@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using FistCore.Common;
 using Fistnet.Genepool.Dna.Elements;
 
 namespace Fistnet.Genepool.Dna
