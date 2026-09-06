@@ -1,0 +1,433 @@
+{
+  "actor": "Seed Analyzer",
+  "note": "Record owner-requested environment capability assessment and VS2022 constraint, preserve initial sandbox failures and assisted successful synthetic probes, partially resolve toolchain uncertainty. No original-source, tool or governance changes; no experiment build or trial.",
+  "upsert_records": [
+    {
+      "id": "DEC-0004",
+      "kind": "owner_decision",
+      "status": "active",
+      "statement": "User requested establishing the environment's capabilities and recording them in the working KnowledgeBase before actual improvement work. The preceding user message specified preserving Visual Studio 2022 compatibility and asked whether Seed can compile and run tests independently. This assignment does not accept R01 or authorize implementing, compiling or executing the original experiment.",
+      "tags": [
+        "authority",
+        "environment",
+        "visual_studio"
+      ],
+      "source_refs": [],
+      "related_record_ids": [
+        "DEC-0001",
+        "DEC-0003",
+        "REC-0002",
+        "FACT-0013",
+        "FACT-0014"
+      ],
+      "origin": {
+        "type": "owner_message",
+        "actor": "User",
+        "recorded_by": "Seed Analyzer",
+        "recorded_at_utc": "2026-09-06T10:45:01.3266452Z",
+        "exact_quote": "Ok before doing any actual work establish the capabilities of this environment and record it all in your KnowledgeBase for future needs :)",
+        "preceding_quote": "Will you keep this entire solution compatible with Visual Studio 2022 in which I am opening this project?"
+      },
+      "derivation": {
+        "method": "Direct owner instructions; scope interpretation explicitly separated",
+        "artifact": {
+          "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\environment_capabilities_20260906.json",
+          "sha256": "F743C92D5872BFF21BE7ED1215EA12B8DDE360B4892A98E818B008A8561C60CD",
+          "bytes": 39978,
+          "status": "Seed-derived environment observations; not original experiment source"
+        },
+        "locators": [
+          "Current task: user environment-assessment request and preceding VS2022 compatibility question"
+        ]
+      },
+      "uncertainty": "The environment-assessment mandate and VS2022 constraint are owner supplied. Exact metadata probes and isolated synthetic self-test configuration are Seed-selected implementation of the assessment, not owner-selected experiment design."
+    },
+    {
+      "id": "FACT-0013",
+      "kind": "observed_fact",
+      "status": "active",
+      "statement": "Installed VS2022 Community is 17.14.35 (installation 17.14.37411.7), with the managed desktop workload registered; its x64 MSBuild starts as 17.14.40.60911. Installed SDKs include 9.0.315 and 10.0.301, with .NET/Windows Desktop 9.0.17 runtimes and reference packs. The unpinned experiment root selects SDK10.0.301. Local SDK metadata requires MSBuild17.12.0 for SDK9, but18.0.0 for SDK10. The original project manifests target net9.0-windows7.0.",
+      "tags": [
+        "environment",
+        "toolchain",
+        "visual_studio",
+        "sdk"
+      ],
+      "source_refs": [
+        "SRC-0002",
+        "SRC-0003",
+        "SRC-0004",
+        "SRC-0005"
+      ],
+      "related_record_ids": [
+        "DEC-0004",
+        "FACT-0014",
+        "REC-0003"
+      ],
+      "origin": {
+        "type": "environment_capability_assessment",
+        "actor": "Seed Analyzer",
+        "observed_at_utc": "2026-09-06T10:45:01.3266452Z"
+      },
+      "derivation": {
+        "method": "Installed metadata/version inspection and explicitly identified disposable generated probes",
+        "artifact": {
+          "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\environment_capabilities_20260906.json",
+          "sha256": "F743C92D5872BFF21BE7ED1215EA12B8DDE360B4892A98E818B008A8561C60CD",
+          "bytes": 39978,
+          "status": "Seed-derived environment observations; not original experiment source"
+        },
+        "locators": [
+          "/visual_studio_installations",
+          "/vs2022_tools",
+          "/sdk_and_runtime_inventory",
+          "/sdk_reference_packs_and_compatibility",
+          "/resolution_and_test_platform",
+          "SRC-0002..SRC-0005: TargetFramework"
+        ]
+      },
+      "uncertainty": "Snapshot of this host, not a general support-policy claim. Installed metadata alone is not solution compatibility; the synthetic VS2022/SDK9 build is separately evidenced in FACT-0014."
+    },
+    {
+      "id": "FACT-0014",
+      "kind": "observed_fact",
+      "status": "active",
+      "statement": "A disposable x64 net9.0-windows7.0 Windows Forms fixture with no experiment references or external packages restored offline and compiled using both VS2022 x64 MSBuild (Release) and dotnet SDK9 (Debug). Six synthetic checks passed in each build: managed arithmetic, repeated seeded runtime Random sequence, x64 execution, GDI pixel assertions, PNG round trip and offscreen Panel rendering. A deliberate stderr message and exit7 propagated correctly. All seven final capability probes passed; original solution builds, simulation tests and trials were not run.",
+      "tags": [
+        "environment",
+        "compilation",
+        "testing",
+        "rendering"
+      ],
+      "source_refs": [],
+      "related_record_ids": [
+        "DEC-0004",
+        "FACT-0013",
+        "FACT-0015",
+        "REC-0003"
+      ],
+      "origin": {
+        "type": "environment_capability_assessment",
+        "actor": "Seed Analyzer",
+        "observed_at_utc": "2026-09-06T10:45:01.3266452Z"
+      },
+      "derivation": {
+        "method": "Installed metadata/version inspection and explicitly identified disposable generated probes",
+        "artifact": {
+          "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\environment_capabilities_20260906.json",
+          "sha256": "F743C92D5872BFF21BE7ED1215EA12B8DDE360B4892A98E818B008A8561C60CD",
+          "bytes": 39978,
+          "status": "Seed-derived environment observations; not original experiment source"
+        },
+        "locators": [
+          "/probe_attempts/2/probes",
+          "/probe_attempts/2/fixture_files",
+          "/probe_attempts/2/process_environment"
+        ]
+      },
+      "uncertainty": "Assisted environment capability probe only. Seeded Random checks do not prove simulation repeatability; offscreen Panel rendering does not prove actual UI/designer usability. The negative control deliberately returned7, not an actual failing simulation assertion. Small-fixture timings do not predict experiment costs."
+    },
+    {
+      "id": "FACT-0015",
+      "kind": "observed_fact",
+      "status": "active",
+      "statement": "The initial disposable VS2022 build failed because SDK discovery was denied access to the personal Local Microsoft SDKs directory. Supplying the verified D:\\Windows Kits\\10 path and platform display name passed that stage, but combined VS restore/build then failed on denied personal NuGet.Config access. A third attempt succeeded with a separate SDK9 restore, absolute generated empty NuGet configuration, isolated process-local cache/profile/temp paths inside KB scratch, and subsequent builds without restore. The two initial failures remain preserved; all scratch trees were removed and cleanup verified.",
+      "tags": [
+        "environment",
+        "sandbox",
+        "failure",
+        "assistance"
+      ],
+      "source_refs": [],
+      "related_record_ids": [
+        "FACT-0014",
+        "REC-0003"
+      ],
+      "origin": {
+        "type": "environment_capability_assessment",
+        "actor": "Seed Analyzer",
+        "observed_at_utc": "2026-09-06T10:45:01.3266452Z"
+      },
+      "derivation": {
+        "method": "Installed metadata/version inspection and explicitly identified disposable generated probes",
+        "artifact": {
+          "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\environment_capabilities_20260906.json",
+          "sha256": "F743C92D5872BFF21BE7ED1215EA12B8DDE360B4892A98E818B008A8561C60CD",
+          "bytes": 39978,
+          "status": "Seed-derived environment observations; not original experiment source"
+        },
+        "locators": [
+          "/probe_attempts/0",
+          "/probe_attempts/1",
+          "/probe_attempts/2",
+          "/failure_and_assistance",
+          "/windows_sdk"
+        ]
+      },
+      "uncertainty": "These are sandbox/tool setup failures, not application failures. Personal configuration content was not read. No packages installed, network operation requested or permission escalation used. The successful combined configuration is demonstrated; the individual necessity of every setting was not isolated."
+    },
+    {
+      "id": "FACT-0016",
+      "kind": "observed_fact",
+      "status": "active",
+      "statement": "Local Git2.53.0 and gh2.95.0 start; Git reported master at4e3d72d4e00d6ae91ed45983b480c3171bb2fca4 with no tracked changes and the same untracked groups before/after the probes, including KnowledgeBase. VS2022 VSTest17.14.0 starts in help mode. KB Python3.12.14 works through its explicit bundled path, while Python and MSBuild are absent from PATH. The supplied computer-use interface declares native desktop automation disabled. GitHub authentication/remote state, native window/designer automation and test-adapter discovery remain unverified.",
+      "tags": [
+        "environment",
+        "git",
+        "test_runner",
+        "capabilities"
+      ],
+      "source_refs": [],
+      "related_record_ids": [
+        "DEC-0004",
+        "FACT-0011",
+        "FACT-0014"
+      ],
+      "origin": {
+        "type": "environment_capability_assessment",
+        "actor": "Seed Analyzer",
+        "observed_at_utc": "2026-09-06T10:45:01.3266452Z"
+      },
+      "derivation": {
+        "method": "Installed metadata/version inspection and explicitly identified disposable generated probes",
+        "artifact": {
+          "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\environment_capabilities_20260906.json",
+          "sha256": "F743C92D5872BFF21BE7ED1215EA12B8DDE360B4892A98E818B008A8561C60CD",
+          "bytes": 39978,
+          "status": "Seed-derived environment observations; not original experiment source"
+        },
+        "locators": [
+          "/host",
+          "/other_tools_and_resources",
+          "/repository",
+          "/resolution_and_test_platform",
+          "/capability_limits"
+        ]
+      },
+      "uncertainty": "Reported local status is not proof of GitHub synchronization or protection of untracked KB material. VSTest startup is not a discovered/passing test suite. Browser control and local-image viewing are exposed but untested here. Tool access and host resource values can change."
+    },
+    {
+      "id": "REC-0003",
+      "kind": "recommendation",
+      "status": "provisional",
+      "statement": "For future authorized improvement work, explicitly select a VS2022-compatible SDK9 toolchain and use the verified exact MSBuild path plus isolated restore/cache settings when the sandbox requires them. Preserve original-solution baseline results separately from this synthetic environment probe, resolve the declared Newtonsoft.Json path before treating the solution as buildable, and recheck relevant versions/permissions when stale. A possible root global.json pin is a future source change, not one made by this assessment.",
+      "tags": [
+        "environment",
+        "build_recipe",
+        "compatibility",
+        "proposal"
+      ],
+      "source_refs": [
+        "SRC-0002",
+        "SRC-0003",
+        "SRC-0004",
+        "SRC-0005"
+      ],
+      "related_record_ids": [
+        "DEC-0004",
+        "FACT-0010",
+        "FACT-0013",
+        "FACT-0014",
+        "FACT-0015",
+        "FACT-0016",
+        "Q-0002",
+        "REC-0002"
+      ],
+      "origin": {
+        "type": "environment_capability_assessment",
+        "actor": "Seed Analyzer",
+        "observed_at_utc": "2026-09-06T10:45:01.3266452Z"
+      },
+      "derivation": {
+        "method": "Installed metadata/version inspection and explicitly identified disposable generated probes",
+        "artifact": {
+          "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\environment_capabilities_20260906.json",
+          "sha256": "F743C92D5872BFF21BE7ED1215EA12B8DDE360B4892A98E818B008A8561C60CD",
+          "bytes": 39978,
+          "status": "Seed-derived environment observations; not original experiment source"
+        },
+        "locators": [
+          "ENVIRONMENT_CAPABILITIES_R01.md: Exact reusable tool paths; Sandbox findings and working configuration; Visual Studio2022 compatibility requirement"
+        ],
+        "report": {
+          "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\ENVIRONMENT_CAPABILITIES_R01.md",
+          "sha256": "B53ED7B72CE02CCF9C5E665DA02B1F1A5D4A4C4D59E42CC19B8D9C0422C70336",
+          "bytes": 9527,
+          "status": "Environment capability assessment; completed"
+        }
+      },
+      "uncertainty": "Recommendation is bounded by the next owner instruction. Empty package sources suffice for the dependency-free probe; an original solution requiring packages may need a separately scoped dependency arrangement. No new implementation or publication permission is implied."
+    },
+    {
+      "id": "Q-0002",
+      "kind": "open_question",
+      "status": "open",
+      "statement": "What baseline behavior does the owner currently observe, and which source version/dependency arrangement is intended for a future authorized build or run? Initial discovery did not establish current buildability, actual survival/extinction patterns, performance, prior successful trials or historical lineage.",
+      "tags": [
+        "baseline",
+        "runtime",
+        "lineage"
+      ],
+      "source_refs": [
+        "SRC-0001",
+        "SRC-0002",
+        "SRC-0003",
+        "SRC-0004",
+        "SRC-0005"
+      ],
+      "related_record_ids": [
+        "FACT-0010",
+        "FACT-0011",
+        "DEC-0004",
+        "FACT-0013",
+        "FACT-0014",
+        "FACT-0015",
+        "REC-0003"
+      ],
+      "origin": {
+        "type": "static_source_inspection",
+        "actor": "Seed Analyzer",
+        "recorded_by": "Seed Analyzer",
+        "observed_at_utc": "2026-09-06T01:04:55.1867052Z"
+      },
+      "derivation": {
+        "method": "inspection of identified evidence",
+        "locators": [
+          "FACT-0010",
+          "FACT-0011"
+        ]
+      },
+      "uncertainty": "No outside-root dependency lookup, history-content access or execution was performed; additional access is unnecessary for this initial assessment.",
+      "created_at": "2026-09-06T01:10:38+00:00",
+      "updated_at": "2026-09-06T01:10:38+00:00",
+      "resolution_notes": [
+        {
+          "at_utc": "2026-09-06T10:45:01.3266452Z",
+          "actor": "Seed Analyzer",
+          "type": "partial_resolution",
+          "note": "The owner authorized environment assessment. Installed VS2022/.NET9 capability and isolated synthetic compilation/execution are now verified in FACT-0013..FACT-0015 and the environment report. This answers the toolchain-availability part without changing the original discovery claim. The solution was not built, baseline behavior remains unmeasured and the exact declared Newtonsoft.Json path is still absent; source/dependency baseline work can be undertaken autonomously when next authorized.",
+          "record_ids": [
+            "DEC-0004",
+            "FACT-0013",
+            "FACT-0014",
+            "FACT-0015",
+            "REC-0003"
+          ]
+        }
+      ]
+    }
+  ],
+  "upsert_sources": [],
+  "core_patch": {
+    "owner_decision_ids": [
+      "DEC-0001",
+      "DEC-0002",
+      "DEC-0003",
+      "DEC-0004"
+    ],
+    "pinned_record_ids": [
+      "DEC-0001",
+      "DEC-0002",
+      "INF-0001",
+      "REC-0001",
+      "DEC-0003",
+      "REC-0002",
+      "DEC-0004"
+    ],
+    "routes": {
+      "orientation": {
+        "record_ids": [
+          "FACT-0001",
+          "FACT-0002",
+          "FACT-0011",
+          "INF-0001"
+        ]
+      },
+      "mechanics": {
+        "record_ids": [
+          "FACT-0003",
+          "FACT-0004",
+          "FACT-0005",
+          "INF-0003"
+        ]
+      },
+      "watchability": {
+        "record_ids": [
+          "DEC-0002",
+          "FACT-0006",
+          "FACT-0009",
+          "REC-0001"
+        ]
+      },
+      "material_findings": {
+        "record_ids": [
+          "FACT-0007",
+          "FACT-0008",
+          "FACT-0010",
+          "INF-0002"
+        ]
+      },
+      "proposal_and_tests": {
+        "record_ids": [
+          "DEC-0003",
+          "REC-0002",
+          "FACT-0012",
+          "Q-0001",
+          "Q-0002"
+        ]
+      },
+      "environment_capabilities": {
+        "record_ids": [
+          "DEC-0004",
+          "FACT-0013",
+          "FACT-0014",
+          "FACT-0015",
+          "FACT-0016",
+          "REC-0003",
+          "Q-0002"
+        ]
+      }
+    },
+    "authority": {
+      "assignment_record": "DEC-0001",
+      "actor": "Seed Analyzer",
+      "knowledgebase_root": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase",
+      "continuing_kb_authority": "Bundled retrieval, validation, registered preparation and routine transactions for owner-assigned work; permitted in-root sources only; derived writes only inside this KB.",
+      "originals": "read-only and non-executing",
+      "next_action": "Report completed environment assessment and stop before improvement implementation or original solution/test execution; await the owner's next applicable instruction.",
+      "current_stage_record": "DEC-0004",
+      "environment_assessment": "Installed tool/runtime metadata and bounded disposable synthetic probes were assessed at owner's request; original experiment sources remain unchanged and non-executing."
+    },
+    "environment": {
+      "assessed_by": "Seed Analyzer",
+      "observed_at_utc": "2026-09-06T10:45:01.3266452Z",
+      "status": "assessment_complete; synthetic capabilities verified with explicit sandbox configuration",
+      "record_ids": [
+        "FACT-0013",
+        "FACT-0014",
+        "FACT-0015",
+        "FACT-0016",
+        "REC-0003"
+      ],
+      "report": {
+        "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\ENVIRONMENT_CAPABILITIES_R01.md",
+        "sha256": "B53ED7B72CE02CCF9C5E665DA02B1F1A5D4A4C4D59E42CC19B8D9C0422C70336",
+        "bytes": 9527,
+        "status": "Environment capability assessment; completed"
+      },
+      "evidence": {
+        "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\environment_capabilities_20260906.json",
+        "sha256": "F743C92D5872BFF21BE7ED1215EA12B8DDE360B4892A98E818B008A8561C60CD",
+        "bytes": 39978,
+        "status": "Seed-derived environment observations; not original experiment source"
+      },
+      "vs2022_requirement_record": "DEC-0004",
+      "sdk_for_vs2022": "9.0.315",
+      "default_root_sdk_observed": "10.0.301",
+      "synthetic_build_and_checks": "PASS: VS2022 Release, SDK9 Debug, six checks in each plus deliberate exit7 signal",
+      "original_solution_built": false,
+      "experiment_tests_executed": false,
+      "refresh": "Recheck relevant versions, SDK selection, permissions and source/dependency identity before future material work."
+    }
+  }
+}

@@ -44,13 +44,18 @@ namespace Fistnet.Genepool.Dna
 
     public static class Common
     {
-        static Common()
+        public static IRandomSource RandomSource { get; private set; } = new SystemRandomSource(Environment.TickCount);
+        public static bool IsReferenceMode { get; private set; }
+
+        // Configure only while the simulation is stopped, at a complete run reset.
+        public static void ConfigureRandom(IRandomSource source, bool referenceMode)
         {
-            int seed = unchecked((int)DateTime.Now.Ticks - Environment.TickCount);
-            random = new Random(seed);
+            RandomSource = source ?? throw new ArgumentNullException(nameof(source));
+            IsReferenceMode = referenceMode;
         }
 
-        private static Random random;
+        public static IRandomSource CreateLocalRandom(int seed) =>
+            IsReferenceMode ? RandomSource : new SystemRandomSource(seed);
 
         public static long CalculateOrganismDnaCode(List<IDnaElement> dnaSequence)
         {
@@ -89,30 +94,12 @@ namespace Fistnet.Genepool.Dna
 
         public static int GetRandomIntegerSeed()
         {
-            int seed = unchecked((int)DateTime.Now.Ticks - Environment.TickCount);
-            int value = 0;
-
-            value = random.Next();
-            lock (random)
-            {
-                if (value % random.Next(1, 11) == 1)
-                    random = new Random(unchecked((int)DateTime.Now.Ticks - Environment.TickCount));
-            }
-            return random.Next();
+            return RandomSource.Next(int.MaxValue);
         }
 
         public static int GetRandomIntegerSeed(int maxNumber)
         {
-            int seed = unchecked((int)DateTime.Now.Ticks - Environment.TickCount);
-            int value = 0;
-
-            value = random.Next();
-            lock (random)
-            {
-                if (value % random.Next(1, 11) == 1)
-                    random = new Random(unchecked((int)DateTime.Now.Ticks - Environment.TickCount));
-            }
-            return random.Next(maxNumber);
+            return RandomSource.Next(maxNumber);
         }
 
         public static TargetTypes TryChangeTarget(TargetTypes oldTarget)
@@ -185,7 +172,7 @@ namespace Fistnet.Genepool.Dna
             if (currentValue == prevousValue && prevousValue == 0)
                 return 0;
 
-            return (float)(currentValue - prevousValue) / (float)prevousValue;
+            return (float)(((double)currentValue - prevousValue) / (prevousValue == 0 ? 1 : prevousValue));
         }
 
         public static float CalculateDifferenceFromValue(int value, int otherValue)
@@ -193,9 +180,9 @@ namespace Fistnet.Genepool.Dna
             if (value == otherValue && otherValue == 0)
                 return 0;
 
-            float sumValues = (Math.Abs(value) + Math.Abs(otherValue));
+            double sumValues = Math.Abs((double)value) + Math.Abs((double)otherValue);
 
-            return (value / (float)sumValues) - 0.5f;
+            return (float)(value / sumValues - 0.5);
         }
 
         #endregion Calculate change and difference.

@@ -1,0 +1,167 @@
+{
+  "actor": "Seed Analyzer",
+  "artifact_status": "generated verification of initial Genesis KB population; not experiment output or acceptance",
+  "experiment_root": "D:\\Posao\\Fistnet.Genepool",
+  "knowledgebase_root": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase",
+  "verified_at_utc": "2026-09-06T01:11:53.8448994Z",
+  "kb_revision": 3,
+  "validation": {
+    "ok": true,
+    "errors": [],
+    "warnings": [],
+    "counts": {
+      "records": 19,
+      "sources": 41,
+      "prepared_sources": 7
+    },
+    "core_estimated_tokens": 952,
+    "deep": true,
+    "kb_revision": 3
+  },
+  "preview_review": {
+    "pages": 9,
+    "changes": 809,
+    "unique_changes": 809,
+    "total": 809,
+    "mismatches": [],
+    "transaction_sha256": "62A0A3EC8920508B6BDB084E682E2B8079E05813B89164CCB0BE79FF255E963D",
+    "preview_files": "genesis_preview_000.json through genesis_preview_800.json at offsets 100; all 9 pages reviewed"
+  },
+  "transactions": [
+    {
+      "result_file": "genesis_apply_result_20260906.json",
+      "outcome": "Rejected before mutation: a preview-only transaction-digest option was supplied to the apply invocation.",
+      "recovery": "Inspected argument guard; verified revision 1, initial canonical state hashes and reviewed transaction hash unchanged. No rollback claimed."
+    },
+    {
+      "result_file": "genesis_apply_completed_20260906.json",
+      "outcome": "Supported invocation committed exactly once from revision 1 to 2; deep verification completed; no cleanup errors, uncertainty or recovery-required state."
+    },
+    {
+      "result_file": "genesis_prepare_result_20260906.json",
+      "outcome": "One batch prepared 7 permitted registered sources, revision 2 to 3; commit and deep verification completed with no cleanup errors, uncertainty or recovery-required state."
+    }
+  ],
+  "knowledge_effects": {
+    "new_records": 19,
+    "updated_existing_records": 0,
+    "new_registered_sources": 41,
+    "sources_prepared": 7,
+    "core_updated": true,
+    "prior_knowledge_reset": false,
+    "record_ids": [
+      "DEC-0001",
+      "DEC-0002",
+      "FACT-0001",
+      "FACT-0002",
+      "FACT-0003",
+      "FACT-0004",
+      "FACT-0005",
+      "FACT-0006",
+      "FACT-0007",
+      "FACT-0008",
+      "FACT-0009",
+      "FACT-0010",
+      "FACT-0011",
+      "INF-0001",
+      "INF-0002",
+      "INF-0003",
+      "Q-0001",
+      "Q-0002",
+      "REC-0001"
+    ],
+    "record_types": {
+      "owner_decision": 2,
+      "observed_fact": 11,
+      "inference": 3,
+      "open_question": 2,
+      "recommendation": 1
+    },
+    "prepared_ids": [
+      "SRC-0007",
+      "SRC-0009",
+      "SRC-0010",
+      "SRC-0012",
+      "SRC-0014",
+      "SRC-0015",
+      "SRC-0028"
+    ]
+  },
+  "source_preservation": {
+    "registered_sources_hashed_by_deep_validation": 41,
+    "registered_source_hash_mismatches": 0,
+    "all_seed_writes_confined_to_exact_kb": true,
+    "original_source_code_executed": false,
+    "original_sources_prepared_statically": true,
+    "metadata_comparison": {
+      "observed_at_utc": "2026-09-06T01:11:53.8448994Z",
+      "initial_outside_kb_entries": 1324,
+      "final_outside_kb_entries": 1324,
+      "differences": [
+        {
+          "path": ".vs\\ProjectEvaluation",
+          "difference": "metadata_changed"
+        },
+        {
+          "path": ".vs\\Fistnet.Genepool\\v17",
+          "difference": "metadata_changed"
+        },
+        {
+          "path": ".vs\\ProjectEvaluation\\fistnet.genepool.metadata.v9.bin",
+          "difference": "metadata_changed"
+        },
+        {
+          "path": ".vs\\ProjectEvaluation\\fistnet.genepool.projects.v9.bin",
+          "difference": "metadata_changed"
+        },
+        {
+          "path": ".vs\\Fistnet.Genepool\\v17\\.suo",
+          "difference": "metadata_changed"
+        },
+        {
+          "path": ".vs\\Fistnet.Genepool\\v17\\DocumentLayout.backup.json",
+          "difference": "metadata_changed"
+        },
+        {
+          "path": ".vs\\Fistnet.Genepool\\v17\\DocumentLayout.json",
+          "difference": "metadata_changed"
+        }
+      ],
+      "canonical_hashes": [
+        {
+          "Path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\core.json",
+          "Hash": "0032714D04B9B765A27536B66E0D9D7111413FE11D740BC463D6E44AC8B4BA44"
+        },
+        {
+          "Path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\records.jsonl",
+          "Hash": "A919DC1D652AC69D41B514A7B0D5189B3251F8092708A7525292E3CB1A9BEA3A"
+        },
+        {
+          "Path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\sources.json",
+          "Hash": "AD876EF434779E61045E1E7755DF76E0EC7DC3EE280DFCA750DCF50AAC898CE0"
+        }
+      ]
+    },
+    "qualification": "The entire root was not frozen. Five .vs files and two .vs directories changed metadata during the observation window; their contents were left unread, cause and writer are unknown, and no Seed operation targeted them. This does not change the verified hashes of the 41 registered experiment sources."
+  },
+  "status": {
+    "phase": "RECONSTRUCTION",
+    "initial_discovery": "complete enough for initial Genesis Assessment",
+    "model": "provisional",
+    "design_accepted": false,
+    "trial_executed_by_seed": false,
+    "bootstrap_performed": false,
+    "implementation_performed": false,
+    "other_agents_used": false,
+    "external_research_performed": false
+  },
+  "remaining_limits": [
+    "Runtime behavior, buildability, performance, actual population trajectories and enjoyment remain unmeasured.",
+    "The declared Newtonsoft.Json dependency path is absent; no dependency lookup outside the root or repair was attempted.",
+    "Historical chronology is unresolved; branch metadata is not evidence of working-tree equality with the referenced commit.",
+    "Seventeen working candidates plus history/build/cache content were omitted from substantive inspection; potential private configuration remained unread.",
+    "The owner explicitly chose better simulation and more fun to watch. Specific success criteria and the next bounded improvement remain owner choices."
+  ],
+  "next_boundary": "Deliver conversational Genesis Assessment and stop; continuing KB authority remains valid for subsequent owner assignments."
+}
+

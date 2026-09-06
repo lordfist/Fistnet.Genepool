@@ -1,0 +1,428 @@
+{
+  "actor": "Seed Analyzer",
+  "note": "Correct unsupported dependency-build prerequisite; record owner GitHub confirmation and screenshot evidence with App-skip coverage; preserve prior claims and add discoverable dated clarification. No original source changes, builds or remote access.",
+  "upsert_records": [
+    {
+      "id": "CLAIM-0001",
+      "kind": "source_claim",
+      "status": "active",
+      "statement": "The owner confirms that the entire solution is committed in the GitHub repository https://github.com/lordfist/Fistnet.Genepool.git, while KnowledgeBase is not committed, and reports just compiling successfully from Visual Studio.",
+      "tags": [
+        "owner_report",
+        "git",
+        "build"
+      ],
+      "source_refs": [],
+      "related_record_ids": [
+        "FACT-0016",
+        "FACT-0017",
+        "Q-0002"
+      ],
+      "origin": {
+        "type": "owner_message",
+        "actor": "User",
+        "recorded_by": "Seed Analyzer",
+        "recorded_at_utc": "2026-09-06T11:06:21.9518294Z",
+        "exact_quotes": [
+          "I have Git there and, yes KnowledgeBase is not committed but entire solution is",
+          "I have just compiled it successfully from visual studio (see attach)?"
+        ],
+        "repository_url": "https://github.com/lordfist/Fistnet.Genepool.git"
+      },
+      "derivation": {
+        "method": "Direct owner report; attached screenshot inspected separately",
+        "locator": "Current task: two-point repository/build clarification after environment assessment"
+      },
+      "uncertainty": "Owner-supplied repository fact accepted as context; remote access/authentication/synchronization was not independently checked. Screenshot coverage is described in FACT-0017; no new Seed build occurred."
+    },
+    {
+      "id": "FACT-0017",
+      "kind": "observed_fact",
+      "status": "active",
+      "statement": "The owner's attached Visual Studio screenshot visibly reports 'Rebuild All: 3 succeeded, 0 failed, 1 skipped', identifies Fistnet.Genepool.App as 'Skipped Rebuild All', and shows a Visualization DLL output path. The toolbar is Debug / Mixed Platforms and the IDE displays an unknown-project-configuration-mappings warning. This supports successful rebuilds of three projects, with no failed project in the shown summary. Seed had not attempted a solution build and had no observed failure attributable to the missing declared Newtonsoft.Json path; presenting that path as something that must be repaired before buildability can be established was unsupported.",
+      "tags": [
+        "build",
+        "screenshot",
+        "correction",
+        "dependency"
+      ],
+      "source_refs": [],
+      "related_record_ids": [
+        "CLAIM-0001",
+        "FACT-0010",
+        "FACT-0014",
+        "REC-0003",
+        "Q-0002"
+      ],
+      "origin": {
+        "type": "owner_supplied_image_and_prior_seed_output",
+        "actor": "Seed Analyzer",
+        "observed_at_utc": "2026-09-06T11:06:21.9518294Z",
+        "attachment": {
+          "path": "C:\\Users\\lordf\\AppData\\Local\\Temp\\codex-clipboard-6befdd1e-c28a-4216-8637-596dd7e6b3a7.png",
+          "sha256": "90BE7DE92D1A6FA47983FDFD06E9FB95A40733FF710399381F8E5C6BD6E7F44A",
+          "bytes": 173522,
+          "admission": "Exact user-attached image; exception to prior root-only evidence restriction for this attachment only"
+        }
+      },
+      "derivation": {
+        "method": "Visual inspection of user-supplied image already displayed in the conversation and review of prior Seed records/messages",
+        "locators": [
+          "Attached image: bottom Build output, Rebuild All summary and App skipped line",
+          "Attached image: upper toolbar and yellow configuration-mapping banner",
+          "REC-0003 original statement: resolve the declared Newtonsoft.Json path before treating the solution as buildable"
+        ]
+      },
+      "uncertainty": "The complete build log and actual dependency resolution were not inspected. The screenshot does not establish a rebuild of the skipped App project, execution success, the cause of the skip, or a Newtonsoft.Json resolution mechanism. No cause is inferred from the configuration warning."
+    },
+    {
+      "id": "FACT-0010",
+      "kind": "observed_fact",
+      "status": "active",
+      "statement": "Three project files reference Libraries\\FistCore.Base\\Newtonsoft.Json.dll inside the assigned root. That exact dependency path is absent. The census includes copies named Newtonsoft.Json.dll under three bin\\Debug trees, but those are build artifacts of unverified lineage and were not opened or substituted.",
+      "tags": [
+        "dependency",
+        "build"
+      ],
+      "source_refs": [
+        "SRC-0003",
+        "SRC-0004",
+        "SRC-0005"
+      ],
+      "related_record_ids": [
+        "CLAIM-0001",
+        "FACT-0017"
+      ],
+      "origin": {
+        "type": "static_source_inspection",
+        "actor": "Seed Analyzer",
+        "recorded_by": "Seed Analyzer",
+        "observed_at_utc": "2026-09-06T01:04:55.1867052Z"
+      },
+      "derivation": {
+        "method": "inspection of identified evidence",
+        "locators": [
+          "SRC-0003:11-14",
+          "SRC-0004:11-14",
+          "SRC-0005:13-16",
+          "KnowledgeBase/discovery_census_20260906.json; exact-path Test-Path observation"
+        ]
+      },
+      "uncertainty": "The declared path gap is verified; a build failure, alternative resolution, dependency necessity or compatibility has not been tested.",
+      "created_at": "2026-09-06T01:10:38+00:00",
+      "updated_at": "2026-09-06T01:10:38+00:00",
+      "resolution_notes": [
+        {
+          "at_utc": "2026-09-06T11:06:21.9518294Z",
+          "actor": "Seed Analyzer",
+          "type": "scope_clarification",
+          "note": "The prior exact-path observation remains a static finding at its stated horizon. It is not an established build blocker. The owner now supplies positive Visual Studio rebuild evidence (FACT-0017). No dependency repair is justified solely by the missing HintPath; evaluate actual build diagnostics if later needed.",
+          "record_ids": [
+            "CLAIM-0001",
+            "FACT-0017"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FACT-0016",
+      "kind": "observed_fact",
+      "status": "active",
+      "statement": "Local Git2.53.0 and gh2.95.0 start; Git reported master at4e3d72d4e00d6ae91ed45983b480c3171bb2fca4 with no tracked changes and the same untracked groups before/after the probes, including KnowledgeBase. VS2022 VSTest17.14.0 starts in help mode. KB Python3.12.14 works through its explicit bundled path, while Python and MSBuild are absent from PATH. The supplied computer-use interface declares native desktop automation disabled. GitHub authentication/remote state, native window/designer automation and test-adapter discovery remain unverified.",
+      "tags": [
+        "environment",
+        "git",
+        "test_runner",
+        "capabilities"
+      ],
+      "source_refs": [],
+      "related_record_ids": [
+        "DEC-0004",
+        "FACT-0011",
+        "FACT-0014",
+        "CLAIM-0001",
+        "FACT-0017"
+      ],
+      "origin": {
+        "type": "environment_capability_assessment",
+        "actor": "Seed Analyzer",
+        "observed_at_utc": "2026-09-06T10:45:01.3266452Z"
+      },
+      "derivation": {
+        "method": "Installed metadata/version inspection and explicitly identified disposable generated probes",
+        "artifact": {
+          "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\environment_capabilities_20260906.json",
+          "sha256": "F743C92D5872BFF21BE7ED1215EA12B8DDE360B4892A98E818B008A8561C60CD",
+          "bytes": 39978,
+          "status": "Seed-derived environment observations; not original experiment source"
+        },
+        "locators": [
+          "/host",
+          "/other_tools_and_resources",
+          "/repository",
+          "/resolution_and_test_platform",
+          "/capability_limits"
+        ]
+      },
+      "uncertainty": "Reported local status is not proof of GitHub synchronization or protection of untracked KB material. VSTest startup is not a discovered/passing test suite. Browser control and local-image viewing are exposed but untested here. Tool access and host resource values can change.",
+      "created_at": "2026-09-06T10:51:12+00:00",
+      "updated_at": "2026-09-06T10:51:12+00:00",
+      "resolution_notes": [
+        {
+          "at_utc": "2026-09-06T11:06:21.9518294Z",
+          "actor": "Seed Analyzer",
+          "type": "owner_context_update",
+          "note": "The owner confirms that the entire solution is committed at https://github.com/lordfist/Fistnet.Genepool.git and KnowledgeBase is not committed (CLAIM-0001). Earlier statements about unverified remote access describe Seed's checks, not doubt about the owner's repository confirmation. No remote operation occurred.",
+          "record_ids": [
+            "CLAIM-0001",
+            "FACT-0017"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REC-0003",
+      "kind": "recommendation",
+      "status": "provisional",
+      "statement": "For future authorized improvement work, explicitly select a VS2022-compatible SDK9 toolchain and use the verified exact MSBuild path plus isolated restore/cache settings when the sandbox requires them. Preserve original-solution baseline results separately from this synthetic environment probe, resolve the declared Newtonsoft.Json path before treating the solution as buildable, and recheck relevant versions/permissions when stale. A possible root global.json pin is a future source change, not one made by this assessment.",
+      "tags": [
+        "environment",
+        "build_recipe",
+        "compatibility",
+        "proposal"
+      ],
+      "source_refs": [
+        "SRC-0002",
+        "SRC-0003",
+        "SRC-0004",
+        "SRC-0005"
+      ],
+      "related_record_ids": [
+        "DEC-0004",
+        "FACT-0010",
+        "FACT-0013",
+        "FACT-0014",
+        "FACT-0015",
+        "FACT-0016",
+        "Q-0002",
+        "REC-0002",
+        "CLAIM-0001",
+        "FACT-0017"
+      ],
+      "origin": {
+        "type": "environment_capability_assessment",
+        "actor": "Seed Analyzer",
+        "observed_at_utc": "2026-09-06T10:45:01.3266452Z"
+      },
+      "derivation": {
+        "method": "Installed metadata/version inspection and explicitly identified disposable generated probes",
+        "artifact": {
+          "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\environment_capabilities_20260906.json",
+          "sha256": "F743C92D5872BFF21BE7ED1215EA12B8DDE360B4892A98E818B008A8561C60CD",
+          "bytes": 39978,
+          "status": "Seed-derived environment observations; not original experiment source"
+        },
+        "locators": [
+          "ENVIRONMENT_CAPABILITIES_R01.md: Exact reusable tool paths; Sandbox findings and working configuration; Visual Studio2022 compatibility requirement"
+        ],
+        "report": {
+          "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\ENVIRONMENT_CAPABILITIES_R01.md",
+          "sha256": "102A4FE72EA9CC4ACA43A0DEF81E2507CA5BD3D1ADC78FFBCC2B254E81939731",
+          "bytes": 10515,
+          "status": "Environment assessment with dated owner-build clarification"
+        }
+      },
+      "uncertainty": "Recommendation is bounded by the next owner instruction. Empty package sources suffice for the dependency-free probe; an original solution requiring packages may need a separately scoped dependency arrangement. No new implementation or publication permission is implied.",
+      "created_at": "2026-09-06T10:51:12+00:00",
+      "updated_at": "2026-09-06T10:51:12+00:00",
+      "resolution_notes": [
+        {
+          "at_utc": "2026-09-06T11:06:21.9518294Z",
+          "actor": "Seed Analyzer",
+          "type": "partial_correction",
+          "note": "Withdraw the earlier requirement to resolve the declared Newtonsoft.Json path before treating the solution as buildable. It elevated a missing declared path into an unsupported prerequisite. The owner-supplied screenshot shows three successful rebuilds and no failures; App was skipped. Corrected guidance: reproduce the intended build and inspect actual reference-resolution diagnostics before proposing any dependency change. Keep the SDK9/VS2022 and sandbox guidance. Earlier statement and origin are retained for audit.",
+          "previous_report_identity": {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\ENVIRONMENT_CAPABILITIES_R01.md",
+            "sha256": "B53ED7B72CE02CCF9C5E665DA02B1F1A5D4A4C4D59E42CC19B8D9C0422C70336",
+            "bytes": 9527,
+            "status": "Environment capability assessment; completed"
+          },
+          "record_ids": [
+            "CLAIM-0001",
+            "FACT-0017"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q-0002",
+      "kind": "open_question",
+      "status": "open",
+      "statement": "What baseline behavior does the owner currently observe, and which source version/dependency arrangement is intended for a future authorized build or run? Initial discovery did not establish current buildability, actual survival/extinction patterns, performance, prior successful trials or historical lineage.",
+      "tags": [
+        "baseline",
+        "runtime",
+        "lineage"
+      ],
+      "source_refs": [
+        "SRC-0001",
+        "SRC-0002",
+        "SRC-0003",
+        "SRC-0004",
+        "SRC-0005"
+      ],
+      "related_record_ids": [
+        "FACT-0010",
+        "FACT-0011",
+        "DEC-0004",
+        "FACT-0013",
+        "FACT-0014",
+        "FACT-0015",
+        "REC-0003",
+        "CLAIM-0001",
+        "FACT-0017"
+      ],
+      "origin": {
+        "type": "static_source_inspection",
+        "actor": "Seed Analyzer",
+        "recorded_by": "Seed Analyzer",
+        "observed_at_utc": "2026-09-06T01:04:55.1867052Z"
+      },
+      "derivation": {
+        "method": "inspection of identified evidence",
+        "locators": [
+          "FACT-0010",
+          "FACT-0011"
+        ]
+      },
+      "uncertainty": "No outside-root dependency lookup, history-content access or execution was performed; additional access is unnecessary for this initial assessment.",
+      "created_at": "2026-09-06T01:10:38+00:00",
+      "updated_at": "2026-09-06T10:51:12+00:00",
+      "resolution_notes": [
+        {
+          "at_utc": "2026-09-06T10:45:01.3266452Z",
+          "actor": "Seed Analyzer",
+          "type": "partial_resolution",
+          "note": "The owner authorized environment assessment. Installed VS2022/.NET9 capability and isolated synthetic compilation/execution are now verified in FACT-0013..FACT-0015 and the environment report. This answers the toolchain-availability part without changing the original discovery claim. The solution was not built, baseline behavior remains unmeasured and the exact declared Newtonsoft.Json path is still absent; source/dependency baseline work can be undertaken autonomously when next authorized.",
+          "record_ids": [
+            "DEC-0004",
+            "FACT-0013",
+            "FACT-0014",
+            "FACT-0015",
+            "REC-0003"
+          ]
+        },
+        {
+          "at_utc": "2026-09-06T11:06:21.9518294Z",
+          "actor": "Seed Analyzer",
+          "type": "partial_resolution",
+          "note": "The owner now reports successful Visual Studio compilation and identifies the committed GitHub solution. FACT-0017 records screenshot evidence: three successful rebuilds, zero failed, App skipped. Treat buildability as supported for the rebuilt projects; do not label the solution unable to compile because of the declared DLL path. Full intended App build, runtime behavior and dependency resolution remain unexamined by Seed.",
+          "record_ids": [
+            "CLAIM-0001",
+            "FACT-0017"
+          ]
+        }
+      ]
+    }
+  ],
+  "upsert_sources": [],
+  "core_patch": {
+    "environment": {
+      "assessed_by": "Seed Analyzer",
+      "observed_at_utc": "2026-09-06T10:45:01.3266452Z",
+      "status": "assessment_complete; synthetic capabilities verified with explicit sandbox configuration",
+      "record_ids": [
+        "FACT-0013",
+        "FACT-0014",
+        "FACT-0015",
+        "FACT-0016",
+        "REC-0003"
+      ],
+      "report": {
+        "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\ENVIRONMENT_CAPABILITIES_R01.md",
+        "sha256": "102A4FE72EA9CC4ACA43A0DEF81E2507CA5BD3D1ADC78FFBCC2B254E81939731",
+        "bytes": 10515,
+        "status": "Environment assessment with dated owner-build clarification"
+      },
+      "evidence": {
+        "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\environment_capabilities_20260906.json",
+        "sha256": "F743C92D5872BFF21BE7ED1215EA12B8DDE360B4892A98E818B008A8561C60CD",
+        "bytes": 39978,
+        "status": "Seed-derived environment observations; not original experiment source"
+      },
+      "vs2022_requirement_record": "DEC-0004",
+      "sdk_for_vs2022": "9.0.315",
+      "default_root_sdk_observed": "10.0.301",
+      "synthetic_build_and_checks": "PASS: VS2022 Release, SDK9 Debug, six checks in each plus deliberate exit7 signal",
+      "experiment_tests_executed": false,
+      "refresh": "Recheck relevant versions, SDK selection, permissions and source/dependency identity before future material work.",
+      "original_solution_built_by_seed": false,
+      "owner_build_evidence": {
+        "record_ids": [
+          "CLAIM-0001",
+          "FACT-0017"
+        ],
+        "recorded_at_utc": "2026-09-06T11:06:21.9518294Z",
+        "summary": "Owner reports successful VS build; screenshot shows 3 rebuilt successfully, 0 failed, App skipped.",
+        "declared_dll_path_is_established_blocker": false
+      },
+      "clarification": "The prior original_solution_built:false field described Seed execution only; replaced with original_solution_built_by_seed to avoid contradicting later owner build evidence."
+    },
+    "routes": {
+      "orientation": {
+        "record_ids": [
+          "FACT-0001",
+          "FACT-0002",
+          "FACT-0011",
+          "INF-0001"
+        ]
+      },
+      "mechanics": {
+        "record_ids": [
+          "FACT-0003",
+          "FACT-0004",
+          "FACT-0005",
+          "INF-0003"
+        ]
+      },
+      "watchability": {
+        "record_ids": [
+          "DEC-0002",
+          "FACT-0006",
+          "FACT-0009",
+          "REC-0001"
+        ]
+      },
+      "material_findings": {
+        "record_ids": [
+          "FACT-0007",
+          "FACT-0008",
+          "FACT-0010",
+          "INF-0002"
+        ]
+      },
+      "proposal_and_tests": {
+        "record_ids": [
+          "DEC-0003",
+          "REC-0002",
+          "FACT-0012",
+          "Q-0001",
+          "Q-0002"
+        ]
+      },
+      "environment_capabilities": {
+        "record_ids": [
+          "DEC-0004",
+          "FACT-0013",
+          "FACT-0014",
+          "FACT-0015",
+          "FACT-0016",
+          "REC-0003",
+          "Q-0002",
+          "CLAIM-0001",
+          "FACT-0017"
+        ]
+      }
+    }
+  }
+}

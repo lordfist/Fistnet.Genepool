@@ -1,0 +1,533 @@
+{
+  "schema_version": 1,
+  "artifact_type": "derived_environment_capability_evidence",
+  "actor": "Seed Analyzer",
+  "assigned_root": "D:\\Posao\\Fistnet.Genepool",
+  "knowledgebase_root": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase",
+  "observed_start_utc": "2026-09-06T10:37:35.8244469Z",
+  "observed_end_utc": "2026-09-06T10:45:01.3266452Z",
+  "authority": {
+    "owner_request": "Ok before doing any actual work establish the capabilities of this environment and record it all in your KnowledgeBase for future needs :)",
+    "prior_requirement": "Keep the entire solution compatible with Visual Studio 2022.",
+    "interpretation": "Bounded installed-environment metadata and version/help probes plus a disposable generated .NET environment self-test inside the KB. This does not authorize implementation or building/running original experiment code.",
+    "external_environment_scope": "Installed tool/runtime/SDK metadata and process behavior only; no unrelated project or private configuration content was admitted as experiment evidence.",
+    "no_external_research": true,
+    "no_dependency_installation": true,
+    "no_new_actors": true
+  },
+  "host": {
+    "utc": "2026-09-06T10:37:35.8244469Z",
+    "root": "D:\\Posao\\Fistnet.Genepool",
+    "rootAttributes": "Directory",
+    "kbRoot": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase",
+    "kbAttributes": "Directory",
+    "os": "Microsoft Windows 10.0.22621",
+    "architecture": "X64",
+    "processArchitecture": "X64",
+    "powershell": "7.6.5",
+    "commands": [
+      {
+        "name": "dotnet",
+        "paths": [
+          "C:\\Program Files\\dotnet\\dotnet.exe"
+        ]
+      },
+      {
+        "name": "MSBuild",
+        "paths": []
+      },
+      {
+        "name": "git",
+        "paths": [
+          "C:\\Program Files\\Git\\cmd\\git.exe",
+          "C:\\Users\\lordf\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\git\\cmd\\git.exe"
+        ]
+      },
+      {
+        "name": "gh",
+        "paths": [
+          "C:\\Program Files\\GitHub CLI\\gh.exe"
+        ]
+      },
+      {
+        "name": "pwsh",
+        "paths": [
+          "C:\\Users\\lordf\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe"
+        ]
+      },
+      {
+        "name": "powershell",
+        "paths": [
+          "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+        ]
+      },
+      {
+        "name": "python",
+        "paths": []
+      },
+      {
+        "name": "python3",
+        "paths": []
+      },
+      {
+        "name": "py",
+        "paths": []
+      },
+      {
+        "name": "node",
+        "paths": [
+          "C:\\Users\\lordf\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe"
+        ]
+      },
+      {
+        "name": "npm",
+        "paths": []
+      },
+      {
+        "name": "vswhere",
+        "paths": []
+      }
+    ]
+  },
+  "visual_studio_installations": [
+    {
+      "display_name": "Visual Studio Professional 2019",
+      "installation_path": "D:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Professional",
+      "installation_version": "16.11.37327.17",
+      "display_version": "16.11.57",
+      "complete": true,
+      "launchable": true,
+      "reboot_required": false
+    },
+    {
+      "display_name": "Visual Studio Community 2026",
+      "installation_path": "C:\\Program Files\\Microsoft Visual Studio\\18\\Community",
+      "installation_version": "18.7.11919.86",
+      "display_version": "18.7.2",
+      "complete": true,
+      "launchable": true,
+      "reboot_required": false
+    },
+    {
+      "display_name": "Visual Studio Community 2022",
+      "installation_path": "D:\\Program Files\\Microsoft Visual Studio\\2022\\Community",
+      "installation_version": "17.14.37411.7",
+      "display_version": "17.14.35 (June 2026)",
+      "complete": true,
+      "launchable": true,
+      "reboot_required": false
+    }
+  ],
+  "sdk_and_runtime_inventory": {
+    "command": "dotnet --list-sdks; dotnet --list-runtimes",
+    "output": "5.0.416 [C:\\Program Files\\dotnet\\sdk]\r\n9.0.315 [C:\\Program Files\\dotnet\\sdk]\r\n10.0.301 [C:\\Program Files\\dotnet\\sdk]\r\nMicrosoft.AspNetCore.All 2.1.30 [C:\\Program Files\\dotnet\\shared\\Microsoft.AspNetCore.All]\r\nMicrosoft.AspNetCore.App 2.1.30 [C:\\Program Files\\dotnet\\shared\\Microsoft.AspNetCore.App]\r\nMicrosoft.AspNetCore.App 3.1.32 [C:\\Program Files\\dotnet\\shared\\Microsoft.AspNetCore.App]\r\nMicrosoft.AspNetCore.App 5.0.17 [C:\\Program Files\\dotnet\\shared\\Microsoft.AspNetCore.App]\r\nMicrosoft.AspNetCore.App 6.0.36 [C:\\Program Files\\dotnet\\shared\\Microsoft.AspNetCore.App]\r\nMicrosoft.AspNetCore.App 8.0.28 [C:\\Program Files\\dotnet\\shared\\Microsoft.AspNetCore.App]\r\nMicrosoft.AspNetCore.App 9.0.17 [C:\\Program Files\\dotnet\\shared\\Microsoft.AspNetCore.App]\r\nMicrosoft.AspNetCore.App 10.0.9 [C:\\Program Files\\dotnet\\shared\\Microsoft.AspNetCore.App]\r\nMicrosoft.NETCore.App 2.1.30 [C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App]\r\nMicrosoft.NETCore.App 3.1.32 [C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App]\r\nMicrosoft.NETCore.App 5.0.17 [C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App]\r\nMicrosoft.NETCore.App 6.0.11 [C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App]\r\nMicrosoft.NETCore.App 6.0.36 [C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App]\r\nMicrosoft.NETCore.App 8.0.13 [C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App]\r\nMicrosoft.NETCore.App 8.0.28 [C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App]\r\nMicrosoft.NETCore.App 9.0.17 [C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App]\r\nMicrosoft.NETCore.App 10.0.9 [C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App]\r\nMicrosoft.WindowsDesktop.App 3.1.32 [C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App]\r\nMicrosoft.WindowsDesktop.App 5.0.17 [C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App]\r\nMicrosoft.WindowsDesktop.App 6.0.11 [C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App]\r\nMicrosoft.WindowsDesktop.App 6.0.36 [C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App]\r\nMicrosoft.WindowsDesktop.App 8.0.13 [C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App]\r\nMicrosoft.WindowsDesktop.App 8.0.28 [C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App]\r\nMicrosoft.WindowsDesktop.App 9.0.17 [C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App]\r\nMicrosoft.WindowsDesktop.App 10.0.9 [C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App]\r\n"
+  },
+  "vs2022_tools": {
+    "commands": "FileVersionInfo on exact MSBuild/VSTest paths; x64 MSBuild -nologo -version",
+    "output": "[\r\n  {\r\n    \"path\": \"D:\\\\Program Files\\\\Microsoft Visual Studio\\\\2022\\\\Community\\\\MSBuild\\\\Current\\\\Bin\\\\MSBuild.exe\",\r\n    \"fileVersion\": \"17.14.40.60911\",\r\n    \"productVersion\": \"17.14.40+3e744208875e56e4bf0bc22c40a1c431fb150987\"\r\n  },\r\n  {\r\n    \"path\": \"D:\\\\Program Files\\\\Microsoft Visual Studio\\\\2022\\\\Community\\\\MSBuild\\\\Current\\\\Bin\\\\amd64\\\\MSBuild.exe\",\r\n    \"fileVersion\": \"17.14.40.60911\",\r\n    \"productVersion\": \"17.14.40+3e744208875e56e4bf0bc22c40a1c431fb150987\"\r\n  },\r\n  {\r\n    \"path\": \"D:\\\\Program Files\\\\Microsoft Visual Studio\\\\2022\\\\Community\\\\Common7\\\\IDE\\\\CommonExtensions\\\\Microsoft\\\\TestWindow\\\\vstest.console.exe\",\r\n    \"fileVersion\": \"17.0.36015.10\",\r\n    \"productVersion\": \"17.0.36015.10\"\r\n  }\r\n]\r\n17.14.40.60911\r\n"
+  },
+  "sdk_reference_packs_and_compatibility": {
+    "commands": "vswhere -version [17.0,18.0) -requires Microsoft.VisualStudio.Workload.ManagedDesktop; list named .NET reference-pack version directories; read sdk/<version>/minimumMSBuildVersion",
+    "output": "D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\r\n{\"pack\":\"Microsoft.NETCore.App.Ref\",\"versions\":[\"10.0.9\",\"3.1.0\",\"5.0.0\",\"6.0.36\",\"8.0.28\",\"9.0.17\"]}\r\n{\"pack\":\"Microsoft.WindowsDesktop.App.Ref\",\"versions\":[\"10.0.9\",\"3.1.0\",\"5.0.0\",\"6.0.36\",\"8.0.28\",\"9.0.17\"]}\r\n{\"pack\":\"Microsoft.AspNetCore.App.Ref\",\"versions\":[\"10.0.9\",\"3.1.10\",\"5.0.0\",\"6.0.36\",\"8.0.28\",\"9.0.17\"]}\r\n{\"sdk\":\"9.0.315\",\"minimumMSBuildVersion\":\"17.12.0\"}\r\n{\"sdk\":\"10.0.301\",\"minimumMSBuildVersion\":\"18.0.0\"}\r\n",
+    "interpretation": "SDK 9.0.315 minimum MSBuild 17.12.0 is below installed VS2022 MSBuild 17.14.40. SDK 10.0.301 requires 18.0.0. A net9 target alone does not select SDK9."
+  },
+  "windows_sdk": {
+    "registry_observation": "Both HKLM SOFTWARE Microsoft Windows Kits Installed Roots and WOW6432Node counterpart name KitsRoot10 D:\\Windows Kits\\10\\.",
+    "metadata": {
+      "path": "D:\\Windows Kits\\10",
+      "exists": true,
+      "includeVersions": [
+        "10.0.26100.0",
+        "10.0.28000.0"
+      ]
+    },
+    "not_tested": "C++ compiler or native Windows SDK compilation"
+  },
+  "other_tools_and_resources": {
+    "commands": "Python --version; Node --version; gh --version; D drive free-space and processor count",
+    "output": "Python 3.12.14\r\nv24.19.0\r\ngh version 2.95.0 (2026-06-17)\nhttps://github.com/cli/cli/releases/tag/v2.95.0\n{\r\n  \"drive\": \"D:\\\\\",\r\n  \"freeGiB\": 746.67,\r\n  \"logicalProcessors\": 20,\r\n  \"interactiveSession\": true\r\n}\r\n"
+  },
+  "resolution_and_test_platform": {
+    "commands": "Exact-path existence checks; dotnet --version from experiment root; VS2022 vstest.console.exe /? bounded header",
+    "output": "[\r\n  {\r\n    \"path\": \"KnowledgeBase\\\\environment_capabilities_20260906.json\",\r\n    \"exists\": false\r\n  },\r\n  {\r\n    \"path\": \"KnowledgeBase\\\\ENVIRONMENT_CAPABILITIES_R01.md\",\r\n    \"exists\": false\r\n  },\r\n  {\r\n    \"path\": \"KnowledgeBase\\\\environment_probe_20260906.ps1\",\r\n    \"exists\": false\r\n  },\r\n  {\r\n    \"path\": \"KnowledgeBase\\\\.environment_probe_20260906\",\r\n    \"exists\": false\r\n  },\r\n  {\r\n    \"path\": \"KnowledgeBase\\\\environment_transaction_20260906.json\",\r\n    \"exists\": false\r\n  }\r\n]\r\n{\r\n  \"declaredJsonDependencyExists\": false,\r\n  \"rootGlobalJsonExists\": false\r\n}\r\n10.0.301\r\nVSTest version 17.14.0 (x64)\r\n\r\nUsage: vstest.console.exe [Arguments] [Options] [[--] <RunSettings arguments>...]]\r\n\r\nDescription: Runs tests from the specified files.\r\n\r\nArguments:\r\n\r\n[TestFileNames]\r\n      Run tests from the specified files or wild card pattern. Separate multiple test file names or pattern\r\n      by spaces. Set console logger verbosity to detailed to view matched test files.\r\n      Examples: mytestproject.dll\r\n                mytestproject.dll myothertestproject.exe\r\n                testproject*.dll my*project.dll\r\n\r\nOptions:\r\n\r\n--Tests|/Tests:<Test Names>\r\n",
+    "interpretation": "Unpinned root selects SDK10.0.301. VS2022 VSTest 17.14.0 starts. Adapter discovery, Test Explorer and real tests remain unverified."
+  },
+  "repository": {
+    "initial_status": "git version 2.53.0.windows.3\n?? .SeedAnalyzer/\n?? .vs/\n?? AGENTS.md\n?? Fistnet.Genepool.App/bin/\n?? Fistnet.Genepool.App/obj/\n?? Fistnet.Genepool.Control/obj/\n?? Fistnet.Genepool.Dna/obj/\n?? Fistnet.Genepool.Visualization/obj/\n?? KnowledgeBase/\nmaster\n4e3d72d4e00d6ae91ed45983b480c3171bb2fca4\n",
+    "final_status_and_pretransaction_deep_validation": "?? .SeedAnalyzer/\n?? .vs/\n?? AGENTS.md\n?? Fistnet.Genepool.App/bin/\n?? Fistnet.Genepool.App/obj/\n?? Fistnet.Genepool.Control/obj/\n?? Fistnet.Genepool.Dna/obj/\n?? Fistnet.Genepool.Visualization/obj/\n?? KnowledgeBase/\n{\"ok\":true,\"errors\":[],\"warnings\":[],\"counts\":{\"records\":22,\"sources\":41,\"prepared_sources\":7},\"core_estimated_tokens\":1191,\"deep\":true,\"kb_revision\":4}\r\n",
+    "scope": "Local branch/HEAD/porcelain metadata only, optional Git locks disabled, fsmonitor and untracked cache disabled. No fetch, authentication, remote access, history content, commit, push or checkout.",
+    "interpretation": "No tracked changes reported; pre-existing untracked directories remain, including KnowledgeBase. GitHub publication/recovery not verified."
+  },
+  "probe_attempts": [
+    {
+      "actor": "Seed Analyzer",
+      "purpose": "Disposable environment capability probe; no experiment source or project referenced",
+      "started_at_utc": "2026-09-06T10:41:06.0930969Z",
+      "scratch_path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\.environment_probe_20260906",
+      "probes": [
+        {
+          "name": "pinned_sdk_selection",
+          "executable": "C:\\Program Files\\dotnet\\dotnet.exe",
+          "arguments": [
+            "--version"
+          ],
+          "exit_code": 0,
+          "expected_exit": 0,
+          "timed_out": false,
+          "passed": true,
+          "elapsed_ms": 714,
+          "stdout": "9.0.315\r\n",
+          "stderr": ""
+        },
+        {
+          "name": "vs2022_msbuild_offline_release",
+          "executable": "D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.exe",
+          "arguments": [
+            "EnvironmentProbe.csproj",
+            "-restore",
+            "-t:Build",
+            "-p:Configuration=Release",
+            "-p:RestoreConfigFile=NuGet.Config",
+            "-p:NuGetAudit=false",
+            "-p:UseSharedCompilation=false",
+            "-nr:false",
+            "-nologo",
+            "-verbosity:minimal"
+          ],
+          "exit_code": 1,
+          "expected_exit": 0,
+          "timed_out": false,
+          "passed": false,
+          "elapsed_ms": 377,
+          "stdout": "\r\nD:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets(93,5): error MSB4184: The expression \"[Microsoft.Build.Utilities.ToolLocationHelper]::GetPlatformSDKLocation(Windows, 7.0)\" cannot be evaluated. Access to the path 'C:\\Users\\lordf\\AppData\\Local\\Microsoft SDKs' is denied. [D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\.environment_probe_20260906\\EnvironmentProbe.csproj]\r\n",
+          "stderr": ""
+        }
+      ],
+      "cleanup_verified": true,
+      "fixture_files": [
+        {
+          "name": "EnvironmentProbe.csproj",
+          "sha256": "7D77534D3FA445EE8084F780E7475D071D7B90672D159D1C9213967A0845AD8D",
+          "content": "<Project Sdk=\"Microsoft.NET.Sdk\">\n <PropertyGroup>\n  <OutputType>Exe</OutputType><TargetFramework>net9.0-windows7.0</TargetFramework>\n  <UseWindowsForms>true</UseWindowsForms><PlatformTarget>x64</PlatformTarget>\n  <ImplicitUsings>disable</ImplicitUsings><Nullable>enable</Nullable>\n  <UseSharedCompilation>false</UseSharedCompilation><NuGetAudit>false</NuGetAudit>\n  <ImportDirectoryBuildProps>false</ImportDirectoryBuildProps><ImportDirectoryBuildTargets>false</ImportDirectoryBuildTargets>\n </PropertyGroup>\n</Project>\r\n"
+        },
+        {
+          "name": "global.json",
+          "sha256": "172582D21CDEEB235EA3749ABFE7ECC5BBD623B814C76C02278733586A7B3183",
+          "content": "{\"sdk\":{\"version\":\"9.0.315\",\"rollForward\":\"disable\",\"allowPrerelease\":false}}\r\n"
+        },
+        {
+          "name": "NuGet.Config",
+          "sha256": "CB3FF8F75C8B8832532A122FA6358C2716B87F3E03F89006FF492A51C139F56E",
+          "content": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<configuration><packageSources><clear /></packageSources></configuration>\r\n"
+        },
+        {
+          "name": "Program.cs",
+          "sha256": "61C7A9CD2E4AF0DB6FB2FEFF89CC8A42A077B67D34AD3569DBF30B7DC7B99E4E",
+          "content": "using System;\nusing System.Collections.Generic;\nusing System.Drawing;\nusing System.Drawing.Imaging;\nusing System.IO;\nusing System.Linq;\nusing System.Runtime.InteropServices;\nusing System.Text.Json;\nusing System.Windows.Forms;\ninternal static class Program\n{\n [STAThread] private static int Main(string[] args)\n {\n  if (args.Contains(\"--deliberate-failure\")) { Console.Error.WriteLine(\"EXPECTED_NEGATIVE_CONTROL: deliberately failing assertion\"); return 7; }\n  var passed = new List<string>();\n  void Check(string name, bool condition) { if (!condition) throw new Exception(name); passed.Add(name); }\n  try\n  {\n   Check(\"managed_arithmetic\", Enumerable.Range(1, 100).Sum() == 5050);\n   var a = new Random(29); var b = new Random(29);\n   Check(\"seeded_runtime_random\", Enumerable.Range(0, 100).All(_ => a.Next() == b.Next()));\n   Check(\"x64_runtime\", Environment.Is64BitProcess);\n   using (var bitmap = new Bitmap(8, 8))\n   {\n    using (var graphics = Graphics.FromImage(bitmap)) { graphics.Clear(Color.Red); graphics.FillRectangle(Brushes.Blue, 4, 0, 4, 8); }\n    Check(\"gdi_pixel_assertions\", bitmap.GetPixel(0, 0).ToArgb() == Color.Red.ToArgb() && bitmap.GetPixel(7, 7).ToArgb() == Color.Blue.ToArgb());\n    using var stream = new MemoryStream(); bitmap.Save(stream, ImageFormat.Png); stream.Position = 0;\n    using var decoded = new Bitmap(stream);\n    Check(\"png_round_trip\", decoded.Width == 8 && decoded.Height == 8 && decoded.GetPixel(7, 7).ToArgb() == Color.Blue.ToArgb());\n   }\n   using (var panel = new Panel { Size = new Size(8, 8), BackColor = Color.Green })\n   using (var output = new Bitmap(8, 8))\n   {\n    panel.DrawToBitmap(output, new Rectangle(0, 0, 8, 8));\n    Check(\"winforms_offscreen_render\", output.GetPixel(4, 4).ToArgb() == Color.Green.ToArgb());\n   }\n   Console.WriteLine(JsonSerializer.Serialize(new { status = \"PASS\", runtime = Environment.Version.ToString(), architecture = RuntimeInformation.ProcessArchitecture.ToString(), tests = passed }));\n   return 0;\n  }\n  catch (Exception error) { Console.Error.WriteLine(JsonSerializer.Serialize(new { status = \"FAIL\", passed, error = error.ToString() })); return 1; }\n }\n}\r\n"
+        }
+      ],
+      "process_environment": {
+        "TMP": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\.environment_probe_20260906\\tmp",
+        "DOTNET_CLI_DO_NOT_USE_MSBUILD_SERVER": "1",
+        "NUGET_HTTP_CACHE_PATH": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\.environment_probe_20260906\\http",
+        "DOTNET_CLI_WORKLOAD_UPDATE_NOTIFY_DISABLE": "true",
+        "MSBuildEnableWorkloadResolver": "false",
+        "DOTNET_GENERATE_ASPNET_CERTIFICATE": "false",
+        "DOTNET_ADD_GLOBAL_TOOLS_TO_PATH": "false",
+        "NUGET_PACKAGES": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\.environment_probe_20260906\\packages",
+        "DOTNET_SKIP_FIRST_TIME_EXPERIENCE": "1",
+        "TEMP": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\.environment_probe_20260906\\tmp",
+        "DOTNET_CLI_HOME": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\.environment_probe_20260906\\cli",
+        "NUGET_PLUGINS_CACHE_PATH": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\.environment_probe_20260906\\plugins",
+        "DOTNET_NOLOGO": "1",
+        "DOTNET_CLI_TELEMETRY_OPTOUT": "1",
+        "MSBUILDDISABLENODEREUSE": "1"
+      },
+      "status": "FAIL",
+      "failure": "Capability probe failed: vs2022_msbuild_offline_release",
+      "finished_at_utc": "2026-09-06T10:41:07.3120611Z"
+    },
+    {
+      "actor": "Seed Analyzer",
+      "purpose": "Disposable environment capability probe; no experiment source or project referenced",
+      "started_at_utc": "2026-09-06T10:42:47.1660302Z",
+      "scratch_path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\.environment_probe_20260906_r02",
+      "probes": [
+        {
+          "name": "pinned_sdk_selection",
+          "executable": "C:\\Program Files\\dotnet\\dotnet.exe",
+          "arguments": [
+            "--version"
+          ],
+          "exit_code": 0,
+          "expected_exit": 0,
+          "timed_out": false,
+          "passed": true,
+          "elapsed_ms": 121,
+          "stdout": "9.0.315\r\n",
+          "stderr": ""
+        },
+        {
+          "name": "vs2022_msbuild_offline_release",
+          "executable": "D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.exe",
+          "arguments": [
+            "EnvironmentProbe.csproj",
+            "-restore",
+            "-t:Build",
+            "-p:Configuration=Release",
+            "-p:RestoreConfigFile=NuGet.Config",
+            "-p:NuGetAudit=false",
+            "-p:UseSharedCompilation=false",
+            "-nr:false",
+            "-nologo",
+            "-verbosity:minimal"
+          ],
+          "exit_code": 1,
+          "expected_exit": 0,
+          "timed_out": false,
+          "passed": false,
+          "elapsed_ms": 782,
+          "stdout": "\r\n  Determining projects to restore...\r\nD:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\NuGet\\NuGet.targets(178,5): error : Failed to read NuGet.Config due to unauthorized access. Path: 'C:\\Users\\lordf\\AppData\\Roaming\\NuGet\\NuGet.Config'. [D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\.environment_probe_20260906_r02\\EnvironmentProbe.csproj]\r\nD:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\NuGet\\NuGet.targets(178,5): error :   Access to the path 'C:\\Users\\lordf\\AppData\\Roaming\\NuGet\\NuGet.Config' is denied. [D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\.environment_probe_20260906_r02\\EnvironmentProbe.csproj]\r\n",
+          "stderr": ""
+        }
+      ],
+      "cleanup_verified": true,
+      "fixture_files": [
+        {
+          "name": "EnvironmentProbe.csproj",
+          "sha256": "82C947CA068A45B609B4511E606C0BF3FE086574236C4720252F763AFF58462F",
+          "content": "<Project Sdk=\"Microsoft.NET.Sdk\">\n <PropertyGroup>\n  <OutputType>Exe</OutputType><TargetFramework>net9.0-windows7.0</TargetFramework>\n  <UseWindowsForms>true</UseWindowsForms><PlatformTarget>x64</PlatformTarget>\n  <ImplicitUsings>disable</ImplicitUsings><Nullable>enable</Nullable>\n  <UseSharedCompilation>false</UseSharedCompilation><NuGetAudit>false</NuGetAudit>\n  <TargetPlatformSdkRootOverride>D:\\Windows Kits\\10</TargetPlatformSdkRootOverride>\n  <TargetPlatformDisplayName>Windows 7.0</TargetPlatformDisplayName>\n  <ImportDirectoryBuildProps>false</ImportDirectoryBuildProps><ImportDirectoryBuildTargets>false</ImportDirectoryBuildTargets>\n </PropertyGroup>\n</Project>\r\n"
+        },
+        {
+          "name": "global.json",
+          "sha256": "172582D21CDEEB235EA3749ABFE7ECC5BBD623B814C76C02278733586A7B3183",
+          "content": "{\"sdk\":{\"version\":\"9.0.315\",\"rollForward\":\"disable\",\"allowPrerelease\":false}}\r\n"
+        },
+        {
+          "name": "NuGet.Config",
+          "sha256": "CB3FF8F75C8B8832532A122FA6358C2716B87F3E03F89006FF492A51C139F56E",
+          "content": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<configuration><packageSources><clear /></packageSources></configuration>\r\n"
+        },
+        {
+          "name": "Program.cs",
+          "sha256": "61C7A9CD2E4AF0DB6FB2FEFF89CC8A42A077B67D34AD3569DBF30B7DC7B99E4E",
+          "content": "using System;\nusing System.Collections.Generic;\nusing System.Drawing;\nusing System.Drawing.Imaging;\nusing System.IO;\nusing System.Linq;\nusing System.Runtime.InteropServices;\nusing System.Text.Json;\nusing System.Windows.Forms;\ninternal static class Program\n{\n [STAThread] private static int Main(string[] args)\n {\n  if (args.Contains(\"--deliberate-failure\")) { Console.Error.WriteLine(\"EXPECTED_NEGATIVE_CONTROL: deliberately failing assertion\"); return 7; }\n  var passed = new List<string>();\n  void Check(string name, bool condition) { if (!condition) throw new Exception(name); passed.Add(name); }\n  try\n  {\n   Check(\"managed_arithmetic\", Enumerable.Range(1, 100).Sum() == 5050);\n   var a = new Random(29); var b = new Random(29);\n   Check(\"seeded_runtime_random\", Enumerable.Range(0, 100).All(_ => a.Next() == b.Next()));\n   Check(\"x64_runtime\", Environment.Is64BitProcess);\n   using (var bitmap = new Bitmap(8, 8))\n   {\n    using (var graphics = Graphics.FromImage(bitmap)) { graphics.Clear(Color.Red); graphics.FillRectangle(Brushes.Blue, 4, 0, 4, 8); }\n    Check(\"gdi_pixel_assertions\", bitmap.GetPixel(0, 0).ToArgb() == Color.Red.ToArgb() && bitmap.GetPixel(7, 7).ToArgb() == Color.Blue.ToArgb());\n    using var stream = new MemoryStream(); bitmap.Save(stream, ImageFormat.Png); stream.Position = 0;\n    using var decoded = new Bitmap(stream);\n    Check(\"png_round_trip\", decoded.Width == 8 && decoded.Height == 8 && decoded.GetPixel(7, 7).ToArgb() == Color.Blue.ToArgb());\n   }\n   using (var panel = new Panel { Size = new Size(8, 8), BackColor = Color.Green })\n   using (var output = new Bitmap(8, 8))\n   {\n    panel.DrawToBitmap(output, new Rectangle(0, 0, 8, 8));\n    Check(\"winforms_offscreen_render\", output.GetPixel(4, 4).ToArgb() == Color.Green.ToArgb());\n   }\n   Console.WriteLine(JsonSerializer.Serialize(new { status = \"PASS\", runtime = Environment.Version.ToString(), architecture = RuntimeInformation.ProcessArchitecture.ToString(), tests = passed }));\n   return 0;\n  }\n  catch (Exception error) { Console.Error.WriteLine(JsonSerializer.Serialize(new { status = \"FAIL\", passed, error = error.ToString() })); return 1; }\n }\n}\r\n"
+        }
+      ],
+      "process_environment": {
+        "TEMP": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\.environment_probe_20260906_r02\\tmp",
+        "DOTNET_GENERATE_ASPNET_CERTIFICATE": "false",
+        "DOTNET_CLI_HOME": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\.environment_probe_20260906_r02\\cli",
+        "DOTNET_CLI_TELEMETRY_OPTOUT": "1",
+        "MSBUILDDISABLENODEREUSE": "1",
+        "DOTNET_CLI_WORKLOAD_UPDATE_NOTIFY_DISABLE": "true",
+        "NUGET_PLUGINS_CACHE_PATH": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\.environment_probe_20260906_r02\\plugins",
+        "DOTNET_ADD_GLOBAL_TOOLS_TO_PATH": "false",
+        "NUGET_HTTP_CACHE_PATH": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\.environment_probe_20260906_r02\\http",
+        "MSBuildEnableWorkloadResolver": "false",
+        "NUGET_PACKAGES": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\.environment_probe_20260906_r02\\packages",
+        "DOTNET_CLI_DO_NOT_USE_MSBUILD_SERVER": "1",
+        "DOTNET_NOLOGO": "1",
+        "DOTNET_SKIP_FIRST_TIME_EXPERIENCE": "1",
+        "TMP": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\.environment_probe_20260906_r02\\tmp"
+      },
+      "status": "FAIL",
+      "failure": "Capability probe failed: vs2022_msbuild_offline_release",
+      "finished_at_utc": "2026-09-06T10:42:48.1898104Z"
+    },
+    {
+      "actor": "Seed Analyzer",
+      "purpose": "Disposable environment capability probe; no experiment source or project referenced",
+      "started_at_utc": "2026-09-06T10:43:37.1988568Z",
+      "scratch_path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\.environment_probe_20260906_r03",
+      "probes": [
+        {
+          "name": "pinned_sdk_selection",
+          "executable": "C:\\Program Files\\dotnet\\dotnet.exe",
+          "arguments": [
+            "--version"
+          ],
+          "exit_code": 0,
+          "expected_exit": 0,
+          "timed_out": false,
+          "passed": true,
+          "elapsed_ms": 131,
+          "stdout": "9.0.315\r\n",
+          "stderr": ""
+        },
+        {
+          "name": "sdk9_offline_restore",
+          "executable": "C:\\Program Files\\dotnet\\dotnet.exe",
+          "arguments": [
+            "restore",
+            "EnvironmentProbe.csproj",
+            "--configfile",
+            "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\.environment_probe_20260906_r03\\NuGet.Config",
+            "--packages",
+            "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\.environment_probe_20260906_r03\\packages",
+            "--disable-parallel",
+            "-p:NuGetAudit=false",
+            "-p:RestoreIgnoreFailedSources=false"
+          ],
+          "exit_code": 0,
+          "expected_exit": 0,
+          "timed_out": false,
+          "passed": true,
+          "elapsed_ms": 2467,
+          "stdout": "  Determining projects to restore...\r\n  Restored D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\.environment_probe_20260906_r03\\EnvironmentProbe.csproj (in 124 ms).\r\n",
+          "stderr": ""
+        },
+        {
+          "name": "vs2022_msbuild_offline_release",
+          "executable": "D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.exe",
+          "arguments": [
+            "EnvironmentProbe.csproj",
+            "-t:Build",
+            "-p:Configuration=Release",
+            "-p:NuGetAudit=false",
+            "-p:UseSharedCompilation=false",
+            "-nr:false",
+            "-nologo",
+            "-verbosity:minimal"
+          ],
+          "exit_code": 0,
+          "expected_exit": 0,
+          "timed_out": false,
+          "passed": true,
+          "elapsed_ms": 3544,
+          "stdout": "\r\n  EnvironmentProbe -> D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\.environment_probe_20260906_r03\\bin\\Release\\net9.0-windows7.0\\EnvironmentProbe.dll\r\n",
+          "stderr": ""
+        },
+        {
+          "name": "vs2022_release_self_tests",
+          "executable": "C:\\Program Files\\dotnet\\dotnet.exe",
+          "arguments": [
+            "bin\\Release\\net9.0-windows7.0\\EnvironmentProbe.dll"
+          ],
+          "exit_code": 0,
+          "expected_exit": 0,
+          "timed_out": false,
+          "passed": true,
+          "elapsed_ms": 543,
+          "stdout": "{\"status\":\"PASS\",\"runtime\":\"9.0.17\",\"architecture\":\"X64\",\"tests\":[\"managed_arithmetic\",\"seeded_runtime_random\",\"x64_runtime\",\"gdi_pixel_assertions\",\"png_round_trip\",\"winforms_offscreen_render\"]}\r\n",
+          "stderr": ""
+        },
+        {
+          "name": "dotnet_sdk9_offline_debug",
+          "executable": "C:\\Program Files\\dotnet\\dotnet.exe",
+          "arguments": [
+            "build",
+            "EnvironmentProbe.csproj",
+            "--no-restore",
+            "--configuration",
+            "Debug",
+            "--verbosity",
+            "minimal",
+            "-p:UseSharedCompilation=false",
+            "-nr:false"
+          ],
+          "exit_code": 0,
+          "expected_exit": 0,
+          "timed_out": false,
+          "passed": true,
+          "elapsed_ms": 3304,
+          "stdout": "  EnvironmentProbe -> D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\.environment_probe_20260906_r03\\bin\\Debug\\net9.0-windows7.0\\EnvironmentProbe.dll\r\n\r\nBuild succeeded.\r\n    0 Warning(s)\r\n    0 Error(s)\r\n\r\nTime Elapsed 00:00:03.10\r\n",
+          "stderr": ""
+        },
+        {
+          "name": "dotnet_debug_self_tests",
+          "executable": "C:\\Program Files\\dotnet\\dotnet.exe",
+          "arguments": [
+            "bin\\Debug\\net9.0-windows7.0\\EnvironmentProbe.dll"
+          ],
+          "exit_code": 0,
+          "expected_exit": 0,
+          "timed_out": false,
+          "passed": true,
+          "elapsed_ms": 142,
+          "stdout": "{\"status\":\"PASS\",\"runtime\":\"9.0.17\",\"architecture\":\"X64\",\"tests\":[\"managed_arithmetic\",\"seeded_runtime_random\",\"x64_runtime\",\"gdi_pixel_assertions\",\"png_round_trip\",\"winforms_offscreen_render\"]}\r\n",
+          "stderr": ""
+        },
+        {
+          "name": "assertion_failure_exit_propagation",
+          "executable": "C:\\Program Files\\dotnet\\dotnet.exe",
+          "arguments": [
+            "bin\\Debug\\net9.0-windows7.0\\EnvironmentProbe.dll",
+            "--deliberate-failure"
+          ],
+          "exit_code": 7,
+          "expected_exit": 7,
+          "timed_out": false,
+          "passed": true,
+          "elapsed_ms": 66,
+          "stdout": "",
+          "stderr": "EXPECTED_NEGATIVE_CONTROL: deliberately failing assertion\r\n"
+        }
+      ],
+      "cleanup_verified": true,
+      "fixture_files": [
+        {
+          "name": "EnvironmentProbe.csproj",
+          "sha256": "82C947CA068A45B609B4511E606C0BF3FE086574236C4720252F763AFF58462F",
+          "content": "<Project Sdk=\"Microsoft.NET.Sdk\">\n <PropertyGroup>\n  <OutputType>Exe</OutputType><TargetFramework>net9.0-windows7.0</TargetFramework>\n  <UseWindowsForms>true</UseWindowsForms><PlatformTarget>x64</PlatformTarget>\n  <ImplicitUsings>disable</ImplicitUsings><Nullable>enable</Nullable>\n  <UseSharedCompilation>false</UseSharedCompilation><NuGetAudit>false</NuGetAudit>\n  <TargetPlatformSdkRootOverride>D:\\Windows Kits\\10</TargetPlatformSdkRootOverride>\n  <TargetPlatformDisplayName>Windows 7.0</TargetPlatformDisplayName>\n  <ImportDirectoryBuildProps>false</ImportDirectoryBuildProps><ImportDirectoryBuildTargets>false</ImportDirectoryBuildTargets>\n </PropertyGroup>\n</Project>\r\n"
+        },
+        {
+          "name": "global.json",
+          "sha256": "172582D21CDEEB235EA3749ABFE7ECC5BBD623B814C76C02278733586A7B3183",
+          "content": "{\"sdk\":{\"version\":\"9.0.315\",\"rollForward\":\"disable\",\"allowPrerelease\":false}}\r\n"
+        },
+        {
+          "name": "NuGet.Config",
+          "sha256": "CB3FF8F75C8B8832532A122FA6358C2716B87F3E03F89006FF492A51C139F56E",
+          "content": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<configuration><packageSources><clear /></packageSources></configuration>\r\n"
+        },
+        {
+          "name": "Program.cs",
+          "sha256": "61C7A9CD2E4AF0DB6FB2FEFF89CC8A42A077B67D34AD3569DBF30B7DC7B99E4E",
+          "content": "using System;\nusing System.Collections.Generic;\nusing System.Drawing;\nusing System.Drawing.Imaging;\nusing System.IO;\nusing System.Linq;\nusing System.Runtime.InteropServices;\nusing System.Text.Json;\nusing System.Windows.Forms;\ninternal static class Program\n{\n [STAThread] private static int Main(string[] args)\n {\n  if (args.Contains(\"--deliberate-failure\")) { Console.Error.WriteLine(\"EXPECTED_NEGATIVE_CONTROL: deliberately failing assertion\"); return 7; }\n  var passed = new List<string>();\n  void Check(string name, bool condition) { if (!condition) throw new Exception(name); passed.Add(name); }\n  try\n  {\n   Check(\"managed_arithmetic\", Enumerable.Range(1, 100).Sum() == 5050);\n   var a = new Random(29); var b = new Random(29);\n   Check(\"seeded_runtime_random\", Enumerable.Range(0, 100).All(_ => a.Next() == b.Next()));\n   Check(\"x64_runtime\", Environment.Is64BitProcess);\n   using (var bitmap = new Bitmap(8, 8))\n   {\n    using (var graphics = Graphics.FromImage(bitmap)) { graphics.Clear(Color.Red); graphics.FillRectangle(Brushes.Blue, 4, 0, 4, 8); }\n    Check(\"gdi_pixel_assertions\", bitmap.GetPixel(0, 0).ToArgb() == Color.Red.ToArgb() && bitmap.GetPixel(7, 7).ToArgb() == Color.Blue.ToArgb());\n    using var stream = new MemoryStream(); bitmap.Save(stream, ImageFormat.Png); stream.Position = 0;\n    using var decoded = new Bitmap(stream);\n    Check(\"png_round_trip\", decoded.Width == 8 && decoded.Height == 8 && decoded.GetPixel(7, 7).ToArgb() == Color.Blue.ToArgb());\n   }\n   using (var panel = new Panel { Size = new Size(8, 8), BackColor = Color.Green })\n   using (var output = new Bitmap(8, 8))\n   {\n    panel.DrawToBitmap(output, new Rectangle(0, 0, 8, 8));\n    Check(\"winforms_offscreen_render\", output.GetPixel(4, 4).ToArgb() == Color.Green.ToArgb());\n   }\n   Console.WriteLine(JsonSerializer.Serialize(new { status = \"PASS\", runtime = Environment.Version.ToString(), architecture = RuntimeInformation.ProcessArchitecture.ToString(), tests = passed }));\n   return 0;\n  }\n  catch (Exception error) { Console.Error.WriteLine(JsonSerializer.Serialize(new { status = \"FAIL\", passed, error = error.ToString() })); return 1; }\n }\n}\r\n"
+        }
+      ],
+      "process_environment": {
+        "LOCALAPPDATA": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\.environment_probe_20260906_r03\\local",
+        "DOTNET_GENERATE_ASPNET_CERTIFICATE": "false",
+        "TMP": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\.environment_probe_20260906_r03\\tmp",
+        "APPDATA": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\.environment_probe_20260906_r03\\roaming",
+        "NUGET_PLUGINS_CACHE_PATH": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\.environment_probe_20260906_r03\\plugins",
+        "NUGET_HTTP_CACHE_PATH": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\.environment_probe_20260906_r03\\http",
+        "DOTNET_CLI_HOME": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\.environment_probe_20260906_r03\\cli",
+        "DOTNET_NOLOGO": "1",
+        "MSBuildEnableWorkloadResolver": "false",
+        "TEMP": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\.environment_probe_20260906_r03\\tmp",
+        "DOTNET_CLI_WORKLOAD_UPDATE_NOTIFY_DISABLE": "true",
+        "DOTNET_CLI_DO_NOT_USE_MSBUILD_SERVER": "1",
+        "DOTNET_ADD_GLOBAL_TOOLS_TO_PATH": "false",
+        "DOTNET_CLI_TELEMETRY_OPTOUT": "1",
+        "MSBUILDDISABLENODEREUSE": "1",
+        "DOTNET_SKIP_FIRST_TIME_EXPERIENCE": "1",
+        "NUGET_PACKAGES": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\.environment_probe_20260906_r03\\packages"
+      },
+      "status": "PASS",
+      "finished_at_utc": "2026-09-06T10:43:47.5653253Z"
+    }
+  ],
+  "final_probe_script_sha256": "D549B5FDF7A6B3B0C30C57D8E4FF0B7DDA4B9F02C7C65F745A09467DB5E2FA19",
+  "failure_and_assistance": {
+    "attempt1": "MSBuild SDK discovery denied access to user Local Microsoft SDKs directory.",
+    "attempt2": "Explicit installed Windows SDK path and display name passed SDK discovery; combined VS restore/build then denied access to personal NuGet.Config. File contents were not read.",
+    "attempt3": "Separate .NET SDK9 restore with an absolute empty NuGet config, process-local cache/profile locations under disposable KB scratch, then no-restore VS2022 and dotnet builds. Same six synthetic assertions passed twice. Intentional exit7/stderr reached the caller.",
+    "classification": "Capability established with explicit environment configuration; initial sandbox failures retained. No approval escalation requested; sandbox restrictions not changed.",
+    "inspection_errors": "One metadata PowerShell pipeline had a parse error before execution; corrected. An assumed standard Windows Kits path was absent; registry located the actual D:\\Windows Kits\\10 installation before the next probe."
+  },
+  "capability_limits": {
+    "original_solution_build": "NOT RUN; actual buildability not established; declared Libraries\\FistCore.Base\\Newtonsoft.Json.dll path still absent.",
+    "simulation_tests_and_trials": "NOT RUN and not implemented.",
+    "live_desktop_ui": "Native desktop automation is disabled in the currently supplied computer-use interface. Live application-window, VS designer and Test Explorer interaction have not been demonstrated. Offscreen WinForms rendering did pass.",
+    "browser": "Browser automation interface is supplied, but was not invoked or tested because this is a native WinForms project.",
+    "images": "Local image viewing is exposed; no screenshot or image model evaluation performed. Pixel/PNG assertions ran entirely locally.",
+    "network_and_github": "Network restricted by host. No connectivity, package-feed access, credentials, GitHub authentication or push capability tested.",
+    "write_authority": "Derived KB writes authorized and exercised. Original sources, governance and installed tools unchanged by intended operations. No blanket future implementation, package install, outside-root write or Git publication authorization.",
+    "performance": "Tiny fixture timings are measured tool observations; they do not predict simulation/test-suite performance.",
+    "freshness": "Snapshot only. Recheck relevant tool versions, source identities and permissions before future material work."
+  },
+  "retention": "Only compact observations and fixture text are retained as requested KB evidence. Disposable projects, compiled binaries, images, package/profile caches and scratch directories were removed and cleanup checked after every attempt."
+}

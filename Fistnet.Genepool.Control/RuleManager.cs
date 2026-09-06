@@ -11,6 +11,8 @@ namespace Fistnet.Genepool.Control
     {
         private static List<IBoardSquareRule> ruleList;
         private static int currentRuleIndex;
+        public static int CurrentRuleIndex => currentRuleIndex;
+        public static void Reset() { currentRuleIndex = 0; }
 
         public static bool IsLastRule { get { return (currentRuleIndex >= (ruleList.Count - 1)); } }
 

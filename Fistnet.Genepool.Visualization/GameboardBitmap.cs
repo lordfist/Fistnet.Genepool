@@ -13,7 +13,7 @@ using Fistnet.Genepool.Dna;
 
 namespace Fistnet.Genepool.Visualization
 {
-    public class GameboardBitmap
+    public class GameboardBitmap : IDisposable
     {
         #region Public properties.
 
@@ -25,6 +25,7 @@ namespace Fistnet.Genepool.Visualization
 
         public GameboardBitmap(int pictureSize)
         {
+            if (pictureSize <= 0) throw new ArgumentOutOfRangeException(nameof(pictureSize));
             this.actualPicture = new Bitmap(Board.BOARD_SIZE, Board.BOARD_SIZE, PixelFormat.Format32bppArgb);
             this.Picture = new Bitmap(pictureSize, pictureSize, PixelFormat.Format32bppArgb);
         }
@@ -74,9 +75,11 @@ namespace Fistnet.Genepool.Visualization
                         CurrentLine[x + 2] = (byte)(0);     // red
                         CurrentLine[x + 3] = (byte)(0);     // alpha
 
-                        if (Board.BoardElement[realX, y].IsOccupied)
+                        if (Board.BoardElement[realX, y] != null && Board.BoardElement[realX, y].IsOccupied)
                         {
                             Color color = Common.GetOrganismColors(Board.BoardElement[realX, y].Occupant)[0];
+                            if (color.R == 0 && color.G == 0 && color.B == 0)
+                                color = Color.FromArgb(48, 48, 48); // The all-Eat pattern must remain visible on empty black space.
 
                             CurrentLine[x] = (byte)(color.B);
                             CurrentLine[x + 1] = (byte)(color.G);
@@ -97,13 +100,17 @@ namespace Fistnet.Genepool.Visualization
 
         public BoardSquare GetSquareFromLocation(Point location)
         {
-            double ratioX = (double)this.Picture.Width / Board.BOARD_SIZE;
-            double ratioY = (double)this.Picture.Height / Board.BOARD_SIZE;
-
-            int actualLocationX = (int)Math.Ceiling(location.X / ratioX) - 1;
-            int actualLocationY = (int)Math.Ceiling(location.Y / ratioY) - 1;
-
+            if (location.X < 0 || location.Y < 0 || location.X >= Picture.Width || location.Y >= Picture.Height)
+                return null;
+            int actualLocationX = (int)((long)location.X * Board.BOARD_SIZE / Picture.Width);
+            int actualLocationY = (int)((long)location.Y * Board.BOARD_SIZE / Picture.Height);
             return Board.BoardElement[actualLocationX, actualLocationY];
+        }
+
+        public void Dispose()
+        {
+            Picture.Dispose();
+            actualPicture.Dispose();
         }
 
         #endregion Public methods.

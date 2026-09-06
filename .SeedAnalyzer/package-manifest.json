@@ -1,0 +1,40 @@
+{
+  "author": "Other; reusable tools preserved from owner-supplied implementation",
+  "files": {
+    ".SeedAnalyzer/CONSTITUTION.md": {
+      "bytes": 38078,
+      "sha256": "0524E60465255C38910CDBD08A2F9EDDAF64C8340BBB35E5F0BDABC284A1CCB5"
+    },
+    ".SeedAnalyzer/KB.md": {
+      "bytes": 25114,
+      "sha256": "6A6D3E016760451C11E59F9B40BBAB1F2DE2C5FF35ADD20FC8E9909CEDF0F1BA"
+    },
+    ".SeedAnalyzer/installer.py": {
+      "bytes": 19564,
+      "sha256": "D7C02D239258B0DBEC1DAC966268646FD032F57194465CF8FA98C6B2349EA4FB"
+    },
+    "AGENTS.md": {
+      "bytes": 6892,
+      "sha256": "87A4D418FCD66AF762319A9C25DBBB1043F7E4A04E736C6C319AE50313AD9AE6"
+    },
+    "KnowledgeBase/tools/consolidation_scope.py": {
+      "bytes": 11750,
+      "sha256": "BA937139D66545D031272DE1A42B90E9CCDF861EEB65F1E10343E1571FA20839"
+    },
+    "KnowledgeBase/tools/kb.py": {
+      "bytes": 70058,
+      "sha256": "BA30D2775AAE635C1D629E4FED8D923987E137A3DF898759A50CAFE7AE2206DD"
+    },
+    "KnowledgeBase/tools/kb_client.py": {
+      "bytes": 8244,
+      "sha256": "D0A0746F62B8542E68B4A80BA8CA31467870654BCC9DA640A2A478D5E2823A9F"
+    },
+    "KnowledgeBase/tools/prepare.py": {
+      "bytes": 53966,
+      "sha256": "D90E973004573AEAA79EB3ECF072D39605D4827889990A41173DC24662CF5932"
+    }
+  },
+  "format": 1,
+  "package_id": "seed-analyzer-v2-f08c3dfacc2b75cd",
+  "python_minimum": "3.11"
+}

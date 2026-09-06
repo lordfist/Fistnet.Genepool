@@ -65,15 +65,15 @@ namespace Fistnet.Genepool.Dna.Elements.Brain
         public IDnaElement ChooseOutput(Organism target, out byte chosenItem)
         {
             this.mePreExecuteEffects = this._me.CreateSnapshot();
+            this.targetPreExecuteEffects = target?.CreateSnapshot();
 
             long dnaCode = 0;
             if (target != null)
             {
                 dnaCode = target.DnaCode;
-                this.targetPreExecuteEffects = target.CreateSnapshot();
             }
 
-            if (this.mesh.Count > 0 && this.mesh.ContainsKey(dnaCode))
+            if (this.mesh.TryGetValue(dnaCode, out var knownHistory) && knownHistory.Count > 0)
             {
                 Dictionary<byte, float> historyData = this.mesh[dnaCode];
                 if (historyData.Values.Max() < 0)
@@ -82,7 +82,9 @@ namespace Fistnet.Genepool.Dna.Elements.Brain
                     return randomElement;
                 }
 
-                chosenItem = historyData.OrderByDescending(key => key.Value).First().Key;
+                chosenItem = Common.IsReferenceMode
+                    ? historyData.OrderByDescending(key => key.Value).ThenBy(key => key.Key).First().Key
+                    : historyData.OrderByDescending(key => key.Value).First().Key;
                 return this._me.DnaSequence[chosenItem];
             }
             else
@@ -94,16 +96,23 @@ namespace Fistnet.Genepool.Dna.Elements.Brain
 
         public void LearnFromParent(Organism parent)
         {
-            foreach (var item in this.mesh.Keys)
+            if (parent == null) return;
+            foreach (var item in parent.Brain.mesh)
             {
-                foreach (byte sequenceIndex in this.mesh[item].Keys)
+                foreach (var entry in item.Value)
                 {
-                    if (this._me.DnaSequence[sequenceIndex].DnaCode == parent.DnaSequence[sequenceIndex].DnaCode)
+                    byte sequenceIndex = entry.Key;
+                    if (sequenceIndex >= this._me.DnaSequence.Count || sequenceIndex >= parent.DnaSequence.Count) continue;
+                    var childGene = this._me.DnaSequence[sequenceIndex];
+                    var parentGene = parent.DnaSequence[sequenceIndex];
+                    if (childGene.DnaCode == parentGene.DnaCode && childGene.DnaType == parentGene.DnaType
+                        && childGene.Target == parentGene.Target && childGene.DnaSequenceIndex == parentGene.DnaSequenceIndex)
                     {
-                        if (!this.mesh.ContainsKey(item))
-                            this.mesh.Add(item, new Dictionary<byte, float>());
-
-                        this.mesh[item].Add(sequenceIndex, this.mesh[item][sequenceIndex]);
+                        if (!this.mesh.TryGetValue(item.Key, out var values))
+                            this.mesh[item.Key] = values = new Dictionary<byte, float>();
+                        // Called once per parent during birth: two contributions receive equal weight.
+                        values[sequenceIndex] = values.TryGetValue(sequenceIndex, out float previous)
+                            ? previous * .5f + entry.Value * .5f : entry.Value;
                     }
                 }
             }

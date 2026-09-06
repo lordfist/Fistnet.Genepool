@@ -44,10 +44,7 @@ namespace Fistnet.Genepool.Control.Gameboard
 
         public void IncreaseFood(byte increase)
         {
-            this.FoodRemaining += increase;
-
-            if (this.FoodRemaining > BoardSquare.MAX_FOOD)
-                this.FoodRemaining = BoardSquare.MAX_FOOD;
+            this.FoodRemaining = (byte)Math.Min(BoardSquare.MAX_FOOD, (int)this.FoodRemaining + increase);
         }
 
         #endregion Food setup.
@@ -197,9 +194,9 @@ namespace Fistnet.Genepool.Control.Gameboard
             if (targetSquare == null)
                 return false;
 
-            lock (this)
+            lock (Board.BoardElement)
             {
-                if (targetSquare.IsOccupied)
+                if (!this.IsOccupied || targetSquare.IsOccupied)
                     return false;
                 else
                 {

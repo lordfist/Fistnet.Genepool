@@ -124,6 +124,9 @@ namespace Fistnet.Genepool.Dna
         #region Effects stack.
 
         public ConcurrentBag<IDnaEffect> EffectsStack { get; private set; }
+        private List<IDnaEffect> _referenceEffects = new List<IDnaEffect>();
+        public IReadOnlyList<IDnaEffect> PendingEffects => Common.IsReferenceMode
+            ? _referenceEffects.ToArray() : EffectsStack.ToArray();
 
         public void AddStackedEffect(IDnaEffect effect)
         {
@@ -131,17 +134,23 @@ namespace Fistnet.Genepool.Dna
                 this.EffectsStack = new ConcurrentBag<IDnaEffect>();
 
             this.EffectsStack.Add(effect);
+            if (Common.IsReferenceMode) this._referenceEffects.Add(effect);
         }
 
         public void ExecuteEffectStack()
         {
-            foreach (IDnaEffect item in this.EffectsStack)
+            foreach (IDnaEffect item in this.PendingEffects)
             {
                 this.ExecuteSingleEffect(item);
             }
             this.Starved();
-            this.Brain.EvaluateResult(this.chosenSequenceIndex, this.chosenTarget);
+            // Aging/newborn ticks have effects but no selected action to evaluate.
+            if (this.hasChosenAction)
+                this.Brain.EvaluateResult(this.chosenSequenceIndex, this.chosenTarget);
+            this.hasChosenAction = false;
+            this.chosenTarget = null;
             this.EffectsStack = new ConcurrentBag<IDnaEffect>();
+            this._referenceEffects.Clear();
         }
 
         private void Starved()
@@ -229,7 +238,7 @@ namespace Fistnet.Genepool.Dna
 
         private void MutateMe(int seed, byte sequenceIndexThatMutates)
         {
-            Random random = new Random(seed);
+            IRandomSource random = Common.CreateLocalRandom(seed);
             byte[] randomList = new byte[Organism.DNA_SEQUENCE_MAXLENGTH];
 
             for (int i = 0; i < Organism.DNA_SEQUENCE_MAXLENGTH; i++)
@@ -238,11 +247,12 @@ namespace Fistnet.Genepool.Dna
             }
 
             byte remainingChange = Organism.DNA_SEQUENCE_MAXMUTATE;
+            var selected = new HashSet<byte>();
 
             int index = 0;
-            while (remainingChange >= 0 && index < randomList.Length)
+            while (remainingChange > 0 && index < randomList.Length)
             {
-                if (randomList[index] != sequenceIndexThatMutates)
+                if (randomList[index] != sequenceIndexThatMutates && selected.Add(randomList[index]))
                 {
                     this.DnaSequence[randomList[index]] = DnaElementFactory.GetRandomDnaElement(this, randomList[index]);
                     remainingChange--;
@@ -271,9 +281,12 @@ namespace Fistnet.Genepool.Dna
         private byte currentSequenceIndex;
         private byte chosenSequenceIndex;
         private Organism chosenTarget;
+        private bool hasChosenAction;
 
         public void ExecuteNextDnaSequence(Organism organismAffected)
         {
+            this.hasChosenAction = false;
+            this.chosenTarget = null;
             if (!this._isActive)
                 return;
 
@@ -284,6 +297,7 @@ namespace Fistnet.Genepool.Dna
             {
                 this.Brain.ChooseOutput(organismAffected, out chosenSequenceIndex).ExecuteDna(organismAffected);
                 this.chosenTarget = organismAffected;
+                this.hasChosenAction = true;
 
                 currentSequenceIndex++;
             }

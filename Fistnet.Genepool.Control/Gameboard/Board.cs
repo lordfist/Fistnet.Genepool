@@ -17,6 +17,8 @@ namespace Fistnet.Genepool.Control.Gameboard
         #region Properties.
 
         public static BoardSquare[,] BoardElement { get; private set; }
+        public static SimulationRunOptions RunOptions { get; private set; } = new SimulationRunOptions();
+        public static event Action<int, int> SeasonCompleted;
 
         #endregion Properties.
 
@@ -54,29 +56,30 @@ namespace Fistnet.Genepool.Control.Gameboard
         {
             if (isInitialized && !restart)
                 return;
+            Reset();
+        }
 
-            Board.Season = 0;
-
-            int random = Common.GetRandomIntegerSeed();
-
-            Random rand = new Random(random);
-
-            Parallel.For(0, BOARD_SIZE, (x) =>
-                {
-                    Parallel.For(0, BOARD_SIZE, (y) =>
-                    {
-                        BoardSquare square;
-
-                        if (rand.Next(10000) % 10 == 0)
-                            square = new BoardSquare(x, y, new Organism());
-                        else
-                            square = new BoardSquare(x, y, null);
-
-                        Board.BoardElement[x, y] = square;
-                    });
-                });
-
+        public static void Reset(SimulationRunOptions options = null, Func<int, int, Organism> occupants = null)
+        {
+            options = options ?? new SimulationRunOptions();
+            if (options.InitialPopulationPercent < 0 || options.InitialPopulationPercent > 100)
+                throw new ArgumentOutOfRangeException(nameof(options.InitialPopulationPercent));
+            RunOptions = options;
+            bool reference = options.Mode == SimulationMode.DeterministicReference;
+            Common.ConfigureRandom(options.RandomSource ?? (reference
+                ? (IRandomSource)new SeededRandomSource(options.Seed) : new SystemRandomSource(options.Seed)), reference);
+            isInitialized = false;
+            Season = 0;
+            RuleManager.Reset();
+            ResetStatistics();
+            BoardElement = new BoardSquare[BOARD_SIZE, BOARD_SIZE];
+            // Initialization has one owner; never share an unprotected Random across workers.
+            for (int x = 0; x < BOARD_SIZE; x++)
+                for (int y = 0; y < BOARD_SIZE; y++)
+                    BoardElement[x, y] = new BoardSquare(x, y, occupants != null ? occupants(x, y)
+                        : (Common.GetRandomIntegerSeed(100) < options.InitialPopulationPercent ? new Organism() : null));
             isInitialized = true;
+            RefreshStatistics();
         }
 
         #endregion Constructor.
@@ -142,11 +145,15 @@ namespace Fistnet.Genepool.Control.Gameboard
                 Board.LongestLiving = 0;
                 Board.OrganismUsageStatistics.Clear();
 
-                foreach (var item in Board.DnaUsageStatistics.Keys)
-                {
-                    Board.DnaUsageStatistics[item] = 0;
-                }
+                Board.DnaUsageStatistics.Clear();
             }
+        }
+
+        public static void RefreshStatistics()
+        {
+            ResetStatistics();
+            foreach (BoardSquare square in BoardElement)
+                if (square != null && square.IsOccupied) GetStatisticalInfo(square.Occupant);
         }
 
         #endregion Statistical information.
@@ -158,39 +165,32 @@ namespace Fistnet.Genepool.Control.Gameboard
             if (!isInitialized)
                 return;
 
-            if (addStatistics)
-                Board.ResetStatistics();
-
             bool seasonDone = false;
 
             while (!seasonDone)
             {
-                Parallel.For(0, BOARD_SIZE, (x) =>
+                if (RunOptions.Mode == SimulationMode.DeterministicReference)
                 {
-                    Parallel.For(0, BOARD_SIZE, (y) =>
+                    for (int x = 0; x < BOARD_SIZE; x++)
+                        for (int y = 0; y < BOARD_SIZE; y++)
+                            RuleManager.ExecuteCurrentRule(BoardElement[x, y]);
+                }
+                else
+                {
+                    Parallel.For(0, BOARD_SIZE, x =>
                     {
-                        RuleManager.ExecuteCurrentRule(Board.BoardElement[x, y]);
-                        if (addStatistics && RuleManager.IsLastRule && Board.BoardElement[x, y].IsOccupied)
-                            Board.GetStatisticalInfo(Board.BoardElement[x, y].Occupant);
+                        Parallel.For(0, BOARD_SIZE, y => RuleManager.ExecuteCurrentRule(BoardElement[x, y]));
                     });
-                });
-
-                //for (int x = 0; x < BOARD_SIZE; x++)
-                //{
-                //    for (int y = 0; y < BOARD_SIZE; y++)
-                //    {
-                //        RuleManager.ExecuteCurrentRule(Board.BoardElement[x, y]);
-                //        if (addStatistics && RuleManager.IsLastRule && Board.BoardElement[x, y].IsOccupied)
-                //            Board.GetStatisticalInfo(Board.BoardElement[x, y].Occupant);
-                //    }
-                //}
+                }
 
                 seasonDone = RuleManager.MoveToNextRule();
             }
 
             Board.Season++;
-
-            GC.Collect();
+            // Read final occupancy after movement completes, never midway through that pass.
+            if (addStatistics) RefreshStatistics();
+            else BoardOrganismCount = BoardElement.Cast<BoardSquare>().Count(s => s.IsOccupied);
+            SeasonCompleted?.Invoke(Season, BoardOrganismCount);
         }
 
         public static void ExecuteOneAge()

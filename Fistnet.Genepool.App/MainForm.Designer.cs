@@ -15,6 +15,7 @@
         {
             if (disposing && (components != null))
             {
+                ReleaseSimulationResources();
                 components.Dispose();
             }
             base.Dispose(disposing);
@@ -40,6 +41,7 @@
             this.ButtonComplexStats = new System.Windows.Forms.Button();
             this.AgeRunCheck = new System.Windows.Forms.CheckBox();
             this.ResetButton = new System.Windows.Forms.Button();
+            this.PopulationGraph = new Fistnet.Genepool.Visualization.PopulationHistoryView();
             ((System.ComponentModel.ISupportInitialize)(this.BoardVisualizer)).BeginInit();
             this.SuspendLayout();
             // 
@@ -108,7 +110,7 @@
             this.TopRatedLabel.Name = "TopRatedLabel";
             this.TopRatedLabel.Size = new System.Drawing.Size(82, 13);
             this.TopRatedLabel.TabIndex = 5;
-            this.TopRatedLabel.Text = "Top rated DNA:";
+            this.TopRatedLabel.Text = "Most common action patterns:";
             // 
             // ButtonComplexStats
             // 
@@ -144,7 +146,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1123, 624);
+            this.PopulationGraph.Location = new System.Drawing.Point(12, 628);
+            this.PopulationGraph.Name = "PopulationGraph";
+            this.PopulationGraph.Size = new System.Drawing.Size(1106, 145);
+            this.PopulationGraph.TabIndex = 9;
+            this.ClientSize = new System.Drawing.Size(1123, 785);
+            this.Controls.Add(this.PopulationGraph);
             this.Controls.Add(this.ResetButton);
             this.Controls.Add(this.AgeRunCheck);
             this.Controls.Add(this.ButtonComplexStats);
@@ -176,6 +183,7 @@
         private System.Windows.Forms.Button ButtonComplexStats;
         private System.Windows.Forms.CheckBox AgeRunCheck;
         private System.Windows.Forms.Button ResetButton;
+        private Fistnet.Genepool.Visualization.PopulationHistoryView PopulationGraph;
     }
 }
 

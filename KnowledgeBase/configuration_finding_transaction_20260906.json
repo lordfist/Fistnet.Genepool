@@ -1,0 +1,251 @@
+{
+  "actor": "Seed Analyzer",
+  "note": "Record the owner-supplied App configuration diagnostic, exact solution mismatch and minimal repair proposal. Preserve source files unchanged; no build, implementation or interpretation of embedded resolution options as authority.",
+  "upsert_records": [
+    {
+      "id": "FACT-0018",
+      "kind": "observed_fact",
+      "status": "active",
+      "statement": "The current solution maps App GUID {08D36840-03CD-4FE3-93E9-9ACBADB740DA} to Debug|x86 and Release|x86 for all six solution configurations: six ActiveCfg entries and four Build.0 entries at lines22-31. The owner-supplied Visual Studio diagnostic lists only Debug|AnyCPU and Release|AnyCPU as existing App project configurations. The App project has PlatformTarget x64 and no explicit x86 configuration declaration. App Build.0 entries are also absent for solution Debug|Any CPU and Release|Any CPU, while present for Mixed Platforms and x86. These are concrete solution-configuration findings; the Newtonsoft reference is not implicated by this diagnostic.",
+      "tags": [
+        "build",
+        "configuration",
+        "visual_studio"
+      ],
+      "source_refs": [
+        "SRC-0001",
+        "SRC-0002"
+      ],
+      "related_record_ids": [
+        "FACT-0017",
+        "REC-0004",
+        "Q-0002"
+      ],
+      "origin": {
+        "type": "static_source_inspection_and_owner_supplied_diagnostic",
+        "actor": "Seed Analyzer",
+        "recorded_at_utc": "2026-09-06 11:14:57 UTC",
+        "diagnostic_timestamp_as_supplied": "06/09/2026 13:08:08",
+        "diagnostic_text": "The solution file Fistnet.Genepool.sln specifies a project configuration for project Fistnet.Genepool.App.csproj that does not exist for that project. Existing project configurations: Debug|AnyCPU; Release|AnyCPU.",
+        "diagnostic_scope": "User pasted diagnostic text, treated as evidence rather than an instruction to execute the embedded resolution options."
+      },
+      "derivation": {
+        "method": "Complete static reading of current 66-line solution and 51-line App project; compare App mapping block with owner-supplied Visual Studio configuration list",
+        "locators": [
+          "SRC-0001:4 App GUID/path",
+          "SRC-0001:13-31 solution configurations and entire App mapping block",
+          "SRC-0002:1-13 project properties; PlatformTarget at11",
+          "Current task: owner-pasted Visual Studio configuration diagnostic"
+        ]
+      },
+      "uncertainty": "The mapping mismatch explains the reported configuration warning and is consistent with the earlier App skip. No corrected solution build or IDE reload was performed to verify the resulting build behavior. Absence of Build.0 under Any CPU is a separate selection issue; intent behind it is not established."
+    },
+    {
+      "id": "REC-0004",
+      "kind": "recommendation",
+      "status": "provisional",
+      "statement": "Proposed one-file repair in Fistnet.Genepool.sln: for App GUID {08D36840-03CD-4FE3-93E9-9ACBADB740DA} only, change the ten right-hand-side project configuration values in lines22-31 from Debug|x86 / Release|x86 to Debug|Any CPU / Release|Any CPU. Keep the left-hand-side solution configuration names. Add App Debug|Any CPU.Build.0 = Debug|Any CPU and Release|Any CPU.Build.0 = Release|Any CPU so App is included in those solution builds as well. Preserve the existing App csproj PlatformTarget x64. Verify intended Debug and Release solution builds, particularly Mixed Platforms and Any CPU, include all four projects and no longer report invalid App mappings. No source edit or build has been performed.",
+      "tags": [
+        "configuration",
+        "repair_proposal",
+        "build"
+      ],
+      "source_refs": [
+        "SRC-0001",
+        "SRC-0002"
+      ],
+      "related_record_ids": [
+        "FACT-0018",
+        "FACT-0017",
+        "REC-0003"
+      ],
+      "origin": {
+        "type": "seed_recommendation",
+        "actor": "Seed Analyzer",
+        "recorded_at_utc": "2026-09-06 11:14:57 UTC"
+      },
+      "derivation": {
+        "method": "Minimal mapping correction matching owner-provided existing configurations; separate optional build-inclusion correction from invalid mapping correction",
+        "locators": [
+          "SRC-0001:22-31",
+          "SRC-0002:11"
+        ],
+        "proposed_effects": {
+          "changed_files": [
+            "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.sln"
+          ],
+          "replacements": 10,
+          "added_app_build_entries": 2,
+          "project_properties_changed": false,
+          "execution_status": "not run",
+          "reversal": "Restore only these exact App mapping edits after checking for concurrent changes; no whole-tree reset."
+        }
+      },
+      "uncertainty": "Proposal only under continuing source-preservation boundary. Mapping repair is directly justified; adding Any CPU Build.0 entries is the recommended choice to include App in whole-solution builds. Keep x64 code generation; configuration labels and compiler PlatformTarget serve different purposes. Rebuild acceptance remains unverified."
+    },
+    {
+      "id": "FACT-0017",
+      "kind": "observed_fact",
+      "status": "active",
+      "statement": "The owner's attached Visual Studio screenshot visibly reports 'Rebuild All: 3 succeeded, 0 failed, 1 skipped', identifies Fistnet.Genepool.App as 'Skipped Rebuild All', and shows a Visualization DLL output path. The toolbar is Debug / Mixed Platforms and the IDE displays an unknown-project-configuration-mappings warning. This supports successful rebuilds of three projects, with no failed project in the shown summary. Seed had not attempted a solution build and had no observed failure attributable to the missing declared Newtonsoft.Json path; presenting that path as something that must be repaired before buildability can be established was unsupported.",
+      "tags": [
+        "build",
+        "screenshot",
+        "correction",
+        "dependency"
+      ],
+      "source_refs": [],
+      "related_record_ids": [
+        "CLAIM-0001",
+        "FACT-0010",
+        "FACT-0014",
+        "REC-0003",
+        "Q-0002",
+        "FACT-0018",
+        "REC-0004"
+      ],
+      "origin": {
+        "type": "owner_supplied_image_and_prior_seed_output",
+        "actor": "Seed Analyzer",
+        "observed_at_utc": "2026-09-06T11:06:21.9518294Z",
+        "attachment": {
+          "path": "C:\\Users\\lordf\\AppData\\Local\\Temp\\codex-clipboard-6befdd1e-c28a-4216-8637-596dd7e6b3a7.png",
+          "sha256": "90BE7DE92D1A6FA47983FDFD06E9FB95A40733FF710399381F8E5C6BD6E7F44A",
+          "bytes": 173522,
+          "admission": "Exact user-attached image; exception to prior root-only evidence restriction for this attachment only"
+        }
+      },
+      "derivation": {
+        "method": "Visual inspection of user-supplied image already displayed in the conversation and review of prior Seed records/messages",
+        "locators": [
+          "Attached image: bottom Build output, Rebuild All summary and App skipped line",
+          "Attached image: upper toolbar and yellow configuration-mapping banner",
+          "REC-0003 original statement: resolve the declared Newtonsoft.Json path before treating the solution as buildable"
+        ]
+      },
+      "uncertainty": "The complete build log and actual dependency resolution were not inspected. The screenshot does not establish a rebuild of the skipped App project, execution success, the cause of the skip, or a Newtonsoft.Json resolution mechanism. No cause is inferred from the configuration warning.",
+      "created_at": "2026-09-06T11:08:51+00:00",
+      "updated_at": "2026-09-06T11:08:51+00:00",
+      "resolution_notes": [
+        {
+          "at_utc": "2026-09-06 11:14:57 UTC",
+          "actor": "Seed Analyzer",
+          "type": "later_evidence",
+          "note": "The owner subsequently supplied the concrete VS configuration diagnostic. Static inspection confirms that the solution selects nonexistent x86 App configurations (FACT-0018). This explains the warning and is consistent with the skip; the proposed correction and build inclusion details are recorded in REC-0004. Earlier limits describe the screenshot-only horizon and are preserved.",
+          "record_ids": [
+            "FACT-0018",
+            "REC-0004"
+          ]
+        }
+      ]
+    }
+  ],
+  "upsert_sources": [],
+  "core_patch": {
+    "routes": {
+      "orientation": {
+        "record_ids": [
+          "FACT-0001",
+          "FACT-0002",
+          "FACT-0011",
+          "INF-0001"
+        ]
+      },
+      "mechanics": {
+        "record_ids": [
+          "FACT-0003",
+          "FACT-0004",
+          "FACT-0005",
+          "INF-0003"
+        ]
+      },
+      "watchability": {
+        "record_ids": [
+          "DEC-0002",
+          "FACT-0006",
+          "FACT-0009",
+          "REC-0001"
+        ]
+      },
+      "material_findings": {
+        "record_ids": [
+          "FACT-0007",
+          "FACT-0008",
+          "FACT-0010",
+          "INF-0002"
+        ]
+      },
+      "proposal_and_tests": {
+        "record_ids": [
+          "DEC-0003",
+          "REC-0002",
+          "FACT-0012",
+          "Q-0001",
+          "Q-0002"
+        ]
+      },
+      "environment_capabilities": {
+        "record_ids": [
+          "DEC-0004",
+          "FACT-0013",
+          "FACT-0014",
+          "FACT-0015",
+          "FACT-0016",
+          "REC-0003",
+          "Q-0002",
+          "CLAIM-0001",
+          "FACT-0017",
+          "FACT-0018",
+          "REC-0004"
+        ]
+      }
+    },
+    "environment": {
+      "assessed_by": "Seed Analyzer",
+      "observed_at_utc": "2026-09-06T10:45:01.3266452Z",
+      "status": "assessment_complete; synthetic capabilities verified with explicit sandbox configuration",
+      "record_ids": [
+        "FACT-0013",
+        "FACT-0014",
+        "FACT-0015",
+        "FACT-0016",
+        "REC-0003"
+      ],
+      "report": {
+        "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\ENVIRONMENT_CAPABILITIES_R01.md",
+        "sha256": "102A4FE72EA9CC4ACA43A0DEF81E2507CA5BD3D1ADC78FFBCC2B254E81939731",
+        "bytes": 10515,
+        "status": "Environment assessment with dated owner-build clarification"
+      },
+      "evidence": {
+        "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\environment_capabilities_20260906.json",
+        "sha256": "F743C92D5872BFF21BE7ED1215EA12B8DDE360B4892A98E818B008A8561C60CD",
+        "bytes": 39978,
+        "status": "Seed-derived environment observations; not original experiment source"
+      },
+      "vs2022_requirement_record": "DEC-0004",
+      "sdk_for_vs2022": "9.0.315",
+      "default_root_sdk_observed": "10.0.301",
+      "synthetic_build_and_checks": "PASS: VS2022 Release, SDK9 Debug, six checks in each plus deliberate exit7 signal",
+      "experiment_tests_executed": false,
+      "refresh": "Recheck relevant versions, SDK selection, permissions and source/dependency identity before future material work.",
+      "original_solution_built_by_seed": false,
+      "owner_build_evidence": {
+        "record_ids": [
+          "CLAIM-0001",
+          "FACT-0017"
+        ],
+        "recorded_at_utc": "2026-09-06T11:06:21.9518294Z",
+        "summary": "Owner reports successful VS build; screenshot shows 3 rebuilt successfully, 0 failed, App skipped.",
+        "declared_dll_path_is_established_blocker": false
+      },
+      "clarification": "The prior original_solution_built:false field described Seed execution only; replaced with original_solution_built_by_seed to avoid contradicting later owner build evidence.",
+      "configuration_finding": {
+        "record_id": "FACT-0018",
+        "proposed_repair_record": "REC-0004",
+        "summary": "App solution mappings select nonexistent x86 configurations; actual listed configurations are Debug/Release AnyCPU. App also lacks Build.0 selection in solution Any CPU.",
+        "status": "identified; proposed repair not applied"
+      }
+    }
+  }
+}

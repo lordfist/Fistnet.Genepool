@@ -1,0 +1,25 @@
+{
+  "capsule_sha256": "579BE21FDC9349EDB7149A97188C5DB89225BD7A429F98E45799D8AEDD03CB10",
+  "experiment_activation": "not performed",
+  "format": 1,
+  "initial_state": {
+    "KnowledgeBase/core.json": {
+      "bytes": 642,
+      "sha256": "AE532ADB214DC5F8D67AB18636E668FDDA1C61B70A4CC41D134CB90A154690A9"
+    },
+    "KnowledgeBase/records.jsonl": {
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    "KnowledgeBase/sources.json": {
+      "bytes": 45,
+      "sha256": "B4AE9D349741C82AD620E86BA6BB51D2B51E89C4795C2866B64B5E7EF2D3D176"
+    }
+  },
+  "installation_root": "D:\\Posao\\Fistnet.Genepool",
+  "installed_at": "2026-09-05T23:39:19.914819+00:00",
+  "kb_revision_at_install": 1,
+  "manifest_sha256": "2C01644F8A30DA1A4DAB8118F0EF7FC6A611E9C3D7BFF4BDFD8CB4A7A04EBB5C",
+  "package_id": "seed-analyzer-v2-f08c3dfacc2b75cd",
+  "payload_sha256": "8CD9DCC12960BF784F76315F156CE58310EB91E5E5177AD89D8ECABC79E2E9DD"
+}

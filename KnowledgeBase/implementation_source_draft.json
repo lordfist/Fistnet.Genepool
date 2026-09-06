@@ -1,0 +1,542 @@
+{
+  "upsert_sources": [
+    {
+      "source_id": "SRC-0007",
+      "title": "Fistnet.Genepool.App\\MainForm.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.App\\MainForm.cs"
+      },
+      "sha256": "5DF1D7169E8790FEC09A048B1D47448395CBA3A28999BAF02ED519FC86ADCC8C",
+      "size_bytes": 6831,
+      "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
+      "coverage": "complete textual reading; 181 file lines; exact bytes hashed; no execution or runtime validation.",
+      "status": "inspected working-tree original; not owner-approved domain authority",
+      "preparation": {
+        "status": "prepared",
+        "level": "searchable_text",
+        "path": "prepared/SRC-0007.jsonl",
+        "version": 1,
+        "preparer_version": 2,
+        "source_sha256": "5DF1D7169E8790FEC09A048B1D47448395CBA3A28999BAF02ED519FC86ADCC8C",
+        "prepared_sha256": "9BB937D712AB38FBB689586E444E7078D1DF0EFF04803E232B5ACCD2292F810B",
+        "prepared_at": "2026-09-06T01:10:48+00:00",
+        "coverage": {
+          "encoding": "utf-8-sig",
+          "text": "static bounded line chunks",
+          "execution": "not executed",
+          "external_references": "not followed"
+        }
+      },
+      "supersession": {
+        "source_id": "SRC-0043",
+        "actor": "Seed Analyzer",
+        "reason": "Owner-authorized R01 implementation and verification; committed predecessor retained.",
+        "record_ids": [
+          "DEC-0007",
+          "FACT-0023"
+        ],
+        "observed_at": "2026-09-06T12:47:54+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "1637a5dd7af2a469904cba9e3ce8789faa68467a",
+          "path": "Fistnet.Genepool.App/MainForm.cs",
+          "blob_oid": "4581c6deef6969eea2e14835fd118380e9ba39d4",
+          "transform": "lf_to_crlf"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0043",
+      "title": "Fistnet.Genepool.App\\MainForm.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.App\\MainForm.cs"
+      },
+      "sha256": "A02D3C436E8D36FFB3FB7AB352007F997C98788E10ADC04E834DF243A6BBC2CE",
+      "size_bytes": 8473,
+      "observed_at_utc": "2026-09-06T12:47:54+00:00",
+      "supersedes": "SRC-0007",
+      "status": "registered current working-file version",
+      "coverage": "Exact current bytes hashed; substantive coverage must be recorded separately."
+    },
+    {
+      "source_id": "SRC-0008",
+      "title": "Fistnet.Genepool.Control\\RuleManager.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\RuleManager.cs"
+      },
+      "sha256": "3D114BB0517F4B6F04DEEC018DA4A39FD994AC8AFF27A699DC57CEA01F4E85C1",
+      "size_bytes": 1777,
+      "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
+      "coverage": "complete textual reading; 52 file lines; exact bytes hashed; no execution or runtime validation.",
+      "status": "inspected working-tree original; not owner-approved domain authority",
+      "supersession": {
+        "source_id": "SRC-0044",
+        "actor": "Seed Analyzer",
+        "reason": "Owner-authorized R01 implementation and verification; committed predecessor retained.",
+        "record_ids": [
+          "DEC-0007",
+          "FACT-0023"
+        ],
+        "observed_at": "2026-09-06T12:47:54+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "1637a5dd7af2a469904cba9e3ce8789faa68467a",
+          "path": "Fistnet.Genepool.Control/RuleManager.cs",
+          "blob_oid": "367e5e89162a4af9201688252c071844ff3ae248",
+          "transform": "lf_to_crlf"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0044",
+      "title": "Fistnet.Genepool.Control\\RuleManager.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\RuleManager.cs"
+      },
+      "sha256": "44F860A3AC5CE3196B71B29406C83DD5495628DCA3113996C9D61D7B13A93577",
+      "size_bytes": 1906,
+      "observed_at_utc": "2026-09-06T12:47:54+00:00",
+      "supersedes": "SRC-0008",
+      "status": "registered current working-file version",
+      "coverage": "Exact current bytes hashed; substantive coverage must be recorded separately."
+    },
+    {
+      "source_id": "SRC-0009",
+      "title": "Fistnet.Genepool.Control\\Gameboard\\Board.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\Gameboard\\Board.cs"
+      },
+      "sha256": "678F6F4D1E5FC0F15762CB57F3B40753CDC7333048E548E16F19A152A807DB32",
+      "size_bytes": 6547,
+      "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
+      "coverage": "complete textual reading; 209 file lines; exact bytes hashed; no execution or runtime validation.",
+      "status": "inspected working-tree original; not owner-approved domain authority",
+      "preparation": {
+        "status": "prepared",
+        "level": "searchable_text",
+        "path": "prepared/SRC-0009.jsonl",
+        "version": 1,
+        "preparer_version": 2,
+        "source_sha256": "678F6F4D1E5FC0F15762CB57F3B40753CDC7333048E548E16F19A152A807DB32",
+        "prepared_sha256": "A77005234F61F662CC06C5FC0EC9FFE22DAD015B506D84F94EC8775B53BA369D",
+        "prepared_at": "2026-09-06T01:10:48+00:00",
+        "coverage": {
+          "encoding": "utf-8-sig",
+          "text": "static bounded line chunks",
+          "execution": "not executed",
+          "external_references": "not followed"
+        }
+      },
+      "supersession": {
+        "source_id": "SRC-0045",
+        "actor": "Seed Analyzer",
+        "reason": "Owner-authorized R01 implementation and verification; committed predecessor retained.",
+        "record_ids": [
+          "DEC-0007",
+          "FACT-0023"
+        ],
+        "observed_at": "2026-09-06T12:47:55+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "1637a5dd7af2a469904cba9e3ce8789faa68467a",
+          "path": "Fistnet.Genepool.Control/Gameboard/Board.cs",
+          "blob_oid": "c6b9c41cdb508dd7e574137cd84cb043fb78127a",
+          "transform": "lf_to_crlf"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0045",
+      "title": "Fistnet.Genepool.Control\\Gameboard\\Board.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\Gameboard\\Board.cs"
+      },
+      "sha256": "095EBB27083CA7CB75DF1660802B64D6E7425D923520E34A731A1896671C56E8",
+      "size_bytes": 7393,
+      "observed_at_utc": "2026-09-06T12:47:55+00:00",
+      "supersedes": "SRC-0009",
+      "status": "registered current working-file version",
+      "coverage": "Exact current bytes hashed; substantive coverage must be recorded separately."
+    },
+    {
+      "source_id": "SRC-0010",
+      "title": "Fistnet.Genepool.Dna\\Common.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Common.cs"
+      },
+      "sha256": "3AF44FD4DFAF74AD1961ED1CCF2CD206F2AE9AF83C6F0546A2627E21AEE9422E",
+      "size_bytes": 5840,
+      "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
+      "coverage": "complete textual reading; 203 file lines; exact bytes hashed; no execution or runtime validation.",
+      "status": "inspected working-tree original; not owner-approved domain authority",
+      "preparation": {
+        "status": "prepared",
+        "level": "searchable_text",
+        "path": "prepared/SRC-0010.jsonl",
+        "version": 1,
+        "preparer_version": 2,
+        "source_sha256": "3AF44FD4DFAF74AD1961ED1CCF2CD206F2AE9AF83C6F0546A2627E21AEE9422E",
+        "prepared_sha256": "F428253E84D17DB2AEB0511467FC17B9194D6E503CEF9458A3E15507408F150B",
+        "prepared_at": "2026-09-06T01:10:48+00:00",
+        "coverage": {
+          "encoding": "utf-8-sig",
+          "text": "static bounded line chunks",
+          "execution": "not executed",
+          "external_references": "not followed"
+        }
+      },
+      "supersession": {
+        "source_id": "SRC-0046",
+        "actor": "Seed Analyzer",
+        "reason": "Owner-authorized R01 implementation and verification; committed predecessor retained.",
+        "record_ids": [
+          "DEC-0007",
+          "FACT-0023"
+        ],
+        "observed_at": "2026-09-06T12:47:55+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "1637a5dd7af2a469904cba9e3ce8789faa68467a",
+          "path": "Fistnet.Genepool.Dna/Common.cs",
+          "blob_oid": "1a94d78383ca81507a3aa56afac999928c384f81",
+          "transform": "lf_to_crlf"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0046",
+      "title": "Fistnet.Genepool.Dna\\Common.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Common.cs"
+      },
+      "sha256": "63190CC56ABCC9A68919FBFC23399842D4CDACA2889C718BB4813DABD449BF9B",
+      "size_bytes": 5632,
+      "observed_at_utc": "2026-09-06T12:47:55+00:00",
+      "supersedes": "SRC-0010",
+      "status": "registered current working-file version",
+      "coverage": "Exact current bytes hashed; substantive coverage must be recorded separately."
+    },
+    {
+      "source_id": "SRC-0012",
+      "title": "Fistnet.Genepool.Dna\\Organism.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Organism.cs"
+      },
+      "sha256": "BF2F3B719F015C97B01B4407D7714D5B1F5F484C31832CB7D7803C3BBBC12C6E",
+      "size_bytes": 11665,
+      "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
+      "coverage": "complete textual reading; 357 file lines; exact bytes hashed; no execution or runtime validation.",
+      "status": "inspected working-tree original; not owner-approved domain authority",
+      "preparation": {
+        "status": "prepared",
+        "level": "searchable_text",
+        "path": "prepared/SRC-0012.jsonl",
+        "version": 1,
+        "preparer_version": 2,
+        "source_sha256": "BF2F3B719F015C97B01B4407D7714D5B1F5F484C31832CB7D7803C3BBBC12C6E",
+        "prepared_sha256": "1991F86C9456E0C202A0FAD712F1029D7258C4A44A621816664C4447086E4C8C",
+        "prepared_at": "2026-09-06T01:10:48+00:00",
+        "coverage": {
+          "encoding": "utf-8-sig",
+          "text": "static bounded line chunks",
+          "execution": "not executed",
+          "external_references": "not followed"
+        }
+      },
+      "supersession": {
+        "source_id": "SRC-0047",
+        "actor": "Seed Analyzer",
+        "reason": "Owner-authorized R01 implementation and verification; committed predecessor retained.",
+        "record_ids": [
+          "DEC-0007",
+          "FACT-0023"
+        ],
+        "observed_at": "2026-09-06T12:47:55+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "1637a5dd7af2a469904cba9e3ce8789faa68467a",
+          "path": "Fistnet.Genepool.Dna/Organism.cs",
+          "blob_oid": "1d660a1aaadcbb92236cccc96f96b02b5d75fb3c",
+          "transform": "lf_to_crlf"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0047",
+      "title": "Fistnet.Genepool.Dna\\Organism.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Organism.cs"
+      },
+      "sha256": "2760A1E5545B32F321F8997D7801FEAB0E477C05A3FFE0F55BAF9B24134C92E9",
+      "size_bytes": 12502,
+      "observed_at_utc": "2026-09-06T12:47:55+00:00",
+      "supersedes": "SRC-0012",
+      "status": "registered current working-file version",
+      "coverage": "Exact current bytes hashed; substantive coverage must be recorded separately."
+    },
+    {
+      "source_id": "SRC-0014",
+      "title": "Fistnet.Genepool.Dna\\Elements\\Brain\\StrategyNetwork.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Elements\\Brain\\StrategyNetwork.cs"
+      },
+      "sha256": "CC71C3DE2EE7A9329F9507A950D063C835178972E2232F0B7E833234ECE0A3B8",
+      "size_bytes": 4554,
+      "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
+      "coverage": "complete textual reading; 118 file lines; exact bytes hashed; no execution or runtime validation.",
+      "status": "inspected working-tree original; not owner-approved domain authority",
+      "preparation": {
+        "status": "prepared",
+        "level": "searchable_text",
+        "path": "prepared/SRC-0014.jsonl",
+        "version": 1,
+        "preparer_version": 2,
+        "source_sha256": "CC71C3DE2EE7A9329F9507A950D063C835178972E2232F0B7E833234ECE0A3B8",
+        "prepared_sha256": "1F816D2DD4FC5EDB41DFBB843EB5E47F03034FE47D387CFB1CFDD6AF14BED837",
+        "prepared_at": "2026-09-06T01:10:48+00:00",
+        "coverage": {
+          "encoding": "utf-8-sig",
+          "text": "static bounded line chunks",
+          "execution": "not executed",
+          "external_references": "not followed"
+        }
+      },
+      "supersession": {
+        "source_id": "SRC-0048",
+        "actor": "Seed Analyzer",
+        "reason": "Owner-authorized R01 implementation and verification; committed predecessor retained.",
+        "record_ids": [
+          "DEC-0007",
+          "FACT-0023"
+        ],
+        "observed_at": "2026-09-06T12:47:55+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "1637a5dd7af2a469904cba9e3ce8789faa68467a",
+          "path": "Fistnet.Genepool.Dna/Elements/Brain/StrategyNetwork.cs",
+          "blob_oid": "e7b4ecebd28c85943fc92f2b54212ed33337a401",
+          "transform": "lf_to_crlf"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0048",
+      "title": "Fistnet.Genepool.Dna\\Elements\\Brain\\StrategyNetwork.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Elements\\Brain\\StrategyNetwork.cs"
+      },
+      "sha256": "5C740117615A946302BC88F4B71C8AB28259835FA064D468EC11C03E81EEC887",
+      "size_bytes": 5425,
+      "observed_at_utc": "2026-09-06T12:47:55+00:00",
+      "supersedes": "SRC-0014",
+      "status": "registered current working-file version",
+      "coverage": "Exact current bytes hashed; substantive coverage must be recorded separately."
+    },
+    {
+      "source_id": "SRC-0016",
+      "title": "Fistnet.Genepool.Control\\Gameboard\\BoardSquare.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\Gameboard\\BoardSquare.cs"
+      },
+      "sha256": "620087310B173B8F124708CA37194A52F88F0F8A1858661480161AC201D24CE0",
+      "size_bytes": 6045,
+      "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
+      "coverage": "complete textual reading; 217 file lines; exact bytes hashed; no execution or runtime validation.",
+      "status": "inspected working-tree original; not owner-approved domain authority",
+      "supersession": {
+        "source_id": "SRC-0049",
+        "actor": "Seed Analyzer",
+        "reason": "Owner-authorized R01 implementation and verification; committed predecessor retained.",
+        "record_ids": [
+          "DEC-0007",
+          "FACT-0023"
+        ],
+        "observed_at": "2026-09-06T12:47:56+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "1637a5dd7af2a469904cba9e3ce8789faa68467a",
+          "path": "Fistnet.Genepool.Control/Gameboard/BoardSquare.cs",
+          "blob_oid": "b5dd3b726c2411b8f085f4111489e47285bc8a28",
+          "transform": "lf_to_crlf"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0049",
+      "title": "Fistnet.Genepool.Control\\Gameboard\\BoardSquare.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\Gameboard\\BoardSquare.cs"
+      },
+      "sha256": "D7937BC669DD6C4FF3A62F6B5EBD3CB92F9F3B57B968EFBDC11E161EAA16E6A8",
+      "size_bytes": 6022,
+      "observed_at_utc": "2026-09-06T12:47:56+00:00",
+      "supersedes": "SRC-0016",
+      "status": "registered current working-file version",
+      "coverage": "Exact current bytes hashed; substantive coverage must be recorded separately."
+    },
+    {
+      "source_id": "SRC-0028",
+      "title": "Fistnet.Genepool.Visualization\\GameboardBitmap.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Visualization\\GameboardBitmap.cs"
+      },
+      "sha256": "A8B26DF954945B7AF7758283E0A65461963A7EDFF697098ED4917248A0E84CA7",
+      "size_bytes": 3949,
+      "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
+      "coverage": "complete textual reading; 111 file lines; exact bytes hashed; no execution or runtime validation.",
+      "status": "inspected working-tree original; not owner-approved domain authority",
+      "preparation": {
+        "status": "prepared",
+        "level": "searchable_text",
+        "path": "prepared/SRC-0028.jsonl",
+        "version": 1,
+        "preparer_version": 2,
+        "source_sha256": "A8B26DF954945B7AF7758283E0A65461963A7EDFF697098ED4917248A0E84CA7",
+        "prepared_sha256": "DBD6BC2683B65EE2E4B97C07F17164D3FA6710F1786F8B6B94939935B5D3B42B",
+        "prepared_at": "2026-09-06T01:10:48+00:00",
+        "coverage": {
+          "encoding": "utf-8-sig",
+          "text": "static bounded line chunks",
+          "execution": "not executed",
+          "external_references": "not followed"
+        }
+      },
+      "supersession": {
+        "source_id": "SRC-0050",
+        "actor": "Seed Analyzer",
+        "reason": "Owner-authorized R01 implementation and verification; committed predecessor retained.",
+        "record_ids": [
+          "DEC-0007",
+          "FACT-0023"
+        ],
+        "observed_at": "2026-09-06T12:47:56+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "1637a5dd7af2a469904cba9e3ce8789faa68467a",
+          "path": "Fistnet.Genepool.Visualization/GameboardBitmap.cs",
+          "blob_oid": "8bb8ba39a6cedc683c1d6562de38ca8540abf925",
+          "transform": "lf_to_crlf"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0050",
+      "title": "Fistnet.Genepool.Visualization\\GameboardBitmap.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Visualization\\GameboardBitmap.cs"
+      },
+      "sha256": "DF2B6C6868443E218C3F6BF35BB134A134B07A4B8AFE40FFBB0DFB046A972DEE",
+      "size_bytes": 4458,
+      "observed_at_utc": "2026-09-06T12:47:56+00:00",
+      "supersedes": "SRC-0028",
+      "status": "registered current working-file version",
+      "coverage": "Exact current bytes hashed; substantive coverage must be recorded separately."
+    },
+    {
+      "source_id": "SRC-0029",
+      "title": "Fistnet.Genepool.App\\MainForm.Designer.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.App\\MainForm.Designer.cs"
+      },
+      "sha256": "68024B54733868AAB7AE9658FBC78BD464EA754299C7258C1C4890A6CB1B53FD",
+      "size_bytes": 8705,
+      "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
+      "coverage": "complete textual reading; 181 file lines; exact bytes hashed; no execution or runtime validation.",
+      "status": "inspected working-tree original; not owner-approved domain authority",
+      "supersession": {
+        "source_id": "SRC-0051",
+        "actor": "Seed Analyzer",
+        "reason": "Owner-authorized R01 implementation and verification; committed predecessor retained.",
+        "record_ids": [
+          "DEC-0007",
+          "FACT-0023"
+        ],
+        "observed_at": "2026-09-06T12:47:56+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "1637a5dd7af2a469904cba9e3ce8789faa68467a",
+          "path": "Fistnet.Genepool.App/MainForm.Designer.cs",
+          "blob_oid": "03b68e40b11e9effacd2b354b0ea1d41675497d7",
+          "transform": "lf_to_crlf"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0051",
+      "title": "Fistnet.Genepool.App\\MainForm.Designer.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.App\\MainForm.Designer.cs"
+      },
+      "sha256": "266DE6156508D5BDCA42B5842E57551E16EB54906DBEB088AED061C05791D3B7",
+      "size_bytes": 9268,
+      "observed_at_utc": "2026-09-06T12:47:56+00:00",
+      "supersedes": "SRC-0029",
+      "status": "registered current working-file version",
+      "coverage": "Exact current bytes hashed; substantive coverage must be recorded separately."
+    },
+    {
+      "source_id": "SRC-0042",
+      "title": "Fistnet.Genepool.sln",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.sln"
+      },
+      "sha256": "ADA215E7C668B4DAAA500C4681586CDA87EECB40CC51FE842C8E63C9EAB1426C",
+      "size_bytes": 4942,
+      "observed_at_utc": "2026-09-06T11:50:01+00:00",
+      "supersedes": "SRC-0001",
+      "status": "inspected source after configuration repair; owner confirms successful rebuild and WinForms run (CLAIM-0002; FACT-0021)",
+      "coverage": "Complete textual reading of the 68-line corrected solution; all twelve App mappings at lines22-33 verified; no build or runtime validation.",
+      "supersession": {
+        "source_id": "SRC-0052",
+        "actor": "Seed Analyzer",
+        "reason": "Owner-authorized R01 implementation and verification; committed predecessor retained.",
+        "record_ids": [
+          "DEC-0007",
+          "FACT-0023"
+        ],
+        "observed_at": "2026-09-06T12:47:57+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "1637a5dd7af2a469904cba9e3ce8789faa68467a",
+          "path": "Fistnet.Genepool.sln",
+          "blob_oid": "cbc2b28ef2cbbd849e47c571c876961396434e19",
+          "transform": "lf_to_crlf"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0052",
+      "title": "Fistnet.Genepool.sln",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.sln"
+      },
+      "sha256": "B28C8CDF4D210B23FB3269BEF8FAA8A1F8A493132B03A2C585CD985E49E79A85",
+      "size_bytes": 6142,
+      "observed_at_utc": "2026-09-06T12:47:57+00:00",
+      "supersedes": "SRC-0042",
+      "status": "registered current working-file version",
+      "coverage": "Exact current bytes hashed; substantive coverage must be recorded separately."
+    }
+  ],
+  "next_id": 53
+}

@@ -19,12 +19,20 @@ namespace Fistnet.Genepool.App
         public MainForm()
         {
             InitializeComponent();
+            gameVisualizer = new GameboardBitmap(BoardVisualizer.ClientSize.Width);
+            PopulationGraph.History = populationHistory;
+            Board.SeasonCompleted += RecordCompletedSeason;
         }
 
-        private GameboardBitmap gameVisualizer = new GameboardBitmap(600);
+        private GameboardBitmap gameVisualizer;
+        private readonly PopulationHistory populationHistory = new PopulationHistory();
+        private bool resetRequested;
+        private bool closeRequested;
+        private void RecordCompletedSeason(int season, int population) => populationHistory.Add(season, population);
 
         private void StartButton_Click(object sender, EventArgs e)
         {
+            if (BoardWorker.IsBusy || resetRequested) return;
             Board.InitalizeBoard();
             BoardRefreshTimer.Interval = 100;
             BoardRefreshTimer.Enabled = true;
@@ -39,7 +47,7 @@ namespace Fistnet.Genepool.App
             this.StatisticsLabel.Text += "Board age: " + Board.Age.ToString() + " \r\n";
             this.StatisticsLabel.Text += "Board season: " + Board.Season.ToString() + " \r\n";
             this.StatisticsLabel.Text += "Cell number: " + Board.BoardOrganismCount.ToString() + " \r\n";
-            this.StatisticsLabel.Text += "Longest living cell: " + Board.LongestLiving.ToString() + " \r\n";
+            this.StatisticsLabel.Text += "Oldest sequence age: " + Board.LongestLiving.ToString() + "\r\n  (may be inherited)\r\n";
             this.StatisticsLabel.Text += "DNA usage: \r\n";
             foreach (DnaTypes item in Board.DnaUsageStatistics.Keys)
             {
@@ -49,10 +57,10 @@ namespace Fistnet.Genepool.App
 
         private void ShowComplexStatistics()
         {
-            this.TopRatedLabel.Text = "Top rated DNA: \r\n-------------------------------\r\n\r\n";
+            this.TopRatedLabel.Text = "Most common action patterns: \r\n-------------------------------\r\n\r\n";
             var orderedData = Board.OrganismUsageStatistics.ToArray().OrderBy(pair => pair.Value).Reverse();
             string topRatedData = "";
-            int topCount = 40;
+            int topCount = Math.Max(1, (StartButton.Top - TopRatedLabel.Top) / TopRatedLabel.Font.Height - 4);
 
             foreach (var item in orderedData)
             {
@@ -65,52 +73,45 @@ namespace Fistnet.Genepool.App
             this.TopRatedLabel.Text += topRatedData;
         }
 
-        private int _gcCollection = 0;
-
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (!BoardWorker.IsBusy)
+            if (BoardRefreshTimer.Enabled && !BoardWorker.IsBusy && !resetRequested)
             {
-                this.ShowStatistics();
-                BoardWorker.RunWorkerAsync();
-
-                _gcCollection++;
-                if (_gcCollection >= 30)
-                {
-                    _gcCollection = 0;
-                    GC.Collect();
-                }
+                BoardWorker.RunWorkerAsync(AgeRunCheck.Checked);
             }
         }
 
         private void BoardWorker_DoWork(object sender, DoWorkEventArgs e)
         {
-            try
-            {
-                if (AgeRunCheck.Checked)
-                    Board.ExecuteOneAge();
-                else
-                    Board.ExecuteSingleSeason(true);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message + "\r\n" + ex.StackTrace);
-            }
-
-            gameVisualizer.RefreshAndResize();
+            if ((bool)e.Argument) Board.ExecuteOneAge();
+            else Board.ExecuteSingleSeason(true);
         }
 
         private void StopButton_Click(object sender, EventArgs e)
         {
             BoardRefreshTimer.Enabled = false;
             StopButton.Enabled = false;
-            StartButton.Enabled = true;
+            StartButton.Enabled = !BoardWorker.IsBusy && !resetRequested;
+            AgeRunCheck.Enabled = !BoardWorker.IsBusy;
         }
 
         private void BoardWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
+            if (closeRequested) { Close(); return; }
+            if (resetRequested) { CompleteReset(); return; }
+            if (e.Error != null)
+            {
+                StopButton_Click(sender, EventArgs.Empty);
+                MessageBox.Show(this, e.Error.Message, "Simulation stopped");
+                return;
+            }
+            // Painting and control access stay on the UI thread.
+            gameVisualizer.RefreshAndResize();
             this.BoardVisualizer.Image = gameVisualizer.Picture;
             this.BoardVisualizer.Refresh();
+            ShowStatistics();
+            PopulationGraph.Invalidate();
+            if (!BoardRefreshTimer.Enabled) { StartButton.Enabled = true; AgeRunCheck.Enabled = true; }
         }
 
         private void BoardVisualizer_MouseClick(object sender, MouseEventArgs e)
@@ -131,7 +132,7 @@ namespace Fistnet.Genepool.App
                     if (square.IsOccupied)
                     {
                         BoardItemLabel.Text += "Ocuppant dna code: " + square.Occupant.DnaCode.ToString() + "\r\n";
-                        BoardItemLabel.Text += "Ocuppant sequence age: " + square.Occupant.SequenceAge.ToString() + "\r\n";
+                        BoardItemLabel.Text += "Sequence age: " + square.Occupant.SequenceAge.ToString() + "\r\n  (may be inherited)\r\n";
                         BoardItemLabel.Text += "Ocuppant cell age: " + square.Occupant.Age.ToString() + "\r\n";
                         BoardItemLabel.Text += "Ocuppant health: " + square.Occupant.Health.ToString() + "\r\n";
                         BoardItemLabel.Text += "Ocuppant food: " + square.Occupant.FoodBalance.ToString() + "\r\n";
@@ -157,25 +158,42 @@ namespace Fistnet.Genepool.App
 
         private void button1_Click(object sender, EventArgs e)
         {
-            BoardRefreshTimer.Interval = 100;
-            BoardRefreshTimer.Enabled = false;
+            StopButton_Click(sender, e);
+            resetRequested = true;
+            StartButton.Enabled = false;
+            ResetButton.Enabled = false;
+            if (!BoardWorker.IsBusy) CompleteReset();
+        }
 
-            Task.Factory.StartNew(() =>
-            {
-                while (BoardWorker.IsBusy)
-                {
-                    Thread.Sleep(100);
-                }
-                Board.InitalizeBoard(true);
-                gameVisualizer.RefreshAndResize();
-            });
-
-            this.BoardVisualizer.Image = null;
-            this.BoardVisualizer.Refresh();
-            GC.Collect();
-
+        private void CompleteReset()
+        {
+            populationHistory.Reset();
+            Board.InitalizeBoard(true);
+            gameVisualizer.RefreshAndResize();
+            BoardVisualizer.Image = gameVisualizer.Picture;
+            BoardVisualizer.Refresh();
+            PopulationGraph.Invalidate();
+            ShowStatistics();
+            TopRatedLabel.Text = "Most common action patterns:";
+            BoardItemLabel.Text = "Board item:";
+            resetRequested = false;
             AgeRunCheck.Enabled = true;
             StartButton.Enabled = true;
+            ResetButton.Enabled = true;
+        }
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            StopButton_Click(this, EventArgs.Empty);
+            if (BoardWorker.IsBusy) { closeRequested = true; e.Cancel = true; }
+            base.OnFormClosing(e);
+        }
+
+        private void ReleaseSimulationResources()
+        {
+            Board.SeasonCompleted -= RecordCompletedSeason;
+            BoardVisualizer.Image = null;
+            gameVisualizer.Dispose();
         }
     }
 }

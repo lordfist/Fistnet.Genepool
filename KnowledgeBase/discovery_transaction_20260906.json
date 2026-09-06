@@ -1,0 +1,1293 @@
+{
+  "actor": "Seed Analyzer",
+  "note": "Initial Genesis discovery under explicit owner assignment; preserves initial revision 1 and records owner's subsequent objective clarification. Sources remain original and unchanged. Provisional findings and proposal do not authorize execution or implementation.",
+  "upsert_records": [
+    {
+      "id": "DEC-0001",
+      "kind": "owner_decision",
+      "status": "active",
+      "statement": "User assigned Seed Analyzer to D:\\Posao\\Fistnet.Genepool, with D:\\Posao\\Fistnet.Genepool\\KnowledgeBase as working knowledge, for initial discovery, reconstruction, KB population and a conversational Genesis Assessment; then stop. Installed KB retrieval, validation, registered preparation and routine transactions are authorized, with writes only to this exact KB and permitted in-root sources kept unchanged and non-executing. No source execution, outside-root evidence, research, dependency installation, new Actors, governance/tool changes, bootstrap, implementation, trial or role transition is authorized.",
+      "tags": [
+        "authority",
+        "assignment"
+      ],
+      "source_refs": [],
+      "related_record_ids": [],
+      "origin": {
+        "type": "owner_message",
+        "actor": "User",
+        "recorded_by": "Seed Analyzer",
+        "observed_at_utc": "2026-09-06T01:04:55.1867052Z"
+      },
+      "derivation": {
+        "method": "direct owner instruction",
+        "locators": [
+          "Current task: first experiment-discovery assignment after readiness, 2026-09-06"
+        ]
+      },
+      "uncertainty": "Explicit current owner authority; subsequent narrower assignments and blind/private evidence boundaries control."
+    },
+    {
+      "id": "DEC-0002",
+      "kind": "owner_decision",
+      "status": "active",
+      "statement": "User's experiment objective: make this experiment a better simulation and more fun to watch. This does not select a biological-realism target, a preferred implementation, or a numerical success metric.",
+      "tags": [
+        "objective",
+        "watchability"
+      ],
+      "source_refs": [],
+      "related_record_ids": [
+        "DEC-0001"
+      ],
+      "origin": {
+        "type": "owner_message",
+        "actor": "User",
+        "recorded_by": "Seed Analyzer",
+        "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
+        "exact_quote": "I would like to make this experiment a better simulation and more fun to watch :)"
+      },
+      "derivation": {
+        "method": "direct owner instruction",
+        "locators": [
+          "Current task: reply to the question about experiment objective and observable success, 2026-09-06"
+        ]
+      },
+      "uncertainty": "Objective explicit; detailed tradeoffs and acceptance criteria remain unspecified."
+    },
+    {
+      "id": "FACT-0001",
+      "kind": "observed_fact",
+      "status": "active",
+      "statement": "Initial metadata census covered 1,333 entries: 798 files and 535 directories, with zero enumeration errors and zero reparse entries. Disjoint file counts: 511 Git metadata, 198 build artifacts, 18 IDE cache, 6 Seed governance/package, 7 installed KB support, and 58 working candidates. Of the 58, 34 files were read completely and 7 effect/interface files received targeted line inspection; 17 remained substantively unread. SVN directory entries were observed but no SVN files were present in this census.",
+      "tags": [
+        "coverage",
+        "boundary"
+      ],
+      "source_refs": [],
+      "related_record_ids": [
+        "DEC-0001"
+      ],
+      "origin": {
+        "type": "discovery_observation",
+        "actor": "Seed Analyzer",
+        "recorded_by": "Seed Analyzer",
+        "observed_at_utc": "2026-09-06T01:04:55.1867052Z"
+      },
+      "derivation": {
+        "method": "inspection of identified evidence",
+        "locators": [
+          "KnowledgeBase/discovery_census_20260906.json",
+          "KnowledgeBase/discovery_coverage_20260906.json"
+        ]
+      },
+      "uncertainty": "Counts describe the initial census before this turn's derived files; metadata coverage is not full content review. No claim about absent evidence inside unread content."
+    },
+    {
+      "id": "FACT-0002",
+      "kind": "observed_fact",
+      "status": "active",
+      "statement": "The solution lists four C# projects: App, Dna, Control and Visualization. Program.Main opens MainForm. Project manifests target net9.0-windows7.0; App is a Windows Forms executable targeting x64. Control references Dna, Visualization references Control and Dna, and App references the other three.",
+      "tags": [
+        "structure",
+        "entrypoint"
+      ],
+      "source_refs": [
+        "SRC-0001",
+        "SRC-0002",
+        "SRC-0003",
+        "SRC-0004",
+        "SRC-0005",
+        "SRC-0006"
+      ],
+      "related_record_ids": [],
+      "origin": {
+        "type": "static_source_inspection",
+        "actor": "Seed Analyzer",
+        "recorded_by": "Seed Analyzer",
+        "observed_at_utc": "2026-09-06T01:04:55.1867052Z"
+      },
+      "derivation": {
+        "method": "inspection of identified evidence",
+        "locators": [
+          "SRC-0001:4-11",
+          "SRC-0002:1-13,46-50",
+          "SRC-0003:1-20",
+          "SRC-0004:1-16",
+          "SRC-0005:1-23",
+          "SRC-0006:13-18"
+        ]
+      },
+      "uncertainty": "Source observations establish inspected text and structure, not runtime behavior or an accepted experiment design."
+    },
+    {
+      "id": "FACT-0003",
+      "kind": "observed_fact",
+      "status": "active",
+      "statement": "Board.cs specifies a 100 by 100 grid, randomized initial occupancy using rand.Next(10000) % 10 == 0, and six ordered passes per season: refresh, organism setup, action choice, effects and births, dead-organism removal, then movement. Board age is integer season count divided by 8. BoardSquare begins with 3 food, caps it at 10 and replenishes 1 every 8 refreshes; neighbor lookup has finite boundaries rather than wraparound.",
+      "tags": [
+        "mechanics",
+        "world"
+      ],
+      "source_refs": [
+        "SRC-0008",
+        "SRC-0009",
+        "SRC-0012",
+        "SRC-0016",
+        "SRC-0018",
+        "SRC-0019",
+        "SRC-0020",
+        "SRC-0021",
+        "SRC-0022",
+        "SRC-0023"
+      ],
+      "related_record_ids": [],
+      "origin": {
+        "type": "static_source_inspection",
+        "actor": "Seed Analyzer",
+        "recorded_by": "Seed Analyzer",
+        "observed_at_utc": "2026-09-06T01:04:55.1867052Z"
+      },
+      "derivation": {
+        "method": "inspection of identified evidence",
+        "locators": [
+          "SRC-0008:17-27",
+          "SRC-0009:15-78,154-205",
+          "SRC-0012:21",
+          "SRC-0016:12-14,63-79,132-178"
+        ]
+      },
+      "uncertainty": "Constants and control flow verified statically. Approximately 10% occupancy is an intended predicate probability, not a measured initial population; shared parallel random access prevents a stronger distribution claim."
+    },
+    {
+      "id": "FACT-0004",
+      "kind": "observed_fact",
+      "status": "active",
+      "statement": "Organisms have eight DNA elements chosen from Eat, Move, GenerateFood, Kill, CombineDna, Evolve, Heal and Infect. Parent recombination alternates positions or takes two halves, with a per-element random replacement predicate. The action classes queue food, health, movement, age, mutation and birth effects. Evolve mutates, while Infect queues mutation in a target. Source names are simulation terminology, not evidence of biological validity.",
+      "tags": [
+        "mechanics",
+        "inheritance",
+        "dna"
+      ],
+      "source_refs": [
+        "SRC-0010",
+        "SRC-0011",
+        "SRC-0012",
+        "SRC-0024",
+        "SRC-0025",
+        "SRC-0026",
+        "SRC-0027",
+        "SRC-0030",
+        "SRC-0031",
+        "SRC-0032",
+        "SRC-0033",
+        "SRC-0034",
+        "SRC-0035",
+        "SRC-0036",
+        "SRC-0037",
+        "SRC-0038",
+        "SRC-0039",
+        "SRC-0040",
+        "SRC-0041"
+      ],
+      "related_record_ids": [],
+      "origin": {
+        "type": "static_source_inspection",
+        "actor": "Seed Analyzer",
+        "recorded_by": "Seed Analyzer",
+        "observed_at_utc": "2026-09-06T01:04:55.1867052Z"
+      },
+      "derivation": {
+        "method": "inspection of identified evidence",
+        "locators": [
+          "SRC-0010:10-42",
+          "SRC-0011:GetRandomDnaSequence; GetDnaSequenceFromParents",
+          "SRC-0012:ExecuteSingleEffect; constructors",
+          "SRC-0025..SRC-0027, SRC-0030..SRC-0034:ExecuteDna",
+          "SRC-0035..SRC-0041:targeted EffectTypes/Value/interface lines"
+        ]
+      },
+      "uncertainty": "Source observations establish inspected text and structure, not runtime behavior or an accepted experiment design."
+    },
+    {
+      "id": "FACT-0005",
+      "kind": "observed_fact",
+      "status": "active",
+      "statement": "Action selection includes individual learned scores, not just sequential playback of the genome. StrategyNetwork stores accumulated scores by target DnaCode and action index, chooses its highest known score unless all known scores are negative, and otherwise chooses a random DNA element. OrganismEvaluation supplies fixed weights involving food, health, age and offspring; these are internal heuristics, not User's experiment success criteria.",
+      "tags": [
+        "mechanics",
+        "learning"
+      ],
+      "source_refs": [
+        "SRC-0012",
+        "SRC-0014",
+        "SRC-0015",
+        "SRC-0020"
+      ],
+      "related_record_ids": [
+        "DEC-0002"
+      ],
+      "origin": {
+        "type": "static_source_inspection",
+        "actor": "Seed Analyzer",
+        "recorded_by": "Seed Analyzer",
+        "observed_at_utc": "2026-09-06T01:04:55.1867052Z"
+      },
+      "derivation": {
+        "method": "inspection of identified evidence",
+        "locators": [
+          "SRC-0012:264-297",
+          "SRC-0014:20-92",
+          "SRC-0015:12-62",
+          "SRC-0020:15-27"
+        ]
+      },
+      "uncertainty": "Source observations establish inspected text and structure, not runtime behavior or an accepted experiment design."
+    },
+    {
+      "id": "FACT-0006",
+      "kind": "observed_fact",
+      "status": "active",
+      "statement": "The defined viewer is a fixed window titled Gene game with a 600 by 600 board, Start/Pause/Reset, a Run entire age checkbox, click-to-inspect cell details, global statistics and manually refreshed Top rated DNA. Rendering colors each occupied cell using its eight action types. The inspected viewer has no population-history chart, event overlay or follow-an-organism control.",
+      "tags": [
+        "viewer",
+        "watchability"
+      ],
+      "source_refs": [
+        "SRC-0007",
+        "SRC-0009",
+        "SRC-0010",
+        "SRC-0028",
+        "SRC-0029"
+      ],
+      "related_record_ids": [
+        "DEC-0002"
+      ],
+      "origin": {
+        "type": "static_source_inspection",
+        "actor": "Seed Analyzer",
+        "recorded_by": "Seed Analyzer",
+        "observed_at_utc": "2026-09-06T01:04:55.1867052Z"
+      },
+      "derivation": {
+        "method": "inspection of identified evidence",
+        "locators": [
+          "SRC-0007:24-179",
+          "SRC-0009:96-137",
+          "SRC-0010:66-87",
+          "SRC-0028:26-89",
+          "SRC-0029:InitializeComponent"
+        ]
+      },
+      "uncertainty": "Defined code/UI controls only; the application was not launched and actual readability, frame rate and enjoyment were not observed. Absence claim is limited to the completely inspected viewer implementation."
+    },
+    {
+      "id": "FACT-0007",
+      "kind": "observed_fact",
+      "status": "active",
+      "statement": "Newborn parent-history transfer is a static no-op: Organism(parent1,parent2) creates a new StrategyNetwork with an empty mesh, then calls LearnFromParent twice; LearnFromParent iterates this.mesh.Keys, so neither call enters its loop or copies parental history.",
+      "tags": [
+        "defect",
+        "learning",
+        "inheritance"
+      ],
+      "source_refs": [
+        "SRC-0012",
+        "SRC-0014"
+      ],
+      "related_record_ids": [
+        "FACT-0005"
+      ],
+      "origin": {
+        "type": "static_source_inspection",
+        "actor": "Seed Analyzer",
+        "recorded_by": "Seed Analyzer",
+        "observed_at_utc": "2026-09-06T01:04:55.1867052Z"
+      },
+      "derivation": {
+        "method": "inspection of identified evidence",
+        "locators": [
+          "SRC-0012:320-339",
+          "SRC-0014:95-116"
+        ]
+      },
+      "uncertainty": "Direct control-flow conclusion for the newborn constructor path; no runtime test performed. Whether inherited learned experience is desired requires a prospective design decision."
+    },
+    {
+      "id": "FACT-0008",
+      "kind": "observed_fact",
+      "status": "active",
+      "statement": "The declared mutation limit is 2, but MutateMe uses byte remainingChange and a remainingChange >= 0 loop guard. That nonnegative byte test cannot terminate mutation at the declared limit; the random-list length bounds the loop, and repeated positions are possible. The code therefore does not enforce at most two changed positions.",
+      "tags": [
+        "defect",
+        "mutation"
+      ],
+      "source_refs": [
+        "SRC-0012"
+      ],
+      "related_record_ids": [],
+      "origin": {
+        "type": "static_source_inspection",
+        "actor": "Seed Analyzer",
+        "recorded_by": "Seed Analyzer",
+        "observed_at_utc": "2026-09-06T01:04:55.1867052Z"
+      },
+      "derivation": {
+        "method": "inspection of identified evidence",
+        "locators": [
+          "SRC-0012:21-22,230-255"
+        ]
+      },
+      "uncertainty": "Static finding; exact realized mutations were not measured. A checked arithmetic configuration could fail on decrement instead of enforcing the intended cap."
+    },
+    {
+      "id": "FACT-0009",
+      "kind": "observed_fact",
+      "status": "active",
+      "statement": "Displayed statistics require narrower interpretation: Top rated DNA is a current frequency ranking of action-type strings, not measured fitness; Longest living cell is the maximum SequenceAge among sampled occupants, and SequenceAge can be inherited when the child's DnaCode equals parent1's. Colors/action strings omit target directions and learned history.",
+      "tags": [
+        "measurement",
+        "viewer",
+        "identity"
+      ],
+      "source_refs": [
+        "SRC-0007",
+        "SRC-0009",
+        "SRC-0010",
+        "SRC-0012"
+      ],
+      "related_record_ids": [
+        "FACT-0006"
+      ],
+      "origin": {
+        "type": "static_source_inspection",
+        "actor": "Seed Analyzer",
+        "recorded_by": "Seed Analyzer",
+        "observed_at_utc": "2026-09-06T01:04:55.1867052Z"
+      },
+      "derivation": {
+        "method": "inspection of identified evidence",
+        "locators": [
+          "SRC-0007:36-65",
+          "SRC-0009:96-144",
+          "SRC-0010:66-87",
+          "SRC-0012:331-334"
+        ]
+      },
+      "uncertainty": "Verified label/calculation mismatch; no claim about measured fitness, lineage tracking or actual lifetime."
+    },
+    {
+      "id": "FACT-0010",
+      "kind": "observed_fact",
+      "status": "active",
+      "statement": "Three project files reference Libraries\\FistCore.Base\\Newtonsoft.Json.dll inside the assigned root. That exact dependency path is absent. The census includes copies named Newtonsoft.Json.dll under three bin\\Debug trees, but those are build artifacts of unverified lineage and were not opened or substituted.",
+      "tags": [
+        "dependency",
+        "build"
+      ],
+      "source_refs": [
+        "SRC-0003",
+        "SRC-0004",
+        "SRC-0005"
+      ],
+      "related_record_ids": [],
+      "origin": {
+        "type": "static_source_inspection",
+        "actor": "Seed Analyzer",
+        "recorded_by": "Seed Analyzer",
+        "observed_at_utc": "2026-09-06T01:04:55.1867052Z"
+      },
+      "derivation": {
+        "method": "inspection of identified evidence",
+        "locators": [
+          "SRC-0003:11-14",
+          "SRC-0004:11-14",
+          "SRC-0005:13-16",
+          "KnowledgeBase/discovery_census_20260906.json; exact-path Test-Path observation"
+        ]
+      },
+      "uncertainty": "The declared path gap is verified; a build failure, alternative resolution, dependency necessity or compatibility has not been tested."
+    },
+    {
+      "id": "FACT-0011",
+      "kind": "observed_fact",
+      "status": "active",
+      "statement": "The inspected working tree combines a Visual Studio 2010-format solution header with SDK-style net9.0 project manifests. Git HEAD names refs/heads/master, whose loose ref was 4e3d72d4e00d6ae91ed45983b480c3171bb2fca4. This is branch metadata only: source bytes are anchored separately by catalog hashes, and equality with that commit was not established. Repository history and prior runtime results were not inspected.",
+      "tags": [
+        "chronology",
+        "lineage"
+      ],
+      "source_refs": [
+        "SRC-0001",
+        "SRC-0002",
+        "SRC-0003",
+        "SRC-0004",
+        "SRC-0005"
+      ],
+      "related_record_ids": [],
+      "origin": {
+        "type": "static_source_inspection",
+        "actor": "Seed Analyzer",
+        "recorded_by": "Seed Analyzer",
+        "observed_at_utc": "2026-09-06T01:04:55.1867052Z"
+      },
+      "derivation": {
+        "method": "inspection of identified evidence",
+        "locators": [
+          "SRC-0001:2-3",
+          "SRC-0002..SRC-0005:TargetFramework",
+          "read-only .git/HEAD and .git/refs/heads/master observations"
+        ]
+      },
+      "uncertainty": "A modernization is a plausible inference, but its date, author and sequence are unknown. File timestamps do not establish that history."
+    },
+    {
+      "id": "INF-0001",
+      "kind": "inference",
+      "status": "provisional",
+      "statement": "Leading model: a developmental and exploratory artificial-life sandbox combining inherited action repertoires, mutation, local resource competition and individual action learning, now with an owner-stated aim to improve simulation quality and watching enjoyment. The implementation is the system under improvement; populations and individual organisms are things to observe, not proof of a formal scientific experiment or an AI-agent capability test.",
+      "tags": [
+        "model",
+        "objective"
+      ],
+      "source_refs": [
+        "SRC-0007",
+        "SRC-0009",
+        "SRC-0011",
+        "SRC-0012",
+        "SRC-0014",
+        "SRC-0015",
+        "SRC-0028"
+      ],
+      "related_record_ids": [
+        "DEC-0002",
+        "FACT-0002",
+        "FACT-0003",
+        "FACT-0004",
+        "FACT-0005",
+        "FACT-0006"
+      ],
+      "origin": {
+        "type": "static_source_inspection",
+        "actor": "Seed Analyzer",
+        "recorded_by": "Seed Analyzer",
+        "observed_at_utc": "2026-09-06T01:04:55.1867052Z"
+      },
+      "derivation": {
+        "method": "static reasoning; no source execution",
+        "locators": [
+          "FACT-0002..FACT-0006",
+          "DEC-0002"
+        ]
+      },
+      "uncertainty": "Strong source support for the implemented sandbox; provisional interpretation of the owner's larger experiment. No accepted architecture, controlled treatment, baseline, trial protocol or success thresholds have been supplied."
+    },
+    {
+      "id": "INF-0002",
+      "kind": "inference",
+      "status": "provisional",
+      "statement": "Comparative claims would need care: Common uses clock-dependent randomness and Board executes nested parallel loops, so reproducible runs are not established. CalculateChange divides by the previous value unless both values are zero; a nonzero change from zero can create non-finite learning scores. StrategyNetwork.ChooseOutput does not clear targetPreExecuteEffects when target is null, and target direction and final action are selected in separate calls. These are source-grounded risks for later bounded review, not observed crashes or population outcomes.",
+      "tags": [
+        "uncertainty",
+        "learning",
+        "reproducibility"
+      ],
+      "source_refs": [
+        "SRC-0009",
+        "SRC-0010",
+        "SRC-0012",
+        "SRC-0014",
+        "SRC-0015",
+        "SRC-0020"
+      ],
+      "related_record_ids": [
+        "FACT-0005"
+      ],
+      "origin": {
+        "type": "static_source_inspection",
+        "actor": "Seed Analyzer",
+        "recorded_by": "Seed Analyzer",
+        "observed_at_utc": "2026-09-06T01:04:55.1867052Z"
+      },
+      "derivation": {
+        "method": "static reasoning; no source execution",
+        "locators": [
+          "SRC-0009:60-76,168-176",
+          "SRC-0010:47-51,90-115,183-188",
+          "SRC-0012:264-285",
+          "SRC-0014:65-92",
+          "SRC-0015:58-59",
+          "SRC-0020:15-25"
+        ]
+      },
+      "uncertainty": "No runtime execution or frequency measurement. Reproducibility is only a candidate need if comparisons become part of the chosen improvement, not an owner-mandated infrastructure objective."
+    },
+    {
+      "id": "INF-0003",
+      "kind": "inference",
+      "status": "provisional",
+      "statement": "Population timing and reproduction deserve a small semantics review before tuning: Board age advances every 8 seasons, while Organism executes 8 actions and uses a subsequent call for age/food bookkeeping; BirthChild and its Birth-effect caller both increment the reproduction counter. These can make behavior differ from the apparent age and per-age reproduction constants.",
+      "tags": [
+        "mechanics",
+        "review_candidate"
+      ],
+      "source_refs": [
+        "SRC-0009",
+        "SRC-0012",
+        "SRC-0016"
+      ],
+      "related_record_ids": [
+        "FACT-0003",
+        "FACT-0004"
+      ],
+      "origin": {
+        "type": "static_source_inspection",
+        "actor": "Seed Analyzer",
+        "recorded_by": "Seed Analyzer",
+        "observed_at_utc": "2026-09-06T01:04:55.1867052Z"
+      },
+      "derivation": {
+        "method": "static reasoning; no source execution",
+        "locators": [
+          "SRC-0009:36-38,196-205",
+          "SRC-0012:185-189,209-215,283-297",
+          "SRC-0016:63-79"
+        ]
+      },
+      "uncertainty": "Static interpretation, not a runtime measurement. Whether the different clocks are intentional and what reproduction count is desired are unconfirmed."
+    },
+    {
+      "id": "Q-0001",
+      "kind": "open_question",
+      "status": "open",
+      "statement": "For the next improvement slice, which visible result should define success: clearer and more interesting population behavior, more faithful internal mechanics, easier observation, or a small combination? The owner has chosen better simulation and more fun to watch, but not biological realism, optimal survival, a specific learning model or numerical targets.",
+      "tags": [
+        "objective",
+        "next_decision"
+      ],
+      "source_refs": [],
+      "related_record_ids": [
+        "DEC-0002",
+        "INF-0001",
+        "REC-0001"
+      ],
+      "origin": {
+        "type": "discovery_observation",
+        "actor": "Seed Analyzer",
+        "recorded_by": "Seed Analyzer",
+        "observed_at_utc": "2026-09-06T01:04:55.1867052Z"
+      },
+      "derivation": {
+        "method": "inspection of identified evidence",
+        "locators": [
+          "DEC-0002; current owner objective clarification"
+        ]
+      },
+      "uncertainty": "This does not block initial discovery or KB population; it matters before material design or implementation."
+    },
+    {
+      "id": "Q-0002",
+      "kind": "open_question",
+      "status": "open",
+      "statement": "What baseline behavior does the owner currently observe, and which source version/dependency arrangement is intended for a future authorized build or run? Initial discovery did not establish current buildability, actual survival/extinction patterns, performance, prior successful trials or historical lineage.",
+      "tags": [
+        "baseline",
+        "runtime",
+        "lineage"
+      ],
+      "source_refs": [
+        "SRC-0001",
+        "SRC-0002",
+        "SRC-0003",
+        "SRC-0004",
+        "SRC-0005"
+      ],
+      "related_record_ids": [
+        "FACT-0010",
+        "FACT-0011"
+      ],
+      "origin": {
+        "type": "static_source_inspection",
+        "actor": "Seed Analyzer",
+        "recorded_by": "Seed Analyzer",
+        "observed_at_utc": "2026-09-06T01:04:55.1867052Z"
+      },
+      "derivation": {
+        "method": "inspection of identified evidence",
+        "locators": [
+          "FACT-0010",
+          "FACT-0011"
+        ]
+      },
+      "uncertainty": "No outside-root dependency lookup, history-content access or execution was performed; additional access is unnecessary for this initial assessment."
+    },
+    {
+      "id": "REC-0001",
+      "kind": "recommendation",
+      "status": "provisional",
+      "statement": "Keep the existing four-project application, one Seed Analyzer and the installed KB. The smallest useful next proposal is one bounded improvement slice: examine the already evidenced learning/mutation mismatches, then choose a small viewing improvement such as clearer statistics plus a population trend or organism/event highlighting. Compare keeping the current behavior, correcting a small defect, and changing the model; defer model expansion and additional infrastructure until a named need appears. Preserve the current source baseline and seek owner acceptance of the exact slice before implementation.",
+      "tags": [
+        "proposal",
+        "watchability",
+        "minimal_system"
+      ],
+      "source_refs": [
+        "SRC-0007",
+        "SRC-0012",
+        "SRC-0014",
+        "SRC-0028",
+        "SRC-0029"
+      ],
+      "related_record_ids": [
+        "DEC-0002",
+        "FACT-0007",
+        "FACT-0008",
+        "FACT-0009",
+        "Q-0001"
+      ],
+      "origin": {
+        "type": "static_source_inspection",
+        "actor": "Seed Analyzer",
+        "recorded_by": "Seed Analyzer",
+        "observed_at_utc": "2026-09-06T01:04:55.1867052Z"
+      },
+      "derivation": {
+        "method": "Seed proposal; not owner accepted",
+        "locators": [
+          "DEC-0002",
+          "FACT-0006..FACT-0009"
+        ]
+      },
+      "uncertainty": "Seed recommendation only. No change, biological-realism target, feature, architecture, trial protocol or additional role has been accepted."
+    }
+  ],
+  "upsert_sources": [
+    {
+      "source_id": "SRC-0001",
+      "title": "Fistnet.Genepool.sln",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.sln"
+      },
+      "sha256": "FC104E50DED1E70741D58453D29E63EC21373775ECEC9F413137096115EAAFAD",
+      "size_bytes": 4738,
+      "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
+      "coverage": "complete textual reading; 66 file lines; exact bytes hashed; no execution or runtime validation.",
+      "status": "inspected working-tree original; not owner-approved domain authority"
+    },
+    {
+      "source_id": "SRC-0002",
+      "title": "Fistnet.Genepool.App\\Fistnet.Genepool.App.csproj",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.App\\Fistnet.Genepool.App.csproj"
+      },
+      "sha256": "D79B44B872561468641D6D2A56E592B6E264EDB92C680862AC2A629446350746",
+      "size_bytes": 2060,
+      "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
+      "coverage": "complete textual reading; 51 file lines; exact bytes hashed; no execution or runtime validation.",
+      "status": "inspected working-tree original; not owner-approved domain authority"
+    },
+    {
+      "source_id": "SRC-0003",
+      "title": "Fistnet.Genepool.Control\\Fistnet.Genepool.Control.csproj",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\Fistnet.Genepool.Control.csproj"
+      },
+      "sha256": "232E655DB0B44DA93BB2889C540AA7482879159091554C8F06D2A4124FDD13CD",
+      "size_bytes": 688,
+      "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
+      "coverage": "complete textual reading; 20 file lines; exact bytes hashed; no execution or runtime validation.",
+      "status": "inspected working-tree original; not owner-approved domain authority"
+    },
+    {
+      "source_id": "SRC-0004",
+      "title": "Fistnet.Genepool.Dna\\Fistnet.Genepool.Dna.csproj",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Fistnet.Genepool.Dna.csproj"
+      },
+      "sha256": "3C4C3BFF796B9BA9D1F115AF9E36008552F4441B8C5E311F0B93CB2980671CB0",
+      "size_bytes": 559,
+      "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
+      "coverage": "complete textual reading; 16 file lines; exact bytes hashed; no execution or runtime validation.",
+      "status": "inspected working-tree original; not owner-approved domain authority"
+    },
+    {
+      "source_id": "SRC-0005",
+      "title": "Fistnet.Genepool.Visualization\\Fistnet.Genepool.Visualization.csproj",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Visualization\\Fistnet.Genepool.Visualization.csproj"
+      },
+      "sha256": "760BC830F85D591967CE62462688C9FC41567ACA5393785019EC6BCF0CA01F60",
+      "size_bytes": 893,
+      "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
+      "coverage": "complete textual reading; 23 file lines; exact bytes hashed; no execution or runtime validation.",
+      "status": "inspected working-tree original; not owner-approved domain authority"
+    },
+    {
+      "source_id": "SRC-0006",
+      "title": "Fistnet.Genepool.App\\Program.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.App\\Program.cs"
+      },
+      "sha256": "4F92A86484D538E1BBE7416E13848760E6FACE86C481397EDE69CAE35531668F",
+      "size_bytes": 515,
+      "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
+      "coverage": "complete textual reading; 21 file lines; exact bytes hashed; no execution or runtime validation.",
+      "status": "inspected working-tree original; not owner-approved domain authority"
+    },
+    {
+      "source_id": "SRC-0007",
+      "title": "Fistnet.Genepool.App\\MainForm.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.App\\MainForm.cs"
+      },
+      "sha256": "5DF1D7169E8790FEC09A048B1D47448395CBA3A28999BAF02ED519FC86ADCC8C",
+      "size_bytes": 6831,
+      "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
+      "coverage": "complete textual reading; 181 file lines; exact bytes hashed; no execution or runtime validation.",
+      "status": "inspected working-tree original; not owner-approved domain authority"
+    },
+    {
+      "source_id": "SRC-0008",
+      "title": "Fistnet.Genepool.Control\\RuleManager.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\RuleManager.cs"
+      },
+      "sha256": "3D114BB0517F4B6F04DEEC018DA4A39FD994AC8AFF27A699DC57CEA01F4E85C1",
+      "size_bytes": 1777,
+      "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
+      "coverage": "complete textual reading; 52 file lines; exact bytes hashed; no execution or runtime validation.",
+      "status": "inspected working-tree original; not owner-approved domain authority"
+    },
+    {
+      "source_id": "SRC-0009",
+      "title": "Fistnet.Genepool.Control\\Gameboard\\Board.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\Gameboard\\Board.cs"
+      },
+      "sha256": "678F6F4D1E5FC0F15762CB57F3B40753CDC7333048E548E16F19A152A807DB32",
+      "size_bytes": 6547,
+      "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
+      "coverage": "complete textual reading; 209 file lines; exact bytes hashed; no execution or runtime validation.",
+      "status": "inspected working-tree original; not owner-approved domain authority"
+    },
+    {
+      "source_id": "SRC-0010",
+      "title": "Fistnet.Genepool.Dna\\Common.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Common.cs"
+      },
+      "sha256": "3AF44FD4DFAF74AD1961ED1CCF2CD206F2AE9AF83C6F0546A2627E21AEE9422E",
+      "size_bytes": 5840,
+      "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
+      "coverage": "complete textual reading; 203 file lines; exact bytes hashed; no execution or runtime validation.",
+      "status": "inspected working-tree original; not owner-approved domain authority"
+    },
+    {
+      "source_id": "SRC-0011",
+      "title": "Fistnet.Genepool.Dna\\DnaElementFactory.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\DnaElementFactory.cs"
+      },
+      "sha256": "0C23AAB3479FB68A3F946778F72A94E5BA6B92EAF05BCAAFB903C6C93616CD13",
+      "size_bytes": 4867,
+      "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
+      "coverage": "complete textual reading; 130 file lines; exact bytes hashed; no execution or runtime validation.",
+      "status": "inspected working-tree original; not owner-approved domain authority"
+    },
+    {
+      "source_id": "SRC-0012",
+      "title": "Fistnet.Genepool.Dna\\Organism.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Organism.cs"
+      },
+      "sha256": "BF2F3B719F015C97B01B4407D7714D5B1F5F484C31832CB7D7803C3BBBC12C6E",
+      "size_bytes": 11665,
+      "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
+      "coverage": "complete textual reading; 357 file lines; exact bytes hashed; no execution or runtime validation.",
+      "status": "inspected working-tree original; not owner-approved domain authority"
+    },
+    {
+      "source_id": "SRC-0013",
+      "title": "Fistnet.Genepool.Dna\\OrganismSnapshot.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\OrganismSnapshot.cs"
+      },
+      "sha256": "B30CA2C1807B6FBBCF3AA99A9A30F60091EAAC826B80DA63DD2D6A527F4787ED",
+      "size_bytes": 1729,
+      "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
+      "coverage": "complete textual reading; 73 file lines; exact bytes hashed; no execution or runtime validation.",
+      "status": "inspected working-tree original; not owner-approved domain authority"
+    },
+    {
+      "source_id": "SRC-0014",
+      "title": "Fistnet.Genepool.Dna\\Elements\\Brain\\StrategyNetwork.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Elements\\Brain\\StrategyNetwork.cs"
+      },
+      "sha256": "CC71C3DE2EE7A9329F9507A950D063C835178972E2232F0B7E833234ECE0A3B8",
+      "size_bytes": 4554,
+      "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
+      "coverage": "complete textual reading; 118 file lines; exact bytes hashed; no execution or runtime validation.",
+      "status": "inspected working-tree original; not owner-approved domain authority"
+    },
+    {
+      "source_id": "SRC-0015",
+      "title": "Fistnet.Genepool.Dna\\Elements\\Brain\\OrganismEvaluation.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Elements\\Brain\\OrganismEvaluation.cs"
+      },
+      "sha256": "27E18011AE25FA9C0F20F962267317313B4BFF438F48693713924C958FD2639C",
+      "size_bytes": 2725,
+      "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
+      "coverage": "complete textual reading; 67 file lines; exact bytes hashed; no execution or runtime validation.",
+      "status": "inspected working-tree original; not owner-approved domain authority"
+    },
+    {
+      "source_id": "SRC-0016",
+      "title": "Fistnet.Genepool.Control\\Gameboard\\BoardSquare.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\Gameboard\\BoardSquare.cs"
+      },
+      "sha256": "620087310B173B8F124708CA37194A52F88F0F8A1858661480161AC201D24CE0",
+      "size_bytes": 6045,
+      "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
+      "coverage": "complete textual reading; 217 file lines; exact bytes hashed; no execution or runtime validation.",
+      "status": "inspected working-tree original; not owner-approved domain authority"
+    },
+    {
+      "source_id": "SRC-0017",
+      "title": "Fistnet.Genepool.Control\\Rules\\IBoardSquareRule.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\Rules\\IBoardSquareRule.cs"
+      },
+      "sha256": "93E10F9553C5FA8D818D577518BA1B9B5A0D6045AB6633301FCE831C5658736F",
+      "size_bytes": 285,
+      "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
+      "coverage": "complete textual reading; 13 file lines; exact bytes hashed; no execution or runtime validation.",
+      "status": "inspected working-tree original; not owner-approved domain authority"
+    },
+    {
+      "source_id": "SRC-0018",
+      "title": "Fistnet.Genepool.Control\\Rules\\ExecuteRefreshRule.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\Rules\\ExecuteRefreshRule.cs"
+      },
+      "sha256": "51F95993AAB4EF92FE195E9BE01B8239BF511DB4B3945C41911CBB614C678B9C",
+      "size_bytes": 366,
+      "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
+      "coverage": "complete textual reading; 16 file lines; exact bytes hashed; no execution or runtime validation.",
+      "status": "inspected working-tree original; not owner-approved domain authority"
+    },
+    {
+      "source_id": "SRC-0019",
+      "title": "Fistnet.Genepool.Control\\Rules\\ExecuteOgranismSetup.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\Rules\\ExecuteOgranismSetup.cs"
+      },
+      "sha256": "D063FF03A83FEB85E0CAB6C32FDE6AC56AEBF4772F28D96DAA1EFBEDBD5304BC",
+      "size_bytes": 822,
+      "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
+      "coverage": "complete textual reading; 27 file lines; exact bytes hashed; no execution or runtime validation.",
+      "status": "inspected working-tree original; not owner-approved domain authority"
+    },
+    {
+      "source_id": "SRC-0020",
+      "title": "Fistnet.Genepool.Control\\Rules\\ExecuteOrganismSequenceRule.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\Rules\\ExecuteOrganismSequenceRule.cs"
+      },
+      "sha256": "206BA1785AFAC323D4F1731A79FFD891607E717C0C97201F123B1F89735F210F",
+      "size_bytes": 1026,
+      "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
+      "coverage": "complete textual reading; 33 file lines; exact bytes hashed; no execution or runtime validation.",
+      "status": "inspected working-tree original; not owner-approved domain authority"
+    },
+    {
+      "source_id": "SRC-0021",
+      "title": "Fistnet.Genepool.Control\\Rules\\ExecuteOrganismEffectsRule.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\Rules\\ExecuteOrganismEffectsRule.cs"
+      },
+      "sha256": "9479DBFBC3A69E006B5E7D6C1F47D488ECF08578258284EE92D745AD523CF88A",
+      "size_bytes": 1017,
+      "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
+      "coverage": "complete textual reading; 31 file lines; exact bytes hashed; no execution or runtime validation.",
+      "status": "inspected working-tree original; not owner-approved domain authority"
+    },
+    {
+      "source_id": "SRC-0022",
+      "title": "Fistnet.Genepool.Control\\Rules\\ExecuteOrganismDeadRule.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\Rules\\ExecuteOrganismDeadRule.cs"
+      },
+      "sha256": "C685E36FA65A651CA8BA4448728A1F75D6BA99C2406176CCBDC5026A77E6B8DD",
+      "size_bytes": 832,
+      "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
+      "coverage": "complete textual reading; 28 file lines; exact bytes hashed; no execution or runtime validation.",
+      "status": "inspected working-tree original; not owner-approved domain authority"
+    },
+    {
+      "source_id": "SRC-0023",
+      "title": "Fistnet.Genepool.Control\\Rules\\ExecuteOrganismMoveRule.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\Rules\\ExecuteOrganismMoveRule.cs"
+      },
+      "sha256": "9E951E5EB029E7855D51709116E417A394A5B486CDD1B48ACF45D34AF381C044",
+      "size_bytes": 707,
+      "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
+      "coverage": "complete textual reading; 25 file lines; exact bytes hashed; no execution or runtime validation.",
+      "status": "inspected working-tree original; not owner-approved domain authority"
+    },
+    {
+      "source_id": "SRC-0024",
+      "title": "Fistnet.Genepool.Dna\\Elements\\IDnaElement.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Elements\\IDnaElement.cs"
+      },
+      "sha256": "47126ED6764A9960F278FDA276086F69B4EF0593643232CD63B1D27ACF475CAA",
+      "size_bytes": 498,
+      "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
+      "coverage": "complete textual reading; 25 file lines; exact bytes hashed; no execution or runtime validation.",
+      "status": "inspected working-tree original; not owner-approved domain authority"
+    },
+    {
+      "source_id": "SRC-0025",
+      "title": "Fistnet.Genepool.Dna\\Elements\\CombineDnaElement.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Elements\\CombineDnaElement.cs"
+      },
+      "sha256": "0CA034D7177101B518F4E652384D983C8B730F46A5B758D97DA8F2EDB0A15897",
+      "size_bytes": 2276,
+      "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
+      "coverage": "complete textual reading; 84 file lines; exact bytes hashed; no execution or runtime validation.",
+      "status": "inspected working-tree original; not owner-approved domain authority"
+    },
+    {
+      "source_id": "SRC-0026",
+      "title": "Fistnet.Genepool.Dna\\Elements\\EvolveDnaElement.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Elements\\EvolveDnaElement.cs"
+      },
+      "sha256": "DDE0E4AF10ADB72F84677A971EEBE16FBEFE746C919D91B9DA463B8727D24D5B",
+      "size_bytes": 2517,
+      "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
+      "coverage": "complete textual reading; 85 file lines; exact bytes hashed; no execution or runtime validation.",
+      "status": "inspected working-tree original; not owner-approved domain authority"
+    },
+    {
+      "source_id": "SRC-0027",
+      "title": "Fistnet.Genepool.Dna\\Elements\\InfectDnaElement.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Elements\\InfectDnaElement.cs"
+      },
+      "sha256": "E6C0B93934230F35ABA63B0FF557A09D23AFC73BFCE3C634B030C00937C01160",
+      "size_bytes": 2601,
+      "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
+      "coverage": "complete textual reading; 88 file lines; exact bytes hashed; no execution or runtime validation.",
+      "status": "inspected working-tree original; not owner-approved domain authority"
+    },
+    {
+      "source_id": "SRC-0028",
+      "title": "Fistnet.Genepool.Visualization\\GameboardBitmap.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Visualization\\GameboardBitmap.cs"
+      },
+      "sha256": "A8B26DF954945B7AF7758283E0A65461963A7EDFF697098ED4917248A0E84CA7",
+      "size_bytes": 3949,
+      "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
+      "coverage": "complete textual reading; 111 file lines; exact bytes hashed; no execution or runtime validation.",
+      "status": "inspected working-tree original; not owner-approved domain authority"
+    },
+    {
+      "source_id": "SRC-0029",
+      "title": "Fistnet.Genepool.App\\MainForm.Designer.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.App\\MainForm.Designer.cs"
+      },
+      "sha256": "68024B54733868AAB7AE9658FBC78BD464EA754299C7258C1C4890A6CB1B53FD",
+      "size_bytes": 8705,
+      "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
+      "coverage": "complete textual reading; 181 file lines; exact bytes hashed; no execution or runtime validation.",
+      "status": "inspected working-tree original; not owner-approved domain authority"
+    },
+    {
+      "source_id": "SRC-0030",
+      "title": "Fistnet.Genepool.Dna\\Elements\\EatDnaElement.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Elements\\EatDnaElement.cs"
+      },
+      "sha256": "5EEF2C1C8969BE0AADC1B3D99BFFACF96B1244C85D4F64B308F91BD45B5B7D15",
+      "size_bytes": 2298,
+      "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
+      "coverage": "complete textual reading; 80 file lines; exact bytes hashed; no execution or runtime validation.",
+      "status": "inspected working-tree original; not owner-approved domain authority"
+    },
+    {
+      "source_id": "SRC-0031",
+      "title": "Fistnet.Genepool.Dna\\Elements\\CreateFoodDnaElement.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Elements\\CreateFoodDnaElement.cs"
+      },
+      "sha256": "C8E51B409E9F63CF197CBC82271CA22C21D2D8B224BA291CB87C606DAA14744F",
+      "size_bytes": 2498,
+      "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
+      "coverage": "complete textual reading; 86 file lines; exact bytes hashed; no execution or runtime validation.",
+      "status": "inspected working-tree original; not owner-approved domain authority"
+    },
+    {
+      "source_id": "SRC-0032",
+      "title": "Fistnet.Genepool.Dna\\Elements\\MoveDnaElement.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Elements\\MoveDnaElement.cs"
+      },
+      "sha256": "5CF51255F60F0301B072A193F3C55C51166320778E45A46A81219A72D56EF76E",
+      "size_bytes": 2400,
+      "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
+      "coverage": "complete textual reading; 90 file lines; exact bytes hashed; no execution or runtime validation.",
+      "status": "inspected working-tree original; not owner-approved domain authority"
+    },
+    {
+      "source_id": "SRC-0033",
+      "title": "Fistnet.Genepool.Dna\\Elements\\HealDnaElement.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Elements\\HealDnaElement.cs"
+      },
+      "sha256": "EB5C34C6C2810FE5D74F30BFD333F6BE746718CFDFF47C6D27AADF20BE4F983E",
+      "size_bytes": 2924,
+      "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
+      "coverage": "complete textual reading; 94 file lines; exact bytes hashed; no execution or runtime validation.",
+      "status": "inspected working-tree original; not owner-approved domain authority"
+    },
+    {
+      "source_id": "SRC-0034",
+      "title": "Fistnet.Genepool.Dna\\Elements\\KillDnaElement.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Elements\\KillDnaElement.cs"
+      },
+      "sha256": "4CC1153C9704A046AC71E6F1DA3E085CD2E33EF2EF543F0E219E010D5E7D9211",
+      "size_bytes": 2686,
+      "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
+      "coverage": "complete textual reading; 90 file lines; exact bytes hashed; no execution or runtime validation.",
+      "status": "inspected working-tree original; not owner-approved domain authority"
+    },
+    {
+      "source_id": "SRC-0035",
+      "title": "Fistnet.Genepool.Dna\\Effects\\BirthEffect.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Effects\\BirthEffect.cs"
+      },
+      "sha256": "931F43DD43DF3EFE5776BB93A3FAD10B273B9061E965CED2D3F5B1F658A183FC",
+      "size_bytes": 954,
+      "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
+      "coverage": "targeted matching lines: DnaCode|new |EffectTypes|Value; remaining lines not substantively read; 48 file lines; exact bytes hashed; no execution or runtime validation.",
+      "status": "inspected working-tree original; not owner-approved domain authority"
+    },
+    {
+      "source_id": "SRC-0036",
+      "title": "Fistnet.Genepool.Dna\\Effects\\MutateEffect.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Effects\\MutateEffect.cs"
+      },
+      "sha256": "C58CB5ED91858C700FFE9A7473B6A35673E07F226A85365226BBA0763D4CF2C2",
+      "size_bytes": 1001,
+      "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
+      "coverage": "targeted matching lines: DnaCode|new |EffectTypes|Value; remaining lines not substantively read; 49 file lines; exact bytes hashed; no execution or runtime validation.",
+      "status": "inspected working-tree original; not owner-approved domain authority"
+    },
+    {
+      "source_id": "SRC-0037",
+      "title": "Fistnet.Genepool.Dna\\Effects\\ChangeAgeEffect.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Effects\\ChangeAgeEffect.cs"
+      },
+      "sha256": "A9D0DC18DFC1B962E4DBD0E4D28408D6FE1C3F551A9B348BB7E1D0ED3983E65C",
+      "size_bytes": 961,
+      "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
+      "coverage": "targeted matching lines: DnaCode|new |EffectTypes|Value; remaining lines not substantively read; 48 file lines; exact bytes hashed; no execution or runtime validation.",
+      "status": "inspected working-tree original; not owner-approved domain authority"
+    },
+    {
+      "source_id": "SRC-0038",
+      "title": "Fistnet.Genepool.Dna\\Effects\\ChangeFoodEffect.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Effects\\ChangeFoodEffect.cs"
+      },
+      "sha256": "E2A3DE1CEC5F60E3AC9905C8CF2D1F1F01E1B179181CB54F79AF73058A757823",
+      "size_bytes": 964,
+      "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
+      "coverage": "targeted matching lines: DnaCode|new |EffectTypes|Value; remaining lines not substantively read; 48 file lines; exact bytes hashed; no execution or runtime validation.",
+      "status": "inspected working-tree original; not owner-approved domain authority"
+    },
+    {
+      "source_id": "SRC-0039",
+      "title": "Fistnet.Genepool.Dna\\Effects\\ChangeHealthEffect.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Effects\\ChangeHealthEffect.cs"
+      },
+      "sha256": "CD4F33FA8212F8D29E761B96895C45AB413EE45179CF646155C1D6D897A9AF6A",
+      "size_bytes": 970,
+      "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
+      "coverage": "targeted matching lines: DnaCode|new |EffectTypes|Value; remaining lines not substantively read; 48 file lines; exact bytes hashed; no execution or runtime validation.",
+      "status": "inspected working-tree original; not owner-approved domain authority"
+    },
+    {
+      "source_id": "SRC-0040",
+      "title": "Fistnet.Genepool.Dna\\Effects\\ChangePositionEffect.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Effects\\ChangePositionEffect.cs"
+      },
+      "sha256": "B9FEEA58624A70B1D8AAC3F29559C9AE7127EBC3784C1BA29D6705B580A83388",
+      "size_bytes": 999,
+      "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
+      "coverage": "targeted matching lines: DnaCode|new |EffectTypes|Value; remaining lines not substantively read; 49 file lines; exact bytes hashed; no execution or runtime validation.",
+      "status": "inspected working-tree original; not owner-approved domain authority"
+    },
+    {
+      "source_id": "SRC-0041",
+      "title": "Fistnet.Genepool.Dna\\Effects\\IDnaEffect.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Effects\\IDnaEffect.cs"
+      },
+      "sha256": "9E597FE334459DE3FCE08840A25BD03ED151BA57851F6A1DB7CA628D61C7A863",
+      "size_bytes": 330,
+      "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
+      "coverage": "targeted matching lines: DnaCode|new |EffectTypes|Value; remaining lines not substantively read; 18 file lines; exact bytes hashed; no execution or runtime validation.",
+      "status": "inspected working-tree original; not owner-approved domain authority"
+    }
+  ],
+  "core_patch": {
+    "experiment": {
+      "root": "D:\\Posao\\Fistnet.Genepool",
+      "purpose": "Make this experiment a better simulation and more fun to watch.",
+      "purpose_origin_record": "DEC-0002",
+      "status": "initial_discovery_complete_model_provisional",
+      "phase": "RECONSTRUCTION",
+      "root_semantics": "Exact physical experiment root explicitly assigned by User; KB tools bound to this root.",
+      "model": "Provisional artificial-life sandbox with inherited action repertoires and individual learning.",
+      "model_record": "INF-0001",
+      "model_accepted": false,
+      "design_accepted": false,
+      "trial_authorized": false
+    },
+    "pinned_record_ids": [
+      "DEC-0001",
+      "DEC-0002",
+      "INF-0001",
+      "REC-0001"
+    ],
+    "owner_decision_ids": [
+      "DEC-0001",
+      "DEC-0002"
+    ],
+    "open_question_ids": [
+      "Q-0001",
+      "Q-0002"
+    ],
+    "next_decision_order": [
+      "Q-0001",
+      "Q-0002"
+    ],
+    "routes": {
+      "orientation": {
+        "record_ids": [
+          "FACT-0001",
+          "FACT-0002",
+          "FACT-0011",
+          "INF-0001"
+        ]
+      },
+      "mechanics": {
+        "record_ids": [
+          "FACT-0003",
+          "FACT-0004",
+          "FACT-0005",
+          "INF-0003"
+        ]
+      },
+      "watchability": {
+        "record_ids": [
+          "DEC-0002",
+          "FACT-0006",
+          "FACT-0009",
+          "REC-0001"
+        ]
+      },
+      "material_findings": {
+        "record_ids": [
+          "FACT-0007",
+          "FACT-0008",
+          "FACT-0010",
+          "INF-0002"
+        ]
+      }
+    },
+    "discovery": {
+      "actor": "Seed Analyzer",
+      "source_horizon_utc": "2026-09-06T01:04:55.1867052Z",
+      "census_horizon_utc": "2026-09-06T00:59:05.9355189Z",
+      "census_file": "discovery_census_20260906.json",
+      "coverage_file": "discovery_coverage_20260906.json",
+      "initial_entries": 1333,
+      "initial_files": 798,
+      "initial_directories": 535,
+      "working_candidate_files": 58,
+      "fully_read_files": 34,
+      "targeted_read_files": 7,
+      "unread_working_candidates": 17,
+      "branch": "master",
+      "head_metadata": "4e3d72d4e00d6ae91ed45983b480c3171bb2fca4",
+      "source_commit_equivalence": "not established",
+      "limitations": "Original code inspected statically only. History/IDE/build content, user/config settings and remaining metadata/resources were not substantively read. No experiment execution or measured outcome. No marked blind source content was opened; potential private configuration remains unread."
+    },
+    "authority": {
+      "assignment_record": "DEC-0001",
+      "actor": "Seed Analyzer",
+      "knowledgebase_root": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase",
+      "continuing_kb_authority": "Bundled retrieval, validation, registered preparation and routine transactions for owner-assigned work; permitted in-root sources only; derived writes only inside this KB.",
+      "originals": "read-only and non-executing",
+      "next_action": "Stop after Genesis Assessment and await owner's next applicable instruction; no bootstrap, implementation, trials or role transition."
+    }
+  }
+}
+
