@@ -13,7 +13,7 @@
     "trial_authorized": true,
     "trial_scope": "Completed bounded R01 suite; no unattended or extended trial active."
   },
-  "kb_revision": 16,
+  "kb_revision": 17,
   "next_decision_order": [
     "Q-0001"
   ],
@@ -27,7 +27,8 @@
     "DEC-0004",
     "DEC-0005",
     "DEC-0006",
-    "DEC-0007"
+    "DEC-0007",
+    "DEC-0008"
   ],
   "pinned_record_ids": [
     "DEC-0001",
@@ -125,10 +126,10 @@
   },
   "schema_version": 1,
   "state_files": {
-    "records_jsonl_sha256": "E13776EF2814967D9FFEE7970BA1102C43A9B931ACBD9FE4647E616361E2E646",
-    "sources_json_sha256": "DE2093064CEB32C1D280CC0C2C764E6268346C7EDB59355EF75AFFBCADFB1003"
+    "records_jsonl_sha256": "5D9C8E0D968346C2D062C450EF9EADFFD9130350E4856C3073EF1F0653E9A306",
+    "sources_json_sha256": "2D408A2D5641580F0799C5AE56E7DE8F76B32B0CF02C9FD98607AEDF43DC1C78"
   },
-  "updated_at": "2026-09-06T12:54:15+00:00",
+  "updated_at": "2026-09-06T13:09:38+00:00",
   "discovery": {
     "actor": "Seed Analyzer",
     "source_horizon_utc": "2026-09-06T01:04:55.1867052Z",
@@ -151,16 +152,16 @@
     "assignment_record": "DEC-0001",
     "actor": "Seed Analyzer",
     "knowledgebase_root": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase",
-    "continuing_kb_authority": "Routine in-root KB retrieval, validation, preparation and transactions remain authorized. DEC-0006 additionally authorizes adapting KB tools and usage to experiment needs with proportionate verification; the KB is not Git-versioned.",
+    "continuing_kb_authority": "Routine in-root KB retrieval, validation, preparation and transactions remain authorized. DEC-0006 permits adapting tools with proportionate checks. The earlier unversioned-KB premise is superseded for canonical files by FACT-0027; current edits still require normal revision/preview/verification safeguards.",
     "originals": "R01 authorized edits and local tests complete under DEC-0007; prior source bytes verified from local Git; no commit/push.",
     "next_action": "Report verified first iteration and stop for owner viewing feedback or next applicable instruction; no larger experiment or role transition.",
     "current_stage_record": "DEC-0007",
     "environment_assessment": "Historical environment assessment used installed metadata and disposable synthetic probes; subsequent bounded source repair is recorded separately in FACT-0019."
   },
   "last_maintenance": {
-    "at": "2026-09-06T12:54:15+00:00",
+    "at": "2026-09-06T13:09:38+00:00",
     "actor": "Seed Analyzer",
-    "note": "Close first-iteration bookkeeping with actual completed deep verification; owner viewing remains pending."
+    "note": "Record owner feedback, keep-KB-in-Git decision, completed three-project reference cleanup and actual VS2022 rebuild/fast-test verification, preserving original lineage."
   },
   "proposal": {
     "id": "R01",
@@ -235,6 +236,17 @@
         "CLAIM-0002",
         "FACT-0021"
       ]
+    },
+    "dependency_cleanup": {
+      "status": "All three obsolete Newtonsoft.Json project references removed: Visualization by User; Control/Dna by Seed under DEC-0008.",
+      "record_ids": [
+        "CLAIM-0003",
+        "FACT-0026",
+        "DEC-0008",
+        "FACT-0028"
+      ],
+      "seed_reran_build_after_owner_cleanup": true,
+      "verification": "VS2022 Release whole solution pass;38/38 fast checks pass."
     }
   },
   "tooling": {
@@ -243,7 +255,9 @@
     "source_revision_command": "KnowledgeBase/tools/kb.py revise-source",
     "verification": "14 disposable integration tests passed; no retained test history.",
     "source_history": "Explicit source supersession with pinned local Git verification or disclosed unavailable-history warning.",
-    "knowledgebase_is_git_versioned": false
+    "knowledgebase_is_git_versioned": true,
+    "knowledgebase_git_scope": "Canonical core/records/catalog snapshot verified in local commit 1a6ff953e597099332af0be776efd2aab39ca76d; current KB maintenance remains uncommitted. FACT-0027.",
+    "knowledgebase_owner_decision": "DEC-0008: Keep the KnowledgeBase in Git."
   },
   "implementation": {
     "status": "verified first iteration; owner viewing pending",
@@ -264,8 +278,8 @@
       },
       {
         "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\implementation_status.json",
-        "sha256": "40B25006FA5A7D2C0818FF3FEBAC83F6E9DB2683F2221C021CE8FC58D92586FF",
-        "bytes": 484304,
+        "sha256": "A66D90176D7743D6EC37E1845F7899A0E8B21B1E3B03B927859351BC10435613",
+        "bytes": 504110,
         "status": "Seed-derived current support; not original experiment evidence"
       },
       {
@@ -275,7 +289,12 @@
         "status": "Seed-derived current support; not original experiment evidence"
       }
     ],
-    "verification": "PASS: Debug38/38; Release43/43; deep validation at revision15 verified 43 records,67 sources (11 historical) and11 prepared sources, no errors/warnings. Final transaction/deep receipt: implementation_kb_verification.json.",
-    "retention": "One current result JSON/report/preview; automatic build scratch cleanup; normal bin/obj only; no Git writes or backup trees."
+    "verification": "R01 full evaluation in FACT-0024; subsequent reference cleanup rebuilt with VS2022 Release and38 fast checks passing in FACT-0028. KB deep verification follows the reviewed transaction.",
+    "retention": "One current result JSON/report/preview; automatic build scratch cleanup; normal bin/obj only; no Git writes or backup trees.",
+    "owner_feedback": {
+      "record_id": "CLAIM-0003",
+      "summary": "Positive visual feedback; owner reports continued successful operation after their dependency cleanup. Broader simulation/enjoyment objectives remain open."
+    },
+    "subsequent_dependency_cleanup_record": "FACT-0028"
   }
 }

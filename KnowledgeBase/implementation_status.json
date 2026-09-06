@@ -590,6 +590,109 @@
       },
       "scratch_removed": true,
       "ok": true
+    },
+    "dependency_cleanup": {
+      "at_utc": "2026-09-06T13:06:13.258796+00:00",
+      "stage": "dependency_cleanup",
+      "configuration": "Release",
+      "platform": "Mixed Platforms",
+      "builds": [
+        {
+          "tool": "dotnet.exe",
+          "exit_code": 0,
+          "seconds": 1.234,
+          "warning_codes": {},
+          "errors": [],
+          "output_tail": [
+            "  Restored D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Fistnet.Genepool.Dna.csproj (in 82 ms).",
+            "  Restored D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.App\\Fistnet.Genepool.App.csproj (in 20 ms).",
+            "  Restored D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\Fistnet.Genepool.Tests.csproj (in 3 ms).",
+            "  Restored D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Visualization\\Fistnet.Genepool.Visualization.csproj (in 4 ms).",
+            "  Restored D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\Fistnet.Genepool.Control.csproj (in 1 ms)."
+          ]
+        },
+        {
+          "tool": "MSBuild.exe",
+          "exit_code": 0,
+          "seconds": 10.5,
+          "warning_codes": {
+            "CA1416": 163
+          },
+          "errors": [],
+          "output_tail": [
+            "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.App\\MainForm.cs(128,21): warning CA1416: This call site is reachable on all platforms. 'Label.Text' is only supported on: 'windows' 6.1 and later. (https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1416) [D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.App\\Fistnet.Genepool.App.csproj]",
+            "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.App\\MainForm.cs(148,25): warning CA1416: This call site is reachable on all platforms. 'Label.Text' is only supported on: 'windows' 6.1 and later. (https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1416) [D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.App\\Fistnet.Genepool.App.csproj]",
+            "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.App\\MainForm.cs(134,25): warning CA1416: This call site is reachable on all platforms. 'Label.Text' is only supported on: 'windows' 6.1 and later. (https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1416) [D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.App\\Fistnet.Genepool.App.csproj]",
+            "  Fistnet.Genepool.App -> D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.App\\bin\\Release\\net9.0-windows7.0\\Fistnet.Genepool.App.dll",
+            "  Fistnet.Genepool.Tests -> D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\bin\\Release\\net9.0-windows7.0\\Fistnet.Genepool.Tests.dll"
+          ]
+        }
+      ],
+      "source_sha256": {
+        "Fistnet.Genepool.App/Fistnet.Genepool.App.csproj": "d79b44b872561468641d6d2a56e592b6e264edb92c680862ac2a629446350746",
+        "Fistnet.Genepool.App/MainForm.cs": "a02d3c436e8d36ffb3fb7ab352007f997c98788e10adc04e834df243a6bbc2ce",
+        "Fistnet.Genepool.App/MainForm.Designer.cs": "266de6156508d5bdca42b5842e57551e16eb54906dbeb088aed061c05791d3b7",
+        "Fistnet.Genepool.App/Program.cs": "4f92a86484d538e1bbe7416e13848760e6face86c481397ede69cae35531668f",
+        "Fistnet.Genepool.App/Properties/AssemblyInfo.cs": "4ddb0cbc30a817181b227d7e68c40e99e497fcfa68e873aa0c5d7ec9d7f5498f",
+        "Fistnet.Genepool.App/Properties/Resources.Designer.cs": "732ea0cbfd24a24d5013d8f7128d0c44a3154b2fa7d93faafe327a76756fa2e0",
+        "Fistnet.Genepool.App/Properties/Settings.Designer.cs": "7c45233d5afff1466b8a2615aee4f62cd567d04c6aca68bbf2f054b1fe4b96fc",
+        "Fistnet.Genepool.Control/Fistnet.Genepool.Control.csproj": "2a98c92c1375f84a267b8c49f2ca8efe73549b75fac73815771c667e556b7ce7",
+        "Fistnet.Genepool.Control/RuleManager.cs": "44f860a3ac5ce3196b71b29406c83dd5495628dca3113996c9d61d7b13a93577",
+        "Fistnet.Genepool.Control/SimulationRunOptions.cs": "78b458703a5addcba7b982500d795ca2df871f90426aaeaec2074637134c608d",
+        "Fistnet.Genepool.Control/SimulationSnapshot.cs": "657c35e219c25716045593df951cbc56622002cf514c6754cc5e29d0696e6509",
+        "Fistnet.Genepool.Control/Gameboard/Board.cs": "095ebb27083ca7cb75df1660802b64d6e7425d923520e34a731a1896671c56e8",
+        "Fistnet.Genepool.Control/Gameboard/BoardSquare.cs": "d7937bc669dd6c4ff3a62f6b5ebd3cb92f9f3b57b968efbdc11e161eaa16e6a8",
+        "Fistnet.Genepool.Control/Properties/AssemblyInfo.cs": "03c7442abce3e03190d77609a184f07e81653eb2cea7b5cda805ebca2e5c1543",
+        "Fistnet.Genepool.Control/Rules/ExecuteOgranismSetup.cs": "d063ff03a83feb85e0cab6c32fde6ac56aebf4772f28d96daa1efbedbd5304bc",
+        "Fistnet.Genepool.Control/Rules/ExecuteOrganismDeadRule.cs": "c685e36fa65a651ca8ba4448728a1f75d6ba99c2406176ccbdc5026a77e6b8dd",
+        "Fistnet.Genepool.Control/Rules/ExecuteOrganismEffectsRule.cs": "9479dbfbc3a69e006b5e7d6c1f47d488ecf08578258284ee92d745ad523cf88a",
+        "Fistnet.Genepool.Control/Rules/ExecuteOrganismMoveRule.cs": "9e951e5eb029e7855d51709116e417a394a5b486cdd1b48acf45d34af381c044",
+        "Fistnet.Genepool.Control/Rules/ExecuteOrganismSequenceRule.cs": "206ba1785afac323d4f1731a79ffd891607e717c0c97201f123b1f89735f210f",
+        "Fistnet.Genepool.Control/Rules/ExecuteRefreshRule.cs": "51f95993aab4ef92fe195e9be01b8239bf511db4b3945c41911cbb614c678b9c",
+        "Fistnet.Genepool.Control/Rules/IBoardSquareRule.cs": "93e10f9553c5fa8d818d577518ba1b9b5a0d6045ab6633301fce831c5658736f",
+        "Fistnet.Genepool.Dna/Common.cs": "63190cc56abcc9a68919fbfc23399842d4cdaca2889c718bb4813dabd449bf9b",
+        "Fistnet.Genepool.Dna/DnaElementFactory.cs": "0c23aab3479fb68a3f946778f72a94e5ba6b92eaf05bcaafb903c6c93616cd13",
+        "Fistnet.Genepool.Dna/Fistnet.Genepool.Dna.csproj": "8f3e4c3504ef0bb4429b2b5e255f8669865b4459509ec0c55bf460c4edf984e7",
+        "Fistnet.Genepool.Dna/IRandomSource.cs": "3634a42c4c99ca0765de24028244da8eb695e699764d6fbff085d3774b0cb644",
+        "Fistnet.Genepool.Dna/Organism.cs": "2760a1e5545b32f321f8997d7801feab0e477c05a3ffe0f55baf9b24134c92e9",
+        "Fistnet.Genepool.Dna/OrganismSnapshot.cs": "b30ca2c1807b6fbbcf3aa99a9a30f60091eaac826b80da63dd2d6a527f4787ed",
+        "Fistnet.Genepool.Dna/Effects/BirthEffect.cs": "931f43dd43df3efe5776bb93a3fad10b273b9061e965ced2d3f5b1f658a183fc",
+        "Fistnet.Genepool.Dna/Effects/ChangeAgeEffect.cs": "a9d0dc18dfc1b962e4dbd0e4d28408d6fe1c3f551a9b348bb7e1d0ed3983e65c",
+        "Fistnet.Genepool.Dna/Effects/ChangeFoodEffect.cs": "e2a3de1cec5f60e3ac9905c8cf2d1f1f01e1b179181cb54f79af73058a757823",
+        "Fistnet.Genepool.Dna/Effects/ChangeHealthEffect.cs": "cd4f33fa8212f8d29e761b96895c45ab413ee45179cf646155c1d6d897a9af6a",
+        "Fistnet.Genepool.Dna/Effects/ChangePositionEffect.cs": "b9feea58624a70b1d8aac3f29559c9ae7127ebc3784c1ba29d6705b580a83388",
+        "Fistnet.Genepool.Dna/Effects/IDnaEffect.cs": "9e597fe334459de3fce08840a25bd03ed151ba57851f6a1db7ca628d61c7a863",
+        "Fistnet.Genepool.Dna/Effects/MutateEffect.cs": "c58cb5ed91858c700ffe9a7473b6a35673e07f226a85365226bba0763d4cf2c2",
+        "Fistnet.Genepool.Dna/Elements/CombineDnaElement.cs": "0ca034d7177101b518f4e652384d983c8b730f46a5b758d97da8f2edb0a15897",
+        "Fistnet.Genepool.Dna/Elements/CreateFoodDnaElement.cs": "c8e51b409e9f63cf197cbc82271ca22c21d2d8b224ba291cb87c606daa14744f",
+        "Fistnet.Genepool.Dna/Elements/EatDnaElement.cs": "5eef2c1c8969be0aadc1b3d99bffacf96b1244c85d4f64b308f91bd45b5b7d15",
+        "Fistnet.Genepool.Dna/Elements/EvolveDnaElement.cs": "dde0e4af10adb72f84677a971eebe16fbefe746c919d91b9da463b8727d24d5b",
+        "Fistnet.Genepool.Dna/Elements/HealDnaElement.cs": "eb5c34c6c2810fe5d74f30bfd333f6be746718cfdff47c6d27aadf20be4f983e",
+        "Fistnet.Genepool.Dna/Elements/IDnaElement.cs": "47126ed6764a9960f278fda276086f69b4ef0593643232cd63b1d27acf475caa",
+        "Fistnet.Genepool.Dna/Elements/InfectDnaElement.cs": "e6c0b93934230f35aba63b0ff557a09d23afc73bfce3c634b030c00937c01160",
+        "Fistnet.Genepool.Dna/Elements/KillDnaElement.cs": "4cc1153c9704a046ac71e6f1da3e085cd2e33ef2ef543f0e219e010d5e7d9211",
+        "Fistnet.Genepool.Dna/Elements/MoveDnaElement.cs": "5cf51255f60f0301b072a193f3c55c51166320778e45a46a81219a72d56ef76e",
+        "Fistnet.Genepool.Dna/Properties/AssemblyInfo.cs": "38008930fe25205485924534a77b838cab29b16b25aaad7c79ad5a71da1ad991",
+        "Fistnet.Genepool.Dna/Elements/Brain/OrganismEvaluation.cs": "27e18011ae25fa9c0f20f962267317313b4bff438f48693713924c958fd2639c",
+        "Fistnet.Genepool.Dna/Elements/Brain/StrategyNetwork.cs": "5c740117615a946302bc88f4b71c8ab28259835fa064d468ec11c03e81eec887",
+        "Fistnet.Genepool.Tests/Fistnet.Genepool.Tests.csproj": "c9517df945c421af55e5b0607714857e3dca02ab8364eedcb3c5d13965dab5d2",
+        "Fistnet.Genepool.Tests/IntegrationTests.cs": "451fc0ff3969941c483cc09a1b81b574474abd24606f516e3e3b46f755fc894d",
+        "Fistnet.Genepool.Tests/MechanicsTests.cs": "4ebc714438ebca4c72451bcf16a6843844c2bb679a4c333ceb884068d7a8bbc2",
+        "Fistnet.Genepool.Tests/Program.cs": "2957d953cef18a91d75d7670e7dbcfa633b6effaa296df2ad0161ff3995426a5",
+        "Fistnet.Genepool.Tests/RegressionTests.cs": "8f04cd47f1fa647261af6fcfdd2d1a7b10e8c36da655d17c8f99dbcf2ad7cf38",
+        "Fistnet.Genepool.Tests/RenderingTests.cs": "579a3db145c4f745fed8dc095d17f5bb30521e41c1dbd30d40416b893b3e61ab",
+        "Fistnet.Genepool.Tests/ScenarioRunner.cs": "7eece5a533f003af10601fe87388d9ff59b76819dea897c36cddaa4edad8496a",
+        "Fistnet.Genepool.Tests/TestSupport.cs": "f45ee7582531fc616a44bb02370f1608743fa90d61bb3a97bdc875fbf565f929",
+        "Fistnet.Genepool.Visualization/Fistnet.Genepool.Visualization.csproj": "9f420b4d3ce6e2497aa545d71a782880a9d411b06fa31dff59c28b650758581a",
+        "Fistnet.Genepool.Visualization/GameboardBitmap.cs": "df2b6c6868443e218c3f6bf35bb134a134b07a4b8afe40ffbb0dfb046a972dee",
+        "Fistnet.Genepool.Visualization/PopulationHistory.cs": "79a228d3bd781e88868c0dd59bf54afe0014077a4ebfd2842f2b3b94a923e2b8",
+        "Fistnet.Genepool.Visualization/PopulationHistoryView.cs": "b37a04bf630dd9a269b958973c11117f482dfa9208525c8ef8f115ec75cd900b",
+        "Fistnet.Genepool.Visualization/Properties/AssemblyInfo.cs": "4096413f80607a3b0290f70a6532f2886f226cfeb8786fc7587b247dea4af0f8",
+        "Fistnet.Genepool.sln": "b28c8cdf4d210b23fb3269bef8faa8a1f8a493132b03a2c585cd985e49e79a85",
+        "global.json": "f5027f7b2d82128c9715c687359eee846d57da45aeab8986cd265107eb32c47a"
+      },
+      "scratch_removed": true,
+      "ok": true
     }
   },
   "baseline_regressions": {
@@ -12346,5 +12449,292 @@
     },
     "stderr": ""
   },
-  "render_harness_note": "Offscreen form must be shown before DrawToBitmap. Initial blank capture corrected; one added graph-pixel assertion initially used client coordinates against a full-window bitmap and was corrected to include the window frame. Final layout checks pass."
+  "render_harness_note": "Offscreen form must be shown before DrawToBitmap. Initial blank capture corrected; one added graph-pixel assertion initially used client coordinates against a full-window bitmap and was corrected to include the window frame. Final layout checks pass.",
+  "dependency_cleanup_fast_release": {
+    "exit_code": 0,
+    "result": {
+      "total": 38,
+      "passed": 38,
+      "failed": 0,
+      "seconds": 2.522269,
+      "runtime": "9.0.17",
+      "assemblySha256": {
+        "Fistnet.Genepool.Tests": "68562FD6E08F3C63DFCFD4CB828CA47F49C7C1AB841851CCE86800250263F945",
+        "Fistnet.Genepool.Control": "13C3BCE65A81D61468746DAA667DE1DEEB745A9A5C3D4B5CB6EA00B7DCDBA34E",
+        "Fistnet.Genepool.Dna": "B08DDBEE0D27286A83E77F917B3D4BA0896229BF340DA8485D9FDBFBB61A09E4",
+        "Fistnet.Genepool.Visualization": "141313D1C521CD1790A590C7CAFF755EA983BA24AC64684A689B74466A066122",
+        "Fistnet.Genepool.App": "05590A975752F9A065174461ACE138457F72DD48A6CE16CD387A68F615C48516"
+      },
+      "results": [
+        {
+          "name": "mutation changes at most two distinct unprotected positions",
+          "group": "regression",
+          "passed": true,
+          "milliseconds": 14.331,
+          "error": null
+        },
+        {
+          "name": "parent history copies matching gene scores independently",
+          "group": "regression",
+          "passed": true,
+          "milliseconds": 16.134,
+          "error": null
+        },
+        {
+          "name": "zero-baseline learning arithmetic stays finite",
+          "group": "regression",
+          "passed": true,
+          "milliseconds": 0.5651,
+          "error": null
+        },
+        {
+          "name": "empty target clears previous target snapshot",
+          "group": "regression",
+          "passed": true,
+          "milliseconds": 1.1252,
+          "error": null
+        },
+        {
+          "name": "origin pixel selects origin cell",
+          "group": "regression",
+          "passed": true,
+          "milliseconds": 4.7256,
+          "error": null
+        },
+        {
+          "name": "maximum food increase saturates without byte overflow",
+          "group": "regression",
+          "passed": true,
+          "milliseconds": 0.8007,
+          "error": null
+        },
+        {
+          "name": "mutation handles duplicate draws and protected positions",
+          "group": "mechanics",
+          "passed": true,
+          "milliseconds": 1.3948,
+          "error": null
+        },
+        {
+          "name": "two matching parents contribute an arithmetic mean",
+          "group": "mechanics",
+          "passed": true,
+          "milliseconds": 1.4709,
+          "error": null
+        },
+        {
+          "name": "parent transfer rejects mismatched genes and accepts no history",
+          "group": "mechanics",
+          "passed": true,
+          "milliseconds": 1.1245,
+          "error": null
+        },
+        {
+          "name": "matching DNA code with a different target is not inherited",
+          "group": "mechanics",
+          "passed": true,
+          "milliseconds": 0.7532,
+          "error": null
+        },
+        {
+          "name": "learning scores remain finite when available food starts at zero",
+          "group": "mechanics",
+          "passed": true,
+          "milliseconds": 2.9649,
+          "error": null
+        },
+        {
+          "name": "reference effects execute in enqueue order",
+          "group": "mechanics",
+          "passed": true,
+          "milliseconds": 1.379,
+          "error": null
+        },
+        {
+          "name": "seeded random state and draw counts repeat",
+          "group": "mechanics",
+          "passed": true,
+          "milliseconds": 1.1427,
+          "error": null
+        },
+        {
+          "name": "neighbors: interior, edges and corners do not wrap",
+          "group": "integration",
+          "passed": true,
+          "milliseconds": 1.3676,
+          "error": null
+        },
+        {
+          "name": "food: setup debits taken food exactly once",
+          "group": "integration",
+          "passed": true,
+          "milliseconds": 1.1109,
+          "error": null
+        },
+        {
+          "name": "food: replenishment on eighth refresh and bounded arithmetic",
+          "group": "integration",
+          "passed": true,
+          "milliseconds": 0.8311,
+          "error": null
+        },
+        {
+          "name": "lifecycle: removal pass removes dead occupant and returns food",
+          "group": "integration",
+          "passed": true,
+          "milliseconds": 0.7495,
+          "error": null
+        },
+        {
+          "name": "movement: identity, occupied destination and boundary fallback",
+          "group": "integration",
+          "passed": true,
+          "milliseconds": 1.0125,
+          "error": null
+        },
+        {
+          "name": "movement: competing destinations retain unique occupancy",
+          "group": "integration",
+          "passed": true,
+          "milliseconds": 1.3886,
+          "error": null
+        },
+        {
+          "name": "birth: placement, occupancy and deferred placement cost",
+          "group": "integration",
+          "passed": true,
+          "milliseconds": 4.057,
+          "error": null
+        },
+        {
+          "name": "birth: crowded board retains pending child",
+          "group": "integration",
+          "passed": true,
+          "milliseconds": 0.8749,
+          "error": null
+        },
+        {
+          "name": "statistics: final occupancy and action counts after movement",
+          "group": "integration",
+          "passed": true,
+          "milliseconds": 6.3373,
+          "error": null
+        },
+        {
+          "name": "reset: dirty world, rule cursor, statistics and RNG are cleared",
+          "group": "integration",
+          "passed": true,
+          "milliseconds": 10.9422,
+          "error": null
+        },
+        {
+          "name": "reference: reset repeats execution state and random draws",
+          "group": "integration",
+          "passed": true,
+          "milliseconds": 332.1862,
+          "error": null
+        },
+        {
+          "name": "snapshot: private counters, cell clocks, scores and effect order",
+          "group": "integration",
+          "passed": true,
+          "milliseconds": 466.0613,
+          "error": null
+        },
+        {
+          "name": "snapshot: production mode is rejected",
+          "group": "integration",
+          "passed": true,
+          "milliseconds": 1.0582,
+          "error": null
+        },
+        {
+          "name": "characterization: organism age advances on ninth action tick",
+          "group": "integration",
+          "passed": true,
+          "milliseconds": 0.9267,
+          "error": null
+        },
+        {
+          "name": "characterization: one birth increments reproduction counter twice",
+          "group": "integration",
+          "passed": true,
+          "milliseconds": 0.8448,
+          "error": null
+        },
+        {
+          "name": "learning: aging tick never reevaluates a previous occupied target",
+          "group": "integration",
+          "passed": true,
+          "milliseconds": 3.518,
+          "error": null
+        },
+        {
+          "name": "cell picking covers boundaries, corners and outside pixels",
+          "group": "rendering",
+          "passed": true,
+          "milliseconds": 2.096,
+          "error": null
+        },
+        {
+          "name": "empty and occupied pixels have correct positions and remain distinguishable",
+          "group": "rendering",
+          "passed": true,
+          "milliseconds": 11.6737,
+          "error": null
+        },
+        {
+          "name": "history retains ordered latest 256 seasons and resets",
+          "group": "rendering",
+          "passed": true,
+          "milliseconds": 1.1363,
+          "error": null
+        },
+        {
+          "name": "graph draws empty, single, flat and extreme sequences",
+          "group": "rendering",
+          "passed": true,
+          "milliseconds": 325.8398,
+          "error": null
+        },
+        {
+          "name": "WinForms pause prevents new work and reset clears run history",
+          "group": "rendering",
+          "passed": true,
+          "milliseconds": 149.6937,
+          "error": null
+        },
+        {
+          "name": "production smoke at 0% initial occupancy",
+          "group": "integration",
+          "passed": true,
+          "milliseconds": 34.0668,
+          "error": null
+        },
+        {
+          "name": "production smoke at 1% initial occupancy",
+          "group": "integration",
+          "passed": true,
+          "milliseconds": 43.9836,
+          "error": null
+        },
+        {
+          "name": "production smoke at 100% initial occupancy",
+          "group": "integration",
+          "passed": true,
+          "milliseconds": 1010.963,
+          "error": null
+        },
+        {
+          "name": "runner negative control reports failure and exit 7",
+          "group": "runner",
+          "passed": true,
+          "milliseconds": 59.802,
+          "error": null
+        }
+      ],
+      "scenarios": []
+    },
+    "stderr": ""
+  }
 }

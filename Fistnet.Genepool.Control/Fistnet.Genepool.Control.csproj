@@ -9,12 +9,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\Libraries\FistCore.Base\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Fistnet.Genepool.Dna\Fistnet.Genepool.Dna.csproj" />
   </ItemGroup>
 </Project>

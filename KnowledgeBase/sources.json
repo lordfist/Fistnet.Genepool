@@ -1,5 +1,5 @@
 {
-  "catalog_revision": 10,
+  "catalog_revision": 11,
   "sources": [
     {
       "source_id": "SRC-0001",
@@ -55,7 +55,24 @@
       "size_bytes": 688,
       "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
       "coverage": "complete textual reading; 20 file lines; exact bytes hashed; no execution or runtime validation.",
-      "status": "inspected working-tree original; not owner-approved domain authority"
+      "status": "inspected working-tree original; not owner-approved domain authority",
+      "supersession": {
+        "source_id": "SRC-0069",
+        "actor": "Seed Analyzer",
+        "reason": "Remove remaining stale Newtonsoft.Json reference under explicit owner instruction.",
+        "record_ids": [
+          "DEC-0008",
+          "FACT-0028"
+        ],
+        "observed_at": "2026-09-06T13:08:48+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "1a6ff953e597099332af0be776efd2aab39ca76d",
+          "path": "Fistnet.Genepool.Control/Fistnet.Genepool.Control.csproj",
+          "blob_oid": "936fe96a00330c5da13bfb8f9ae8d45bb4017cd1",
+          "transform": "lf_to_crlf"
+        }
+      }
     },
     {
       "source_id": "SRC-0004",
@@ -68,7 +85,24 @@
       "size_bytes": 559,
       "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
       "coverage": "complete textual reading; 16 file lines; exact bytes hashed; no execution or runtime validation.",
-      "status": "inspected working-tree original; not owner-approved domain authority"
+      "status": "inspected working-tree original; not owner-approved domain authority",
+      "supersession": {
+        "source_id": "SRC-0070",
+        "actor": "Seed Analyzer",
+        "reason": "Remove remaining stale Newtonsoft.Json reference under explicit owner instruction.",
+        "record_ids": [
+          "DEC-0008",
+          "FACT-0028"
+        ],
+        "observed_at": "2026-09-06T13:08:48+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "1a6ff953e597099332af0be776efd2aab39ca76d",
+          "path": "Fistnet.Genepool.Dna/Fistnet.Genepool.Dna.csproj",
+          "blob_oid": "e450ddebf4f477e9e437d0100f4203a3db42133e",
+          "transform": "lf_to_crlf"
+        }
+      }
     },
     {
       "source_id": "SRC-0005",
@@ -81,7 +115,24 @@
       "size_bytes": 893,
       "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
       "coverage": "complete textual reading; 23 file lines; exact bytes hashed; no execution or runtime validation.",
-      "status": "inspected working-tree original; not owner-approved domain authority"
+      "status": "inspected working-tree original; not owner-approved domain authority",
+      "supersession": {
+        "source_id": "SRC-0068",
+        "actor": "Seed Analyzer",
+        "reason": "Record owner removal of unused Newtonsoft.Json reference from Visualization project.",
+        "record_ids": [
+          "FACT-0026",
+          "CLAIM-0003"
+        ],
+        "observed_at": "2026-09-06T13:05:16+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "1637a5dd7af2a469904cba9e3ce8789faa68467a",
+          "path": "Fistnet.Genepool.Visualization/Fistnet.Genepool.Visualization.csproj",
+          "blob_oid": "e634bd1e81827accf789abc2aa24a1c4fdb9f5cd",
+          "transform": "lf_to_crlf"
+        }
+      }
     },
     {
       "source_id": "SRC-0006",
@@ -1350,7 +1401,49 @@
           "FACT-0023"
         ]
       }
+    },
+    {
+      "source_id": "SRC-0068",
+      "title": "Fistnet.Genepool.Visualization\\Fistnet.Genepool.Visualization.csproj",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Visualization\\Fistnet.Genepool.Visualization.csproj"
+      },
+      "sha256": "9F420B4D3CE6E2497AA545D71A782880A9D411B06FA31DFF59C28B650758581A",
+      "size_bytes": 724,
+      "observed_at_utc": "2026-09-06T13:05:16+00:00",
+      "supersedes": "SRC-0005",
+      "status": "Owner-edited source; removal directly inspected; owner reports continued successful operation",
+      "coverage": "Complete textual reading of current 17-line Visualization project and local Git diff. Only the Newtonsoft.Json reference ItemGroup was removed; other properties/project references match the registered predecessor."
+    },
+    {
+      "source_id": "SRC-0069",
+      "title": "Fistnet.Genepool.Control\\Fistnet.Genepool.Control.csproj",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\Fistnet.Genepool.Control.csproj"
+      },
+      "sha256": "2A98C92C1375F84A267B8C49F2CA8EFE73549B75FAC73815771C667E556B7CE7",
+      "size_bytes": 519,
+      "observed_at_utc": "2026-09-06T13:08:48+00:00",
+      "supersedes": "SRC-0003",
+      "status": "Seed cleanup explicitly requested by owner; build and fast checks verified",
+      "coverage": "Complete project-file diff/read. Only stale Newtonsoft.Json reference removed; VS2022 Release full-solution rebuild and38 fast checks passed."
+    },
+    {
+      "source_id": "SRC-0070",
+      "title": "Fistnet.Genepool.Dna\\Fistnet.Genepool.Dna.csproj",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Fistnet.Genepool.Dna.csproj"
+      },
+      "sha256": "8F3E4C3504EF0BB4429B2B5E255F8669865B4459509EC0C55BF460C4EDF984E7",
+      "size_bytes": 392,
+      "observed_at_utc": "2026-09-06T13:08:48+00:00",
+      "supersedes": "SRC-0004",
+      "status": "Seed cleanup explicitly requested by owner; build and fast checks verified",
+      "coverage": "Complete project-file diff/read. Only stale Newtonsoft.Json reference removed; VS2022 Release full-solution rebuild and38 fast checks passed."
     }
   ],
-  "updated_at": "2026-09-06T12:52:49+00:00"
+  "updated_at": "2026-09-06T13:09:38+00:00"
 }
