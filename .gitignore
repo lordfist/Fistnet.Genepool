@@ -17,3 +17,5 @@
 /Fistnet.Genepool.Visualization/obj/Debug
 /Libraries
 *.suo
+obj
+net9.0-windows7.0
