@@ -8,6 +8,12 @@ namespace Fistnet.Genepool.Dna
     public class OrganismSnapshot
     {
         public long DnaCode { get; protected set; }
+        public long Id { get; protected set; }
+        public long Parent1Id { get; protected set; }
+        public long Parent2Id { get; protected set; }
+        public long LifetimeSeasons { get; protected set; }
+        public int Generation { get; protected set; }
+        public HealthPolicy HealthRule { get; protected set; } = Common.Policy.Health;
 
         #region Age.
 
@@ -19,13 +25,13 @@ namespace Fistnet.Genepool.Dna
 
         #region Health.
 
-        public sbyte Health { get; protected set; }
+        public int Health { get; protected set; }
 
         public bool IsDead
         {
             get
             {
-                if (this.Health <= 0 || this.Health >= Organism.OVERWEIGHT_DEATH)
+                if (this.Health <= 0 || (this.HealthRule == HealthPolicy.LegacyOverweight && this.Health >= Organism.OVERWEIGHT_DEATH))
                     return true;
                 else
                     return false;
@@ -36,11 +42,11 @@ namespace Fistnet.Genepool.Dna
 
         #region Food.
 
-        public sbyte FoodBalance { get; protected set; }
+        public int FoodBalance { get; protected set; }
 
-        public byte AvailableFood { get; protected set; }
+        public int AvailableFood { get; protected set; }
 
-        public byte TakenFood { get; protected set; }
+        public int TakenFood { get; protected set; }
 
         #endregion Food.
 
@@ -59,6 +65,12 @@ namespace Fistnet.Genepool.Dna
         public OrganismSnapshot(Organism organism)
         {
             this.DnaCode = organism.DnaCode;
+            this.Id = organism.Id;
+            this.Parent1Id = organism.Parent1Id;
+            this.Parent2Id = organism.Parent2Id;
+            this.LifetimeSeasons = organism.LifetimeSeasons;
+            this.Generation = organism.Generation;
+            this.HealthRule = organism.HealthRule;
             this.SequenceAge = organism.SequenceAge;
             this.Age = organism.Age;
             this.AvailableFood = organism.AvailableFood;

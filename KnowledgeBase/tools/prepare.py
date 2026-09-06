@@ -1075,6 +1075,9 @@ def _command_prepare(args: argparse.Namespace, progress: dict[str, Any]) -> None
         SOURCES_PATH: kb.sha256_file(SOURCES_PATH),
     }
     progress["before_hashes"] = dict(original_hashes)
+    initial_validation = kb.validate_state(core, records, sources, deep=True)
+    if not initial_validation["ok"]:
+        raise PrepareError("existing state deep validation failed: " + "; ".join(initial_validation["errors"][:8]))
     next_sources = json.loads(json.dumps(sources))
     next_lookup = kb.source_map(next_sources)
     prepared_candidates: dict[Path, bytes] = {}
@@ -1159,14 +1162,6 @@ def _command_prepare(args: argparse.Namespace, progress: dict[str, Any]) -> None
     }
     core_payload = kb.canonical_json_bytes(next_core)
 
-    # Validate the logical successor without requiring not-yet-committed files.
-    validation = kb.validate_state(next_core, records, next_sources, deep=False)
-    missing_prepared_errors = [
-        error for error in validation["errors"] if "prepared file is missing" not in error
-    ]
-    if missing_prepared_errors:
-        raise PrepareError("candidate state is invalid: " + "; ".join(missing_prepared_errors[:8]))
-
     payloads = dict(prepared_candidates)
     payloads[SOURCES_PATH] = sources_payload
     payloads[CORE_PATH] = core_payload
@@ -1178,6 +1173,12 @@ def _command_prepare(args: argparse.Namespace, progress: dict[str, Any]) -> None
     try:
         for destination, payload in payloads.items():
             staged[destination] = atomic_write_candidate(destination, payload)
+        # Validate exact staged evidence plus every retained original/preparation
+        # before any final path changes. Missing candidates are not suppressed.
+        validation = kb.validate_state(next_core, records, next_sources, deep=True,
+            prepared_file_overrides={path: staged[path] for path in prepared_candidates})
+        if not validation["ok"]:
+            raise PrepareError("candidate deep validation failed: " + "; ".join(validation["errors"][:8]))
         for path, expected in progress["before_hashes"].items():
             actual = kb.sha256_file(path) if path.exists() else None
             if actual != expected:

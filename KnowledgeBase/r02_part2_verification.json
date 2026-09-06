@@ -1,0 +1,289 @@
+{
+  "actor": "Seed Analyzer",
+  "at_utc": "2026-09-06T16:33:04.759522+00:00",
+  "builds_and_tests": [
+    {
+      "configuration": "debug",
+      "source_inputs_verified": 69,
+      "loaded_assemblies_verified": 5,
+      "tests": 91,
+      "passed": 91,
+      "seconds": 32.580378,
+      "warning_codes": {
+        "CA1416": 163
+      }
+    },
+    {
+      "configuration": "release",
+      "source_inputs_verified": 69,
+      "loaded_assemblies_verified": 5,
+      "tests": 91,
+      "passed": 91,
+      "seconds": 28.5451931,
+      "warning_codes": {
+        "CA1416": 163
+      }
+    }
+  ],
+  "reference_passivity": [
+    {
+      "seed": 11,
+      "seasons": 128,
+      "state_draws_metrics_equal": true,
+      "algorithm": "xorshift32-v1",
+      "draws": 843754,
+      "stateSha256": "9F48B02B3E1E752A8448BA87F703DD65CC77BAA5EB0AC3316145B8DFEFF600B6"
+    },
+    {
+      "seed": 29,
+      "seasons": 128,
+      "state_draws_metrics_equal": true,
+      "algorithm": "xorshift32-v1",
+      "draws": 935898,
+      "stateSha256": "AB4EF8C91070F6C53AFB9FC2BB1217E3D61898FA3CE2BD660156181424A194E2"
+    }
+  ],
+  "production": [
+    {
+      "seed": 11,
+      "initial_population": 996,
+      "final_population": 8146,
+      "completed_seasons": 856,
+      "requested_seasons": 2048,
+      "complete": false,
+      "reason": "Stopped at a completed batch before the 115-second process limit.",
+      "wall_seconds": 110.547,
+      "maximum_age_batch_seconds": 2.2254516,
+      "checkpoints": [
+        {
+          "season": 128,
+          "population": 766
+        },
+        {
+          "season": 512,
+          "population": 6808
+        }
+      ],
+      "final_metrics": {
+        "population": 8146,
+        "boardFood": 27952,
+        "organismReserves": 43164,
+        "learningContexts": 83372,
+        "learningEntries": 118113,
+        "maximumContexts": 326,
+        "maximumEntries": 329
+      },
+      "phase_seconds": {
+        "phase.action": 68.5346133,
+        "phase.death": 0.4764444,
+        "phase.effects": 27.743712,
+        "phase.evaluation": 7.9007765,
+        "phase.movement": 0.8414944,
+        "phase.refresh": 0.5163995,
+        "phase.setup": 0.4294879
+      },
+      "births": 78255,
+      "deaths": 71105,
+      "limitations": "Changed model and occupancy, enabled diagnostics and no discarded warmup. Timing is descriptive, not a matched-workload speedup claim."
+    },
+    {
+      "seed": 29,
+      "initial_population": 1039,
+      "final_population": 9404,
+      "completed_seasons": 1080,
+      "requested_seasons": 2048,
+      "complete": false,
+      "reason": "Stopped at a completed batch before the 115-second process limit.",
+      "wall_seconds": 110.516,
+      "maximum_age_batch_seconds": 2.9825066,
+      "checkpoints": [
+        {
+          "season": 128,
+          "population": 794
+        },
+        {
+          "season": 512,
+          "population": 1042
+        }
+      ],
+      "final_metrics": {
+        "population": 9404,
+        "boardFood": 17059,
+        "organismReserves": 48915,
+        "learningContexts": 282545,
+        "learningEntries": 335941,
+        "maximumContexts": 263,
+        "maximumEntries": 270
+      },
+      "phase_seconds": {
+        "phase.action": 59.1919687,
+        "phase.death": 0.4379687,
+        "phase.effects": 34.1259812,
+        "phase.evaluation": 8.2270226,
+        "phase.movement": 0.7863845,
+        "phase.refresh": 0.7630423,
+        "phase.setup": 0.6838923
+      },
+      "births": 94437,
+      "deaths": 86072,
+      "limitations": "Changed model and occupancy, enabled diagnostics and no discarded warmup. Timing is descriptive, not a matched-workload speedup claim."
+    },
+    {
+      "seed": 47,
+      "initial_population": 1006,
+      "final_population": 8650,
+      "completed_seasons": 856,
+      "requested_seasons": 2048,
+      "complete": false,
+      "reason": "Stopped at a completed batch before the 115-second process limit.",
+      "wall_seconds": 112.485,
+      "maximum_age_batch_seconds": 2.6026344,
+      "checkpoints": [
+        {
+          "season": 128,
+          "population": 755
+        },
+        {
+          "season": 512,
+          "population": 5859
+        }
+      ],
+      "final_metrics": {
+        "population": 8650,
+        "boardFood": 15915,
+        "organismReserves": 35146,
+        "learningContexts": 153767,
+        "learningEntries": 193051,
+        "maximumContexts": 125,
+        "maximumEntries": 130
+      },
+      "phase_seconds": {
+        "phase.action": 66.9126573,
+        "phase.death": 0.5288728,
+        "phase.effects": 30.5450854,
+        "phase.evaluation": 7.5420746,
+        "phase.movement": 0.955525,
+        "phase.refresh": 0.6225441,
+        "phase.setup": 0.6104873
+      },
+      "births": 136498,
+      "deaths": 128854,
+      "limitations": "Changed model and occupancy, enabled diagnostics and no discarded warmup. Timing is descriptive, not a matched-workload speedup claim."
+    },
+    {
+      "seed": 83,
+      "initial_population": 1021,
+      "final_population": 9683,
+      "completed_seasons": 720,
+      "requested_seasons": 2048,
+      "complete": false,
+      "reason": "Stopped at a completed batch before the 115-second process limit.",
+      "wall_seconds": 111.203,
+      "maximum_age_batch_seconds": 2.491995,
+      "checkpoints": [
+        {
+          "season": 128,
+          "population": 794
+        },
+        {
+          "season": 512,
+          "population": 9595
+        }
+      ],
+      "final_metrics": {
+        "population": 9683,
+        "boardFood": 59671,
+        "organismReserves": 85190,
+        "learningContexts": 60557,
+        "learningEntries": 91916,
+        "maximumContexts": 109,
+        "maximumEntries": 113
+      },
+      "phase_seconds": {
+        "phase.action": 76.1948764,
+        "phase.death": 0.3695923,
+        "phase.effects": 19.9717746,
+        "phase.evaluation": 8.7399631,
+        "phase.movement": 1.0706866,
+        "phase.refresh": 0.4548438,
+        "phase.setup": 0.5879241
+      },
+      "births": 14316,
+      "deaths": 5654,
+      "limitations": "Changed model and occupancy, enabled diagnostics and no discarded warmup. Timing is descriptive, not a matched-workload speedup claim."
+    }
+  ],
+  "part1_preserved": [
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\IMPROVEMENT_RESULT_R02_PART1.md",
+      "sha256": "F3A682215665A35E6F119C8F1CC4141246D4C1C83493CBCCB02A1C21EB754C3B",
+      "bytes": 11726,
+      "status": "Historical Part1 bytes retained"
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r02_part1_results.json",
+      "sha256": "D26706F02604BC3049D67B559ED65B635B1277F01E4E8760DA512DE43FF1C990",
+      "bytes": 13755230,
+      "status": "Historical Part1 bytes retained"
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r02_part1_builds.json",
+      "sha256": "7B56327D8D4FE3337E26F623244D12D2A3D6C70CCE801A9C2A65A9DC29DD1B0B",
+      "bytes": 32839,
+      "status": "Historical Part1 bytes retained"
+    }
+  ],
+  "scope": "Part2 bounded mechanics/policy implementation; no ecological acceptance, Parts3-4 or owner acceptance.",
+  "overall": "PARTIAL: functional verification passes; longer production horizons stopped at the declared budget",
+  "support_tools": [
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\tools\\source_versions.py",
+      "sha256": "72A16C627A7AE9BCB9D20DFB4A6306D2DA32C82219A8E38CDDD5687D943F9980",
+      "bytes": 14585,
+      "status": "Current Part2 support tool"
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\tools\\kb.py",
+      "sha256": "48666A87C8B17074ED832B3A2A0772307C580A1984D8B671F50042E5210F21FC",
+      "bytes": 77814,
+      "status": "Current Part2 support tool"
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\tools\\tests\\test_source_snapshots.py",
+      "sha256": "29AA80BE14540A2FF0AE845ED0CA37305D1BBC3DCDD410E9A85A5EA0C97F2DE7",
+      "bytes": 10555,
+      "status": "Current Part2 support tool"
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\tools\\run_part2_checks.py",
+      "sha256": "89B73FFAE8B2426A9F65E5F0D7B0981FC526AEEBCC5E7C2621A248B688F7738A",
+      "bytes": 3365,
+      "status": "Current Part2 support tool"
+    }
+  ],
+  "support_policy": {
+    "path": "D:\\Posao\\Fistnet.Genepool\\.SeedAnalyzer\\KB.md",
+    "sha256": "773522B4FFE53C989DE54D496C5760598C15DF4892835B98510E5A9A2C73572F",
+    "bytes": 32493,
+    "status": "Current required policy plus local source-snapshot reference"
+  },
+  "tool_checks": {
+    "distinct_passed": 29,
+    "skipped": 1,
+    "detail": "14 source-version +4 reviewed-commit +11 snapshot checks passed. Actual symlink fixture skipped because host denied symlink creation; mocked Windows reparse-boundary checks passed. Reviewed-commit script also reran the14 source checks successfully. Disposable fixtures removed; no canonical transactions by helpers."
+  },
+  "source_lineage": {
+    "new_source_ids": "SRC-0091..SRC-0127",
+    "existing_sources_revised": 33,
+    "new_code_files": 4,
+    "git_predecessors": 21,
+    "exact_kb_snapshot_predecessors": 12,
+    "historical_bytes_unavailable": 0
+  },
+  "interventions": [
+    "First Debug suite87/88: one fixture failed to locate a private base-class field. Corrected fixture lookup; preserved original failing result.",
+    "Independent review corrected duplicate/foreign decision guards before effect draining and forwarded actual source-cell callbacks for pending effects.",
+    "Added regression coverage and made world verification read scores without mutating/reconciling history. Final91/91 both configurations.",
+    "Declared unavailable-gene retarget change and captured old-gene execution before new baselines; no policy tuning or budget extension after seeing results."
+  ]
+}

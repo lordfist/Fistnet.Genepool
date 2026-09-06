@@ -1,0 +1,2027 @@
+{
+  "revision": 25,
+  "upsert_sources": [
+    {
+      "source_id": "SRC-0011",
+      "title": "Fistnet.Genepool.Dna\\DnaElementFactory.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\DnaElementFactory.cs"
+      },
+      "sha256": "0C23AAB3479FB68A3F946778F72A94E5BA6B92EAF05BCAAFB903C6C93616CD13",
+      "size_bytes": 4867,
+      "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
+      "coverage": "complete textual reading; 130 file lines; exact bytes hashed; no execution or runtime validation.",
+      "status": "inspected working-tree original; not owner-approved domain authority",
+      "supersession": {
+        "source_id": "SRC-0091",
+        "actor": "Seed Analyzer",
+        "reason": "R02 Part2 authorized action/learning/resource implementation and tests; preserve accepted predecessor bytes.",
+        "record_ids": [
+          "DEC-0014"
+        ],
+        "observed_at": "2026-09-06T16:25:01+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+          "path": "Fistnet.Genepool.Dna/DnaElementFactory.cs",
+          "blob_oid": "22463236b56b28faa9b972bcf4e294e472763e65",
+          "transform": "lf_to_crlf"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0091",
+      "title": "Fistnet.Genepool.Dna\\DnaElementFactory.cs (R02 Part2)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\DnaElementFactory.cs"
+      },
+      "sha256": "5D73E13CA985E04F4BD99D5E240AE322B3A572500138A482671D3295CFBD2426",
+      "size_bytes": 5315,
+      "observed_at_utc": "2026-09-06T16:25:01+00:00",
+      "supersedes": "SRC-0011",
+      "status": "registered current working-file version",
+      "coverage": "Implemented/reviewed for R02 Part2; exact final source hash and whole-solution Debug/Release tests recorded separately in FACT-0038. Locators use named classes/methods; historical coverage belongs to predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part2_successor"
+      }
+    },
+    {
+      "source_id": "SRC-0013",
+      "title": "Fistnet.Genepool.Dna\\OrganismSnapshot.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\OrganismSnapshot.cs"
+      },
+      "sha256": "B30CA2C1807B6FBBCF3AA99A9A30F60091EAAC826B80DA63DD2D6A527F4787ED",
+      "size_bytes": 1729,
+      "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
+      "coverage": "complete textual reading; 73 file lines; exact bytes hashed; no execution or runtime validation.",
+      "status": "inspected working-tree original; not owner-approved domain authority",
+      "supersession": {
+        "source_id": "SRC-0092",
+        "actor": "Seed Analyzer",
+        "reason": "R02 Part2 authorized action/learning/resource implementation and tests; preserve accepted predecessor bytes.",
+        "record_ids": [
+          "DEC-0014"
+        ],
+        "observed_at": "2026-09-06T16:25:01+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+          "path": "Fistnet.Genepool.Dna/OrganismSnapshot.cs",
+          "blob_oid": "90416faa084c3c942e9ea7f3909d0443c1e34e74",
+          "transform": "lf_to_crlf"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0092",
+      "title": "Fistnet.Genepool.Dna\\OrganismSnapshot.cs (R02 Part2)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\OrganismSnapshot.cs"
+      },
+      "sha256": "9E405ACC00D95CD72BAE3CBDB5C42005E7A4E41F015A35EB2841F96C19250568",
+      "size_bytes": 2423,
+      "observed_at_utc": "2026-09-06T16:25:01+00:00",
+      "supersedes": "SRC-0013",
+      "status": "registered current working-file version",
+      "coverage": "Implemented/reviewed for R02 Part2; exact final source hash and whole-solution Debug/Release tests recorded separately in FACT-0038. Locators use named classes/methods; historical coverage belongs to predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part2_successor"
+      }
+    },
+    {
+      "source_id": "SRC-0015",
+      "title": "Fistnet.Genepool.Dna\\Elements\\Brain\\OrganismEvaluation.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Elements\\Brain\\OrganismEvaluation.cs"
+      },
+      "sha256": "27E18011AE25FA9C0F20F962267317313B4BFF438F48693713924C958FD2639C",
+      "size_bytes": 2725,
+      "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
+      "coverage": "complete textual reading; 67 file lines; exact bytes hashed; no execution or runtime validation.",
+      "status": "inspected working-tree original; not owner-approved domain authority",
+      "preparation": {
+        "status": "prepared",
+        "level": "searchable_text",
+        "path": "prepared/SRC-0015.jsonl",
+        "version": 1,
+        "preparer_version": 2,
+        "source_sha256": "27E18011AE25FA9C0F20F962267317313B4BFF438F48693713924C958FD2639C",
+        "prepared_sha256": "98A29FF6BE932A89EE557F1C16ACFC97FEECF6E0062DDA29AA134124CDCB571B",
+        "prepared_at": "2026-09-06T01:10:48+00:00",
+        "coverage": {
+          "encoding": "utf-8-sig",
+          "text": "static bounded line chunks",
+          "execution": "not executed",
+          "external_references": "not followed"
+        }
+      },
+      "supersession": {
+        "source_id": "SRC-0093",
+        "actor": "Seed Analyzer",
+        "reason": "R02 Part2 authorized action/learning/resource implementation and tests; preserve accepted predecessor bytes.",
+        "record_ids": [
+          "DEC-0014"
+        ],
+        "observed_at": "2026-09-06T16:25:02+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+          "path": "Fistnet.Genepool.Dna/Elements/Brain/OrganismEvaluation.cs",
+          "blob_oid": "661e099c19a21d7596f472e9551da1a9d204bdc8",
+          "transform": "lf_to_crlf"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0093",
+      "title": "Fistnet.Genepool.Dna\\Elements\\Brain\\OrganismEvaluation.cs (R02 Part2)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Elements\\Brain\\OrganismEvaluation.cs"
+      },
+      "sha256": "CFE2E720FE0EE0DDC2F6687E09E770FE95A872F63B9221FDB0998C637D8B5999",
+      "size_bytes": 2435,
+      "observed_at_utc": "2026-09-06T16:25:02+00:00",
+      "supersedes": "SRC-0015",
+      "status": "registered current working-file version",
+      "coverage": "Implemented/reviewed for R02 Part2; exact final source hash and whole-solution Debug/Release tests recorded separately in FACT-0038. Locators use named classes/methods; historical coverage belongs to predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part2_successor"
+      }
+    },
+    {
+      "source_id": "SRC-0020",
+      "title": "Fistnet.Genepool.Control\\Rules\\ExecuteOrganismSequenceRule.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\Rules\\ExecuteOrganismSequenceRule.cs"
+      },
+      "sha256": "206BA1785AFAC323D4F1731A79FFD891607E717C0C97201F123B1F89735F210F",
+      "size_bytes": 1026,
+      "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
+      "coverage": "complete textual reading; 33 file lines; exact bytes hashed; no execution or runtime validation.",
+      "status": "inspected working-tree original; not owner-approved domain authority",
+      "supersession": {
+        "source_id": "SRC-0094",
+        "actor": "Seed Analyzer",
+        "reason": "R02 Part2 authorized action/learning/resource implementation and tests; preserve accepted predecessor bytes.",
+        "record_ids": [
+          "DEC-0014"
+        ],
+        "observed_at": "2026-09-06T16:25:02+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+          "path": "Fistnet.Genepool.Control/Rules/ExecuteOrganismSequenceRule.cs",
+          "blob_oid": "864e51c9331136e35bb561c4c9aa4585a0b0ab46",
+          "transform": "lf_to_crlf"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0094",
+      "title": "Fistnet.Genepool.Control\\Rules\\ExecuteOrganismSequenceRule.cs (R02 Part2)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\Rules\\ExecuteOrganismSequenceRule.cs"
+      },
+      "sha256": "63987BBD68D0B2FB7D011228AEF3D9EF546D224C12EDA9AE1EBFCDCD3362C88F",
+      "size_bytes": 1734,
+      "observed_at_utc": "2026-09-06T16:25:02+00:00",
+      "supersedes": "SRC-0020",
+      "status": "registered current working-file version",
+      "coverage": "Implemented/reviewed for R02 Part2; exact final source hash and whole-solution Debug/Release tests recorded separately in FACT-0038. Locators use named classes/methods; historical coverage belongs to predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part2_successor"
+      }
+    },
+    {
+      "source_id": "SRC-0023",
+      "title": "Fistnet.Genepool.Control\\Rules\\ExecuteOrganismMoveRule.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\Rules\\ExecuteOrganismMoveRule.cs"
+      },
+      "sha256": "9E951E5EB029E7855D51709116E417A394A5B486CDD1B48ACF45D34AF381C044",
+      "size_bytes": 707,
+      "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
+      "coverage": "complete textual reading; 25 file lines; exact bytes hashed; no execution or runtime validation.",
+      "status": "inspected working-tree original; not owner-approved domain authority",
+      "supersession": {
+        "source_id": "SRC-0095",
+        "actor": "Seed Analyzer",
+        "reason": "R02 Part2 authorized action/learning/resource implementation and tests; preserve accepted predecessor bytes.",
+        "record_ids": [
+          "DEC-0014"
+        ],
+        "observed_at": "2026-09-06T16:25:03+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+          "path": "Fistnet.Genepool.Control/Rules/ExecuteOrganismMoveRule.cs",
+          "blob_oid": "e80ce4bceb96bc0e9887aa83c6fec23e1dbfeda9",
+          "transform": "lf_to_crlf"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0095",
+      "title": "Fistnet.Genepool.Control\\Rules\\ExecuteOrganismMoveRule.cs (R02 Part2)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\Rules\\ExecuteOrganismMoveRule.cs"
+      },
+      "sha256": "5CE5262FCED3E2B2CF37DBAC6E00C4231DD3DBA0F65D3A32F3856E62FA12D69A",
+      "size_bytes": 1293,
+      "observed_at_utc": "2026-09-06T16:25:03+00:00",
+      "supersedes": "SRC-0023",
+      "status": "registered current working-file version",
+      "coverage": "Implemented/reviewed for R02 Part2; exact final source hash and whole-solution Debug/Release tests recorded separately in FACT-0038. Locators use named classes/methods; historical coverage belongs to predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part2_successor"
+      }
+    },
+    {
+      "source_id": "SRC-0025",
+      "title": "Fistnet.Genepool.Dna\\Elements\\CombineDnaElement.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Elements\\CombineDnaElement.cs"
+      },
+      "sha256": "0CA034D7177101B518F4E652384D983C8B730F46A5B758D97DA8F2EDB0A15897",
+      "size_bytes": 2276,
+      "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
+      "coverage": "complete textual reading; 84 file lines; exact bytes hashed; no execution or runtime validation.",
+      "status": "inspected working-tree original; not owner-approved domain authority",
+      "supersession": {
+        "source_id": "SRC-0096",
+        "actor": "Seed Analyzer",
+        "reason": "R02 Part2 authorized action/learning/resource implementation and tests; preserve accepted predecessor bytes.",
+        "record_ids": [
+          "DEC-0014"
+        ],
+        "observed_at": "2026-09-06T16:25:03+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+          "path": "Fistnet.Genepool.Dna/Elements/CombineDnaElement.cs",
+          "blob_oid": "f4e28feac73174e0098b396528e3778b2163760b",
+          "transform": "lf_to_crlf"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0096",
+      "title": "Fistnet.Genepool.Dna\\Elements\\CombineDnaElement.cs (R02 Part2)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Elements\\CombineDnaElement.cs"
+      },
+      "sha256": "E8749BFC4EE2CAA9044E2DF184CEB4C123E76013DA696BBF7DA3AB5C0F43F4C7",
+      "size_bytes": 2055,
+      "observed_at_utc": "2026-09-06T16:25:03+00:00",
+      "supersedes": "SRC-0025",
+      "status": "registered current working-file version",
+      "coverage": "Implemented/reviewed for R02 Part2; exact final source hash and whole-solution Debug/Release tests recorded separately in FACT-0038. Locators use named classes/methods; historical coverage belongs to predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part2_successor"
+      }
+    },
+    {
+      "source_id": "SRC-0026",
+      "title": "Fistnet.Genepool.Dna\\Elements\\EvolveDnaElement.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Elements\\EvolveDnaElement.cs"
+      },
+      "sha256": "DDE0E4AF10ADB72F84677A971EEBE16FBEFE746C919D91B9DA463B8727D24D5B",
+      "size_bytes": 2517,
+      "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
+      "coverage": "complete textual reading; 85 file lines; exact bytes hashed; no execution or runtime validation.",
+      "status": "inspected working-tree original; not owner-approved domain authority",
+      "supersession": {
+        "source_id": "SRC-0097",
+        "actor": "Seed Analyzer",
+        "reason": "R02 Part2 authorized action/learning/resource implementation and tests; preserve accepted predecessor bytes.",
+        "record_ids": [
+          "DEC-0014"
+        ],
+        "observed_at": "2026-09-06T16:25:04+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+          "path": "Fistnet.Genepool.Dna/Elements/EvolveDnaElement.cs",
+          "blob_oid": "2185db5a6a609988b009a5b0f1c6ae5b37075006",
+          "transform": "lf_to_crlf"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0097",
+      "title": "Fistnet.Genepool.Dna\\Elements\\EvolveDnaElement.cs (R02 Part2)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Elements\\EvolveDnaElement.cs"
+      },
+      "sha256": "95C08914D783FE84DFE63B414EC707FE10EBA890447D064017F5722CACB980A6",
+      "size_bytes": 2515,
+      "observed_at_utc": "2026-09-06T16:25:04+00:00",
+      "supersedes": "SRC-0026",
+      "status": "registered current working-file version",
+      "coverage": "Implemented/reviewed for R02 Part2; exact final source hash and whole-solution Debug/Release tests recorded separately in FACT-0038. Locators use named classes/methods; historical coverage belongs to predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part2_successor"
+      }
+    },
+    {
+      "source_id": "SRC-0027",
+      "title": "Fistnet.Genepool.Dna\\Elements\\InfectDnaElement.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Elements\\InfectDnaElement.cs"
+      },
+      "sha256": "E6C0B93934230F35ABA63B0FF557A09D23AFC73BFCE3C634B030C00937C01160",
+      "size_bytes": 2601,
+      "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
+      "coverage": "complete textual reading; 88 file lines; exact bytes hashed; no execution or runtime validation.",
+      "status": "inspected working-tree original; not owner-approved domain authority",
+      "supersession": {
+        "source_id": "SRC-0098",
+        "actor": "Seed Analyzer",
+        "reason": "R02 Part2 authorized action/learning/resource implementation and tests; preserve accepted predecessor bytes.",
+        "record_ids": [
+          "DEC-0014"
+        ],
+        "observed_at": "2026-09-06T16:25:04+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+          "path": "Fistnet.Genepool.Dna/Elements/InfectDnaElement.cs",
+          "blob_oid": "c21dec1efe9f9a81e0274fb94da49afdc8d6f5a6",
+          "transform": "lf_to_crlf"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0098",
+      "title": "Fistnet.Genepool.Dna\\Elements\\InfectDnaElement.cs (R02 Part2)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Elements\\InfectDnaElement.cs"
+      },
+      "sha256": "0ABC975CD79B4E10E14F9B69FAF106BBC1C217F0F3B312F501CC8E75B426BA3F",
+      "size_bytes": 2562,
+      "observed_at_utc": "2026-09-06T16:25:04+00:00",
+      "supersedes": "SRC-0027",
+      "status": "registered current working-file version",
+      "coverage": "Implemented/reviewed for R02 Part2; exact final source hash and whole-solution Debug/Release tests recorded separately in FACT-0038. Locators use named classes/methods; historical coverage belongs to predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part2_successor"
+      }
+    },
+    {
+      "source_id": "SRC-0030",
+      "title": "Fistnet.Genepool.Dna\\Elements\\EatDnaElement.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Elements\\EatDnaElement.cs"
+      },
+      "sha256": "5EEF2C1C8969BE0AADC1B3D99BFFACF96B1244C85D4F64B308F91BD45B5B7D15",
+      "size_bytes": 2298,
+      "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
+      "coverage": "complete textual reading; 80 file lines; exact bytes hashed; no execution or runtime validation.",
+      "status": "inspected working-tree original; not owner-approved domain authority",
+      "supersession": {
+        "source_id": "SRC-0099",
+        "actor": "Seed Analyzer",
+        "reason": "R02 Part2 authorized action/learning/resource implementation and tests; preserve accepted predecessor bytes.",
+        "record_ids": [
+          "DEC-0014"
+        ],
+        "observed_at": "2026-09-06T16:25:05+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+          "path": "Fistnet.Genepool.Dna/Elements/EatDnaElement.cs",
+          "blob_oid": "490d1ab8dcf389019bacaa40f30a62dcd2d4ee5e",
+          "transform": "lf_to_crlf"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0099",
+      "title": "Fistnet.Genepool.Dna\\Elements\\EatDnaElement.cs (R02 Part2)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Elements\\EatDnaElement.cs"
+      },
+      "sha256": "FA8DFA2678C544F7C097054C1BC4EB7CA2A1EDFC4CBAE3183EDBA1C7416947FD",
+      "size_bytes": 2220,
+      "observed_at_utc": "2026-09-06T16:25:05+00:00",
+      "supersedes": "SRC-0030",
+      "status": "registered current working-file version",
+      "coverage": "Implemented/reviewed for R02 Part2; exact final source hash and whole-solution Debug/Release tests recorded separately in FACT-0038. Locators use named classes/methods; historical coverage belongs to predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part2_successor"
+      }
+    },
+    {
+      "source_id": "SRC-0031",
+      "title": "Fistnet.Genepool.Dna\\Elements\\CreateFoodDnaElement.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Elements\\CreateFoodDnaElement.cs"
+      },
+      "sha256": "C8E51B409E9F63CF197CBC82271CA22C21D2D8B224BA291CB87C606DAA14744F",
+      "size_bytes": 2498,
+      "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
+      "coverage": "complete textual reading; 86 file lines; exact bytes hashed; no execution or runtime validation.",
+      "status": "inspected working-tree original; not owner-approved domain authority",
+      "supersession": {
+        "source_id": "SRC-0100",
+        "actor": "Seed Analyzer",
+        "reason": "R02 Part2 authorized action/learning/resource implementation and tests; preserve accepted predecessor bytes.",
+        "record_ids": [
+          "DEC-0014"
+        ],
+        "observed_at": "2026-09-06T16:25:05+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+          "path": "Fistnet.Genepool.Dna/Elements/CreateFoodDnaElement.cs",
+          "blob_oid": "6f349ffc4b3bf368b0c45d39531f9f3d0e002212",
+          "transform": "lf_to_crlf"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0100",
+      "title": "Fistnet.Genepool.Dna\\Elements\\CreateFoodDnaElement.cs (R02 Part2)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Elements\\CreateFoodDnaElement.cs"
+      },
+      "sha256": "F6659F3D9076FD17D818D2BFC972BE5651006812DB0EE8107DBBA1C2F7EB39B1",
+      "size_bytes": 2438,
+      "observed_at_utc": "2026-09-06T16:25:05+00:00",
+      "supersedes": "SRC-0031",
+      "status": "registered current working-file version",
+      "coverage": "Implemented/reviewed for R02 Part2; exact final source hash and whole-solution Debug/Release tests recorded separately in FACT-0038. Locators use named classes/methods; historical coverage belongs to predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part2_successor"
+      }
+    },
+    {
+      "source_id": "SRC-0032",
+      "title": "Fistnet.Genepool.Dna\\Elements\\MoveDnaElement.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Elements\\MoveDnaElement.cs"
+      },
+      "sha256": "5CF51255F60F0301B072A193F3C55C51166320778E45A46A81219A72D56EF76E",
+      "size_bytes": 2400,
+      "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
+      "coverage": "complete textual reading; 90 file lines; exact bytes hashed; no execution or runtime validation.",
+      "status": "inspected working-tree original; not owner-approved domain authority",
+      "supersession": {
+        "source_id": "SRC-0101",
+        "actor": "Seed Analyzer",
+        "reason": "R02 Part2 authorized action/learning/resource implementation and tests; preserve accepted predecessor bytes.",
+        "record_ids": [
+          "DEC-0014"
+        ],
+        "observed_at": "2026-09-06T16:25:06+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+          "path": "Fistnet.Genepool.Dna/Elements/MoveDnaElement.cs",
+          "blob_oid": "ca75b9a6c5ebc0f59937c97d9f770d46941a8c16",
+          "transform": "lf_to_crlf"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0101",
+      "title": "Fistnet.Genepool.Dna\\Elements\\MoveDnaElement.cs (R02 Part2)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Elements\\MoveDnaElement.cs"
+      },
+      "sha256": "A73C4DF5D2D6F0F74D110CB1D0539F23F72C89EE9942CE13505B6653709B563F",
+      "size_bytes": 2478,
+      "observed_at_utc": "2026-09-06T16:25:06+00:00",
+      "supersedes": "SRC-0032",
+      "status": "registered current working-file version",
+      "coverage": "Implemented/reviewed for R02 Part2; exact final source hash and whole-solution Debug/Release tests recorded separately in FACT-0038. Locators use named classes/methods; historical coverage belongs to predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part2_successor"
+      }
+    },
+    {
+      "source_id": "SRC-0033",
+      "title": "Fistnet.Genepool.Dna\\Elements\\HealDnaElement.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Elements\\HealDnaElement.cs"
+      },
+      "sha256": "EB5C34C6C2810FE5D74F30BFD333F6BE746718CFDFF47C6D27AADF20BE4F983E",
+      "size_bytes": 2924,
+      "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
+      "coverage": "complete textual reading; 94 file lines; exact bytes hashed; no execution or runtime validation.",
+      "status": "inspected working-tree original; not owner-approved domain authority",
+      "supersession": {
+        "source_id": "SRC-0102",
+        "actor": "Seed Analyzer",
+        "reason": "R02 Part2 authorized action/learning/resource implementation and tests; preserve accepted predecessor bytes.",
+        "record_ids": [
+          "DEC-0014"
+        ],
+        "observed_at": "2026-09-06T16:25:06+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+          "path": "Fistnet.Genepool.Dna/Elements/HealDnaElement.cs",
+          "blob_oid": "3d0a7252fa4aa763a9d367b97746f097ed2c525f",
+          "transform": "lf_to_crlf"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0102",
+      "title": "Fistnet.Genepool.Dna\\Elements\\HealDnaElement.cs (R02 Part2)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Elements\\HealDnaElement.cs"
+      },
+      "sha256": "2AAEFB086CE109316E4353C6DBD512E7DB715F94E17AF7689194005F66F66C4F",
+      "size_bytes": 2631,
+      "observed_at_utc": "2026-09-06T16:25:06+00:00",
+      "supersedes": "SRC-0033",
+      "status": "registered current working-file version",
+      "coverage": "Implemented/reviewed for R02 Part2; exact final source hash and whole-solution Debug/Release tests recorded separately in FACT-0038. Locators use named classes/methods; historical coverage belongs to predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part2_successor"
+      }
+    },
+    {
+      "source_id": "SRC-0034",
+      "title": "Fistnet.Genepool.Dna\\Elements\\KillDnaElement.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Elements\\KillDnaElement.cs"
+      },
+      "sha256": "4CC1153C9704A046AC71E6F1DA3E085CD2E33EF2EF543F0E219E010D5E7D9211",
+      "size_bytes": 2686,
+      "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
+      "coverage": "complete textual reading; 90 file lines; exact bytes hashed; no execution or runtime validation.",
+      "status": "inspected working-tree original; not owner-approved domain authority",
+      "supersession": {
+        "source_id": "SRC-0103",
+        "actor": "Seed Analyzer",
+        "reason": "R02 Part2 authorized action/learning/resource implementation and tests; preserve accepted predecessor bytes.",
+        "record_ids": [
+          "DEC-0014"
+        ],
+        "observed_at": "2026-09-06T16:25:06+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+          "path": "Fistnet.Genepool.Dna/Elements/KillDnaElement.cs",
+          "blob_oid": "40bab4ffc24a0b9203330343671a733fc228ebb3",
+          "transform": "lf_to_crlf"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0103",
+      "title": "Fistnet.Genepool.Dna\\Elements\\KillDnaElement.cs (R02 Part2)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Elements\\KillDnaElement.cs"
+      },
+      "sha256": "3E4B5852EF0972506A812657B8BA71614231CA287AC94D2A82A848E5018AE6F0",
+      "size_bytes": 2074,
+      "observed_at_utc": "2026-09-06T16:25:06+00:00",
+      "supersedes": "SRC-0034",
+      "status": "registered current working-file version",
+      "coverage": "Implemented/reviewed for R02 Part2; exact final source hash and whole-solution Debug/Release tests recorded separately in FACT-0038. Locators use named classes/methods; historical coverage belongs to predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part2_successor"
+      }
+    },
+    {
+      "source_id": "SRC-0046",
+      "title": "Fistnet.Genepool.Dna\\Common.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Common.cs"
+      },
+      "sha256": "63190CC56ABCC9A68919FBFC23399842D4CDACA2889C718BB4813DABD449BF9B",
+      "size_bytes": 5632,
+      "observed_at_utc": "2026-09-06T12:47:55+00:00",
+      "supersedes": "SRC-0010",
+      "status": "Current owner-authorized R01 implementation; Seed Analyzer changes after original discovery",
+      "coverage": "Complete textual implementation/review; 190 lines. Verified final R01 build and bounded suite; not exhaustive runtime proof.",
+      "supersession": {
+        "source_id": "SRC-0104",
+        "actor": "Seed Analyzer",
+        "reason": "R02 Part2 authorized action/learning/resource implementation and tests; preserve accepted predecessor bytes.",
+        "record_ids": [
+          "DEC-0014"
+        ],
+        "observed_at": "2026-09-06T16:25:07+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+          "path": "Fistnet.Genepool.Dna/Common.cs",
+          "blob_oid": "c85668664ad2831e449e96153da40494465d06c1",
+          "transform": "lf_to_crlf"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0104",
+      "title": "Fistnet.Genepool.Dna\\Common.cs (R02 Part2)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Common.cs"
+      },
+      "sha256": "5FCD695C512591F2B98E203FAB05503EF3DBFE2F900D82542143EE68796E333D",
+      "size_bytes": 6228,
+      "observed_at_utc": "2026-09-06T16:25:07+00:00",
+      "supersedes": "SRC-0046",
+      "status": "registered current working-file version",
+      "coverage": "Implemented/reviewed for R02 Part2; exact final source hash and whole-solution Debug/Release tests recorded separately in FACT-0038. Locators use named classes/methods; historical coverage belongs to predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part2_successor"
+      }
+    },
+    {
+      "source_id": "SRC-0053",
+      "title": "Fistnet.Genepool.Control\\SimulationRunOptions.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\SimulationRunOptions.cs"
+      },
+      "sha256": "78B458703A5ADDCBA7B982500D795CA2DF871F90426AAEAEC2074637134C608D",
+      "size_bytes": 475,
+      "observed_at_utc": "2026-09-06T12:50:18.147815+00:00",
+      "status": "Seed-generated implementation source under DEC-0007; verified bounded successor, not original discovery evidence",
+      "coverage": "Complete textual implementation/review; 15 lines. Build/test coverage and limitations in FACT-0024 and IMPROVEMENT_RESULT_R01.md.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "record_ids": [
+          "DEC-0007",
+          "FACT-0023"
+        ]
+      },
+      "supersession": {
+        "source_id": "SRC-0105",
+        "actor": "Seed Analyzer",
+        "reason": "R02 Part2 authorized action/learning/resource implementation and tests; preserve accepted predecessor bytes.",
+        "record_ids": [
+          "DEC-0014"
+        ],
+        "observed_at": "2026-09-06T16:25:07+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+          "path": "Fistnet.Genepool.Control/SimulationRunOptions.cs",
+          "blob_oid": "9797df5db65f5baa1263cd996e44a9dda75b90c4",
+          "transform": "raw"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0105",
+      "title": "Fistnet.Genepool.Control\\SimulationRunOptions.cs (R02 Part2)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\SimulationRunOptions.cs"
+      },
+      "sha256": "40741A90989EB1A0951BEC2C86057091FC8E36316CD22E56921CC876D439DFD0",
+      "size_bytes": 555,
+      "observed_at_utc": "2026-09-06T16:25:07+00:00",
+      "supersedes": "SRC-0053",
+      "status": "registered current working-file version",
+      "coverage": "Implemented/reviewed for R02 Part2; exact final source hash and whole-solution Debug/Release tests recorded separately in FACT-0038. Locators use named classes/methods; historical coverage belongs to predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part2_successor"
+      }
+    },
+    {
+      "source_id": "SRC-0054",
+      "title": "Fistnet.Genepool.Control\\SimulationSnapshot.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\SimulationSnapshot.cs"
+      },
+      "sha256": "657C35E219C25716045593DF951CBC56622002CF514C6754CC5E29D0696E6509",
+      "size_bytes": 10254,
+      "observed_at_utc": "2026-09-06T12:50:18.147815+00:00",
+      "status": "Seed-generated implementation source under DEC-0007; verified bounded successor, not original discovery evidence",
+      "coverage": "Complete textual implementation/review; 195 lines. Build/test coverage and limitations in FACT-0024 and IMPROVEMENT_RESULT_R01.md.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "record_ids": [
+          "DEC-0007",
+          "FACT-0023"
+        ]
+      },
+      "supersession": {
+        "source_id": "SRC-0106",
+        "actor": "Seed Analyzer",
+        "reason": "R02 Part2 authorized action/learning/resource implementation and tests; preserve accepted predecessor bytes.",
+        "record_ids": [
+          "DEC-0014"
+        ],
+        "observed_at": "2026-09-06T16:25:08+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+          "path": "Fistnet.Genepool.Control/SimulationSnapshot.cs",
+          "blob_oid": "d5fb996bc656edb302006221df11334184efd9d7",
+          "transform": "raw"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0106",
+      "title": "Fistnet.Genepool.Control\\SimulationSnapshot.cs (R02 Part2)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\SimulationSnapshot.cs"
+      },
+      "sha256": "1365ACEBEF77464533E346D344810CD9977A1CC91BF38C28BE60327AC4A81234",
+      "size_bytes": 10332,
+      "observed_at_utc": "2026-09-06T16:25:08+00:00",
+      "supersedes": "SRC-0054",
+      "status": "registered current working-file version",
+      "coverage": "Implemented/reviewed for R02 Part2; exact final source hash and whole-solution Debug/Release tests recorded separately in FACT-0038. Locators use named classes/methods; historical coverage belongs to predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part2_successor"
+      }
+    },
+    {
+      "source_id": "SRC-0057",
+      "title": "Fistnet.Genepool.Tests\\IntegrationTests.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\IntegrationTests.cs"
+      },
+      "sha256": "451FC0FF3969941C483CC09A1B81B574474ABD24606F516E3E3B46F755FC894D",
+      "size_bytes": 20796,
+      "observed_at_utc": "2026-09-06T12:50:18.147815+00:00",
+      "status": "Seed-generated implementation source under DEC-0007; verified bounded successor, not original discovery evidence",
+      "coverage": "Complete textual implementation/review; 389 lines. Build/test coverage and limitations in FACT-0024 and IMPROVEMENT_RESULT_R01.md.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "record_ids": [
+          "DEC-0007",
+          "FACT-0023"
+        ]
+      },
+      "supersession": {
+        "source_id": "SRC-0107",
+        "actor": "Seed Analyzer",
+        "reason": "R02 Part2 authorized action/learning/resource implementation and tests; preserve accepted predecessor bytes.",
+        "record_ids": [
+          "DEC-0014"
+        ],
+        "observed_at": "2026-09-06T16:25:08+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+          "path": "Fistnet.Genepool.Tests/IntegrationTests.cs",
+          "blob_oid": "d1bdef7a2a33bd7b8143a626ece3662400945e32",
+          "transform": "raw"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0107",
+      "title": "Fistnet.Genepool.Tests\\IntegrationTests.cs (R02 Part2)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\IntegrationTests.cs"
+      },
+      "sha256": "D66AEE80B5D7E14782322C6A8D1C07B85AD36BB7685600AE0A0D89035DE381CB",
+      "size_bytes": 21081,
+      "observed_at_utc": "2026-09-06T16:25:08+00:00",
+      "supersedes": "SRC-0057",
+      "status": "registered current working-file version",
+      "coverage": "Implemented/reviewed for R02 Part2; exact final source hash and whole-solution Debug/Release tests recorded separately in FACT-0038. Locators use named classes/methods; historical coverage belongs to predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part2_successor"
+      }
+    },
+    {
+      "source_id": "SRC-0058",
+      "title": "Fistnet.Genepool.Tests\\MechanicsTests.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\MechanicsTests.cs"
+      },
+      "sha256": "4EBC714438EBCA4C72451BCF16A6843844C2BB679A4C333CEB884068D7A8BBC2",
+      "size_bytes": 5319,
+      "observed_at_utc": "2026-09-06T12:50:18.147815+00:00",
+      "status": "Seed-generated implementation source under DEC-0007; verified bounded successor, not original discovery evidence",
+      "coverage": "Complete textual implementation/review; 90 lines. Build/test coverage and limitations in FACT-0024 and IMPROVEMENT_RESULT_R01.md.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "record_ids": [
+          "DEC-0007",
+          "FACT-0023"
+        ]
+      },
+      "supersession": {
+        "source_id": "SRC-0108",
+        "actor": "Seed Analyzer",
+        "reason": "R02 Part2 authorized action/learning/resource implementation and tests; preserve accepted predecessor bytes.",
+        "record_ids": [
+          "DEC-0014"
+        ],
+        "observed_at": "2026-09-06T16:25:09+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+          "path": "Fistnet.Genepool.Tests/MechanicsTests.cs",
+          "blob_oid": "4836e6a13e973da42255bf5c28e1cdd6a1922ded",
+          "transform": "raw"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0108",
+      "title": "Fistnet.Genepool.Tests\\MechanicsTests.cs (R02 Part2)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\MechanicsTests.cs"
+      },
+      "sha256": "E51D511101679496AF2FDCBB7A850F72DFDD98BE6F2F95F3AD9A00DBBC7DF3EC",
+      "size_bytes": 5502,
+      "observed_at_utc": "2026-09-06T16:25:09+00:00",
+      "supersedes": "SRC-0058",
+      "status": "registered current working-file version",
+      "coverage": "Implemented/reviewed for R02 Part2; exact final source hash and whole-solution Debug/Release tests recorded separately in FACT-0038. Locators use named classes/methods; historical coverage belongs to predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part2_successor"
+      }
+    },
+    {
+      "source_id": "SRC-0061",
+      "title": "Fistnet.Genepool.Tests\\RegressionTests.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\RegressionTests.cs"
+      },
+      "sha256": "8F04CD47F1FA647261AF6FCFDD2D1A7B10E8C36DA655D17C8F99DBCF2AD7CF38",
+      "size_bytes": 3118,
+      "observed_at_utc": "2026-09-06T12:50:18.147815+00:00",
+      "status": "Seed-generated implementation source under DEC-0007; verified bounded successor, not original discovery evidence",
+      "coverage": "Complete textual implementation/review; 63 lines. Build/test coverage and limitations in FACT-0024 and IMPROVEMENT_RESULT_R01.md.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "record_ids": [
+          "DEC-0007",
+          "FACT-0023"
+        ]
+      },
+      "supersession": {
+        "source_id": "SRC-0109",
+        "actor": "Seed Analyzer",
+        "reason": "R02 Part2 authorized action/learning/resource implementation and tests; preserve accepted predecessor bytes.",
+        "record_ids": [
+          "DEC-0014"
+        ],
+        "observed_at": "2026-09-06T16:25:09+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+          "path": "Fistnet.Genepool.Tests/RegressionTests.cs",
+          "blob_oid": "769777ddd6d96e66d45617984d62d20825a56367",
+          "transform": "raw"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0109",
+      "title": "Fistnet.Genepool.Tests\\RegressionTests.cs (R02 Part2)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\RegressionTests.cs"
+      },
+      "sha256": "98F6C7F564E4315F2792BEC7A478515DFE7F3F2376FBD81B6AD61860DB32692D",
+      "size_bytes": 3631,
+      "observed_at_utc": "2026-09-06T16:25:09+00:00",
+      "supersedes": "SRC-0061",
+      "status": "registered current working-file version",
+      "coverage": "Implemented/reviewed for R02 Part2; exact final source hash and whole-solution Debug/Release tests recorded separately in FACT-0038. Locators use named classes/methods; historical coverage belongs to predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part2_successor"
+      }
+    },
+    {
+      "source_id": "SRC-0063",
+      "title": "Fistnet.Genepool.Tests\\ScenarioRunner.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\ScenarioRunner.cs"
+      },
+      "sha256": "7EECE5A533F003AF10601FE87388D9FF59B76819DEA897C36CDDAA4EDAD8496A",
+      "size_bytes": 7731,
+      "observed_at_utc": "2026-09-06T12:50:18.147815+00:00",
+      "status": "Seed-generated implementation source under DEC-0007; verified bounded successor, not original discovery evidence",
+      "coverage": "Complete textual implementation/review; 135 lines. Build/test coverage and limitations in FACT-0024 and IMPROVEMENT_RESULT_R01.md.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "record_ids": [
+          "DEC-0007",
+          "FACT-0023"
+        ]
+      },
+      "supersession": {
+        "source_id": "SRC-0110",
+        "actor": "Seed Analyzer",
+        "reason": "R02 Part2 authorized action/learning/resource implementation and tests; preserve accepted predecessor bytes.",
+        "record_ids": [
+          "DEC-0014"
+        ],
+        "observed_at": "2026-09-06T16:25:10+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+          "path": "Fistnet.Genepool.Tests/ScenarioRunner.cs",
+          "blob_oid": "84020703ad2f29f108460ab5fe702a5f279ad620",
+          "transform": "raw"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0110",
+      "title": "Fistnet.Genepool.Tests\\ScenarioRunner.cs (R02 Part2)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\ScenarioRunner.cs"
+      },
+      "sha256": "7BC7091239B896EAADE51358390A964B14AC87EC09E7263E5159A36DDE73A5DF",
+      "size_bytes": 8144,
+      "observed_at_utc": "2026-09-06T16:25:10+00:00",
+      "supersedes": "SRC-0063",
+      "status": "registered current working-file version",
+      "coverage": "Implemented/reviewed for R02 Part2; exact final source hash and whole-solution Debug/Release tests recorded separately in FACT-0038. Locators use named classes/methods; historical coverage belongs to predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part2_successor"
+      }
+    },
+    {
+      "source_id": "SRC-0064",
+      "title": "Fistnet.Genepool.Tests\\TestSupport.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\TestSupport.cs"
+      },
+      "sha256": "F45EE7582531FC616A44BB02370F1608743FA90D61BB3A97BDC875FBF565F929",
+      "size_bytes": 2776,
+      "observed_at_utc": "2026-09-06T12:50:18.147815+00:00",
+      "status": "Seed-generated implementation source under DEC-0007; verified bounded successor, not original discovery evidence",
+      "coverage": "Complete textual implementation/review; 56 lines. Build/test coverage and limitations in FACT-0024 and IMPROVEMENT_RESULT_R01.md.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "record_ids": [
+          "DEC-0007",
+          "FACT-0023"
+        ]
+      },
+      "supersession": {
+        "source_id": "SRC-0111",
+        "actor": "Seed Analyzer",
+        "reason": "R02 Part2 authorized action/learning/resource implementation and tests; preserve accepted predecessor bytes.",
+        "record_ids": [
+          "DEC-0014"
+        ],
+        "observed_at": "2026-09-06T16:25:10+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+          "path": "Fistnet.Genepool.Tests/TestSupport.cs",
+          "blob_oid": "67d652efaadeb6db975e9f5d79dea60e51de6bd7",
+          "transform": "raw"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0111",
+      "title": "Fistnet.Genepool.Tests\\TestSupport.cs (R02 Part2)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\TestSupport.cs"
+      },
+      "sha256": "14F743DCFCA78644250A114986267A13492732BB1D7CBEE66926A0E0B7E8E286",
+      "size_bytes": 3154,
+      "observed_at_utc": "2026-09-06T16:25:10+00:00",
+      "supersedes": "SRC-0064",
+      "status": "registered current working-file version",
+      "coverage": "Implemented/reviewed for R02 Part2; exact final source hash and whole-solution Debug/Release tests recorded separately in FACT-0038. Locators use named classes/methods; historical coverage belongs to predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part2_successor"
+      }
+    },
+    {
+      "source_id": "SRC-0076",
+      "title": "Fistnet.Genepool.Control\\Rules\\ExecuteOgranismSetup.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\Rules\\ExecuteOgranismSetup.cs"
+      },
+      "sha256": "052A38D52CD95C71FD3573255CF2962BD0C27D7C96199141E2E3C79E6EE8253E",
+      "size_bytes": 2136,
+      "observed_at_utc": "2026-09-06T15:14:46+00:00",
+      "supersedes": "SRC-0019",
+      "status": "Current Seed-authored R02 Part1 implementation under DEC-0012; not original Genesis evidence or owner-accepted ecological design.",
+      "coverage": "Complete textual implementation/review; 48 lines. Included in passing Debug/Release whole-solution builds and tests; checks have the bounded scope in FACT-0034.",
+      "supersession": {
+        "source_id": "SRC-0112",
+        "actor": "Seed Analyzer",
+        "reason": "R02 Part2 authorized action/learning/resource implementation and tests; preserve accepted predecessor bytes.",
+        "record_ids": [
+          "DEC-0014"
+        ],
+        "observed_at": "2026-09-06T16:25:11+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/SRC-0076.cs"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0112",
+      "title": "Fistnet.Genepool.Control\\Rules\\ExecuteOgranismSetup.cs (R02 Part2)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\Rules\\ExecuteOgranismSetup.cs"
+      },
+      "sha256": "B3AC4C59AA49DC4FA8146B3B89F92CBCD7271BC3AB1B6098B3226A29F17F4FE6",
+      "size_bytes": 1128,
+      "observed_at_utc": "2026-09-06T16:25:11+00:00",
+      "supersedes": "SRC-0076",
+      "status": "registered current working-file version",
+      "coverage": "Implemented/reviewed for R02 Part2; exact final source hash and whole-solution Debug/Release tests recorded separately in FACT-0038. Locators use named classes/methods; historical coverage belongs to predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part2_successor"
+      }
+    },
+    {
+      "source_id": "SRC-0077",
+      "title": "Fistnet.Genepool.Control\\Rules\\ExecuteOrganismEffectsRule.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\Rules\\ExecuteOrganismEffectsRule.cs"
+      },
+      "sha256": "2553C7D69C60732B57E980A45D44896AD21E89E4D4DD44D3ADB341DD11F46E14",
+      "size_bytes": 2800,
+      "observed_at_utc": "2026-09-06T15:14:46+00:00",
+      "supersedes": "SRC-0021",
+      "status": "Current Seed-authored R02 Part1 implementation under DEC-0012; not original Genesis evidence or owner-accepted ecological design.",
+      "coverage": "Complete textual implementation/review; 54 lines. Included in passing Debug/Release whole-solution builds and tests; checks have the bounded scope in FACT-0034.",
+      "supersession": {
+        "source_id": "SRC-0113",
+        "actor": "Seed Analyzer",
+        "reason": "R02 Part2 authorized action/learning/resource implementation and tests; preserve accepted predecessor bytes.",
+        "record_ids": [
+          "DEC-0014"
+        ],
+        "observed_at": "2026-09-06T16:25:11+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/SRC-0077.cs"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0113",
+      "title": "Fistnet.Genepool.Control\\Rules\\ExecuteOrganismEffectsRule.cs (R02 Part2)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\Rules\\ExecuteOrganismEffectsRule.cs"
+      },
+      "sha256": "07FB5A529DF99BD0853FBBF46C4FFC667477FC096806FDECF37C2B58943174AC",
+      "size_bytes": 746,
+      "observed_at_utc": "2026-09-06T16:25:11+00:00",
+      "supersedes": "SRC-0077",
+      "status": "registered current working-file version",
+      "coverage": "Implemented/reviewed for R02 Part2; exact final source hash and whole-solution Debug/Release tests recorded separately in FACT-0038. Locators use named classes/methods; historical coverage belongs to predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part2_successor"
+      }
+    },
+    {
+      "source_id": "SRC-0078",
+      "title": "Fistnet.Genepool.Control\\Rules\\ExecuteOrganismDeadRule.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\Rules\\ExecuteOrganismDeadRule.cs"
+      },
+      "sha256": "72852EC741E0D49CE9248D869CEC62F8F3A6B5E8C48321FA93720277F0AFCC52",
+      "size_bytes": 1564,
+      "observed_at_utc": "2026-09-06T15:14:46+00:00",
+      "supersedes": "SRC-0022",
+      "status": "Current Seed-authored R02 Part1 implementation under DEC-0012; not original Genesis evidence or owner-accepted ecological design.",
+      "coverage": "Complete textual implementation/review; 38 lines. Included in passing Debug/Release whole-solution builds and tests; checks have the bounded scope in FACT-0034.",
+      "supersession": {
+        "source_id": "SRC-0114",
+        "actor": "Seed Analyzer",
+        "reason": "R02 Part2 authorized action/learning/resource implementation and tests; preserve accepted predecessor bytes.",
+        "record_ids": [
+          "DEC-0014"
+        ],
+        "observed_at": "2026-09-06T16:25:11+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/SRC-0078.cs"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0114",
+      "title": "Fistnet.Genepool.Control\\Rules\\ExecuteOrganismDeadRule.cs (R02 Part2)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\Rules\\ExecuteOrganismDeadRule.cs"
+      },
+      "sha256": "6935CF12214C699C9FC04F531E56D9A8378E7E7172B1ADAF7F4AEFCA455EA83E",
+      "size_bytes": 1747,
+      "observed_at_utc": "2026-09-06T16:25:11+00:00",
+      "supersedes": "SRC-0078",
+      "status": "registered current working-file version",
+      "coverage": "Implemented/reviewed for R02 Part2; exact final source hash and whole-solution Debug/Release tests recorded separately in FACT-0038. Locators use named classes/methods; historical coverage belongs to predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part2_successor"
+      }
+    },
+    {
+      "source_id": "SRC-0080",
+      "title": "Fistnet.Genepool.Control\\Gameboard\\Board.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\Gameboard\\Board.cs"
+      },
+      "sha256": "F461E92CEDA7AB498E6FED4251B21311390002521295B5B86DE5DF912994FFC4",
+      "size_bytes": 13012,
+      "observed_at_utc": "2026-09-06T15:14:47+00:00",
+      "supersedes": "SRC-0045",
+      "status": "Current Seed-authored R02 Part1 implementation under DEC-0012; not original Genesis evidence or owner-accepted ecological design.",
+      "coverage": "Complete textual implementation/review; 300 lines. Included in passing Debug/Release whole-solution builds and tests; checks have the bounded scope in FACT-0034.",
+      "supersession": {
+        "source_id": "SRC-0115",
+        "actor": "Seed Analyzer",
+        "reason": "R02 Part2 authorized action/learning/resource implementation and tests; preserve accepted predecessor bytes.",
+        "record_ids": [
+          "DEC-0014"
+        ],
+        "observed_at": "2026-09-06T16:25:12+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/SRC-0080.cs"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0115",
+      "title": "Fistnet.Genepool.Control\\Gameboard\\Board.cs (R02 Part2)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\Gameboard\\Board.cs"
+      },
+      "sha256": "64BBD2EC69EC73E7033E05311D5F48C982092985F3AF1C6FB074E5FFBB324E14",
+      "size_bytes": 17697,
+      "observed_at_utc": "2026-09-06T16:25:12+00:00",
+      "supersedes": "SRC-0080",
+      "status": "registered current working-file version",
+      "coverage": "Implemented/reviewed for R02 Part2; exact final source hash and whole-solution Debug/Release tests recorded separately in FACT-0038. Locators use named classes/methods; historical coverage belongs to predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part2_successor"
+      }
+    },
+    {
+      "source_id": "SRC-0081",
+      "title": "Fistnet.Genepool.Dna\\Organism.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Organism.cs"
+      },
+      "sha256": "D209BBDAA89A797AC49D8770BBAA578A7A5BE18BA67FDBC78327C04E928BFCF6",
+      "size_bytes": 14190,
+      "observed_at_utc": "2026-09-06T15:14:47+00:00",
+      "supersedes": "SRC-0047",
+      "status": "Current Seed-authored R02 Part1 implementation under DEC-0012; not original Genesis evidence or owner-accepted ecological design.",
+      "coverage": "Complete textual implementation/review; 398 lines. Included in passing Debug/Release whole-solution builds and tests; checks have the bounded scope in FACT-0034.",
+      "supersession": {
+        "source_id": "SRC-0116",
+        "actor": "Seed Analyzer",
+        "reason": "R02 Part2 authorized action/learning/resource implementation and tests; preserve accepted predecessor bytes.",
+        "record_ids": [
+          "DEC-0014"
+        ],
+        "observed_at": "2026-09-06T16:25:12+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/SRC-0081.cs"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0116",
+      "title": "Fistnet.Genepool.Dna\\Organism.cs (R02 Part2)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Organism.cs"
+      },
+      "sha256": "A6858D50D74D4DD7AEA52E41E49FC69DD6739E890308D444B5C112936961783F",
+      "size_bytes": 18485,
+      "observed_at_utc": "2026-09-06T16:25:12+00:00",
+      "supersedes": "SRC-0081",
+      "status": "registered current working-file version",
+      "coverage": "Implemented/reviewed for R02 Part2; exact final source hash and whole-solution Debug/Release tests recorded separately in FACT-0038. Locators use named classes/methods; historical coverage belongs to predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part2_successor"
+      }
+    },
+    {
+      "source_id": "SRC-0082",
+      "title": "Fistnet.Genepool.Dna\\Elements\\Brain\\StrategyNetwork.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Elements\\Brain\\StrategyNetwork.cs"
+      },
+      "sha256": "531CCA0D818C79E8D047236A25962C2562E4E3509EFBDC0612ED8FD5A939C443",
+      "size_bytes": 7496,
+      "observed_at_utc": "2026-09-06T15:14:48+00:00",
+      "supersedes": "SRC-0048",
+      "status": "Current Seed-authored R02 Part1 implementation under DEC-0012; not original Genesis evidence or owner-accepted ecological design.",
+      "coverage": "Complete textual implementation/review; 165 lines. Included in passing Debug/Release whole-solution builds and tests; checks have the bounded scope in FACT-0034.",
+      "supersession": {
+        "source_id": "SRC-0117",
+        "actor": "Seed Analyzer",
+        "reason": "R02 Part2 authorized action/learning/resource implementation and tests; preserve accepted predecessor bytes.",
+        "record_ids": [
+          "DEC-0014"
+        ],
+        "observed_at": "2026-09-06T16:25:12+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/SRC-0082.cs"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0117",
+      "title": "Fistnet.Genepool.Dna\\Elements\\Brain\\StrategyNetwork.cs (R02 Part2)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Elements\\Brain\\StrategyNetwork.cs"
+      },
+      "sha256": "F624B12E984314D5CD1B432F1ECFAF31ED99117DB3418E796094D69E032F2332",
+      "size_bytes": 16039,
+      "observed_at_utc": "2026-09-06T16:25:12+00:00",
+      "supersedes": "SRC-0082",
+      "status": "registered current working-file version",
+      "coverage": "Implemented/reviewed for R02 Part2; exact final source hash and whole-solution Debug/Release tests recorded separately in FACT-0038. Locators use named classes/methods; historical coverage belongs to predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part2_successor"
+      }
+    },
+    {
+      "source_id": "SRC-0083",
+      "title": "Fistnet.Genepool.Control\\Gameboard\\BoardSquare.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\Gameboard\\BoardSquare.cs"
+      },
+      "sha256": "7080A92A8888FFA2059C8CBDCF8C6946A5024E5DCFAEF5762E5491A20C929D16",
+      "size_bytes": 9477,
+      "observed_at_utc": "2026-09-06T15:14:48+00:00",
+      "supersedes": "SRC-0049",
+      "status": "Current Seed-authored R02 Part1 implementation under DEC-0012; not original Genesis evidence or owner-accepted ecological design.",
+      "coverage": "Complete textual implementation/review; 266 lines. Included in passing Debug/Release whole-solution builds and tests; checks have the bounded scope in FACT-0034.",
+      "supersession": {
+        "source_id": "SRC-0118",
+        "actor": "Seed Analyzer",
+        "reason": "R02 Part2 authorized action/learning/resource implementation and tests; preserve accepted predecessor bytes.",
+        "record_ids": [
+          "DEC-0014"
+        ],
+        "observed_at": "2026-09-06T16:25:13+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/SRC-0083.cs"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0118",
+      "title": "Fistnet.Genepool.Control\\Gameboard\\BoardSquare.cs (R02 Part2)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\Gameboard\\BoardSquare.cs"
+      },
+      "sha256": "77FDEA9B097B8B8257297DA966BEA31ADCD81B4177D245E17878172A18C34678",
+      "size_bytes": 13988,
+      "observed_at_utc": "2026-09-06T16:25:13+00:00",
+      "supersedes": "SRC-0083",
+      "status": "registered current working-file version",
+      "coverage": "Implemented/reviewed for R02 Part2; exact final source hash and whole-solution Debug/Release tests recorded separately in FACT-0038. Locators use named classes/methods; historical coverage belongs to predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part2_successor"
+      }
+    },
+    {
+      "source_id": "SRC-0085",
+      "title": "Fistnet.Genepool.Tests\\Program.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\Program.cs"
+      },
+      "sha256": "DA58029EABF639AFD869B0766899767E371CC7884B18C237B504A130DF72EA59",
+      "size_bytes": 5035,
+      "observed_at_utc": "2026-09-06T15:14:49+00:00",
+      "supersedes": "SRC-0059",
+      "status": "Current Seed-authored R02 Part1 implementation under DEC-0012; not original Genesis evidence or owner-accepted ecological design.",
+      "coverage": "Complete textual implementation/review; 101 lines. Included in passing Debug/Release whole-solution builds and tests; checks have the bounded scope in FACT-0034.",
+      "supersession": {
+        "source_id": "SRC-0119",
+        "actor": "Seed Analyzer",
+        "reason": "R02 Part2 authorized action/learning/resource implementation and tests; preserve accepted predecessor bytes.",
+        "record_ids": [
+          "DEC-0014"
+        ],
+        "observed_at": "2026-09-06T16:25:13+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/SRC-0085.cs"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0119",
+      "title": "Fistnet.Genepool.Tests\\Program.cs (R02 Part2)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\Program.cs"
+      },
+      "sha256": "F535C5A99DDF8255CDA817FD03BA7ECFA66EC1EB7AF2811B47B62C2EE8945DB1",
+      "size_bytes": 6449,
+      "observed_at_utc": "2026-09-06T16:25:13+00:00",
+      "supersedes": "SRC-0085",
+      "status": "registered current working-file version",
+      "coverage": "Implemented/reviewed for R02 Part2; exact final source hash and whole-solution Debug/Release tests recorded separately in FACT-0038. Locators use named classes/methods; historical coverage belongs to predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part2_successor"
+      }
+    },
+    {
+      "source_id": "SRC-0086",
+      "title": "Fistnet.Genepool.Tests\\README.md",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\README.md"
+      },
+      "sha256": "6AB7A0E8060A72B123FE8779E777B491EA7552D648949BA1566E5F3D4FA23401",
+      "size_bytes": 14827,
+      "observed_at_utc": "2026-09-06T15:14:49+00:00",
+      "supersedes": "SRC-0060",
+      "status": "Current Seed-authored R02 Part1 implementation under DEC-0012; not original Genesis evidence or owner-accepted ecological design.",
+      "coverage": "Complete textual implementation/review; 250 lines. Included in passing Debug/Release whole-solution builds and tests; checks have the bounded scope in FACT-0034.",
+      "supersession": {
+        "source_id": "SRC-0120",
+        "actor": "Seed Analyzer",
+        "reason": "R02 Part2 authorized action/learning/resource implementation and tests; preserve accepted predecessor bytes.",
+        "record_ids": [
+          "DEC-0014"
+        ],
+        "observed_at": "2026-09-06T16:25:13+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/SRC-0086.md"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0120",
+      "title": "Fistnet.Genepool.Tests\\README.md (R02 Part2)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\README.md"
+      },
+      "sha256": "AA135B5335C5FFA3F29E8F0275BD7805C9FBB7B9C18DF89390AF9BE2A286F65F",
+      "size_bytes": 17544,
+      "observed_at_utc": "2026-09-06T16:25:13+00:00",
+      "supersedes": "SRC-0086",
+      "status": "registered current working-file version",
+      "coverage": "Implemented/reviewed for R02 Part2; exact final source hash and whole-solution Debug/Release tests recorded separately in FACT-0038. Locators use named classes/methods; historical coverage belongs to predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part2_successor"
+      }
+    },
+    {
+      "source_id": "SRC-0087",
+      "title": "Fistnet.Genepool.Dna\\SimulationDiagnostics.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\SimulationDiagnostics.cs"
+      },
+      "sha256": "699E02B90F3F1A944993AB214B11156188DF923F33E73BC24E3AEDA845EF3B5F",
+      "size_bytes": 26976,
+      "observed_at_utc": "2026-09-06T15:14:46.016303+00:00",
+      "status": "New Seed-authored R02 Part1 diagnostic/test source under DEC-0012; not original Genesis evidence.",
+      "coverage": "Complete textual implementation/review; 490 lines. Passing Debug/Release builds and tests; bounded verification in FACT-0034.",
+      "supersession": {
+        "source_id": "SRC-0121",
+        "actor": "Seed Analyzer",
+        "reason": "R02 Part2 authorized action/learning/resource implementation and tests; preserve accepted predecessor bytes.",
+        "record_ids": [
+          "DEC-0014"
+        ],
+        "observed_at": "2026-09-06T16:25:14+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/SRC-0087.cs"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0121",
+      "title": "Fistnet.Genepool.Dna\\SimulationDiagnostics.cs (R02 Part2)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\SimulationDiagnostics.cs"
+      },
+      "sha256": "122B37AF017CED6779A4C6CFBFE1C09C29CA1337C81E7960556A1E168364DB96",
+      "size_bytes": 27243,
+      "observed_at_utc": "2026-09-06T16:25:14+00:00",
+      "supersedes": "SRC-0087",
+      "status": "registered current working-file version",
+      "coverage": "Implemented/reviewed for R02 Part2; exact final source hash and whole-solution Debug/Release tests recorded separately in FACT-0038. Locators use named classes/methods; historical coverage belongs to predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part2_successor"
+      }
+    },
+    {
+      "source_id": "SRC-0088",
+      "title": "Fistnet.Genepool.Tests\\DiagnosticScenarios.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\DiagnosticScenarios.cs"
+      },
+      "sha256": "C2C396603F823BBB6DF1C5382F283892A90A7FF5D4809A16718D7812F069D7AB",
+      "size_bytes": 17917,
+      "observed_at_utc": "2026-09-06T15:14:46.016303+00:00",
+      "status": "New Seed-authored R02 Part1 diagnostic/test source under DEC-0012; not original Genesis evidence.",
+      "coverage": "Complete textual implementation/review; 290 lines. Passing Debug/Release builds and tests; bounded verification in FACT-0034.",
+      "supersession": {
+        "source_id": "SRC-0122",
+        "actor": "Seed Analyzer",
+        "reason": "R02 Part2 authorized action/learning/resource implementation and tests; preserve accepted predecessor bytes.",
+        "record_ids": [
+          "DEC-0014"
+        ],
+        "observed_at": "2026-09-06T16:25:14+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/SRC-0088.cs"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0122",
+      "title": "Fistnet.Genepool.Tests\\DiagnosticScenarios.cs (R02 Part2)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\DiagnosticScenarios.cs"
+      },
+      "sha256": "3414A9B86885A98BA0D2CDECF7EE01C0290382767066386C830C76545B76D309",
+      "size_bytes": 17969,
+      "observed_at_utc": "2026-09-06T16:25:14+00:00",
+      "supersedes": "SRC-0088",
+      "status": "registered current working-file version",
+      "coverage": "Implemented/reviewed for R02 Part2; exact final source hash and whole-solution Debug/Release tests recorded separately in FACT-0038. Locators use named classes/methods; historical coverage belongs to predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part2_successor"
+      }
+    },
+    {
+      "source_id": "SRC-0089",
+      "title": "Fistnet.Genepool.Tests\\DiagnosticsTests.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\DiagnosticsTests.cs"
+      },
+      "sha256": "BC86D44D7B182E29F2D71FF82BE2AABC4BBD2AB0BAFBF8896199E5C297594CCE",
+      "size_bytes": 17681,
+      "observed_at_utc": "2026-09-06T15:14:46.016303+00:00",
+      "status": "New Seed-authored R02 Part1 diagnostic/test source under DEC-0012; not original Genesis evidence.",
+      "coverage": "Complete textual implementation/review; 311 lines. Passing Debug/Release builds and tests; bounded verification in FACT-0034.",
+      "supersession": {
+        "source_id": "SRC-0123",
+        "actor": "Seed Analyzer",
+        "reason": "R02 Part2 authorized action/learning/resource implementation and tests; preserve accepted predecessor bytes.",
+        "record_ids": [
+          "DEC-0014"
+        ],
+        "observed_at": "2026-09-06T16:25:14+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/SRC-0089.cs"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0123",
+      "title": "Fistnet.Genepool.Tests\\DiagnosticsTests.cs (R02 Part2)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\DiagnosticsTests.cs"
+      },
+      "sha256": "AAD494A999679640A73D4D28A0CBB7628169CB20A9722C0C4656DC402E829AC5",
+      "size_bytes": 17892,
+      "observed_at_utc": "2026-09-06T16:25:14+00:00",
+      "supersedes": "SRC-0089",
+      "status": "registered current working-file version",
+      "coverage": "Implemented/reviewed for R02 Part2; exact final source hash and whole-solution Debug/Release tests recorded separately in FACT-0038. Locators use named classes/methods; historical coverage belongs to predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part2_successor"
+      }
+    },
+    {
+      "source_id": "SRC-0124",
+      "title": "Fistnet.Genepool.Dna/ActionModel.cs (R02 Part2 new source)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\ActionModel.cs"
+      },
+      "sha256": "78878C9B7896C95C44AEC0E641B4742050C4791A1DF02C92F46E3C09F876EE09",
+      "size_bytes": 4781,
+      "status": "Seed-authored authorized Part2 implementation; awaiting owner review",
+      "coverage": "Complete authored/inspected source; named tests execute against production methods. Final verification in FACT-0038.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part2_new_source"
+      }
+    },
+    {
+      "source_id": "SRC-0125",
+      "title": "Fistnet.Genepool.Tests/ActionTransactionTests.cs (R02 Part2 new source)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\ActionTransactionTests.cs"
+      },
+      "sha256": "0DF77FFA51F86B8F23C76B1139C69012D094A1DD00867C7AD1DD5A86EAAFF804",
+      "size_bytes": 21773,
+      "status": "Seed-authored authorized Part2 implementation; awaiting owner review",
+      "coverage": "Complete authored/inspected source; named tests execute against production methods. Final verification in FACT-0038.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part2_new_source"
+      }
+    },
+    {
+      "source_id": "SRC-0126",
+      "title": "Fistnet.Genepool.Tests/DnaActionTests.cs (R02 Part2 new source)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\DnaActionTests.cs"
+      },
+      "sha256": "76398BD793F87F0EA3AA1DB45D2A62A5EFD91B3342F81B12A7260E490C6E0D7C",
+      "size_bytes": 14917,
+      "status": "Seed-authored authorized Part2 implementation; awaiting owner review",
+      "coverage": "Complete authored/inspected source; named tests execute against production methods. Final verification in FACT-0038.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part2_new_source"
+      }
+    },
+    {
+      "source_id": "SRC-0127",
+      "title": "Fistnet.Genepool.Tests/LearningPolicyTests.cs (R02 Part2 new source)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\LearningPolicyTests.cs"
+      },
+      "sha256": "9544E23495717B643480E244053C696474E9A569034AE71ADF54D528DD4AD3D7",
+      "size_bytes": 12877,
+      "status": "Seed-authored authorized Part2 implementation; awaiting owner review",
+      "coverage": "Complete authored/inspected source; named tests execute against production methods. Final verification in FACT-0038.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part2_new_source"
+      }
+    }
+  ],
+  "path_to_source_id": {
+    "Fistnet.Genepool.Dna/DnaElementFactory.cs": "SRC-0091",
+    "Fistnet.Genepool.Dna/OrganismSnapshot.cs": "SRC-0092",
+    "Fistnet.Genepool.Dna/Elements/Brain/OrganismEvaluation.cs": "SRC-0093",
+    "Fistnet.Genepool.Control/Rules/ExecuteOrganismSequenceRule.cs": "SRC-0094",
+    "Fistnet.Genepool.Control/Rules/ExecuteOrganismMoveRule.cs": "SRC-0095",
+    "Fistnet.Genepool.Dna/Elements/CombineDnaElement.cs": "SRC-0096",
+    "Fistnet.Genepool.Dna/Elements/EvolveDnaElement.cs": "SRC-0097",
+    "Fistnet.Genepool.Dna/Elements/InfectDnaElement.cs": "SRC-0098",
+    "Fistnet.Genepool.Dna/Elements/EatDnaElement.cs": "SRC-0099",
+    "Fistnet.Genepool.Dna/Elements/CreateFoodDnaElement.cs": "SRC-0100",
+    "Fistnet.Genepool.Dna/Elements/MoveDnaElement.cs": "SRC-0101",
+    "Fistnet.Genepool.Dna/Elements/HealDnaElement.cs": "SRC-0102",
+    "Fistnet.Genepool.Dna/Elements/KillDnaElement.cs": "SRC-0103",
+    "Fistnet.Genepool.Dna/Common.cs": "SRC-0104",
+    "Fistnet.Genepool.Control/SimulationRunOptions.cs": "SRC-0105",
+    "Fistnet.Genepool.Control/SimulationSnapshot.cs": "SRC-0106",
+    "Fistnet.Genepool.Tests/IntegrationTests.cs": "SRC-0107",
+    "Fistnet.Genepool.Tests/MechanicsTests.cs": "SRC-0108",
+    "Fistnet.Genepool.Tests/RegressionTests.cs": "SRC-0109",
+    "Fistnet.Genepool.Tests/ScenarioRunner.cs": "SRC-0110",
+    "Fistnet.Genepool.Tests/TestSupport.cs": "SRC-0111",
+    "Fistnet.Genepool.Control/Rules/ExecuteOgranismSetup.cs": "SRC-0112",
+    "Fistnet.Genepool.Control/Rules/ExecuteOrganismEffectsRule.cs": "SRC-0113",
+    "Fistnet.Genepool.Control/Rules/ExecuteOrganismDeadRule.cs": "SRC-0114",
+    "Fistnet.Genepool.Control/Gameboard/Board.cs": "SRC-0115",
+    "Fistnet.Genepool.Dna/Organism.cs": "SRC-0116",
+    "Fistnet.Genepool.Dna/Elements/Brain/StrategyNetwork.cs": "SRC-0117",
+    "Fistnet.Genepool.Control/Gameboard/BoardSquare.cs": "SRC-0118",
+    "Fistnet.Genepool.Tests/Program.cs": "SRC-0119",
+    "Fistnet.Genepool.Tests/README.md": "SRC-0120",
+    "Fistnet.Genepool.Dna/SimulationDiagnostics.cs": "SRC-0121",
+    "Fistnet.Genepool.Tests/DiagnosticScenarios.cs": "SRC-0122",
+    "Fistnet.Genepool.Tests/DiagnosticsTests.cs": "SRC-0123",
+    "Fistnet.Genepool.Dna/ActionModel.cs": "SRC-0124",
+    "Fistnet.Genepool.Tests/ActionTransactionTests.cs": "SRC-0125",
+    "Fistnet.Genepool.Tests/DnaActionTests.cs": "SRC-0126",
+    "Fistnet.Genepool.Tests/LearningPolicyTests.cs": "SRC-0127"
+  },
+  "history": [
+    {
+      "predecessor": "SRC-0011",
+      "successor": "SRC-0091",
+      "history": {
+        "kind": "git",
+        "commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+        "path": "Fistnet.Genepool.Dna/DnaElementFactory.cs",
+        "blob_oid": "22463236b56b28faa9b972bcf4e294e472763e65",
+        "transform": "lf_to_crlf"
+      }
+    },
+    {
+      "predecessor": "SRC-0013",
+      "successor": "SRC-0092",
+      "history": {
+        "kind": "git",
+        "commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+        "path": "Fistnet.Genepool.Dna/OrganismSnapshot.cs",
+        "blob_oid": "90416faa084c3c942e9ea7f3909d0443c1e34e74",
+        "transform": "lf_to_crlf"
+      }
+    },
+    {
+      "predecessor": "SRC-0015",
+      "successor": "SRC-0093",
+      "history": {
+        "kind": "git",
+        "commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+        "path": "Fistnet.Genepool.Dna/Elements/Brain/OrganismEvaluation.cs",
+        "blob_oid": "661e099c19a21d7596f472e9551da1a9d204bdc8",
+        "transform": "lf_to_crlf"
+      }
+    },
+    {
+      "predecessor": "SRC-0020",
+      "successor": "SRC-0094",
+      "history": {
+        "kind": "git",
+        "commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+        "path": "Fistnet.Genepool.Control/Rules/ExecuteOrganismSequenceRule.cs",
+        "blob_oid": "864e51c9331136e35bb561c4c9aa4585a0b0ab46",
+        "transform": "lf_to_crlf"
+      }
+    },
+    {
+      "predecessor": "SRC-0023",
+      "successor": "SRC-0095",
+      "history": {
+        "kind": "git",
+        "commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+        "path": "Fistnet.Genepool.Control/Rules/ExecuteOrganismMoveRule.cs",
+        "blob_oid": "e80ce4bceb96bc0e9887aa83c6fec23e1dbfeda9",
+        "transform": "lf_to_crlf"
+      }
+    },
+    {
+      "predecessor": "SRC-0025",
+      "successor": "SRC-0096",
+      "history": {
+        "kind": "git",
+        "commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+        "path": "Fistnet.Genepool.Dna/Elements/CombineDnaElement.cs",
+        "blob_oid": "f4e28feac73174e0098b396528e3778b2163760b",
+        "transform": "lf_to_crlf"
+      }
+    },
+    {
+      "predecessor": "SRC-0026",
+      "successor": "SRC-0097",
+      "history": {
+        "kind": "git",
+        "commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+        "path": "Fistnet.Genepool.Dna/Elements/EvolveDnaElement.cs",
+        "blob_oid": "2185db5a6a609988b009a5b0f1c6ae5b37075006",
+        "transform": "lf_to_crlf"
+      }
+    },
+    {
+      "predecessor": "SRC-0027",
+      "successor": "SRC-0098",
+      "history": {
+        "kind": "git",
+        "commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+        "path": "Fistnet.Genepool.Dna/Elements/InfectDnaElement.cs",
+        "blob_oid": "c21dec1efe9f9a81e0274fb94da49afdc8d6f5a6",
+        "transform": "lf_to_crlf"
+      }
+    },
+    {
+      "predecessor": "SRC-0030",
+      "successor": "SRC-0099",
+      "history": {
+        "kind": "git",
+        "commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+        "path": "Fistnet.Genepool.Dna/Elements/EatDnaElement.cs",
+        "blob_oid": "490d1ab8dcf389019bacaa40f30a62dcd2d4ee5e",
+        "transform": "lf_to_crlf"
+      }
+    },
+    {
+      "predecessor": "SRC-0031",
+      "successor": "SRC-0100",
+      "history": {
+        "kind": "git",
+        "commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+        "path": "Fistnet.Genepool.Dna/Elements/CreateFoodDnaElement.cs",
+        "blob_oid": "6f349ffc4b3bf368b0c45d39531f9f3d0e002212",
+        "transform": "lf_to_crlf"
+      }
+    },
+    {
+      "predecessor": "SRC-0032",
+      "successor": "SRC-0101",
+      "history": {
+        "kind": "git",
+        "commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+        "path": "Fistnet.Genepool.Dna/Elements/MoveDnaElement.cs",
+        "blob_oid": "ca75b9a6c5ebc0f59937c97d9f770d46941a8c16",
+        "transform": "lf_to_crlf"
+      }
+    },
+    {
+      "predecessor": "SRC-0033",
+      "successor": "SRC-0102",
+      "history": {
+        "kind": "git",
+        "commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+        "path": "Fistnet.Genepool.Dna/Elements/HealDnaElement.cs",
+        "blob_oid": "3d0a7252fa4aa763a9d367b97746f097ed2c525f",
+        "transform": "lf_to_crlf"
+      }
+    },
+    {
+      "predecessor": "SRC-0034",
+      "successor": "SRC-0103",
+      "history": {
+        "kind": "git",
+        "commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+        "path": "Fistnet.Genepool.Dna/Elements/KillDnaElement.cs",
+        "blob_oid": "40bab4ffc24a0b9203330343671a733fc228ebb3",
+        "transform": "lf_to_crlf"
+      }
+    },
+    {
+      "predecessor": "SRC-0046",
+      "successor": "SRC-0104",
+      "history": {
+        "kind": "git",
+        "commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+        "path": "Fistnet.Genepool.Dna/Common.cs",
+        "blob_oid": "c85668664ad2831e449e96153da40494465d06c1",
+        "transform": "lf_to_crlf"
+      }
+    },
+    {
+      "predecessor": "SRC-0053",
+      "successor": "SRC-0105",
+      "history": {
+        "kind": "git",
+        "commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+        "path": "Fistnet.Genepool.Control/SimulationRunOptions.cs",
+        "blob_oid": "9797df5db65f5baa1263cd996e44a9dda75b90c4",
+        "transform": "raw"
+      }
+    },
+    {
+      "predecessor": "SRC-0054",
+      "successor": "SRC-0106",
+      "history": {
+        "kind": "git",
+        "commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+        "path": "Fistnet.Genepool.Control/SimulationSnapshot.cs",
+        "blob_oid": "d5fb996bc656edb302006221df11334184efd9d7",
+        "transform": "raw"
+      }
+    },
+    {
+      "predecessor": "SRC-0057",
+      "successor": "SRC-0107",
+      "history": {
+        "kind": "git",
+        "commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+        "path": "Fistnet.Genepool.Tests/IntegrationTests.cs",
+        "blob_oid": "d1bdef7a2a33bd7b8143a626ece3662400945e32",
+        "transform": "raw"
+      }
+    },
+    {
+      "predecessor": "SRC-0058",
+      "successor": "SRC-0108",
+      "history": {
+        "kind": "git",
+        "commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+        "path": "Fistnet.Genepool.Tests/MechanicsTests.cs",
+        "blob_oid": "4836e6a13e973da42255bf5c28e1cdd6a1922ded",
+        "transform": "raw"
+      }
+    },
+    {
+      "predecessor": "SRC-0061",
+      "successor": "SRC-0109",
+      "history": {
+        "kind": "git",
+        "commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+        "path": "Fistnet.Genepool.Tests/RegressionTests.cs",
+        "blob_oid": "769777ddd6d96e66d45617984d62d20825a56367",
+        "transform": "raw"
+      }
+    },
+    {
+      "predecessor": "SRC-0063",
+      "successor": "SRC-0110",
+      "history": {
+        "kind": "git",
+        "commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+        "path": "Fistnet.Genepool.Tests/ScenarioRunner.cs",
+        "blob_oid": "84020703ad2f29f108460ab5fe702a5f279ad620",
+        "transform": "raw"
+      }
+    },
+    {
+      "predecessor": "SRC-0064",
+      "successor": "SRC-0111",
+      "history": {
+        "kind": "git",
+        "commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+        "path": "Fistnet.Genepool.Tests/TestSupport.cs",
+        "blob_oid": "67d652efaadeb6db975e9f5d79dea60e51de6bd7",
+        "transform": "raw"
+      }
+    },
+    {
+      "predecessor": "SRC-0076",
+      "successor": "SRC-0112",
+      "history": {
+        "kind": "kb_snapshot",
+        "path": "source-history/SRC-0076.cs"
+      }
+    },
+    {
+      "predecessor": "SRC-0077",
+      "successor": "SRC-0113",
+      "history": {
+        "kind": "kb_snapshot",
+        "path": "source-history/SRC-0077.cs"
+      }
+    },
+    {
+      "predecessor": "SRC-0078",
+      "successor": "SRC-0114",
+      "history": {
+        "kind": "kb_snapshot",
+        "path": "source-history/SRC-0078.cs"
+      }
+    },
+    {
+      "predecessor": "SRC-0080",
+      "successor": "SRC-0115",
+      "history": {
+        "kind": "kb_snapshot",
+        "path": "source-history/SRC-0080.cs"
+      }
+    },
+    {
+      "predecessor": "SRC-0081",
+      "successor": "SRC-0116",
+      "history": {
+        "kind": "kb_snapshot",
+        "path": "source-history/SRC-0081.cs"
+      }
+    },
+    {
+      "predecessor": "SRC-0082",
+      "successor": "SRC-0117",
+      "history": {
+        "kind": "kb_snapshot",
+        "path": "source-history/SRC-0082.cs"
+      }
+    },
+    {
+      "predecessor": "SRC-0083",
+      "successor": "SRC-0118",
+      "history": {
+        "kind": "kb_snapshot",
+        "path": "source-history/SRC-0083.cs"
+      }
+    },
+    {
+      "predecessor": "SRC-0085",
+      "successor": "SRC-0119",
+      "history": {
+        "kind": "kb_snapshot",
+        "path": "source-history/SRC-0085.cs"
+      }
+    },
+    {
+      "predecessor": "SRC-0086",
+      "successor": "SRC-0120",
+      "history": {
+        "kind": "kb_snapshot",
+        "path": "source-history/SRC-0086.md"
+      }
+    },
+    {
+      "predecessor": "SRC-0087",
+      "successor": "SRC-0121",
+      "history": {
+        "kind": "kb_snapshot",
+        "path": "source-history/SRC-0087.cs"
+      }
+    },
+    {
+      "predecessor": "SRC-0088",
+      "successor": "SRC-0122",
+      "history": {
+        "kind": "kb_snapshot",
+        "path": "source-history/SRC-0088.cs"
+      }
+    },
+    {
+      "predecessor": "SRC-0089",
+      "successor": "SRC-0123",
+      "history": {
+        "kind": "kb_snapshot",
+        "path": "source-history/SRC-0089.cs"
+      }
+    }
+  ]
+}

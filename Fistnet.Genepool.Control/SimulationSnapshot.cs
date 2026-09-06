@@ -48,7 +48,8 @@ namespace Fistnet.Genepool.Control
             Exporter exporter = new Exporter();
             var root = new SortedDictionary<string, object>(StringComparer.Ordinal)
             {
-                ["schema"] = "genepool-reference-state-v1",
+                ["schema"] = "genepool-reference-state-v2",
+                ["organismIdentityCounter"] = Common.OrganismIdentityCounter,
                 ["initialized"] = Board.IsInitialized,
                 ["season"] = season,
                 ["ruleIndex"] = rule,

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
@@ -36,14 +37,20 @@ namespace Fistnet.Genepool.Visualization
 
         public void RefreshAndResize()
         {
-            this.ProcessBoard();
-            using (Graphics g = Graphics.FromImage(this.Picture))
+            var diagnostics = SimulationDiagnostics.Current;
+            long started = diagnostics == null ? 0 : Stopwatch.GetTimestamp();
+            try
             {
-                g.Clear(Color.Black);
-                g.InterpolationMode = InterpolationMode.NearestNeighbor;
-                g.PixelOffsetMode = PixelOffsetMode.Half;
-                g.DrawImage(this.actualPicture, new Rectangle(0, 0, this.Picture.Width, this.Picture.Height));
+                this.ProcessBoard();
+                using (Graphics g = Graphics.FromImage(this.Picture))
+                {
+                    g.Clear(Color.Black);
+                    g.InterpolationMode = InterpolationMode.NearestNeighbor;
+                    g.PixelOffsetMode = PixelOffsetMode.Half;
+                    g.DrawImage(this.actualPicture, new Rectangle(0, 0, this.Picture.Width, this.Picture.Height));
+                }
             }
+            finally { diagnostics?.Timing("frame-construction", Stopwatch.GetTimestamp() - started); }
         }
 
         #endregion Display image.

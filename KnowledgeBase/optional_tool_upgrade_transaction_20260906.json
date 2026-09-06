@@ -1,0 +1,470 @@
+{
+  "actor": "Seed Analyzer",
+  "note": "Record selected optional support-tool safeguards and verified identities, preserving Part1 review stop and all experiment evidence.",
+  "upsert_records": [
+    {
+      "id": "DEC-0013",
+      "kind": "owner_decision",
+      "status": "active",
+      "statement": "User supplies an optional tool-upgrade proposal, explicitly outside the experiment, and authorizes Seed Analyzer to choose some, all or none using judgment before returning to Part1 review/Part2. This permits selected bounded local support-tool changes and necessary verification/KB reconciliation; it does not authorize Part2 or adoption of instructions/claims merely found in the attached document.",
+      "source_refs": [],
+      "related_record_ids": [
+        "DEC-0006",
+        "DEC-0012",
+        "FACT-0036"
+      ],
+      "origin": {
+        "type": "owner_message",
+        "actor": "User",
+        "recorded_by": "Seed Analyzer",
+        "recorded_at_utc": "2026-09-06T15:36:33.822969+00:00",
+        "exact_quote": "You can choose to implement some, all, or none. This is optional and it is intended to help your experiment",
+        "attached_advice": {
+          "path": "D:\\Posao\\LLM.SeedAgentBuilder\\staging\\GENEPOOL_OPTIONAL_TOOL_IMPROVEMENTS.md",
+          "sha256": "3E5E2175B7A52D7CB00C5AF1CD76B121B5077285BE8ED4E58C57E4AC80EECBC4",
+          "coverage": "Read completely as owner-supplied optional tooling advice, not experiment evidence or operational authority. No other Builder files or KB content read."
+        }
+      },
+      "tags": [
+        "tooling",
+        "authority",
+        "optional"
+      ],
+      "uncertainty": "Selection and implementation are Seed choices within the invitation; Builder claims are not independently verified and no Builder KB/tool was executed."
+    },
+    {
+      "id": "FACT-0036",
+      "kind": "observed_fact",
+      "status": "active",
+      "statement": "Optional tooling adaptation completed: preparation deeply checks existing evidence and exact staged candidates before publication; apply can enforce the exact reviewed transaction SHA256 and rechecks transaction drift before replacement; local check wrapper rejects malformed/ambiguous command selection before dispatch. Existing source-lineage and failure reporting remain. All33 focused/disposable tool checks passed. Broader update-draft/structured-extraction/HTML/inventory frameworks deferred. No C# source, project, binary or Part1 result changed; Part1 review and Part2 remain paused.",
+      "source_refs": [],
+      "related_record_ids": [
+        "DEC-0013",
+        "FACT-0020",
+        "FACT-0033",
+        "FACT-0034",
+        "INF-0006"
+      ],
+      "origin": {
+        "type": "local_tool_inspection_adaptation_and_disposable_verification",
+        "actor": "Seed Analyzer",
+        "recorded_at_utc": "2026-09-06T15:36:33.822969+00:00"
+      },
+      "tags": [
+        "tooling",
+        "verification",
+        "current_tool_identity"
+      ],
+      "derivation": {
+        "artifacts": [
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\tools\\kb.py",
+            "sha256": "A44E0D1C0DD0E772770E3304667B5397D3D777F308E8F3A84940C46DC05EF199",
+            "bytes": 77549,
+            "status": "Current owner-authorized local tooling adaptation; not experiment source evidence."
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\tools\\prepare.py",
+            "sha256": "194804EA36F79203F442CCF72222A1F12A76A18393E3AFBCC05CB30E0E4883A8",
+            "bytes": 55182,
+            "status": "Current owner-authorized local tooling adaptation; not experiment source evidence."
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\tools\\run_part1_checks.py",
+            "sha256": "A20A706EFD82A2049D0D30652402A7A15A52C4E63001D96DC3E6646422139C37",
+            "bytes": 8458,
+            "status": "Current owner-authorized local tooling adaptation; not experiment source evidence."
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\tools\\test_reviewed_commit.py",
+            "sha256": "359AB0540702D55DBEC519D2D54C5BB4FB7E8D1C1B0DF5109C63F5B38DEEBD29",
+            "bytes": 4019,
+            "status": "Current owner-authorized local tooling adaptation; not experiment source evidence."
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\tools\\test_preparation_preflight.py",
+            "sha256": "8331E5FA1A8488684321833F53BF6061352151B2AC1F869CFCAA7913050F6390",
+            "bytes": 9066,
+            "status": "Current owner-authorized local tooling adaptation; not experiment source evidence."
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\tools\\test_runner_selection.py",
+            "sha256": "0D320315B2FADEAA09740013A11921DF15D33D10080923F761E9308C4AF85A99",
+            "bytes": 7644,
+            "status": "Current owner-authorized local tooling adaptation; not experiment source evidence."
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\.SeedAnalyzer\\KB.md",
+            "sha256": "461AC4303BB425A84321E9C9B5F3F73E4EB62476C4F58AA2E25B4907B992A689",
+            "bytes": 31044,
+            "status": "Current owner-authorized local tooling adaptation; not experiment source evidence."
+          }
+        ],
+        "choices": {
+          "preparation_preflight": "Adopted: confirmed local prepare.py deferred whole-state deep verification until after publication. Validate existing evidence and exact staged candidate before replacement; retain final verification.",
+          "update_drafts_and_reviewed_hash": "Adapted only the reviewed-hash commit guard. Full-record update-draft framework deferred: manual bounded whole-object updates suffice; no demonstrated field-loss incident warrants a new API now.",
+          "bounded_structured_preparation": "Deferred: all11 currently prepared sources are C# text; no observed unretrievable structured item in this assignment.",
+          "html_meaning": "Deferred: no currently prepared HTML source; revisit before an actual HTML preparation need.",
+          "execution_selection": "Adapted in local Python check wrapper: reject malformed/ambiguous selection before scratch or process; preflight all batch commands. Direct Tests.exe legacy routing remains a known deferred limitation, preserving reviewed Part1 C# source/binary horizon.",
+          "current_state_and_tool_identities": "Use existing KB routes and dated corrections; record successor hashes here. Correct obsolete unversioned-KB wording in local policy. No new inventory framework or copy of Builder tools."
+        },
+        "checks": {
+          "reviewed_commit_and_source_versions": {
+            "passed": 18,
+            "total": 18,
+            "seconds": 17.836,
+            "actor": "Seed Analyzer",
+            "coverage": "4new reviewed-byte/revision/drift checks plus14 existing source-lineage integration checks; disposable synthetic KB/Git fixtures."
+          },
+          "preparation_preflight": {
+            "passed": 8,
+            "total": 8,
+            "seconds": 0.684,
+            "actor": "Seed Analyzer transient r02_performance_review",
+            "coverage": "Existing/staged integrity, early refusal, normal/noop/upgrade, corruption not silently repaired, path override bounds; root reviewed implementation/tests."
+          },
+          "wrapper_selection": {
+            "passed": 7,
+            "total": 7,
+            "seconds": 0.035,
+            "actor": "Seed Analyzer transient r02_external_research",
+            "coverage": "Mocked dispatch, no scratch/result writes, malformed/ambiguous requests, exact valid vectors, both batch plans; root reviewed implementation/tests."
+          }
+        },
+        "verification_receipt_path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\optional_tool_upgrade_verification_20260906.json",
+        "usage": "Preview every change; apply TX --expect-revision N --expect-transaction-sha256 REVIEWED_HASH --compact. Other preview flags stay preview-only. Existing hashless callers remain supported. Use run_part1_checks.py for guarded local checks.",
+        "preservation": "All65 source/build-input hashes match both Part1 builds; all5 test-loaded assembly hashes match each Debug/Release suite; original Part1 result JSON hash unchanged. Synthetic fixtures removed. No new experiment execution/build or outside-root write.",
+        "attribution": "Transient helpers adapted preparation preflight and wrapper guards. Root implemented reviewed-hash commits, inspected both helper changes and tested existing source-version integration. All KB canonical work by Seed Analyzer."
+      },
+      "uncertainty": "Direct Tests.exe retains legacy malformed-argument fallback; guard covers wrapper use only. Deep checks reduce preventable late failures but do not make multi-file publication crash-atomic. No measured net time/token saving. No HTML/structured extraction defect correction claimed."
+    },
+    {
+      "id": "FACT-0020",
+      "kind": "observed_fact",
+      "status": "active",
+      "statement": "KB tools now support explicit source revisions: preserve an existing source identity and historical record references, link a new current source ID, and verify the predecessor against exact pinned local Git bytes. Explicit unavailable-history metadata permits continued work with a warning, without claiming the bytes are verified. Current-source drift, KB state-hash corruption, invalid references, wrong history proofs, and retained prepared hash mismatches still fail validation. Source retrieval labels historical versions; preparation refuses to re-extract changed current bytes under a historical ID. The source-revision command drafts a normal reviewed transaction and does not write canonical state.",
+      "source_refs": [],
+      "related_record_ids": [
+        "DEC-0006",
+        "FACT-0019",
+        "DEC-0013",
+        "FACT-0036"
+      ],
+      "origin": {
+        "type": "local_tool_implementation_and_disposable_integration_tests",
+        "actor": "Seed Analyzer",
+        "recorded_by": "Seed Analyzer",
+        "recorded_at_utc": "2026-09-06T11:50:01+00:00"
+      },
+      "tags": [
+        "kb_tools",
+        "git",
+        "verification"
+      ],
+      "derivation": {
+        "artifacts": [
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\tools\\kb.py",
+            "sha256": "DC31429B634377BF693E9905825DFE1F54492565DC0815A83923A359C99C4666",
+            "bytes": 75496,
+            "status": "Seed-adapted KB support; not original experiment evidence"
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\tools\\source_versions.py",
+            "sha256": "F28A978692C8F683FC260321A8A20AEE99C76205F9478F5AE601A0A3BD333768",
+            "bytes": 9593,
+            "status": "Seed-adapted KB support; not original experiment evidence"
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\tools\\prepare.py",
+            "sha256": "F6C3F474259252B8346952E631161CAB075C96C35C2F94CCF5841A7F78202080",
+            "bytes": 54898,
+            "status": "Seed-adapted KB support; not original experiment evidence"
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\tools\\test_source_versions.py",
+            "sha256": "7D7A84CB42BBC80D2D2FC85CEBEEAB91D4228270D3C4863D6E65F8EA5ECAEFC6",
+            "bytes": 13772,
+            "status": "Seed-adapted KB support; not original experiment evidence"
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\.SeedAnalyzer\\KB.md",
+            "sha256": "F670502B32DE599D458A784BF0178530BA24C665E6BB2188368C23A6ADF3A347",
+            "bytes": 30388,
+            "status": "Seed-adapted KB support; not original experiment evidence"
+          }
+        ],
+        "command": "Existing Python -X utf8 -B KnowledgeBase/tools/test_source_versions.py",
+        "test_result": "PASS: 14 disposable integration tests, including raw and CRLF Git recovery, missing history, multi-revision lineage/cycles, invalid proof/provenance, current drift, state corruption, preview no-write, revision conflicts, retained prepared checks and historical retrieval labels.",
+        "test_development_note": "An expanded test initially failed because its harness expected an ok field on successful retrieval, whose established envelope omits that field. The harness was corrected to check the existing exit/envelope contract; the final 14-test run passed.",
+        "temporary_retention": "Synthetic repositories, commits and KB fixtures automatically removed; canonical revision7 hashes unchanged throughout testing; no backup tree or retained run logs.",
+        "usage": "kb.py revise-source OLD_ID NEW_ID --expect-revision N --actor ACTOR --reason REASON --record-id RECORD --git-commit FULL_LOCAL_COMMIT_ID; alternatively --history-unavailable-reason REASON. Review emitted transaction, apply once through kb.py apply, then deep-validate."
+      },
+      "uncertainty": "Tests validate named tool behaviors, not every failure or crash scenario. Existing multi-file transaction failure reporting and optimistic checks remain; writes are not crash-atomic. Git verification currently supports regular blobs up to 16 MiB in the exact-root local .git directory; linked/shared worktrees need a scoped adapter. No simulation tests, build or experiment trial occurred.",
+      "created_at": "2026-09-06T11:50:44+00:00",
+      "updated_at": "2026-09-06T11:50:44+00:00",
+      "resolution_notes": [
+        {
+          "at_utc": "2026-09-06T15:36:33.822969+00:00",
+          "actor": "Seed Analyzer",
+          "type": "optional_tool_successor",
+          "note": "The original source-version upgrade and its dated tool hashes remain historical provenance. Current successor tooling identities and additional safeguards are in FACT-0036; original source lineage support remains intact.",
+          "record_ids": [
+            "DEC-0013",
+            "FACT-0036"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FACT-0033",
+      "kind": "observed_fact",
+      "status": "active",
+      "statement": "R02 Part1 passive diagnostics implemented in 11 existing files plus four new C# files, with no new project/dependency or intended simulation/UI-layout change. Optional static/weak diagnostic state observes actions, effects, movement, food, births, death contributors, learning size/copying, phase timings and existing UI completion paths. Default app diagnostics remain off. Test harness and in-KB build/runner support produce bounded current results. Parts2-4 are untouched.",
+      "source_refs": [
+        "SRC-0076",
+        "SRC-0077",
+        "SRC-0078",
+        "SRC-0079",
+        "SRC-0080",
+        "SRC-0081",
+        "SRC-0082",
+        "SRC-0083",
+        "SRC-0084",
+        "SRC-0085",
+        "SRC-0086",
+        "SRC-0087",
+        "SRC-0088",
+        "SRC-0089",
+        "SRC-0090"
+      ],
+      "related_record_ids": [
+        "DEC-0012",
+        "FACT-0034",
+        "FACT-0035",
+        "REC-0005",
+        "DEC-0013",
+        "FACT-0036"
+      ],
+      "origin": {
+        "type": "authorized_implementation_and_bounded_measurement",
+        "actor": "Seed Analyzer",
+        "recorded_at_utc": "2026-09-06T15:14:46.016303+00:00",
+        "source_commit_horizon": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685"
+      },
+      "tags": [
+        "R02",
+        "part1",
+        "implementation"
+      ],
+      "derivation": {
+        "artifacts": [
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\IMPROVEMENT_RESULT_R02_PART1.md",
+            "sha256": "F3A682215665A35E6F119C8F1CC4141246D4C1C83493CBCCB02A1C21EB754C3B",
+            "bytes": 11726,
+            "status": "Current Seed-derived Part1 result; complete and stopped for owner review, not owner acceptance."
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r02_part1_builds.json",
+            "sha256": "7B56327D8D4FE3337E26F623244D12D2A3D6C70CCE801A9C2A65A9DC29DD1B0B",
+            "bytes": 32839,
+            "status": "Current Seed-derived baseline/final build results and source identities."
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r02_part1_results.json",
+            "sha256": "D26706F02604BC3049D67B559ED65B635B1277F01E4E8760DA512DE43FF1C990",
+            "bytes": 13755230,
+            "status": "Current Seed-derived measured observations with explicit horizon and limitations."
+          }
+        ],
+        "locators": [
+          "SimulationDiagnostics.cs: DiagnosticSession, MetricSemantics, EventSamplePolicy, Attribution",
+          "Board.cs: ExecuteOneSeason/ExecuteOneAge diagnostic boundaries",
+          "DiagnosticScenarios.cs: bounded scenario export and terminal ownership",
+          "DiagnosticsTests.cs; UiDiagnosticsTests.cs; Tests/README.md"
+        ],
+        "support_tools": [
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\tools\\build_solution.py",
+            "sha256": "5FA38D4B3DAA8042D9A4A90AC64117D21763E21C147775C2DBD02C9A3B1B79BD",
+            "bytes": 5376,
+            "status": "Derived build helper: optional separate current report; used successfully in this part."
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\tools\\run_part1_checks.py",
+            "sha256": "5120154EC53201F0469E5BFC1228E6CC4CE91A2BDD482B4E6D41F727FBDB96A8",
+            "bytes": 6280,
+            "status": "Derived local bounded runner; all owned scratch removed."
+          }
+        ],
+        "attribution": "Transient DNA, performance and test helpers contributed implementation/review; Seed Analyzer reviewed and owns integration/KB. Terminal-report race and retained-contributor coverage were corrected during review before instrumented builds."
+      },
+      "uncertainty": "Diagnostics change execution cost and can influence production scheduling. Behavioral passivity is verified only within the specified reference/test horizon. No active long-running trial remains.",
+      "created_at": "2026-09-06T15:16:18+00:00",
+      "updated_at": "2026-09-06T15:16:18+00:00",
+      "resolution_notes": [
+        {
+          "at_utc": "2026-09-06T15:36:33.822969+00:00",
+          "actor": "Seed Analyzer",
+          "type": "optional_tool_successor",
+          "note": "Part1 implementation and measured results remain unchanged. The local Python check wrapper subsequently gained strict command-shape validation under optional tooling authority DEC-0013; current wrapper identity is in FACT-0036. The older support-tool hash here identifies the Part1 measurement horizon.",
+          "record_ids": [
+            "DEC-0013",
+            "FACT-0036"
+          ]
+        }
+      ]
+    }
+  ],
+  "upsert_sources": [],
+  "core_patch": {
+    "tooling": {
+      "record_id": "FACT-0036",
+      "policy": ".SeedAnalyzer/KB.md",
+      "source_revision_command": "KnowledgeBase/tools/kb.py revise-source",
+      "verification": "33/33 disposable/mocked tool checks pass:14 source-version,4 reviewed-commit,8 preparation-preflight,7 wrapper-selection. See current receipt and identities in FACT-0036.",
+      "source_history": "Explicit source supersession with pinned local Git verification or disclosed unavailable-history warning.",
+      "knowledgebase_is_git_versioned": true,
+      "knowledgebase_git_scope": "Canonical KB revision 17 and four reviewed support artifacts verified at local commit 2bb2b99d2f77774a3d2a0614c8dc7747349c5685 (FACT-0029). This new closure maintenance is uncommitted; remote status uninspected.",
+      "knowledgebase_owner_decision": "DEC-0008: Keep the KnowledgeBase in Git.",
+      "source_version_record_id": "FACT-0020",
+      "current_maintenance_authority": "DEC-0013",
+      "current_verification_receipt": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\optional_tool_upgrade_verification_20260906.json"
+    },
+    "routes": {
+      "orientation": {
+        "record_ids": [
+          "FACT-0001",
+          "FACT-0002",
+          "FACT-0011",
+          "INF-0001"
+        ]
+      },
+      "mechanics": {
+        "record_ids": [
+          "FACT-0003",
+          "FACT-0004",
+          "FACT-0005",
+          "INF-0003"
+        ]
+      },
+      "watchability": {
+        "record_ids": [
+          "DEC-0002",
+          "FACT-0006",
+          "FACT-0009",
+          "REC-0001"
+        ]
+      },
+      "material_findings": {
+        "record_ids": [
+          "FACT-0007",
+          "FACT-0008",
+          "FACT-0010",
+          "INF-0002",
+          "FACT-0023"
+        ]
+      },
+      "proposal_and_tests": {
+        "record_ids": [
+          "DEC-0003",
+          "REC-0002",
+          "FACT-0012",
+          "Q-0001",
+          "Q-0002",
+          "DEC-0007",
+          "FACT-0024",
+          "FACT-0025",
+          "FACT-0028",
+          "FACT-0029",
+          "INF-0004",
+          "DEC-0009"
+        ]
+      },
+      "environment_capabilities": {
+        "record_ids": [
+          "DEC-0004",
+          "FACT-0013",
+          "FACT-0014",
+          "FACT-0015",
+          "FACT-0016",
+          "REC-0003",
+          "Q-0002",
+          "CLAIM-0001",
+          "FACT-0017",
+          "FACT-0018",
+          "REC-0004",
+          "DEC-0005",
+          "FACT-0019",
+          "CLAIM-0002",
+          "FACT-0021"
+        ]
+      },
+      "kb_tooling": {
+        "record_ids": [
+          "DEC-0006",
+          "FACT-0020",
+          "FACT-0019",
+          "DEC-0013",
+          "FACT-0036"
+        ]
+      },
+      "current_implementation": {
+        "record_ids": [
+          "DEC-0007",
+          "FACT-0022",
+          "FACT-0023",
+          "FACT-0024",
+          "FACT-0025",
+          "Q-0001",
+          "FACT-0028",
+          "FACT-0029",
+          "INF-0004",
+          "DEC-0009"
+        ]
+      },
+      "r02_research_and_proposal": {
+        "record_ids": [
+          "DEC-0010",
+          "CLAIM-0004",
+          "FACT-0030",
+          "FACT-0031",
+          "FACT-0032",
+          "INF-0005",
+          "CLAIM-0005",
+          "REC-0005",
+          "Q-0001",
+          "DEC-0011",
+          "Q-0003",
+          "DEC-0012"
+        ]
+      },
+      "r02_part1_result": {
+        "record_ids": [
+          "DEC-0012",
+          "FACT-0033",
+          "FACT-0034",
+          "FACT-0035",
+          "INF-0006",
+          "Q-0003"
+        ]
+      }
+    },
+    "owner_decision_ids": [
+      "DEC-0001",
+      "DEC-0002",
+      "DEC-0003",
+      "DEC-0004",
+      "DEC-0005",
+      "DEC-0006",
+      "DEC-0007",
+      "DEC-0008",
+      "DEC-0009",
+      "DEC-0010",
+      "DEC-0011",
+      "DEC-0012",
+      "DEC-0013"
+    ]
+  }
+}

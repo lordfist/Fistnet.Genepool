@@ -11,10 +11,17 @@ internal static class Check
     public static void True(bool value, string message) { if (!value) throw new InvalidOperationException(message); }
     public static void Equal<T>(T expected, T actual, string message = "") =>
         True(EqualityComparer<T>.Default.Equals(expected, actual), $"{message} expected={expected}, actual={actual}");
-    public static T Field<T>(object instance, string name) => (T)instance.GetType()
-        .GetField(name, BindingFlags.Instance | BindingFlags.NonPublic).GetValue(instance);
-    public static Dictionary<long, Dictionary<byte, float>> Scores(Organism organism) =>
-        Field<Dictionary<long, Dictionary<byte, float>>>(organism.Brain, "mesh");
+    public static T Field<T>(object instance, string name)
+    {
+        for (Type type = instance.GetType(); type != null; type = type.BaseType)
+        {
+            var field = type.GetField(name, BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.DeclaredOnly);
+            if (field != null) return (T)field.GetValue(instance);
+        }
+        throw new InvalidOperationException("Missing fixture field: " + name);
+    }
+    public static Dictionary<string, Dictionary<byte, float>> Scores(Organism organism)
+    { organism.Brain.SynchronizeGenes(); return Field<Dictionary<string, Dictionary<byte, float>>>(organism.Brain, "mesh"); }
     public static void Property(object instance, string name, object value) =>
         instance.GetType().GetProperty(name, BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic).SetValue(instance, value);
     public static void Invoke(object instance, string name, params object[] args) => instance.GetType()
@@ -51,6 +58,6 @@ internal sealed class FixtureOrganism : Organism
         DnaCode = Common.CalculateOrganismDnaCode(DnaSequence);
     }
     public void CopyGenes(Organism source) { DnaSequence = source.DnaSequence.Select(g => g.CopyToChild(this)).ToList(); DnaCode = source.DnaCode; }
-    public void SetState(sbyte health = 10, sbyte food = 5, int age = 0, int sequenceAge = 0)
+    public void SetState(int health = 10, int food = 5, int age = 0, int sequenceAge = 0)
     { Health = health; FoodBalance = food; Age = age; SequenceAge = sequenceAge; }
 }

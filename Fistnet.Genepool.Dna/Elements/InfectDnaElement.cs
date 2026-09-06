@@ -41,9 +41,8 @@ namespace Fistnet.Genepool.Dna.Elements
 
         public void ExecuteDna(Organism organismAffected)
         {
-            if (organismAffected != null && !organismAffected.IsDead
-                && !this.Me.IsDead
-                && Common.GetRandomIntegerSeed(Organism.INFECTION_CHANCE_SCALE) <= Organism.INFECTION_CHANCE)
+            if (this.Me.IsActionEligible(this, organismAffected)
+                && Common.GetRandomIntegerSeed(Organism.INFECTION_CHANCE_SCALE) < Organism.INFECTION_CHANCE)
             {
                 organismAffected.AddStackedEffect(new MutateEffect(organismAffected, this.DnaCode, this.DnaSequenceIndex));
                 this.Me.AddStackedEffect(new ChangeFoodEffect(this.Me, Organism.INFECT_POWER_COST, this.DnaSequenceIndex));

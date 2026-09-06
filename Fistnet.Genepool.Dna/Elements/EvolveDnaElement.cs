@@ -40,7 +40,7 @@ namespace Fistnet.Genepool.Dna.Elements
 
         public void ExecuteDna(Organism organismAffected)
         {
-            if (organismAffected != null && !organismAffected.IsDead)
+            if (this.Me.IsActionEligible(this, organismAffected))
             {
                 organismAffected.AddStackedEffect(new MutateEffect(organismAffected, this.DnaCode, this.DnaSequenceIndex));
 

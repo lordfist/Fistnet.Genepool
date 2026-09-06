@@ -1,0 +1,135 @@
+{
+  "actor": "Seed Analyzer",
+  "preview": {
+    "from_revision": 22,
+    "transaction_sha256": "F86CE45F63C116174F971A4E133E1EE7AA2BF63AF3236D432A16C08D02AD4585",
+    "preview_time": "2026-09-06T15:14:58+00:00",
+    "inspected_offsets": [
+      0,
+      88,
+      188,
+      288,
+      388
+    ],
+    "all_432_changes_inspected": true
+  },
+  "apply": {
+    "ok": true,
+    "dry_run": false,
+    "from_revision": 22,
+    "to_revision": 23,
+    "effects": {
+      "record_upserts": 11,
+      "source_upserts": 26,
+      "core_fields_patched": 5
+    },
+    "validation_scope": "deep_sources_and_prepared",
+    "write_outcome": {
+      "stage": "commit_completed",
+      "replaced_files": [
+        "records.jsonl",
+        "sources.json",
+        "core.json"
+      ],
+      "commit_completed": true,
+      "verification_completed": true,
+      "rollback_performed": false,
+      "recovery_required": false,
+      "cleanup_errors": [],
+      "replacement_uncertain": false
+    },
+    "hashes": {
+      "core.json": "0B12756C5A342ADA590FDBD1E3D5706F211A1AC4E4CBC8A09DBC62B2F90AA2BF",
+      "records.jsonl": "46C770F5CFA958544BFC7F4D1537013B8318EE050D754B24FBA24781F761C29B",
+      "sources.json": "6BA624630DD7CC160FDC931C026B3307C3E2AA455C888430418104FA768EA83F"
+    }
+  },
+  "verified_at_utc": "2026-09-06T15:16:59.363336+00:00",
+  "deep_validation": {
+    "ok": true,
+    "errors": [],
+    "warnings": [],
+    "counts": {
+      "records": 66,
+      "sources": 90,
+      "historical_sources": 25,
+      "prepared_sources": 11
+    },
+    "core_estimated_tokens": 4217,
+    "deep": true,
+    "kb_revision": 23
+  },
+  "artifact_identities_verified": 6,
+  "source_inputs_match_each_final_build": 65,
+  "retained_scratch_directories": 0,
+  "record_updates": {
+    "added": [
+      "FACT-0033",
+      "FACT-0034",
+      "FACT-0035",
+      "INF-0006"
+    ],
+    "updated": [
+      "DEC-0012",
+      "REC-0005",
+      "FACT-0030",
+      "FACT-0031",
+      "FACT-0032",
+      "INF-0005",
+      "Q-0003"
+    ]
+  },
+  "source_updates": {
+    "successor_versions": 11,
+    "new_files": 4,
+    "historical_predecessors_preserved": 11
+  },
+  "state": "Stopped for owner review; no Part2-4 implementation or active trial.",
+  "limitations": [
+    "Owner multi-second live-UI slowdown not reproduced in bounded headless horizon.",
+    "Ecological acceptance and interactive latency not evaluated."
+  ],
+  "result_artifacts": [
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\IMPROVEMENT_RESULT_R02_PART1.md",
+      "sha256": "F3A682215665A35E6F119C8F1CC4141246D4C1C83493CBCCB02A1C21EB754C3B",
+      "bytes": 11726,
+      "status": "Current Seed-derived Part1 result; complete and stopped for owner review, not owner acceptance."
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r02_part1_results.json",
+      "sha256": "D26706F02604BC3049D67B559ED65B635B1277F01E4E8760DA512DE43FF1C990",
+      "bytes": 13755230,
+      "status": "Current Seed-derived measured observations with explicit horizon and limitations."
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r02_part1_builds.json",
+      "sha256": "7B56327D8D4FE3337E26F623244D12D2A3D6C70CCE801A9C2A65A9DC29DD1B0B",
+      "bytes": 32839,
+      "status": "Current Seed-derived baseline/final build results and source identities."
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\IMPROVEMENT_PROPOSAL_R02.md",
+      "sha256": "724B24D27F92C33757C3E3F0589F108B371525CEDD1FEE6FE1B8CA54A68C8B2F",
+      "bytes": 29173,
+      "status": "R02 proposal with dated Part1 completion addendum; Parts2-4 remain deferred."
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\tools\\build_solution.py",
+      "sha256": "5FA38D4B3DAA8042D9A4A90AC64117D21763E21C147775C2DBD02C9A3B1B79BD",
+      "bytes": 5376,
+      "status": "Derived build helper: optional separate current report; used successfully in this part."
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\tools\\run_part1_checks.py",
+      "sha256": "5120154EC53201F0469E5BFC1228E6CC4CE91A2BDD482B4E6D41F727FBDB96A8",
+      "bytes": 6280,
+      "status": "Derived local bounded runner; all owned scratch removed."
+    }
+  ],
+  "canonical_hashes": {
+    "core.json": "0B12756C5A342ADA590FDBD1E3D5706F211A1AC4E4CBC8A09DBC62B2F90AA2BF",
+    "records.jsonl": "46C770F5CFA958544BFC7F4D1537013B8318EE050D754B24FBA24781F761C29B",
+    "sources.json": "6BA624630DD7CC160FDC931C026B3307C3E2AA455C888430418104FA768EA83F"
+  }
+}

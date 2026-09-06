@@ -1,4 +1,4 @@
-"""Explicit source lineage and read-only, local Git evidence verification.
+"""Explicit source lineage and read-only, local historical-byte verification.
 
 This module never fetches, checks out files, commits, or writes KB state.
 Git history is evidence for a named source version, not a backup of the KB.
@@ -8,6 +8,7 @@ from __future__ import annotations
 import hashlib
 import os
 import re
+import stat
 import subprocess
 from pathlib import Path, PurePosixPath
 
@@ -102,6 +103,86 @@ def git_history(root: Path, source: dict, commit: str) -> dict:
     raise VersionError("Git commit does not reproduce the registered source's exact bytes")
 
 
+def _snapshot_relative(path: str) -> PurePosixPath:
+    """Validate metadata without reading any snapshot or following a link."""
+    if (not isinstance(path, str) or not path or any(c in path for c in '\\:\x00<>"|?*')
+            or path.startswith("/") or any(part in {"", ".", ".."}
+            or part.endswith((".", " ")) for part in path.split("/"))):
+        raise VersionError("KB snapshot path must be a strict KB-relative source-history file path")
+    relative = PurePosixPath(path)
+    if len(relative.parts) < 2 or relative.parts[0] != "source-history":
+        raise VersionError("KB snapshot path must stay inside KnowledgeBase/source-history")
+    return relative
+
+
+def _snapshot_file(root: Path, path: str) -> tuple[Path, os.stat_result]:
+    relative = _snapshot_relative(path)
+    if not root.is_absolute():
+        raise VersionError("KB snapshot verification requires an exact absolute experiment root")
+    candidate = root / "KnowledgeBase" / relative
+    current = root
+    parts = ("KnowledgeBase", *relative.parts)
+    # lstat each component before resolving/opening so even in-root links are refused.
+    for index in range(len(parts) + 1):
+        info = current.lstat()
+        if (stat.S_ISLNK(info.st_mode)
+                or getattr(info, "st_file_attributes", 0) & stat.FILE_ATTRIBUTE_REPARSE_POINT):
+            raise VersionError("KB snapshot paths cannot contain symlinks or reparse points")
+        expected = stat.S_ISREG if index == len(parts) else stat.S_ISDIR
+        if not expected(info.st_mode):
+            raise VersionError("KB snapshot requires regular files and ordinary parent directories")
+        if index < len(parts):
+            current /= parts[index]
+    if root.resolve() != root or candidate.resolve() != candidate:
+        raise VersionError("KB snapshot path does not identify the exact physical KB location")
+    if info.st_size > 16 * 1024 * 1024:
+        raise VersionError("KB snapshot exceeds the 16 MiB local verification limit")
+    return candidate, info
+
+
+def _file_identity(info: os.stat_result) -> tuple:
+    # On this Windows host lstat/fstat ctime differs for some just-written files.
+    # Identity, type, length, mtime and exact catalog SHA still remain mandatory.
+    return (info.st_dev, info.st_ino, info.st_mode, info.st_size,
+            info.st_mtime_ns, getattr(info, "st_file_attributes", 0))
+
+
+def snapshot_bytes(root: Path, path: str) -> bytes:
+    """Read exact bounded snapshot bytes; never create/copy/normalize a file."""
+    try:
+        candidate, before = _snapshot_file(root, path)
+        flags = os.O_RDONLY | getattr(os, "O_BINARY", 0) | getattr(os, "O_NOFOLLOW", 0)
+        descriptor = os.open(candidate, flags)
+        with os.fdopen(descriptor, "rb") as handle:
+            if _file_identity(os.fstat(handle.fileno())) != _file_identity(before):
+                raise VersionError("KB snapshot changed before its bytes could be read")
+            data = handle.read(16 * 1024 * 1024 + 1)
+            opened_after = os.fstat(handle.fileno())
+        _, after = _snapshot_file(root, path)
+        if (len(data) != before.st_size or _file_identity(before) != _file_identity(opened_after)
+                or _file_identity(before) != _file_identity(after)):
+            raise VersionError("KB snapshot changed during verification")
+        return data
+    except (OSError, RuntimeError) as exc:
+        raise VersionError(f"KB snapshot unavailable or unsafe: {type(exc).__name__}") from exc
+
+
+def snapshot_history(root: Path, source: dict, history_file: str) -> dict:
+    """Build history metadata only when an already-present snapshot matches."""
+    try:
+        absolute = Path(history_file)
+        if not absolute.is_absolute() or any(part == ".." for part in absolute.parts):
+            raise ValueError("not an exact absolute file path")
+        relative = absolute.relative_to(root / "KnowledgeBase").as_posix()
+    except (TypeError, ValueError) as exc:
+        raise VersionError("--history-file must name an exact absolute KB/source-history file") from exc
+    data = snapshot_bytes(root, relative)
+    if (hashlib.sha256(data).hexdigest().upper() != str(source["sha256"]).upper()
+            or (source.get("size_bytes") is not None and len(data) != source["size_bytes"])):
+        raise VersionError("KB snapshot does not reproduce the registered source's exact bytes/size")
+    return {"kind": "kb_snapshot", "path": relative}
+
+
 def validate_lineage(sources: dict, record_ids: set, root: Path) -> list[str]:
     errors = []
     for sid, source in sources.items():
@@ -149,6 +230,11 @@ def validate_lineage(sources: dict, record_ids: set, root: Path) -> list[str]:
                     or not isinstance(history.get("transform"), str)
                     or history.get("transform") not in {"raw", "lf_to_crlf"}):
                 errors.append(f"source {sid} has invalid Git history metadata")
+        elif history.get("kind") == "kb_snapshot":
+            try:
+                _snapshot_relative(history.get("path"))
+            except VersionError as exc:
+                errors.append(f"source {sid} has invalid KB snapshot metadata: {exc}")
         else:
             errors.append(f"source {sid} has unsupported history verification kind")
     for sid in sources:
@@ -169,13 +255,20 @@ def verify_history(root: Path, source: dict) -> dict:
     if history["kind"] == "unavailable":
         return {"source_sha256": None, "history_verified": False,
                 "warnings": [f"source {source['source_id']} historical bytes unavailable: {history['reason']}"]}
-    data, oid = git_blob(root, history["commit"], history["path"])
-    if oid != history["blob_oid"]:
-        raise VersionError("Git commit/path does not match the registered blob object")
-    data = transformed(data, history["transform"])
+    if history["kind"] == "kb_snapshot":
+        data = snapshot_bytes(root, history["path"])
+        label = "KB snapshot"
+    elif history["kind"] == "git":
+        data, oid = git_blob(root, history["commit"], history["path"])
+        if oid != history["blob_oid"]:
+            raise VersionError("Git commit/path does not match the registered blob object")
+        data = transformed(data, history["transform"])
+        label = "Git"
+    else:
+        raise VersionError("unsupported history verification kind")
     sha = hashlib.sha256(data).hexdigest().upper()
     if sha != str(source["sha256"]).upper():
-        raise VersionError("historical Git bytes do not match the registered source SHA-256")
+        raise VersionError(f"historical {label} bytes do not match the registered source SHA-256")
     if source.get("size_bytes") is not None and len(data) != source["size_bytes"]:
-        raise VersionError("historical Git bytes do not match the registered source size")
+        raise VersionError(f"historical {label} bytes do not match the registered source size")
     return {"source_sha256": sha, "history_verified": True, "warnings": []}

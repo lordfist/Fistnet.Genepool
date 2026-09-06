@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -106,12 +107,22 @@ namespace Fistnet.Genepool.App
                 return;
             }
             // Painting and control access stay on the UI thread.
-            gameVisualizer.RefreshAndResize();
-            this.BoardVisualizer.Image = gameVisualizer.Picture;
-            this.BoardVisualizer.Refresh();
-            ShowStatistics();
-            PopulationGraph.Invalidate();
-            if (!BoardRefreshTimer.Enabled) { StartButton.Enabled = true; AgeRunCheck.Enabled = true; }
+            var diagnostics = SimulationDiagnostics.Current;
+            long started = diagnostics == null ? 0 : Stopwatch.GetTimestamp();
+            try
+            {
+                gameVisualizer.RefreshAndResize();
+                long paintStarted = diagnostics == null ? 0 : Stopwatch.GetTimestamp();
+                this.BoardVisualizer.Image = gameVisualizer.Picture;
+                this.BoardVisualizer.Refresh();
+                diagnostics?.Timing("ui-board-refresh", Stopwatch.GetTimestamp() - paintStarted);
+                long controlsStarted = diagnostics == null ? 0 : Stopwatch.GetTimestamp();
+                ShowStatistics();
+                PopulationGraph.Invalidate();
+                if (!BoardRefreshTimer.Enabled) { StartButton.Enabled = true; AgeRunCheck.Enabled = true; }
+                diagnostics?.Timing("ui-controls", Stopwatch.GetTimestamp() - controlsStarted);
+            }
+            finally { diagnostics?.Timing("ui-completion", Stopwatch.GetTimestamp() - started); }
         }
 
         private void BoardVisualizer_MouseClick(object sender, MouseEventArgs e)
@@ -153,7 +164,10 @@ namespace Fistnet.Genepool.App
 
         private void ButtonComplexStats_Click(object sender, EventArgs e)
         {
-            ShowComplexStatistics();
+            var diagnostics = SimulationDiagnostics.Current;
+            long started = diagnostics == null ? 0 : Stopwatch.GetTimestamp();
+            try { ShowComplexStatistics(); }
+            finally { diagnostics?.Timing("ui-pattern-list", Stopwatch.GetTimestamp() - started); }
         }
 
         private void button1_Click(object sender, EventArgs e)

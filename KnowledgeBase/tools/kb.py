@@ -252,9 +252,29 @@ def validate_state(
     sources: dict[str, Any],
     *,
     deep: bool = False,
+    prepared_file_overrides: dict[Path, Path] | None = None,
 ) -> dict[str, Any]:
     errors: list[str] = []
     warnings: list[str] = []
+    # A preparer can validate owned staging bytes without publishing them or
+    # rewriting the candidate's logical catalog paths. Never redirect originals.
+    prepared_overrides: dict[Path, Path] = {}
+    used_prepared_overrides: set[Path] = set()
+    if prepared_file_overrides is not None:
+        if not isinstance(prepared_file_overrides, dict):
+            errors.append("prepared file overrides must be a path mapping")
+        else:
+            for logical, staged in prepared_file_overrides.items():
+                if not isinstance(logical, Path) or not isinstance(staged, Path):
+                    errors.append("prepared file override keys and values must be Path objects")
+                    continue
+                logical_path, staged_path = logical.resolve(), staged.resolve()
+                if not within(logical_path, KB_ROOT) or not within(staged_path, KB_ROOT):
+                    errors.append("prepared file override logical and staged paths must remain inside KnowledgeBase")
+                elif logical_path in prepared_overrides:
+                    errors.append("duplicate resolved prepared file override")
+                else:
+                    prepared_overrides[logical_path] = staged_path
 
     if core.get("schema_version") != 1:
         errors.append("core.json schema_version must be 1")
@@ -454,6 +474,9 @@ def validate_state(
             if prep_path is None:
                 errors.append(f"source {label} has an invalid prepared path")
                 continue
+            if prep_path in prepared_overrides:
+                used_prepared_overrides.add(prep_path)
+                prep_path = prepared_overrides[prep_path]
             if not prep_path.is_file():
                 errors.append(f"source {label} prepared file is missing: {prep_path}")
                 continue
@@ -507,6 +530,9 @@ def validate_state(
                 expected_size = asset.get("size_bytes")
                 if isinstance(expected_size, int) and asset_path.stat().st_size != expected_size:
                     errors.append(f"source {label} selected asset size mismatch")
+
+    if set(prepared_overrides) != used_prepared_overrides:
+        errors.append("prepared file override does not match a declared prepared source path")
 
     return {
         "ok": not errors,
@@ -1009,18 +1035,23 @@ def atomic_stage(path: Path, payload: bytes) -> Path:
     return temp_path
 
 
-def load_transaction(path_text: str) -> dict[str, Any]:
+def load_transaction(path_text: str) -> tuple[dict[str, Any], str]:
     path = Path(path_text).resolve(strict=True)
     if not within(path, KB_ROOT):
         raise KBError("transaction file must be inside the exact KnowledgeBase root")
-    value = read_json(path)
+    # Hash and parse one read, so the identity names the exact consumed bytes.
+    payload = path.read_bytes()
+    try:
+        value = strict_json_loads(payload.decode("utf-8-sig"), str(path))
+    except UnicodeDecodeError as exc:
+        raise KBError("transaction must be valid UTF-8") from exc
     if not isinstance(value, dict):
         raise KBError("transaction must be a JSON object")
     permitted = {"note", "actor", "upsert_records", "upsert_sources", "core_patch"}
     unknown = sorted(set(value) - permitted)
     if unknown:
         raise KBError(f"unknown transaction fields: {', '.join(unknown)}")
-    return value
+    return value, hashlib.sha256(payload).hexdigest().upper()
 
 
 def build_candidate(
@@ -1134,9 +1165,12 @@ def command_revise_source(args: argparse.Namespace) -> None:
     if actual_sha == str(old.get("sha256", "")).upper():
         raise KBError("source bytes are unchanged; no new source identity needed")
     try:
-        history = source_versions.git_history(EXPERIMENT_ROOT, old, args.git_commit) if args.git_commit else {
-            "kind": "unavailable", "reason": args.history_unavailable_reason.strip()
-        }
+        if args.git_commit:
+            history = source_versions.git_history(EXPERIMENT_ROOT, old, args.git_commit)
+        elif args.history_file:
+            history = source_versions.snapshot_history(EXPERIMENT_ROOT, old, args.history_file)
+        else:
+            history = {"kind": "unavailable", "reason": args.history_unavailable_reason.strip()}
     except source_versions.VersionError as exc:
         raise KBError(str(exc)) from exc
     if history["kind"] == "unavailable" and not history["reason"]:
@@ -1313,15 +1347,14 @@ def _command_apply(args: argparse.Namespace, progress: dict[str, Any]) -> None:
     transaction_path = Path(args.transaction).resolve(strict=True)
     if not within(transaction_path, KB_ROOT):
         raise KBError("transaction file must be inside the exact KnowledgeBase root")
-    transaction_hash = sha256_file(transaction_path) if args.dry_run else None
-    transaction = load_transaction(args.transaction)
+    transaction, transaction_hash = load_transaction(args.transaction)
+    if args.expect_transaction_sha256 and args.expect_transaction_sha256.upper() != transaction_hash:
+        raise KBError("transaction differs from the reviewed bytes", code="transaction_identity_conflict")
     if args.dry_run:
         if sha256_file(transaction_path) != transaction_hash:
             raise KBError("transaction changed while being read", code="transaction_identity_conflict")
         if args.offset and args.expect_transaction_sha256 is None:
             raise KBError("preview continuation requires --expect-transaction-sha256", code="transaction_identity_required")
-        if args.expect_transaction_sha256 and args.expect_transaction_sha256.upper() != transaction_hash:
-            raise KBError("transaction changed since the requested preview", code="transaction_identity_conflict")
     if args.dry_run and args.offset and args.preview_time is None:
         raise KBError("preview continuation requires --preview-time from the first page", code="preview_time_required")
     preview_time = (args.preview_time or utc_now()) if args.dry_run else None
@@ -1375,6 +1408,8 @@ def _command_apply(args: argparse.Namespace, progress: dict[str, Any]) -> None:
         for path, expected in before_hashes.items():
             if sha256_file(path) != expected:
                 raise KBError(f"concurrent modification detected: {path.name}")
+        if sha256_file(transaction_path) != transaction_hash:
+            raise KBError("transaction changed before commit", code="transaction_identity_conflict")
         # Core is the commit marker and is replaced last.
         for path in (RECORDS_PATH, SOURCES_PATH, CORE_PATH):
             progress["phase"] = "replacing"
@@ -1414,6 +1449,7 @@ def _command_apply(args: argparse.Namespace, progress: dict[str, Any]) -> None:
             "effects": effects,
             "validation_scope": "deep_sources_and_prepared",
             "write_outcome": write_outcome(progress, "commit_completed"),
+            "transaction_sha256": transaction_hash,
             "hashes": {
                 "core.json": sha256_file(CORE_PATH),
                 "records.jsonl": sha256_file(RECORDS_PATH),
@@ -1498,6 +1534,7 @@ def build_parser() -> argparse.ArgumentParser:
     revise.add_argument("--record-id", action="append", required=True)
     history = revise.add_mutually_exclusive_group(required=True)
     history.add_argument("--git-commit", help="full local commit ID reproducing the old registered bytes")
+    history.add_argument("--history-file", help="exact absolute KB/source-history file reproducing the old bytes")
     history.add_argument("--history-unavailable-reason", help="explicit gap; deep validation reports a warning")
     add_common_output(revise)
     revise.set_defaults(func=command_revise_source)
@@ -1510,7 +1547,7 @@ def build_parser() -> argparse.ArgumentParser:
     apply.add_argument("--limit", type=int, default=100, help="dry-run preview field changes per page")
     apply.add_argument("--offset", type=int, default=0, help="dry-run preview continuation offset")
     apply.add_argument("--preview-values", action="store_true", help="include before/after values in dry-run changes")
-    apply.add_argument("--expect-transaction-sha256", help="required transaction identity for preview continuation")
+    apply.add_argument("--expect-transaction-sha256", help="reviewed transaction identity for apply or preview continuation")
     apply.add_argument("--preview-time", help="reuse the first dry-run page's UTC timestamp for continuation")
     add_common_output(apply)
     apply.set_defaults(func=command_apply)
@@ -1540,7 +1577,7 @@ def main(argv: list[str] | None = None) -> int:
     if len(getattr(args, "query", "")) > 500:
         raise KBError("query cannot exceed 500 characters")
     if args.command == "apply":
-        if not args.dry_run and (args.offset or args.preview_values or args.expect_transaction_sha256 or args.preview_time):
+        if not args.dry_run and (args.offset or args.preview_values or args.preview_time):
             raise KBError("preview options require --dry-run")
         if args.expect_transaction_sha256 and not re.fullmatch(r"[0-9a-fA-F]{64}", args.expect_transaction_sha256):
             raise KBError("expect-transaction-sha256 must be a SHA-256 hex digest")

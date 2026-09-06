@@ -13,6 +13,22 @@ internal static class Program
     [STAThread]
     private static int Main(string[] args)
     {
+        if (args.Length > 0)
+        {
+            int expected = args[0] switch
+            {
+                "--all" or "--runner-negative-control" or "--baseline-smoke" => 1,
+                "--group" or "--render-preview" => 2,
+                "--scenario" => 4,
+                "--diagnostic-scenario" => args.Length == 8 ? 8 : 7,
+                "--diagnostic-fixture" => args.Length == 5 ? 5 : 4,
+                _ => -1
+            };
+            if (args.Length != expected || args.Skip(1).Any(a => string.IsNullOrWhiteSpace(a) || a.StartsWith("--", StringComparison.Ordinal)))
+            { Console.Error.WriteLine("Select exactly one supported command with its required arguments."); return 2; }
+        }
+        if (args.Length > 0 && (args[0] == "--diagnostic-scenario" || args[0] == "--diagnostic-fixture"))
+            return DiagnosticScenarios.RunCli(args);
         if (args.Length == 2 && args[0] == "--render-preview")
         { RenderingTests.ExportPreview(args[1]); return 0; }
         if (args.Length == 4 && args[0] == "--scenario")
@@ -72,7 +88,7 @@ internal static class Program
         Console.WriteLine(JsonSerializer.Serialize(new { total = cases.Count, passed = cases.Count - failed, failed,
             seconds = total.Elapsed.TotalSeconds, runtime = Environment.Version.ToString(),
             assemblySha256 = AssemblyIdentities(), results,
-            scenarios = ScenarioRunner.EvaluationResults }));
+            scenarios = ScenarioRunner.EvaluationResults, uiDiagnostics = UiDiagnosticsTests.LatestMeasurement }));
         return failed == 0 ? 0 : 1;
     }
 
@@ -87,6 +103,20 @@ internal static class Program
         cases.AddRange(IntegrationTests.Cases());
         cases.AddRange(RenderingTests.Cases());
         cases.AddRange(ScenarioRunner.Cases());
+        cases.AddRange(DiagnosticsTests.Cases());
+        cases.AddRange(UiDiagnosticsTests.Cases());
+        cases.AddRange(LearningPolicyTests.Cases());
+        cases.AddRange(ActionTransactionTests.Cases());
+        cases.AddRange(DnaActionTests.Cases());
+        cases.Add(new("runner malformed selection fails before any tests execute", "runner", () =>
+        {
+            foreach (string[] arguments in new[] { new[] { "--group" }, new[] { "--scenario", "11" },
+                new[] { "--all", "--all" }, new[] { "--unknown" }, new[] { "--all", "extra" } })
+            {
+                var child = ScenarioRunner.ExecuteChild(arguments);
+                Check.Equal(2, child.ExitCode); Check.True(!child.Output.Contains("PASS "), "Malformed selection ran tests");
+            }
+        }));
         cases.Add(new("runner negative control reports failure and exit 7", "runner", () =>
         {
             var child = ScenarioRunner.ExecuteChild("--runner-negative-control");

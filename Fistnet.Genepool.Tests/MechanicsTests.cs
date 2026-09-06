@@ -21,15 +21,15 @@ internal static class MechanicsTests
             var first = new FixtureOrganism(); first.SetGenes((me, i) => new EatDnaElement(me, i));
             var second = new FixtureOrganism(); second.CopyGenes(first);
             var child = new FixtureOrganism(); child.CopyGenes(first);
-            Check.Scores(first)[99] = new() { [0] = 2, [1] = 3 };
-            Check.Scores(second)[99] = new() { [0] = 6 };
+            Check.Scores(first)["E:99"] = new() { [0] = 2, [1] = 3 };
+            Check.Scores(second)["E:99"] = new() { [0] = 6 };
             child.Brain.LearnFromParent(first); child.Brain.LearnFromParent(second);
-            Check.Equal(4f, Check.Scores(child)[99][0]);
-            Check.Equal(3f, Check.Scores(child)[99][1]);
-            Check.Equal(2f, Check.Scores(first)[99][0]);
+            Check.Equal(4f, Check.Scores(child)["E:99"][0]);
+            Check.Equal(3f, Check.Scores(child)["E:99"][1]);
+            Check.Equal(2f, Check.Scores(first)["E:99"][0]);
             Common.ConfigureRandom(new ScriptedRandomSource(), true);
             var born = new Organism(first, second);
-            Check.Equal(4f, Check.Scores(born)[99][0], "actual birth constructor history");
+            Check.Equal(4f, Check.Scores(born)["E:99"][0], "actual birth constructor history");
         });
         yield return new("parent transfer rejects mismatched genes and accepts no history", "mechanics", () =>
         {
@@ -37,7 +37,7 @@ internal static class MechanicsTests
             var child = new FixtureOrganism(); child.CopyGenes(parent);
             child.Brain.LearnFromParent(parent); child.Brain.LearnFromParent(null);
             Check.Equal(0, Check.Scores(child).Count);
-            Check.Scores(parent)[77] = new() { [0] = 8, [1] = 4, [2] = 3, [255] = 2 };
+            Check.Scores(parent)["E:77"] = new() { [0] = 8, [1] = 4, [2] = 3, [255] = 2 };
             Check.Property(child.DnaSequence[0], "DnaCode", -123);
             Check.Property(child.DnaSequence[1], "DnaSequenceIndex", (byte)7);
             var replacement = new MoveDnaElement(child, 2);
@@ -50,7 +50,7 @@ internal static class MechanicsTests
         {
             var parent = new FixtureOrganism(); parent.SetGenes((me, i) => new MoveDnaElement(me, i));
             var child = new FixtureOrganism(); child.CopyGenes(parent);
-            Check.Scores(parent)[7] = new() { [0] = 9 };
+            Check.Scores(parent)["E:7"] = new() { [0] = 9 };
             var target = parent.DnaSequence[0].Target == TargetTypes.Self ? TargetTypes.TopLeft : TargetTypes.Self;
             Check.Property(child.DnaSequence[0], "Target", target);
             child.Brain.LearnFromParent(parent);
@@ -62,7 +62,7 @@ internal static class MechanicsTests
             organism.Brain.ChooseOutput(null, out byte choice);
             organism.SetAvailableFood(3); organism.Brain.EvaluateResult(choice, null);
             Check.True(Check.Scores(organism).SelectMany(pair => pair.Value.Values).All(float.IsFinite), "non-finite learned score");
-            Check.Equal(1.2f, Check.Scores(organism)[0][choice]);
+            Check.Equal(0f, Check.Scores(organism)["Empty"][choice], "Available cell food alone is not a committed transfer");
             Check.True(float.IsFinite(Common.CalculateChange(int.MaxValue, int.MinValue)), "integer subtraction overflow");
             Check.True(float.IsFinite(Common.CalculateDifferenceFromValue(int.MinValue, int.MaxValue)), "absolute value overflow");
         });

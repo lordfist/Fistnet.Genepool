@@ -41,19 +41,9 @@ namespace Fistnet.Genepool.Dna.Elements
 
         public void ExecuteDna(Organism organismAffected)
         {
-            if (organismAffected != null && !organismAffected.IsDead && !this.Me.IsDead)
+            if (this.Me.IsActionEligible(this, organismAffected))
             {
                 organismAffected.AddStackedEffect(new ChangeHealthEffect(organismAffected, Organism.KILL_POWER, this.DnaSequenceIndex));
-
-                if (organismAffected.FoodBalance >= Organism.KILL_OK_FOOD_EXTRA && organismAffected.Health <= Organism.KILL_POWER)
-                    this.Me.AddStackedEffect(new ChangeFoodEffect(this.Me, Organism.KILL_OK_FOOD_EXTRA, this.DnaSequenceIndex));
-            }
-            else if (organismAffected != null
-                            && !organismAffected.IsDead
-                            && !this.Me.IsDead
-                            && this.Me.DnaCode == organismAffected.DnaCode)
-            {
-                this.Target = Common.TryChangeTarget(this.Target);
             }
         }
 

@@ -15,20 +15,20 @@ internal static class IntegrationTests
     public static IEnumerable<TestCase> Cases()
     {
         yield return new("neighbors: interior, edges and corners do not wrap", "integration", Neighbors);
-        yield return new("food: setup debits taken food exactly once", "integration", FoodSetup);
+        yield return new("food: same-season transfer debits source exactly once", "integration", FoodSetup);
         yield return new("food: replenishment on eighth refresh and bounded arithmetic", "integration", FoodRefresh);
         yield return new("lifecycle: removal pass removes dead occupant and returns food", "integration", DeadRemoval);
         yield return new("movement: identity, occupied destination and boundary fallback", "integration", Movement);
         yield return new("movement: competing destinations retain unique occupancy", "integration", CompetingMoves);
-        yield return new("birth: placement, occupancy and deferred placement cost", "integration", BirthPlacement);
-        yield return new("birth: crowded board retains pending child", "integration", PendingChild);
+        yield return new("birth: placement and cost commit together", "integration", BirthPlacement);
+        yield return new("birth: crowded board creates no pending child", "integration", PendingChild);
         yield return new("statistics: final occupancy and action counts after movement", "integration", CompletedStatistics);
         yield return new("reset: dirty world, rule cursor, statistics and RNG are cleared", "integration", DirtyReset);
         yield return new("reference: reset repeats execution state and random draws", "integration", Repeatability);
         yield return new("snapshot: private counters, cell clocks, scores and effect order", "integration", SnapshotCoverage);
         yield return new("snapshot: production mode is rejected", "integration", RejectProductionSnapshot);
         yield return new("characterization: organism age advances on ninth action tick", "integration", AgeCharacterization);
-        yield return new("characterization: one birth increments reproduction counter twice", "integration", ReproductionCharacterization);
+        yield return new("birth: one placed child increments reproduction counter once", "integration", ReproductionCharacterization);
         yield return new("learning: aging tick never reevaluates a previous occupied target", "integration", AgingLearning);
     }
 
@@ -62,9 +62,9 @@ internal static class IntegrationTests
         var square = Board.BoardElement[5, 5];
         square.AddOccupant(organism);
         organism.SetAvailableFood(3);
-        organism.AddStackedEffect(new ChangeFoodEffect(organism, 2, 0));
-        organism.ExecuteEffectStack();
-        Check.Equal((byte)2, organism.TakenFood);
+        Check.Equal(2, square.GatherFood(organism, 2));
+        Check.Equal((byte)1, square.FoodRemaining);
+        Check.Equal(2, organism.TakenFood);
         var setup = new ExecuteOgranismSetup();
         setup.Execute(square);
         Check.Equal((byte)1, square.FoodRemaining);
@@ -162,39 +162,36 @@ internal static class IntegrationTests
             for (int y = 9; y <= 11; y++)
                 if (!leaveGap || x != 9 || y != 10) Board.BoardElement[x, y].AddOccupant(new Organism());
         Organism parent = Board.BoardElement[10, 10].Occupant;
-        parent.AddStackedEffect(new BirthEffect(parent, Board.BoardElement[11, 11].Occupant, 0));
-        parent.ExecuteEffectStack();
-        Check.True(parent.HasChild, "Constructed parents did not produce pending child");
+        Check.Property(parent, "Age", 1);
+        Check.Property(Board.BoardElement[11, 11].Occupant, "Age", 1);
         return parent;
     }
 
     private static void BirthPlacement()
     {
         Organism parent = CrowdedParent(true);
-        Organism child = parent.Child;
-        new ExecuteOrganismEffectsRule().Execute(Board.BoardElement[10, 10]);
-        Check.True(ReferenceEquals(Board.BoardElement[9, 10].Occupant, child), "Child did not occupy only empty neighbor");
-        Check.True(!parent.HasChild && parent.Child == null, "Placed child retained by parent");
-        Check.Equal((sbyte)5, parent.FoodBalance, "Placement cost applied before following effects pass");
-        Check.Equal(1, parent.PendingEffects.Count);
-        Check.Equal(EffectTypes.FoodChange, parent.PendingEffects[0].Effect);
-        Check.Equal((sbyte)-2, (sbyte)parent.PendingEffects[0].Value);
-        parent.ExecuteEffectStack();
-        Check.Equal((sbyte)3, parent.FoodBalance);
+        Check.True(Board.BoardElement[10, 10].TryPlaceChild(Board.BoardElement[11, 11].Occupant), "Birth did not commit");
+        Organism child = Board.BoardElement[9, 10].Occupant;
+        Check.True(child != null && child.Parent1Id == parent.Id, "Child did not occupy only empty neighbor");
+        Check.True(parent.HasChild && parent.Child == null, "Actual birth flag/pending child are inconsistent");
+        Check.Equal(3, parent.FoodBalance, "Birth cost not charged immediately");
+        Check.Equal(2, child.FoodBalance, "Child reserves did not match actual parent transfer");
         Check.Equal(0, parent.PendingEffects.Count);
+        Check.Equal((byte)1, Check.Field<byte>(parent, "_reproductionsInAge"));
     }
 
     private static void PendingChild()
     {
         Organism parent = CrowdedParent(false);
-        Organism child = parent.Child;
-        new ExecuteOrganismEffectsRule().Execute(Board.BoardElement[10, 10]);
-        Check.True(ReferenceEquals(parent.Child, child), "Crowding discarded the pending child");
-        Check.Equal(0, parent.PendingEffects.Count, "Failed placement charged food");
-        Check.Equal(9, Board.BoardElement.Cast<BoardSquare>().Count(s => s.IsOccupied));
+        var other = Board.BoardElement[11, 11].Occupant;
+        long ids = Common.OrganismIdentityCounter;
+        Check.True(!Board.BoardElement[10, 10].TryPlaceChild(other), "Full neighborhood accepted a birth");
+        Check.True(parent.Child == null && !parent.HasChild, "Failed birth retained child/success");
+        Check.Equal(ids, Common.OrganismIdentityCounter, "Failed birth constructed an organism");
+        Check.Equal(5, parent.FoodBalance); Check.Equal((byte)0, Check.Field<byte>(parent, "_reproductionsInAge"));
         Board.BoardElement[9, 9].RemoveOccupant();
-        new ExecuteOrganismEffectsRule().Execute(Board.BoardElement[10, 10]);
-        Check.True(ReferenceEquals(Board.BoardElement[9, 9].Occupant, child), "Pending child was not placed when room became available");
+        Check.True(Board.BoardElement[10, 10].TryPlaceChild(other), "New attempt failed after space became available");
+        Check.True(Board.BoardElement[9, 9].IsOccupied, "Child not placed in only gap");
     }
 
     private static FixtureOrganism Mover(TargetTypes target, int sequenceAge)
@@ -246,7 +243,7 @@ internal static class IntegrationTests
         Board.BoardElement[5, 5].AddOccupant(organism);
         Board.ExecuteSingleSeason(true);
         organism.AddStackedEffect(new ChangeFoodEffect(organism, -2, 0));
-        Check.Scores(organism)[123] = new Dictionary<byte, float> { [2] = 1.25f };
+        Check.Scores(organism)["E:123"] = new Dictionary<byte, float> { [2] = 1.25f };
         RuleManager.MoveToNextRule();
         Common.GetRandomIntegerSeed();
         Reset();
@@ -294,7 +291,7 @@ internal static class IntegrationTests
         SetField(organism, "currentSequenceIndex", (byte)3);
         SetField(organism.DnaSequence[0], "_executionNumber", 9);
         SetField(Board.BoardElement[4, 4], "_currentSeason", 4);
-        Check.Scores(organism)[123] = new Dictionary<byte, float> { [2] = 1.25f };
+        Check.Scores(organism)["E:123"] = new Dictionary<byte, float> { [2] = 1.25f };
         organism.AddStackedEffect(new ChangeFoodEffect(organism, -2, 0));
         organism.AddStackedEffect(new ChangeAgeEffect(organism, 4, 0));
         SimulationSnapshot changed = SimulationSnapshot.Capture();
@@ -342,18 +339,18 @@ internal static class IntegrationTests
         organism.ExecuteNextDnaSequence(null);
         Check.Equal(1, organism.Age);
         Check.Equal(1, organism.SequenceAge);
-        Check.Equal(1, organism.PendingEffects.Count);
-        Check.Equal((sbyte)-1, (sbyte)organism.PendingEffects[0].Value);
+        Check.Equal(0, organism.PendingEffects.Count);
+        Check.Equal(9L, organism.LifetimeSeasons);
     }
 
     private static void ReproductionCharacterization()
     {
         Reset();
-        var parent = new Organism();
-        parent.AddStackedEffect(new BirthEffect(parent, new Organism(), 0));
-        parent.ExecuteEffectStack();
-        Check.True(parent.HasChild, "Birth fixture failed");
-        Check.Equal((byte)2, Check.Field<byte>(parent, "_reproductionsInAge"));
+        var parent = new FixtureOrganism(); parent.SetState(age: 1);
+        var other = new FixtureOrganism(); other.SetState(age: 1);
+        Board.BoardElement[5, 5].AddOccupant(parent);
+        Check.True(Board.BoardElement[5, 5].TryPlaceChild(other), "Birth fixture failed");
+        Check.Equal((byte)1, Check.Field<byte>(parent, "_reproductionsInAge"));
     }
 
     private static void AgingLearning()
@@ -365,12 +362,10 @@ internal static class IntegrationTests
         organism.Activate();
         for (int i = 0; i < 8; i++)
         {
-            organism.GetNextDnaSequenceTarget();
             organism.ExecuteNextDnaSequence(target);
             organism.ExecuteEffectStack();
         }
         string before = JsonSerializer.Serialize(Check.Scores(organism));
-        organism.GetNextDnaSequenceTarget();
         organism.ExecuteNextDnaSequence(target);
         organism.ExecuteEffectStack();
         Check.Equal(1, organism.Age);

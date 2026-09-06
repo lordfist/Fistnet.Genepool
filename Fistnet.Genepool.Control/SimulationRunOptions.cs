@@ -11,5 +11,6 @@ namespace Fistnet.Genepool.Control
         public int Seed { get; init; } = Environment.TickCount;
         public int InitialPopulationPercent { get; init; } = 10;
         public IRandomSource RandomSource { get; init; }
+        public SimulationPolicy Policy { get; init; } = new SimulationPolicy();
     }
 }

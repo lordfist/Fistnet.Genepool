@@ -1,0 +1,454 @@
+{
+  "author": "Seed Analyzer",
+  "purpose": "Exact registered predecessor bytes for authorized Part2 edits; single snapshots, not test histories. Unchanged snapshots will be pruned after final reconciliation.",
+  "sources": [
+    {
+      "source_id": "SRC-0011",
+      "path": "Fistnet.Genepool.Dna/DnaElementFactory.cs",
+      "sha256": "0C23AAB3479FB68A3F946778F72A94E5BA6B92EAF05BCAAFB903C6C93616CD13",
+      "preserved_history": {
+        "kind": "git",
+        "commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+        "path": "Fistnet.Genepool.Dna/DnaElementFactory.cs",
+        "blob_oid": "22463236b56b28faa9b972bcf4e294e472763e65",
+        "transform": "lf_to_crlf"
+      },
+      "temporary_copy_removed": true
+    },
+    {
+      "source_id": "SRC-0013",
+      "path": "Fistnet.Genepool.Dna/OrganismSnapshot.cs",
+      "sha256": "B30CA2C1807B6FBBCF3AA99A9A30F60091EAAC826B80DA63DD2D6A527F4787ED",
+      "preserved_history": {
+        "kind": "git",
+        "commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+        "path": "Fistnet.Genepool.Dna/OrganismSnapshot.cs",
+        "blob_oid": "90416faa084c3c942e9ea7f3909d0443c1e34e74",
+        "transform": "lf_to_crlf"
+      },
+      "temporary_copy_removed": true
+    },
+    {
+      "source_id": "SRC-0015",
+      "path": "Fistnet.Genepool.Dna/Elements/Brain/OrganismEvaluation.cs",
+      "sha256": "27E18011AE25FA9C0F20F962267317313B4BFF438F48693713924C958FD2639C",
+      "preserved_history": {
+        "kind": "git",
+        "commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+        "path": "Fistnet.Genepool.Dna/Elements/Brain/OrganismEvaluation.cs",
+        "blob_oid": "661e099c19a21d7596f472e9551da1a9d204bdc8",
+        "transform": "lf_to_crlf"
+      },
+      "temporary_copy_removed": true
+    },
+    {
+      "source_id": "SRC-0017",
+      "path": "Fistnet.Genepool.Control/Rules/IBoardSquareRule.cs",
+      "sha256": "93E10F9553C5FA8D818D577518BA1B9B5A0D6045AB6633301FCE831C5658736F",
+      "preserved_history": {
+        "kind": "unchanged_current_source",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\Rules\\IBoardSquareRule.cs"
+      },
+      "temporary_copy_removed": true
+    },
+    {
+      "source_id": "SRC-0018",
+      "path": "Fistnet.Genepool.Control/Rules/ExecuteRefreshRule.cs",
+      "sha256": "51F95993AAB4EF92FE195E9BE01B8239BF511DB4B3945C41911CBB614C678B9C",
+      "preserved_history": {
+        "kind": "unchanged_current_source",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\Rules\\ExecuteRefreshRule.cs"
+      },
+      "temporary_copy_removed": true
+    },
+    {
+      "source_id": "SRC-0020",
+      "path": "Fistnet.Genepool.Control/Rules/ExecuteOrganismSequenceRule.cs",
+      "sha256": "206BA1785AFAC323D4F1731A79FFD891607E717C0C97201F123B1F89735F210F",
+      "preserved_history": {
+        "kind": "git",
+        "commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+        "path": "Fistnet.Genepool.Control/Rules/ExecuteOrganismSequenceRule.cs",
+        "blob_oid": "864e51c9331136e35bb561c4c9aa4585a0b0ab46",
+        "transform": "lf_to_crlf"
+      },
+      "temporary_copy_removed": true
+    },
+    {
+      "source_id": "SRC-0023",
+      "path": "Fistnet.Genepool.Control/Rules/ExecuteOrganismMoveRule.cs",
+      "sha256": "9E951E5EB029E7855D51709116E417A394A5B486CDD1B48ACF45D34AF381C044",
+      "preserved_history": {
+        "kind": "git",
+        "commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+        "path": "Fistnet.Genepool.Control/Rules/ExecuteOrganismMoveRule.cs",
+        "blob_oid": "e80ce4bceb96bc0e9887aa83c6fec23e1dbfeda9",
+        "transform": "lf_to_crlf"
+      },
+      "temporary_copy_removed": true
+    },
+    {
+      "source_id": "SRC-0024",
+      "path": "Fistnet.Genepool.Dna/Elements/IDnaElement.cs",
+      "sha256": "47126ED6764A9960F278FDA276086F69B4EF0593643232CD63B1D27ACF475CAA",
+      "preserved_history": {
+        "kind": "unchanged_current_source",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Elements\\IDnaElement.cs"
+      },
+      "temporary_copy_removed": true
+    },
+    {
+      "source_id": "SRC-0025",
+      "path": "Fistnet.Genepool.Dna/Elements/CombineDnaElement.cs",
+      "sha256": "0CA034D7177101B518F4E652384D983C8B730F46A5B758D97DA8F2EDB0A15897",
+      "preserved_history": {
+        "kind": "git",
+        "commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+        "path": "Fistnet.Genepool.Dna/Elements/CombineDnaElement.cs",
+        "blob_oid": "f4e28feac73174e0098b396528e3778b2163760b",
+        "transform": "lf_to_crlf"
+      },
+      "temporary_copy_removed": true
+    },
+    {
+      "source_id": "SRC-0026",
+      "path": "Fistnet.Genepool.Dna/Elements/EvolveDnaElement.cs",
+      "sha256": "DDE0E4AF10ADB72F84677A971EEBE16FBEFE746C919D91B9DA463B8727D24D5B",
+      "preserved_history": {
+        "kind": "git",
+        "commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+        "path": "Fistnet.Genepool.Dna/Elements/EvolveDnaElement.cs",
+        "blob_oid": "2185db5a6a609988b009a5b0f1c6ae5b37075006",
+        "transform": "lf_to_crlf"
+      },
+      "temporary_copy_removed": true
+    },
+    {
+      "source_id": "SRC-0027",
+      "path": "Fistnet.Genepool.Dna/Elements/InfectDnaElement.cs",
+      "sha256": "E6C0B93934230F35ABA63B0FF557A09D23AFC73BFCE3C634B030C00937C01160",
+      "preserved_history": {
+        "kind": "git",
+        "commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+        "path": "Fistnet.Genepool.Dna/Elements/InfectDnaElement.cs",
+        "blob_oid": "c21dec1efe9f9a81e0274fb94da49afdc8d6f5a6",
+        "transform": "lf_to_crlf"
+      },
+      "temporary_copy_removed": true
+    },
+    {
+      "source_id": "SRC-0030",
+      "path": "Fistnet.Genepool.Dna/Elements/EatDnaElement.cs",
+      "sha256": "5EEF2C1C8969BE0AADC1B3D99BFFACF96B1244C85D4F64B308F91BD45B5B7D15",
+      "preserved_history": {
+        "kind": "git",
+        "commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+        "path": "Fistnet.Genepool.Dna/Elements/EatDnaElement.cs",
+        "blob_oid": "490d1ab8dcf389019bacaa40f30a62dcd2d4ee5e",
+        "transform": "lf_to_crlf"
+      },
+      "temporary_copy_removed": true
+    },
+    {
+      "source_id": "SRC-0031",
+      "path": "Fistnet.Genepool.Dna/Elements/CreateFoodDnaElement.cs",
+      "sha256": "C8E51B409E9F63CF197CBC82271CA22C21D2D8B224BA291CB87C606DAA14744F",
+      "preserved_history": {
+        "kind": "git",
+        "commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+        "path": "Fistnet.Genepool.Dna/Elements/CreateFoodDnaElement.cs",
+        "blob_oid": "6f349ffc4b3bf368b0c45d39531f9f3d0e002212",
+        "transform": "lf_to_crlf"
+      },
+      "temporary_copy_removed": true
+    },
+    {
+      "source_id": "SRC-0032",
+      "path": "Fistnet.Genepool.Dna/Elements/MoveDnaElement.cs",
+      "sha256": "5CF51255F60F0301B072A193F3C55C51166320778E45A46A81219A72D56EF76E",
+      "preserved_history": {
+        "kind": "git",
+        "commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+        "path": "Fistnet.Genepool.Dna/Elements/MoveDnaElement.cs",
+        "blob_oid": "ca75b9a6c5ebc0f59937c97d9f770d46941a8c16",
+        "transform": "lf_to_crlf"
+      },
+      "temporary_copy_removed": true
+    },
+    {
+      "source_id": "SRC-0033",
+      "path": "Fistnet.Genepool.Dna/Elements/HealDnaElement.cs",
+      "sha256": "EB5C34C6C2810FE5D74F30BFD333F6BE746718CFDFF47C6D27AADF20BE4F983E",
+      "preserved_history": {
+        "kind": "git",
+        "commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+        "path": "Fistnet.Genepool.Dna/Elements/HealDnaElement.cs",
+        "blob_oid": "3d0a7252fa4aa763a9d367b97746f097ed2c525f",
+        "transform": "lf_to_crlf"
+      },
+      "temporary_copy_removed": true
+    },
+    {
+      "source_id": "SRC-0034",
+      "path": "Fistnet.Genepool.Dna/Elements/KillDnaElement.cs",
+      "sha256": "4CC1153C9704A046AC71E6F1DA3E085CD2E33EF2EF543F0E219E010D5E7D9211",
+      "preserved_history": {
+        "kind": "git",
+        "commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+        "path": "Fistnet.Genepool.Dna/Elements/KillDnaElement.cs",
+        "blob_oid": "40bab4ffc24a0b9203330343671a733fc228ebb3",
+        "transform": "lf_to_crlf"
+      },
+      "temporary_copy_removed": true
+    },
+    {
+      "source_id": "SRC-0046",
+      "path": "Fistnet.Genepool.Dna/Common.cs",
+      "sha256": "63190CC56ABCC9A68919FBFC23399842D4CDACA2889C718BB4813DABD449BF9B",
+      "preserved_history": {
+        "kind": "git",
+        "commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+        "path": "Fistnet.Genepool.Dna/Common.cs",
+        "blob_oid": "c85668664ad2831e449e96153da40494465d06c1",
+        "transform": "lf_to_crlf"
+      },
+      "temporary_copy_removed": true
+    },
+    {
+      "source_id": "SRC-0053",
+      "path": "Fistnet.Genepool.Control/SimulationRunOptions.cs",
+      "sha256": "78B458703A5ADDCBA7B982500D795CA2DF871F90426AAEAEC2074637134C608D",
+      "preserved_history": {
+        "kind": "git",
+        "commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+        "path": "Fistnet.Genepool.Control/SimulationRunOptions.cs",
+        "blob_oid": "9797df5db65f5baa1263cd996e44a9dda75b90c4",
+        "transform": "raw"
+      },
+      "temporary_copy_removed": true
+    },
+    {
+      "source_id": "SRC-0057",
+      "path": "Fistnet.Genepool.Tests/IntegrationTests.cs",
+      "sha256": "451FC0FF3969941C483CC09A1B81B574474ABD24606F516E3E3B46F755FC894D",
+      "preserved_history": {
+        "kind": "git",
+        "commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+        "path": "Fistnet.Genepool.Tests/IntegrationTests.cs",
+        "blob_oid": "d1bdef7a2a33bd7b8143a626ece3662400945e32",
+        "transform": "raw"
+      },
+      "temporary_copy_removed": true
+    },
+    {
+      "source_id": "SRC-0058",
+      "path": "Fistnet.Genepool.Tests/MechanicsTests.cs",
+      "sha256": "4EBC714438EBCA4C72451BCF16A6843844C2BB679A4C333CEB884068D7A8BBC2",
+      "preserved_history": {
+        "kind": "git",
+        "commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+        "path": "Fistnet.Genepool.Tests/MechanicsTests.cs",
+        "blob_oid": "4836e6a13e973da42255bf5c28e1cdd6a1922ded",
+        "transform": "raw"
+      },
+      "temporary_copy_removed": true
+    },
+    {
+      "source_id": "SRC-0061",
+      "path": "Fistnet.Genepool.Tests/RegressionTests.cs",
+      "sha256": "8F04CD47F1FA647261AF6FCFDD2D1A7B10E8C36DA655D17C8F99DBCF2AD7CF38",
+      "preserved_history": {
+        "kind": "git",
+        "commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+        "path": "Fistnet.Genepool.Tests/RegressionTests.cs",
+        "blob_oid": "769777ddd6d96e66d45617984d62d20825a56367",
+        "transform": "raw"
+      },
+      "temporary_copy_removed": true
+    },
+    {
+      "source_id": "SRC-0062",
+      "path": "Fistnet.Genepool.Tests/RenderingTests.cs",
+      "sha256": "579A3DB145C4F745FED8DC095D17F5BB30521E41C1DBD30D40416B893B3E61AB",
+      "preserved_history": {
+        "kind": "unchanged_current_source",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\RenderingTests.cs"
+      },
+      "temporary_copy_removed": true
+    },
+    {
+      "source_id": "SRC-0063",
+      "path": "Fistnet.Genepool.Tests/ScenarioRunner.cs",
+      "sha256": "7EECE5A533F003AF10601FE87388D9FF59B76819DEA897C36CDDAA4EDAD8496A",
+      "preserved_history": {
+        "kind": "git",
+        "commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+        "path": "Fistnet.Genepool.Tests/ScenarioRunner.cs",
+        "blob_oid": "84020703ad2f29f108460ab5fe702a5f279ad620",
+        "transform": "raw"
+      },
+      "temporary_copy_removed": true
+    },
+    {
+      "source_id": "SRC-0064",
+      "path": "Fistnet.Genepool.Tests/TestSupport.cs",
+      "sha256": "F45EE7582531FC616A44BB02370F1608743FA90D61BB3A97BDC875FBF565F929",
+      "preserved_history": {
+        "kind": "git",
+        "commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+        "path": "Fistnet.Genepool.Tests/TestSupport.cs",
+        "blob_oid": "67d652efaadeb6db975e9f5d79dea60e51de6bd7",
+        "transform": "raw"
+      },
+      "temporary_copy_removed": true
+    },
+    {
+      "source_id": "SRC-0076",
+      "path": "Fistnet.Genepool.Control/Rules/ExecuteOgranismSetup.cs",
+      "history_file": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\source-history\\SRC-0076.cs",
+      "sha256": "052A38D52CD95C71FD3573255CF2962BD0C27D7C96199141E2E3C79E6EE8253E",
+      "preserved_history": {
+        "kind": "kb_snapshot",
+        "path": "source-history/SRC-0076.cs"
+      }
+    },
+    {
+      "source_id": "SRC-0077",
+      "path": "Fistnet.Genepool.Control/Rules/ExecuteOrganismEffectsRule.cs",
+      "history_file": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\source-history\\SRC-0077.cs",
+      "sha256": "2553C7D69C60732B57E980A45D44896AD21E89E4D4DD44D3ADB341DD11F46E14",
+      "preserved_history": {
+        "kind": "kb_snapshot",
+        "path": "source-history/SRC-0077.cs"
+      }
+    },
+    {
+      "source_id": "SRC-0078",
+      "path": "Fistnet.Genepool.Control/Rules/ExecuteOrganismDeadRule.cs",
+      "history_file": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\source-history\\SRC-0078.cs",
+      "sha256": "72852EC741E0D49CE9248D869CEC62F8F3A6B5E8C48321FA93720277F0AFCC52",
+      "preserved_history": {
+        "kind": "kb_snapshot",
+        "path": "source-history/SRC-0078.cs"
+      }
+    },
+    {
+      "source_id": "SRC-0080",
+      "path": "Fistnet.Genepool.Control/Gameboard/Board.cs",
+      "history_file": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\source-history\\SRC-0080.cs",
+      "sha256": "F461E92CEDA7AB498E6FED4251B21311390002521295B5B86DE5DF912994FFC4",
+      "preserved_history": {
+        "kind": "kb_snapshot",
+        "path": "source-history/SRC-0080.cs"
+      }
+    },
+    {
+      "source_id": "SRC-0081",
+      "path": "Fistnet.Genepool.Dna/Organism.cs",
+      "history_file": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\source-history\\SRC-0081.cs",
+      "sha256": "D209BBDAA89A797AC49D8770BBAA578A7A5BE18BA67FDBC78327C04E928BFCF6",
+      "preserved_history": {
+        "kind": "kb_snapshot",
+        "path": "source-history/SRC-0081.cs"
+      }
+    },
+    {
+      "source_id": "SRC-0082",
+      "path": "Fistnet.Genepool.Dna/Elements/Brain/StrategyNetwork.cs",
+      "history_file": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\source-history\\SRC-0082.cs",
+      "sha256": "531CCA0D818C79E8D047236A25962C2562E4E3509EFBDC0612ED8FD5A939C443",
+      "preserved_history": {
+        "kind": "kb_snapshot",
+        "path": "source-history/SRC-0082.cs"
+      }
+    },
+    {
+      "source_id": "SRC-0083",
+      "path": "Fistnet.Genepool.Control/Gameboard/BoardSquare.cs",
+      "history_file": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\source-history\\SRC-0083.cs",
+      "sha256": "7080A92A8888FFA2059C8CBDCF8C6946A5024E5DCFAEF5762E5491A20C929D16",
+      "preserved_history": {
+        "kind": "kb_snapshot",
+        "path": "source-history/SRC-0083.cs"
+      }
+    },
+    {
+      "source_id": "SRC-0085",
+      "path": "Fistnet.Genepool.Tests/Program.cs",
+      "history_file": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\source-history\\SRC-0085.cs",
+      "sha256": "DA58029EABF639AFD869B0766899767E371CC7884B18C237B504A130DF72EA59",
+      "preserved_history": {
+        "kind": "kb_snapshot",
+        "path": "source-history/SRC-0085.cs"
+      }
+    },
+    {
+      "source_id": "SRC-0088",
+      "path": "Fistnet.Genepool.Tests/DiagnosticScenarios.cs",
+      "history_file": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\source-history\\SRC-0088.cs",
+      "sha256": "C2C396603F823BBB6DF1C5382F283892A90A7FF5D4809A16718D7812F069D7AB",
+      "preserved_history": {
+        "kind": "kb_snapshot",
+        "path": "source-history/SRC-0088.cs"
+      }
+    },
+    {
+      "source_id": "SRC-0089",
+      "path": "Fistnet.Genepool.Tests/DiagnosticsTests.cs",
+      "history_file": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\source-history\\SRC-0089.cs",
+      "sha256": "BC86D44D7B182E29F2D71FF82BE2AABC4BBD2AB0BAFBF8896199E5C297594CCE",
+      "preserved_history": {
+        "kind": "kb_snapshot",
+        "path": "source-history/SRC-0089.cs"
+      }
+    },
+    {
+      "source_id": "SRC-0090",
+      "path": "Fistnet.Genepool.Tests/UiDiagnosticsTests.cs",
+      "sha256": "6DA71A7D746E6986440B31901C6ED3C06A59AE1A07EB7D51F7F36BF454D26C38",
+      "preserved_history": {
+        "kind": "unchanged_current_source",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\UiDiagnosticsTests.cs"
+      },
+      "temporary_copy_removed": true
+    },
+    {
+      "source_id": "SRC-0054",
+      "path": "Fistnet.Genepool.Control/SimulationSnapshot.cs",
+      "sha256": "657C35E219C25716045593DF951CBC56622002CF514C6754CC5E29D0696E6509",
+      "preserved_history": {
+        "kind": "git",
+        "commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+        "path": "Fistnet.Genepool.Control/SimulationSnapshot.cs",
+        "blob_oid": "d5fb996bc656edb302006221df11334184efd9d7",
+        "transform": "raw"
+      },
+      "temporary_copy_removed": true
+    },
+    {
+      "source_id": "SRC-0087",
+      "path": "Fistnet.Genepool.Dna/SimulationDiagnostics.cs",
+      "history_file": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\source-history\\SRC-0087.cs",
+      "sha256": "699E02B90F3F1A944993AB214B11156188DF923F33E73BC24E3AEDA845EF3B5F",
+      "preserved_history": {
+        "kind": "kb_snapshot",
+        "path": "source-history/SRC-0087.cs"
+      }
+    },
+    {
+      "source_id": "SRC-0086",
+      "path": "Fistnet.Genepool.Tests/README.md",
+      "history_file": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\source-history\\SRC-0086.md",
+      "sha256": "6AB7A0E8060A72B123FE8779E777B491EA7552D648949BA1566E5F3D4FA23401",
+      "preserved_history": {
+        "kind": "kb_snapshot",
+        "path": "source-history/SRC-0086.md"
+      }
+    }
+  ],
+  "snapshot_cleanup": {
+    "removed": 26,
+    "retained_registered": 12,
+    "scope": "Only owned copies no longer needed because pinned Git or unchanged current bytes are available; no original files removed."
+  }
+}

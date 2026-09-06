@@ -1,0 +1,261 @@
+{
+  "actor": "Seed Analyzer",
+  "at_utc": "2026-09-06T16:35:13.265080+00:00",
+  "kb_revision": 25,
+  "transaction_sha256": "E95E971183B3D37C420BD1C6F12B467B959AAFE8B2D706C7ED934478D6BBB1A2",
+  "preview_time": "2026-09-06T16:33:05+00:00",
+  "total_changes": 1100,
+  "explicit_changes_checked": 1078,
+  "pages": [
+    {
+      "offset": 0,
+      "fields_inspected": 100,
+      "counts": {
+        "core": 82,
+        "record": 18
+      },
+      "ids": {
+        "core": [
+          "core"
+        ],
+        "record": [
+          "FACT-0020",
+          "FACT-0033",
+          "FACT-0036",
+          "FACT-0037"
+        ]
+      },
+      "every_explicit_value_matches_reviewed_transaction_and_current_state": true
+    },
+    {
+      "offset": 100,
+      "fields_inspected": 100,
+      "counts": {
+        "record": 100
+      },
+      "ids": {
+        "record": [
+          "FACT-0037",
+          "FACT-0038",
+          "FACT-0039",
+          "INF-0006",
+          "INF-0007",
+          "REC-0005",
+          "REC-0006"
+        ]
+      },
+      "every_explicit_value_matches_reviewed_transaction_and_current_state": true
+    },
+    {
+      "offset": 200,
+      "fields_inspected": 100,
+      "counts": {
+        "record": 8,
+        "source": 92
+      },
+      "ids": {
+        "record": [
+          "REC-0006"
+        ],
+        "source": [
+          "SRC-0011",
+          "SRC-0013",
+          "SRC-0015",
+          "SRC-0020",
+          "SRC-0023",
+          "SRC-0025",
+          "SRC-0026",
+          "SRC-0027"
+        ]
+      },
+      "every_explicit_value_matches_reviewed_transaction_and_current_state": true
+    },
+    {
+      "offset": 300,
+      "fields_inspected": 100,
+      "counts": {
+        "source": 100
+      },
+      "ids": {
+        "source": [
+          "SRC-0027",
+          "SRC-0030",
+          "SRC-0031",
+          "SRC-0032",
+          "SRC-0033",
+          "SRC-0034",
+          "SRC-0046",
+          "SRC-0053",
+          "SRC-0054"
+        ]
+      },
+      "every_explicit_value_matches_reviewed_transaction_and_current_state": true
+    },
+    {
+      "offset": 400,
+      "fields_inspected": 100,
+      "counts": {
+        "source": 100
+      },
+      "ids": {
+        "source": [
+          "SRC-0057",
+          "SRC-0058",
+          "SRC-0061",
+          "SRC-0063",
+          "SRC-0064",
+          "SRC-0076",
+          "SRC-0077",
+          "SRC-0078",
+          "SRC-0080",
+          "SRC-0081"
+        ]
+      },
+      "every_explicit_value_matches_reviewed_transaction_and_current_state": true
+    },
+    {
+      "offset": 500,
+      "fields_inspected": 100,
+      "counts": {
+        "source": 100
+      },
+      "ids": {
+        "source": [
+          "SRC-0081",
+          "SRC-0082",
+          "SRC-0083",
+          "SRC-0085",
+          "SRC-0086",
+          "SRC-0087",
+          "SRC-0088",
+          "SRC-0089",
+          "SRC-0091",
+          "SRC-0092",
+          "SRC-0093"
+        ]
+      },
+      "every_explicit_value_matches_reviewed_transaction_and_current_state": true
+    },
+    {
+      "offset": 600,
+      "fields_inspected": 100,
+      "counts": {
+        "source": 100
+      },
+      "ids": {
+        "source": [
+          "SRC-0093",
+          "SRC-0094",
+          "SRC-0095",
+          "SRC-0096",
+          "SRC-0097",
+          "SRC-0098",
+          "SRC-0099",
+          "SRC-0100"
+        ]
+      },
+      "every_explicit_value_matches_reviewed_transaction_and_current_state": true
+    },
+    {
+      "offset": 700,
+      "fields_inspected": 100,
+      "counts": {
+        "source": 100
+      },
+      "ids": {
+        "source": [
+          "SRC-0100",
+          "SRC-0101",
+          "SRC-0102",
+          "SRC-0103",
+          "SRC-0104",
+          "SRC-0105",
+          "SRC-0106",
+          "SRC-0107"
+        ]
+      },
+      "every_explicit_value_matches_reviewed_transaction_and_current_state": true
+    },
+    {
+      "offset": 800,
+      "fields_inspected": 100,
+      "counts": {
+        "source": 100
+      },
+      "ids": {
+        "source": [
+          "SRC-0107",
+          "SRC-0108",
+          "SRC-0109",
+          "SRC-0110",
+          "SRC-0111",
+          "SRC-0112",
+          "SRC-0113",
+          "SRC-0114"
+        ]
+      },
+      "every_explicit_value_matches_reviewed_transaction_and_current_state": true
+    },
+    {
+      "offset": 900,
+      "fields_inspected": 100,
+      "counts": {
+        "source": 100
+      },
+      "ids": {
+        "source": [
+          "SRC-0114",
+          "SRC-0115",
+          "SRC-0116",
+          "SRC-0117",
+          "SRC-0118",
+          "SRC-0119",
+          "SRC-0120",
+          "SRC-0121"
+        ]
+      },
+      "every_explicit_value_matches_reviewed_transaction_and_current_state": true
+    },
+    {
+      "offset": 1000,
+      "fields_inspected": 100,
+      "counts": {
+        "source": 78,
+        "catalog": 2,
+        "core": 5,
+        "record": 15
+      },
+      "ids": {
+        "source": [
+          "SRC-0121",
+          "SRC-0122",
+          "SRC-0123",
+          "SRC-0124",
+          "SRC-0125",
+          "SRC-0126",
+          "SRC-0127"
+        ],
+        "catalog": [
+          "sources"
+        ],
+        "core": [
+          "core"
+        ],
+        "record": [
+          "FACT-0020",
+          "FACT-0033",
+          "FACT-0036",
+          "FACT-0037",
+          "FACT-0038",
+          "FACT-0039",
+          "INF-0006",
+          "INF-0007",
+          "REC-0005",
+          "REC-0006"
+        ]
+      },
+      "every_explicit_value_matches_reviewed_transaction_and_current_state": true
+    }
+  ],
+  "review_method": "Every full before/after preview value compared against current canonical state and the fully constructed Part2 transaction. Reviewed source mappings, status/authority, measured partial results and historical preservation; no omissions."
+}

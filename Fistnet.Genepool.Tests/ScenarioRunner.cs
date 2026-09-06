@@ -57,7 +57,7 @@ internal static class ScenarioRunner
         finally { if (observe) Board.SeasonCompleted -= Observe; }
     }
 
-    public static void ValidateWorld()
+    public static void ValidateWorld(bool allowSyntheticReserves = false)
     {
         var seen = new HashSet<Organism>(ReferenceEqualityComparer.Instance);
         var histogram = new Dictionary<DnaTypes, int>();
@@ -67,8 +67,12 @@ internal static class ScenarioRunner
             Check.True(cell.FoodRemaining <= BoardSquare.MAX_FOOD, "food exceeds cap");
             if (!cell.IsOccupied) continue;
             Check.True(seen.Add(cell.Occupant), "one organism occupies multiple cells");
+            Check.True(!cell.Occupant.IsDead, "dead organism remains after shared resolution");
+            Check.True(cell.Occupant.FoodBalance >= 0 && (allowSyntheticReserves || cell.Occupant.FoodBalance <= Organism.MAX_FOOD_CARRY),
+                "organism reserves outside the declared capacity");
             population++;
-            Check.True(Check.Scores(cell.Occupant).SelectMany(p => p.Value.Values).All(float.IsFinite), "non-finite brain score");
+            Check.True(Check.Field<Dictionary<string, Dictionary<byte, float>>>(cell.Occupant.Brain, "mesh")
+                .SelectMany(p => p.Value.Values).All(float.IsFinite), "non-finite brain score");
             foreach (var gene in cell.Occupant.DnaSequence)
             {
                 Check.True(ReferenceEquals(gene.Me, cell.Occupant), "gene has wrong owner");

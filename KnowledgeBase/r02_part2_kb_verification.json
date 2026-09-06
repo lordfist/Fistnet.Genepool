@@ -1,0 +1,130 @@
+{
+  "actor": "Seed Analyzer",
+  "at_utc": "2026-09-06T16:45:57.972108+00:00",
+  "scope": "R02 Part2 hand-back; no owner acceptance, Parts3-4, ecological success or additional runs implied",
+  "kb_verification": "PASS",
+  "deep_validation": {
+    "ok": true,
+    "errors": [],
+    "warnings": [],
+    "counts": {
+      "records": 74,
+      "sources": 127,
+      "historical_sources": 58,
+      "prepared_sources": 15
+    },
+    "core_estimated_tokens": 3094,
+    "deep": true,
+    "kb_revision": 30
+  },
+  "catalog_revision": 18,
+  "canonical_sha256": {
+    "core.json": "EBEBBEEC2088EF4A3374639C6CB4F1E47A32D8F8D2500A2DDD58D690BAED472B",
+    "records.jsonl": "3BCBA0CC4E2803524B5D24EE74057A75D43601F0509D9982D21B7D72FF46BBF7",
+    "sources.json": "3413BED1F0BAFC3281D806764303A2FEBEA84607ADD0CD4A3B23813C41FAA12A"
+  },
+  "revision_transitions": [
+    {
+      "from": 24,
+      "to": 25,
+      "effect": "Owner Part1 acceptance / Part2 authorization DEC-0014"
+    },
+    {
+      "from": 25,
+      "to": 26,
+      "effect": "Reviewed Part2 findings, source versions and core"
+    },
+    {
+      "from": 26,
+      "to": 30,
+      "effect": "Prepared SRC-0116, SRC-0117, SRC-0115, SRC-0124, one revision each"
+    }
+  ],
+  "transactions": {
+    "r02_part2_authority_transaction.json": "23B22B3B5B27B1544DD8A83BC8BDEE061833D832D6BC275912B6CBC768C6FA8D",
+    "r02_part2_result_transaction.json": "E95E971183B3D37C420BD1C6F12B467B959AAFE8B2D706C7ED934478D6BBB1A2"
+  },
+  "transaction_preview_receipt": {
+    "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r02_part2_preview_review.json",
+    "sha256": "DC80F5483645F47137698863748FD61567E067B211314D2F88632223DDC88B2A"
+  },
+  "record_effects": {
+    "added": [
+      "DEC-0014",
+      "FACT-0037",
+      "FACT-0038",
+      "FACT-0039",
+      "REC-0006",
+      "INF-0007"
+    ],
+    "updated": [
+      "INF-0006",
+      "FACT-0033",
+      "REC-0005",
+      "FACT-0020",
+      "FACT-0036"
+    ]
+  },
+  "source_effects": {
+    "added": 37,
+    "new_ids": "SRC-0091..SRC-0127",
+    "predecessors_updated": 33,
+    "new_preparations": 4
+  },
+  "verified_derived_artifact_identities": {
+    "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\IMPROVEMENT_RESULT_R02_PART2.md": "FF7CBDFE8E8EA849CB749B5F69D2FE210EFCF7764C1AA8C271FBEF5C2D596B70",
+    "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R02_PART2_CONTRACT.md": "0CF382B1A70FB742BE7287A5B368E2A4A3E06B1A5178F14BD22866005387FAFA",
+    "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r02_part2_results.json": "73452ECBC52AF9C7C4CFE278A48E8B18B2ABCB60C9DD496347206CFB5378E137",
+    "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r02_part2_builds.json": "4911B16E27DE7CB3A8DE8AF11A61F767F111CE9D46DA52BC6F63DF09D68DFD81",
+    "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r02_part2_verification.json": "3A807F46E3B0A8F2C7B28C7DEA27177A6BEFBFFF368916C5C5594A6B1638B507",
+    "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\IMPROVEMENT_RESULT_R02_PART1.md": "F3A682215665A35E6F119C8F1CC4141246D4C1C83493CBCCB02A1C21EB754C3B",
+    "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r02_part1_results.json": "D26706F02604BC3049D67B559ED65B635B1277F01E4E8760DA512DE43FF1C990",
+    "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r02_part1_builds.json": "7B56327D8D4FE3337E26F623244D12D2A3D6C70CCE801A9C2A65A9DC29DD1B0B",
+    "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\tools\\source_versions.py": "72A16C627A7AE9BCB9D20DFB4A6306D2DA32C82219A8E38CDDD5687D943F9980",
+    "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\tools\\kb.py": "48666A87C8B17074ED832B3A2A0772307C580A1984D8B671F50042E5210F21FC",
+    "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\tools\\tests\\test_source_snapshots.py": "29AA80BE14540A2FF0AE845ED0CA37305D1BBC3DCDD410E9A85A5EA0C97F2DE7",
+    "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\tools\\run_part2_checks.py": "89B73FFAE8B2426A9F65E5F0D7B0981FC526AEEBCC5E7C2621A248B688F7738A",
+    "D:\\Posao\\Fistnet.Genepool\\.SeedAnalyzer\\KB.md": "773522B4FFE53C989DE54D496C5760598C15DF4892835B98510E5A9A2C73572F"
+  },
+  "final_build_identity_checks": [
+    {
+      "configuration": "debug",
+      "source_inputs_verified": 69,
+      "assemblies_verified": 5,
+      "passed": 91,
+      "total": 91
+    },
+    {
+      "configuration": "release",
+      "source_inputs_verified": 69,
+      "assemblies_verified": 5,
+      "passed": 91,
+      "total": 91
+    }
+  ],
+  "part1_artifacts_still_match": true,
+  "snapshot_cleanup": {
+    "removed": 26,
+    "retained_registered": 12,
+    "scope": "Only owned copies no longer needed because pinned Git or unchanged current bytes are available; no original files removed."
+  },
+  "registered_snapshots_verified": [
+    "source-history/SRC-0076.cs",
+    "source-history/SRC-0077.cs",
+    "source-history/SRC-0078.cs",
+    "source-history/SRC-0080.cs",
+    "source-history/SRC-0081.cs",
+    "source-history/SRC-0082.cs",
+    "source-history/SRC-0083.cs",
+    "source-history/SRC-0085.cs",
+    "source-history/SRC-0086.md",
+    "source-history/SRC-0087.cs",
+    "source-history/SRC-0088.cs",
+    "source-history/SRC-0089.cs"
+  ],
+  "owned_build_diagnostic_or_canonical_staging_remaining": [],
+  "part2_overall_verification": "PARTIAL: functional verification passes; longer production horizons stopped at the declared budget",
+  "part2_long_runs": "All four production baselines stopped cleanly at their original budgets, with partial horizons retained.",
+  "receipt_preparation_note": "Initial read-only receipt preflight used a nonexistent catalog kb_revision field and stopped before writes. Corrected to the actual separate catalog_revision field; canonical KB unchanged.",
+  "review_status": "Awaiting owner review; stop after hand-back."
+}

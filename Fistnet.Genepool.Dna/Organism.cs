@@ -1,9 +1,7 @@
-﻿using System;
+using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Linq;
-using System.Text;
 using Fistnet.Genepool.Dna.Effects;
 using Fistnet.Genepool.Dna.Elements;
 using Fistnet.Genepool.Dna.Elements.Brain;
@@ -56,316 +54,271 @@ namespace Fistnet.Genepool.Dna
 
         #endregion Constants.
 
-        #region Dna sequence.
 
         public List<IDnaElement> DnaSequence { get; protected set; }
-
-        #endregion Dna sequence.
-
-        #region Activate/deactivate.
-
+        public StrategyNetwork Brain { get; private set; }
         private bool _isActive;
-
-        public void Activate()
-        {
-            this._isActive = true;
-        }
-
-        public void Deactivate()
-        {
-            this._isActive = false;
-        }
-
-        #endregion Activate/deactivate.
-
-        #region Position.
-
+        private byte currentSequenceIndex;
+        private byte _reproductionsInAge;
+        public void Activate() => _isActive = true;
+        public void Deactivate() => _isActive = false;
         public TargetTypes? NextRequestedPosition { get; private set; }
-
-        public void MoveDone()
+        public void MoveDone() => NextRequestedPosition = null;
+        public int FoodCapacity => Math.Max(0, MAX_FOOD_CARRY - FoodBalance);
+        public int GetAndResetTakenFood() { int taken = TakenFood; TakenFood = 0; return taken; }
+        public void SetAvailableFood(int food) => AvailableFood = Math.Clamp(food, 0, MAX_FOOD_CARRY);
+        public int ReceiveFood(int requested)
         {
-            this.NextRequestedPosition = null;
+            int actual = Math.Min(Math.Max(0, requested), FoodCapacity);
+            FoodBalance += actual;
+            TakenFood += actual;
+            return actual;
         }
+        // Pending construction is retired: a child exists only after a secured placement.
+        public Organism Child => null;
+        public void ReleaseChild() { }
+        public GeneIdentity LastAction { get; private set; }
+        public ActionOutcome LastOutcome { get; private set; }
 
-        #endregion Position.
-
-        #region Food creation and consumpsion.
-
-        public byte GetAndResetTakenFood()
-        {
-            byte taken = this.TakenFood;
-            this.TakenFood = 0;
-            return taken;
-        }
-
-        public void SetAvailableFood(byte food)
-        {
-            this.AvailableFood = food;
-        }
-
-        #endregion Food creation and consumpsion.
-
-        #region Child.
-
-        private Organism _child;
-
-        public Organism Child
-        {
-            get { return this._child; }
-            private set
-            {
-                this._child = value;
-                this.HasChild = (value != null);
-            }
-        }
-
-        #endregion Child.
-
-        #region Effects stack.
-
-        public ConcurrentBag<IDnaEffect> EffectsStack { get; private set; }
+        public ConcurrentBag<IDnaEffect> EffectsStack { get; private set; } = new ConcurrentBag<IDnaEffect>();
         private List<IDnaEffect> _referenceEffects = new List<IDnaEffect>();
-        public IReadOnlyList<IDnaEffect> PendingEffects => Common.IsReferenceMode
-            ? _referenceEffects.ToArray() : EffectsStack.ToArray();
-
+        [ThreadStatic] private static List<IDnaEffect> capturedEffects;
+        public IReadOnlyList<IDnaEffect> PendingEffects => Common.IsReferenceMode ? _referenceEffects.ToArray() : EffectsStack.ToArray();
         public void AddStackedEffect(IDnaEffect effect)
         {
-            if (this.EffectsStack == null)
-                this.EffectsStack = new ConcurrentBag<IDnaEffect>();
-
-            this.EffectsStack.Add(effect);
-            if (Common.IsReferenceMode) this._referenceEffects.Add(effect);
+            if (effect == null) throw new ArgumentNullException(nameof(effect));
+            if (capturedEffects != null) capturedEffects.Add(effect);
+            else { EffectsStack.Add(effect); if (Common.IsReferenceMode) _referenceEffects.Add(effect); }
+            SimulationDiagnostics.Current?.EffectQueued(this, effect);
         }
-
-        public void ExecuteEffectStack()
+        private void ClearEffects() { EffectsStack = new ConcurrentBag<IDnaEffect>(); _referenceEffects.Clear(); }
+        public void ExecuteEffectStack(Func<Organism, int, int> gather = null, Func<Organism, Organism, bool> birth = null)
         {
-            foreach (IDnaEffect item in this.PendingEffects)
-            {
-                this.ExecuteSingleEffect(item);
-            }
-            this.Starved();
-            // Aging/newborn ticks have effects but no selected action to evaluate.
-            if (this.hasChosenAction)
-                this.Brain.EvaluateResult(this.chosenSequenceIndex, this.chosenTarget);
-            this.hasChosenAction = false;
-            this.chosenTarget = null;
-            this.EffectsStack = new ConcurrentBag<IDnaEffect>();
-            this._referenceEffects.Clear();
+            // Compatibility/system-effect entry point. Board DNA actions use ResolveDecision atomically.
+            if (EffectsStack.IsEmpty && _referenceEffects.Count == 0) { Starved(); return; }
+            foreach (IDnaEffect effect in PendingEffects)
+                ApplyEffect(effect, null, gather, birth);
+            ClearEffects();
+            Starved();
         }
-
         private void Starved()
         {
-            if (this.FoodBalance < 0)  // STARVING
-            {
-                this.Health += this.FoodBalance;
-                this.FoodBalance = 0;
-            }
+            if (FoodBalance >= 0) return;
+            var before = new DiagnosticState(this);
+            Health = SaturatingAdd(Health, FoodBalance);
+            FoodBalance = 0;
+            SimulationDiagnostics.Current?.Starvation(this, before);
         }
-
-        private void ExecuteSingleEffect(IDnaEffect effect)
+        private static int SaturatingAdd(int value, int delta) => (int)Math.Clamp((long)value + delta, int.MinValue, int.MaxValue);
+        private void ChangeHealth(int delta)
         {
+            Health = SaturatingAdd(Health, delta);
+            if (HealthRule == HealthPolicy.Capped) Health = Math.Min(Health, Common.Policy.MaximumHealth);
+        }
+        private void ApplyEffect(IDnaEffect effect, ActionOutcome outcome, Func<Organism, int, int> gather,
+            Func<Organism, Organism, bool> birth)
+        {
+            Organism recipient = effect.Me;
+            DiagnosticState before = new DiagnosticState(recipient);
+            int oldHealth = recipient.Health;
             switch (effect.Effect)
             {
                 case EffectTypes.HealthChange:
-                    this.Health += (sbyte)effect.Value;
+                    recipient.ChangeHealth(Convert.ToInt32(effect.Value));
+                    if (outcome != null)
+                    { outcome.Damage += Math.Max(0, oldHealth - Math.Max(0, recipient.Health)); outcome.Healing += Math.Max(0, recipient.Health - oldHealth); }
                     break;
-
                 case EffectTypes.FoodChange:
-                    sbyte foodChange = (sbyte)effect.Value;
-                    if (foodChange > 0)
+                    int food = Convert.ToInt32(effect.Value);
+                    if (food > 0)
                     {
-                        if (this.AvailableFood < (byte)foodChange)
-                            foodChange = (sbyte)this.AvailableFood;
-
-                        this.TakenFood = (byte)foodChange;
-                        this.AvailableFood -= (byte)foodChange;
+                        int actual;
+                        if (gather != null) actual = gather(recipient, food);
+                        else { actual = recipient.ReceiveFood(Math.Min(food, recipient.AvailableFood)); recipient.AvailableFood -= actual; }
+                        if (outcome != null) outcome.FoodGathered += actual;
                     }
-
-                    this.FoodBalance += foodChange;
+                    else recipient.FoodBalance = SaturatingAdd(recipient.FoodBalance, food);
                     break;
-
                 case EffectTypes.Movement:
-                    this.NextRequestedPosition = (TargetTypes)effect.Value;
+                    recipient.NextRequestedPosition = (TargetTypes)effect.Value;
                     break;
-
                 case EffectTypes.Mutate:
-                    this.MutateMe((int)effect.Value, effect.DnaSequenceIndex);
-
+                    int mutations = recipient.MutateMe(Convert.ToInt32(effect.Value),
+                        ReferenceEquals(recipient, this) ? effect.DnaSequenceIndex : byte.MaxValue);
+                    if (outcome != null) outcome.Mutations += mutations;
                     break;
-
                 case EffectTypes.Birth:
-                    if (this.Child == null)
-                        this.BirthChild((Organism)effect.Value);
-                    this._reproductionsInAge++;
-
+                    bool placed = birth != null && birth(recipient, (Organism)effect.Value);
+                    if (outcome != null) { outcome.BirthPlaced = placed; if (placed) outcome.FoodSpent += -FOOD_REDUCTION_PER_BIRTH; }
                     break;
-
                 case EffectTypes.AgeChange:
-                    this.Age += (sbyte)effect.Value;
-                    if (this.Age < 0)
-                        this.Age = 0;
-
+                    recipient.Age = Math.Max(0, SaturatingAdd(recipient.Age, Convert.ToInt32(effect.Value)));
                     break;
-
-                default:
-                    throw new NotSupportedException("This effect type is not supported");
+                default: throw new NotSupportedException("Unknown effect type.");
             }
+            SimulationDiagnostics.Current?.EffectApplied(recipient, effect, before);
         }
 
-        #region Birth.
-
-        private byte _reproductionsInAge;
-
-        private void BirthChild(Organism otherParent)
+        public bool CanReproduceWith(Organism other) => !IsDead && other != null && !other.IsDead
+            && Age >= 1 && Age < MAX_AGE && other.Age >= 1 && other.Age < MAX_AGE
+            && FoodBalance >= -FOOD_REDUCTION_PER_BIRTH && _reproductionsInAge < MAX_REPRODUCTIONS_PER_AGE;
+        public Organism CommitBirth(Organism other)
         {
-            if (this._reproductionsInAge < Organism.MAX_REPRODUCTIONS_PER_AGE && this.FoodBalance > 0)
-                this.Child = new Organism(this, otherParent);
-            this._reproductionsInAge++;
+            if (!CanReproduceWith(other)) return null;
+            var child = new Organism(this, other);
+            FoodBalance += FOOD_REDUCTION_PER_BIRTH;
+            _reproductionsInAge++;
+            HasChild = true;
+            SimulationDiagnostics.Current?.ChildCreated(this, other, child);
+            return child;
         }
-
-        public void ReleaseChild()
-        {
-            if (this.Child != null)
-            {
-                this.AddStackedEffect(new ChangeFoodEffect(this, Organism.FOOD_REDUCTION_PER_BIRTH, Organism.DNA_SEQUENCE_MAXLENGTH)); // reduce food, birth was made
-                this.Child = null;
-            }
-        }
-
-        #endregion Birth.
-
-        #region Mutation.
-
-        private void MutateMe(int seed, byte sequenceIndexThatMutates)
+        private int MutateMe(int seed, byte protectedSlot)
         {
             IRandomSource random = Common.CreateLocalRandom(seed);
-            byte[] randomList = new byte[Organism.DNA_SEQUENCE_MAXLENGTH];
-
-            for (int i = 0; i < Organism.DNA_SEQUENCE_MAXLENGTH; i++)
-            {
-                randomList[i] = unchecked((byte)random.Next(Organism.DNA_SEQUENCE_MAXLENGTH));
-            }
-
-            byte remainingChange = Organism.DNA_SEQUENCE_MAXMUTATE;
+            byte[] candidates = new byte[DNA_SEQUENCE_MAXLENGTH];
+            for (int i = 0; i < candidates.Length; i++) candidates[i] = (byte)random.Next(DNA_SEQUENCE_MAXLENGTH);
             var selected = new HashSet<byte>();
-
-            int index = 0;
-            while (remainingChange > 0 && index < randomList.Length)
+            foreach (byte slot in candidates)
             {
-                if (randomList[index] != sequenceIndexThatMutates && selected.Add(randomList[index]))
-                {
-                    this.DnaSequence[randomList[index]] = DnaElementFactory.GetRandomDnaElement(this, randomList[index]);
-                    remainingChange--;
-                }
-
-                index++;
+                if (slot == protectedSlot || !selected.Add(slot)) continue;
+                DnaSequence[slot] = DnaElementFactory.GetRandomDnaElement(this, slot);
+                Brain.InvalidateGene(slot);
+                if (selected.Count == DNA_SEQUENCE_MAXMUTATE) break;
             }
-
-            this.DnaCode = Common.CalculateOrganismDnaCode(this.DnaSequence);
+            DnaCode = Common.CalculateOrganismDnaCode(DnaSequence);
+            return selected.Count;
         }
 
-        #endregion Mutation.
-
-        #endregion Effects stack.
-
-        #region Execute DNA sequence element.
-
-        public StrategyNetwork Brain { get; private set; }
-
-        public TargetTypes GetNextDnaSequenceTarget()
+        public bool IsActionEligible(IDnaElement gene, Organism target)
         {
-            byte chosenIndex = 0;
-            return this.Brain.ChooseOutput(null, out chosenIndex).Target;
+            if (IsDead || gene == null) return false;
+            switch (gene.DnaType)
+            {
+                case DnaTypes.Move: return true; // Blocked attempts remain observable, including Self.
+                case DnaTypes.Eat: return ReferenceEquals(target, this) && FoodBalance >= -FEED_FOOD_COST;
+                case DnaTypes.Evolve: return ReferenceEquals(target, this);
+                case DnaTypes.GenerateFood: return target != null && !target.IsDead && target.FoodCapacity > 0 && target.AvailableFood > 0;
+                case DnaTypes.Kill: return target != null && !target.IsDead && (Common.Policy.Attack == AttackPolicy.DamageOnly
+                    || (!ReferenceEquals(target, this) && FoodBalance >= Common.Policy.AttackCost));
+                case DnaTypes.Heal: return target != null && !target.IsDead && target.DnaCode == DnaCode && FoodBalance >= -HEAL_POWER_COST
+                    && target.Health < (target.HealthRule == HealthPolicy.Capped ? Common.Policy.MaximumHealth : OVERWEIGHT_DEATH - HEAL_POWER);
+                case DnaTypes.CombineDna: return CanReproduceWith(target);
+                case DnaTypes.Infect: return target != null && !target.IsDead && FoodBalance >= -INFECT_POWER_COST;
+                default: return false;
+            }
         }
-
-        private byte currentSequenceIndex;
-        private byte chosenSequenceIndex;
-        private Organism chosenTarget;
-        private bool hasChosenAction;
-
-        public void ExecuteNextDnaSequence(Organism organismAffected)
+        public ActionDecision PrepareSeason(IReadOnlyList<ActionCandidate> candidates)
         {
-            this.hasChosenAction = false;
-            this.chosenTarget = null;
-            if (!this._isActive)
-                return;
-
-            if (this.Age >= Organism.MAX_AGE)
-                this.Health = 0;
-
-            if (!this.IsDead && currentSequenceIndex < Organism.DNA_SEQUENCE_MAXLENGTH)
+            if (!_isActive) return null;
+            LifetimeSeasons++;
+            HasChild = false;
+            LastAction = null; LastOutcome = null;
+            if (Age >= MAX_AGE)
             {
-                this.Brain.ChooseOutput(organismAffected, out chosenSequenceIndex).ExecuteDna(organismAffected);
-                this.chosenTarget = organismAffected;
-                this.hasChosenAction = true;
-
-                currentSequenceIndex++;
+                var before = new DiagnosticState(this); Health = 0;
+                SimulationDiagnostics.Current?.AgeLimit(this, before);
             }
-            else if (!this.IsDead && currentSequenceIndex >= Organism.DNA_SEQUENCE_MAXLENGTH)
+            if (IsDead) return null;
+            if (currentSequenceIndex >= DNA_SEQUENCE_MAXLENGTH)
             {
-                this.AddStackedEffect(new ChangeFoodEffect(this, Organism.FOOD_REDUCTION_PER_AGE, Organism.DNA_SEQUENCE_MAXLENGTH)); // reduce health, generation is getting older
-                this.Age++; // increase age
-                this.SequenceAge++;
-                this._reproductionsInAge = 0;
-                currentSequenceIndex = 0;  // reboot dna sequence
+                using (SimulationDiagnostics.Current?.BeginSystemEffect(this, "aging-cost"))
+                    AddStackedEffect(new ChangeFoodEffect(this, FOOD_REDUCTION_PER_AGE, DNA_SEQUENCE_MAXLENGTH));
+                Age++; SequenceAge++; _reproductionsInAge = 0; currentSequenceIndex = 0;
+                return null;
             }
+            currentSequenceIndex++;
+            return Brain.Choose(candidates, Common.Policy);
+        }
+        public void ResolveDecision(ActionDecision decision, Func<Organism, int, int> gather,
+            Func<Organism, Organism, bool> birth)
+        {
+            if (decision != null && (decision.Completed || decision.Outcome.Attempted))
+                throw new InvalidOperationException("Cannot resolve a decision twice.");
+            if (decision != null && !ReferenceEquals(decision.Candidate.Gene.Me, this))
+                throw new InvalidOperationException("Decision belongs to another actor.");
+            ExecuteEffectStack(gather, birth); // This turn's aging/system effects; no learning occurs here.
+            if (decision == null) return;
+            ActionCandidate candidate = decision.Candidate;
+            ActionOutcome outcome = decision.Outcome;
+            outcome.Attempted = true;
+            if (!IsActionEligible(candidate.Gene, candidate.Target)) { outcome.Status = "ineligible_at_resolution"; return; }
+            if (capturedEffects != null) throw new InvalidOperationException("Nested action transaction.");
+            var effects = new List<IDnaEffect>();
+            capturedEffects = effects;
+            try
+            {
+                using (SimulationDiagnostics.Current?.BeginAction(this, candidate.Gene, candidate.Target))
+                    candidate.Gene.ExecuteDna(candidate.Target);
+            }
+            finally { capturedEffects = null; }
+            var costs = new Dictionary<Organism, int>();
+            foreach (var effect in effects)
+                if (effect.Effect == EffectTypes.FoodChange && Convert.ToInt32(effect.Value) < 0)
+                { costs.TryGetValue(effect.Me, out int existing); costs[effect.Me] = checked(existing - Convert.ToInt32(effect.Value)); }
+            bool predator = candidate.Identity.Type == DnaTypes.Kill && Common.Policy.Attack == AttackPolicy.ReserveTransfer;
+            if (predator) { costs.TryGetValue(this, out int oldCost); costs[this] = oldCost + Common.Policy.AttackCost; }
+            if (costs.Any(pair => pair.Key.IsDead || pair.Key.FoodBalance < pair.Value))
+            { outcome.Status = "insufficient_reserves"; return; }
+            if (predator) { FoodBalance -= Common.Policy.AttackCost; outcome.FoodSpent += Common.Policy.AttackCost; }
+            foreach (var effect in effects)
+            {
+                if (effect.Effect == EffectTypes.FoodChange && Convert.ToInt32(effect.Value) < 0)
+                    outcome.FoodSpent -= Convert.ToInt32(effect.Value);
+                ApplyEffect(effect, outcome, gather, birth);
+            }
+            if (predator && candidate.Target.Health <= 0 && !IsDead && outcome.Damage > 0)
+            {
+                // Only this direct lethal transaction transfers reserves; later attacks cannot target a corpse.
+                int transfer = Math.Min(Common.Policy.AttackFoodLimit, Math.Min(FoodCapacity, Math.Max(0, candidate.Target.FoodBalance)));
+                candidate.Target.FoodBalance -= transfer; FoodBalance += transfer; outcome.FoodTransferred = transfer;
+            }
+            outcome.Committed = effects.Count > 0 && (candidate.Identity.Type != DnaTypes.CombineDna || outcome.BirthPlaced);
+            outcome.Status = outcome.Committed ? "committed" : "no_effect";
+            SimulationDiagnostics.Current?.Count("actions.transactions_completed");
+            SimulationDiagnostics.Current?.Count("food.transaction_spent", outcome.FoodSpent);
+            SimulationDiagnostics.Current?.Count("food.transaction_gathered", outcome.FoodGathered);
+            SimulationDiagnostics.Current?.Count("food.predation_transferred", outcome.FoodTransferred);
+        }
+        public void FinishSeason(ActionDecision decision, bool actorPresent, bool targetPresent)
+        {
+            if (decision == null) return;
+            var outcome = decision.Outcome;
+            outcome.ActorPresent = actorPresent; outcome.TargetPresent = targetPresent;
+            outcome.ActorAfter = this.CreateSnapshot(); outcome.TargetAfter = decision.Candidate.Target?.CreateSnapshot();
+            Brain.Complete(decision, outcome);
+            LastAction = decision.Candidate.Identity; LastOutcome = outcome;
         }
 
-        #endregion Execute DNA sequence element.
-
-        #region Constructor.
-
+        // Retained for small manual/legacy callers. Board uses PrepareSeason/ResolveDecision/FinishSeason.
+        public void ExecuteNextDnaSequence(Organism target)
+        {
+            var candidates = DnaSequence.Select(g => new ActionCandidate(g, g.Target == TargetTypes.Self ? this : target,
+                eligible: IsActionEligible(g, g.Target == TargetTypes.Self ? this : target))).ToList();
+            var decision = PrepareSeason(candidates);
+            ResolveDecision(decision, null, null);
+            FinishSeason(decision, !IsDead, target != null && !target.IsDead);
+        }
         public Organism()
         {
-            this.Health = Organism.INITAL_HEALTH;
-            this.DnaSequence = DnaElementFactory.GetRandomDnaSequence(this, Organism.DNA_SEQUENCE_MAXLENGTH);
-            this.NextRequestedPosition = null;
-            this.FoodBalance = Organism.INITAL_FOOD_BALANCE;
-            this.Age = 0;
-            this.TakenFood = 0;
-            this.EffectsStack = new ConcurrentBag<IDnaEffect>();
-            this.DnaCode = Common.CalculateOrganismDnaCode(this.DnaSequence);
-            this._reproductionsInAge = 0;
-            this.SequenceAge = 0;
-
-            this.Brain = new StrategyNetwork(this);
+            Id = Common.NextOrganismId(); Health = HealthRule == HealthPolicy.Capped ? Math.Min(INITAL_HEALTH, Common.Policy.MaximumHealth) : INITAL_HEALTH; FoodBalance = INITAL_FOOD_BALANCE;
+            DnaSequence = DnaElementFactory.GetRandomDnaSequence(this, DNA_SEQUENCE_MAXLENGTH);
+            DnaCode = Common.CalculateOrganismDnaCode(DnaSequence); Brain = new StrategyNetwork(this);
         }
-
         public Organism(Organism parent1, Organism parent2)
         {
-            this.Health = Organism.INITAL_HEALTH;
-            this.DnaSequence = DnaElementFactory.GetDnaSequenceFromParents(this, parent1, parent2, Organism.DNA_SEQUENCE_MAXLENGTH);
-            this.NextRequestedPosition = null;
-            this.FoodBalance = Math.Abs(Organism.FOOD_REDUCTION_PER_BIRTH);
-            this.Age = 0;
-            this.EffectsStack = new ConcurrentBag<IDnaEffect>();
-            this.DnaCode = Common.CalculateOrganismDnaCode(this.DnaSequence);
-            this._reproductionsInAge = 0;
-
-            if (this.DnaCode == parent1.DnaCode)
-                this.SequenceAge = parent1.SequenceAge;
-            else
-                this.SequenceAge = 0;
-
-            this.Brain = new StrategyNetwork(this);
-            this.Brain.LearnFromParent(parent1);
-            this.Brain.LearnFromParent(parent2);
+            Id = Common.NextOrganismId(); Parent1Id = parent1.Id; Parent2Id = parent2.Id;
+            Generation = Math.Max(parent1.Generation, parent2.Generation) + 1;
+            Health = HealthRule == HealthPolicy.Capped ? Math.Min(INITAL_HEALTH, Common.Policy.MaximumHealth) : INITAL_HEALTH; FoodBalance = -FOOD_REDUCTION_PER_BIRTH;
+            DnaSequence = DnaElementFactory.GetDnaSequenceFromParents(this, parent1, parent2, DNA_SEQUENCE_MAXLENGTH);
+            DnaCode = Common.CalculateOrganismDnaCode(DnaSequence);
+            SequenceAge = DnaCode == parent1.DnaCode ? parent1.SequenceAge : 0;
+            Brain = new StrategyNetwork(this); Brain.LearnFromParents(parent1, parent2);
         }
-
         public Organism(List<IDnaElement> dnaSequence)
         {
-            this.Health = Organism.INITAL_HEALTH;
-            this.DnaSequence = dnaSequence;
-            this.NextRequestedPosition = null;
-            this.FoodBalance = Organism.INITAL_FOOD_BALANCE;
-            this.Age = 0;
-            this.EffectsStack = new ConcurrentBag<IDnaEffect>();
-            this.DnaCode = Common.CalculateOrganismDnaCode(this.DnaSequence);
-            this._reproductionsInAge = 0;
-
-            this.Brain = new StrategyNetwork(this);
+            Id = Common.NextOrganismId(); Health = HealthRule == HealthPolicy.Capped ? Math.Min(INITAL_HEALTH, Common.Policy.MaximumHealth) : INITAL_HEALTH; FoodBalance = INITAL_FOOD_BALANCE;
+            DnaSequence = dnaSequence.Select(g => g.CopyToChild(this)).ToList();
+            DnaCode = Common.CalculateOrganismDnaCode(DnaSequence); Brain = new StrategyNetwork(this);
         }
-
-        #endregion Constructor.
     }
 }

@@ -46,8 +46,8 @@ namespace Fistnet.Genepool.Dna.Elements
             if (!this.Me.IsDead)
             {
                 this.Me.AddStackedEffect(new ChangePositionEffect(this.Me, this.Target, this.DnaSequenceIndex));
-                this._executionNumber++;
-                if (Math.Abs(this.DnaCode) % this._executionNumber == 10)
+                this._executionNumber = this._executionNumber == int.MaxValue ? 1 : this._executionNumber + 1;
+                if (Math.Abs((long)this.DnaCode) % this._executionNumber == 10)
                 {
                     this.Target = Common.GetRandomTarget();
                     this._executionNumber = 0;

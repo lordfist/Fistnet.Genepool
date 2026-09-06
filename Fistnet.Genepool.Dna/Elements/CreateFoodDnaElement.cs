@@ -41,7 +41,7 @@ namespace Fistnet.Genepool.Dna.Elements
 
         public void ExecuteDna(Organism organismAffected)
         {
-            if (organismAffected != null && !organismAffected.IsDead && organismAffected.FoodBalance < Organism.MAX_FOOD_CARRY)
+            if (this.Me.IsActionEligible(this, organismAffected))
             {
                 sbyte foodGathered = Organism.FOOD_GATHER;
                 if (organismAffected.FoodBalance + foodGathered > Organism.MAX_FOOD_CARRY)

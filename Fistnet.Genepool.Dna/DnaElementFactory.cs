@@ -24,6 +24,11 @@ namespace Fistnet.Genepool.Dna
 
             DnaTypes dnaTypeSelected = (DnaTypes)(unchecked((byte)seed % Enum.GetValues(typeof(DnaTypes)).Length));
 
+            return CreateDnaElement(owner, sequenceIndex, dnaTypeSelected);
+        }
+
+        private static IDnaElement CreateDnaElement(Organism owner, byte sequenceIndex, DnaTypes dnaTypeSelected)
+        {
             IDnaElement dnaElement;
 
             switch (dnaTypeSelected)
@@ -69,16 +74,16 @@ namespace Fistnet.Genepool.Dna
 
         public static List<IDnaElement> GetRandomDnaSequence(Organism owner, byte sequenceLength)
         {
+            DnaTypes[] types = Enum.GetValues<DnaTypes>();
+            if (sequenceLength > types.Length * Organism.DNA_SEQUENCE_MAXSINGLETYPE)
+                throw new ArgumentOutOfRangeException(nameof(sequenceLength), "Sequence exceeds the per-type capacity.");
             List<IDnaElement> dnaSequence = new List<IDnaElement>();
 
             for (byte i = 0; i < sequenceLength; i++)
             {
-                IDnaElement chosenElement = DnaElementFactory.GetRandomDnaElement(owner, i);
-
-                if (dnaSequence.CountOfType(chosenElement.DnaType) > Organism.DNA_SEQUENCE_MAXSINGLETYPE)
-                    chosenElement = DnaElementFactory.GetRandomDnaElement(owner, i);
-
-                dnaSequence.Add(chosenElement);
+                DnaTypes[] allowed = types.Where(type => dnaSequence.CountOfType(type) < Organism.DNA_SEQUENCE_MAXSINGLETYPE).ToArray();
+                DnaTypes selected = allowed[Common.GetRandomIntegerSeed(allowed.Length)];
+                dnaSequence.Add(CreateDnaElement(owner, i, selected));
             }
 
             return dnaSequence;

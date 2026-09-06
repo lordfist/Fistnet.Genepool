@@ -46,6 +46,17 @@ namespace Fistnet.Genepool.Dna
     {
         public static IRandomSource RandomSource { get; private set; } = new SystemRandomSource(Environment.TickCount);
         public static bool IsReferenceMode { get; private set; }
+        public static SimulationPolicy Policy { get; private set; } = new SimulationPolicy();
+        private static long organismIdentity;
+        public static long OrganismIdentityCounter => System.Threading.Interlocked.Read(ref organismIdentity);
+        public static void ConfigurePolicy(SimulationPolicy policy)
+        {
+            policy = policy ?? new SimulationPolicy();
+            policy.Validate();
+            Policy = policy;
+            organismIdentity = 0;
+        }
+        internal static long NextOrganismId() => System.Threading.Interlocked.Increment(ref organismIdentity);
 
         // Configure only while the simulation is stopped, at a complete run reset.
         public static void ConfigureRandom(IRandomSource source, bool referenceMode)
@@ -104,7 +115,7 @@ namespace Fistnet.Genepool.Dna
 
         public static TargetTypes TryChangeTarget(TargetTypes oldTarget)
         {
-            if (Common.GetRandomIntegerSeed(Organism.TARGET_CHANGE_SCALE) <= Organism.TARGET_CHANGE_CHANCE)
+            if (Common.GetRandomIntegerSeed(Organism.TARGET_CHANGE_SCALE) < Organism.TARGET_CHANGE_CHANCE)
                 return (TargetTypes)(Common.GetRandomIntegerSeed() % 9);
             else
                 return oldTarget;

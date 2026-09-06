@@ -1,0 +1,50 @@
+{
+  "actor": "Seed Analyzer",
+  "transaction_sha256": "3F91E93233F9FB5504A68809FD51ED6FAE5347CF6C563F537ED367A29EBEB444",
+  "reviewed_preview_changes": 39,
+  "apply": {
+    "ok": true,
+    "dry_run": false,
+    "from_revision": 18,
+    "to_revision": 19,
+    "effects": {
+      "record_upserts": 2,
+      "source_upserts": 0,
+      "core_fields_patched": 6
+    },
+    "validation_scope": "deep_sources_and_prepared",
+    "write_outcome": {
+      "stage": "commit_completed",
+      "replaced_files": [
+        "records.jsonl",
+        "sources.json",
+        "core.json"
+      ],
+      "commit_completed": true,
+      "verification_completed": true,
+      "rollback_performed": false,
+      "recovery_required": false,
+      "cleanup_errors": [],
+      "replacement_uncertain": false
+    },
+    "hashes": {
+      "core.json": "5CAF5A8B3B2C995AF2DF1DF3BA7B6A91692EC14A86AEC53FCC20336369F7C66D",
+      "records.jsonl": "38FF23A82119BECE26491D30D4C17210E00533878760CB78A3A5F188097DA8DD",
+      "sources.json": "2D408A2D5641580F0799C5AE56E7DE8F76B32B0CF02C9FD98607AEDF43DC1C78"
+    }
+  },
+  "deep_validation": {
+    "ok": true,
+    "errors": [],
+    "warnings": [],
+    "counts": {
+      "records": 51,
+      "sources": 70,
+      "historical_sources": 14,
+      "prepared_sources": 11
+    },
+    "core_estimated_tokens": 3382,
+    "deep": true,
+    "kb_revision": 19
+  }
+}

@@ -3,22 +3,23 @@
     "root": "D:\\Posao\\Fistnet.Genepool",
     "purpose": "Make this experiment a better simulation and more fun to watch.",
     "purpose_origin_record": "DEC-0002",
-    "status": "first_improvement_verified_awaiting_owner_viewing",
+    "status": "R02_Part2_implemented_verification_partial_awaiting_owner_review",
     "phase": "EVALUATION",
     "root_semantics": "Exact physical experiment root explicitly assigned by User; KB tools bound to this root.",
     "model": "Provisional artificial-life sandbox with inherited action repertoires and individual learning.",
     "model_record": "INF-0001",
     "model_accepted": false,
     "design_accepted": true,
-    "trial_authorized": true,
-    "trial_scope": "Completed bounded R01 suite; no unattended or extended trial active."
+    "trial_authorized": false,
+    "trial_scope": "No active trial; bounded Part2 runs stopped/completed. Further work awaits owner review.",
+    "design_accepted_scope": "DEC-0014 accepts Part1 and authorizes Part2 implementation; Part2 result and optional policy promotion remain unaccepted."
   },
-  "kb_revision": 17,
+  "kb_revision": 30,
   "next_decision_order": [
-    "Q-0001"
+    "Q-0003"
   ],
   "open_question_ids": [
-    "Q-0001"
+    "Q-0003"
   ],
   "owner_decision_ids": [
     "DEC-0001",
@@ -28,7 +29,13 @@
     "DEC-0005",
     "DEC-0006",
     "DEC-0007",
-    "DEC-0008"
+    "DEC-0008",
+    "DEC-0009",
+    "DEC-0010",
+    "DEC-0011",
+    "DEC-0012",
+    "DEC-0013",
+    "DEC-0014"
   ],
   "pinned_record_ids": [
     "DEC-0001",
@@ -84,7 +91,11 @@
         "Q-0002",
         "DEC-0007",
         "FACT-0024",
-        "FACT-0025"
+        "FACT-0025",
+        "FACT-0028",
+        "FACT-0029",
+        "INF-0004",
+        "DEC-0009"
       ]
     },
     "environment_capabilities": {
@@ -110,26 +121,64 @@
       "record_ids": [
         "DEC-0006",
         "FACT-0020",
-        "FACT-0019"
+        "FACT-0019",
+        "DEC-0013",
+        "FACT-0036",
+        "FACT-0039"
       ]
     },
     "current_implementation": {
       "record_ids": [
-        "DEC-0007",
-        "FACT-0022",
-        "FACT-0023",
-        "FACT-0024",
-        "FACT-0025",
-        "Q-0001"
+        "DEC-0009",
+        "DEC-0014",
+        "FACT-0037",
+        "FACT-0038",
+        "INF-0007"
+      ]
+    },
+    "r02_research_and_proposal": {
+      "record_ids": [
+        "DEC-0010",
+        "CLAIM-0004",
+        "FACT-0030",
+        "FACT-0031",
+        "FACT-0032",
+        "INF-0005",
+        "CLAIM-0005",
+        "REC-0005",
+        "Q-0001",
+        "DEC-0011",
+        "Q-0003",
+        "DEC-0012"
+      ]
+    },
+    "r02_part1_result": {
+      "record_ids": [
+        "DEC-0012",
+        "FACT-0033",
+        "FACT-0034",
+        "FACT-0035",
+        "INF-0006",
+        "Q-0003"
+      ]
+    },
+    "r02_part2_result": {
+      "record_ids": [
+        "DEC-0014",
+        "FACT-0037",
+        "FACT-0038",
+        "REC-0006",
+        "INF-0007",
+        "Q-0003"
       ]
     }
   },
   "schema_version": 1,
   "state_files": {
-    "records_jsonl_sha256": "5D9C8E0D968346C2D062C450EF9EADFFD9130350E4856C3073EF1F0653E9A306",
-    "sources_json_sha256": "2D408A2D5641580F0799C5AE56E7DE8F76B32B0CF02C9FD98607AEDF43DC1C78"
+    "records_jsonl_sha256": "3BCBA0CC4E2803524B5D24EE74057A75D43601F0509D9982D21B7D72FF46BBF7",
+    "sources_json_sha256": "3413BED1F0BAFC3281D806764303A2FEBEA84607ADD0CD4A3B23813C41FAA12A"
   },
-  "updated_at": "2026-09-06T13:09:38+00:00",
+  "updated_at": "2026-09-06T16:39:09+00:00",
   "discovery": {
     "actor": "Seed Analyzer",
     "source_horizon_utc": "2026-09-06T01:04:55.1867052Z",
@@ -153,148 +202,145 @@
     "actor": "Seed Analyzer",
     "knowledgebase_root": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase",
     "continuing_kb_authority": "Routine in-root KB retrieval, validation, preparation and transactions remain authorized. DEC-0006 permits adapting tools with proportionate checks. The earlier unversioned-KB premise is superseded for canonical files by FACT-0027; current edits still require normal revision/preview/verification safeguards.",
-    "originals": "R01 authorized edits and local tests complete under DEC-0007; prior source bytes verified from local Git; no commit/push.",
-    "next_action": "Report verified first iteration and stop for owner viewing feedback or next applicable instruction; no larger experiment or role transition.",
-    "current_stage_record": "DEC-0007",
-    "environment_assessment": "Historical environment assessment used installed metadata and disposable synthetic probes; subsequent bounded source repair is recorded separately in FACT-0019."
+    "originals": "Part2 authorized source changes complete. Historical predecessor bytes retained in pinned Git or exact KB-local snapshots. No Git writes.",
+    "next_action": "Stopped for owner review of Part2; no Parts3-4 or further runs.",
+    "current_stage_record": "DEC-0014",
+    "environment_assessment": "Historical environment assessment used installed metadata and disposable synthetic probes; subsequent bounded source repair is recorded separately in FACT-0019.",
+    "current_research_scope": "Part2 implemented against accepted Part1 horizon; functional verification passes and long production horizons are partial."
   },
   "last_maintenance": {
-    "at": "2026-09-06T13:09:38+00:00",
+    "at": "2026-09-06T16:39:09+00:00",
     "actor": "Seed Analyzer",
-    "note": "Record owner feedback, keep-KB-in-Git decision, completed three-project reference cleanup and actual VS2022 rebuild/fast-test verification, preserving original lineage."
+    "tool": "prepare.py",
+    "note": "Prepared 1 registered source(s)."
   },
   "proposal": {
-    "id": "R01",
-    "record_id": "REC-0002",
-    "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\IMPROVEMENT_PROPOSAL_R01.md",
-    "sha256": "D2C10891852240B1C28F85E43084E7C6C7624224DC793401F3B403756BB4B0E5",
-    "status": "Bounded implementation and automated checks complete; owner viewing checkpoint pending",
-    "prepared_at_utc": "2026-09-06T10:19:34.8131401Z",
+    "id": "R02",
+    "record_id": "REC-0005",
+    "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\IMPROVEMENT_PROPOSAL_R02.md",
+    "sha256": "724B24D27F92C33757C3E3F0589F108B371525CEDD1FEE6FE1B8CA54A68C8B2F",
+    "status": "Part1 accepted; Part2 implemented with partial longer-run verification, awaiting owner review; Parts3-4 deferred",
+    "prepared_at_utc": "2026-09-06T13:56:32.311478+00:00",
+    "external_research_used": true,
     "tests_implemented": true,
     "tests_executed": true,
-    "external_research_used": false,
-    "authorization_record": "DEC-0007",
+    "research_authorization_record": "DEC-0010",
+    "implementation_authorized": true,
+    "source_commit_horizon": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
     "result_record_ids": [
-      "FACT-0023",
-      "FACT-0024",
-      "FACT-0025"
-    ]
+      "FACT-0030",
+      "FACT-0031",
+      "FACT-0032",
+      "INF-0005",
+      "CLAIM-0005",
+      "FACT-0033",
+      "FACT-0034",
+      "FACT-0035",
+      "INF-0006",
+      "FACT-0037",
+      "FACT-0038",
+      "REC-0006",
+      "INF-0007"
+    ],
+    "owner_clarification_record": "DEC-0011",
+    "updated_at_utc": "2026-09-06T15:14:46.016303+00:00",
+    "open_metric_record": "Q-0003",
+    "implementation_scope": "Part2 completed implementation only; results await owner review",
+    "implementation_authorization_record": "DEC-0014",
+    "tests_scope": "Part2 functional mechanics/policy tests and bounded default baselines; no ecological acceptance"
   },
   "environment": {
-    "assessed_by": "Seed Analyzer",
-    "observed_at_utc": "2026-09-06T10:45:01.3266452Z",
-    "status": "Actual baseline and final solution builds plus tests verified",
-    "record_ids": [
-      "FACT-0013",
-      "FACT-0014",
-      "FACT-0015",
-      "FACT-0016",
-      "REC-0003",
-      "FACT-0022",
-      "FACT-0024"
-    ],
+    "status": "VS2022 whole solution Debug/Release and91/91tests each verified for Part2",
+    "sdk_for_vs2022": "9.0.315",
     "report": {
       "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\ENVIRONMENT_CAPABILITIES_R01.md",
       "sha256": "102A4FE72EA9CC4ACA43A0DEF81E2507CA5BD3D1ADC78FFBCC2B254E81939731",
       "bytes": 10515,
       "status": "Environment assessment with dated owner-build clarification"
     },
-    "evidence": {
-      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\environment_capabilities_20260906.json",
-      "sha256": "F743C92D5872BFF21BE7ED1215EA12B8DDE360B4892A98E818B008A8561C60CD",
-      "bytes": 39978,
-      "status": "Seed-derived environment observations; not original experiment source"
-    },
     "vs2022_requirement_record": "DEC-0004",
-    "sdk_for_vs2022": "9.0.315",
-    "default_root_sdk_observed": "10.0.301",
-    "synthetic_build_and_checks": "PASS: VS2022 Release, SDK9 Debug, six checks in each plus deliberate exit7 signal",
-    "experiment_tests_executed": true,
-    "refresh": "Use installed SDK9 pin and isolated in-root build caches when sandboxed; current paths/commands in KnowledgeBase/tools/build_solution.py. Recheck only inputs material to the next change.",
-    "original_solution_built_by_seed": true,
-    "owner_build_evidence": {
-      "record_ids": [
-        "CLAIM-0002",
-        "FACT-0021"
-      ],
-      "recorded_at_utc": "2026-09-06T11:56:35+00:00",
-      "summary": "Owner confirms repaired solution rebuilt and WinForms ran successfully; screenshot shows 4 succeeded, 0 failed, 0 skipped, including App.",
-      "declared_dll_path_is_established_blocker": false,
-      "prior_evidence_record_ids": [
-        "CLAIM-0001",
-        "FACT-0017"
-      ]
-    },
-    "clarification": "The prior original_solution_built:false field described Seed execution only; replaced with original_solution_built_by_seed to avoid contradicting later owner build evidence.",
-    "configuration_finding": {
-      "record_id": "FACT-0018",
-      "proposed_repair_record": "REC-0004",
-      "summary": "Earlier invalid App x86 mappings and missing Any CPU build selections were repaired; all four projects now rebuild successfully in the owner screenshot.",
-      "status": "fix complete; owner verified successful rebuild and WinForms run",
-      "applied_record": "FACT-0019",
-      "verification_record_ids": [
-        "CLAIM-0002",
-        "FACT-0021"
-      ]
-    },
-    "dependency_cleanup": {
-      "status": "All three obsolete Newtonsoft.Json project references removed: Visualization by User; Control/Dna by Seed under DEC-0008.",
-      "record_ids": [
-        "CLAIM-0003",
-        "FACT-0026",
-        "DEC-0008",
-        "FACT-0028"
-      ],
-      "seed_reran_build_after_owner_cleanup": true,
-      "verification": "VS2022 Release whole solution pass;38/38 fast checks pass."
-    }
+    "record_ids": [
+      "FACT-0013",
+      "FACT-0014",
+      "FACT-0015",
+      "FACT-0016",
+      "FACT-0019",
+      "FACT-0021",
+      "FACT-0024",
+      "FACT-0028",
+      "FACT-0038"
+    ],
+    "refresh": "Existing paths/cache isolation in KnowledgeBase/tools/build_solution.py; recheck material inputs before a future changed build."
   },
   "tooling": {
-    "record_id": "FACT-0020",
+    "record_id": "FACT-0039",
     "policy": ".SeedAnalyzer/KB.md",
     "source_revision_command": "KnowledgeBase/tools/kb.py revise-source",
-    "verification": "14 disposable integration tests passed; no retained test history.",
-    "source_history": "Explicit source supersession with pinned local Git verification or disclosed unavailable-history warning.",
+    "verification": "29distinct source-version/reviewed-commit/snapshot checks passed,1host-symlink fixture skipped; current identities in FACT-0039.",
+    "source_history": "Pinned local Git or exact KB/source-history snapshots, verified against immutable registered SHA/size; no unavailable history.",
     "knowledgebase_is_git_versioned": true,
-    "knowledgebase_git_scope": "Canonical core/records/catalog snapshot verified in local commit 1a6ff953e597099332af0be776efd2aab39ca76d; current KB maintenance remains uncommitted. FACT-0027.",
-    "knowledgebase_owner_decision": "DEC-0008: Keep the KnowledgeBase in Git."
+    "knowledgebase_git_scope": "Canonical KB revision 17 and four reviewed support artifacts verified at local commit 2bb2b99d2f77774a3d2a0614c8dc7747349c5685 (FACT-0029). This new closure maintenance is uncommitted; remote status uninspected.",
+    "knowledgebase_owner_decision": "DEC-0008: Keep the KnowledgeBase in Git.",
+    "source_version_record_id": "FACT-0020",
+    "current_maintenance_authority": "DEC-0014",
+    "current_verification_receipt": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r02_part2_verification.json"
   },
   "implementation": {
-    "status": "verified first iteration; owner viewing pending",
+    "status": "R01 CLOSED successful/useful by User",
     "actor": "Seed Analyzer",
-    "baseline_git_commit": "1637a5dd7af2a469904cba9e3ce8789faa68467a",
+    "owner_closure_record_id": "DEC-0009",
     "record_ids": [
       "FACT-0022",
       "FACT-0023",
       "FACT-0024",
-      "FACT-0025"
+      "FACT-0025",
+      "FACT-0028",
+      "FACT-0029",
+      "INF-0004"
     ],
-    "artifacts": [
-      {
-        "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\IMPROVEMENT_RESULT_R01.md",
-        "sha256": "194EDD73ABD5AD5AEA71CFEB5727A7F374F2AD9F837EC73A2803B14043AE2305",
-        "bytes": 8657,
-        "status": "Seed-derived current support; not original experiment evidence"
-      },
-      {
-        "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\implementation_status.json",
-        "sha256": "A66D90176D7743D6EC37E1845F7899A0E8B21B1E3B03B927859351BC10435613",
-        "bytes": 504110,
-        "status": "Seed-derived current support; not original experiment evidence"
-      },
-      {
-        "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\viewer_preview.png",
-        "sha256": "6F434C8AB9DDBBE6D8D1DB0914C3AE7971E0B27C83C1B89043D4D44F10ED4364",
-        "bytes": 79988,
-        "status": "Seed-derived current support; not original experiment evidence"
-      }
+    "report": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\IMPROVEMENT_RESULT_R01.md",
+    "committed_horizon": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685"
+  },
+  "previous_proposal": {
+    "id": "R01",
+    "status": "CLOSED: successful and useful by owner",
+    "owner_closure_record_id": "DEC-0009",
+    "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\IMPROVEMENT_PROPOSAL_R01.md",
+    "sha256": "081D59AA71063698BC7A66620BF945BF5F4EC201C3A0708EC4C92FCFC3789996",
+    "result_record_ids": [
+      "FACT-0023",
+      "FACT-0024",
+      "FACT-0025",
+      "FACT-0028",
+      "FACT-0029",
+      "INF-0004"
+    ]
+  },
+  "current_iteration_part": {
+    "id": "R02_Part2",
+    "status": "IMPLEMENTED; verification PARTIAL; stopped for owner review",
+    "record_ids": [
+      "DEC-0014",
+      "FACT-0037",
+      "FACT-0038",
+      "REC-0006",
+      "INF-0007"
     ],
-    "verification": "R01 full evaluation in FACT-0024; subsequent reference cleanup rebuilt with VS2022 Release and38 fast checks passing in FACT-0028. KB deep verification follows the reviewed transaction.",
-    "retention": "One current result JSON/report/preview; automatic build scratch cleanup; normal bin/obj only; no Git writes or backup trees.",
-    "owner_feedback": {
-      "record_id": "CLAIM-0003",
-      "summary": "Positive visual feedback; owner reports continued successful operation after their dependency cleanup. Broader simulation/enjoyment objectives remain open."
-    },
-    "subsequent_dependency_cleanup_record": "FACT-0028"
+    "report": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\IMPROVEMENT_RESULT_R02_PART2.md",
+    "verification": "91/91Debug+Release; full solution builds; reference passivity. Long production horizons stopped at budget; actual results in FACT-0038.",
+    "limits": "No ecological acceptance, policy promotion, interactive owner acceptance or Parts3-4. Dense-population computation remains material."
+  },
+  "previous_iteration_part": {
+    "id": "R02_Part1",
+    "status": "Accepted by User in DEC-0014",
+    "record_ids": [
+      "FACT-0033",
+      "FACT-0034",
+      "FACT-0035",
+      "INF-0006",
+      "DEC-0014"
+    ],
+    "report": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\IMPROVEMENT_RESULT_R02_PART1.md",
+    "limits": "Historical multi-second live slowdown was not reproduced; no ecological acceptance."
   }
 }

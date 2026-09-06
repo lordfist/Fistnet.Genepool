@@ -28,12 +28,12 @@ internal static class RegressionTests
         {
             var parent = new FixtureOrganism();
             var child = new FixtureOrganism(); child.CopyGenes(parent);
-            Check.Scores(parent)[123] = new() { [0] = 6 };
+            Check.Scores(parent)["E:123"] = new() { [0] = 6 };
             child.Brain.LearnFromParent(parent);
-            Check.True(Check.Scores(child).TryGetValue(123, out var values) && values.TryGetValue(0, out var value) && value == 6,
+            Check.True(Check.Scores(child).TryGetValue("E:123", out var values) && values.TryGetValue(0, out var value) && value == 6,
                 "matching parent score was not inherited");
             values[0] = 99;
-            Check.Equal(6f, Check.Scores(parent)[123][0], "parent dictionary was shared");
+            Check.Equal(6f, Check.Scores(parent)["E:123"][0], "parent dictionary was shared");
         });
         yield return new("zero-baseline learning arithmetic stays finite", "regression", () =>
         {
@@ -41,12 +41,16 @@ internal static class RegressionTests
             Check.Equal(3f, Common.CalculateChange(3, 0));
             Check.Equal(.5f, Common.CalculateChange(3, 2));
         });
-        yield return new("empty target clears previous target snapshot", "regression", () =>
+        yield return new("completed occupied choice cannot leak into a later empty choice", "regression", () =>
         {
             var organism = new Organism();
-            organism.Brain.ChooseOutput(new Organism(), out _);
-            organism.Brain.ChooseOutput(null, out _);
-            Check.True(Check.Field<OrganismSnapshot>(organism.Brain, "targetPreExecuteEffects") == null, "stale occupied target retained");
+            var target = new Organism();
+            var occupied = organism.Brain.Choose(new[] { new ActionCandidate(organism.DnaSequence[0], target) }, Common.Policy);
+            organism.Brain.Complete(occupied, new ActionOutcome { ActorPresent = true, ActorAfter = organism.CreateSnapshot() });
+            var empty = organism.Brain.Choose(new[] { new ActionCandidate(organism.DnaSequence[0], null) }, Common.Policy);
+            Check.Equal("Empty", empty.Candidate.Context);
+            Check.True(empty.Candidate.TargetBefore == null && empty.Candidate.Target == null, "stale occupied target retained");
+            organism.Brain.Complete(empty, new ActionOutcome { ActorPresent = true, ActorAfter = organism.CreateSnapshot() });
         });
         yield return new("origin pixel selects origin cell", "regression", () =>
         {

@@ -1,0 +1,52 @@
+{
+  "actor": "Seed Analyzer",
+  "transaction_sha256": "FE024B2B89231CEF399C7F4D59347734734709B3BBF7FF80D2DC35C8624B5066",
+  "reviewed_preview_changes": 256,
+  "apply": {
+    "ok": true,
+    "dry_run": false,
+    "from_revision": 19,
+    "to_revision": 20,
+    "effects": {
+      "record_upserts": 9,
+      "source_upserts": 5,
+      "core_fields_patched": 6
+    },
+    "validation_scope": "deep_sources_and_prepared",
+    "write_outcome": {
+      "stage": "commit_completed",
+      "replaced_files": [
+        "records.jsonl",
+        "sources.json",
+        "core.json"
+      ],
+      "commit_completed": true,
+      "verification_completed": true,
+      "rollback_performed": false,
+      "recovery_required": false,
+      "cleanup_errors": [],
+      "replacement_uncertain": false
+    },
+    "hashes": {
+      "core.json": "4E2E0A386937EC786C06192DA8B42EFA369613C190F0D3D11FFE31BB6C0C8F1F",
+      "records.jsonl": "3AFE2587D8B945CCAA59112EB08A2B8AFBEB0A27DDB21A5B1BA26DF8C603E15A",
+      "sources.json": "CE5020CA7399DF8395279033930FCE15B3AEC1B8E0A70A317CB7CBB2A88116B0"
+    }
+  },
+  "deep_validation": {
+    "ok": true,
+    "errors": [],
+    "warnings": [],
+    "counts": {
+      "records": 59,
+      "sources": 75,
+      "historical_sources": 14,
+      "prepared_sources": 11
+    },
+    "core_estimated_tokens": 3633,
+    "deep": true,
+    "kb_revision": 20
+  },
+  "web_verification_scope": "URLs registered with actual documented retrieval coverage; deep validator does not refetch web pages.",
+  "proposal_sha256": "2D9B829E6893742E38E349B48B2E97DEB6A74780AAE339E124CD2AD24286FADF"
+}

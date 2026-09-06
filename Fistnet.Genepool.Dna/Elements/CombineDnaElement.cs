@@ -41,11 +41,7 @@ namespace Fistnet.Genepool.Dna.Elements
 
         public void ExecuteDna(Organism organismAffected)
         {
-            if (organismAffected != null && !organismAffected.IsDead
-                && !this.Me.IsDead
-                && this.Me.Age >= 1 && this.Me.Age < Organism.MAX_AGE
-                && organismAffected.Age >= 1
-                && organismAffected.Age < Organism.MAX_AGE)
+            if (this.Me.CanReproduceWith(organismAffected))
             {
                 this.Me.AddStackedEffect(new BirthEffect(this.Me, organismAffected, this.DnaSequenceIndex));
             }

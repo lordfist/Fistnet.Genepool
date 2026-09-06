@@ -23,7 +23,12 @@ def main():
     parser.add_argument("--stage", required=True)
     parser.add_argument("--configuration", default="Debug", choices=["Debug", "Release"])
     parser.add_argument("--platform", default="Any CPU", choices=["Any CPU", "Mixed Platforms", "x86"])
+    parser.add_argument("--report", default="implementation_status.json",
+                        help="Current result file inside KnowledgeBase")
     args = parser.parse_args()
+    destination = (KB / args.report).resolve()
+    if destination.parent != KB.resolve() or destination.suffix != ".json":
+        parser.error("--report must name a JSON file directly inside KnowledgeBase")
     report = {"at_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(),
               "stage": args.stage, "configuration": args.configuration, "platform": args.platform, "builds": [],
               "source_sha256": {}}
@@ -76,7 +81,6 @@ def main():
                 break
     report["scratch_removed"] = not scratch.exists()
     report["ok"] = len(report["builds"]) == 2 and all(row["exit_code"] == 0 for row in report["builds"])
-    destination = KB / "implementation_status.json"
     status = json.loads(destination.read_text()) if destination.exists() else {"actor": "Seed Analyzer", "stages": {}}
     status["stages"][args.stage] = report
     destination.write_text(json.dumps(status, indent=2) + "\n", encoding="utf-8")

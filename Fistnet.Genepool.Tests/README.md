@@ -53,7 +53,7 @@ group matches that exact name; `--group scenarios` runs the longer comparisons.
 Normal suite runs print a PASS/FAIL line per case, followed by one JSON summary on
 the final stdout line. That summary contains case results, errors, timings, runtime
 version, hashes of the five loaded assemblies and any collected scenario results. Exit code **0** means all selected
-checks passed, **1** means a check failed, and **2** means no cases matched.
+checks passed, **1** means a check failed, and **2** means malformed selection or no cases matched.
 
 To run one bounded scenario and receive its result as JSON on stdout:
 
@@ -87,13 +87,16 @@ independently counted population/action statistics.
 
 **Reference and production scheduling are different modes.** Reference runs use
 the specified random source, serial cell traversal and explicit effect order.
-Production runs exercise the parallel update path and do not claim identical
-trajectories from an identical seed. Compare reference hashes only for compatible
+Production retains parallel cell refresh/setup; Part2 action selection and shared
+transactions use explicit ordered phases, with seeded shuffled contention order.
+Production is still not the reference-state export contract. Compare reference hashes only for compatible
 reference versions, configuration, random algorithm and horizons.
 
 The reference snapshot includes board clocks, rule position, statistics, random
 state, options and reachable organisms, genes, learned scores, private counters,
-old targets, children and pending effects. It rejects unsupported state/types and
+detached completed outcomes, scalar parent IDs, generation/lifetime, policy and
+the run-local identity counter. Live decision/target references are released after
+the turn. It also includes any manually queued system effects. It rejects unsupported state/types and
 non-finite values instead of silently omitting them. It is an execution-state
 comparison, not a save/load file or a production snapshot facility.
 
@@ -104,10 +107,11 @@ patterns omit target directions and learned state. SequenceAge may be inherited
 and is not an individual's lifetime. Higher population or diversity is not itself
 a pass criterion.
 
-Two tests explicitly characterize the retained ninth-action-tick age increment
-and the double reproduction-counter increment after a birth. Their names identify
-them as current behavior; these broader semantics were not redesigned in this
-iteration. Rendering/history independence is tested separately from those choices.
+The ninth-action-tick organism aging clock is retained. Part2 replaces the old
+double birth count and deferred food/birth accounting with actual committed
+transactions; tests assert those repaired outcomes. Historical Part1 results
+retain the earlier characterization. Rendering/history independence is checked
+against the newly built model, not against an incompatible old state hash.
 
 ## Runner checks and optional output
 
@@ -149,3 +153,145 @@ collect source or compiler-input provenance.
 tree or executable and cannot establish which code was built. Keep production
 smoke observations, historical baseline measurements and successor reference
 comparisons clearly attributed to their respective versions.
+
+## R02 opt-in diagnostics and bounded measurements
+
+`--group diagnostics` runs the new fast observation checks. These compare complete
+reference state and random draws with diagnostics off/on, exercise the actual
+eight-season `ExecuteOneAge` path, verify exact food/movement/birth/death counters,
+and check bounded/reset session behavior. The UI case measures existing offscreen
+WinForms completion/refresh paths; it does not claim sustained interactive input
+latency. These cases are included in the default and `--all` selections. The
+original `--scenario` command and its 1..128 season range remain unchanged.
+
+Longer diagnostic measurements use a separate explicitly invoked command:
+
+```powershell
+& '.\Fistnet.Genepool.Tests\bin\Release\net9.0-windows7.0\Fistnet.Genepool.Tests.exe' --diagnostic-scenario 11 2048 reference on 1 no-render
+& '.\Fistnet.Genepool.Tests\bin\Release\net9.0-windows7.0\Fistnet.Genepool.Tests.exe' --diagnostic-scenario 29 512 production off 8 render 10
+```
+
+Arguments are seed, requested seasons (1..2048), mode (`reference`/`production`),
+diagnostics (`on`/`off`), batch (`1`/`8`), rendering (`render`/`no-render`) and an
+optional initial population percentage (0..100, default 10). Batch 8 calls the
+actual `ExecuteOneAge`; a final remainder uses single seasons. Statistics are
+therefore refreshed at each completed age, just as in that existing method.
+Rendering refreshes one 800-pixel board image after each batch. This measures
+image generation separately from engine calls; it does not create an interactive
+window or measure its painting/input responsiveness.
+
+Output is **JSON Lines**: one initial line, partial checkpoints at completed
+seasons 128/512/2048 when applicable, and one final line. Only a final line with
+`complete: true`, the requested completed horizon and exit 0 is a complete run.
+Checkpoint hashes identify compatible reference states; production hashes remain
+null. `firstExtinctionObservedAtBatchEnd` is deliberately a batch-end observation:
+batch 8 does not establish which of its eight seasons first became empty.
+
+Each process stops cooperatively before new work once elapsed time reaches 110
+seconds. A 115-second process-local timer emits a minimal incomplete final line
+and exits **3**, including when a batch/export is still in progress; only earlier
+checkpoints then have verified state. The calling evaluator should still enforce
+an external **120-second** limit because process scheduling/output failures can
+prevent an in-process callback from running promptly. An exception emits an
+incomplete final line and exits 1. Never treat the shorter observed horizon or a
+missing final line as successful completion of the requested horizon.
+Normal completion, exceptions and timeout compete for one terminal writer before
+final export begins. A final export that stalls after reserving that writer relies
+on the external 120-second backstop; timeout cannot issue a contradictory final.
+
+Reports split engine-call wall time, diagnostic `engine.season` time, renderer,
+validation, export preparation and total elapsed time. Enabled engine calls also
+include diagnostic census/observer/collector work; the phase total excludes the
+external observer and census but still includes instrumentation inside phases.
+No warmup is discarded: initial/reset/JIT costs remain visible in total/early
+measurements. Final JSON encoding and stdout cost are excluded from that line's
+reported total; earlier output cost is included. Allocations and garbage
+collections are **process-wide since before reset**, including setup, diagnostic
+collection, validation and exports. No forced garbage collection is performed.
+Timing keys are not all disjoint wall-time phases. For example, `dna.decision`
+sums durations of calls that may overlap across production workers, and parent
+history-copy time is nested within its caller. Do not add these values to phase
+wall time or interpret their ratios as percentages of elapsed process time.
+
+Batch timing retention is bounded to the latest 256 batches, plus exact
+count/minimum/maximum/mean for early/middle/late thirds of the requested horizon.
+Each third retains its latest 64 timings for sample median/p95, with omissions
+reported. A partial run may not reach all thirds. Diagnostic final output retains
+at most 128 sampled events and 256 season reports; intermediate checkpoints emit
+aggregates instead of repeating these arrays. Event categories reserve capacity
+for deaths, effects/vitality, actions/choices and other events; samples are not
+frequency estimates. Death labels record observed same-season contributors and
+can be mixed or unknown; they do not assign exclusive causal credit.
+Each sampled death retains its first and last observed same-season contributor,
+known action origin when available, scalar before/after states, and the number
+of omitted intermediate contributors, even if ordinary effect samples are full.
+Manual/unscoped effects retain unknown actor provenance. Census
+totals are sums across observations, including sums of per-season maxima; use the
+checkpoint maximum or individual season reports when a maximum is required.
+
+For repeatable *synthetic workload* measurements at fixed occupancy:
+
+```powershell
+& '.\Fistnet.Genepool.Tests\bin\Release\net9.0-windows7.0\Fistnet.Genepool.Tests.exe' --diagnostic-fixture 50 large on 4
+```
+
+Fixture arguments are occupancy (0/10/50/100 percent), history (`early`/`large`),
+diagnostics (`on`/`off`), and optional age batches (1..64, default 4). These fixtures
+use test-only no-op genes and reserve 100, preserving population over the bounded
+run while exercising the actual production scheduler and ordinary aging. Every
+organism starts with two active learned contexts; `large` adds **32 external
+contexts**, each with eight scores (34 contexts/272 entries total versus 2/16).
+This controlled history load is not a claim of naturally evolved late-run state,
+and its no-op action is not the production Eat action despite using that enum tag.
+It does not exercise the cost of real births, mutation, attacks or movement.
+Compare off/on in separate fresh processes with identical fixture arguments,
+repeat in reversed order when timing noise matters, and inspect reported actual
+occupancy/history size rather than inferring it from a requested percentage.
+
+Diagnostics/session state is detached after every completed command or test. No
+measurement command writes files, creates archives, retunes model parameters,
+changes rendering cadence in the application, or turns diagnostics on globally.
+Retention of console output remains the evaluator's explicit decision.
+
+## R02 Part 2 checks and policies
+
+`--group action-transactions`, `--group dna-actions` and `--group learning`
+select the added checks. They cover each gene's own target, exact affordability,
+source-cell food conservation, shared-turn completion, birth placement/counts,
+newborn timing, movement expiry, mutation/infection, finite arithmetic, learning
+invalidation, independent inheritance and optional LRU/exploration behavior.
+The runner rejects missing, extra, repeated and conflicting flags before running
+any test. An empty command still selects the ordinary default suite.
+
+All actions are selected once before any resolve. The retained actor cohort then
+resolves in a seeded shuffled order; births commit during that phase, deaths are
+removed before movement, and reward follows the completed shared turn. This is
+a deliberate behavior change, not proof of better ecosystem balance. Eligibility
+filtering also means unavailable gather/heal genes wait for context changes or
+mutation instead of running their old failed-target retarget branches.
+
+The application still uses the repaired control defaults: legacy selection,
+legacy overweight threshold and damage-only attacks. Tests exercise the optional
+policies through `SimulationRunOptions.Policy`; the later UI/settings part has
+not been implemented. A code caller can explicitly select candidates at reset:
+
+```csharp
+Board.Reset(new SimulationRunOptions
+{
+    Mode = SimulationMode.DeterministicReference,
+    Seed = 11,
+    Policy = new SimulationPolicy
+    {
+        Learning = LearningPolicy.BoundedExploratory, // unseen first, then 10% exploration; 64 external contexts
+        Health = HealthPolicy.Capped,                 // maximum 50
+        Attack = AttackPolicy.ReserveTransfer         // cost 1; direct lethal hit transfers up to 5 actual reserves
+    }
+});
+```
+
+These parameters are candidates for subsequent comparison, not calibrated
+success criteria. Predation transfers actual victim reserves once; it adds no
+fixed species, kin immunity, population quota or guaranteed coexistence.
+The exact reward formula and changed comparability are recorded in
+`KnowledgeBase/R02_PART2_CONTRACT.md`. The Part2 result files are separate from
+the unchanged Part1 baseline. No ecological pass/fail claim follows from tests.

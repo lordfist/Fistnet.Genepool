@@ -1,0 +1,442 @@
+{
+  "actor": "Seed Analyzer",
+  "note": "Close the completed bounded R01 improvement, record owner commit and unchanged tested source identities, correct stale pending-viewing/Git summaries, and retain future experiment questions without starting new work.",
+  "upsert_records": [
+    {
+      "id": "FACT-0029",
+      "kind": "observed_fact",
+      "status": "active",
+      "statement": "After User reported committing the changes, local Git HEAD was verified as 2bb2b99d2f77774a3d2a0614c8dc7747349c5685 (subject: -- cleanup). The working tree was clean before this KB maintenance. All 61 current .cs/.csproj inputs in the five projects, plus the solution and SDK pin as included in that 61-file total, exactly match the SHA-256 map from the last successful dependency-cleanup build. All 68 inspected paths (those 61 inputs plus three canonical KB files and four result/proposal/preview artifacts) reproduce the committed blobs: 19 raw and 49 with explicit LF-to-CRLF conversion. The three canonical KB files reproduce revision 17 directly. No build or test was rerun because the tested source identities are unchanged.",
+      "source_refs": [
+        "SRC-0052",
+        "SRC-0067",
+        "SRC-0068",
+        "SRC-0069",
+        "SRC-0070"
+      ],
+      "related_record_ids": [
+        "FACT-0024",
+        "FACT-0027",
+        "FACT-0028",
+        "DEC-0008"
+      ],
+      "origin": {
+        "type": "local_read_only_git_and_artifact_verification",
+        "actor": "Seed Analyzer",
+        "observed_at_utc": "2026-09-06T13:21:29.258889+00:00",
+        "owner_message": "I committed the changes to git. Are we done with the first Improvement Proposal? If so, please update your KB with that information if you haven't already, if not tell me what still needs to be done"
+      },
+      "derivation": {
+        "commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+        "working_tree_before_maintenance": "clean",
+        "source_map": "KnowledgeBase/implementation_status.json: stages.dependency_cleanup.source_sha256",
+        "source_map_count": 61,
+        "changed_missing_extra": [],
+        "committed_paths_checked": 68,
+        "git_mismatches": [],
+        "git_transform_counts": {
+          "raw": 19,
+          "lf_to_crlf": 49
+        },
+        "canonical_revision_before_maintenance": 17,
+        "current_result_sha256": "A66D90176D7743D6EC37E1845F7899A0E8B21B1E3B03B927859351BC10435613"
+      },
+      "uncertainty": "This establishes the local commit, not remote push status. Exact source hashes carry forward the previous bounded build/test evidence, not a new execution. This maintenance changes only KB content and is not part of the verified commit. Git comparisons occurred before the closure addenda were added."
+    },
+    {
+      "id": "INF-0004",
+      "kind": "inference",
+      "status": "active",
+      "statement": "Seed Analyzer assesses the bounded first Improvement Proposal R01 as complete: selected mechanics contracts, reproduced before/after regressions, reusable automated checks, reference/production evaluation, viewer improvements, VS2022-compatible solution builds and requested stale-reference cleanup are delivered and verified. Existing owner positive visual feedback and reported continued operation remove the outdated pending-viewing reminder. There is no outstanding required R01 implementation or test work. The broader developmental experiment remains open for a future owner instruction.",
+      "source_refs": [
+        "SRC-0052",
+        "SRC-0056",
+        "SRC-0060",
+        "SRC-0067"
+      ],
+      "related_record_ids": [
+        "DEC-0007",
+        "REC-0002",
+        "FACT-0023",
+        "FACT-0024",
+        "FACT-0025",
+        "CLAIM-0003",
+        "FACT-0028",
+        "FACT-0029",
+        "Q-0001"
+      ],
+      "origin": {
+        "type": "seed_completion_assessment",
+        "actor": "Seed Analyzer",
+        "observed_at_utc": "2026-09-06T13:23:17.532393+00:00"
+      },
+      "derivation": {
+        "method": "Compared accepted R01 contracts and completion criteria with stored actual verification, current source/commit identities and attributed owner feedback; transient read-only helper r01_closure_review checked proposal/result scope, and Seed Analyzer reviewed its finding.",
+        "artifacts": [
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\IMPROVEMENT_RESULT_R01.md",
+            "sha256": "86C6C7344A50DAB3826D6392A0087ACA27609F63D8FA503A817BF9574A178A53",
+            "bytes": 9681,
+            "status": "Seed-derived support with dated R01 completion addendum; earlier body retains its historical horizon"
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\IMPROVEMENT_PROPOSAL_R01.md",
+            "sha256": "081D59AA71063698BC7A66620BF945BF5F4EC201C3A0708EC4C92FCFC3789996",
+            "bytes": 18188,
+            "status": "Seed-derived support with dated R01 completion addendum; earlier body retains its historical horizon"
+          }
+        ],
+        "prior_artifact_commit": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685"
+      },
+      "uncertainty": "Completion of this bounded improvement is not measured long-term fun or ecological improvement, formal owner acceptance of a scientific model, or authorization for R02. CA1416 warnings remain. Longer ecology, broader concurrency/display coverage and age/reproduction/target-selection redesign are future options, not omitted required R01 deliverables."
+    },
+    {
+      "id": "REC-0002",
+      "kind": "recommendation",
+      "status": "historical",
+      "statement": "R01 proposes an honest current-code baseline, a reusable automated suite using the actual simulation, bounded mutation/learning corrections, a population-history display, accurate statistic labels and safe cell selection. Separate correctness, existing-behavior characterization and outcome comparison; identify production and deterministic-reference modes; keep known failures and incomplete runs visible. Use cheap pixel/geometry checks and bounded image review only when relevant. No implementation or tests have been executed.",
+      "tags": [
+        "proposal",
+        "testing",
+        "watchability",
+        "mechanics"
+      ],
+      "source_refs": [
+        "SRC-0007",
+        "SRC-0009",
+        "SRC-0010",
+        "SRC-0012",
+        "SRC-0014",
+        "SRC-0015",
+        "SRC-0028",
+        "SRC-0029"
+      ],
+      "related_record_ids": [
+        "DEC-0002",
+        "DEC-0003",
+        "REC-0001",
+        "FACT-0007",
+        "FACT-0008",
+        "FACT-0009",
+        "FACT-0010",
+        "FACT-0012",
+        "INF-0002",
+        "INF-0003",
+        "Q-0001",
+        "Q-0002",
+        "DEC-0007",
+        "FACT-0023",
+        "FACT-0024",
+        "FACT-0025",
+        "FACT-0029",
+        "INF-0004"
+      ],
+      "origin": {
+        "type": "seed_design",
+        "actor": "Seed Analyzer",
+        "observed_at_utc": "2026-09-06T10:19:34.8131401Z"
+      },
+      "derivation": {
+        "method": "proposal based on owner objectives and verified source findings",
+        "artifact": {
+          "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\IMPROVEMENT_PROPOSAL_R01.md",
+          "sha256": "83EAEE82111029DD087B9E2A07F86AF8AFC62C2C79EFACD4ECE9FE6388A941C0",
+          "bytes": 16177,
+          "status": "generated proposal; not original experiment evidence or accepted design"
+        },
+        "scope": "15 test families plus runner negative control; explicit behavior contracts, baseline attribution, initial cost caps, prospective file/runtime effects, failure and reversal boundaries"
+      },
+      "uncertainty": "All test results, runtime costs and enjoyment outcomes remain unmeasured. Learning inheritance/averaging, zero-baseline arithmetic, reference-mode semantics, graph design and test budgets are explicit proposed choices. Adoption of the document does not by itself prove implementation readiness or execution authority.",
+      "created_at": "2026-09-06T10:21:12+00:00",
+      "updated_at": "2026-09-06T12:52:26+00:00",
+      "resolution_notes": [
+        {
+          "at_utc": "2026-09-06T12:50:18.147815+00:00",
+          "actor": "Seed Analyzer",
+          "type": "R01_implementation_result",
+          "note": "User accepted R01 under DEC-0007. The bounded implementation and tests are now complete in FACT-0023..25, with source/environment/retention clarifications in the dated proposal addendum and IMPROVEMENT_RESULT_R01.md. Original proposal claims and artifact identity remain historical; this does not assert owner acceptance of a fun/realism outcome.",
+          "record_ids": [
+            "DEC-0007",
+            "FACT-0023",
+            "FACT-0024",
+            "FACT-0025"
+          ]
+        },
+        {
+          "at_utc": "2026-09-06T13:23:17.532393+00:00",
+          "actor": "Seed Analyzer",
+          "type": "R01_completion_review",
+          "note": "R01 bounded work is complete; owner visual feedback is already recorded in CLAIM-0003, source identities and local commit are verified in FACT-0029. Earlier pending-viewing wording is stale. Any next-slice objective is prospective and does not block R01 completion. No new owner acceptance or model objective is inferred.",
+          "record_ids": [
+            "CLAIM-0003",
+            "FACT-0029",
+            "INF-0004"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q-0001",
+      "kind": "open_question",
+      "status": "open",
+      "statement": "For the next improvement slice, which visible result should define success: clearer and more interesting population behavior, more faithful internal mechanics, easier observation, or a small combination? The owner has chosen better simulation and more fun to watch, but not biological realism, optimal survival, a specific learning model or numerical targets.",
+      "tags": [
+        "objective",
+        "next_decision"
+      ],
+      "source_refs": [],
+      "related_record_ids": [
+        "DEC-0002",
+        "INF-0001",
+        "REC-0001",
+        "DEC-0003",
+        "REC-0002",
+        "DEC-0007",
+        "FACT-0023",
+        "FACT-0025",
+        "FACT-0029",
+        "INF-0004"
+      ],
+      "origin": {
+        "type": "discovery_observation",
+        "actor": "Seed Analyzer",
+        "recorded_by": "Seed Analyzer",
+        "observed_at_utc": "2026-09-06T01:04:55.1867052Z"
+      },
+      "derivation": {
+        "method": "inspection of identified evidence",
+        "locators": [
+          "DEC-0002; current owner objective clarification"
+        ]
+      },
+      "uncertainty": "Prospective question for any future material improvement. R01 selected scope is complete; no response is needed to close it and no next iteration is authorized by this status request.",
+      "created_at": "2026-09-06T01:10:38+00:00",
+      "updated_at": "2026-09-06T12:52:26+00:00",
+      "resolution_notes": [
+        {
+          "at_utc": "2026-09-06T10:19:34.8131401Z",
+          "actor": "Seed Analyzer",
+          "type": "scope_clarification",
+          "note": "The owner agreed to creating the improvement proposal and required automated evaluation. R01 proposes a combined mechanics/viewing slice and precise contracts; their acceptance and implementation remain pending.",
+          "record_ids": [
+            "DEC-0003",
+            "REC-0002"
+          ]
+        },
+        {
+          "at_utc": "2026-09-06T12:50:18.147815+00:00",
+          "actor": "Seed Analyzer",
+          "type": "R01_implementation_result",
+          "note": "The first combined mechanics/viewer slice was selected and implemented under DEC-0007. Remaining owner checkpoint: whether the current graph, labels and behavior are easier/more enjoyable to watch, and what next improvement would matter. No biological-realism or survival-maximization target has been inferred.",
+          "record_ids": [
+            "DEC-0007",
+            "FACT-0023",
+            "FACT-0025"
+          ]
+        },
+        {
+          "at_utc": "2026-09-06T13:23:17.532393+00:00",
+          "actor": "Seed Analyzer",
+          "type": "R01_completion_review",
+          "note": "R01 bounded work is complete; owner visual feedback is already recorded in CLAIM-0003, source identities and local commit are verified in FACT-0029. Earlier pending-viewing wording is stale. Any next-slice objective is prospective and does not block R01 completion. No new owner acceptance or model objective is inferred.",
+          "record_ids": [
+            "CLAIM-0003",
+            "FACT-0029",
+            "INF-0004"
+          ]
+        }
+      ]
+    }
+  ],
+  "upsert_sources": [],
+  "core_patch": {
+    "experiment": {
+      "root": "D:\\Posao\\Fistnet.Genepool",
+      "purpose": "Make this experiment a better simulation and more fun to watch.",
+      "purpose_origin_record": "DEC-0002",
+      "status": "first_improvement_complete_awaiting_next_instruction",
+      "phase": "EVALUATION",
+      "root_semantics": "Exact physical experiment root explicitly assigned by User; KB tools bound to this root.",
+      "model": "Provisional artificial-life sandbox with inherited action repertoires and individual learning.",
+      "model_record": "INF-0001",
+      "model_accepted": false,
+      "design_accepted": true,
+      "trial_authorized": true,
+      "trial_scope": "Completed bounded R01 suite; no unattended or extended trial active."
+    },
+    "authority": {
+      "assignment_record": "DEC-0001",
+      "actor": "Seed Analyzer",
+      "knowledgebase_root": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase",
+      "continuing_kb_authority": "Routine in-root KB retrieval, validation, preparation and transactions remain authorized. DEC-0006 permits adapting tools with proportionate checks. The earlier unversioned-KB premise is superseded for canonical files by FACT-0027; current edits still require normal revision/preview/verification safeguards.",
+      "originals": "R01 authorized edits and local tests complete under DEC-0007; prior source bytes verified from local Git; no commit/push.",
+      "next_action": "R01 complete. Report closure and KB verification, then await the next applicable owner instruction; no new implementation, trial or role transition.",
+      "current_stage_record": "DEC-0007",
+      "environment_assessment": "Historical environment assessment used installed metadata and disposable synthetic probes; subsequent bounded source repair is recorded separately in FACT-0019."
+    },
+    "proposal": {
+      "id": "R01",
+      "record_id": "REC-0002",
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\IMPROVEMENT_PROPOSAL_R01.md",
+      "sha256": "081D59AA71063698BC7A66620BF945BF5F4EC201C3A0708EC4C92FCFC3789996",
+      "status": "R01 complete; implementation and bounded evaluation verified; owner visual feedback recorded",
+      "prepared_at_utc": "2026-09-06T10:19:34.8131401Z",
+      "tests_implemented": true,
+      "tests_executed": true,
+      "external_research_used": false,
+      "authorization_record": "DEC-0007",
+      "result_record_ids": [
+        "FACT-0023",
+        "FACT-0024",
+        "FACT-0025",
+        "FACT-0028",
+        "FACT-0029",
+        "INF-0004"
+      ],
+      "completion_record_id": "INF-0004",
+      "committed_horizon": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685"
+    },
+    "implementation": {
+      "status": "R01 complete; awaiting next owner instruction",
+      "actor": "Seed Analyzer",
+      "baseline_git_commit": "1637a5dd7af2a469904cba9e3ce8789faa68467a",
+      "record_ids": [
+        "FACT-0022",
+        "FACT-0023",
+        "FACT-0024",
+        "FACT-0025",
+        "FACT-0028",
+        "FACT-0029",
+        "INF-0004"
+      ],
+      "artifacts": [
+        {
+          "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\IMPROVEMENT_RESULT_R01.md",
+          "sha256": "86C6C7344A50DAB3826D6392A0087ACA27609F63D8FA503A817BF9574A178A53",
+          "bytes": 9681,
+          "status": "Seed-derived support with dated R01 completion addendum; earlier body retains its historical horizon"
+        },
+        {
+          "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\implementation_status.json",
+          "sha256": "A66D90176D7743D6EC37E1845F7899A0E8B21B1E3B03B927859351BC10435613",
+          "bytes": 504110,
+          "status": "Seed-derived current support; not original experiment evidence"
+        },
+        {
+          "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\viewer_preview.png",
+          "sha256": "6F434C8AB9DDBBE6D8D1DB0914C3AE7971E0B27C83C1B89043D4D44F10ED4364",
+          "bytes": 79988,
+          "status": "Seed-derived current support; not original experiment evidence"
+        }
+      ],
+      "verification": "Prior full Release suite 43/43 and Debug fast suite 38/38 passed (FACT-0024); subsequent reference cleanup Release rebuild and 38/38 fast checks passed (FACT-0028). All 61 current source/build-input hashes match the cleanup build (FACT-0029). No execution rerun for this closure-only maintenance.",
+      "retention": "One current result JSON/report/preview; automatic build scratch cleanup; normal bin/obj only; no Git writes or backup trees.",
+      "owner_feedback": {
+        "record_id": "CLAIM-0003",
+        "summary": "Positive visual feedback; owner reports continued successful operation after their dependency cleanup. Broader simulation/enjoyment objectives remain open."
+      },
+      "subsequent_dependency_cleanup_record": "FACT-0028",
+      "completion_record_id": "INF-0004",
+      "committed_horizon": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685"
+    },
+    "tooling": {
+      "record_id": "FACT-0020",
+      "policy": ".SeedAnalyzer/KB.md",
+      "source_revision_command": "KnowledgeBase/tools/kb.py revise-source",
+      "verification": "14 disposable integration tests passed; no retained test history.",
+      "source_history": "Explicit source supersession with pinned local Git verification or disclosed unavailable-history warning.",
+      "knowledgebase_is_git_versioned": true,
+      "knowledgebase_git_scope": "Canonical KB revision 17 and four reviewed support artifacts verified at local commit 2bb2b99d2f77774a3d2a0614c8dc7747349c5685 (FACT-0029). This new closure maintenance is uncommitted; remote status uninspected.",
+      "knowledgebase_owner_decision": "DEC-0008: Keep the KnowledgeBase in Git."
+    },
+    "routes": {
+      "orientation": {
+        "record_ids": [
+          "FACT-0001",
+          "FACT-0002",
+          "FACT-0011",
+          "INF-0001"
+        ]
+      },
+      "mechanics": {
+        "record_ids": [
+          "FACT-0003",
+          "FACT-0004",
+          "FACT-0005",
+          "INF-0003"
+        ]
+      },
+      "watchability": {
+        "record_ids": [
+          "DEC-0002",
+          "FACT-0006",
+          "FACT-0009",
+          "REC-0001"
+        ]
+      },
+      "material_findings": {
+        "record_ids": [
+          "FACT-0007",
+          "FACT-0008",
+          "FACT-0010",
+          "INF-0002",
+          "FACT-0023"
+        ]
+      },
+      "proposal_and_tests": {
+        "record_ids": [
+          "DEC-0003",
+          "REC-0002",
+          "FACT-0012",
+          "Q-0001",
+          "Q-0002",
+          "DEC-0007",
+          "FACT-0024",
+          "FACT-0025",
+          "FACT-0028",
+          "FACT-0029",
+          "INF-0004"
+        ]
+      },
+      "environment_capabilities": {
+        "record_ids": [
+          "DEC-0004",
+          "FACT-0013",
+          "FACT-0014",
+          "FACT-0015",
+          "FACT-0016",
+          "REC-0003",
+          "Q-0002",
+          "CLAIM-0001",
+          "FACT-0017",
+          "FACT-0018",
+          "REC-0004",
+          "DEC-0005",
+          "FACT-0019",
+          "CLAIM-0002",
+          "FACT-0021"
+        ]
+      },
+      "kb_tooling": {
+        "record_ids": [
+          "DEC-0006",
+          "FACT-0020",
+          "FACT-0019"
+        ]
+      },
+      "current_implementation": {
+        "record_ids": [
+          "DEC-0007",
+          "FACT-0022",
+          "FACT-0023",
+          "FACT-0024",
+          "FACT-0025",
+          "Q-0001",
+          "FACT-0028",
+          "FACT-0029",
+          "INF-0004"
+        ]
+      }
+    }
+  }
+}

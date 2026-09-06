@@ -1,0 +1,51 @@
+{
+  "stage": "verified",
+  "apply": {
+    "ok": true,
+    "dry_run": false,
+    "from_revision": 20,
+    "to_revision": 21,
+    "effects": {
+      "record_upserts": 6,
+      "source_upserts": 0,
+      "core_fields_patched": 7
+    },
+    "validation_scope": "deep_sources_and_prepared",
+    "write_outcome": {
+      "stage": "commit_completed",
+      "replaced_files": [
+        "records.jsonl",
+        "sources.json",
+        "core.json"
+      ],
+      "commit_completed": true,
+      "verification_completed": true,
+      "rollback_performed": false,
+      "recovery_required": false,
+      "cleanup_errors": [],
+      "replacement_uncertain": false
+    },
+    "hashes": {
+      "core.json": "1F4A1CCD9AF311DED1E41B49E6415D07A870D1C9AC2DA4C500C486662F5A1A6A",
+      "records.jsonl": "A31A2C0B192CB50B1CD9A5F5379061189EC121B1EFF63D1EBB590A5137C90CAD",
+      "sources.json": "CE5020CA7399DF8395279033930FCE15B3AEC1B8E0A70A317CB7CBB2A88116B0"
+    }
+  },
+  "preview_changes_reviewed": 69,
+  "deep_validation": {
+    "ok": true,
+    "errors": [],
+    "warnings": [],
+    "counts": {
+      "records": 61,
+      "sources": 75,
+      "historical_sources": 14,
+      "prepared_sources": 11
+    },
+    "core_estimated_tokens": 3723,
+    "deep": true,
+    "kb_revision": 21
+  },
+  "proposal_sha256": "B0DED29A0B0CC218930E25257F593FEDC639433C4D6FBD4922290EBB3371D536",
+  "limitations": "Local sources/history/prepared evidence verified within assigned scope. URL entries validated structurally only, not refetched. No experiment builds/tests/runs executed during this proposal clarification."
+}
