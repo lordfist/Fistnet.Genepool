@@ -21,6 +21,9 @@ namespace Fistnet.Genepool.Control.Gameboard
         public static BoardSquare[,] BoardElement { get; private set; }
         public static SimulationRunOptions RunOptions { get; private set; } = new SimulationRunOptions();
         public static event Action<int, int> SeasonCompleted;
+        internal static event Action<Organism, ActionDecision, bool, int, int> SeasonActorCompleted;
+        internal static event Action<int, int> BirthCompleted;
+        internal static void ObserveBirth(int x, int y) => BirthCompleted?.Invoke(x, y);
 
         #endregion Properties.
 
@@ -64,10 +67,7 @@ namespace Fistnet.Genepool.Control.Gameboard
         public static void Reset(SimulationRunOptions options = null, Func<int, int, Organism> occupants = null)
         {
             options = options ?? new SimulationRunOptions();
-            if (options.InitialPopulationPercent < 0 || options.InitialPopulationPercent > 100)
-                throw new ArgumentOutOfRangeException(nameof(options.InitialPopulationPercent));
-            if (options.Policy == null) throw new ArgumentNullException(nameof(options.Policy));
-            options.Policy.Validate();
+            options.Validate();
             RunOptions = options;
             bool reference = options.Mode == SimulationMode.DeterministicReference;
             Common.ConfigureRandom(options.RandomSource ?? (reference
@@ -82,7 +82,8 @@ namespace Fistnet.Genepool.Control.Gameboard
             for (int x = 0; x < BOARD_SIZE; x++)
                 for (int y = 0; y < BOARD_SIZE; y++)
                     BoardElement[x, y] = new BoardSquare(x, y, occupants != null ? occupants(x, y)
-                        : (Common.GetRandomIntegerSeed(100) < options.InitialPopulationPercent ? new Organism() : null));
+                        : (Common.GetRandomIntegerSeed(100) < options.InitialPopulationPercent ? new Organism(options.InitialOrganismFood, options.FounderRepertoire) : null),
+                        (byte)options.InitialCellFood, (byte)options.FoodRegrowthPerAge);
             isInitialized = true;
             RefreshStatistics();
         }
@@ -90,8 +91,6 @@ namespace Fistnet.Genepool.Control.Gameboard
         #endregion Constructor.
 
         #region Statistical information.
-
-        private static object syncObject = new object();
 
         public static int BoardOrganismCount { get; private set; }
 
@@ -103,43 +102,11 @@ namespace Fistnet.Genepool.Control.Gameboard
 
         public static string GetOrganismDnaString(this Organism organism)
         {
-            string dnaSequence = "";
-
-            if (organism != null)
-            {
-                foreach (var item in organism.DnaSequence)
-                {
-                    dnaSequence += ((byte)item.DnaType).ToString() + ",";
-                }
-            }
-
-            return dnaSequence;
-        }
-
-        private static void GetStatisticalInfo(Organism organism)
-        {
-            lock (syncObject)
-            {
-                Board.BoardOrganismCount++;
-
-                if (organism.SequenceAge > Board.LongestLiving)
-                    Board.LongestLiving = organism.SequenceAge;
-
-                string dnaString = organism.GetOrganismDnaString();
-
-                if (!Board.OrganismUsageStatistics.ContainsKey(dnaString))
-                    Board.OrganismUsageStatistics.TryAdd(dnaString, 1);
-                else
-                    Board.OrganismUsageStatistics[dnaString]++;
-
-                foreach (IDnaElement item in organism.DnaSequence)
-                {
-                    if (!Board.DnaUsageStatistics.ContainsKey(item.DnaType))
-                        Board.DnaUsageStatistics.TryAdd(item.DnaType, 1);
-                    else
-                        Board.DnaUsageStatistics[item.DnaType]++;
-                }
-            }
+            if (organism == null) return string.Empty;
+            var dnaSequence = new StringBuilder(organism.DnaSequence.Count * 2);
+            foreach (var item in organism.DnaSequence)
+                dnaSequence.Append((byte)item.DnaType).Append(',');
+            return dnaSequence.ToString();
         }
 
         private static void ResetStatistics()
@@ -157,8 +124,28 @@ namespace Fistnet.Genepool.Control.Gameboard
         public static void RefreshStatistics()
         {
             ResetStatistics();
+            // One simulation owner visits the finished board. Aggregate locally,
+            // publishing one update per distinct pattern/type instead of locking
+            // and updating concurrent dictionaries for every individual gene.
+            var patterns = new Dictionary<string, int>(StringComparer.Ordinal);
+            var types = new Dictionary<DnaTypes, int>();
             foreach (BoardSquare square in BoardElement)
-                if (square != null && square.IsOccupied) GetStatisticalInfo(square.Occupant);
+            {
+                if (square == null || !square.IsOccupied) continue;
+                Organism organism = square.Occupant;
+                BoardOrganismCount++;
+                LongestLiving = Math.Max(LongestLiving, organism.SequenceAge);
+                string pattern = organism.GetOrganismDnaString();
+                patterns.TryGetValue(pattern, out int patternCount);
+                patterns[pattern] = patternCount + 1;
+                foreach (IDnaElement gene in organism.DnaSequence)
+                {
+                    types.TryGetValue(gene.DnaType, out int typeCount);
+                    types[gene.DnaType] = typeCount + 1;
+                }
+            }
+            foreach (var pattern in patterns) OrganismUsageStatistics.TryAdd(pattern.Key, pattern.Value);
+            foreach (var type in types) DnaUsageStatistics.TryAdd(type.Key, type.Value);
         }
 
         #endregion Statistical information.
@@ -180,7 +167,12 @@ namespace Fistnet.Genepool.Control.Gameboard
 
         private static void ExecuteCellPhase()
         {
-            if (RunOptions.Mode == SimulationMode.DeterministicReference)
+            // These two cell-local phases draw no randomness and share no
+            // conflicts. Action choice/resolution and its shuffled order remain
+            // serial. Automatic currently selects serial; the bounded alternative
+            // remains selectable for explicit matched workload comparisons.
+            if (RunOptions.Mode == SimulationMode.DeterministicReference
+                || RunOptions.CellExecution != CellExecutionMode.BoundedParallel)
             {
                 for (int x = 0; x < BOARD_SIZE; x++)
                     for (int y = 0; y < BOARD_SIZE; y++)
@@ -188,8 +180,10 @@ namespace Fistnet.Genepool.Control.Gameboard
             }
             else
             {
-                Parallel.For(0, BOARD_SIZE, x =>
-                    Parallel.For(0, BOARD_SIZE, y => RuleManager.ExecuteCurrentRule(BoardElement[x, y])));
+                Parallel.For(0, BOARD_SIZE, new ParallelOptions { MaxDegreeOfParallelism = Math.Min(4, Environment.ProcessorCount) }, x =>
+                {
+                    for (int y = 0; y < BOARD_SIZE; y++) RuleManager.ExecuteCurrentRule(BoardElement[x, y]);
+                });
             }
         }
 
@@ -287,8 +281,12 @@ namespace Fistnet.Genepool.Control.Gameboard
             foreach (BoardSquare square in BoardElement)
                 if (square.IsOccupied) present.Add(square.Occupant);
             foreach (SeasonActor actor in cohort)
+            {
                 actor.Organism.FinishSeason(actor.Decision, present.Contains(actor.Organism),
                     actor.Decision?.Candidate.Target != null && present.Contains(actor.Decision.Candidate.Target));
+                SeasonActorCompleted?.Invoke(actor.Organism, actor.Decision, present.Contains(actor.Organism),
+                    actor.Origin.Position.X, actor.Origin.Position.Y);
+            }
             diagnostics?.Timing("phase.evaluation", Stopwatch.GetTimestamp() - evaluationStarted);
 
             Board.Season++;

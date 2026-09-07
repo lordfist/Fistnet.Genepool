@@ -251,14 +251,24 @@ namespace Fistnet.Genepool.Dna
                     candidate.Gene.ExecuteDna(candidate.Target);
             }
             finally { capturedEffects = null; }
-            var costs = new Dictionary<Organism, int>();
+            Dictionary<Organism, int> costs = null;
             foreach (var effect in effects)
                 if (effect.Effect == EffectTypes.FoodChange && Convert.ToInt32(effect.Value) < 0)
-                { costs.TryGetValue(effect.Me, out int existing); costs[effect.Me] = checked(existing - Convert.ToInt32(effect.Value)); }
+                {
+                    costs ??= new Dictionary<Organism, int>();
+                    costs.TryGetValue(effect.Me, out int existing);
+                    costs[effect.Me] = checked(existing - Convert.ToInt32(effect.Value));
+                }
             bool predator = candidate.Identity.Type == DnaTypes.Kill && Common.Policy.Attack == AttackPolicy.ReserveTransfer;
-            if (predator) { costs.TryGetValue(this, out int oldCost); costs[this] = oldCost + Common.Policy.AttackCost; }
-            if (costs.Any(pair => pair.Key.IsDead || pair.Key.FoodBalance < pair.Value))
-            { outcome.Status = "insufficient_reserves"; return; }
+            if (predator)
+            {
+                costs ??= new Dictionary<Organism, int>();
+                costs.TryGetValue(this, out int oldCost); costs[this] = oldCost + Common.Policy.AttackCost;
+            }
+            if (costs != null)
+                foreach (var cost in costs)
+                    if (cost.Key.IsDead || cost.Key.FoodBalance < cost.Value)
+                    { outcome.Status = "insufficient_reserves"; return; }
             if (predator) { FoodBalance -= Common.Policy.AttackCost; outcome.FoodSpent += Common.Policy.AttackCost; }
             foreach (var effect in effects)
             {
@@ -298,10 +308,15 @@ namespace Fistnet.Genepool.Dna
             ResolveDecision(decision, null, null);
             FinishSeason(decision, !IsDead, target != null && !target.IsDead);
         }
-        public Organism()
+        public Organism() : this(INITAL_FOOD_BALANCE, FounderRepertoire.UnrestrictedRandom) { }
+        public Organism(int initialFood) : this(initialFood, FounderRepertoire.UnrestrictedRandom) { }
+        public Organism(int initialFood, FounderRepertoire repertoire)
         {
-            Id = Common.NextOrganismId(); Health = HealthRule == HealthPolicy.Capped ? Math.Min(INITAL_HEALTH, Common.Policy.MaximumHealth) : INITAL_HEALTH; FoodBalance = INITAL_FOOD_BALANCE;
-            DnaSequence = DnaElementFactory.GetRandomDnaSequence(this, DNA_SEQUENCE_MAXLENGTH);
+            if (initialFood < 0 || initialFood > MAX_FOOD_CARRY) throw new ArgumentOutOfRangeException(nameof(initialFood));
+            if (!Enum.IsDefined(typeof(FounderRepertoire), repertoire)) throw new ArgumentOutOfRangeException(nameof(repertoire));
+            Id = Common.NextOrganismId(); Health = HealthRule == HealthPolicy.Capped ? Math.Min(INITAL_HEALTH, Common.Policy.MaximumHealth) : INITAL_HEALTH;
+            FoodBalance = initialFood;
+            DnaSequence = DnaElementFactory.GetFounderDnaSequence(this, repertoire);
             DnaCode = Common.CalculateOrganismDnaCode(DnaSequence); Brain = new StrategyNetwork(this);
         }
         public Organism(Organism parent1, Organism parent2)

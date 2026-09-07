@@ -1,0 +1,348 @@
+{
+  "actor": "Genepool Analyzer",
+  "at_utc": "2026-09-06T22:04:13.904910+00:00",
+  "engineering_status": "PASS",
+  "ecological_status": "INCONCLUSIVE at2048 seasons; all16 observed prefixes have no criterion violations",
+  "owner_review": "pending",
+  "builds_and_tests": [
+    {
+      "configuration": "Release",
+      "source_inputs_checked": 83,
+      "loaded_assemblies_checked": 5,
+      "tests_passed": 137,
+      "suite_seconds": 57.2568139,
+      "build_errors": 0,
+      "warning_codes": [
+        {},
+        {
+          "CA1416": 106
+        }
+      ]
+    },
+    {
+      "configuration": "Debug",
+      "source_inputs_checked": 83,
+      "loaded_assemblies_checked": 5,
+      "tests_passed": 137,
+      "suite_seconds": 57.68139,
+      "build_errors": 0,
+      "warning_codes": [
+        {},
+        {
+          "CA1416": 106
+        }
+      ]
+    }
+  ],
+  "reference_passivity": [
+    {
+      "seed": 11,
+      "complete": true,
+      "state_and_rng_equal": true,
+      "off_random": {
+        "algorithm": "xorshift32-v1",
+        "draws": 843754,
+        "stateSha256": "9F48B02B3E1E752A8448BA87F703DD65CC77BAA5EB0AC3316145B8DFEFF600B6"
+      },
+      "on_random": {
+        "algorithm": "xorshift32-v1",
+        "draws": 843754,
+        "stateSha256": "9F48B02B3E1E752A8448BA87F703DD65CC77BAA5EB0AC3316145B8DFEFF600B6"
+      }
+    },
+    {
+      "seed": 29,
+      "complete": true,
+      "state_and_rng_equal": true,
+      "off_random": {
+        "algorithm": "xorshift32-v1",
+        "draws": 935898,
+        "stateSha256": "AB4EF8C91070F6C53AFB9FC2BB1217E3D61898FA3CE2BD660156181424A194E2"
+      },
+      "on_random": {
+        "algorithm": "xorshift32-v1",
+        "draws": 935898,
+        "stateSha256": "AB4EF8C91070F6C53AFB9FC2BB1217E3D61898FA3CE2BD660156181424A194E2"
+      }
+    }
+  ],
+  "comparison_rows": 16,
+  "complete2048_runs": 0,
+  "comparison_summary": {
+    "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r02_part4_comparison_summary.json",
+    "sha256": "7C37C3C9D116DC26B1646E4FCED6AC26855AA75719CC6721C2E19BC62147225C",
+    "bytes": 71751
+  },
+  "selection": {
+    "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r02_part4_selection.json",
+    "sha256": "5B7B59D63AEEDBD572E22DDF41E20A9B57508150A444D38F4054AE2A8BAB436E",
+    "bytes": 1193
+  },
+  "common512_checkpoints": [
+    {
+      "candidate": "default",
+      "seed": 11,
+      "minimum_initial_fraction": 0.6837349397590361,
+      "population": 6808,
+      "births": 24986,
+      "engine_seconds": 14.0066159
+    },
+    {
+      "candidate": "default",
+      "seed": 29,
+      "minimum_initial_fraction": 0.6448508180943214,
+      "population": 1042,
+      "births": 3824,
+      "engine_seconds": 4.3198269
+    },
+    {
+      "candidate": "default",
+      "seed": 47,
+      "minimum_initial_fraction": 0.6123260437375746,
+      "population": 5859,
+      "births": 25791,
+      "engine_seconds": 10.7253079
+    },
+    {
+      "candidate": "default",
+      "seed": 83,
+      "minimum_initial_fraction": 0.6601371204701273,
+      "population": 9595,
+      "births": 11948,
+      "engine_seconds": 27.6803057
+    },
+    {
+      "candidate": "constrained",
+      "seed": 11,
+      "minimum_initial_fraction": 0.8303212851405622,
+      "population": 8914,
+      "births": 27688,
+      "engine_seconds": 43.8603043
+    },
+    {
+      "candidate": "constrained",
+      "seed": 29,
+      "minimum_initial_fraction": 0.933589990375361,
+      "population": 6414,
+      "births": 46988,
+      "engine_seconds": 21.2432591
+    },
+    {
+      "candidate": "constrained",
+      "seed": 47,
+      "minimum_initial_fraction": 0.8956262425447317,
+      "population": 9035,
+      "births": 35953,
+      "engine_seconds": 46.7552002
+    },
+    {
+      "candidate": "constrained",
+      "seed": 83,
+      "minimum_initial_fraction": 0.9275220372184133,
+      "population": 9209,
+      "births": 25439,
+      "engine_seconds": 45.3477066
+    },
+    {
+      "candidate": "regrowth2",
+      "seed": 11,
+      "minimum_initial_fraction": 0.6736947791164659,
+      "population": 8985,
+      "births": 54919,
+      "engine_seconds": 24.5233072
+    },
+    {
+      "candidate": "regrowth2",
+      "seed": 29,
+      "minimum_initial_fraction": 0.6525505293551492,
+      "population": 3676,
+      "births": 11273,
+      "engine_seconds": 6.8702223
+    },
+    {
+      "candidate": "regrowth2",
+      "seed": 47,
+      "minimum_initial_fraction": 0.6282306163021869,
+      "population": 5968,
+      "births": 16076,
+      "engine_seconds": 9.9911079
+    },
+    {
+      "candidate": "regrowth2",
+      "seed": 83,
+      "minimum_initial_fraction": 0.7512242899118511,
+      "population": 9710,
+      "births": 18181,
+      "engine_seconds": 42.9725118
+    },
+    {
+      "candidate": "capped",
+      "seed": 11,
+      "minimum_initial_fraction": 0.7359437751004017,
+      "population": 7877,
+      "births": 45771,
+      "engine_seconds": 22.5982424
+    },
+    {
+      "candidate": "capped",
+      "seed": 29,
+      "minimum_initial_fraction": 0.631376323387873,
+      "population": 9072,
+      "births": 14844,
+      "engine_seconds": 19.2569376
+    },
+    {
+      "candidate": "capped",
+      "seed": 47,
+      "minimum_initial_fraction": 0.6153081510934394,
+      "population": 6296,
+      "births": 14177,
+      "engine_seconds": 9.8948143
+    },
+    {
+      "candidate": "capped",
+      "seed": 83,
+      "minimum_initial_fraction": 0.5905974534769833,
+      "population": 8560,
+      "births": 9434,
+      "engine_seconds": 12.7425788
+    }
+  ],
+  "tool_checks": {
+    "actor": "Genepool Analyzer",
+    "at_utc": "2026-09-06T21:54:01.187162+00:00",
+    "scope": "Disposable or pure wrapper verification; no ecological trials in these checks.",
+    "checks": 37,
+    "passed": 37,
+    "failed": 0,
+    "coverage": [
+      "23 checks: exact argument ranges/allowlist reject before mocked process start; invalid config/time limits; stage/selector rejection; atomic current-report replacement/cleanup; interruption retains pending work.",
+      "5 post-correction pure cases: empty interruption, prior collapse without terminal row, watchdog with earlier evidence season, completed pass, malformed terminal ordering with known failure.",
+      "9 in-memory summarizer negative fixtures verified by transient runner helper: accounting, windows, extrema, completion, assembly identity, criteria, missing final; four-seed passing labels without final reports; incomplete or invalid timing. All remain rejected/ineligible without executing a trial."
+    ],
+    "tools": [
+      {
+        "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\tools\\run_part4_checks.py",
+        "sha256": "A9186E2CF827310E1D6458E89DDBEB4EA90D3EA2FA0666142FC49534B90E1851",
+        "bytes": 14215
+      },
+      {
+        "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\tools\\summarize_part4.py",
+        "sha256": "F92DDD5915AEF42E1D3D22B8D269CD3357B681ED2B251722324261A7BBD2B9A9",
+        "bytes": 23025
+      }
+    ],
+    "interventions": [
+      "Review found timeout summaries could hide earlier violations; every flushed row now carries sticky criteria/evidence season and wrapper retains it without a final row.",
+      "Independent review found sampled trajectory insufficient for exact diversity ranking; passive report now retains scalar exact extrema."
+    ],
+    "temporary_fixtures_removed": true
+  },
+  "previews": {
+    "actor": "Genepool Analyzer",
+    "exit_code": 0,
+    "scope": "32-season reference fixture; programmatic offscreen rendering. Main viewer100%; new settings100/150/200% representative font/geometry scaling, not physical monitor transitions. Three unrelated generated images discarded with owned temporary directory.",
+    "artifacts": [
+      {
+        "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r02_part4_preview.png",
+        "sha256": "8D64639C9D671386CB9E84A6D85E618C7BB506BC6D8380A31A0A3E55A8AA53D7",
+        "bytes": 89612,
+        "width": 1456,
+        "height": 999
+      },
+      {
+        "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r02_part4_settings.png",
+        "sha256": "986FD956AAAC58462A01C768CAB35B847DC9915B32E012FF2D442EBBF0C53AE5",
+        "bytes": 33591,
+        "width": 576,
+        "height": 733
+      },
+      {
+        "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r02_part4_settings-150.png",
+        "sha256": "9A851C8166E7157F0C6FFD307F43F2FC58D5EF2350119FE40A2F32888ED730A2",
+        "bytes": 43952,
+        "width": 856,
+        "height": 1001
+      },
+      {
+        "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r02_part4_settings-200.png",
+        "sha256": "25FE14EF2693A7070C060819E8A091CC41C8DDFAD804E2495270126EB8C21902",
+        "bytes": 48462,
+        "width": 1136,
+        "height": 1001
+      }
+    ],
+    "temporary_directory_removed": true,
+    "visual_review": {
+      "actor": "Genepool Analyzer",
+      "at_utc": "2026-09-06T22:04:13.904910+00:00",
+      "reviewed": 4,
+      "result": "Main viewer and100%settings readable;150/200% use scrollable body with fixed visible action buttons. Automated tests verify final field reachability. These are programmatic previews, not physical monitor-transition or owner acceptance evidence."
+    }
+  },
+  "source_versions": {
+    "Fistnet.Genepool.Dna/DnaElementFactory.cs": "SRC-0157",
+    "Fistnet.Genepool.Dna/Organism.cs": "SRC-0158",
+    "Fistnet.Genepool.Control/SimulationRunOptions.cs": "SRC-0159",
+    "Fistnet.Genepool.Control/Gameboard/Board.cs": "SRC-0160",
+    "Fistnet.Genepool.Control/SimulationSnapshot.cs": "SRC-0161",
+    "Fistnet.Genepool.Control/ViewCollector.cs": "SRC-0162",
+    "Fistnet.Genepool.App/NewSimulationDialog.cs": "SRC-0163",
+    "Fistnet.Genepool.App/MainForm.cs": "SRC-0164",
+    "Fistnet.Genepool.Tests/Program.cs": "SRC-0165",
+    "Fistnet.Genepool.Tests/README.md": "SRC-0166",
+    "Fistnet.Genepool.Dna/FounderRepertoire.cs": "SRC-0167",
+    "Fistnet.Genepool.Tests/FounderSetupTests.cs": "SRC-0168",
+    "Fistnet.Genepool.Tests/EcologyMetrics.cs": "SRC-0169",
+    "Fistnet.Genepool.Tests/EcologyTests.cs": "SRC-0170",
+    "Fistnet.Genepool.Tests/EcologyScenarios.cs": "SRC-0171"
+  },
+  "registered_predecessors_revised": 10,
+  "predecessor_history": {
+    "exact_git": 1,
+    "exact_snapshots": 9,
+    "new_unavailable_histories": 0,
+    "existing_warning": "SRC-0115 retains its previously disclosed exact mixed-newline predecessor-byte gap; no widening or new gap."
+  },
+  "interventions": [
+    "Early authority-only dry-run refused stale registered sources before any canonical replacement because root allowed a helper edit first. Authority existed directly from User and was recorded prospectively in the frozen contract/draft. Final transaction combines authority, source revisions and results at revision37; no retry after uncertain writes.",
+    "Pre-trial review corrected new snapshot test lookup and made interrupted failure evidence sticky. Added exact scalar extrema and regression so sampled trajectory cannot lose ranking evidence. Initial136/136 Release pass preceded that final added test; final137/137 both configurations.",
+    "Read-only audit eligibility now requires complete report/windows/extrema/timing; pass-labelled missing evidence cannot be ranked."
+  ],
+  "artifacts": [
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R02_PART4_CONTRACT.md",
+      "sha256": "B4EC2A61747B598E86D498DC77FDDDDB690AC4B6A3B088E16C59BB407CFE183F",
+      "bytes": 8591
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r02_part4_results.json",
+      "sha256": "44CBEC712B04F1059BF3694CE5D97D1794D6EFD241392441ABD71D246AE372D4",
+      "bytes": 6036410
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r02_part4_builds.json",
+      "sha256": "D725D3D2723EC5EB04394863E9D565C362B42952BE16B090F22F86B449EA3689",
+      "bytes": 53509
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r02_part4_source_horizon.json",
+      "sha256": "96E87A5980AFCB91DD6B43DE3B5A13CEB5E88B4FC288AFF6A212EF87483D9E62",
+      "bytes": 3687
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r02_part4_tool_verification.json",
+      "sha256": "28B6F3FEB243BEA938FEF85A4968F244DEFA7893FA2F4A636BC3C4C1FDE10ED9",
+      "bytes": 1803
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r02_part4_previews.json",
+      "sha256": "76B937A56F1E4689CCD1834E9077D8D46AB444E94009C9C58173411B55638E14",
+      "bytes": 1794
+    }
+  ],
+  "temporary_directories_removed": true,
+  "no_reserved_confirmation": true,
+  "no_policy_promotion": true,
+  "no_R02_closure": true
+}

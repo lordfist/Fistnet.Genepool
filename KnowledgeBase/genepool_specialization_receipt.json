@@ -1,0 +1,224 @@
+{
+  "actor": "Genepool Analyzer",
+  "status": "COMPLETE",
+  "input_kb_revision": 36,
+  "at_utc": "2026-09-06T20:27:30.879617+00:00",
+  "governance_before": [
+    {
+      "path": "AGENTS.md",
+      "bytes": 6892,
+      "sha256": "87A4D418FCD66AF762319A9C25DBBB1043F7E4A04E736C6C319AE50313AD9AE6",
+      "git_commit": "c5a494a412684d801031d1dec2c2c7670f5e3293",
+      "git_transform": "raw"
+    },
+    {
+      "path": ".SeedAnalyzer/CONSTITUTION.md",
+      "bytes": 38078,
+      "sha256": "0524E60465255C38910CDBD08A2F9EDDAF64C8340BBB35E5F0BDABC284A1CCB5",
+      "git_commit": "c5a494a412684d801031d1dec2c2c7670f5e3293",
+      "git_transform": "raw"
+    },
+    {
+      "path": ".SeedAnalyzer/KB.md",
+      "bytes": 32493,
+      "sha256": "773522B4FFE53C989DE54D496C5760598C15DF4892835B98510E5A9A2C73572F",
+      "git_commit": "c5a494a412684d801031d1dec2c2c7670f5e3293",
+      "git_transform": "raw"
+    }
+  ],
+  "governance_after": [
+    {
+      "path": "AGENTS.md",
+      "bytes": 8267,
+      "sha256": "2C92F42355CE071962BCDCEFA7A962CB1F058F7F2499FD8CB50E2BF2B5B9D1AD",
+      "lines": 57
+    },
+    {
+      "path": ".SeedAnalyzer/CONSTITUTION.md",
+      "bytes": 20991,
+      "sha256": "E6E78C0CBBD4709DE573C86228E79AACE252927FA5818F60AE4542860F42D274",
+      "lines": 153
+    },
+    {
+      "path": ".SeedAnalyzer/KB.md",
+      "bytes": 31653,
+      "sha256": "7F8C9835720C31E238D6017A7BE626B8D9C6EA1FBEE0DE29FD188B65269CE1F9",
+      "lines": 228
+    }
+  ],
+  "simulation_input_hashes": {
+    "Fistnet.Genepool.App/Fistnet.Genepool.App.csproj": "D79B44B872561468641D6D2A56E592B6E264EDB92C680862AC2A629446350746",
+    "Fistnet.Genepool.App/MainForm.cs": "AC33A0992864DCAFEF05F728740187FD645850BDEFB4EC097DD59B4125F21400",
+    "Fistnet.Genepool.App/MainForm.Designer.cs": "0D957BBF630E053C6BF98EDC82D3FF1C834797883F89A1286240DE21DE60367E",
+    "Fistnet.Genepool.App/MainForm.Layout.cs": "C87DD3B7BE00BCAA3C54555114AA296B46BA26766870CD6F2BF166B3101A8D6E",
+    "Fistnet.Genepool.App/NewSimulationDialog.cs": "530C9C9A69E9C02BC662362A485FFAD0EDBA388EEBABB4594B7D7A13DB1479EE",
+    "Fistnet.Genepool.App/Program.cs": "811C5D687B417E7AD1B9040C47B458F0BF5553CDA79AD73A8EE9F6ED46EAACC1",
+    "Fistnet.Genepool.App/Properties/AssemblyInfo.cs": "4DDB0CBC30A817181B227D7E68C40E99E497FCFA68E873AA0C5D7EC9D7F5498F",
+    "Fistnet.Genepool.App/Properties/Resources.Designer.cs": "732EA0CBFD24A24D5013D8F7128D0C44A3154B2FA7D93FAAFE327A76756FA2E0",
+    "Fistnet.Genepool.App/Properties/Settings.Designer.cs": "7C45233D5AFFF1466B8A2615AEE4F62CD567D04C6ACA68BBF2F054B1FE4B96FC",
+    "Fistnet.Genepool.Control/Fistnet.Genepool.Control.csproj": "2A98C92C1375F84A267B8C49F2CA8EFE73549B75FAC73815771C667E556B7CE7",
+    "Fistnet.Genepool.Control/RuleManager.cs": "44F860A3AC5CE3196B71B29406C83DD5495628DCA3113996C9D61D7B13A93577",
+    "Fistnet.Genepool.Control/SimulationRunner.cs": "10BDC633721B982940F7670EAAE67C20E5206DF6812D60413272E93EC186A2C6",
+    "Fistnet.Genepool.Control/SimulationRunOptions.cs": "37DE1CACA84E20DC8E378F0983D38B725B3AC3A1CA3C5BF256B673D39F9C3220",
+    "Fistnet.Genepool.Control/SimulationSnapshot.cs": "7D829F3124E5FA23DCC203FBF7C2D06C600645CE55D32EF948C5460285C9EDFD",
+    "Fistnet.Genepool.Control/ViewCollector.cs": "98CF8DC9401022FCDF6F76649DB91769E11D2F2AAF00D333B253F48803213F76",
+    "Fistnet.Genepool.Control/ViewFrame.cs": "B2D5AFFDF9F8DB78F7D5E62A504D41B16E9F76929A4D0773236A9068D4175F9A",
+    "Fistnet.Genepool.Control/Gameboard/Board.cs": "5F30C47F3BBDFE2E59C35485257B986BA948C365F3837ED14E20363DD53DE9C3",
+    "Fistnet.Genepool.Control/Gameboard/BoardSquare.cs": "FD595CA69E209FA5AA6F6F1C9BEC863B995B3B66836F4C0EE7C1570DDD0041FF",
+    "Fistnet.Genepool.Control/Properties/AssemblyInfo.cs": "49648A016BE544C4F78874036B354091D6A9B33CEAEAF87223FF4530B85B52C8",
+    "Fistnet.Genepool.Control/Rules/ExecuteOgranismSetup.cs": "B3AC4C59AA49DC4FA8146B3B89F92CBCD7271BC3AB1B6098B3226A29F17F4FE6",
+    "Fistnet.Genepool.Control/Rules/ExecuteOrganismDeadRule.cs": "6935CF12214C699C9FC04F531E56D9A8378E7E7172B1ADAF7F4AEFCA455EA83E",
+    "Fistnet.Genepool.Control/Rules/ExecuteOrganismEffectsRule.cs": "07FB5A529DF99BD0853FBBF46C4FFC667477FC096806FDECF37C2B58943174AC",
+    "Fistnet.Genepool.Control/Rules/ExecuteOrganismMoveRule.cs": "5CE5262FCED3E2B2CF37DBAC6E00C4231DD3DBA0F65D3A32F3856E62FA12D69A",
+    "Fistnet.Genepool.Control/Rules/ExecuteOrganismSequenceRule.cs": "63987BBD68D0B2FB7D011228AEF3D9EF546D224C12EDA9AE1EBFCDCD3362C88F",
+    "Fistnet.Genepool.Control/Rules/ExecuteRefreshRule.cs": "51F95993AAB4EF92FE195E9BE01B8239BF511DB4B3945C41911CBB614C678B9C",
+    "Fistnet.Genepool.Control/Rules/IBoardSquareRule.cs": "93E10F9553C5FA8D818D577518BA1B9B5A0D6045AB6633301FCE831C5658736F",
+    "Fistnet.Genepool.Dna/ActionModel.cs": "7FD65675DCB8F9EDCD55E1E7F64FD0C5B494138E719E18B4197068D1BA6DB81D",
+    "Fistnet.Genepool.Dna/Common.cs": "5FCD695C512591F2B98E203FAB05503EF3DBFE2F900D82542143EE68796E333D",
+    "Fistnet.Genepool.Dna/DnaElementFactory.cs": "5D73E13CA985E04F4BD99D5E240AE322B3A572500138A482671D3295CFBD2426",
+    "Fistnet.Genepool.Dna/Fistnet.Genepool.Dna.csproj": "8F3E4C3504EF0BB4429B2B5E255F8669865B4459509EC0C55BF460C4EDF984E7",
+    "Fistnet.Genepool.Dna/IRandomSource.cs": "3634A42C4C99CA0765DE24028244DA8EB695E699764D6FBFF085D3774B0CB644",
+    "Fistnet.Genepool.Dna/Organism.cs": "483CAF9329558870C6A3D573E7796ABC662C79596E2402619D227461F6D349D2",
+    "Fistnet.Genepool.Dna/OrganismSnapshot.cs": "9E405ACC00D95CD72BAE3CBDB5C42005E7A4E41F015A35EB2841F96C19250568",
+    "Fistnet.Genepool.Dna/SimulationDiagnostics.cs": "122B37AF017CED6779A4C6CFBFE1C09C29CA1337C81E7960556A1E168364DB96",
+    "Fistnet.Genepool.Dna/Effects/BirthEffect.cs": "931F43DD43DF3EFE5776BB93A3FAD10B273B9061E965CED2D3F5B1F658A183FC",
+    "Fistnet.Genepool.Dna/Effects/ChangeAgeEffect.cs": "A9D0DC18DFC1B962E4DBD0E4D28408D6FE1C3F551A9B348BB7E1D0ED3983E65C",
+    "Fistnet.Genepool.Dna/Effects/ChangeFoodEffect.cs": "E2A3DE1CEC5F60E3AC9905C8CF2D1F1F01E1B179181CB54F79AF73058A757823",
+    "Fistnet.Genepool.Dna/Effects/ChangeHealthEffect.cs": "CD4F33FA8212F8D29E761B96895C45AB413EE45179CF646155C1D6D897A9AF6A",
+    "Fistnet.Genepool.Dna/Effects/ChangePositionEffect.cs": "B9FEEA58624A70B1D8AAC3F29559C9AE7127EBC3784C1BA29D6705B580A83388",
+    "Fistnet.Genepool.Dna/Effects/IDnaEffect.cs": "9E597FE334459DE3FCE08840A25BD03ED151BA57851F6A1DB7CA628D61C7A863",
+    "Fistnet.Genepool.Dna/Effects/MutateEffect.cs": "C58CB5ED91858C700FFE9A7473B6A35673E07F226A85365226BBA0763D4CF2C2",
+    "Fistnet.Genepool.Dna/Elements/CombineDnaElement.cs": "E8749BFC4EE2CAA9044E2DF184CEB4C123E76013DA696BBF7DA3AB5C0F43F4C7",
+    "Fistnet.Genepool.Dna/Elements/CreateFoodDnaElement.cs": "F6659F3D9076FD17D818D2BFC972BE5651006812DB0EE8107DBBA1C2F7EB39B1",
+    "Fistnet.Genepool.Dna/Elements/EatDnaElement.cs": "FA8DFA2678C544F7C097054C1BC4EB7CA2A1EDFC4CBAE3183EDBA1C7416947FD",
+    "Fistnet.Genepool.Dna/Elements/EvolveDnaElement.cs": "95C08914D783FE84DFE63B414EC707FE10EBA890447D064017F5722CACB980A6",
+    "Fistnet.Genepool.Dna/Elements/HealDnaElement.cs": "2AAEFB086CE109316E4353C6DBD512E7DB715F94E17AF7689194005F66F66C4F",
+    "Fistnet.Genepool.Dna/Elements/IDnaElement.cs": "47126ED6764A9960F278FDA276086F69B4EF0593643232CD63B1D27ACF475CAA",
+    "Fistnet.Genepool.Dna/Elements/InfectDnaElement.cs": "0ABC975CD79B4E10E14F9B69FAF106BBC1C217F0F3B312F501CC8E75B426BA3F",
+    "Fistnet.Genepool.Dna/Elements/KillDnaElement.cs": "3E4B5852EF0972506A812657B8BA71614231CA287AC94D2A82A848E5018AE6F0",
+    "Fistnet.Genepool.Dna/Elements/MoveDnaElement.cs": "A73C4DF5D2D6F0F74D110CB1D0539F23F72C89EE9942CE13505B6653709B563F",
+    "Fistnet.Genepool.Dna/Properties/AssemblyInfo.cs": "38008930FE25205485924534A77B838CAB29B16B25AAAD7C79AD5A71DA1AD991",
+    "Fistnet.Genepool.Dna/Elements/Brain/OrganismEvaluation.cs": "CFE2E720FE0EE0DDC2F6687E09E770FE95A872F63B9221FDB0998C637D8B5999",
+    "Fistnet.Genepool.Dna/Elements/Brain/StrategyNetwork.cs": "2A10BFE09C1A5C88E8E187FE9FE97817569CB18E6EC9F95B2859493EA24BB946",
+    "Fistnet.Genepool.Tests/ActionTransactionTests.cs": "0DF77FFA51F86B8F23C76B1139C69012D094A1DD00867C7AD1DD5A86EAAFF804",
+    "Fistnet.Genepool.Tests/DiagnosticScenarios.cs": "9C1F88EE92647832466FE9855C2E7886815F910A2D5549FB510C760D6BF95670",
+    "Fistnet.Genepool.Tests/DiagnosticsTests.cs": "AAD494A999679640A73D4D28A0CBB7628169CB20A9722C0C4656DC402E829AC5",
+    "Fistnet.Genepool.Tests/DnaActionTests.cs": "76398BD793F87F0EA3AA1DB45D2A62A5EFD91B3342F81B12A7260E490C6E0D7C",
+    "Fistnet.Genepool.Tests/Fistnet.Genepool.Tests.csproj": "C9517DF945C421AF55E5B0607714857E3DCA02AB8364EEDCB3C5D13965DAB5D2",
+    "Fistnet.Genepool.Tests/IntegrationTests.cs": "D66AEE80B5D7E14782322C6A8D1C07B85AD36BB7685600AE0A0D89035DE381CB",
+    "Fistnet.Genepool.Tests/LearningPolicyTests.cs": "9544E23495717B643480E244053C696474E9A569034AE71ADF54D528DD4AD3D7",
+    "Fistnet.Genepool.Tests/MechanicsTests.cs": "E51D511101679496AF2FDCBB7A850F72DFDD98BE6F2F95F3AD9A00DBBC7DF3EC",
+    "Fistnet.Genepool.Tests/PerformanceBenchmarks.cs": "A06129AFE1FEC4C89F596B7ED87542DD5AF8AA912F4402008D29E1510EA85167",
+    "Fistnet.Genepool.Tests/Program.cs": "0EAB2121EAA76B3BF04FADDFCB0CD0D8DC5C35E761685218243C44AE1152F297",
+    "Fistnet.Genepool.Tests/RegressionTests.cs": "98F6C7F564E4315F2792BEC7A478515DFE7F3F2376FBD81B6AD61860DB32692D",
+    "Fistnet.Genepool.Tests/RenderingTests.cs": "432AD91A86DBA2CB791E226930422F81E6EA659F7CAC44CC30D116BDE5F0B9D2",
+    "Fistnet.Genepool.Tests/ScenarioRunner.cs": "BE3F731E2813C921B5FC5DA3F4DB5BEFF5AB014267A31AA1F0A81DFAEC2B42DA",
+    "Fistnet.Genepool.Tests/TestSupport.cs": "14F743DCFCA78644250A114986267A13492732BB1D7CBEE66926A0E0B7E8E286",
+    "Fistnet.Genepool.Tests/UiDiagnosticsTests.cs": "4C10A42F6C1F60421A806E1CCD8A6D1E5E87CDCCB1C6001454CDBFC272C8047D",
+    "Fistnet.Genepool.Tests/ViewerBackendTests.cs": "DBDD356C3B02E9049AF65814DBE9C5A3691351053578BACA86131774E8319C3A",
+    "Fistnet.Genepool.Visualization/BoardView.cs": "6D244DCC58ACC13CFA232452E4ABF270C1B9817E4A76D48FFBFF6B6AF68AE613",
+    "Fistnet.Genepool.Visualization/Fistnet.Genepool.Visualization.csproj": "9F420B4D3CE6E2497AA545D71A782880A9D411B06FA31DFF59C28B650758581A",
+    "Fistnet.Genepool.Visualization/GameboardBitmap.cs": "D9C6B3DD0F6403B8811696F7A716F0258138CCD0E051F5093782225397C0BD66",
+    "Fistnet.Genepool.Visualization/PopulationHistory.cs": "79A228D3BD781E88868C0DD59BF54AFE0014077A4EBFD2842F2B3B94A923E2B8",
+    "Fistnet.Genepool.Visualization/PopulationHistoryView.cs": "B37A04BF630DD9A269B958973C11117F482DFA9208525C8EF8F115EC75CD900B",
+    "Fistnet.Genepool.Visualization/SimulationHistoryView.cs": "864267600B37273AF377787D3B7AD3CDC2ECE84995FA8AED8C69083C687337E1",
+    "Fistnet.Genepool.Visualization/Properties/AssemblyInfo.cs": "4096413F80607A3B0290F70A6532F2886F226CFEB8786FC7587B247DEA4AF0F8",
+    "Fistnet.Genepool.sln": "B28C8CDF4D210B23FB3269BEF8FAA8A1F8A493132B03A2C585CD985E49E79A85",
+    "global.json": "F5027F7B2D82128C9715C687359EEE846D57DA45AEAB8986CD265107EB32C47A"
+  },
+  "simulation_inputs_unchanged": 78,
+  "scope": "Governance and KB only; no builds, simulation runs, Git writes or Part4 work.",
+  "independent_review": "Completed; both wording findings corrected.",
+  "interventions": [
+    "The first combined patch was refused for targeting CONSTITUTION.md twice; unchanged predecessor hashes were checked before separate supported updates.",
+    "Removed Markdown trailing whitespace found by diff check; retained consistent CRLF in the edited files.",
+    "Independent review clarified that standing tool-adaptation authority does not itself authorize constitutional rewrites and dated the KB specialization reference.",
+    "The first final text-preservation assertion compared raw LF predecessor text against the intentionally CRLF successor and failed. Inspection established identical general-reasoning text after explicit newline normalization. The corrected text comparison passed; exact predecessor/current byte hashes remain separately recorded."
+  ],
+  "output_kb_revision": 37,
+  "transaction": {
+    "path": "KnowledgeBase/genepool_specialization_transaction.json",
+    "sha256": "AF949CF16F2E0877AFC7F32BEFD3D4F81903111352757F320E6EDAADEB830BDA",
+    "preview_time": "2026-09-06T20:28:58+00:00",
+    "preview_offsets": [
+      0,
+      60
+    ],
+    "reviewed_field_changes": 113,
+    "total_field_changes": 113,
+    "all_preview_values_read": true,
+    "apply": {
+      "ok": true,
+      "dry_run": false,
+      "from_revision": 36,
+      "to_revision": 37,
+      "effects": {
+        "record_upserts": 3,
+        "source_upserts": 3,
+        "core_fields_patched": 6
+      },
+      "validation_scope": "deep_sources_and_prepared",
+      "write_outcome": {
+        "stage": "commit_completed",
+        "replaced_files": [
+          "records.jsonl",
+          "sources.json",
+          "core.json"
+        ],
+        "commit_completed": true,
+        "verification_completed": true,
+        "rollback_performed": false,
+        "recovery_required": false,
+        "cleanup_errors": [],
+        "replacement_uncertain": false
+      },
+      "transaction_sha256": "AF949CF16F2E0877AFC7F32BEFD3D4F81903111352757F320E6EDAADEB830BDA",
+      "hashes": {
+        "core.json": "84EC9EF63E36B98786FEF747772954CD3DAB6F8E682C0E71B38295E95A7C2BB2",
+        "records.jsonl": "6E5A4BF091EFA8090BAA6B7417559FCA6A5FA73BD6CF4EAC4157B2F7F0010485",
+        "sources.json": "017830A23CCDC61D054D17F8742D2DE0FE48BD24A9D094428C6F397FF90F8ADB"
+      }
+    }
+  },
+  "deep_validation": {
+    "ok": true,
+    "errors": [],
+    "warnings": [
+      "source SRC-0115 historical bytes unavailable: The registered mixed-newline Part2 Board.cs bytes are not reproduced by local commit c5a494a412684d801031d1dec2c2c7670f5e3293 using raw or LF-to-CRLF transforms. Bounded reconstruction from retained predecessor/successor evidence did not match the registered SHA256. Git code version and historical prepared text remain available, but exact original-byte history is unverified. See FACT-0042."
+    ],
+    "counts": {
+      "records": 81,
+      "sources": 156,
+      "historical_sources": 74,
+      "prepared_sources": 19
+    },
+    "core_estimated_tokens": 3455,
+    "deep": true,
+    "kb_revision": 37
+  },
+  "final_instruction_and_scope_check": {
+    "ok": true,
+    "source_inputs_unchanged": 78,
+    "general_reasoning_text_preserved": true,
+    "kb_schema_revision_preview_failure_and_preparation_reference_unchanged": true,
+    "required_links_and_policy_marker": true,
+    "role": "Genepool Analyzer",
+    "kb_revision": 37,
+    "part3_acceptance_and_part4_state_unchanged": true,
+    "git_diff_check": "PASS",
+    "comparison_scope": "Instruction text compared after explicit LF/CRLF normalization; current and predecessor exact hashes recorded separately."
+  },
+  "retrieval_verification": {
+    "query": "governance",
+    "kb_revision": 37,
+    "returned_record_ids": [
+      "FACT-0043",
+      "DEC-0001",
+      "DEC-0016",
+      "DEC-0006",
+      "FACT-0001"
+    ],
+    "omitted_record_count": 0,
+    "evidence_scope": "not_requested"
+  }
+}

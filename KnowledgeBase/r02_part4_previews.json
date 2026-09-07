@@ -1,0 +1,42 @@
+{
+  "actor": "Genepool Analyzer",
+  "exit_code": 0,
+  "scope": "32-season reference fixture; programmatic offscreen rendering. Main viewer100%; new settings100/150/200% representative font/geometry scaling, not physical monitor transitions. Three unrelated generated images discarded with owned temporary directory.",
+  "artifacts": [
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r02_part4_preview.png",
+      "sha256": "8D64639C9D671386CB9E84A6D85E618C7BB506BC6D8380A31A0A3E55A8AA53D7",
+      "bytes": 89612,
+      "width": 1456,
+      "height": 999
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r02_part4_settings.png",
+      "sha256": "986FD956AAAC58462A01C768CAB35B847DC9915B32E012FF2D442EBBF0C53AE5",
+      "bytes": 33591,
+      "width": 576,
+      "height": 733
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r02_part4_settings-150.png",
+      "sha256": "9A851C8166E7157F0C6FFD307F43F2FC58D5EF2350119FE40A2F32888ED730A2",
+      "bytes": 43952,
+      "width": 856,
+      "height": 1001
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r02_part4_settings-200.png",
+      "sha256": "25FE14EF2693A7070C060819E8A091CC41C8DDFAD804E2495270126EB8C21902",
+      "bytes": 48462,
+      "width": 1136,
+      "height": 1001
+    }
+  ],
+  "temporary_directory_removed": true,
+  "visual_review": {
+    "actor": "Genepool Analyzer",
+    "at_utc": "2026-09-06T22:04:13.904910+00:00",
+    "reviewed": 4,
+    "result": "Main viewer and100%settings readable;150/200% use scrollable body with fixed visible action buttons. Automated tests verify final field reachability. These are programmatic previews, not physical monitor-transition or owner acceptance evidence."
+  }
+}

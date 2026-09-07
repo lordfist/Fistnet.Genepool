@@ -1,0 +1,30 @@
+{
+  "actor": "Genepool Analyzer",
+  "at_utc": "2026-09-06T21:54:01.187162+00:00",
+  "scope": "Disposable or pure wrapper verification; no ecological trials in these checks.",
+  "checks": 37,
+  "passed": 37,
+  "failed": 0,
+  "coverage": [
+    "23 checks: exact argument ranges/allowlist reject before mocked process start; invalid config/time limits; stage/selector rejection; atomic current-report replacement/cleanup; interruption retains pending work.",
+    "5 post-correction pure cases: empty interruption, prior collapse without terminal row, watchdog with earlier evidence season, completed pass, malformed terminal ordering with known failure.",
+    "9 in-memory summarizer negative fixtures verified by transient runner helper: accounting, windows, extrema, completion, assembly identity, criteria, missing final; four-seed passing labels without final reports; incomplete or invalid timing. All remain rejected/ineligible without executing a trial."
+  ],
+  "tools": [
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\tools\\run_part4_checks.py",
+      "sha256": "A9186E2CF827310E1D6458E89DDBEB4EA90D3EA2FA0666142FC49534B90E1851",
+      "bytes": 14215
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\tools\\summarize_part4.py",
+      "sha256": "F92DDD5915AEF42E1D3D22B8D269CD3357B681ED2B251722324261A7BBD2B9A9",
+      "bytes": 23025
+    }
+  ],
+  "interventions": [
+    "Review found timeout summaries could hide earlier violations; every flushed row now carries sticky criteria/evidence season and wrapper retains it without a final row.",
+    "Independent review found sampled trajectory insufficient for exact diversity ranking; passive report now retains scalar exact extrema."
+  ],
+  "temporary_fixtures_removed": true
+}

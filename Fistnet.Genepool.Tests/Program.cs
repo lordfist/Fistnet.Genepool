@@ -17,16 +17,22 @@ internal static class Program
         {
             int expected = args[0] switch
             {
-                "--all" or "--runner-negative-control" or "--baseline-smoke" => 1,
+                "--all" or "--runner-negative-control" or "--baseline-smoke" or "--performance-micro" => 1,
                 "--group" or "--render-preview" => 2,
                 "--scenario" => 4,
                 "--diagnostic-scenario" => args.Length == 8 ? 8 : 7,
                 "--diagnostic-fixture" => args.Length == 5 ? 5 : 4,
+                "--performance-fixture" => 5,
+                "--ecology-scenario" => 6,
                 _ => -1
             };
             if (args.Length != expected || args.Skip(1).Any(a => string.IsNullOrWhiteSpace(a) || a.StartsWith("--", StringComparison.Ordinal)))
             { Console.Error.WriteLine("Select exactly one supported command with its required arguments."); return 2; }
         }
+        if (args.Length > 0 && args[0] is "--performance-fixture" or "--performance-micro")
+            return PerformanceBenchmarks.RunCli(args);
+        if (args.Length > 0 && args[0] == "--ecology-scenario")
+            return EcologyScenarios.RunCli(args);
         if (args.Length > 0 && (args[0] == "--diagnostic-scenario" || args[0] == "--diagnostic-fixture"))
             return DiagnosticScenarios.RunCli(args);
         if (args.Length == 2 && args[0] == "--render-preview")
@@ -108,6 +114,11 @@ internal static class Program
         cases.AddRange(LearningPolicyTests.Cases());
         cases.AddRange(ActionTransactionTests.Cases());
         cases.AddRange(DnaActionTests.Cases());
+        cases.AddRange(ViewerBackendTests.Cases());
+        cases.AddRange(PerformanceBenchmarks.Cases());
+        cases.AddRange(FounderSetupTests.Cases());
+        cases.AddRange(EcologyTests.Cases());
+        cases.AddRange(EcologyScenarios.Cases());
         cases.Add(new("runner malformed selection fails before any tests execute", "runner", () =>
         {
             foreach (string[] arguments in new[] { new[] { "--group" }, new[] { "--scenario", "11" },

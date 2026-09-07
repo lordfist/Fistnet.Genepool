@@ -89,6 +89,41 @@ namespace Fistnet.Genepool.Dna
             return dnaSequence;
         }
 
+        public static List<IDnaElement> GetFounderDnaSequence(Organism owner, FounderRepertoire repertoire)
+        {
+            if (owner == null) throw new ArgumentNullException(nameof(owner));
+            if (repertoire == FounderRepertoire.UnrestrictedRandom)
+                return GetRandomDnaSequence(owner, Organism.DNA_SEQUENCE_MAXLENGTH);
+            if (repertoire != FounderRepertoire.GatherAndReproduce)
+                throw new ArgumentOutOfRangeException(nameof(repertoire));
+
+            // Reserve both types before filling random slots, so a mandatory slot
+            // cannot exceed the existing per-type cap even when it comes last.
+            int gatherSlot = Common.GetRandomIntegerSeed(Organism.DNA_SEQUENCE_MAXLENGTH);
+            int reproductionSlot = Common.GetRandomIntegerSeed(Organism.DNA_SEQUENCE_MAXLENGTH - 1);
+            if (reproductionSlot >= gatherSlot) reproductionSlot++;
+            DnaTypes[] types = Enum.GetValues<DnaTypes>();
+            var counts = types.ToDictionary(type => type, _ => 0);
+            counts[DnaTypes.GenerateFood] = counts[DnaTypes.CombineDna] = 1;
+            var sequence = new List<IDnaElement>(Organism.DNA_SEQUENCE_MAXLENGTH);
+            for (byte slot = 0; slot < Organism.DNA_SEQUENCE_MAXLENGTH; slot++)
+            {
+                DnaTypes selected;
+                if (slot == gatherSlot) selected = DnaTypes.GenerateFood;
+                else if (slot == reproductionSlot) selected = DnaTypes.CombineDna;
+                else
+                {
+                    DnaTypes[] allowed = types.Where(type => counts[type] < Organism.DNA_SEQUENCE_MAXSINGLETYPE).ToArray();
+                    selected = allowed[Common.GetRandomIntegerSeed(allowed.Length)];
+                    counts[selected]++;
+                }
+                // Existing gene constructors retain random directions. The preset
+                // guarantees these action types, not a usable target or an outcome.
+                sequence.Add(CreateDnaElement(owner, slot, selected));
+            }
+            return sequence;
+        }
+
         public static List<IDnaElement> GetDnaSequenceFromParents(Organism owner, Organism parent1, Organism parent2, byte sequenceLength)
         {
             List<IDnaElement> dnaSequence = new List<IDnaElement>();

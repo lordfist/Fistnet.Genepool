@@ -20,6 +20,7 @@ namespace Fistnet.Genepool.Control.Gameboard
         public Organism Occupant { get; private set; }
 
         public byte FoodRemaining { get; private set; }
+        private readonly byte foodRegrowthPerAge = AGE_FOOD_INCREASE;
 
         public bool IsOccupied { get { return (this.Occupant != null); } }
 
@@ -90,11 +91,11 @@ namespace Fistnet.Genepool.Control.Gameboard
                 this._currentAge++;
                 this._nextAge = true;
                 byte foodBefore = this.FoodRemaining;
-                this.IncreaseFood(BoardSquare.AGE_FOOD_INCREASE);
+                this.IncreaseFood(foodRegrowthPerAge);
                 DiagnosticSession diagnostics = SimulationDiagnostics.Current;
                 if (diagnostics != null)
                 {
-                    diagnostics.Count("food.refill_requested", BoardSquare.AGE_FOOD_INCREASE);
+                    diagnostics.Count("food.refill_requested", foodRegrowthPerAge);
                     diagnostics.Count("food.refill_applied", this.FoodRemaining - foodBefore);
                 }
             }
@@ -134,9 +135,14 @@ namespace Fistnet.Genepool.Control.Gameboard
         }
 
         public BoardSquare(int xPos, int yPos, Organism organism)
+            : this(xPos, yPos, organism, STARTING_FOOD, AGE_FOOD_INCREASE) { }
+
+        public BoardSquare(int xPos, int yPos, Organism organism, byte initialFood, byte regrowthPerAge)
             : this(organism)
         {
-            this.FoodRemaining = BoardSquare.STARTING_FOOD;
+            if (initialFood > MAX_FOOD || regrowthPerAge > MAX_FOOD) throw new ArgumentOutOfRangeException(nameof(initialFood));
+            this.FoodRemaining = initialFood;
+            this.foodRegrowthPerAge = regrowthPerAge;
             this.Position = new Point(xPos, yPos);
         }
 
@@ -247,6 +253,7 @@ namespace Fistnet.Genepool.Control.Gameboard
                 Organism child = parent.CommitBirth(otherParent);
                 if (child == null) return false;
                 destination.AddOccupant(child);
+                Board.ObserveBirth(destination.Position.X, destination.Position.Y);
                 if (diagnostics != null)
                 {
                     diagnostics.Count("birth.placed");

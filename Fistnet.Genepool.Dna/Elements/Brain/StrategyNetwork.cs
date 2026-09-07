@@ -42,8 +42,14 @@ namespace Fistnet.Genepool.Dna.Elements.Brain
                 }
                 else identities[slot] = new GeneIdentity(me.DnaSequence[slot]);
             }
-            foreach (byte slot in identities.Keys.Where(s => s >= me.DnaSequence.Count).ToArray())
-                InvalidateGene(slot);
+            // The ordinary fixed eight-slot genome needs no temporary key array.
+            if (identities.Count > me.DnaSequence.Count)
+            {
+                var removed = new List<byte>();
+                foreach (byte slot in identities.Keys)
+                    if (slot >= me.DnaSequence.Count) removed.Add(slot);
+                foreach (byte slot in removed) InvalidateGene(slot);
+            }
         }
 
         public void InvalidateGene(byte slot)
@@ -82,59 +88,84 @@ namespace Fistnet.Genepool.Dna.Elements.Brain
             {
                 SynchronizeGenes();
                 UsePolicy(settings);
-                var slots = new HashSet<byte>();
-                foreach (var candidate in candidates)
-                    if (!IsCurrent(candidate) || !slots.Add(candidate.Identity.Slot))
-                        throw new ArgumentException("Candidates must contain distinct current genes owned by this actor.", nameof(candidates));
-                var eligible = candidates.Where(c => c.Eligible).OrderBy(c => c.Identity.Slot).ToList();
-                if (eligible.Count == 0) return null;
-                var known = new List<(ActionCandidate Candidate, float Score)>();
-                var unseen = new List<ActionCandidate>();
-                foreach (var candidate in eligible)
+                // Slots are bytes, so bounded stack indices cover even narrow direct
+                // callers. Preserve the old slot sort and each random-choice list's
+                // order without allocating several lists for every organism/season.
+                Span<bool> slots = stackalloc bool[256];
+                slots.Clear();
+                int capacity = Math.Min(candidates.Count, 256);
+                Span<int> eligible = stackalloc int[capacity];
+                Span<int> unseen = stackalloc int[capacity];
+                Span<int> tied = stackalloc int[capacity];
+                int eligibleCount = 0, unseenCount = 0, knownCount = 0, tiedCount = 0;
+                float best = float.NegativeInfinity;
+                for (int index = 0; index < candidates.Count; index++)
                 {
+                    ActionCandidate candidate = candidates[index];
+                    if (!IsCurrent(candidate) || slots[candidate.Identity.Slot])
+                        throw new ArgumentException("Candidates must contain distinct current genes owned by this actor.", nameof(candidates));
+                    slots[candidate.Identity.Slot] = true;
+                    if (!candidate.Eligible) continue;
+                    int position = eligibleCount;
+                    while (position > 0 && candidates[eligible[position - 1]].Identity.Slot > candidate.Identity.Slot)
+                    { eligible[position] = eligible[position - 1]; position--; }
+                    eligible[position] = index;
+                    eligibleCount++;
+                }
+                if (eligibleCount == 0) return null;
+                for (int index = 0; index < eligibleCount; index++)
+                {
+                    var candidate = candidates[eligible[index]];
                     if (mesh.TryGetValue(candidate.Context, out var scores) && scores.TryGetValue(candidate.Identity.Slot, out float score))
                     {
                         if (!float.IsFinite(score)) throw new InvalidOperationException("Stored learning score must be finite.");
-                        known.Add((candidate, score));
+                        knownCount++;
+                        if (score > best) { best = score; tiedCount = 0; }
+                        if (score == best) tied[tiedCount++] = eligible[index];
                     }
-                    else unseen.Add(candidate);
+                    else unseen[unseenCount++] = eligible[index];
                 }
 
                 ActionCandidate selected;
-                if (policy.Learning == LearningPolicy.BoundedExploratory && unseen.Count > 0)
+                string choiceLabel;
+                if (policy.Learning == LearningPolicy.BoundedExploratory && unseenCount > 0)
                 {
-                    selected = RandomChoice(unseen);
+                    selected = RandomChoice(candidates, unseen, unseenCount);
+                    choiceLabel = "Unseen exploration";
                     diagnostics?.Count("choices.random.unseen");
                 }
                 else if (policy.Learning == LearningPolicy.BoundedExploratory
                     && policy.ExplorationPercent > 0 && Common.RandomSource.Next(100) < policy.ExplorationPercent)
                 {
-                    selected = RandomChoice(eligible);
+                    selected = RandomChoice(candidates, eligible, eligibleCount);
+                    choiceLabel = "Random exploration";
                     diagnostics?.Count("choices.random.exploration");
                 }
-                else if (known.Count == 0 || (policy.Learning == LearningPolicy.RepairedLegacy && known.Max(x => x.Score) < 0))
+                else if (knownCount == 0 || (policy.Learning == LearningPolicy.RepairedLegacy && best < 0))
                 {
-                    selected = RandomChoice(eligible);
-                    diagnostics?.Count(known.Count == 0 ? "choices.random.no_history" : "choices.random.all_negative");
+                    selected = RandomChoice(candidates, eligible, eligibleCount);
+                    choiceLabel = knownCount == 0 ? "Random no history" : "Random all negative";
+                    diagnostics?.Count(knownCount == 0 ? "choices.random.no_history" : "choices.random.all_negative");
                 }
                 else
                 {
-                    float best = known.Max(x => x.Score);
-                    var tied = known.Where(x => x.Score == best).Select(x => x.Candidate).ToList();
-                    selected = policy.Learning == LearningPolicy.BoundedExploratory ? RandomChoice(tied) : tied[0];
+                    selected = policy.Learning == LearningPolicy.BoundedExploratory
+                        ? RandomChoice(candidates, tied, tiedCount) : candidates[tied[0]];
+                    choiceLabel = policy.Learning == LearningPolicy.BoundedExploratory && tiedCount > 1
+                        ? "Learned best (random tie)" : "Learned best";
                     diagnostics?.Count("choices.greedy");
                 }
                 // Probing candidates does not create contexts or refresh their LRU age.
                 if (mesh.ContainsKey(selected.Context)) Touch(selected.Context);
-                pending = new ActionDecision(selected);
+                pending = new ActionDecision(selected) { ChoiceLabel = choiceLabel };
                 pendingVersion = Version(selected.Identity.Slot);
                 return pending;
             }
             finally { diagnostics?.Timing("dna.decision", Stopwatch.GetTimestamp() - started); }
         }
 
-        private static ActionCandidate RandomChoice(List<ActionCandidate> candidates) =>
-            candidates[candidates.Count == 1 ? 0 : Common.RandomSource.Next(candidates.Count)];
+        private static ActionCandidate RandomChoice(IReadOnlyList<ActionCandidate> candidates, ReadOnlySpan<int> indices, int count) =>
+            candidates[indices[count == 1 ? 0 : Common.RandomSource.Next(count)]];
 
         public void Complete(ActionDecision decision, ActionOutcome outcome)
         {
@@ -205,6 +236,11 @@ namespace Fistnet.Genepool.Dna.Elements.Brain
                 {
                     if (parent == null) { orders.Add(Array.Empty<string>()); continue; }
                     parent.Brain.SynchronizeGenes();
+                    // Gene compatibility is constant throughout this parent copy,
+                    // so compare each slot once, not once per history entry.
+                    var matchingSlots = new bool[256];
+                    for (int slot = 0; slot < Math.Min(me.DnaSequence.Count, parent.DnaSequence.Count); slot++)
+                        matchingSlots[slot] = MatchesParent(parent, (byte)slot);
                     var contributed = new HashSet<string>(StringComparer.Ordinal);
                     foreach (var context in parent.Brain.mesh)
                     {
@@ -212,7 +248,7 @@ namespace Fistnet.Genepool.Dna.Elements.Brain
                         foreach (var entry in context.Value)
                         {
                             entriesVisited++;
-                            if (!MatchesParent(parent, entry.Key)) continue;
+                            if (!matchingSlots[entry.Key]) continue;
                             if (!float.IsFinite(entry.Value)) throw new InvalidOperationException("Inherited score must be finite.");
                             matchingEntries++;
                             if (!totals.TryGetValue(context.Key, out var values))

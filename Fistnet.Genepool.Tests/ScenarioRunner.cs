@@ -109,6 +109,15 @@ internal static class ScenarioRunner
     }
 
     public static readonly List<Result> EvaluationResults = new();
+    // Accepted Part 2, commit c5a494a. Part 3 observation/performance work must
+    // retain the default model, not merely agree with another changed run.
+    private static readonly Dictionary<int, (string Hash, long Draws)> Part2Reference = new()
+    {
+        [11] = ("9F48B02B3E1E752A8448BA87F703DD65CC77BAA5EB0AC3316145B8DFEFF600B6", 843754),
+        [29] = ("AB4EF8C91070F6C53AFB9FC2BB1217E3D61898FA3CE2BD660156181424A194E2", 935898),
+        [47] = ("E3A0251A828379FD3C11A594697467D31A0ED34E03E5711996B83C5D86B124E7", 868307),
+        [83] = ("0C6021B6F48DAF361B927E4BBF29F60FC0A1F46603796B4286449BF1AFB33A21", 840616)
+    };
     public static IEnumerable<TestCase> Cases()
     {
         foreach (int seed in new[] { 11, 29, 47, 83 })
@@ -116,6 +125,8 @@ internal static class ScenarioRunner
             {
                 var plain = Run(seed, 128, SimulationMode.DeterministicReference);
                 var observed = Run(seed, 128, SimulationMode.DeterministicReference, observe: true);
+                Check.Equal(Part2Reference[seed].Hash, plain.StateSha256, "Part 3 changed accepted default reference state");
+                Check.Equal(Part2Reference[seed].Draws, plain.RandomDraws, "Part 3 changed default random consumption");
                 Check.Equal(plain.StateSha256, observed.StateSha256, "observer changed complete state");
                 Check.Equal(plain.RandomDraws, observed.RandomDraws);
                 Check.Equal(JsonSerializer.Serialize(plain.Trajectory), JsonSerializer.Serialize(observed.Trajectory));

@@ -1,0 +1,271 @@
+{
+  "actor": "Seed Analyzer",
+  "part": "R02 Part3",
+  "authority_revision": {
+    "from": 30,
+    "to": 31,
+    "record": "DEC-0015"
+  },
+  "reviewed_preview": {
+    "transaction_sha256": "821FBD9257CB7A8D1F0E4CDE2D8538FF13B26E4B8D8DF3B843EA2FE8A4679354",
+    "from_revision": 31,
+    "preview_time": "2026-09-06T19:25:13+00:00",
+    "changes_reviewed": 712,
+    "page_offsets": [
+      0,
+      100,
+      200,
+      300,
+      400,
+      500,
+      600,
+      700
+    ],
+    "all_values_reviewed": true,
+    "remaining_omissions": 0
+  },
+  "implementation_apply": {
+    "ok": true,
+    "dry_run": false,
+    "from_revision": 31,
+    "to_revision": 32,
+    "effects": {
+      "record_upserts": 8,
+      "source_upserts": 42,
+      "core_fields_patched": 8
+    },
+    "validation_scope": "deep_sources_and_prepared",
+    "write_outcome": {
+      "stage": "commit_completed",
+      "replaced_files": [
+        "records.jsonl",
+        "sources.json",
+        "core.json"
+      ],
+      "commit_completed": true,
+      "verification_completed": true,
+      "rollback_performed": false,
+      "recovery_required": false,
+      "cleanup_errors": [],
+      "replacement_uncertain": false
+    },
+    "transaction_sha256": "821FBD9257CB7A8D1F0E4CDE2D8538FF13B26E4B8D8DF3B843EA2FE8A4679354",
+    "hashes": {
+      "core.json": "D0244ABAB037B5369DD0FAE424C3A6F72AC5F975A47CF383C81185B73A275963",
+      "records.jsonl": "5F0408BCF7780B3DF1489B45AA8FCAB10D625D46847C822F66C179106E851ACF",
+      "sources.json": "F182125A5D1820CBAA9347C5180DC44EC51DE49B936E3F857C80FCB90FE7D150"
+    }
+  },
+  "preparations": [
+    {
+      "ok": true,
+      "status": "PASS",
+      "from_revision": 32,
+      "to_revision": 33,
+      "prepared": [
+        {
+          "source_id": "SRC-0131",
+          "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.App\\MainForm.cs",
+          "source_sha256": "AC33A0992864DCAFEF05F728740187FD645850BDEFB4EC097DD59B4125F21400",
+          "parser": "static-text",
+          "records": 20,
+          "coverage": {
+            "encoding": "utf-8-sig",
+            "text": "static bounded line chunks",
+            "execution": "not executed",
+            "external_references": "not followed"
+          },
+          "redactions": {},
+          "prepared_sha256": "E818496194E1D1440E4DC01E008CB1F204340D0442FDFDC46C243465C9EF7248",
+          "status": "prepared"
+        }
+      ],
+      "already_prepared": [],
+      "write_outcome": {
+        "stage": "commit_completed",
+        "replaced_files": [
+          "prepared/SRC-0131.jsonl",
+          "sources.json",
+          "core.json"
+        ],
+        "commit_completed": true,
+        "verification_completed": true,
+        "rollback_performed": false,
+        "recovery_required": false,
+        "cleanup_errors": [],
+        "replacement_uncertain": false
+      }
+    },
+    {
+      "ok": true,
+      "status": "PASS",
+      "from_revision": 33,
+      "to_revision": 34,
+      "prepared": [
+        {
+          "source_id": "SRC-0147",
+          "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\SimulationRunner.cs",
+          "source_sha256": "10BDC633721B982940F7670EAAE67C20E5206DF6812D60413272E93EC186A2C6",
+          "parser": "static-text",
+          "records": 9,
+          "coverage": {
+            "encoding": "utf-8-sig",
+            "text": "static bounded line chunks",
+            "execution": "not executed",
+            "external_references": "not followed"
+          },
+          "redactions": {},
+          "prepared_sha256": "229E084ACBD01AA58157A892B76D48A774580F167AD91E93C8A30EFD24B16F1A",
+          "status": "prepared"
+        }
+      ],
+      "already_prepared": [],
+      "write_outcome": {
+        "stage": "commit_completed",
+        "replaced_files": [
+          "prepared/SRC-0147.jsonl",
+          "sources.json",
+          "core.json"
+        ],
+        "commit_completed": true,
+        "verification_completed": true,
+        "rollback_performed": false,
+        "recovery_required": false,
+        "cleanup_errors": [],
+        "replacement_uncertain": false
+      }
+    },
+    {
+      "ok": true,
+      "status": "PASS",
+      "from_revision": 34,
+      "to_revision": 35,
+      "prepared": [
+        {
+          "source_id": "SRC-0148",
+          "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\ViewCollector.cs",
+          "source_sha256": "98CF8DC9401022FCDF6F76649DB91769E11D2F2AAF00D333B253F48803213F76",
+          "parser": "static-text",
+          "records": 9,
+          "coverage": {
+            "encoding": "utf-8-sig",
+            "text": "static bounded line chunks",
+            "execution": "not executed",
+            "external_references": "not followed"
+          },
+          "redactions": {},
+          "prepared_sha256": "0090D32270B751AAE1EDB3F8A3CA58261E0FE92D5B3632E7ADC6DE459E2ACB66",
+          "status": "prepared"
+        }
+      ],
+      "already_prepared": [],
+      "write_outcome": {
+        "stage": "commit_completed",
+        "replaced_files": [
+          "prepared/SRC-0148.jsonl",
+          "sources.json",
+          "core.json"
+        ],
+        "commit_completed": true,
+        "verification_completed": true,
+        "rollback_performed": false,
+        "recovery_required": false,
+        "cleanup_errors": [],
+        "replacement_uncertain": false
+      }
+    },
+    {
+      "ok": true,
+      "status": "PASS",
+      "from_revision": 35,
+      "to_revision": 36,
+      "prepared": [
+        {
+          "source_id": "SRC-0152",
+          "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Visualization\\BoardView.cs",
+          "source_sha256": "6D244DCC58ACC13CFA232452E4ABF270C1B9817E4A76D48FFBFF6B6AF68AE613",
+          "parser": "static-text",
+          "records": 12,
+          "coverage": {
+            "encoding": "utf-8-sig",
+            "text": "static bounded line chunks",
+            "execution": "not executed",
+            "external_references": "not followed"
+          },
+          "redactions": {},
+          "prepared_sha256": "4D5F03147874DA606895FE900A4A915666193B4D413A2C18632A98A023261223",
+          "status": "prepared"
+        }
+      ],
+      "already_prepared": [],
+      "write_outcome": {
+        "stage": "commit_completed",
+        "replaced_files": [
+          "prepared/SRC-0152.jsonl",
+          "sources.json",
+          "core.json"
+        ],
+        "commit_completed": true,
+        "verification_completed": true,
+        "rollback_performed": false,
+        "recovery_required": false,
+        "cleanup_errors": [],
+        "replacement_uncertain": false
+      }
+    }
+  ],
+  "final_validation": {
+    "ok": true,
+    "errors": [],
+    "warnings": [
+      "source SRC-0115 historical bytes unavailable: The registered mixed-newline Part2 Board.cs bytes are not reproduced by local commit c5a494a412684d801031d1dec2c2c7670f5e3293 using raw or LF-to-CRLF transforms. Bounded reconstruction from retained predecessor/successor evidence did not match the registered SHA256. Git code version and historical prepared text remain available, but exact original-byte history is unverified. See FACT-0042."
+    ],
+    "counts": {
+      "records": 79,
+      "sources": 153,
+      "historical_sources": 74,
+      "prepared_sources": 19
+    },
+    "core_estimated_tokens": 3199,
+    "deep": true,
+    "kb_revision": 36
+  },
+  "status": "KB revision36 verified: zero errors, one explicit SRC-0115 historical-byte warning. All four preparations and the transaction committed and verified without recovery/cleanup errors. Part3 awaits owner review; Git unmodified.",
+  "completed_at_utc": "2026-09-06T19:31:36.773056+00:00",
+  "final_hashes": {
+    "core.json": "C11FA837C48D5143B23EDC971399E55A549E0FAAAB2098C6498931DDE49227F0",
+    "records.jsonl": "5F0408BCF7780B3DF1489B45AA8FCAB10D625D46847C822F66C179106E851ACF",
+    "sources.json": "4CA7398ADED6CAAE28D978AA4242001FE25E6651F8EEB41D97D31DBC58725C35"
+  },
+  "changes": {
+    "records_added_this_task": [
+      "DEC-0015",
+      "FACT-0040",
+      "FACT-0041",
+      "FACT-0042",
+      "INF-0008"
+    ],
+    "existing_records_updated": [
+      "REC-0005",
+      "INF-0007",
+      "FACT-0037",
+      "FACT-0038"
+    ],
+    "new_source_ids": "SRC-0128..SRC-0153",
+    "earlier_sources_marked_historical": 16,
+    "current_sources_prepared": [
+      "SRC-0131",
+      "SRC-0147",
+      "SRC-0148",
+      "SRC-0152"
+    ]
+  },
+  "git_head_unchanged": "c5a494a412684d801031d1dec2c2c7670f5e3293",
+  "git_diff_check_passed": true,
+  "retrieval_route_verified": {
+    "topic": "r02_part3_result",
+    "returned_records": 5,
+    "omitted_records": 0,
+    "evidence_requested": false
+  }
+}

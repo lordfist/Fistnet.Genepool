@@ -1,0 +1,100 @@
+{
+  "actor": "Genepool Analyzer",
+  "at_utc": "2026-09-06T21:06:13.251814+00:00",
+  "kb_revision": 37,
+  "head": "c5a494a412684d801031d1dec2c2c7670f5e3293",
+  "working_tree": "Accepted Part3 and governance changes remain uncommitted; user did not report a new commit.",
+  "affected_predecessors": [
+    {
+      "source_id": "SRC-0091",
+      "path": "Fistnet.Genepool.Dna/DnaElementFactory.cs",
+      "sha256": "5D73E13CA985E04F4BD99D5E240AE322B3A572500138A482671D3295CFBD2426",
+      "bytes": 5315,
+      "history": {
+        "git_commit": "c5a494a412684d801031d1dec2c2c7670f5e3293",
+        "transform": "lf_to_crlf"
+      }
+    },
+    {
+      "source_id": "SRC-0137",
+      "path": "Fistnet.Genepool.Dna/Organism.cs",
+      "sha256": "483CAF9329558870C6A3D573E7796ABC662C79596E2402619D227461F6D349D2",
+      "bytes": 18993,
+      "history": {
+        "snapshot": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\source-history\\SRC-0137.cs"
+      }
+    },
+    {
+      "source_id": "SRC-0133",
+      "path": "Fistnet.Genepool.Control/SimulationRunOptions.cs",
+      "sha256": "37DE1CACA84E20DC8E378F0983D38B725B3AC3A1CA3C5BF256B673D39F9C3220",
+      "bytes": 1556,
+      "history": {
+        "snapshot": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\source-history\\SRC-0133.cs"
+      }
+    },
+    {
+      "source_id": "SRC-0136",
+      "path": "Fistnet.Genepool.Control/Gameboard/Board.cs",
+      "sha256": "5F30C47F3BBDFE2E59C35485257B986BA948C365F3837ED14E20363DD53DE9C3",
+      "bytes": 18601,
+      "history": {
+        "snapshot": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\source-history\\SRC-0136.cs"
+      }
+    },
+    {
+      "source_id": "SRC-0134",
+      "path": "Fistnet.Genepool.Control/SimulationSnapshot.cs",
+      "sha256": "7D829F3124E5FA23DCC203FBF7C2D06C600645CE55D32EF948C5460285C9EDFD",
+      "bytes": 11371,
+      "history": {
+        "snapshot": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\source-history\\SRC-0134.cs"
+      }
+    },
+    {
+      "source_id": "SRC-0148",
+      "path": "Fistnet.Genepool.Control/ViewCollector.cs",
+      "sha256": "98CF8DC9401022FCDF6F76649DB91769E11D2F2AAF00D333B253F48803213F76",
+      "bytes": 9192,
+      "history": {
+        "snapshot": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\source-history\\SRC-0148.cs"
+      }
+    },
+    {
+      "source_id": "SRC-0145",
+      "path": "Fistnet.Genepool.App/NewSimulationDialog.cs",
+      "sha256": "530C9C9A69E9C02BC662362A485FFAD0EDBA388EEBABB4594B7D7A13DB1479EE",
+      "bytes": 10903,
+      "history": {
+        "snapshot": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\source-history\\SRC-0145.cs"
+      }
+    },
+    {
+      "source_id": "SRC-0131",
+      "path": "Fistnet.Genepool.App/MainForm.cs",
+      "sha256": "AC33A0992864DCAFEF05F728740187FD645850BDEFB4EC097DD59B4125F21400",
+      "bytes": 23363,
+      "history": {
+        "snapshot": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\source-history\\SRC-0131.cs"
+      }
+    },
+    {
+      "source_id": "SRC-0140",
+      "path": "Fistnet.Genepool.Tests/Program.cs",
+      "sha256": "0EAB2121EAA76B3BF04FADDFCB0CD0D8DC5C35E761685218243C44AE1152F297",
+      "bytes": 6774,
+      "history": {
+        "snapshot": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\source-history\\SRC-0140.cs"
+      }
+    },
+    {
+      "source_id": "SRC-0141",
+      "path": "Fistnet.Genepool.Tests/README.md",
+      "sha256": "F97FC9AFFCD978C549F812B248C7627ADFA81DF62E462DA06649593C6FE1B925",
+      "bytes": 19430,
+      "history": {
+        "snapshot": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\source-history\\SRC-0141.md"
+      }
+    }
+  ]
+}

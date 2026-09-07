@@ -1,0 +1,23 @@
+{
+  "actor": "Genepool Analyzer",
+  "at_utc": "2026-09-06T21:59:46.330037+00:00",
+  "contractSha256": "B4EC2A61747B598E86D498DC77FDDDDB690AC4B6A3B088E16C59BB407CFE183F",
+  "comparisonRuns": 16,
+  "qualifyingCandidates": [],
+  "selectedCandidate": null,
+  "reservedConfirmationDispatched": false,
+  "reason": "Each candidate has four incomplete 2048-season comparisons; no candidate satisfies the prospective all-four eligibility requirement. Reserved confirmation seeds101/211 are not run; no retuning or default promotion.",
+  "source": "r02_part4_comparison_summary.json",
+  "inputSha256AtSelection": "CAC34DE17AB28EECB62D327BE5BB0657D14999DCC06CD9A3D684755279610503",
+  "finalComparisonSummary": {
+    "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r02_part4_comparison_summary.json",
+    "sha256": "7C37C3C9D116DC26B1646E4FCED6AC26855AA75719CC6721C2E19BC62147225C",
+    "bytes": 71751
+  },
+  "finalResults": {
+    "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r02_part4_results.json",
+    "sha256": "44CBEC712B04F1059BF3694CE5D97D1794D6EFD241392441ABD71D246AE372D4",
+    "bytes": 6036410
+  },
+  "reconciled_at_utc": "2026-09-06T22:04:13.904910+00:00"
+}

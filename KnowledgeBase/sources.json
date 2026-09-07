@@ -1,5 +1,5 @@
 {
-  "catalog_revision": 18,
+  "catalog_revision": 27,
   "sources": [
     {
       "source_id": "SRC-0001",
@@ -145,7 +145,24 @@
       "size_bytes": 515,
       "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
       "coverage": "complete textual reading; 21 file lines; exact bytes hashed; no execution or runtime validation.",
-      "status": "inspected working-tree original; not owner-approved domain authority"
+      "status": "inspected working-tree original; not owner-approved domain authority",
+      "supersession": {
+        "source_id": "SRC-0128",
+        "actor": "Seed Analyzer",
+        "reason": "Owner-authorized R02 Part3 viewer and semantic-preserving performance implementation; preserve prior identities and explicit historical verification limits.",
+        "record_ids": [
+          "FACT-0040",
+          "FACT-0042"
+        ],
+        "observed_at": "2026-09-06T19:18:09+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "c5a494a412684d801031d1dec2c2c7670f5e3293",
+          "path": "Fistnet.Genepool.App/Program.cs",
+          "blob_oid": "80c30dd0881b7dc6b5ac9c0fcbe31cdea2b5cb27",
+          "transform": "lf_to_crlf"
+        }
+      }
     },
     {
       "source_id": "SRC-0007",
@@ -1454,7 +1471,24 @@
       "observed_at_utc": "2026-09-06T12:47:56+00:00",
       "supersedes": "SRC-0029",
       "status": "Current owner-authorized R01 implementation; Seed Analyzer changes after original discovery",
-      "coverage": "Complete textual implementation/review; 189 lines. Verified final R01 build and bounded suite; not exhaustive runtime proof."
+      "coverage": "Complete textual implementation/review; 189 lines. Verified final R01 build and bounded suite; not exhaustive runtime proof.",
+      "supersession": {
+        "source_id": "SRC-0129",
+        "actor": "Seed Analyzer",
+        "reason": "Owner-authorized R02 Part3 viewer and semantic-preserving performance implementation; preserve prior identities and explicit historical verification limits.",
+        "record_ids": [
+          "FACT-0040",
+          "FACT-0042"
+        ],
+        "observed_at": "2026-09-06T19:18:09+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "c5a494a412684d801031d1dec2c2c7670f5e3293",
+          "path": "Fistnet.Genepool.App/MainForm.Designer.cs",
+          "blob_oid": "d5dd7fa7f376eb18a2ef974cb3454037b7b5ade1",
+          "transform": "lf_to_crlf"
+        }
+      }
     },
     {
       "source_id": "SRC-0052",
@@ -1780,6 +1814,23 @@
           "DEC-0007",
           "FACT-0023"
         ]
+      },
+      "supersession": {
+        "source_id": "SRC-0130",
+        "actor": "Seed Analyzer",
+        "reason": "Owner-authorized R02 Part3 viewer and semantic-preserving performance implementation; preserve prior identities and explicit historical verification limits.",
+        "record_ids": [
+          "FACT-0040",
+          "FACT-0042"
+        ],
+        "observed_at": "2026-09-06T19:18:09+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "c5a494a412684d801031d1dec2c2c7670f5e3293",
+          "path": "Fistnet.Genepool.Tests/RenderingTests.cs",
+          "blob_oid": "d84106046f4b58df5e223d8c366835bdc3f0f331",
+          "transform": "raw"
+        }
       }
     },
     {
@@ -2164,7 +2215,24 @@
       "observed_at_utc": "2026-09-06T15:14:47+00:00",
       "supersedes": "SRC-0043",
       "status": "Current Seed-authored R02 Part1 implementation under DEC-0012; not original Genesis evidence or owner-accepted ecological design.",
-      "coverage": "Complete textual implementation/review; 213 lines. Included in passing Debug/Release whole-solution builds and tests; checks have the bounded scope in FACT-0034."
+      "coverage": "Complete textual implementation/review; 213 lines. Included in passing Debug/Release whole-solution builds and tests; checks have the bounded scope in FACT-0034.",
+      "supersession": {
+        "source_id": "SRC-0131",
+        "actor": "Seed Analyzer",
+        "reason": "Owner-authorized R02 Part3 viewer and semantic-preserving performance implementation; preserve prior identities and explicit historical verification limits.",
+        "record_ids": [
+          "FACT-0040",
+          "FACT-0042"
+        ],
+        "observed_at": "2026-09-06T19:18:10+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "c5a494a412684d801031d1dec2c2c7670f5e3293",
+          "path": "Fistnet.Genepool.App/MainForm.cs",
+          "blob_oid": "0513196313f1fa26558b220457ad0c6500422766",
+          "transform": "lf_to_crlf"
+        }
+      }
     },
     {
       "source_id": "SRC-0080",
@@ -2431,7 +2499,24 @@
       "size_bytes": 3591,
       "observed_at_utc": "2026-09-06T15:14:46.016303+00:00",
       "status": "New Seed-authored R02 Part1 diagnostic/test source under DEC-0012; not original Genesis evidence.",
-      "coverage": "Complete textual implementation/review; 65 lines. Passing Debug/Release builds and tests; bounded verification in FACT-0034."
+      "coverage": "Complete textual implementation/review; 65 lines. Passing Debug/Release builds and tests; bounded verification in FACT-0034.",
+      "supersession": {
+        "source_id": "SRC-0132",
+        "actor": "Seed Analyzer",
+        "reason": "Owner-authorized R02 Part3 viewer and semantic-preserving performance implementation; preserve prior identities and explicit historical verification limits.",
+        "record_ids": [
+          "FACT-0040",
+          "FACT-0042"
+        ],
+        "observed_at": "2026-09-06T19:18:10+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "c5a494a412684d801031d1dec2c2c7670f5e3293",
+          "path": "Fistnet.Genepool.Tests/UiDiagnosticsTests.cs",
+          "blob_oid": "f824a4ac27018d4163b634f6dde63307e33005e0",
+          "transform": "lf_to_crlf"
+        }
+      }
     },
     {
       "source_id": "SRC-0091",
@@ -2449,6 +2534,23 @@
       "origin": {
         "actor": "Seed Analyzer",
         "type": "authorized_R02_Part2_successor"
+      },
+      "supersession": {
+        "source_id": "SRC-0157",
+        "actor": "Genepool Analyzer",
+        "reason": "Authorized R02 Part4 optional founder setup, passive ecological evaluation and review support.",
+        "record_ids": [
+          "DEC-0017",
+          "FACT-0044"
+        ],
+        "observed_at": "2026-09-06T21:28:06+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "c5a494a412684d801031d1dec2c2c7670f5e3293",
+          "path": "Fistnet.Genepool.Dna/DnaElementFactory.cs",
+          "blob_oid": "e6d1123ca8d18ad44b2376fd6294655aa07e7db2",
+          "transform": "lf_to_crlf"
+        }
       }
     },
     {
@@ -2701,6 +2803,23 @@
       "origin": {
         "actor": "Seed Analyzer",
         "type": "authorized_R02_Part2_successor"
+      },
+      "supersession": {
+        "source_id": "SRC-0133",
+        "actor": "Seed Analyzer",
+        "reason": "Owner-authorized R02 Part3 viewer and semantic-preserving performance implementation; preserve prior identities and explicit historical verification limits.",
+        "record_ids": [
+          "FACT-0040",
+          "FACT-0042"
+        ],
+        "observed_at": "2026-09-06T19:18:10+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "c5a494a412684d801031d1dec2c2c7670f5e3293",
+          "path": "Fistnet.Genepool.Control/SimulationRunOptions.cs",
+          "blob_oid": "840840f7dc976ccfc0613edbecaef5c084a68074",
+          "transform": "raw"
+        }
       }
     },
     {
@@ -2719,6 +2838,23 @@
       "origin": {
         "actor": "Seed Analyzer",
         "type": "authorized_R02_Part2_successor"
+      },
+      "supersession": {
+        "source_id": "SRC-0134",
+        "actor": "Seed Analyzer",
+        "reason": "Owner-authorized R02 Part3 viewer and semantic-preserving performance implementation; preserve prior identities and explicit historical verification limits.",
+        "record_ids": [
+          "FACT-0040",
+          "FACT-0042"
+        ],
+        "observed_at": "2026-09-06T19:18:11+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "c5a494a412684d801031d1dec2c2c7670f5e3293",
+          "path": "Fistnet.Genepool.Control/SimulationSnapshot.cs",
+          "blob_oid": "a7d354a2304e2496d48eb2bfce46a9fb8e794093",
+          "transform": "raw"
+        }
       }
     },
     {
@@ -2791,6 +2927,23 @@
       "origin": {
         "actor": "Seed Analyzer",
         "type": "authorized_R02_Part2_successor"
+      },
+      "supersession": {
+        "source_id": "SRC-0135",
+        "actor": "Seed Analyzer",
+        "reason": "Owner-authorized R02 Part3 viewer and semantic-preserving performance implementation; preserve prior identities and explicit historical verification limits.",
+        "record_ids": [
+          "FACT-0040",
+          "FACT-0042"
+        ],
+        "observed_at": "2026-09-06T19:18:11+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "c5a494a412684d801031d1dec2c2c7670f5e3293",
+          "path": "Fistnet.Genepool.Tests/ScenarioRunner.cs",
+          "blob_oid": "c39a4e540251e87a59d2258e045b7ba443e0445f",
+          "transform": "raw"
+        }
       }
     },
     {
@@ -2897,6 +3050,20 @@
           "execution": "not executed",
           "external_references": "not followed"
         }
+      },
+      "supersession": {
+        "source_id": "SRC-0136",
+        "actor": "Seed Analyzer",
+        "reason": "Owner-authorized R02 Part3 viewer and semantic-preserving performance implementation; preserve prior identities and explicit historical verification limits.",
+        "record_ids": [
+          "FACT-0040",
+          "FACT-0042"
+        ],
+        "observed_at": "2026-09-06T19:18:11+00:00",
+        "history": {
+          "kind": "unavailable",
+          "reason": "The registered mixed-newline Part2 Board.cs bytes are not reproduced by local commit c5a494a412684d801031d1dec2c2c7670f5e3293 using raw or LF-to-CRLF transforms. Bounded reconstruction from retained predecessor/successor evidence did not match the registered SHA256. Git code version and historical prepared text remain available, but exact original-byte history is unverified. See FACT-0042."
+        }
       }
     },
     {
@@ -2930,6 +3097,23 @@
           "text": "static bounded line chunks",
           "execution": "not executed",
           "external_references": "not followed"
+        }
+      },
+      "supersession": {
+        "source_id": "SRC-0137",
+        "actor": "Seed Analyzer",
+        "reason": "Owner-authorized R02 Part3 viewer and semantic-preserving performance implementation; preserve prior identities and explicit historical verification limits.",
+        "record_ids": [
+          "FACT-0040",
+          "FACT-0042"
+        ],
+        "observed_at": "2026-09-06T19:18:12+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "c5a494a412684d801031d1dec2c2c7670f5e3293",
+          "path": "Fistnet.Genepool.Dna/Organism.cs",
+          "blob_oid": "05b0c31054f8da69502faa8e0511589afc2a0555",
+          "transform": "lf_to_crlf"
         }
       }
     },
@@ -2965,6 +3149,23 @@
           "execution": "not executed",
           "external_references": "not followed"
         }
+      },
+      "supersession": {
+        "source_id": "SRC-0138",
+        "actor": "Seed Analyzer",
+        "reason": "Owner-authorized R02 Part3 viewer and semantic-preserving performance implementation; preserve prior identities and explicit historical verification limits.",
+        "record_ids": [
+          "FACT-0040",
+          "FACT-0042"
+        ],
+        "observed_at": "2026-09-06T19:18:12+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "c5a494a412684d801031d1dec2c2c7670f5e3293",
+          "path": "Fistnet.Genepool.Dna/Elements/Brain/StrategyNetwork.cs",
+          "blob_oid": "cf7ec80f34ad7f7011801d4a7c23c81c04411db0",
+          "transform": "raw"
+        }
       }
     },
     {
@@ -2983,6 +3184,20 @@
       "origin": {
         "actor": "Seed Analyzer",
         "type": "authorized_R02_Part2_successor"
+      },
+      "supersession": {
+        "source_id": "SRC-0139",
+        "actor": "Seed Analyzer",
+        "reason": "Owner-authorized R02 Part3 viewer and semantic-preserving performance implementation; preserve prior identities and explicit historical verification limits.",
+        "record_ids": [
+          "FACT-0040",
+          "FACT-0042"
+        ],
+        "observed_at": "2026-09-06T19:18:12+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/SRC-0118.cs"
+        }
       }
     },
     {
@@ -3001,6 +3216,20 @@
       "origin": {
         "actor": "Seed Analyzer",
         "type": "authorized_R02_Part2_successor"
+      },
+      "supersession": {
+        "source_id": "SRC-0140",
+        "actor": "Seed Analyzer",
+        "reason": "Owner-authorized R02 Part3 viewer and semantic-preserving performance implementation; preserve prior identities and explicit historical verification limits.",
+        "record_ids": [
+          "FACT-0040",
+          "FACT-0042"
+        ],
+        "observed_at": "2026-09-06T19:18:13+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/SRC-0119.cs"
+        }
       }
     },
     {
@@ -3019,6 +3248,23 @@
       "origin": {
         "actor": "Seed Analyzer",
         "type": "authorized_R02_Part2_successor"
+      },
+      "supersession": {
+        "source_id": "SRC-0141",
+        "actor": "Seed Analyzer",
+        "reason": "Owner-authorized R02 Part3 viewer and semantic-preserving performance implementation; preserve prior identities and explicit historical verification limits.",
+        "record_ids": [
+          "FACT-0040",
+          "FACT-0042"
+        ],
+        "observed_at": "2026-09-06T19:18:13+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "c5a494a412684d801031d1dec2c2c7670f5e3293",
+          "path": "Fistnet.Genepool.Tests/README.md",
+          "blob_oid": "078b7b852260f6025a1380a642d0a038a7e158b1",
+          "transform": "lf_to_crlf"
+        }
       }
     },
     {
@@ -3055,6 +3301,23 @@
       "origin": {
         "actor": "Seed Analyzer",
         "type": "authorized_R02_Part2_successor"
+      },
+      "supersession": {
+        "source_id": "SRC-0142",
+        "actor": "Seed Analyzer",
+        "reason": "Owner-authorized R02 Part3 viewer and semantic-preserving performance implementation; preserve prior identities and explicit historical verification limits.",
+        "record_ids": [
+          "FACT-0040",
+          "FACT-0042"
+        ],
+        "observed_at": "2026-09-06T19:18:13+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "c5a494a412684d801031d1dec2c2c7670f5e3293",
+          "path": "Fistnet.Genepool.Tests/DiagnosticScenarios.cs",
+          "blob_oid": "e8a6457b25d82c2f349a4a502a1562fa89081ae5",
+          "transform": "lf_to_crlf"
+        }
       }
     },
     {
@@ -3105,6 +3368,23 @@
           "execution": "not executed",
           "external_references": "not followed"
         }
+      },
+      "supersession": {
+        "source_id": "SRC-0143",
+        "actor": "Seed Analyzer",
+        "reason": "Owner-authorized R02 Part3 viewer and semantic-preserving performance implementation; preserve prior identities and explicit historical verification limits.",
+        "record_ids": [
+          "FACT-0040",
+          "FACT-0042"
+        ],
+        "observed_at": "2026-09-06T19:18:14+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "c5a494a412684d801031d1dec2c2c7670f5e3293",
+          "path": "Fistnet.Genepool.Dna/ActionModel.cs",
+          "blob_oid": "25652a4b0026008200fcc08e7874377b972cd78b",
+          "transform": "raw"
+        }
       }
     },
     {
@@ -3154,7 +3434,1052 @@
         "actor": "Seed Analyzer",
         "type": "authorized_R02_Part2_new_source"
       }
+    },
+    {
+      "source_id": "SRC-0128",
+      "title": "Fistnet.Genepool.App/Program.cs (R02 Part3)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.App\\Program.cs"
+      },
+      "sha256": "811C5D687B417E7AD1B9040C47B458F0BF5553CDA79AD73A8EE9F6ED46EAACC1",
+      "size_bytes": 578,
+      "observed_at_utc": "2026-09-06T19:18:09+00:00",
+      "supersedes": "SRC-0006",
+      "status": "Authorized Part3 implementation; automated verification in FACT-0042; owner review pending",
+      "coverage": "Implemented and inspected for Part3 by Seed Analyzer and transient component helpers. Named classes/methods provide locators; exact build/test/performance scope in FACT-0040..FACT-0042. Historical coverage stays with predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part3_implementation",
+        "attribution": "Transient viewer, backend and performance helpers; root integration and canonical verification."
+      }
+    },
+    {
+      "source_id": "SRC-0129",
+      "title": "Fistnet.Genepool.App/MainForm.Designer.cs (R02 Part3)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.App\\MainForm.Designer.cs"
+      },
+      "sha256": "0D957BBF630E053C6BF98EDC82D3FF1C834797883F89A1286240DE21DE60367E",
+      "size_bytes": 1215,
+      "observed_at_utc": "2026-09-06T19:18:09+00:00",
+      "supersedes": "SRC-0051",
+      "status": "Authorized Part3 implementation; automated verification in FACT-0042; owner review pending",
+      "coverage": "Implemented and inspected for Part3 by Seed Analyzer and transient component helpers. Named classes/methods provide locators; exact build/test/performance scope in FACT-0040..FACT-0042. Historical coverage stays with predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part3_implementation",
+        "attribution": "Transient viewer, backend and performance helpers; root integration and canonical verification."
+      }
+    },
+    {
+      "source_id": "SRC-0130",
+      "title": "Fistnet.Genepool.Tests/RenderingTests.cs (R02 Part3)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\RenderingTests.cs"
+      },
+      "sha256": "432AD91A86DBA2CB791E226930422F81E6EA659F7CAC44CC30D116BDE5F0B9D2",
+      "size_bytes": 18499,
+      "observed_at_utc": "2026-09-06T19:18:09+00:00",
+      "supersedes": "SRC-0062",
+      "status": "Authorized Part3 implementation; automated verification in FACT-0042; owner review pending",
+      "coverage": "Implemented and inspected for Part3 by Seed Analyzer and transient component helpers. Named classes/methods provide locators; exact build/test/performance scope in FACT-0040..FACT-0042. Historical coverage stays with predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part3_implementation",
+        "attribution": "Transient viewer, backend and performance helpers; root integration and canonical verification."
+      }
+    },
+    {
+      "source_id": "SRC-0131",
+      "title": "Fistnet.Genepool.App/MainForm.cs (R02 Part3)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.App\\MainForm.cs"
+      },
+      "sha256": "AC33A0992864DCAFEF05F728740187FD645850BDEFB4EC097DD59B4125F21400",
+      "size_bytes": 23363,
+      "observed_at_utc": "2026-09-06T19:18:10+00:00",
+      "supersedes": "SRC-0079",
+      "status": "Authorized Part3 implementation; automated verification in FACT-0042; owner review pending",
+      "coverage": "Implemented and inspected for Part3 by Seed Analyzer and transient component helpers. Named classes/methods provide locators; exact build/test/performance scope in FACT-0040..FACT-0042. Historical coverage stays with predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part3_implementation",
+        "attribution": "Transient viewer, backend and performance helpers; root integration and canonical verification."
+      },
+      "preparation": {
+        "status": "prepared",
+        "level": "searchable_text",
+        "path": "prepared/SRC-0131.jsonl",
+        "version": 1,
+        "preparer_version": 2,
+        "source_sha256": "AC33A0992864DCAFEF05F728740187FD645850BDEFB4EC097DD59B4125F21400",
+        "prepared_sha256": "E818496194E1D1440E4DC01E008CB1F204340D0442FDFDC46C243465C9EF7248",
+        "prepared_at": "2026-09-06T19:28:12+00:00",
+        "coverage": {
+          "encoding": "utf-8-sig",
+          "text": "static bounded line chunks",
+          "execution": "not executed",
+          "external_references": "not followed"
+        }
+      },
+      "supersession": {
+        "source_id": "SRC-0164",
+        "actor": "Genepool Analyzer",
+        "reason": "Authorized R02 Part4 optional founder setup, passive ecological evaluation and review support.",
+        "record_ids": [
+          "DEC-0017",
+          "FACT-0044"
+        ],
+        "observed_at": "2026-09-06T21:28:08+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/SRC-0131.cs"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0132",
+      "title": "Fistnet.Genepool.Tests/UiDiagnosticsTests.cs (R02 Part3)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\UiDiagnosticsTests.cs"
+      },
+      "sha256": "4C10A42F6C1F60421A806E1CCD8A6D1E5E87CDCCB1C6001454CDBFC272C8047D",
+      "size_bytes": 7984,
+      "observed_at_utc": "2026-09-06T19:18:10+00:00",
+      "supersedes": "SRC-0090",
+      "status": "Authorized Part3 implementation; automated verification in FACT-0042; owner review pending",
+      "coverage": "Implemented and inspected for Part3 by Seed Analyzer and transient component helpers. Named classes/methods provide locators; exact build/test/performance scope in FACT-0040..FACT-0042. Historical coverage stays with predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part3_implementation",
+        "attribution": "Transient viewer, backend and performance helpers; root integration and canonical verification."
+      }
+    },
+    {
+      "source_id": "SRC-0133",
+      "title": "Fistnet.Genepool.Control/SimulationRunOptions.cs (R02 Part3)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\SimulationRunOptions.cs"
+      },
+      "sha256": "37DE1CACA84E20DC8E378F0983D38B725B3AC3A1CA3C5BF256B673D39F9C3220",
+      "size_bytes": 1556,
+      "observed_at_utc": "2026-09-06T19:18:10+00:00",
+      "supersedes": "SRC-0105",
+      "status": "Authorized Part3 implementation; automated verification in FACT-0042; owner review pending",
+      "coverage": "Implemented and inspected for Part3 by Seed Analyzer and transient component helpers. Named classes/methods provide locators; exact build/test/performance scope in FACT-0040..FACT-0042. Historical coverage stays with predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part3_implementation",
+        "attribution": "Transient viewer, backend and performance helpers; root integration and canonical verification."
+      },
+      "supersession": {
+        "source_id": "SRC-0159",
+        "actor": "Genepool Analyzer",
+        "reason": "Authorized R02 Part4 optional founder setup, passive ecological evaluation and review support.",
+        "record_ids": [
+          "DEC-0017",
+          "FACT-0044"
+        ],
+        "observed_at": "2026-09-06T21:28:07+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/SRC-0133.cs"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0134",
+      "title": "Fistnet.Genepool.Control/SimulationSnapshot.cs (R02 Part3)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\SimulationSnapshot.cs"
+      },
+      "sha256": "7D829F3124E5FA23DCC203FBF7C2D06C600645CE55D32EF948C5460285C9EDFD",
+      "size_bytes": 11371,
+      "observed_at_utc": "2026-09-06T19:18:11+00:00",
+      "supersedes": "SRC-0106",
+      "status": "Authorized Part3 implementation; automated verification in FACT-0042; owner review pending",
+      "coverage": "Implemented and inspected for Part3 by Seed Analyzer and transient component helpers. Named classes/methods provide locators; exact build/test/performance scope in FACT-0040..FACT-0042. Historical coverage stays with predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part3_implementation",
+        "attribution": "Transient viewer, backend and performance helpers; root integration and canonical verification."
+      },
+      "supersession": {
+        "source_id": "SRC-0161",
+        "actor": "Genepool Analyzer",
+        "reason": "Authorized R02 Part4 optional founder setup, passive ecological evaluation and review support.",
+        "record_ids": [
+          "DEC-0017",
+          "FACT-0044"
+        ],
+        "observed_at": "2026-09-06T21:28:07+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/SRC-0134.cs"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0135",
+      "title": "Fistnet.Genepool.Tests/ScenarioRunner.cs (R02 Part3)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\ScenarioRunner.cs"
+      },
+      "sha256": "BE3F731E2813C921B5FC5DA3F4DB5BEFF5AB014267A31AA1F0A81DFAEC2B42DA",
+      "size_bytes": 9026,
+      "observed_at_utc": "2026-09-06T19:18:11+00:00",
+      "supersedes": "SRC-0110",
+      "status": "Authorized Part3 implementation; automated verification in FACT-0042; owner review pending",
+      "coverage": "Implemented and inspected for Part3 by Seed Analyzer and transient component helpers. Named classes/methods provide locators; exact build/test/performance scope in FACT-0040..FACT-0042. Historical coverage stays with predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part3_implementation",
+        "attribution": "Transient viewer, backend and performance helpers; root integration and canonical verification."
+      }
+    },
+    {
+      "source_id": "SRC-0136",
+      "title": "Fistnet.Genepool.Control/Gameboard/Board.cs (R02 Part3)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\Gameboard\\Board.cs"
+      },
+      "sha256": "5F30C47F3BBDFE2E59C35485257B986BA948C365F3837ED14E20363DD53DE9C3",
+      "size_bytes": 18601,
+      "observed_at_utc": "2026-09-06T19:18:11+00:00",
+      "supersedes": "SRC-0115",
+      "status": "Authorized Part3 implementation; automated verification in FACT-0042; owner review pending",
+      "coverage": "Implemented and inspected for Part3 by Seed Analyzer and transient component helpers. Named classes/methods provide locators; exact build/test/performance scope in FACT-0040..FACT-0042. Historical coverage stays with predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part3_implementation",
+        "attribution": "Transient viewer, backend and performance helpers; root integration and canonical verification."
+      },
+      "supersession": {
+        "source_id": "SRC-0160",
+        "actor": "Genepool Analyzer",
+        "reason": "Authorized R02 Part4 optional founder setup, passive ecological evaluation and review support.",
+        "record_ids": [
+          "DEC-0017",
+          "FACT-0044"
+        ],
+        "observed_at": "2026-09-06T21:28:07+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/SRC-0136.cs"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0137",
+      "title": "Fistnet.Genepool.Dna/Organism.cs (R02 Part3)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Organism.cs"
+      },
+      "sha256": "483CAF9329558870C6A3D573E7796ABC662C79596E2402619D227461F6D349D2",
+      "size_bytes": 18993,
+      "observed_at_utc": "2026-09-06T19:18:12+00:00",
+      "supersedes": "SRC-0116",
+      "status": "Authorized Part3 implementation; automated verification in FACT-0042; owner review pending",
+      "coverage": "Implemented and inspected for Part3 by Seed Analyzer and transient component helpers. Named classes/methods provide locators; exact build/test/performance scope in FACT-0040..FACT-0042. Historical coverage stays with predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part3_implementation",
+        "attribution": "Transient viewer, backend and performance helpers; root integration and canonical verification."
+      },
+      "supersession": {
+        "source_id": "SRC-0158",
+        "actor": "Genepool Analyzer",
+        "reason": "Authorized R02 Part4 optional founder setup, passive ecological evaluation and review support.",
+        "record_ids": [
+          "DEC-0017",
+          "FACT-0044"
+        ],
+        "observed_at": "2026-09-06T21:28:06+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/SRC-0137.cs"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0138",
+      "title": "Fistnet.Genepool.Dna/Elements/Brain/StrategyNetwork.cs (R02 Part3)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Elements\\Brain\\StrategyNetwork.cs"
+      },
+      "sha256": "2A10BFE09C1A5C88E8E187FE9FE97817569CB18E6EC9F95B2859493EA24BB946",
+      "size_bytes": 18395,
+      "observed_at_utc": "2026-09-06T19:18:12+00:00",
+      "supersedes": "SRC-0117",
+      "status": "Authorized Part3 implementation; automated verification in FACT-0042; owner review pending",
+      "coverage": "Implemented and inspected for Part3 by Seed Analyzer and transient component helpers. Named classes/methods provide locators; exact build/test/performance scope in FACT-0040..FACT-0042. Historical coverage stays with predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part3_implementation",
+        "attribution": "Transient viewer, backend and performance helpers; root integration and canonical verification."
+      }
+    },
+    {
+      "source_id": "SRC-0139",
+      "title": "Fistnet.Genepool.Control/Gameboard/BoardSquare.cs (R02 Part3)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\Gameboard\\BoardSquare.cs"
+      },
+      "sha256": "FD595CA69E209FA5AA6F6F1C9BEC863B995B3B66836F4C0EE7C1570DDD0041FF",
+      "size_bytes": 14467,
+      "observed_at_utc": "2026-09-06T19:18:12+00:00",
+      "supersedes": "SRC-0118",
+      "status": "Authorized Part3 implementation; automated verification in FACT-0042; owner review pending",
+      "coverage": "Implemented and inspected for Part3 by Seed Analyzer and transient component helpers. Named classes/methods provide locators; exact build/test/performance scope in FACT-0040..FACT-0042. Historical coverage stays with predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part3_implementation",
+        "attribution": "Transient viewer, backend and performance helpers; root integration and canonical verification."
+      }
+    },
+    {
+      "source_id": "SRC-0140",
+      "title": "Fistnet.Genepool.Tests/Program.cs (R02 Part3)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\Program.cs"
+      },
+      "sha256": "0EAB2121EAA76B3BF04FADDFCB0CD0D8DC5C35E761685218243C44AE1152F297",
+      "size_bytes": 6774,
+      "observed_at_utc": "2026-09-06T19:18:13+00:00",
+      "supersedes": "SRC-0119",
+      "status": "Authorized Part3 implementation; automated verification in FACT-0042; owner review pending",
+      "coverage": "Implemented and inspected for Part3 by Seed Analyzer and transient component helpers. Named classes/methods provide locators; exact build/test/performance scope in FACT-0040..FACT-0042. Historical coverage stays with predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part3_implementation",
+        "attribution": "Transient viewer, backend and performance helpers; root integration and canonical verification."
+      },
+      "supersession": {
+        "source_id": "SRC-0165",
+        "actor": "Genepool Analyzer",
+        "reason": "Authorized R02 Part4 optional founder setup, passive ecological evaluation and review support.",
+        "record_ids": [
+          "DEC-0017",
+          "FACT-0044"
+        ],
+        "observed_at": "2026-09-06T21:28:08+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/SRC-0140.cs"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0141",
+      "title": "Fistnet.Genepool.Tests/README.md (R02 Part3)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\README.md"
+      },
+      "sha256": "F97FC9AFFCD978C549F812B248C7627ADFA81DF62E462DA06649593C6FE1B925",
+      "size_bytes": 19430,
+      "observed_at_utc": "2026-09-06T19:18:13+00:00",
+      "supersedes": "SRC-0120",
+      "status": "Authorized Part3 implementation; automated verification in FACT-0042; owner review pending",
+      "coverage": "Implemented and inspected for Part3 by Seed Analyzer and transient component helpers. Named classes/methods provide locators; exact build/test/performance scope in FACT-0040..FACT-0042. Historical coverage stays with predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part3_implementation",
+        "attribution": "Transient viewer, backend and performance helpers; root integration and canonical verification."
+      },
+      "supersession": {
+        "source_id": "SRC-0166",
+        "actor": "Genepool Analyzer",
+        "reason": "Authorized R02 Part4 optional founder setup, passive ecological evaluation and review support.",
+        "record_ids": [
+          "DEC-0017",
+          "FACT-0044"
+        ],
+        "observed_at": "2026-09-06T21:28:09+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/SRC-0141.md"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0142",
+      "title": "Fistnet.Genepool.Tests/DiagnosticScenarios.cs (R02 Part3)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\DiagnosticScenarios.cs"
+      },
+      "sha256": "9C1F88EE92647832466FE9855C2E7886815F910A2D5549FB510C760D6BF95670",
+      "size_bytes": 18163,
+      "observed_at_utc": "2026-09-06T19:18:13+00:00",
+      "supersedes": "SRC-0122",
+      "status": "Authorized Part3 implementation; automated verification in FACT-0042; owner review pending",
+      "coverage": "Implemented and inspected for Part3 by Seed Analyzer and transient component helpers. Named classes/methods provide locators; exact build/test/performance scope in FACT-0040..FACT-0042. Historical coverage stays with predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part3_implementation",
+        "attribution": "Transient viewer, backend and performance helpers; root integration and canonical verification."
+      }
+    },
+    {
+      "source_id": "SRC-0143",
+      "title": "Fistnet.Genepool.Dna/ActionModel.cs (R02 Part3)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\ActionModel.cs"
+      },
+      "sha256": "7FD65675DCB8F9EDCD55E1E7F64FD0C5B494138E719E18B4197068D1BA6DB81D",
+      "size_bytes": 4829,
+      "observed_at_utc": "2026-09-06T19:18:14+00:00",
+      "supersedes": "SRC-0124",
+      "status": "Authorized Part3 implementation; automated verification in FACT-0042; owner review pending",
+      "coverage": "Implemented and inspected for Part3 by Seed Analyzer and transient component helpers. Named classes/methods provide locators; exact build/test/performance scope in FACT-0040..FACT-0042. Historical coverage stays with predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part3_implementation",
+        "attribution": "Transient viewer, backend and performance helpers; root integration and canonical verification."
+      }
+    },
+    {
+      "source_id": "SRC-0144",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.App\\MainForm.Layout.cs"
+      },
+      "sha256": "C87DD3B7BE00BCAA3C54555114AA296B46BA26766870CD6F2BF166B3101A8D6E",
+      "size_bytes": 17390,
+      "observed_at_utc": "2026-09-06T19:18:14.162714+00:00",
+      "title": "Fistnet.Genepool.App/MainForm.Layout.cs (R02 Part3)",
+      "status": "Authorized Part3 implementation; automated verification in FACT-0042; owner review pending",
+      "coverage": "Implemented and inspected for Part3 by Seed Analyzer and transient component helpers. Named classes/methods provide locators; exact build/test/performance scope in FACT-0040..FACT-0042. Historical coverage stays with predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part3_implementation",
+        "attribution": "Transient viewer, backend and performance helpers; root integration and canonical verification."
+      }
+    },
+    {
+      "source_id": "SRC-0145",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.App\\NewSimulationDialog.cs"
+      },
+      "sha256": "530C9C9A69E9C02BC662362A485FFAD0EDBA388EEBABB4594B7D7A13DB1479EE",
+      "size_bytes": 10903,
+      "observed_at_utc": "2026-09-06T19:18:14.162714+00:00",
+      "title": "Fistnet.Genepool.App/NewSimulationDialog.cs (R02 Part3)",
+      "status": "Authorized Part3 implementation; automated verification in FACT-0042; owner review pending",
+      "coverage": "Implemented and inspected for Part3 by Seed Analyzer and transient component helpers. Named classes/methods provide locators; exact build/test/performance scope in FACT-0040..FACT-0042. Historical coverage stays with predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part3_implementation",
+        "attribution": "Transient viewer, backend and performance helpers; root integration and canonical verification."
+      },
+      "supersession": {
+        "source_id": "SRC-0163",
+        "actor": "Genepool Analyzer",
+        "reason": "Authorized R02 Part4 optional founder setup, passive ecological evaluation and review support.",
+        "record_ids": [
+          "DEC-0017",
+          "FACT-0044"
+        ],
+        "observed_at": "2026-09-06T21:28:08+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/SRC-0145.cs"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0146",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\Properties\\AssemblyInfo.cs"
+      },
+      "sha256": "49648A016BE544C4F78874036B354091D6A9B33CEAEAF87223FF4530B85B52C8",
+      "size_bytes": 1516,
+      "observed_at_utc": "2026-09-06T19:18:14.162714+00:00",
+      "title": "Fistnet.Genepool.Control/Properties/AssemblyInfo.cs (R02 Part3)",
+      "status": "Authorized Part3 implementation; automated verification in FACT-0042; owner review pending",
+      "coverage": "Implemented and inspected for Part3 by Seed Analyzer and transient component helpers. Named classes/methods provide locators; exact build/test/performance scope in FACT-0040..FACT-0042. Historical coverage stays with predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part3_implementation",
+        "attribution": "Transient viewer, backend and performance helpers; root integration and canonical verification.",
+        "predecessor": "Pre-existing source first cataloged now; Part3 adds test visibility. Prior version remains at local c5a494a412684d801031d1dec2c2c7670f5e3293."
+      }
+    },
+    {
+      "source_id": "SRC-0147",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\SimulationRunner.cs"
+      },
+      "sha256": "10BDC633721B982940F7670EAAE67C20E5206DF6812D60413272E93EC186A2C6",
+      "size_bytes": 9153,
+      "observed_at_utc": "2026-09-06T19:18:14.163711+00:00",
+      "title": "Fistnet.Genepool.Control/SimulationRunner.cs (R02 Part3)",
+      "status": "Authorized Part3 implementation; automated verification in FACT-0042; owner review pending",
+      "coverage": "Implemented and inspected for Part3 by Seed Analyzer and transient component helpers. Named classes/methods provide locators; exact build/test/performance scope in FACT-0040..FACT-0042. Historical coverage stays with predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part3_implementation",
+        "attribution": "Transient viewer, backend and performance helpers; root integration and canonical verification."
+      },
+      "preparation": {
+        "status": "prepared",
+        "level": "searchable_text",
+        "path": "prepared/SRC-0147.jsonl",
+        "version": 1,
+        "preparer_version": 2,
+        "source_sha256": "10BDC633721B982940F7670EAAE67C20E5206DF6812D60413272E93EC186A2C6",
+        "prepared_sha256": "229E084ACBD01AA58157A892B76D48A774580F167AD91E93C8A30EFD24B16F1A",
+        "prepared_at": "2026-09-06T19:28:36+00:00",
+        "coverage": {
+          "encoding": "utf-8-sig",
+          "text": "static bounded line chunks",
+          "execution": "not executed",
+          "external_references": "not followed"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0148",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\ViewCollector.cs"
+      },
+      "sha256": "98CF8DC9401022FCDF6F76649DB91769E11D2F2AAF00D333B253F48803213F76",
+      "size_bytes": 9192,
+      "observed_at_utc": "2026-09-06T19:18:14.163711+00:00",
+      "title": "Fistnet.Genepool.Control/ViewCollector.cs (R02 Part3)",
+      "status": "Authorized Part3 implementation; automated verification in FACT-0042; owner review pending",
+      "coverage": "Implemented and inspected for Part3 by Seed Analyzer and transient component helpers. Named classes/methods provide locators; exact build/test/performance scope in FACT-0040..FACT-0042. Historical coverage stays with predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part3_implementation",
+        "attribution": "Transient viewer, backend and performance helpers; root integration and canonical verification."
+      },
+      "preparation": {
+        "status": "prepared",
+        "level": "searchable_text",
+        "path": "prepared/SRC-0148.jsonl",
+        "version": 1,
+        "preparer_version": 2,
+        "source_sha256": "98CF8DC9401022FCDF6F76649DB91769E11D2F2AAF00D333B253F48803213F76",
+        "prepared_sha256": "0090D32270B751AAE1EDB3F8A3CA58261E0FE92D5B3632E7ADC6DE459E2ACB66",
+        "prepared_at": "2026-09-06T19:29:01+00:00",
+        "coverage": {
+          "encoding": "utf-8-sig",
+          "text": "static bounded line chunks",
+          "execution": "not executed",
+          "external_references": "not followed"
+        }
+      },
+      "supersession": {
+        "source_id": "SRC-0162",
+        "actor": "Genepool Analyzer",
+        "reason": "Authorized R02 Part4 optional founder setup, passive ecological evaluation and review support.",
+        "record_ids": [
+          "DEC-0017",
+          "FACT-0044"
+        ],
+        "observed_at": "2026-09-06T21:28:07+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/SRC-0148.cs"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0149",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\ViewFrame.cs"
+      },
+      "sha256": "B2D5AFFDF9F8DB78F7D5E62A504D41B16E9F76929A4D0773236A9068D4175F9A",
+      "size_bytes": 2224,
+      "observed_at_utc": "2026-09-06T19:18:14.163711+00:00",
+      "title": "Fistnet.Genepool.Control/ViewFrame.cs (R02 Part3)",
+      "status": "Authorized Part3 implementation; automated verification in FACT-0042; owner review pending",
+      "coverage": "Implemented and inspected for Part3 by Seed Analyzer and transient component helpers. Named classes/methods provide locators; exact build/test/performance scope in FACT-0040..FACT-0042. Historical coverage stays with predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part3_implementation",
+        "attribution": "Transient viewer, backend and performance helpers; root integration and canonical verification."
+      }
+    },
+    {
+      "source_id": "SRC-0150",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\PerformanceBenchmarks.cs"
+      },
+      "sha256": "A06129AFE1FEC4C89F596B7ED87542DD5AF8AA912F4402008D29E1510EA85167",
+      "size_bytes": 10042,
+      "observed_at_utc": "2026-09-06T19:18:14.163711+00:00",
+      "title": "Fistnet.Genepool.Tests/PerformanceBenchmarks.cs (R02 Part3)",
+      "status": "Authorized Part3 implementation; automated verification in FACT-0042; owner review pending",
+      "coverage": "Implemented and inspected for Part3 by Seed Analyzer and transient component helpers. Named classes/methods provide locators; exact build/test/performance scope in FACT-0040..FACT-0042. Historical coverage stays with predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part3_implementation",
+        "attribution": "Transient viewer, backend and performance helpers; root integration and canonical verification."
+      }
+    },
+    {
+      "source_id": "SRC-0151",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\ViewerBackendTests.cs"
+      },
+      "sha256": "DBDD356C3B02E9049AF65814DBE9C5A3691351053578BACA86131774E8319C3A",
+      "size_bytes": 17295,
+      "observed_at_utc": "2026-09-06T19:18:14.164709+00:00",
+      "title": "Fistnet.Genepool.Tests/ViewerBackendTests.cs (R02 Part3)",
+      "status": "Authorized Part3 implementation; automated verification in FACT-0042; owner review pending",
+      "coverage": "Implemented and inspected for Part3 by Seed Analyzer and transient component helpers. Named classes/methods provide locators; exact build/test/performance scope in FACT-0040..FACT-0042. Historical coverage stays with predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part3_implementation",
+        "attribution": "Transient viewer, backend and performance helpers; root integration and canonical verification."
+      }
+    },
+    {
+      "source_id": "SRC-0152",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Visualization\\BoardView.cs"
+      },
+      "sha256": "6D244DCC58ACC13CFA232452E4ABF270C1B9817E4A76D48FFBFF6B6AF68AE613",
+      "size_bytes": 13004,
+      "observed_at_utc": "2026-09-06T19:18:14.164709+00:00",
+      "title": "Fistnet.Genepool.Visualization/BoardView.cs (R02 Part3)",
+      "status": "Authorized Part3 implementation; automated verification in FACT-0042; owner review pending",
+      "coverage": "Implemented and inspected for Part3 by Seed Analyzer and transient component helpers. Named classes/methods provide locators; exact build/test/performance scope in FACT-0040..FACT-0042. Historical coverage stays with predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part3_implementation",
+        "attribution": "Transient viewer, backend and performance helpers; root integration and canonical verification."
+      },
+      "preparation": {
+        "status": "prepared",
+        "level": "searchable_text",
+        "path": "prepared/SRC-0152.jsonl",
+        "version": 1,
+        "preparer_version": 2,
+        "source_sha256": "6D244DCC58ACC13CFA232452E4ABF270C1B9817E4A76D48FFBFF6B6AF68AE613",
+        "prepared_sha256": "4D5F03147874DA606895FE900A4A915666193B4D413A2C18632A98A023261223",
+        "prepared_at": "2026-09-06T19:29:25+00:00",
+        "coverage": {
+          "encoding": "utf-8-sig",
+          "text": "static bounded line chunks",
+          "execution": "not executed",
+          "external_references": "not followed"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0153",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Visualization\\SimulationHistoryView.cs"
+      },
+      "sha256": "864267600B37273AF377787D3B7AD3CDC2ECE84995FA8AED8C69083C687337E1",
+      "size_bytes": 5979,
+      "observed_at_utc": "2026-09-06T19:18:14.164709+00:00",
+      "title": "Fistnet.Genepool.Visualization/SimulationHistoryView.cs (R02 Part3)",
+      "status": "Authorized Part3 implementation; automated verification in FACT-0042; owner review pending",
+      "coverage": "Implemented and inspected for Part3 by Seed Analyzer and transient component helpers. Named classes/methods provide locators; exact build/test/performance scope in FACT-0040..FACT-0042. Historical coverage stays with predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part3_implementation",
+        "attribution": "Transient viewer, backend and performance helpers; root integration and canonical verification."
+      }
+    },
+    {
+      "source_id": "SRC-0154",
+      "title": "Genepool Analyzer project entry instructions",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\AGENTS.md"
+      },
+      "sha256": "2C92F42355CE071962BCDCEFA7A962CB1F058F7F2499FD8CB50E2BF2B5B9D1AD",
+      "size_bytes": 8267,
+      "observed_at_utc": "2026-09-06T20:27:30.879617+00:00",
+      "status": "Owner-authorized project governance; derived control instructions, not original simulation evidence.",
+      "coverage": "Complete textual reading and independent specialization review; 57 lines.",
+      "provenance": {
+        "actor": "Genepool Analyzer",
+        "record_ids": [
+          "DEC-0016",
+          "FACT-0043"
+        ],
+        "purpose": "Register specialized governance identity for future retrieval and integrity verification."
+      }
+    },
+    {
+      "source_id": "SRC-0155",
+      "title": "Genepool Analyzer Operating Constitution GA-R01",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\.SeedAnalyzer\\CONSTITUTION.md"
+      },
+      "sha256": "E6E78C0CBBD4709DE573C86228E79AACE252927FA5818F60AE4542860F42D274",
+      "size_bytes": 20991,
+      "observed_at_utc": "2026-09-06T20:27:30.879617+00:00",
+      "status": "Owner-authorized project governance; derived control instructions, not original simulation evidence.",
+      "coverage": "Complete textual reading and independent specialization review; 153 lines.",
+      "provenance": {
+        "actor": "Genepool Analyzer",
+        "record_ids": [
+          "DEC-0016",
+          "FACT-0043"
+        ],
+        "purpose": "Register specialized governance identity for future retrieval and integrity verification."
+      }
+    },
+    {
+      "source_id": "SRC-0156",
+      "title": "Genepool KnowledgeBase policy and reference",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\.SeedAnalyzer\\KB.md"
+      },
+      "sha256": "7F8C9835720C31E238D6017A7BE626B8D9C6EA1FBEE0DE29FD188B65269CE1F9",
+      "size_bytes": 31653,
+      "observed_at_utc": "2026-09-06T20:27:30.879617+00:00",
+      "status": "Owner-authorized project governance; derived control instructions, not original simulation evidence.",
+      "coverage": "Required policy and changed entry/layout sections read completely; relevant source-version/transaction/failure references read. Remaining unchanged reference text retained, not re-audited in full.",
+      "provenance": {
+        "actor": "Genepool Analyzer",
+        "record_ids": [
+          "DEC-0016",
+          "FACT-0043"
+        ],
+        "purpose": "Register specialized governance identity for future retrieval and integrity verification."
+      }
+    },
+    {
+      "source_id": "SRC-0157",
+      "title": "Fistnet.Genepool.Dna/DnaElementFactory.cs (R02 Part4)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\DnaElementFactory.cs"
+      },
+      "sha256": "4B74798B73FEEB5FA395DC987286389CE887696A2FC499307201BC8B9E7EAD82",
+      "size_bytes": 7402,
+      "observed_at_utc": "2026-09-06T21:28:06+00:00",
+      "supersedes": "SRC-0091",
+      "status": "Part4 implementation; owner review pending",
+      "coverage": "Changed portions inspected against verified Part3/earlier predecessor. Functional, passive-reference and bounded ecological coverage recorded in FACT-0044..0046; earlier coverage stays with predecessor.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R02_Part4_implementation",
+        "attribution": "Transient founder, metrics and runner helpers; root integration, review, execution and canonical KB."
+      }
+    },
+    {
+      "source_id": "SRC-0158",
+      "title": "Fistnet.Genepool.Dna/Organism.cs (R02 Part4)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Organism.cs"
+      },
+      "sha256": "0269EE3E1E6BA4B32D12B4E9F5208940E4A06DD048EEFE6E99E08EA75C17A105",
+      "size_bytes": 19249,
+      "observed_at_utc": "2026-09-06T21:28:06+00:00",
+      "supersedes": "SRC-0137",
+      "status": "Part4 implementation; owner review pending",
+      "coverage": "Changed portions inspected against verified Part3/earlier predecessor. Functional, passive-reference and bounded ecological coverage recorded in FACT-0044..0046; earlier coverage stays with predecessor.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R02_Part4_implementation",
+        "attribution": "Transient founder, metrics and runner helpers; root integration, review, execution and canonical KB."
+      }
+    },
+    {
+      "source_id": "SRC-0159",
+      "title": "Fistnet.Genepool.Control/SimulationRunOptions.cs (R02 Part4)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\SimulationRunOptions.cs"
+      },
+      "sha256": "99D7B4D82C9248262AD9A8D472A5FFDAC1DE2CE1AC6722DB1F85A01CD5873D85",
+      "size_bytes": 1743,
+      "observed_at_utc": "2026-09-06T21:28:07+00:00",
+      "supersedes": "SRC-0133",
+      "status": "Part4 implementation; owner review pending",
+      "coverage": "Changed portions inspected against verified Part3/earlier predecessor. Functional, passive-reference and bounded ecological coverage recorded in FACT-0044..0046; earlier coverage stays with predecessor.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R02_Part4_implementation",
+        "attribution": "Transient founder, metrics and runner helpers; root integration, review, execution and canonical KB."
+      }
+    },
+    {
+      "source_id": "SRC-0160",
+      "title": "Fistnet.Genepool.Control/Gameboard/Board.cs (R02 Part4)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\Gameboard\\Board.cs"
+      },
+      "sha256": "BDA8E4A625531A7FA4EED03B615498D4AAEC7CEA0724C9A3AD92044C38475DE8",
+      "size_bytes": 18628,
+      "observed_at_utc": "2026-09-06T21:28:07+00:00",
+      "supersedes": "SRC-0136",
+      "status": "Part4 implementation; owner review pending",
+      "coverage": "Changed portions inspected against verified Part3/earlier predecessor. Functional, passive-reference and bounded ecological coverage recorded in FACT-0044..0046; earlier coverage stays with predecessor.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R02_Part4_implementation",
+        "attribution": "Transient founder, metrics and runner helpers; root integration, review, execution and canonical KB."
+      }
+    },
+    {
+      "source_id": "SRC-0161",
+      "title": "Fistnet.Genepool.Control/SimulationSnapshot.cs (R02 Part4)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\SimulationSnapshot.cs"
+      },
+      "sha256": "5B5A7C9DA8C5B3226DA98345ABCFF92617F966756BCA953229BB45196B74852B",
+      "size_bytes": 11518,
+      "observed_at_utc": "2026-09-06T21:28:07+00:00",
+      "supersedes": "SRC-0134",
+      "status": "Part4 implementation; owner review pending",
+      "coverage": "Changed portions inspected against verified Part3/earlier predecessor. Functional, passive-reference and bounded ecological coverage recorded in FACT-0044..0046; earlier coverage stays with predecessor.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R02_Part4_implementation",
+        "attribution": "Transient founder, metrics and runner helpers; root integration, review, execution and canonical KB."
+      }
+    },
+    {
+      "source_id": "SRC-0162",
+      "title": "Fistnet.Genepool.Control/ViewCollector.cs (R02 Part4)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\ViewCollector.cs"
+      },
+      "sha256": "68A592ACCA7E9DB8EB987A59D4ACABB26110A8C43D26E701A44D284F825E510D",
+      "size_bytes": 9256,
+      "observed_at_utc": "2026-09-06T21:28:07+00:00",
+      "supersedes": "SRC-0148",
+      "status": "Part4 implementation; owner review pending",
+      "coverage": "Changed portions inspected against verified Part3/earlier predecessor. Functional, passive-reference and bounded ecological coverage recorded in FACT-0044..0046; earlier coverage stays with predecessor.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R02_Part4_implementation",
+        "attribution": "Transient founder, metrics and runner helpers; root integration, review, execution and canonical KB."
+      }
+    },
+    {
+      "source_id": "SRC-0163",
+      "title": "Fistnet.Genepool.App/NewSimulationDialog.cs (R02 Part4)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.App\\NewSimulationDialog.cs"
+      },
+      "sha256": "7BE5F9B8F7D104E56058E07C54445AFD0F117CFB4F3DA3EDF37479761ED225EF",
+      "size_bytes": 11810,
+      "observed_at_utc": "2026-09-06T21:28:08+00:00",
+      "supersedes": "SRC-0145",
+      "status": "Part4 implementation; owner review pending",
+      "coverage": "Changed portions inspected against verified Part3/earlier predecessor. Functional, passive-reference and bounded ecological coverage recorded in FACT-0044..0046; earlier coverage stays with predecessor.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R02_Part4_implementation",
+        "attribution": "Transient founder, metrics and runner helpers; root integration, review, execution and canonical KB."
+      },
+      "preparation": {
+        "status": "prepared",
+        "level": "searchable_text",
+        "path": "prepared/SRC-0163.jsonl",
+        "version": 1,
+        "preparer_version": 2,
+        "source_sha256": "7BE5F9B8F7D104E56058E07C54445AFD0F117CFB4F3DA3EDF37479761ED225EF",
+        "prepared_sha256": "4835D244746FE23D9FEFEE36374F9355D92C3A1C13BF5F101F9AE3F063D7C0D4",
+        "prepared_at": "2026-09-06T22:15:35+00:00",
+        "coverage": {
+          "encoding": "utf-8-sig",
+          "text": "static bounded line chunks",
+          "execution": "not executed",
+          "external_references": "not followed"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0164",
+      "title": "Fistnet.Genepool.App/MainForm.cs (R02 Part4)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.App\\MainForm.cs"
+      },
+      "sha256": "6E30D6D207EE8B21E255655BAB6D592BC6F27CC5606E155A03A0BFFF3422AE6C",
+      "size_bytes": 23544,
+      "observed_at_utc": "2026-09-06T21:28:08+00:00",
+      "supersedes": "SRC-0131",
+      "status": "Part4 implementation; owner review pending",
+      "coverage": "Changed portions inspected against verified Part3/earlier predecessor. Functional, passive-reference and bounded ecological coverage recorded in FACT-0044..0046; earlier coverage stays with predecessor.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R02_Part4_implementation",
+        "attribution": "Transient founder, metrics and runner helpers; root integration, review, execution and canonical KB."
+      }
+    },
+    {
+      "source_id": "SRC-0165",
+      "title": "Fistnet.Genepool.Tests/Program.cs (R02 Part4)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\Program.cs"
+      },
+      "sha256": "933E363C0BD236B82D2DD650D87B0E7778139071E80178BFC344CCCE3607DE08",
+      "size_bytes": 7078,
+      "observed_at_utc": "2026-09-06T21:28:08+00:00",
+      "supersedes": "SRC-0140",
+      "status": "Part4 implementation; owner review pending",
+      "coverage": "Changed portions inspected against verified Part3/earlier predecessor. Functional, passive-reference and bounded ecological coverage recorded in FACT-0044..0046; earlier coverage stays with predecessor.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R02_Part4_implementation",
+        "attribution": "Transient founder, metrics and runner helpers; root integration, review, execution and canonical KB."
+      }
+    },
+    {
+      "source_id": "SRC-0166",
+      "title": "Fistnet.Genepool.Tests/README.md (R02 Part4)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\README.md"
+      },
+      "sha256": "EDD62F14244C20F0015D05BA2922036F9CA856178FD8A5D9439FEF701918A8AA",
+      "size_bytes": 24251,
+      "observed_at_utc": "2026-09-06T21:28:09+00:00",
+      "supersedes": "SRC-0141",
+      "status": "Part4 implementation; owner review pending",
+      "coverage": "Changed portions inspected against verified Part3/earlier predecessor. Functional, passive-reference and bounded ecological coverage recorded in FACT-0044..0046; earlier coverage stays with predecessor.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R02_Part4_implementation",
+        "attribution": "Transient founder, metrics and runner helpers; root integration, review, execution and canonical KB."
+      }
+    },
+    {
+      "source_id": "SRC-0167",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\FounderRepertoire.cs"
+      },
+      "sha256": "AA9C41C9BBFB4D90163451DF16801E9E57640EF5FE67852878730DD9B3E75A80",
+      "size_bytes": 218,
+      "observed_at_utc": "2026-09-06T21:28:06.174580+00:00",
+      "title": "Fistnet.Genepool.Dna/FounderRepertoire.cs (R02 Part4)",
+      "status": "Part4 implementation; owner review pending",
+      "coverage": "Entire new source inspected by responsible root and transient helper reviews. Functional/reference/production coverage and limits in FACT-0044..0046.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R02_Part4_implementation"
+      }
+    },
+    {
+      "source_id": "SRC-0168",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\FounderSetupTests.cs"
+      },
+      "sha256": "85CAC6C98EE412DF0EFD97849091E04A5F5D080B8ABB6901E754DA44F315AC0A",
+      "size_bytes": 13361,
+      "observed_at_utc": "2026-09-06T21:28:06.174580+00:00",
+      "title": "Fistnet.Genepool.Tests/FounderSetupTests.cs (R02 Part4)",
+      "status": "Part4 implementation; owner review pending",
+      "coverage": "Entire new source inspected by responsible root and transient helper reviews. Functional/reference/production coverage and limits in FACT-0044..0046.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R02_Part4_implementation"
+      }
+    },
+    {
+      "source_id": "SRC-0169",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\EcologyMetrics.cs"
+      },
+      "sha256": "25D6E7E10D912217B26F3676D5BF713EAA9C3805D4F51A80C5692A862A4F7D79",
+      "size_bytes": 16570,
+      "observed_at_utc": "2026-09-06T21:28:06.174580+00:00",
+      "title": "Fistnet.Genepool.Tests/EcologyMetrics.cs (R02 Part4)",
+      "status": "Part4 implementation; owner review pending",
+      "coverage": "Entire new source inspected by responsible root and transient helper reviews. Functional/reference/production coverage and limits in FACT-0044..0046.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R02_Part4_implementation"
+      },
+      "preparation": {
+        "status": "prepared",
+        "level": "searchable_text",
+        "path": "prepared/SRC-0169.jsonl",
+        "version": 1,
+        "preparer_version": 2,
+        "source_sha256": "25D6E7E10D912217B26F3676D5BF713EAA9C3805D4F51A80C5692A862A4F7D79",
+        "prepared_sha256": "519374F032BDE5B6EFAD12A7DF1D4620B2D97711B3999490A3EB7DA6AEF80A6E",
+        "prepared_at": "2026-09-06T22:14:47+00:00",
+        "coverage": {
+          "encoding": "utf-8-sig",
+          "text": "static bounded line chunks",
+          "execution": "not executed",
+          "external_references": "not followed"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0170",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\EcologyTests.cs"
+      },
+      "sha256": "DD4E3FCD449AB9B9C0CF2C5600A0E47497F7E1CACBC47D71A35E2445515C46A6",
+      "size_bytes": 17818,
+      "observed_at_utc": "2026-09-06T21:28:06.174580+00:00",
+      "title": "Fistnet.Genepool.Tests/EcologyTests.cs (R02 Part4)",
+      "status": "Part4 implementation; owner review pending",
+      "coverage": "Entire new source inspected by responsible root and transient helper reviews. Functional/reference/production coverage and limits in FACT-0044..0046.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R02_Part4_implementation"
+      }
+    },
+    {
+      "source_id": "SRC-0171",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\EcologyScenarios.cs"
+      },
+      "sha256": "72C3DCB4E4089D022189C2A0515FE11F46AE774DCAEAFCD5C605373113CBB135",
+      "size_bytes": 20858,
+      "observed_at_utc": "2026-09-06T21:28:06.174580+00:00",
+      "title": "Fistnet.Genepool.Tests/EcologyScenarios.cs (R02 Part4)",
+      "status": "Part4 implementation; owner review pending",
+      "coverage": "Entire new source inspected by responsible root and transient helper reviews. Functional/reference/production coverage and limits in FACT-0044..0046.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R02_Part4_implementation"
+      }
     }
   ],
-  "updated_at": "2026-09-06T16:39:09+00:00"
+  "updated_at": "2026-09-06T22:15:35+00:00"
 }

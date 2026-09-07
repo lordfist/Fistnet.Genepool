@@ -1,0 +1,2345 @@
+{
+  "actor": "Genepool Analyzer",
+  "schema": "genepool.part4-summary.v1",
+  "rows": [
+    {
+      "stage": "comparison-default",
+      "kind": "comparison",
+      "seed": 11,
+      "candidate": "default",
+      "completedSeasons": 1105,
+      "criteriaEvidenceSeason": 1105,
+      "sampleEvidenceSeason": 1105,
+      "requestedSeasons": 2048,
+      "completeHorizon": false,
+      "screen": "inconclusive_horizon",
+      "selectionEvidenceComplete": false,
+      "exitCode": 3,
+      "reason": "Stopped at a completed season before the 115-second watchdog.",
+      "population": {
+        "initial": 996,
+        "minimum": 681,
+        "finalObserved": 7934,
+        "peak": 8427,
+        "minimumInitialFraction": 0.6837349397590361
+      },
+      "turnover": {
+        "Births": 112871,
+        "Deaths": 105933,
+        "InitialCohortLiving": 31,
+        "DescendantsLiving": 7903,
+        "MaximumLivingGeneration": 62,
+        "HighestGenerationObserved": 62,
+        "MeanLivingGeneration": 28.660196622132595
+      },
+      "diversity": {
+        "MaximumLargestPatternFraction": 0.07059736229635376,
+        "MaximumLargestPatternSeason": 284,
+        "MaximumPeakDrawdownFraction": 0.31626506024096385,
+        "MaximumPeakDrawdownSeason": 139,
+        "FirstCollapseSeason": null,
+        "FirstDominationSeason": null
+      },
+      "windows": {
+        "complete": 7,
+        "minimumBirths": 1714,
+        "minimumEffectiveActionTypes": 8,
+        "failed": [],
+        "incompleteSeasons": 81
+      },
+      "effects": {
+        "AttemptedActions": 5062424,
+        "CommittedActions": 2796203,
+        "EffectiveActions": 2796203,
+        "Moves": 151114,
+        "GatheringActions": 853824,
+        "DamagingAttacks": 253082,
+        "PredationTransfers": 0,
+        "FoodGathered": 1206076,
+        "FoodSpent": 436789,
+        "FoodTransferred": 0,
+        "BoardFood": 29017,
+        "OrganismReserves": 40482
+      },
+      "actions": [
+        {
+          "Action": "Eat",
+          "Attempted": 43352,
+          "Committed": 42987,
+          "Effective": 42987
+        },
+        {
+          "Action": "Move",
+          "Attempted": 959324,
+          "Committed": 151114,
+          "Effective": 151114
+        },
+        {
+          "Action": "GenerateFood",
+          "Attempted": 880251,
+          "Committed": 853824,
+          "Effective": 853824
+        },
+        {
+          "Action": "Kill",
+          "Attempted": 261392,
+          "Committed": 253082,
+          "Effective": 253082
+        },
+        {
+          "Action": "CombineDna",
+          "Attempted": 1516324,
+          "Committed": 112871,
+          "Effective": 112871
+        },
+        {
+          "Action": "Evolve",
+          "Attempted": 1216640,
+          "Committed": 1214265,
+          "Effective": 1214265
+        },
+        {
+          "Action": "Heal",
+          "Attempted": 162579,
+          "Committed": 157038,
+          "Effective": 157038
+        },
+        {
+          "Action": "Infect",
+          "Attempted": 22562,
+          "Committed": 11022,
+          "Effective": 11022
+        }
+      ],
+      "memory": {
+        "allocatedBytes": 26061303600,
+        "gcCollections": [
+          2940,
+          2271,
+          513
+        ],
+        "scope": "Process-wide since before reset, including setup, collector, validation and exports."
+      },
+      "timing": {
+        "engineCallSeconds": 109.9547445,
+        "collectorSeconds": 3.1436687,
+        "collectorCensusSeconds": 2.95552,
+        "initialCollectorSeconds": 0.0050052,
+        "engineExcludingCollectorSeconds": 106.816081,
+        "validationSeconds": 0.0215887,
+        "exportPreparationSeconds": 0.0037921,
+        "totalSeconds": 110.1145315,
+        "outerWallSeconds": 110.203,
+        "collectorWithinEnginePercent": 2.854504836760364
+      },
+      "auditErrors": [],
+      "omissions": [
+        "Requested 2048-season horizon is incomplete; observed-prefix success cannot pass it",
+        "Trajectory contains season 0/every eighth/final only; checks audit exported extrema and flags without independently reconstructing unseen seasons"
+      ]
+    },
+    {
+      "stage": "comparison-default",
+      "kind": "comparison",
+      "seed": 29,
+      "candidate": "default",
+      "completedSeasons": 1281,
+      "criteriaEvidenceSeason": 1281,
+      "sampleEvidenceSeason": 1281,
+      "requestedSeasons": 2048,
+      "completeHorizon": false,
+      "screen": "inconclusive_horizon",
+      "selectionEvidenceComplete": false,
+      "exitCode": 3,
+      "reason": "Stopped at a completed season before the 115-second watchdog.",
+      "population": {
+        "initial": 1039,
+        "minimum": 670,
+        "finalObserved": 9614,
+        "peak": 9614,
+        "minimumInitialFraction": 0.6448508180943214
+      },
+      "turnover": {
+        "Births": 127997,
+        "Deaths": 119422,
+        "InitialCohortLiving": 76,
+        "DescendantsLiving": 9538,
+        "MaximumLivingGeneration": 62,
+        "HighestGenerationObserved": 62,
+        "MeanLivingGeneration": 35.608695652173914
+      },
+      "diversity": {
+        "MaximumLargestPatternFraction": 0.20359116022099447,
+        "MaximumLargestPatternSeason": 709,
+        "MaximumPeakDrawdownFraction": 0.3551491819056785,
+        "MaximumPeakDrawdownSeason": 163,
+        "FirstCollapseSeason": null,
+        "FirstDominationSeason": null
+      },
+      "windows": {
+        "complete": 9,
+        "minimumBirths": 586,
+        "minimumEffectiveActionTypes": 8,
+        "failed": [],
+        "incompleteSeasons": 1
+      },
+      "effects": {
+        "AttemptedActions": 4816678,
+        "CommittedActions": 1830500,
+        "EffectiveActions": 1830500,
+        "Moves": 121939,
+        "GatheringActions": 820734,
+        "DamagingAttacks": 155840,
+        "PredationTransfers": 0,
+        "FoodGathered": 1204319,
+        "FoodSpent": 323815,
+        "FoodTransferred": 0,
+        "BoardFood": 17745,
+        "OrganismReserves": 49953
+      },
+      "actions": [
+        {
+          "Action": "Eat",
+          "Attempted": 20000,
+          "Committed": 19799,
+          "Effective": 19799
+        },
+        {
+          "Action": "Move",
+          "Attempted": 1262459,
+          "Committed": 121939,
+          "Effective": 121939
+        },
+        {
+          "Action": "GenerateFood",
+          "Attempted": 884676,
+          "Committed": 820734,
+          "Effective": 820734
+        },
+        {
+          "Action": "Kill",
+          "Attempted": 160479,
+          "Committed": 155840,
+          "Effective": 155840
+        },
+        {
+          "Action": "CombineDna",
+          "Attempted": 1892398,
+          "Committed": 127997,
+          "Effective": 127997
+        },
+        {
+          "Action": "Evolve",
+          "Attempted": 536748,
+          "Committed": 536169,
+          "Effective": 536169
+        },
+        {
+          "Action": "Heal",
+          "Attempted": 41317,
+          "Committed": 39095,
+          "Effective": 39095
+        },
+        {
+          "Action": "Infect",
+          "Attempted": 18601,
+          "Committed": 8927,
+          "Effective": 8927
+        }
+      ],
+      "memory": {
+        "allocatedBytes": 28317298408,
+        "gcCollections": [
+          2991,
+          2219,
+          345
+        ],
+        "scope": "Process-wide since before reset, including setup, collector, validation and exports."
+      },
+      "timing": {
+        "engineCallSeconds": 109.8353005,
+        "collectorSeconds": 2.357104,
+        "collectorCensusSeconds": 2.2117804,
+        "initialCollectorSeconds": 0.0043604,
+        "engineExcludingCollectorSeconds": 107.4825569,
+        "validationSeconds": 0.0286181,
+        "exportPreparationSeconds": 0.0038123,
+        "totalSeconds": 110.0047478,
+        "outerWallSeconds": 110.093,
+        "collectorWithinEnginePercent": 2.142065064045598
+      },
+      "auditErrors": [],
+      "omissions": [
+        "Requested 2048-season horizon is incomplete; observed-prefix success cannot pass it",
+        "Trajectory contains season 0/every eighth/final only; checks audit exported extrema and flags without independently reconstructing unseen seasons"
+      ]
+    },
+    {
+      "stage": "comparison-default",
+      "kind": "comparison",
+      "seed": 47,
+      "candidate": "default",
+      "completedSeasons": 1079,
+      "criteriaEvidenceSeason": 1079,
+      "sampleEvidenceSeason": 1079,
+      "requestedSeasons": 2048,
+      "completeHorizon": false,
+      "screen": "inconclusive_horizon",
+      "selectionEvidenceComplete": false,
+      "exitCode": 3,
+      "reason": "Stopped at a completed season before the 115-second watchdog.",
+      "population": {
+        "initial": 1006,
+        "minimum": 616,
+        "finalObserved": 9061,
+        "peak": 9245,
+        "minimumInitialFraction": 0.6123260437375746
+      },
+      "turnover": {
+        "Births": 194478,
+        "Deaths": 186423,
+        "InitialCohortLiving": 12,
+        "DescendantsLiving": 9049,
+        "MaximumLivingGeneration": 53,
+        "HighestGenerationObserved": 54,
+        "MeanLivingGeneration": 33.275355920980026
+      },
+      "diversity": {
+        "MaximumLargestPatternFraction": 0.16391509433962265,
+        "MaximumLargestPatternSeason": 515,
+        "MaximumPeakDrawdownFraction": 0.38767395626242546,
+        "MaximumPeakDrawdownSeason": 171,
+        "FirstCollapseSeason": null,
+        "FirstDominationSeason": null
+      },
+      "windows": {
+        "complete": 7,
+        "minimumBirths": 482,
+        "minimumEffectiveActionTypes": 8,
+        "failed": [],
+        "incompleteSeasons": 55
+      },
+      "effects": {
+        "AttemptedActions": 4953957,
+        "CommittedActions": 2193609,
+        "EffectiveActions": 2193609,
+        "Moves": 169933,
+        "GatheringActions": 950454,
+        "DamagingAttacks": 226321,
+        "PredationTransfers": 0,
+        "FoodGathered": 1486970,
+        "FoodSpent": 501838,
+        "FoodTransferred": 0,
+        "BoardFood": 12657,
+        "OrganismReserves": 30479
+      },
+      "actions": [
+        {
+          "Action": "Eat",
+          "Attempted": 43025,
+          "Committed": 42620,
+          "Effective": 42620
+        },
+        {
+          "Action": "Move",
+          "Attempted": 1812910,
+          "Committed": 169933,
+          "Effective": 169933
+        },
+        {
+          "Action": "GenerateFood",
+          "Attempted": 1002703,
+          "Committed": 950454,
+          "Effective": 950454
+        },
+        {
+          "Action": "Kill",
+          "Attempted": 233387,
+          "Committed": 226321,
+          "Effective": 226321
+        },
+        {
+          "Action": "CombineDna",
+          "Attempted": 1211284,
+          "Committed": 194478,
+          "Effective": 194478
+        },
+        {
+          "Action": "Evolve",
+          "Attempted": 541292,
+          "Committed": 539541,
+          "Effective": 539541
+        },
+        {
+          "Action": "Heal",
+          "Attempted": 37599,
+          "Committed": 35433,
+          "Effective": 35433
+        },
+        {
+          "Action": "Infect",
+          "Attempted": 71757,
+          "Committed": 34829,
+          "Effective": 34829
+        }
+      ],
+      "memory": {
+        "allocatedBytes": 28574526768,
+        "gcCollections": [
+          3156,
+          2434,
+          498
+        ],
+        "scope": "Process-wide since before reset, including setup, collector, validation and exports."
+      },
+      "timing": {
+        "engineCallSeconds": 109.8483912,
+        "collectorSeconds": 2.4824878,
+        "collectorCensusSeconds": 2.3297782,
+        "initialCollectorSeconds": 0.0049617,
+        "engineExcludingCollectorSeconds": 107.3708651,
+        "validationSeconds": 0.0347764,
+        "exportPreparationSeconds": 0.0036676,
+        "totalSeconds": 110.0215939,
+        "outerWallSeconds": 110.11,
+        "collectorWithinEnginePercent": 2.255404993132025
+      },
+      "auditErrors": [],
+      "omissions": [
+        "Requested 2048-season horizon is incomplete; observed-prefix success cannot pass it",
+        "Trajectory contains season 0/every eighth/final only; checks audit exported extrema and flags without independently reconstructing unseen seasons"
+      ]
+    },
+    {
+      "stage": "comparison-default",
+      "kind": "comparison",
+      "seed": 83,
+      "candidate": "default",
+      "completedSeasons": 980,
+      "criteriaEvidenceSeason": 980,
+      "sampleEvidenceSeason": 980,
+      "requestedSeasons": 2048,
+      "completeHorizon": false,
+      "screen": "inconclusive_horizon",
+      "selectionEvidenceComplete": false,
+      "exitCode": 3,
+      "reason": "Stopped at a completed season before the 115-second watchdog.",
+      "population": {
+        "initial": 1021,
+        "minimum": 674,
+        "finalObserved": 9685,
+        "peak": 9718,
+        "minimumInitialFraction": 0.6601371204701273
+      },
+      "turnover": {
+        "Births": 16920,
+        "Deaths": 8256,
+        "InitialCohortLiving": 497,
+        "DescendantsLiving": 9188,
+        "MaximumLivingGeneration": 38,
+        "HighestGenerationObserved": 39,
+        "MeanLivingGeneration": 9.617656169334023
+      },
+      "diversity": {
+        "MaximumLargestPatternFraction": 0.2065704330512693,
+        "MaximumLargestPatternSeason": 270,
+        "MaximumPeakDrawdownFraction": 0.33986287952987265,
+        "MaximumPeakDrawdownSeason": 140,
+        "FirstCollapseSeason": null,
+        "FirstDominationSeason": null
+      },
+      "windows": {
+        "complete": 6,
+        "minimumBirths": 1289,
+        "minimumEffectiveActionTypes": 8,
+        "failed": [],
+        "incompleteSeasons": 84
+      },
+      "effects": {
+        "AttemptedActions": 5629877,
+        "CommittedActions": 1289611,
+        "EffectiveActions": 1289611,
+        "Moves": 45791,
+        "GatheringActions": 720571,
+        "DamagingAttacks": 11213,
+        "PredationTransfers": 0,
+        "FoodGathered": 798113,
+        "FoodSpent": 48685,
+        "FoodTransferred": 0,
+        "BoardFood": 69728,
+        "OrganismReserves": 86999
+      },
+      "actions": [
+        {
+          "Action": "Eat",
+          "Attempted": 9230,
+          "Committed": 9210,
+          "Effective": 9210
+        },
+        {
+          "Action": "Move",
+          "Attempted": 2053033,
+          "Committed": 45791,
+          "Effective": 45791
+        },
+        {
+          "Action": "GenerateFood",
+          "Attempted": 1130917,
+          "Committed": 720571,
+          "Effective": 720571
+        },
+        {
+          "Action": "Kill",
+          "Attempted": 11867,
+          "Committed": 11213,
+          "Effective": 11213
+        },
+        {
+          "Action": "CombineDna",
+          "Attempted": 1937373,
+          "Committed": 16920,
+          "Effective": 16920
+        },
+        {
+          "Action": "Evolve",
+          "Attempted": 480344,
+          "Committed": 480271,
+          "Effective": 480271
+        },
+        {
+          "Action": "Heal",
+          "Attempted": 5116,
+          "Committed": 4624,
+          "Effective": 4624
+        },
+        {
+          "Action": "Infect",
+          "Attempted": 1997,
+          "Committed": 1011,
+          "Effective": 1011
+        }
+      ],
+      "memory": {
+        "allocatedBytes": 27243891288,
+        "gcCollections": [
+          3090,
+          2626,
+          589
+        ],
+        "scope": "Process-wide since before reset, including setup, collector, validation and exports."
+      },
+      "timing": {
+        "engineCallSeconds": 109.9615629,
+        "collectorSeconds": 2.6979269,
+        "collectorCensusSeconds": 2.5285361,
+        "initialCollectorSeconds": 0.0109392,
+        "engineExcludingCollectorSeconds": 107.2745752,
+        "validationSeconds": 0.0247267,
+        "exportPreparationSeconds": 0.0035492,
+        "totalSeconds": 110.1249501,
+        "outerWallSeconds": 110.203,
+        "collectorWithinEnginePercent": 2.4435699431114575
+      },
+      "auditErrors": [],
+      "omissions": [
+        "Requested 2048-season horizon is incomplete; observed-prefix success cannot pass it",
+        "Trajectory contains season 0/every eighth/final only; checks audit exported extrema and flags without independently reconstructing unseen seasons"
+      ]
+    },
+    {
+      "stage": "comparison-constrained",
+      "kind": "comparison",
+      "seed": 11,
+      "candidate": "constrained",
+      "completedSeasons": 859,
+      "criteriaEvidenceSeason": 859,
+      "sampleEvidenceSeason": 859,
+      "requestedSeasons": 2048,
+      "completeHorizon": false,
+      "screen": "inconclusive_horizon",
+      "selectionEvidenceComplete": false,
+      "exitCode": 3,
+      "reason": "Stopped at a completed season before the 115-second watchdog.",
+      "population": {
+        "initial": 996,
+        "minimum": 827,
+        "finalObserved": 9289,
+        "peak": 9331,
+        "minimumInitialFraction": 0.8303212851405622
+      },
+      "turnover": {
+        "Births": 51170,
+        "Deaths": 42877,
+        "InitialCohortLiving": 254,
+        "DescendantsLiving": 9035,
+        "MaximumLivingGeneration": 35,
+        "HighestGenerationObserved": 35,
+        "MeanLivingGeneration": 12.408655398858865
+      },
+      "diversity": {
+        "MaximumLargestPatternFraction": 0.06485329303614154,
+        "MaximumLargestPatternSeason": 327,
+        "MaximumPeakDrawdownFraction": 0.16967871485943775,
+        "MaximumPeakDrawdownSeason": 135,
+        "FirstCollapseSeason": null,
+        "FirstDominationSeason": null
+      },
+      "windows": {
+        "complete": 5,
+        "minimumBirths": 3949,
+        "minimumEffectiveActionTypes": 8,
+        "failed": [],
+        "incompleteSeasons": 91
+      },
+      "effects": {
+        "AttemptedActions": 4672160,
+        "CommittedActions": 1701820,
+        "EffectiveActions": 1701820,
+        "Moves": 55864,
+        "GatheringActions": 681111,
+        "DamagingAttacks": 68496,
+        "PredationTransfers": 0,
+        "FoodGathered": 872172,
+        "FoodSpent": 224452,
+        "FoodTransferred": 0,
+        "BoardFood": 39030,
+        "OrganismReserves": 53488
+      },
+      "actions": [
+        {
+          "Action": "Eat",
+          "Attempted": 53344,
+          "Committed": 52957,
+          "Effective": 52957
+        },
+        {
+          "Action": "Move",
+          "Attempted": 1138378,
+          "Committed": 55864,
+          "Effective": 55864
+        },
+        {
+          "Action": "GenerateFood",
+          "Attempted": 896526,
+          "Committed": 681111,
+          "Effective": 681111
+        },
+        {
+          "Action": "Kill",
+          "Attempted": 70030,
+          "Committed": 68496,
+          "Effective": 68496
+        },
+        {
+          "Action": "CombineDna",
+          "Attempted": 1683600,
+          "Committed": 51170,
+          "Effective": 51170
+        },
+        {
+          "Action": "Evolve",
+          "Attempted": 723882,
+          "Committed": 723067,
+          "Effective": 723067
+        },
+        {
+          "Action": "Heal",
+          "Attempted": 35946,
+          "Committed": 34533,
+          "Effective": 34533
+        },
+        {
+          "Action": "Infect",
+          "Attempted": 70454,
+          "Committed": 34622,
+          "Effective": 34622
+        }
+      ],
+      "memory": {
+        "allocatedBytes": 25140706072,
+        "gcCollections": [
+          2796,
+          2328,
+          476
+        ],
+        "scope": "Process-wide since before reset, including setup, collector, validation and exports."
+      },
+      "timing": {
+        "engineCallSeconds": 109.8728783,
+        "collectorSeconds": 3.2879606,
+        "collectorCensusSeconds": 3.1136489,
+        "initialCollectorSeconds": 0.0044587,
+        "engineExcludingCollectorSeconds": 106.5893764,
+        "validationSeconds": 0.0651994,
+        "exportPreparationSeconds": 0.003459,
+        "totalSeconds": 110.0654287,
+        "outerWallSeconds": 110.156,
+        "collectorWithinEnginePercent": 2.988455341121249
+      },
+      "auditErrors": [],
+      "omissions": [
+        "Requested 2048-season horizon is incomplete; observed-prefix success cannot pass it",
+        "Trajectory contains season 0/every eighth/final only; checks audit exported extrema and flags without independently reconstructing unseen seasons"
+      ]
+    },
+    {
+      "stage": "comparison-constrained",
+      "kind": "comparison",
+      "seed": 29,
+      "candidate": "constrained",
+      "completedSeasons": 1274,
+      "criteriaEvidenceSeason": 1274,
+      "sampleEvidenceSeason": 1274,
+      "requestedSeasons": 2048,
+      "completeHorizon": false,
+      "screen": "inconclusive_horizon",
+      "selectionEvidenceComplete": false,
+      "exitCode": 3,
+      "reason": "Stopped at a completed season before the 115-second watchdog.",
+      "population": {
+        "initial": 1039,
+        "minimum": 970,
+        "finalObserved": 7689,
+        "peak": 7801,
+        "minimumInitialFraction": 0.933589990375361
+      },
+      "turnover": {
+        "Births": 153020,
+        "Deaths": 146370,
+        "InitialCohortLiving": 60,
+        "DescendantsLiving": 7629,
+        "MaximumLivingGeneration": 71,
+        "HighestGenerationObserved": 71,
+        "MeanLivingGeneration": 31.620106645857717
+      },
+      "diversity": {
+        "MaximumLargestPatternFraction": 0.19393352694417554,
+        "MaximumLargestPatternSeason": 295,
+        "MaximumPeakDrawdownFraction": 0.0824829931972789,
+        "MaximumPeakDrawdownSeason": 135,
+        "FirstCollapseSeason": null,
+        "FirstDominationSeason": null
+      },
+      "windows": {
+        "complete": 8,
+        "minimumBirths": 5981,
+        "minimumEffectiveActionTypes": 8,
+        "failed": [],
+        "incompleteSeasons": 122
+      },
+      "effects": {
+        "AttemptedActions": 5300676,
+        "CommittedActions": 2743753,
+        "EffectiveActions": 2743753,
+        "Moves": 183874,
+        "GatheringActions": 1055508,
+        "DamagingAttacks": 500973,
+        "PredationTransfers": 0,
+        "FoodGathered": 1495544,
+        "FoodSpent": 720655,
+        "FoodTransferred": 0,
+        "BoardFood": 25125,
+        "OrganismReserves": 26092
+      },
+      "actions": [
+        {
+          "Action": "Eat",
+          "Attempted": 15536,
+          "Committed": 15364,
+          "Effective": 15364
+        },
+        {
+          "Action": "Move",
+          "Attempted": 1515909,
+          "Committed": 183874,
+          "Effective": 183874
+        },
+        {
+          "Action": "GenerateFood",
+          "Attempted": 1141550,
+          "Committed": 1055508,
+          "Effective": 1055508
+        },
+        {
+          "Action": "Kill",
+          "Attempted": 513958,
+          "Committed": 500973,
+          "Effective": 500973
+        },
+        {
+          "Action": "CombineDna",
+          "Attempted": 1249996,
+          "Committed": 153020,
+          "Effective": 153020
+        },
+        {
+          "Action": "Evolve",
+          "Attempted": 436898,
+          "Committed": 435763,
+          "Effective": 435763
+        },
+        {
+          "Action": "Heal",
+          "Attempted": 418168,
+          "Committed": 395098,
+          "Effective": 395098
+        },
+        {
+          "Action": "Infect",
+          "Attempted": 8661,
+          "Committed": 4153,
+          "Effective": 4153
+        }
+      ],
+      "memory": {
+        "allocatedBytes": 30197614040,
+        "gcCollections": [
+          3362,
+          2725,
+          553
+        ],
+        "scope": "Process-wide since before reset, including setup, collector, validation and exports."
+      },
+      "timing": {
+        "engineCallSeconds": 109.9490063,
+        "collectorSeconds": 3.4855006,
+        "collectorCensusSeconds": 3.3000484,
+        "initialCollectorSeconds": 0.0049317,
+        "engineExcludingCollectorSeconds": 106.4684374,
+        "validationSeconds": 0.0251842,
+        "exportPreparationSeconds": 0.0039225,
+        "totalSeconds": 110.1082461,
+        "outerWallSeconds": 110.187,
+        "collectorWithinEnginePercent": 3.1656210611882534
+      },
+      "auditErrors": [],
+      "omissions": [
+        "Requested 2048-season horizon is incomplete; observed-prefix success cannot pass it",
+        "Trajectory contains season 0/every eighth/final only; checks audit exported extrema and flags without independently reconstructing unseen seasons"
+      ]
+    },
+    {
+      "stage": "comparison-constrained",
+      "kind": "comparison",
+      "seed": 47,
+      "candidate": "constrained",
+      "completedSeasons": 841,
+      "criteriaEvidenceSeason": 841,
+      "sampleEvidenceSeason": 841,
+      "requestedSeasons": 2048,
+      "completeHorizon": false,
+      "screen": "inconclusive_horizon",
+      "selectionEvidenceComplete": false,
+      "exitCode": 3,
+      "reason": "Stopped at a completed season before the 115-second watchdog.",
+      "population": {
+        "initial": 1006,
+        "minimum": 901,
+        "finalObserved": 9386,
+        "peak": 9386,
+        "minimumInitialFraction": 0.8956262425447317
+      },
+      "turnover": {
+        "Births": 61388,
+        "Deaths": 53008,
+        "InitialCohortLiving": 284,
+        "DescendantsLiving": 9102,
+        "MaximumLivingGeneration": 58,
+        "HighestGenerationObserved": 58,
+        "MeanLivingGeneration": 19.37790326017473
+      },
+      "diversity": {
+        "MaximumLargestPatternFraction": 0.15878194671016857,
+        "MaximumLargestPatternSeason": 136,
+        "MaximumPeakDrawdownFraction": 0.10437375745526839,
+        "MaximumPeakDrawdownSeason": 48,
+        "FirstCollapseSeason": null,
+        "FirstDominationSeason": null
+      },
+      "windows": {
+        "complete": 5,
+        "minimumBirths": 8879,
+        "minimumEffectiveActionTypes": 8,
+        "failed": [],
+        "incompleteSeasons": 73
+      },
+      "effects": {
+        "AttemptedActions": 4842693,
+        "CommittedActions": 2166887,
+        "EffectiveActions": 2166887,
+        "Moves": 41852,
+        "GatheringActions": 603581,
+        "DamagingAttacks": 60514,
+        "PredationTransfers": 0,
+        "FoodGathered": 799840,
+        "FoodSpent": 202687,
+        "FoodTransferred": 0,
+        "BoardFood": 50023,
+        "OrganismReserves": 48140
+      },
+      "actions": [
+        {
+          "Action": "Eat",
+          "Attempted": 44382,
+          "Committed": 43924,
+          "Effective": 43924
+        },
+        {
+          "Action": "Move",
+          "Attempted": 586872,
+          "Committed": 41852,
+          "Effective": 41852
+        },
+        {
+          "Action": "GenerateFood",
+          "Attempted": 640137,
+          "Committed": 603581,
+          "Effective": 603581
+        },
+        {
+          "Action": "Kill",
+          "Attempted": 62646,
+          "Committed": 60514,
+          "Effective": 60514
+        },
+        {
+          "Action": "CombineDna",
+          "Attempted": 2121155,
+          "Committed": 61388,
+          "Effective": 61388
+        },
+        {
+          "Action": "Evolve",
+          "Attempted": 1320982,
+          "Committed": 1319641,
+          "Effective": 1319641
+        },
+        {
+          "Action": "Heal",
+          "Attempted": 8664,
+          "Committed": 8207,
+          "Effective": 8207
+        },
+        {
+          "Action": "Infect",
+          "Attempted": 57855,
+          "Committed": 27780,
+          "Effective": 27780
+        }
+      ],
+      "memory": {
+        "allocatedBytes": 26023667024,
+        "gcCollections": [
+          2965,
+          2417,
+          559
+        ],
+        "scope": "Process-wide since before reset, including setup, collector, validation and exports."
+      },
+      "timing": {
+        "engineCallSeconds": 109.8384221,
+        "collectorSeconds": 3.1470747,
+        "collectorCensusSeconds": 2.9755887,
+        "initialCollectorSeconds": 0.004517,
+        "engineExcludingCollectorSeconds": 106.6958644,
+        "validationSeconds": 0.0585266,
+        "exportPreparationSeconds": 0.003393,
+        "totalSeconds": 110.0247801,
+        "outerWallSeconds": 110.109,
+        "collectorWithinEnginePercent": 2.8610732382325437
+      },
+      "auditErrors": [],
+      "omissions": [
+        "Requested 2048-season horizon is incomplete; observed-prefix success cannot pass it",
+        "Trajectory contains season 0/every eighth/final only; checks audit exported extrema and flags without independently reconstructing unseen seasons"
+      ]
+    },
+    {
+      "stage": "comparison-constrained",
+      "kind": "comparison",
+      "seed": 83,
+      "candidate": "constrained",
+      "completedSeasons": 879,
+      "criteriaEvidenceSeason": 879,
+      "sampleEvidenceSeason": 879,
+      "requestedSeasons": 2048,
+      "completeHorizon": false,
+      "screen": "inconclusive_horizon",
+      "selectionEvidenceComplete": false,
+      "exitCode": 3,
+      "reason": "Stopped at a completed season before the 115-second watchdog.",
+      "population": {
+        "initial": 1021,
+        "minimum": 947,
+        "finalObserved": 9217,
+        "peak": 9369,
+        "minimumInitialFraction": 0.9275220372184133
+      },
+      "turnover": {
+        "Births": 39432,
+        "Deaths": 31236,
+        "InitialCohortLiving": 340,
+        "DescendantsLiving": 8877,
+        "MaximumLivingGeneration": 42,
+        "HighestGenerationObserved": 44,
+        "MeanLivingGeneration": 18.80687859390257
+      },
+      "diversity": {
+        "MaximumLargestPatternFraction": 0.2928275044457617,
+        "MaximumLargestPatternSeason": 206,
+        "MaximumPeakDrawdownFraction": 0.07247796278158668,
+        "MaximumPeakDrawdownSeason": 8,
+        "FirstCollapseSeason": null,
+        "FirstDominationSeason": null
+      },
+      "windows": {
+        "complete": 5,
+        "minimumBirths": 4562,
+        "minimumEffectiveActionTypes": 8,
+        "failed": [],
+        "incompleteSeasons": 111
+      },
+      "effects": {
+        "AttemptedActions": 4920189,
+        "CommittedActions": 1674117,
+        "EffectiveActions": 1674117,
+        "Moves": 26720,
+        "GatheringActions": 725993,
+        "DamagingAttacks": 49039,
+        "PredationTransfers": 0,
+        "FoodGathered": 863482,
+        "FoodSpent": 161209,
+        "FoodTransferred": 0,
+        "BoardFood": 51687,
+        "OrganismReserves": 64312
+      },
+      "actions": [
+        {
+          "Action": "Eat",
+          "Attempted": 34974,
+          "Committed": 34800,
+          "Effective": 34800
+        },
+        {
+          "Action": "Move",
+          "Attempted": 287834,
+          "Committed": 26720,
+          "Effective": 26720
+        },
+        {
+          "Action": "GenerateFood",
+          "Attempted": 1020498,
+          "Committed": 725993,
+          "Effective": 725993
+        },
+        {
+          "Action": "Kill",
+          "Attempted": 49919,
+          "Committed": 49039,
+          "Effective": 49039
+        },
+        {
+          "Action": "CombineDna",
+          "Attempted": 2704755,
+          "Committed": 39432,
+          "Effective": 39432
+        },
+        {
+          "Action": "Evolve",
+          "Attempted": 751069,
+          "Committed": 750588,
+          "Effective": 750588
+        },
+        {
+          "Action": "Heal",
+          "Attempted": 29452,
+          "Committed": 27064,
+          "Effective": 27064
+        },
+        {
+          "Action": "Infect",
+          "Attempted": 41688,
+          "Committed": 20481,
+          "Effective": 20481
+        }
+      ],
+      "memory": {
+        "allocatedBytes": 26607022240,
+        "gcCollections": [
+          2973,
+          2493,
+          522
+        ],
+        "scope": "Process-wide since before reset, including setup, collector, validation and exports."
+      },
+      "timing": {
+        "engineCallSeconds": 109.9125357,
+        "collectorSeconds": 3.1331357,
+        "collectorCensusSeconds": 2.9712089,
+        "initialCollectorSeconds": 0.0055454,
+        "engineExcludingCollectorSeconds": 106.7849454,
+        "validationSeconds": 0.0785123,
+        "exportPreparationSeconds": 0.003465,
+        "totalSeconds": 110.1229921,
+        "outerWallSeconds": 110.203,
+        "collectorWithinEnginePercent": 2.8455264725550315
+      },
+      "auditErrors": [],
+      "omissions": [
+        "Requested 2048-season horizon is incomplete; observed-prefix success cannot pass it",
+        "Trajectory contains season 0/every eighth/final only; checks audit exported extrema and flags without independently reconstructing unseen seasons"
+      ]
+    },
+    {
+      "stage": "comparison-regrowth2",
+      "kind": "comparison",
+      "seed": 11,
+      "candidate": "regrowth2",
+      "completedSeasons": 939,
+      "criteriaEvidenceSeason": 939,
+      "sampleEvidenceSeason": 939,
+      "requestedSeasons": 2048,
+      "completeHorizon": false,
+      "screen": "inconclusive_horizon",
+      "selectionEvidenceComplete": false,
+      "exitCode": 3,
+      "reason": "Stopped at a completed season before the 115-second watchdog.",
+      "population": {
+        "initial": 996,
+        "minimum": 671,
+        "finalObserved": 9614,
+        "peak": 9715,
+        "minimumInitialFraction": 0.6736947791164659
+      },
+      "turnover": {
+        "Births": 147363,
+        "Deaths": 138745,
+        "InitialCohortLiving": 44,
+        "DescendantsLiving": 9570,
+        "MaximumLivingGeneration": 44,
+        "HighestGenerationObserved": 44,
+        "MeanLivingGeneration": 20.990638651965885
+      },
+      "diversity": {
+        "MaximumLargestPatternFraction": 0.15728542914171656,
+        "MaximumLargestPatternSeason": 313,
+        "MaximumPeakDrawdownFraction": 0.32630522088353414,
+        "MaximumPeakDrawdownSeason": 135,
+        "FirstCollapseSeason": null,
+        "FirstDominationSeason": null
+      },
+      "windows": {
+        "complete": 6,
+        "minimumBirths": 2615,
+        "minimumEffectiveActionTypes": 8,
+        "failed": [],
+        "incompleteSeasons": 43
+      },
+      "effects": {
+        "AttemptedActions": 4909728,
+        "CommittedActions": 1773760,
+        "EffectiveActions": 1773760,
+        "Moves": 94395,
+        "GatheringActions": 886952,
+        "DamagingAttacks": 181655,
+        "PredationTransfers": 0,
+        "FoodGathered": 1513884,
+        "FoodSpent": 390340,
+        "FoodTransferred": 0,
+        "BoardFood": 72995,
+        "OrganismReserves": 80824
+      },
+      "actions": [
+        {
+          "Action": "Eat",
+          "Attempted": 32067,
+          "Committed": 31740,
+          "Effective": 31740
+        },
+        {
+          "Action": "Move",
+          "Attempted": 590157,
+          "Committed": 94395,
+          "Effective": 94395
+        },
+        {
+          "Action": "GenerateFood",
+          "Attempted": 948869,
+          "Committed": 886952,
+          "Effective": 886952
+        },
+        {
+          "Action": "Kill",
+          "Attempted": 188627,
+          "Committed": 181655,
+          "Effective": 181655
+        },
+        {
+          "Action": "CombineDna",
+          "Attempted": 2695685,
+          "Committed": 147363,
+          "Effective": 147363
+        },
+        {
+          "Action": "Evolve",
+          "Attempted": 368593,
+          "Committed": 367781,
+          "Effective": 367781
+        },
+        {
+          "Action": "Heal",
+          "Attempted": 48997,
+          "Committed": 46134,
+          "Effective": 46134
+        },
+        {
+          "Action": "Infect",
+          "Attempted": 36733,
+          "Committed": 17740,
+          "Effective": 17740
+        }
+      ],
+      "memory": {
+        "allocatedBytes": 26608717776,
+        "gcCollections": [
+          3001,
+          2407,
+          528
+        ],
+        "scope": "Process-wide since before reset, including setup, collector, validation and exports."
+      },
+      "timing": {
+        "engineCallSeconds": 109.8571167,
+        "collectorSeconds": 2.4693825,
+        "collectorCensusSeconds": 2.3242413,
+        "initialCollectorSeconds": 0.0049907,
+        "engineExcludingCollectorSeconds": 107.3927249,
+        "validationSeconds": 0.0537759,
+        "exportPreparationSeconds": 0.0034769,
+        "totalSeconds": 110.0458823,
+        "outerWallSeconds": 110.14,
+        "collectorWithinEnginePercent": 2.243270052981465
+      },
+      "auditErrors": [],
+      "omissions": [
+        "Requested 2048-season horizon is incomplete; observed-prefix success cannot pass it",
+        "Trajectory contains season 0/every eighth/final only; checks audit exported extrema and flags without independently reconstructing unseen seasons"
+      ]
+    },
+    {
+      "stage": "comparison-regrowth2",
+      "kind": "comparison",
+      "seed": 29,
+      "candidate": "regrowth2",
+      "completedSeasons": 1170,
+      "criteriaEvidenceSeason": 1170,
+      "sampleEvidenceSeason": 1170,
+      "requestedSeasons": 2048,
+      "completeHorizon": false,
+      "screen": "inconclusive_horizon",
+      "selectionEvidenceComplete": false,
+      "exitCode": 3,
+      "reason": "Stopped at a completed season before the 115-second watchdog.",
+      "population": {
+        "initial": 1039,
+        "minimum": 678,
+        "finalObserved": 8534,
+        "peak": 8795,
+        "minimumInitialFraction": 0.6525505293551492
+      },
+      "turnover": {
+        "Births": 161040,
+        "Deaths": 153545,
+        "InitialCohortLiving": 86,
+        "DescendantsLiving": 8448,
+        "MaximumLivingGeneration": 74,
+        "HighestGenerationObserved": 74,
+        "MeanLivingGeneration": 30.118818842277946
+      },
+      "diversity": {
+        "MaximumLargestPatternFraction": 0.24051848295727316,
+        "MaximumLargestPatternSeason": 450,
+        "MaximumPeakDrawdownFraction": 0.3474494706448508,
+        "MaximumPeakDrawdownSeason": 135,
+        "FirstCollapseSeason": null,
+        "FirstDominationSeason": null
+      },
+      "windows": {
+        "complete": 8,
+        "minimumBirths": 921,
+        "minimumEffectiveActionTypes": 8,
+        "failed": [],
+        "incompleteSeasons": 18
+      },
+      "effects": {
+        "AttemptedActions": 4358143,
+        "CommittedActions": 2347471,
+        "EffectiveActions": 2347471,
+        "Moves": 65105,
+        "GatheringActions": 751498,
+        "DamagingAttacks": 239833,
+        "PredationTransfers": 0,
+        "FoodGathered": 1400722,
+        "FoodSpent": 554050,
+        "FoodTransferred": 0,
+        "BoardFood": 67222,
+        "OrganismReserves": 51383
+      },
+      "actions": [
+        {
+          "Action": "Eat",
+          "Attempted": 77853,
+          "Committed": 76590,
+          "Effective": 76590
+        },
+        {
+          "Action": "Move",
+          "Attempted": 515501,
+          "Committed": 65105,
+          "Effective": 65105
+        },
+        {
+          "Action": "GenerateFood",
+          "Attempted": 965337,
+          "Committed": 751498,
+          "Effective": 751498
+        },
+        {
+          "Action": "Kill",
+          "Attempted": 257864,
+          "Committed": 239833,
+          "Effective": 239833
+        },
+        {
+          "Action": "CombineDna",
+          "Attempted": 1416270,
+          "Committed": 161040,
+          "Effective": 161040
+        },
+        {
+          "Action": "Evolve",
+          "Attempted": 899957,
+          "Committed": 898025,
+          "Effective": 898025
+        },
+        {
+          "Action": "Heal",
+          "Attempted": 108734,
+          "Committed": 99665,
+          "Effective": 99665
+        },
+        {
+          "Action": "Infect",
+          "Attempted": 116627,
+          "Committed": 55715,
+          "Effective": 55715
+        }
+      ],
+      "memory": {
+        "allocatedBytes": 29733306128,
+        "gcCollections": [
+          3142,
+          2171,
+          345
+        ],
+        "scope": "Process-wide since before reset, including setup, collector, validation and exports."
+      },
+      "timing": {
+        "engineCallSeconds": 109.890642,
+        "collectorSeconds": 2.5457725,
+        "collectorCensusSeconds": 2.4037828,
+        "initialCollectorSeconds": 0.0058595,
+        "engineExcludingCollectorSeconds": 107.350729,
+        "validationSeconds": 0.0226341,
+        "exportPreparationSeconds": 0.0038302,
+        "totalSeconds": 110.0565217,
+        "outerWallSeconds": 110.157,
+        "collectorWithinEnginePercent": 2.31130963817647
+      },
+      "auditErrors": [],
+      "omissions": [
+        "Requested 2048-season horizon is incomplete; observed-prefix success cannot pass it",
+        "Trajectory contains season 0/every eighth/final only; checks audit exported extrema and flags without independently reconstructing unseen seasons"
+      ]
+    },
+    {
+      "stage": "comparison-regrowth2",
+      "kind": "comparison",
+      "seed": 47,
+      "candidate": "regrowth2",
+      "completedSeasons": 1098,
+      "criteriaEvidenceSeason": 1098,
+      "sampleEvidenceSeason": 1098,
+      "requestedSeasons": 2048,
+      "completeHorizon": false,
+      "screen": "inconclusive_horizon",
+      "selectionEvidenceComplete": false,
+      "exitCode": 3,
+      "reason": "Stopped at a completed season before the 115-second watchdog.",
+      "population": {
+        "initial": 1006,
+        "minimum": 632,
+        "finalObserved": 9605,
+        "peak": 9737,
+        "minimumInitialFraction": 0.6282306163021869
+      },
+      "turnover": {
+        "Births": 80766,
+        "Deaths": 72167,
+        "InitialCohortLiving": 259,
+        "DescendantsLiving": 9346,
+        "MaximumLivingGeneration": 64,
+        "HighestGenerationObserved": 65,
+        "MeanLivingGeneration": 18.83081728266528
+      },
+      "diversity": {
+        "MaximumLargestPatternFraction": 0.3019331083154342,
+        "MaximumLargestPatternSeason": 438,
+        "MaximumPeakDrawdownFraction": 0.3717693836978131,
+        "MaximumPeakDrawdownSeason": 147,
+        "FirstCollapseSeason": null,
+        "FirstDominationSeason": null
+      },
+      "windows": {
+        "complete": 7,
+        "minimumBirths": 615,
+        "minimumEffectiveActionTypes": 8,
+        "failed": [],
+        "incompleteSeasons": 74
+      },
+      "effects": {
+        "AttemptedActions": 5250983,
+        "CommittedActions": 1396440,
+        "EffectiveActions": 1396440,
+        "Moves": 49505,
+        "GatheringActions": 760130,
+        "DamagingAttacks": 85124,
+        "PredationTransfers": 0,
+        "FoodGathered": 1074549,
+        "FoodSpent": 190041,
+        "FoodTransferred": 0,
+        "BoardFood": 85661,
+        "OrganismReserves": 85297
+      },
+      "actions": [
+        {
+          "Action": "Eat",
+          "Attempted": 8547,
+          "Committed": 8482,
+          "Effective": 8482
+        },
+        {
+          "Action": "Move",
+          "Attempted": 411331,
+          "Committed": 49505,
+          "Effective": 49505
+        },
+        {
+          "Action": "GenerateFood",
+          "Attempted": 795132,
+          "Committed": 760130,
+          "Effective": 760130
+        },
+        {
+          "Action": "Kill",
+          "Attempted": 90706,
+          "Committed": 85124,
+          "Effective": 85124
+        },
+        {
+          "Action": "CombineDna",
+          "Attempted": 3526952,
+          "Committed": 80766,
+          "Effective": 80766
+        },
+        {
+          "Action": "Evolve",
+          "Attempted": 392621,
+          "Committed": 392406,
+          "Effective": 392406
+        },
+        {
+          "Action": "Heal",
+          "Attempted": 18801,
+          "Committed": 16791,
+          "Effective": 16791
+        },
+        {
+          "Action": "Infect",
+          "Attempted": 6893,
+          "Committed": 3236,
+          "Effective": 3236
+        }
+      ],
+      "memory": {
+        "allocatedBytes": 28270611672,
+        "gcCollections": [
+          3064,
+          2417,
+          430
+        ],
+        "scope": "Process-wide since before reset, including setup, collector, validation and exports."
+      },
+      "timing": {
+        "engineCallSeconds": 109.8691473,
+        "collectorSeconds": 2.7594149,
+        "collectorCensusSeconds": 2.6039563,
+        "initialCollectorSeconds": 0.0050804,
+        "engineExcludingCollectorSeconds": 107.1148128,
+        "validationSeconds": 0.0559071,
+        "exportPreparationSeconds": 0.0037254,
+        "totalSeconds": 110.0633701,
+        "outerWallSeconds": 110.141,
+        "collectorWithinEnginePercent": 2.5069226144799615
+      },
+      "auditErrors": [],
+      "omissions": [
+        "Requested 2048-season horizon is incomplete; observed-prefix success cannot pass it",
+        "Trajectory contains season 0/every eighth/final only; checks audit exported extrema and flags without independently reconstructing unseen seasons"
+      ]
+    },
+    {
+      "stage": "comparison-regrowth2",
+      "kind": "comparison",
+      "seed": 83,
+      "candidate": "regrowth2",
+      "completedSeasons": 874,
+      "criteriaEvidenceSeason": 874,
+      "sampleEvidenceSeason": 874,
+      "requestedSeasons": 2048,
+      "completeHorizon": false,
+      "screen": "inconclusive_horizon",
+      "selectionEvidenceComplete": false,
+      "exitCode": 3,
+      "reason": "Stopped at a completed season before the 115-second watchdog.",
+      "population": {
+        "initial": 1021,
+        "minimum": 767,
+        "finalObserved": 9826,
+        "peak": 9899,
+        "minimumInitialFraction": 0.7512242899118511
+      },
+      "turnover": {
+        "Births": 31553,
+        "Deaths": 22748,
+        "InitialCohortLiving": 462,
+        "DescendantsLiving": 9364,
+        "MaximumLivingGeneration": 38,
+        "HighestGenerationObserved": 39,
+        "MeanLivingGeneration": 8.234988805210666
+      },
+      "diversity": {
+        "MaximumLargestPatternFraction": 0.10306093793878124,
+        "MaximumLargestPatternSeason": 241,
+        "MaximumPeakDrawdownFraction": 0.24877571008814886,
+        "MaximumPeakDrawdownSeason": 135,
+        "FirstCollapseSeason": null,
+        "FirstDominationSeason": null
+      },
+      "windows": {
+        "complete": 5,
+        "minimumBirths": 4307,
+        "minimumEffectiveActionTypes": 8,
+        "failed": [],
+        "incompleteSeasons": 106
+      },
+      "effects": {
+        "AttemptedActions": 5326215,
+        "CommittedActions": 1196586,
+        "EffectiveActions": 1196586,
+        "Moves": 44302,
+        "GatheringActions": 639756,
+        "DamagingAttacks": 24792,
+        "PredationTransfers": 0,
+        "FoodGathered": 785784,
+        "FoodSpent": 83179,
+        "FoodTransferred": 0,
+        "BoardFood": 93115,
+        "OrganismReserves": 84810
+      },
+      "actions": [
+        {
+          "Action": "Eat",
+          "Attempted": 8436,
+          "Committed": 8398,
+          "Effective": 8398
+        },
+        {
+          "Action": "Move",
+          "Attempted": 1656315,
+          "Committed": 44302,
+          "Effective": 44302
+        },
+        {
+          "Action": "GenerateFood",
+          "Attempted": 897875,
+          "Committed": 639756,
+          "Effective": 639756
+        },
+        {
+          "Action": "Kill",
+          "Attempted": 27411,
+          "Committed": 24792,
+          "Effective": 24792
+        },
+        {
+          "Action": "CombineDna",
+          "Attempted": 2285769,
+          "Committed": 31553,
+          "Effective": 31553
+        },
+        {
+          "Action": "Evolve",
+          "Attempted": 436291,
+          "Committed": 436110,
+          "Effective": 436110
+        },
+        {
+          "Action": "Heal",
+          "Attempted": 10648,
+          "Committed": 9944,
+          "Effective": 9944
+        },
+        {
+          "Action": "Infect",
+          "Attempted": 3470,
+          "Committed": 1731,
+          "Effective": 1731
+        }
+      ],
+      "memory": {
+        "allocatedBytes": 26341242216,
+        "gcCollections": [
+          2979,
+          2509,
+          552
+        ],
+        "scope": "Process-wide since before reset, including setup, collector, validation and exports."
+      },
+      "timing": {
+        "engineCallSeconds": 109.8978086,
+        "collectorSeconds": 2.5892178,
+        "collectorCensusSeconds": 2.4513031,
+        "initialCollectorSeconds": 0.0106169,
+        "engineExcludingCollectorSeconds": 107.3192077,
+        "validationSeconds": 0.0513902,
+        "exportPreparationSeconds": 0.0033535,
+        "totalSeconds": 110.0911688,
+        "outerWallSeconds": 110.171,
+        "collectorWithinEnginePercent": 2.346362436930339
+      },
+      "auditErrors": [],
+      "omissions": [
+        "Requested 2048-season horizon is incomplete; observed-prefix success cannot pass it",
+        "Trajectory contains season 0/every eighth/final only; checks audit exported extrema and flags without independently reconstructing unseen seasons"
+      ]
+    },
+    {
+      "stage": "comparison-capped",
+      "kind": "comparison",
+      "seed": 11,
+      "candidate": "capped",
+      "completedSeasons": 1042,
+      "criteriaEvidenceSeason": 1042,
+      "sampleEvidenceSeason": 1042,
+      "requestedSeasons": 2048,
+      "completeHorizon": false,
+      "screen": "inconclusive_horizon",
+      "selectionEvidenceComplete": false,
+      "exitCode": 3,
+      "reason": "Stopped at a completed season before the 115-second watchdog.",
+      "population": {
+        "initial": 996,
+        "minimum": 733,
+        "finalObserved": 8517,
+        "peak": 8632,
+        "minimumInitialFraction": 0.7359437751004017
+      },
+      "turnover": {
+        "Births": 113993,
+        "Deaths": 106472,
+        "InitialCohortLiving": 40,
+        "DescendantsLiving": 8477,
+        "MaximumLivingGeneration": 54,
+        "HighestGenerationObserved": 54,
+        "MeanLivingGeneration": 25.48162498532347
+      },
+      "diversity": {
+        "MaximumLargestPatternFraction": 0.11895023858214042,
+        "MaximumLargestPatternSeason": 329,
+        "MaximumPeakDrawdownFraction": 0.2640562248995984,
+        "MaximumPeakDrawdownSeason": 135,
+        "FirstCollapseSeason": null,
+        "FirstDominationSeason": null
+      },
+      "windows": {
+        "complete": 7,
+        "minimumBirths": 3046,
+        "minimumEffectiveActionTypes": 8,
+        "failed": [],
+        "incompleteSeasons": 18
+      },
+      "effects": {
+        "AttemptedActions": 4351389,
+        "CommittedActions": 2050147,
+        "EffectiveActions": 2050147,
+        "Moves": 105236,
+        "GatheringActions": 773854,
+        "DamagingAttacks": 124110,
+        "PredationTransfers": 0,
+        "FoodGathered": 1133311,
+        "FoodSpent": 330446,
+        "FoodTransferred": 0,
+        "BoardFood": 33741,
+        "OrganismReserves": 32410
+      },
+      "actions": [
+        {
+          "Action": "Eat",
+          "Attempted": 44435,
+          "Committed": 43846,
+          "Effective": 43846
+        },
+        {
+          "Action": "Move",
+          "Attempted": 1015951,
+          "Committed": 105236,
+          "Effective": 105236
+        },
+        {
+          "Action": "GenerateFood",
+          "Attempted": 912152,
+          "Committed": 773854,
+          "Effective": 773854
+        },
+        {
+          "Action": "Kill",
+          "Attempted": 128519,
+          "Committed": 124110,
+          "Effective": 124110
+        },
+        {
+          "Action": "CombineDna",
+          "Attempted": 1323065,
+          "Committed": 113993,
+          "Effective": 113993
+        },
+        {
+          "Action": "Evolve",
+          "Attempted": 831987,
+          "Committed": 830494,
+          "Effective": 830494
+        },
+        {
+          "Action": "Heal",
+          "Attempted": 27899,
+          "Committed": 26345,
+          "Effective": 26345
+        },
+        {
+          "Action": "Infect",
+          "Attempted": 67381,
+          "Committed": 32269,
+          "Effective": 32269
+        }
+      ],
+      "memory": {
+        "allocatedBytes": 27096435960,
+        "gcCollections": [
+          2918,
+          2329,
+          386
+        ],
+        "scope": "Process-wide since before reset, including setup, collector, validation and exports."
+      },
+      "timing": {
+        "engineCallSeconds": 109.9457329,
+        "collectorSeconds": 3.2972793,
+        "collectorCensusSeconds": 3.1454748,
+        "initialCollectorSeconds": 0.0055792,
+        "engineExcludingCollectorSeconds": 106.6540328,
+        "validationSeconds": 0.0556973,
+        "exportPreparationSeconds": 0.0262001,
+        "totalSeconds": 110.1695984,
+        "outerWallSeconds": 110.281,
+        "collectorWithinEnginePercent": 2.99393165444077
+      },
+      "auditErrors": [],
+      "omissions": [
+        "Requested 2048-season horizon is incomplete; observed-prefix success cannot pass it",
+        "Trajectory contains season 0/every eighth/final only; checks audit exported extrema and flags without independently reconstructing unseen seasons"
+      ]
+    },
+    {
+      "stage": "comparison-capped",
+      "kind": "comparison",
+      "seed": 29,
+      "candidate": "capped",
+      "completedSeasons": 950,
+      "criteriaEvidenceSeason": 950,
+      "sampleEvidenceSeason": 950,
+      "requestedSeasons": 2048,
+      "completeHorizon": false,
+      "screen": "inconclusive_horizon",
+      "selectionEvidenceComplete": false,
+      "exitCode": 3,
+      "reason": "Stopped at a completed season before the 115-second watchdog.",
+      "population": {
+        "initial": 1039,
+        "minimum": 656,
+        "finalObserved": 9485,
+        "peak": 9706,
+        "minimumInitialFraction": 0.631376323387873
+      },
+      "turnover": {
+        "Births": 43633,
+        "Deaths": 35187,
+        "InitialCohortLiving": 340,
+        "DescendantsLiving": 9145,
+        "MaximumLivingGeneration": 42,
+        "HighestGenerationObserved": 44,
+        "MeanLivingGeneration": 17.634370057986295
+      },
+      "diversity": {
+        "MaximumLargestPatternFraction": 0.15577889447236182,
+        "MaximumLargestPatternSeason": 401,
+        "MaximumPeakDrawdownFraction": 0.368623676612127,
+        "MaximumPeakDrawdownSeason": 211,
+        "FirstCollapseSeason": null,
+        "FirstDominationSeason": null
+      },
+      "windows": {
+        "complete": 6,
+        "minimumBirths": 221,
+        "minimumEffectiveActionTypes": 8,
+        "failed": [],
+        "incompleteSeasons": 54
+      },
+      "effects": {
+        "AttemptedActions": 4620614,
+        "CommittedActions": 1448882,
+        "EffectiveActions": 1448882,
+        "Moves": 37812,
+        "GatheringActions": 481541,
+        "DamagingAttacks": 35062,
+        "PredationTransfers": 0,
+        "FoodGathered": 628415,
+        "FoodSpent": 139483,
+        "FoodTransferred": 0,
+        "BoardFood": 51730,
+        "OrganismReserves": 48875
+      },
+      "actions": [
+        {
+          "Action": "Eat",
+          "Attempted": 22722,
+          "Committed": 22296,
+          "Effective": 22296
+        },
+        {
+          "Action": "Move",
+          "Attempted": 768829,
+          "Committed": 37812,
+          "Effective": 37812
+        },
+        {
+          "Action": "GenerateFood",
+          "Attempted": 496693,
+          "Committed": 481541,
+          "Effective": 481541
+        },
+        {
+          "Action": "Kill",
+          "Attempted": 36152,
+          "Committed": 35062,
+          "Effective": 35062
+        },
+        {
+          "Action": "CombineDna",
+          "Attempted": 2442609,
+          "Committed": 43633,
+          "Effective": 43633
+        },
+        {
+          "Action": "Evolve",
+          "Attempted": 799375,
+          "Committed": 798617,
+          "Effective": 798617
+        },
+        {
+          "Action": "Heal",
+          "Attempted": 8902,
+          "Committed": 8386,
+          "Effective": 8386
+        },
+        {
+          "Action": "Infect",
+          "Attempted": 45332,
+          "Committed": 21535,
+          "Effective": 21535
+        }
+      ],
+      "memory": {
+        "allocatedBytes": 24513998360,
+        "gcCollections": [
+          2771,
+          2262,
+          494
+        ],
+        "scope": "Process-wide since before reset, including setup, collector, validation and exports."
+      },
+      "timing": {
+        "engineCallSeconds": 109.8690435,
+        "collectorSeconds": 3.135184,
+        "collectorCensusSeconds": 2.979647,
+        "initialCollectorSeconds": 0.0044349,
+        "engineExcludingCollectorSeconds": 106.7382944,
+        "validationSeconds": 0.0602298,
+        "exportPreparationSeconds": 0.0034253,
+        "totalSeconds": 110.0709667,
+        "outerWallSeconds": 110.157,
+        "collectorWithinEnginePercent": 2.8495279473330446
+      },
+      "auditErrors": [],
+      "omissions": [
+        "Requested 2048-season horizon is incomplete; observed-prefix success cannot pass it",
+        "Trajectory contains season 0/every eighth/final only; checks audit exported extrema and flags without independently reconstructing unseen seasons"
+      ]
+    },
+    {
+      "stage": "comparison-capped",
+      "kind": "comparison",
+      "seed": 47,
+      "candidate": "capped",
+      "completedSeasons": 1132,
+      "criteriaEvidenceSeason": 1132,
+      "sampleEvidenceSeason": 1132,
+      "requestedSeasons": 2048,
+      "completeHorizon": false,
+      "screen": "inconclusive_horizon",
+      "selectionEvidenceComplete": false,
+      "exitCode": 3,
+      "reason": "Stopped at a completed season before the 115-second watchdog.",
+      "population": {
+        "initial": 1006,
+        "minimum": 619,
+        "finalObserved": 9424,
+        "peak": 9501,
+        "minimumInitialFraction": 0.6153081510934394
+      },
+      "turnover": {
+        "Births": 86465,
+        "Deaths": 78047,
+        "InitialCohortLiving": 140,
+        "DescendantsLiving": 9284,
+        "MaximumLivingGeneration": 67,
+        "HighestGenerationObserved": 68,
+        "MeanLivingGeneration": 22.681451612903224
+      },
+      "diversity": {
+        "MaximumLargestPatternFraction": 0.2852923803898405,
+        "MaximumLargestPatternSeason": 377,
+        "MaximumPeakDrawdownFraction": 0.38469184890656066,
+        "MaximumPeakDrawdownSeason": 162,
+        "FirstCollapseSeason": null,
+        "FirstDominationSeason": null
+      },
+      "windows": {
+        "complete": 7,
+        "minimumBirths": 341,
+        "minimumEffectiveActionTypes": 8,
+        "failed": [],
+        "incompleteSeasons": 108
+      },
+      "effects": {
+        "AttemptedActions": 5530106,
+        "CommittedActions": 1692637,
+        "EffectiveActions": 1692637,
+        "Moves": 78739,
+        "GatheringActions": 843095,
+        "DamagingAttacks": 95498,
+        "PredationTransfers": 0,
+        "FoodGathered": 1107889,
+        "FoodSpent": 246599,
+        "FoodTransferred": 0,
+        "BoardFood": 31169,
+        "OrganismReserves": 54409
+      },
+      "actions": [
+        {
+          "Action": "Eat",
+          "Attempted": 30704,
+          "Committed": 30492,
+          "Effective": 30492
+        },
+        {
+          "Action": "Move",
+          "Attempted": 1274741,
+          "Committed": 78739,
+          "Effective": 78739
+        },
+        {
+          "Action": "GenerateFood",
+          "Attempted": 878337,
+          "Committed": 843095,
+          "Effective": 843095
+        },
+        {
+          "Action": "Kill",
+          "Attempted": 97760,
+          "Committed": 95498,
+          "Effective": 95498
+        },
+        {
+          "Action": "CombineDna",
+          "Attempted": 2664587,
+          "Committed": 86465,
+          "Effective": 86465
+        },
+        {
+          "Action": "Evolve",
+          "Attempted": 515801,
+          "Committed": 515171,
+          "Effective": 515171
+        },
+        {
+          "Action": "Heal",
+          "Attempted": 21710,
+          "Committed": 20596,
+          "Effective": 20596
+        },
+        {
+          "Action": "Infect",
+          "Attempted": 46466,
+          "Committed": 22581,
+          "Effective": 22581
+        }
+      ],
+      "memory": {
+        "allocatedBytes": 31170535464,
+        "gcCollections": [
+          3278,
+          2541,
+          371
+        ],
+        "scope": "Process-wide since before reset, including setup, collector, validation and exports."
+      },
+      "timing": {
+        "engineCallSeconds": 109.8628628,
+        "collectorSeconds": 2.6177444,
+        "collectorCensusSeconds": 2.4644399,
+        "initialCollectorSeconds": 0.004928,
+        "engineExcludingCollectorSeconds": 107.2500464,
+        "validationSeconds": 0.0555729,
+        "exportPreparationSeconds": 0.0034191,
+        "totalSeconds": 110.0644175,
+        "outerWallSeconds": 110.156,
+        "collectorWithinEnginePercent": 2.3782526082143924
+      },
+      "auditErrors": [],
+      "omissions": [
+        "Requested 2048-season horizon is incomplete; observed-prefix success cannot pass it",
+        "Trajectory contains season 0/every eighth/final only; checks audit exported extrema and flags without independently reconstructing unseen seasons"
+      ]
+    },
+    {
+      "stage": "comparison-capped",
+      "kind": "comparison",
+      "seed": 83,
+      "candidate": "capped",
+      "completedSeasons": 1100,
+      "criteriaEvidenceSeason": 1100,
+      "sampleEvidenceSeason": 1100,
+      "requestedSeasons": 2048,
+      "completeHorizon": false,
+      "screen": "inconclusive_horizon",
+      "selectionEvidenceComplete": false,
+      "exitCode": 3,
+      "reason": "Stopped at a completed season before the 115-second watchdog.",
+      "population": {
+        "initial": 1021,
+        "minimum": 603,
+        "finalObserved": 9818,
+        "peak": 9857,
+        "minimumInitialFraction": 0.5905974534769833
+      },
+      "turnover": {
+        "Births": 19817,
+        "Deaths": 11020,
+        "InitialCohortLiving": 505,
+        "DescendantsLiving": 9313,
+        "MaximumLivingGeneration": 29,
+        "HighestGenerationObserved": 29,
+        "MeanLivingGeneration": 9.696883275616216
+      },
+      "diversity": {
+        "MaximumLargestPatternFraction": 0.15184430866711926,
+        "MaximumLargestPatternSeason": 421,
+        "MaximumPeakDrawdownFraction": 0.40940254652301666,
+        "MaximumPeakDrawdownSeason": 189,
+        "FirstCollapseSeason": null,
+        "FirstDominationSeason": null
+      },
+      "windows": {
+        "complete": 7,
+        "minimumBirths": 117,
+        "minimumEffectiveActionTypes": 7,
+        "failed": [],
+        "incompleteSeasons": 76
+      },
+      "effects": {
+        "AttemptedActions": 6008437,
+        "CommittedActions": 1470594,
+        "EffectiveActions": 1470594,
+        "Moves": 48346,
+        "GatheringActions": 768762,
+        "DamagingAttacks": 11747,
+        "PredationTransfers": 0,
+        "FoodGathered": 863095,
+        "FoodSpent": 66372,
+        "FoodTransferred": 0,
+        "BoardFood": 63987,
+        "OrganismReserves": 84624
+      },
+      "actions": [
+        {
+          "Action": "Eat",
+          "Attempted": 21362,
+          "Committed": 21324,
+          "Effective": 21324
+        },
+        {
+          "Action": "Move",
+          "Attempted": 2788405,
+          "Committed": 48346,
+          "Effective": 48346
+        },
+        {
+          "Action": "GenerateFood",
+          "Attempted": 1172939,
+          "Committed": 768762,
+          "Effective": 768762
+        },
+        {
+          "Action": "Kill",
+          "Attempted": 11964,
+          "Committed": 11747,
+          "Effective": 11747
+        },
+        {
+          "Action": "CombineDna",
+          "Attempted": 1409168,
+          "Committed": 19817,
+          "Effective": 19817
+        },
+        {
+          "Action": "Evolve",
+          "Attempted": 595284,
+          "Committed": 595184,
+          "Effective": 595184
+        },
+        {
+          "Action": "Heal",
+          "Attempted": 1576,
+          "Committed": 1536,
+          "Effective": 1536
+        },
+        {
+          "Action": "Infect",
+          "Attempted": 7739,
+          "Committed": 3878,
+          "Effective": 3878
+        }
+      ],
+      "memory": {
+        "allocatedBytes": 28935755080,
+        "gcCollections": [
+          3275,
+          2783,
+          607
+        ],
+        "scope": "Process-wide since before reset, including setup, collector, validation and exports."
+      },
+      "timing": {
+        "engineCallSeconds": 109.8938101,
+        "collectorSeconds": 2.7026126,
+        "collectorCensusSeconds": 2.5420243,
+        "initialCollectorSeconds": 0.009299,
+        "engineExcludingCollectorSeconds": 107.2004965,
+        "validationSeconds": 0.0220324,
+        "exportPreparationSeconds": 0.0034094,
+        "totalSeconds": 110.043378,
+        "outerWallSeconds": 110.125,
+        "collectorWithinEnginePercent": 2.45083285177679
+      },
+      "auditErrors": [],
+      "omissions": [
+        "Requested 2048-season horizon is incomplete; observed-prefix success cannot pass it",
+        "Trajectory contains season 0/every eighth/final only; checks audit exported extrema and flags without independently reconstructing unseen seasons"
+      ]
+    }
+  ],
+  "batches": [
+    {
+      "stage": "release-functional",
+      "kind": "suite",
+      "dispatchComplete": true,
+      "wrapperOk": true,
+      "completedProcessRows": 1,
+      "pending": null,
+      "unstarted": []
+    },
+    {
+      "stage": "release-final-functional",
+      "kind": "suite",
+      "dispatchComplete": true,
+      "wrapperOk": true,
+      "completedProcessRows": 1,
+      "pending": null,
+      "unstarted": []
+    },
+    {
+      "stage": "reference-passivity",
+      "kind": "reference-passivity",
+      "dispatchComplete": true,
+      "wrapperOk": true,
+      "completedProcessRows": 4,
+      "pending": null,
+      "unstarted": []
+    },
+    {
+      "stage": "comparison-default",
+      "kind": "comparison",
+      "dispatchComplete": true,
+      "wrapperOk": false,
+      "completedProcessRows": 4,
+      "pending": null,
+      "unstarted": []
+    },
+    {
+      "stage": "comparison-constrained",
+      "kind": "comparison",
+      "dispatchComplete": true,
+      "wrapperOk": false,
+      "completedProcessRows": 4,
+      "pending": null,
+      "unstarted": []
+    },
+    {
+      "stage": "comparison-regrowth2",
+      "kind": "comparison",
+      "dispatchComplete": true,
+      "wrapperOk": false,
+      "completedProcessRows": 4,
+      "pending": null,
+      "unstarted": []
+    },
+    {
+      "stage": "comparison-capped",
+      "kind": "comparison",
+      "dispatchComplete": true,
+      "wrapperOk": false,
+      "completedProcessRows": 4,
+      "pending": null,
+      "unstarted": []
+    },
+    {
+      "stage": "debug-final-functional",
+      "kind": "suite",
+      "dispatchComplete": true,
+      "wrapperOk": true,
+      "completedProcessRows": 1,
+      "pending": null,
+      "unstarted": []
+    }
+  ],
+  "audit": {
+    "errors": [],
+    "rowErrorCount": 0,
+    "omissions": [],
+    "sameContract": true,
+    "contractSha256": "B4EC2A61747B598E86D498DC77FDDDDB690AC4B6A3B088E16C59BB407CFE183F",
+    "sameFiveReleaseAssemblies": true,
+    "releaseIdentityRowsChecked": 21,
+    "releaseAssemblyBaseline": {
+      "Fistnet.Genepool.Tests": "D2A3ED9930238AC7E0F620D0A2AEEA7E8F7080568A5411C45B6B3F138261B9A9",
+      "Fistnet.Genepool.Control": "8882A37352F2E97DE0DD51E5F2FACEDA53C9CAE845AA3F1A072D18D2ED602A85",
+      "Fistnet.Genepool.Dna": "6FBA20971E291315B956340747E33C1D6854122CAD01F0ED81D5212888095D4A",
+      "Fistnet.Genepool.Visualization": "1545120A06E67A637C592C2B808D723640BE0ACB233241BBE6791B52BF695BB2",
+      "Fistnet.Genepool.App": "3822794E2D1085E010A7AE79E7FD5F790887B3B4823E6D84C08C81927CD02AB0"
+    },
+    "finalReleaseSuites": [
+      {
+        "stage": "release-final-functional",
+        "exitCode": 0,
+        "total": 137,
+        "passed": 137,
+        "failed": 0
+      }
+    ],
+    "scope": "Audits exported identities and arithmetic only; does not read binaries, replay worlds, reconstruct unsampled seasons, or imply ecological horizon completion from dispatchComplete."
+  },
+  "eligibility": [
+    {
+      "candidate": "default",
+      "eligibleForSelection": false,
+      "missingSeeds": [],
+      "duplicateSeeds": [],
+      "unexpectedSeeds": [],
+      "incompleteOrFailedSeeds": [
+        11,
+        29,
+        47,
+        83
+      ],
+      "prospectiveRankingValues": null
+    },
+    {
+      "candidate": "constrained",
+      "eligibleForSelection": false,
+      "missingSeeds": [],
+      "duplicateSeeds": [],
+      "unexpectedSeeds": [],
+      "incompleteOrFailedSeeds": [
+        11,
+        29,
+        47,
+        83
+      ],
+      "prospectiveRankingValues": null
+    },
+    {
+      "candidate": "regrowth2",
+      "eligibleForSelection": false,
+      "missingSeeds": [],
+      "duplicateSeeds": [],
+      "unexpectedSeeds": [],
+      "incompleteOrFailedSeeds": [
+        11,
+        29,
+        47,
+        83
+      ],
+      "prospectiveRankingValues": null
+    },
+    {
+      "candidate": "capped",
+      "eligibleForSelection": false,
+      "missingSeeds": [],
+      "duplicateSeeds": [],
+      "unexpectedSeeds": [],
+      "incompleteOrFailedSeeds": [
+        11,
+        29,
+        47,
+        83
+      ],
+      "prospectiveRankingValues": null
+    }
+  ],
+  "prospectiveRanking": [],
+  "selection": "No automatic selection or confirmation. Coordinator records a decision before any reserved seed dispatch.",
+  "memoryInterpretation": "allocatedBytes is cumulative process allocation, not peak or resident memory.",
+  "inputSha256": "44CBEC712B04F1059BF3694CE5D97D1794D6EFD241392441ABD71D246AE372D4",
+  "at_utc": "2026-09-06T22:04:13.904910+00:00"
+}

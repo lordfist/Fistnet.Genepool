@@ -11,7 +11,13 @@
     <VerifyUploadedFiles>false</VerifyUploadedFiles>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Update="BoardView.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Update="PopulationHistoryView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="SimulationHistoryView.cs">
       <SubType>Component</SubType>
     </Compile>
   </ItemGroup>

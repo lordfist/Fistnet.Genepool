@@ -67,6 +67,7 @@ namespace Fistnet.Genepool.Dna
 
     public sealed class ActionDecision
     {
+        public string ChoiceLabel { get; set; }
         public ActionCandidate Candidate { get; }
         public ActionOutcome Outcome { get; } = new ActionOutcome();
         public bool Completed { get; set; }

@@ -145,6 +145,17 @@ namespace Fistnet.Genepool.Control
                 var state = new SortedDictionary<string, object>(StringComparer.Ordinal);
                 foreach (FieldInfo field in GetFields(type))
                 {
+                    // Explicit compatibility defaults preserve the Part 2 comparison
+                    // format. Changed settings are included; display-only choice text
+                    // never affects a future decision and is excluded deliberately.
+                    if (value is SimulationRunOptions options && (
+                        field.Name == "<InitialCellFood>k__BackingField" && options.InitialCellFood == 3 ||
+                        field.Name == "<FoodRegrowthPerAge>k__BackingField" && options.FoodRegrowthPerAge == 1 ||
+                        field.Name == "<InitialOrganismFood>k__BackingField" && options.InitialOrganismFood == 5 ||
+                        field.Name == "<FounderRepertoire>k__BackingField" && options.FounderRepertoire == FounderRepertoire.UnrestrictedRandom ||
+                        field.Name == "<CellExecution>k__BackingField" && options.CellExecution == CellExecutionMode.Automatic)) continue;
+                    if (value is BoardSquare && field.Name == "foodRegrowthPerAge" && (byte)field.GetValue(value) == 1) continue;
+                    if (value is ActionDecision && field.Name == "<ChoiceLabel>k__BackingField") continue;
                     if (value is Organism && field.DeclaringType == typeof(Organism) &&
                         (field.Name == "<EffectsStack>k__BackingField" || field.Name == "_referenceEffects"))
                         continue; // PendingEffects below exposes the actual execution order once.

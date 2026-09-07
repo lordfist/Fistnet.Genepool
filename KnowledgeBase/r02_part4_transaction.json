@@ -1,0 +1,1679 @@
+{
+  "actor": "Genepool Analyzer",
+  "note": "Record actual Part3 acceptance and Part4 criteria, preserve ten exact predecessors, register fifteen current sources, and reconcile completed Part4 implementation with inconclusive 2048-season comparisons. Stop for owner review; no default promotion or R02 closure.",
+  "upsert_records": [
+    {
+      "id": "DEC-0017",
+      "kind": "owner_decision",
+      "status": "active",
+      "statement": "User authorizes starting R02 Part4 and explicitly accepts Part3. Implement and verify the planned optional starting setups and bounded ecological comparisons, preserve VS2022 compatibility, present review and stop. This does not promote any optional policy or close R02.",
+      "tags": [
+        "R02",
+        "Part4",
+        "authority",
+        "Part3_acceptance"
+      ],
+      "source_refs": [],
+      "related_record_ids": [
+        "DEC-0015",
+        "DEC-0016",
+        "DEC-0018",
+        "REC-0005",
+        "FACT-0040",
+        "FACT-0041",
+        "FACT-0042"
+      ],
+      "origin": {
+        "type": "owner_messages",
+        "actor": "User",
+        "recorded_by": "Genepool Analyzer",
+        "at_utc": "2026-09-06T21:10:02Z",
+        "quotes": [
+          "Ok, now you can start Part 4 :)",
+          "Oh yeah and Part 3 is accepted :)"
+        ]
+      },
+      "uncertainty": "Owner acceptance does not remove Part3's disclosed historical-byte limitation or establish ecological balance. No new Git commit was reported; accepted Part3 sources are still uncommitted locally."
+    },
+    {
+      "id": "DEC-0018",
+      "kind": "owner_decision",
+      "status": "active",
+      "statement": "User accepts Part4 criteria: living population stays at or above 10% of its initial count; the same exact DNA action/direction pattern must not occupy over 90% of the population for 128 consecutive seasons; reproduction and varied actions continue. Evaluate 2048 seasons with four comparison seeds and two reserved confirmation seeds; time-limited runs remain inconclusive. Activity-window and all-seeds selection details are prospective Genepool Analyzer operationalizations in R02_PART4_CONTRACT.md.",
+      "tags": [
+        "R02",
+        "Part4",
+        "ecology",
+        "criteria"
+      ],
+      "source_refs": [],
+      "related_record_ids": [
+        "DEC-0011",
+        "DEC-0017",
+        "Q-0003",
+        "REC-0006"
+      ],
+      "origin": {
+        "type": "owner_question_reply",
+        "actor": "User",
+        "recorded_by": "Genepool Analyzer",
+        "at_utc": "2026-09-06T21:10:02Z",
+        "question": "For Part 4, may I use this definition of a healthy run: living population stays at or above 10% of its starting count; no single exact DNA action/direction pattern occupies over 90% of the population for 128 consecutive seasons; and reproduction and varied actions continue? I propose evaluating this through 2,048 seasons on four comparison seeds, then two reserved confirmation seeds. Runs that hit the existing time limit would remain inconclusive. These definitions resolve the ecological criteria left open in the proposal.",
+        "exact_answer": "Use these criteria (Recommended)"
+      },
+      "uncertainty": "These are bounded evaluation criteria, not a guarantee or prior successful result. Current predation semantics remain the already implemented Part2 policies; no new predation family is tested in this maximum-three-candidate Part4 comparison."
+    },
+    {
+      "id": "Q-0003",
+      "kind": "open_question",
+      "status": "resolved",
+      "statement": "Ecological criteria are resolved for R02 Part4 by owner DEC-0018: initial-population survival >=10%, same exact ordered action/target pattern >90% for128 consecutive seasons is failure, and continued births/varied actions through2048 seasons, with timeouts inconclusive. Genepool Analyzer prospectively specified128-season activity windows and all-four comparison eligibility. Existing Part2 predation policies remain unchanged; current comparison outcome is in FACT-0046 and INF-0009.",
+      "source_refs": [],
+      "related_record_ids": [
+        "DEC-0011",
+        "REC-0005",
+        "Q-0001",
+        "FACT-0035",
+        "INF-0006",
+        "DEC-0017",
+        "DEC-0018",
+        "FACT-0045",
+        "FACT-0046",
+        "INF-0009"
+      ],
+      "tags": [
+        "R02",
+        "acceptance",
+        "ecology"
+      ],
+      "origin": {
+        "type": "proposal_clarification",
+        "actor": "Seed Analyzer",
+        "recorded_at_utc": "2026-09-06T14:21:03.890590+00:00"
+      },
+      "uncertainty": "Resolved prospectively for Part4 by DEC-0018. Current Part2 feeding policies remain unchanged; detailed activity-window/selection definitions are Analyzer-selected and recorded before trials, not retroactively attributed to User.",
+      "created_at": "2026-09-06T14:21:44+00:00",
+      "updated_at": "2026-09-06T15:16:18+00:00",
+      "resolution_notes": [
+        {
+          "at_utc": "2026-09-06T15:14:46.016303+00:00",
+          "actor": "Seed Analyzer",
+          "type": "R02_Part1_completion",
+          "note": "Part1 passive baseline completed without ecological pass/fail classification. Definitions remain open for later ecological work; no additional decision was required for the completed diagnostics.",
+          "record_ids": [
+            "FACT-0035",
+            "INF-0006"
+          ]
+        },
+        {
+          "at_utc": "2026-09-06T22:10:05.284869+00:00",
+          "actor": "Genepool Analyzer",
+          "type": "owner_accepted_Part4_criteria",
+          "note": "Owner accepted the criteria in DEC-0018 before trials. The frozen contract specifies >=1 placed birth and >=2 effectful action types in each complete128-season window after128 warmup; no predator quota. No candidate completed2048 seasons under its budget (FACT-0046). Original open wording and authorship are preserved as dated history.",
+          "record_ids": [
+            "DEC-0017",
+            "DEC-0018"
+          ],
+          "prior_statement": "Before R02 ecological pass/fail evaluation, define collapse denominator and horizon/seed success rate, takeover identity and threshold, and exact predation cost/damage/feeding semantics. Owner supplied the severe-loss (>90%) and takeover concern but did not choose these operational definitions. Seed proposes initial-population collapse with separate peak drawdown, ordered action/target-pattern share plus performed-action diversity, and emergent predatory/gathering/mixed strategies with bounded victim-reserve transfers. These are proposed interpretations, not owner decisions."
+        }
+      ]
+    },
+    {
+      "id": "FACT-0044",
+      "kind": "observed_fact",
+      "status": "active",
+      "statement": "Part4 adds optional GatherAndReproduce founder DNA and matching New simulation preset, plus Food regrowth2 preset. Two random distinct slots reserve gathering/reproduction genes; other genes/targets remain random under the existing four-per-type cap. Automatic founders alone use the option; inherited/supplied organisms retain existing paths. Unrestricted random stays default with existing exact reference states/RNG draws. Settings survive capture/restart and are described in the active viewer configuration.",
+      "source_refs": [
+        "SRC-0157",
+        "SRC-0158",
+        "SRC-0159",
+        "SRC-0160",
+        "SRC-0161",
+        "SRC-0162",
+        "SRC-0163",
+        "SRC-0164",
+        "SRC-0167",
+        "SRC-0168"
+      ],
+      "related_record_ids": [
+        "DEC-0017",
+        "DEC-0018",
+        "FACT-0045",
+        "FACT-0046"
+      ],
+      "origin": {
+        "type": "authorized_R02_Part4_implementation_and_verification",
+        "actor": "Genepool Analyzer",
+        "recorded_at_utc": "2026-09-06T22:07:59.355030+00:00",
+        "attribution": "Transient founder-setup, ecology-metrics and runner helpers supplied bounded implementation/review. Root owns integration, execution, interpretation and canonical KB."
+      },
+      "derivation": {
+        "artifact": {
+          "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\IMPROVEMENT_RESULT_R02_PART4.md",
+          "sha256": "2F4FD336D454A9C5E537BB55BE436EA3D9140FF3C9DA7085D42098E6C18B9E7E",
+          "bytes": 12962,
+          "status": "Genepool Analyzer derived Part4 support; source/trial scope and limits stated in result."
+        },
+        "locators": [
+          "DnaElementFactory.GetFounderDnaSequence; Organism(int,FounderRepertoire); Board.Reset",
+          "SimulationRunOptions.Validate; SimulationSnapshot.Exporter; ViewCollector.Capture",
+          "NewSimulationDialog constructor/LoadOptions/Create_Click; MainForm.Configuration; FounderSetupTests.Cases"
+        ]
+      },
+      "uncertainty": "Gene availability does not guarantee feeding, successful mating, births or survival. No policy promotion or owner Part4 acceptance is inferred.",
+      "tags": [
+        "R02",
+        "Part4"
+      ]
+    },
+    {
+      "id": "FACT-0045",
+      "kind": "observed_fact",
+      "status": "active",
+      "statement": "Part4 adds passive per-season ecological accounting and strict bounded command/wrapper support. Exact ordered action/target patterns, initial population collapse, same-key domination streaks, founder/descendant turnover and actual effectful action windows implement the accepted/prospective contract. Threshold failures remain sticky across recovery or interruption; reports retain exact extrema despite sampled trajectories. The read-only audit refuses selection without full final report,15 windows, extrema and timing. No tool selects or runs reserved confirmation automatically.",
+      "source_refs": [
+        "SRC-0165",
+        "SRC-0166",
+        "SRC-0169",
+        "SRC-0170",
+        "SRC-0171"
+      ],
+      "related_record_ids": [
+        "DEC-0018",
+        "FACT-0044",
+        "FACT-0046",
+        "INF-0009"
+      ],
+      "origin": {
+        "type": "authorized_R02_Part4_implementation_and_verification",
+        "actor": "Genepool Analyzer",
+        "recorded_at_utc": "2026-09-06T22:07:59.355030+00:00",
+        "attribution": "Transient founder-setup, ecology-metrics and runner helpers supplied bounded implementation/review. Root owns integration, execution, interpretation and canonical KB."
+      },
+      "derivation": {
+        "artifacts": [
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R02_PART4_CONTRACT.md",
+            "sha256": "B4EC2A61747B598E86D498DC77FDDDDB690AC4B6A3B088E16C59BB407CFE183F",
+            "bytes": 8591,
+            "status": "Genepool Analyzer derived Part4 support; source/trial scope and limits stated in result."
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\tools\\run_part4_checks.py",
+            "sha256": "A9186E2CF827310E1D6458E89DDBEB4EA90D3EA2FA0666142FC49534B90E1851",
+            "bytes": 14215,
+            "status": "Genepool Analyzer derived Part4 support; source/trial scope and limits stated in result."
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\tools\\summarize_part4.py",
+            "sha256": "F92DDD5915AEF42E1D3D22B8D269CD3357B681ED2B251722324261A7BBD2B9A9",
+            "bytes": 23025,
+            "status": "Genepool Analyzer derived Part4 support; source/trial scope and limits stated in result."
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r02_part4_tool_verification.json",
+            "sha256": "28B6F3FEB243BEA938FEF85A4968F244DEFA7893FA2F4A636BC3C4C1FDE10ED9",
+            "bytes": 1803,
+            "status": "Genepool Analyzer derived Part4 support; source/trial scope and limits stated in result."
+          }
+        ],
+        "locators": [
+          "EcologyMetrics.Census/ExactPattern; EcologyAccumulator.TakeSample/ObserveExtrema/Export",
+          "EcologyScenarios.Run/Emit/Screen and flushed Criteria; EcologyTests.Cases",
+          "run_part4_checks.summarize_ecology_records/main; summarize_part4.summarize_run/summarize"
+        ]
+      },
+      "uncertainty": "Activity windows and strict all-seed aggregation are Analyzer operational details, not invented owner quotations. Exact patterns are finer than the viewer action-only grouping and are not species/ancestry. Trajectory samples omit intervening seasons; exact extrema/flags come from per-season collection. Action costs exclude other aging/system costs.",
+      "tags": [
+        "R02",
+        "Part4"
+      ]
+    },
+    {
+      "id": "FACT-0046",
+      "kind": "observed_fact",
+      "status": "active",
+      "statement": "Part4 functional verification PASS: VS2022 whole-solution Debug/Release builds,0 errors and existing106 CA1416 warnings;137/137 tests each. All83 build inputs and5 loaded assemblies per configuration match current bytes. Observer on/off matches full reference state/RNG on seeds11/29 through128 seasons. All16 fixed production comparisons stop cleanly at about110 seconds,841–1281 seasons; none reaches2048. No observed collapse/domination violation; all105 complete activity windows pass (at least117 placed births and7 effectful action types). The exported-result audit has0 errors,37 tool checks pass, and4 programmatic previews were reviewed. No candidate qualifies for reserved confirmation.",
+      "source_refs": [
+        "SRC-0157",
+        "SRC-0158",
+        "SRC-0159",
+        "SRC-0160",
+        "SRC-0161",
+        "SRC-0162",
+        "SRC-0163",
+        "SRC-0164",
+        "SRC-0165",
+        "SRC-0166",
+        "SRC-0167",
+        "SRC-0168",
+        "SRC-0169",
+        "SRC-0170",
+        "SRC-0171"
+      ],
+      "related_record_ids": [
+        "DEC-0017",
+        "DEC-0018",
+        "FACT-0044",
+        "FACT-0045",
+        "INF-0009",
+        "Q-0003"
+      ],
+      "origin": {
+        "type": "authorized_R02_Part4_implementation_and_verification",
+        "actor": "Genepool Analyzer",
+        "recorded_at_utc": "2026-09-06T22:07:59.355030+00:00",
+        "attribution": "Transient founder-setup, ecology-metrics and runner helpers supplied bounded implementation/review. Root owns integration, execution, interpretation and canonical KB."
+      },
+      "derivation": {
+        "artifacts": [
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r02_part4_verification.json",
+            "sha256": "BC0757000F09A0285F738CD629F6300323820A9CFAEF73373810C39C4B03038F",
+            "bytes": 12972,
+            "status": "Genepool Analyzer derived Part4 support; source/trial scope and limits stated in result."
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r02_part4_comparison_summary.json",
+            "sha256": "7C37C3C9D116DC26B1646E4FCED6AC26855AA75719CC6721C2E19BC62147225C",
+            "bytes": 71751,
+            "status": "Genepool Analyzer derived Part4 support; source/trial scope and limits stated in result."
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r02_part4_selection.json",
+            "sha256": "5B7B59D63AEEDBD572E22DDF41E20A9B57508150A444D38F4054AE2A8BAB436E",
+            "bytes": 1193,
+            "status": "Genepool Analyzer derived Part4 support; source/trial scope and limits stated in result."
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r02_part4_previews.json",
+            "sha256": "76B937A56F1E4689CCD1834E9077D8D46AB444E94009C9C58173411B55638E14",
+            "bytes": 1794,
+            "status": "Genepool Analyzer derived Part4 support; source/trial scope and limits stated in result."
+          }
+        ],
+        "locators": [
+          "verification: builds_and_tests/reference_passivity/common512_checkpoints/source_versions/predecessor_history/interventions",
+          "comparison_summary: rows/audit/eligibility; raw results checks comparison-default/constrained/regrowth2/capped",
+          "tool verification:37 checks; source horizon:10 exact predecessors"
+        ]
+      },
+      "uncertainty": "2048-season ecology is INCONCLUSIVE for every candidate, not passed. Trailing partial windows are unclassified. All16 runs use damage-only attacks and do not establish predator feeding or inherited adaptation. Programmatic UI checks are not physical monitor transitions or owner acceptance. Existing SRC-0115 historical-byte warning persists; Part4 creates no new gap.",
+      "tags": [
+        "R02",
+        "Part4"
+      ]
+    },
+    {
+      "id": "INF-0009",
+      "kind": "inference",
+      "status": "provisional",
+      "statement": "Part4 implementation and engineering checks are ready for owner review; full-horizon ecological evaluation remains inconclusive. At a common512-season checkpoint constrained founders have minimum populations83.0–93.4% of initial counts versus61.2–68.4% for default, in all4 seeds, so the optional preset is promising for the initial dip. No candidate satisfies all-four completed2048-season eligibility; keep default, do not dispatch reserved confirmation or promote policy. Long populated-world calculation/allocations are the next useful focused investigation, subject to the next owner instruction. Stop for review; R02 remains open.",
+      "source_refs": [
+        "SRC-0157",
+        "SRC-0158",
+        "SRC-0159",
+        "SRC-0160",
+        "SRC-0161",
+        "SRC-0162",
+        "SRC-0163",
+        "SRC-0164",
+        "SRC-0165",
+        "SRC-0166",
+        "SRC-0167",
+        "SRC-0168",
+        "SRC-0169",
+        "SRC-0170",
+        "SRC-0171"
+      ],
+      "related_record_ids": [
+        "DEC-0017",
+        "DEC-0018",
+        "FACT-0044",
+        "FACT-0045",
+        "FACT-0046",
+        "REC-0005"
+      ],
+      "origin": {
+        "type": "authorized_R02_Part4_implementation_and_verification",
+        "actor": "Genepool Analyzer",
+        "recorded_at_utc": "2026-09-06T22:07:59.355030+00:00",
+        "attribution": "Transient founder-setup, ecology-metrics and runner helpers supplied bounded implementation/review. Root owns integration, execution, interpretation and canonical KB."
+      },
+      "derivation": {
+        "artifact": {
+          "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\IMPROVEMENT_RESULT_R02_PART4.md",
+          "sha256": "2F4FD336D454A9C5E537BB55BE436EA3D9140FF3C9DA7085D42098E6C18B9E7E",
+          "bytes": 12962,
+          "status": "Genepool Analyzer derived Part4 support; source/trial scope and limits stated in result."
+        },
+        "verification_artifact": {
+          "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r02_part4_verification.json",
+          "sha256": "BC0757000F09A0285F738CD629F6300323820A9CFAEF73373810C39C4B03038F",
+          "bytes": 12972,
+          "status": "Genepool Analyzer derived Part4 support; source/trial scope and limits stated in result."
+        },
+        "comparison_scope": "Shared512 checkpoint comparison supports the initial-population observation. Different population/history workloads and time-limited endpoints do not establish a behavior-preserving speed improvement. Collector accounted for2.14–3.17% of measured engine-call time."
+      },
+      "uncertainty": "Promising initial dynamics do not establish2048-season balance, generalize to all seeds, or justify automatic default promotion. No missing decision prevents current Part4 delivery; owner review is next. More analysis or execution requires the next applicable stage instruction.",
+      "tags": [
+        "R02",
+        "Part4"
+      ]
+    },
+    {
+      "id": "REC-0005",
+      "kind": "recommendation",
+      "status": "provisional",
+      "statement": "R02 Parts1/2/3 are owner-accepted. Part4 optional starting setups and ecological evaluation are implemented and functionally verified, awaiting owner review (FACT-0044..0046, INF-0009). Owner DEC-0018 resolves ecological definitions. All16 production comparisons are time-limited before2048 seasons, so no candidate qualifies for confirmation or default promotion. Random default and VS2022 compatibility remain; R02 is not closed.",
+      "source_refs": [
+        "SRC-0047",
+        "SRC-0048",
+        "SRC-0049",
+        "SRC-0043",
+        "SRC-0051",
+        "SRC-0052",
+        "SRC-0067",
+        "SRC-0071",
+        "SRC-0072",
+        "SRC-0073",
+        "SRC-0074",
+        "SRC-0075"
+      ],
+      "related_record_ids": [
+        "DEC-0010",
+        "CLAIM-0004",
+        "FACT-0030",
+        "FACT-0031",
+        "FACT-0032",
+        "INF-0005",
+        "CLAIM-0005",
+        "Q-0001",
+        "DEC-0011",
+        "Q-0003",
+        "DEC-0012",
+        "FACT-0033",
+        "FACT-0034",
+        "FACT-0035",
+        "INF-0006",
+        "DEC-0014",
+        "FACT-0037",
+        "FACT-0039",
+        "INF-0007",
+        "DEC-0015",
+        "FACT-0040",
+        "FACT-0041",
+        "FACT-0042",
+        "INF-0008",
+        "DEC-0017",
+        "DEC-0018",
+        "FACT-0046",
+        "INF-0009"
+      ],
+      "origin": {
+        "type": "static_research_and_proposal",
+        "actor": "Seed Analyzer",
+        "recorded_at_utc": "2026-09-06T13:56:32.311478+00:00"
+      },
+      "tags": [
+        "R02"
+      ],
+      "derivation": {
+        "locators": [
+          "IMPROVEMENT_PROPOSAL_R02.md: Parts1-4; Evaluation and completion; Effects/reversibility"
+        ],
+        "artifact": {
+          "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\IMPROVEMENT_PROPOSAL_R02.md",
+          "sha256": "724B24D27F92C33757C3E3F0589F108B371525CEDD1FEE6FE1B8CA54A68C8B2F",
+          "bytes": 29173,
+          "status": "Historical proposal with Part1 addendum; subsequent authority/results are linked in this record."
+        },
+        "review": "Transient helpers r02_dna_review and r02_performance_review checked the draft. Seed corrected success wording and batch budgets and added a shared-resolution freeze requirement. External helper supplied primary-source pointers; all canonical responsibility remains Seed Analyzer."
+      },
+      "uncertainty": "Historical proposal targets/research remain at their original horizon. Part3 acceptance is explicit; Part4 owner acceptance and full-horizon ecology remain unestablished. Future focused work needs the next applicable instruction.",
+      "created_at": "2026-09-06T13:57:28+00:00",
+      "updated_at": "2026-09-06T19:26:58+00:00",
+      "resolution_notes": [
+        {
+          "at_utc": "2026-09-06T14:21:03.890590+00:00",
+          "actor": "Seed Analyzer",
+          "type": "R02_owner_clarification",
+          "note": "Owner clarification DEC-0011 adds random-default optional settings, explicit predator-prey goal, avoidance of collapse/takeover, and independent simulation-throughput objective. Proposal amended with optional presets, accountable predation candidate and separate population/diversity metrics. Prior artifact SHA256 2D9B829E6893742E38E349B48B2E97DEB6A74780AAE339E124CD2AD24286FADF identifies the earlier proposal horizon; current artifact identity is updated below. Transient r02_dna_review reviewed implications; Seed remains responsible.",
+          "record_ids": [
+            "DEC-0011",
+            "Q-0003"
+          ]
+        },
+        {
+          "at_utc": "2026-09-06T15:14:46.016303+00:00",
+          "actor": "Seed Analyzer",
+          "type": "R02_Part1_completion",
+          "note": "Prior no-implementation-authority statement described the proposal horizon. DEC-0012 subsequently authorized only Part1, now completed and stopped. Prior proposal SHA256 B0DED29A0B0CC218930E25257F593FEDC639433C4D6FBD4922290EBB3371D536; dated addendum reconciles measured findings without rewriting historical research.",
+          "record_ids": [
+            "DEC-0012",
+            "FACT-0033",
+            "FACT-0034",
+            "FACT-0035",
+            "INF-0006"
+          ]
+        },
+        {
+          "at_utc": "2026-09-06T16:33:04.759522+00:00",
+          "actor": "Seed Analyzer",
+          "type": "R02_Part2_successor",
+          "note": "DEC-0014 subsequently accepts Part1 and authorizes Part2. Part2 implementation is ready for review with91/91 tests both configurations, while longer production verification is partial. Current source/tool versions and limits are in FACT-0037/0038/0039 and INF-0007. Earlier statements/artifact hashes retain their original dated horizon.",
+          "record_ids": [
+            "DEC-0014",
+            "FACT-0037",
+            "FACT-0038",
+            "FACT-0039",
+            "INF-0007"
+          ]
+        },
+        {
+          "at_utc": "2026-09-06T19:24:56.193313+00:00",
+          "actor": "Seed Analyzer",
+          "type": "Part2_acceptance_and_Part3_successor",
+          "prior_statement": "R02 proposes diagnostic baseline, consistent action/target/outcome and resource/birth accounting, explicit exploratory bounded learning and vitality candidates, a descriptive resizable WinForms viewer with food/follow details and optional starting settings, matched-workload simulation optimization, and bounded ecology comparisons. Random starts remain default by owner decision; proposed predator-prey interactions use accountable costs/reserve transfers and allow mixed strategies without selecting fixed species. Collapse and domination require explicit population/behavior metrics. Preserve five projects and VS2022/.NET9. Part1 was subsequently authorized by DEC-0012 and is now implemented and verified, stopped for owner review. Parts2-4 contracts/targets remain proposals and require the next applicable instruction. Current successor: Part1 is owner-accepted (DEC-0014); Part2 is implemented and functionally verified, with partial longer-run verification, awaiting owner review (INF-0007). Parts3-4 remain deferred.",
+          "note": "DEC-0015 accepts Part2. Part3 now has automated gates passed and awaits owner review. Earlier source/artifact identities and partial results retain their original horizons. Current historical-byte limit is explicit in FACT-0042.",
+          "record_ids": [
+            "DEC-0015",
+            "FACT-0040",
+            "FACT-0041",
+            "FACT-0042",
+            "INF-0008"
+          ]
+        },
+        {
+          "at_utc": "2026-09-06T22:07:59.355030+00:00",
+          "actor": "Genepool Analyzer",
+          "type": "Part3_acceptance_and_Part4_result",
+          "prior_statement": "R02 proposes diagnostics, action/resource and learning corrections, a descriptive responsive viewer with optional settings and measured computation improvements, then bounded ecological comparisons. Current stage: Parts1/2 owner-accepted (DEC-0014/0015); Part3 implemented with automated gates passed, awaiting owner review (FACT-0040..0042, INF-0008). Part4 remains deferred. Random defaults and VS2022 remain owner constraints; Q-0003 preserves unresolved ecological criteria.",
+          "note": "Owner explicitly accepted Part3 in DEC-0017 and accepted prospective Part4 criteria in DEC-0018. Part4 result is now FACT-0044..0046/INF-0009, with no complete2048-season comparison, no default promotion and no R02 closure. Earlier verification and exact-byte limits keep their original horizon.",
+          "record_ids": [
+            "DEC-0017",
+            "DEC-0018",
+            "FACT-0046",
+            "INF-0009"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "INF-0008",
+      "kind": "inference",
+      "status": "historical",
+      "statement": "R02 Part3 implementation is ready for owner review with all automated gates passed. Overall review remains PARTIAL pending owner interactive acceptance and one declared historical-byte gap. Stop here; Part4 ecological comparisons, policy promotion and R02 closure require the next applicable owner instruction.",
+      "source_refs": [
+        "SRC-0128",
+        "SRC-0129",
+        "SRC-0130",
+        "SRC-0131",
+        "SRC-0132",
+        "SRC-0133",
+        "SRC-0134",
+        "SRC-0135",
+        "SRC-0136",
+        "SRC-0137",
+        "SRC-0138",
+        "SRC-0139",
+        "SRC-0140",
+        "SRC-0141",
+        "SRC-0142",
+        "SRC-0143",
+        "SRC-0144",
+        "SRC-0145",
+        "SRC-0146",
+        "SRC-0147",
+        "SRC-0148",
+        "SRC-0149",
+        "SRC-0150",
+        "SRC-0151",
+        "SRC-0152",
+        "SRC-0153"
+      ],
+      "related_record_ids": [
+        "DEC-0015",
+        "REC-0005",
+        "FACT-0040",
+        "FACT-0041",
+        "FACT-0042",
+        "Q-0003",
+        "DEC-0017",
+        "DEC-0018",
+        "FACT-0046",
+        "INF-0009"
+      ],
+      "origin": {
+        "type": "authorized_R02_Part3_implementation_and_verification",
+        "actor": "Seed Analyzer",
+        "recorded_at_utc": "2026-09-06T19:24:56.193313+00:00",
+        "attribution": "Transient part3_view_backend, part3_view_ui and part3_perf helpers supplied bounded implementation/review. Seed Analyzer owns integration, evaluation and canonical KB."
+      },
+      "derivation": {
+        "artifact": {
+          "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\IMPROVEMENT_RESULT_R02_PART3.md",
+          "sha256": "6B92F91D9FFC0C82FDC9AD7C2959B3864D0DDAF37E9757FA644CB1F1E52B87E7",
+          "bytes": 10264,
+          "status": "Seed-derived Part3 support; owner acceptance pending"
+        },
+        "verification_artifact": {
+          "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r02_part3_verification.json",
+          "sha256": "C89CDF2EC945F5C6EA87F755BD3983748CE37191CCEBA1FD46F556C6A7975F81",
+          "bytes": 28232,
+          "status": "Seed-derived Part3 support; owner acceptance pending"
+        }
+      },
+      "uncertainty": "Owner subsequently accepted Part3 in DEC-0017. Its recorded automated evidence and SRC-0115 historical-byte limitation remain unchanged. Part4 has separate results in FACT-0046/INF-0009.",
+      "tags": [
+        "R02",
+        "Part3"
+      ],
+      "created_at": "2026-09-06T19:26:58+00:00",
+      "updated_at": "2026-09-06T19:26:58+00:00",
+      "resolution_notes": [
+        {
+          "at_utc": "2026-09-06T22:07:59.355030+00:00",
+          "actor": "Genepool Analyzer",
+          "type": "Part3_acceptance_and_Part4_result",
+          "prior_statement": "R02 Part3 implementation is ready for owner review with all automated gates passed. Overall review remains PARTIAL pending owner interactive acceptance and one declared historical-byte gap. Stop here; Part4 ecological comparisons, policy promotion and R02 closure require the next applicable owner instruction.",
+          "note": "Owner explicitly accepted Part3 in DEC-0017 and accepted prospective Part4 criteria in DEC-0018. Part4 result is now FACT-0044..0046/INF-0009, with no complete2048-season comparison, no default promotion and no R02 closure. Earlier verification and exact-byte limits keep their original horizon.",
+          "record_ids": [
+            "DEC-0017",
+            "DEC-0018",
+            "FACT-0046",
+            "INF-0009"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FACT-0042",
+      "kind": "observed_fact",
+      "status": "active",
+      "statement": "Part3 automated gates PASS: whole VS2022 solution Debug/Release builds succeed with0errors/106CA1416warnings;115/115 tests each. All78 recorded source/build inputs and5 loaded assemblies per configuration match current bytes. All4 accepted Part2 reference hashes/draws and observation checks pass. Main/settings100/150/200% representative geometry, slow-worker control and paint/input targets pass;7 current captures reviewed. Historical-byte verification is partial for SRC-0115; its current successor is verified normally.",
+      "source_refs": [
+        "SRC-0128",
+        "SRC-0129",
+        "SRC-0130",
+        "SRC-0131",
+        "SRC-0132",
+        "SRC-0133",
+        "SRC-0134",
+        "SRC-0135",
+        "SRC-0136",
+        "SRC-0137",
+        "SRC-0138",
+        "SRC-0139",
+        "SRC-0140",
+        "SRC-0141",
+        "SRC-0142",
+        "SRC-0143",
+        "SRC-0144",
+        "SRC-0145",
+        "SRC-0146",
+        "SRC-0147",
+        "SRC-0148",
+        "SRC-0149",
+        "SRC-0150",
+        "SRC-0151",
+        "SRC-0152",
+        "SRC-0153"
+      ],
+      "related_record_ids": [
+        "DEC-0015",
+        "REC-0005",
+        "FACT-0040",
+        "FACT-0041",
+        "INF-0008",
+        "Q-0003",
+        "DEC-0017",
+        "DEC-0018",
+        "FACT-0046",
+        "INF-0009"
+      ],
+      "origin": {
+        "type": "authorized_R02_Part3_implementation_and_verification",
+        "actor": "Seed Analyzer",
+        "recorded_at_utc": "2026-09-06T19:24:56.193313+00:00",
+        "attribution": "Transient part3_view_backend, part3_view_ui and part3_perf helpers supplied bounded implementation/review. Seed Analyzer owns integration, evaluation and canonical KB."
+      },
+      "derivation": {
+        "artifacts": [
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r02_part3_verification.json",
+            "sha256": "C89CDF2EC945F5C6EA87F755BD3983748CE37191CCEBA1FD46F556C6A7975F81",
+            "bytes": 28232,
+            "status": "Seed-derived Part3 support; owner acceptance pending"
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r02_part3_results.json",
+            "sha256": "B3A2BE9960D0EEE2CAFF12778DB5E98A5B474CB03DCE4287AC4B3F33922017D9",
+            "bytes": 1090326,
+            "status": "Seed-derived Part3 support; owner acceptance pending"
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r02_part3_builds.json",
+            "sha256": "8EFCBB7932FF508EBF64313D52C98F9DEE3241420CA492C0865B5ADEA75E473E",
+            "bytes": 63780,
+            "status": "Seed-derived Part3 support; owner acceptance pending"
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\tools\\run_part3_checks.py",
+            "sha256": "E73E9DAD1725902238A0E9C8E02D4D14698276D9FC5E3710ED87CB8D421D5FC0",
+            "bytes": 3323,
+            "status": "Seed-derived Part3 support; owner acceptance pending"
+          }
+        ],
+        "locators": [
+          "verification.json: builds_and_tests/performance/source_history/interventions/preserved_part2_registered_hashes_verified",
+          "RenderingTests.Cases; UiDiagnosticsTests.Cases; ViewerBackendTests.Cases; ScenarioRunner.Cases"
+        ],
+        "verification": {
+          "tests_each": 115,
+          "debug_seconds": 62.047,
+          "release_seconds": 55.203,
+          "source_versions_added": 26,
+          "registered_predecessors_revised": 16,
+          "pinned_git_predecessors": 13,
+          "exact_reconstructed_snapshots": [
+            "SRC-0118",
+            "SRC-0119"
+          ],
+          "historical_bytes_unavailable": [
+            "SRC-0115"
+          ],
+          "history_limitation": "Mixed CRLF/LF predecessor bytes differ from both supported Git transforms. Tests Program and BoardSquare recovered from committed line content and retained predecessor/successor line-ending evidence, matching original SHA256/size. Bounded Board reconstruction did not match. Initial clean Git assumption did not establish exact-byte recoverability; this is explicitly corrected.",
+          "interventions": [
+            "Initial full Release suite111/113: real main-layout overlap at150percent and unsupported synthetic world actor in UI state check. Corrected explicit percentrow/adaptive charts and kept synthetic overlays in detached frame only.",
+            "First layout attempt still7/8 rendering; retained failure. Actual screenshots showed nativeheight cap. Corrected nesting and added truthful font/geometry scaling and containment tests.",
+            "Independent final review added stopped-worker/reset-selection race guards and regression tests; fixed settings scrolling at high scale, and displayed pause/reset settlement latency. Final115/115 both configurations.",
+            "Source-revision draft refused Git byte mismatch before canonical writes. Used13exactGit histories,2exact reconstructed snapshots,1explicit historical gap; no verifier weakening."
+          ],
+          "temporary_build_test_preview_directories_removed": true
+        }
+      },
+      "uncertainty": "Offscreen/programmatic measurements do not establish physical input latency, actual monitor-DPI transitions or owner usefulness acceptance. SRC-0115 retains hash/prepared text but exact mixed-newline bytes were not recovered within bounded checks. Initial clean-Git assumption was insufficient and is corrected here/core. No verifier safeguards relaxed. Part2 reports remain byte-identical.",
+      "tags": [
+        "R02",
+        "Part3"
+      ],
+      "created_at": "2026-09-06T19:26:58+00:00",
+      "updated_at": "2026-09-06T19:26:58+00:00",
+      "resolution_notes": [
+        {
+          "at_utc": "2026-09-06T22:07:59.355030+00:00",
+          "actor": "Genepool Analyzer",
+          "type": "Part3_acceptance_and_Part4_result",
+          "prior_statement": "Part3 automated gates PASS: whole VS2022 solution Debug/Release builds succeed with0errors/106CA1416warnings;115/115 tests each. All78 recorded source/build inputs and5 loaded assemblies per configuration match current bytes. All4 accepted Part2 reference hashes/draws and observation checks pass. Main/settings100/150/200% representative geometry, slow-worker control and paint/input targets pass;7 current captures reviewed. Historical-byte verification is partial for SRC-0115; its current successor is verified normally.",
+          "note": "Owner explicitly accepted Part3 in DEC-0017 and accepted prospective Part4 criteria in DEC-0018. Part4 result is now FACT-0044..0046/INF-0009, with no complete2048-season comparison, no default promotion and no R02 closure. Earlier verification and exact-byte limits keep their original horizon.",
+          "record_ids": [
+            "DEC-0017",
+            "DEC-0018",
+            "FACT-0046",
+            "INF-0009"
+          ]
+        }
+      ]
+    }
+  ],
+  "upsert_sources": [
+    {
+      "source_id": "SRC-0091",
+      "title": "Fistnet.Genepool.Dna\\DnaElementFactory.cs (R02 Part2)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\DnaElementFactory.cs"
+      },
+      "sha256": "5D73E13CA985E04F4BD99D5E240AE322B3A572500138A482671D3295CFBD2426",
+      "size_bytes": 5315,
+      "observed_at_utc": "2026-09-06T16:25:01+00:00",
+      "supersedes": "SRC-0011",
+      "status": "registered current working-file version",
+      "coverage": "Implemented/reviewed for R02 Part2; exact final source hash and whole-solution Debug/Release tests recorded separately in FACT-0038. Locators use named classes/methods; historical coverage belongs to predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part2_successor"
+      },
+      "supersession": {
+        "source_id": "SRC-0157",
+        "actor": "Genepool Analyzer",
+        "reason": "Authorized R02 Part4 optional founder setup, passive ecological evaluation and review support.",
+        "record_ids": [
+          "DEC-0017",
+          "FACT-0044"
+        ],
+        "observed_at": "2026-09-06T21:28:06+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "c5a494a412684d801031d1dec2c2c7670f5e3293",
+          "path": "Fistnet.Genepool.Dna/DnaElementFactory.cs",
+          "blob_oid": "e6d1123ca8d18ad44b2376fd6294655aa07e7db2",
+          "transform": "lf_to_crlf"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0157",
+      "title": "Fistnet.Genepool.Dna/DnaElementFactory.cs (R02 Part4)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\DnaElementFactory.cs"
+      },
+      "sha256": "4B74798B73FEEB5FA395DC987286389CE887696A2FC499307201BC8B9E7EAD82",
+      "size_bytes": 7402,
+      "observed_at_utc": "2026-09-06T21:28:06+00:00",
+      "supersedes": "SRC-0091",
+      "status": "Part4 implementation; owner review pending",
+      "coverage": "Changed portions inspected against verified Part3/earlier predecessor. Functional, passive-reference and bounded ecological coverage recorded in FACT-0044..0046; earlier coverage stays with predecessor.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R02_Part4_implementation",
+        "attribution": "Transient founder, metrics and runner helpers; root integration, review, execution and canonical KB."
+      }
+    },
+    {
+      "source_id": "SRC-0137",
+      "title": "Fistnet.Genepool.Dna/Organism.cs (R02 Part3)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Organism.cs"
+      },
+      "sha256": "483CAF9329558870C6A3D573E7796ABC662C79596E2402619D227461F6D349D2",
+      "size_bytes": 18993,
+      "observed_at_utc": "2026-09-06T19:18:12+00:00",
+      "supersedes": "SRC-0116",
+      "status": "Authorized Part3 implementation; automated verification in FACT-0042; owner review pending",
+      "coverage": "Implemented and inspected for Part3 by Seed Analyzer and transient component helpers. Named classes/methods provide locators; exact build/test/performance scope in FACT-0040..FACT-0042. Historical coverage stays with predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part3_implementation",
+        "attribution": "Transient viewer, backend and performance helpers; root integration and canonical verification."
+      },
+      "supersession": {
+        "source_id": "SRC-0158",
+        "actor": "Genepool Analyzer",
+        "reason": "Authorized R02 Part4 optional founder setup, passive ecological evaluation and review support.",
+        "record_ids": [
+          "DEC-0017",
+          "FACT-0044"
+        ],
+        "observed_at": "2026-09-06T21:28:06+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/SRC-0137.cs"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0158",
+      "title": "Fistnet.Genepool.Dna/Organism.cs (R02 Part4)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Organism.cs"
+      },
+      "sha256": "0269EE3E1E6BA4B32D12B4E9F5208940E4A06DD048EEFE6E99E08EA75C17A105",
+      "size_bytes": 19249,
+      "observed_at_utc": "2026-09-06T21:28:06+00:00",
+      "supersedes": "SRC-0137",
+      "status": "Part4 implementation; owner review pending",
+      "coverage": "Changed portions inspected against verified Part3/earlier predecessor. Functional, passive-reference and bounded ecological coverage recorded in FACT-0044..0046; earlier coverage stays with predecessor.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R02_Part4_implementation",
+        "attribution": "Transient founder, metrics and runner helpers; root integration, review, execution and canonical KB."
+      }
+    },
+    {
+      "source_id": "SRC-0133",
+      "title": "Fistnet.Genepool.Control/SimulationRunOptions.cs (R02 Part3)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\SimulationRunOptions.cs"
+      },
+      "sha256": "37DE1CACA84E20DC8E378F0983D38B725B3AC3A1CA3C5BF256B673D39F9C3220",
+      "size_bytes": 1556,
+      "observed_at_utc": "2026-09-06T19:18:10+00:00",
+      "supersedes": "SRC-0105",
+      "status": "Authorized Part3 implementation; automated verification in FACT-0042; owner review pending",
+      "coverage": "Implemented and inspected for Part3 by Seed Analyzer and transient component helpers. Named classes/methods provide locators; exact build/test/performance scope in FACT-0040..FACT-0042. Historical coverage stays with predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part3_implementation",
+        "attribution": "Transient viewer, backend and performance helpers; root integration and canonical verification."
+      },
+      "supersession": {
+        "source_id": "SRC-0159",
+        "actor": "Genepool Analyzer",
+        "reason": "Authorized R02 Part4 optional founder setup, passive ecological evaluation and review support.",
+        "record_ids": [
+          "DEC-0017",
+          "FACT-0044"
+        ],
+        "observed_at": "2026-09-06T21:28:07+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/SRC-0133.cs"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0159",
+      "title": "Fistnet.Genepool.Control/SimulationRunOptions.cs (R02 Part4)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\SimulationRunOptions.cs"
+      },
+      "sha256": "99D7B4D82C9248262AD9A8D472A5FFDAC1DE2CE1AC6722DB1F85A01CD5873D85",
+      "size_bytes": 1743,
+      "observed_at_utc": "2026-09-06T21:28:07+00:00",
+      "supersedes": "SRC-0133",
+      "status": "Part4 implementation; owner review pending",
+      "coverage": "Changed portions inspected against verified Part3/earlier predecessor. Functional, passive-reference and bounded ecological coverage recorded in FACT-0044..0046; earlier coverage stays with predecessor.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R02_Part4_implementation",
+        "attribution": "Transient founder, metrics and runner helpers; root integration, review, execution and canonical KB."
+      }
+    },
+    {
+      "source_id": "SRC-0136",
+      "title": "Fistnet.Genepool.Control/Gameboard/Board.cs (R02 Part3)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\Gameboard\\Board.cs"
+      },
+      "sha256": "5F30C47F3BBDFE2E59C35485257B986BA948C365F3837ED14E20363DD53DE9C3",
+      "size_bytes": 18601,
+      "observed_at_utc": "2026-09-06T19:18:11+00:00",
+      "supersedes": "SRC-0115",
+      "status": "Authorized Part3 implementation; automated verification in FACT-0042; owner review pending",
+      "coverage": "Implemented and inspected for Part3 by Seed Analyzer and transient component helpers. Named classes/methods provide locators; exact build/test/performance scope in FACT-0040..FACT-0042. Historical coverage stays with predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part3_implementation",
+        "attribution": "Transient viewer, backend and performance helpers; root integration and canonical verification."
+      },
+      "supersession": {
+        "source_id": "SRC-0160",
+        "actor": "Genepool Analyzer",
+        "reason": "Authorized R02 Part4 optional founder setup, passive ecological evaluation and review support.",
+        "record_ids": [
+          "DEC-0017",
+          "FACT-0044"
+        ],
+        "observed_at": "2026-09-06T21:28:07+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/SRC-0136.cs"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0160",
+      "title": "Fistnet.Genepool.Control/Gameboard/Board.cs (R02 Part4)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\Gameboard\\Board.cs"
+      },
+      "sha256": "BDA8E4A625531A7FA4EED03B615498D4AAEC7CEA0724C9A3AD92044C38475DE8",
+      "size_bytes": 18628,
+      "observed_at_utc": "2026-09-06T21:28:07+00:00",
+      "supersedes": "SRC-0136",
+      "status": "Part4 implementation; owner review pending",
+      "coverage": "Changed portions inspected against verified Part3/earlier predecessor. Functional, passive-reference and bounded ecological coverage recorded in FACT-0044..0046; earlier coverage stays with predecessor.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R02_Part4_implementation",
+        "attribution": "Transient founder, metrics and runner helpers; root integration, review, execution and canonical KB."
+      }
+    },
+    {
+      "source_id": "SRC-0134",
+      "title": "Fistnet.Genepool.Control/SimulationSnapshot.cs (R02 Part3)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\SimulationSnapshot.cs"
+      },
+      "sha256": "7D829F3124E5FA23DCC203FBF7C2D06C600645CE55D32EF948C5460285C9EDFD",
+      "size_bytes": 11371,
+      "observed_at_utc": "2026-09-06T19:18:11+00:00",
+      "supersedes": "SRC-0106",
+      "status": "Authorized Part3 implementation; automated verification in FACT-0042; owner review pending",
+      "coverage": "Implemented and inspected for Part3 by Seed Analyzer and transient component helpers. Named classes/methods provide locators; exact build/test/performance scope in FACT-0040..FACT-0042. Historical coverage stays with predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part3_implementation",
+        "attribution": "Transient viewer, backend and performance helpers; root integration and canonical verification."
+      },
+      "supersession": {
+        "source_id": "SRC-0161",
+        "actor": "Genepool Analyzer",
+        "reason": "Authorized R02 Part4 optional founder setup, passive ecological evaluation and review support.",
+        "record_ids": [
+          "DEC-0017",
+          "FACT-0044"
+        ],
+        "observed_at": "2026-09-06T21:28:07+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/SRC-0134.cs"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0161",
+      "title": "Fistnet.Genepool.Control/SimulationSnapshot.cs (R02 Part4)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\SimulationSnapshot.cs"
+      },
+      "sha256": "5B5A7C9DA8C5B3226DA98345ABCFF92617F966756BCA953229BB45196B74852B",
+      "size_bytes": 11518,
+      "observed_at_utc": "2026-09-06T21:28:07+00:00",
+      "supersedes": "SRC-0134",
+      "status": "Part4 implementation; owner review pending",
+      "coverage": "Changed portions inspected against verified Part3/earlier predecessor. Functional, passive-reference and bounded ecological coverage recorded in FACT-0044..0046; earlier coverage stays with predecessor.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R02_Part4_implementation",
+        "attribution": "Transient founder, metrics and runner helpers; root integration, review, execution and canonical KB."
+      }
+    },
+    {
+      "source_id": "SRC-0148",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\ViewCollector.cs"
+      },
+      "sha256": "98CF8DC9401022FCDF6F76649DB91769E11D2F2AAF00D333B253F48803213F76",
+      "size_bytes": 9192,
+      "observed_at_utc": "2026-09-06T19:18:14.163711+00:00",
+      "title": "Fistnet.Genepool.Control/ViewCollector.cs (R02 Part3)",
+      "status": "Authorized Part3 implementation; automated verification in FACT-0042; owner review pending",
+      "coverage": "Implemented and inspected for Part3 by Seed Analyzer and transient component helpers. Named classes/methods provide locators; exact build/test/performance scope in FACT-0040..FACT-0042. Historical coverage stays with predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part3_implementation",
+        "attribution": "Transient viewer, backend and performance helpers; root integration and canonical verification."
+      },
+      "preparation": {
+        "status": "prepared",
+        "level": "searchable_text",
+        "path": "prepared/SRC-0148.jsonl",
+        "version": 1,
+        "preparer_version": 2,
+        "source_sha256": "98CF8DC9401022FCDF6F76649DB91769E11D2F2AAF00D333B253F48803213F76",
+        "prepared_sha256": "0090D32270B751AAE1EDB3F8A3CA58261E0FE92D5B3632E7ADC6DE459E2ACB66",
+        "prepared_at": "2026-09-06T19:29:01+00:00",
+        "coverage": {
+          "encoding": "utf-8-sig",
+          "text": "static bounded line chunks",
+          "execution": "not executed",
+          "external_references": "not followed"
+        }
+      },
+      "supersession": {
+        "source_id": "SRC-0162",
+        "actor": "Genepool Analyzer",
+        "reason": "Authorized R02 Part4 optional founder setup, passive ecological evaluation and review support.",
+        "record_ids": [
+          "DEC-0017",
+          "FACT-0044"
+        ],
+        "observed_at": "2026-09-06T21:28:07+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/SRC-0148.cs"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0162",
+      "title": "Fistnet.Genepool.Control/ViewCollector.cs (R02 Part4)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\ViewCollector.cs"
+      },
+      "sha256": "68A592ACCA7E9DB8EB987A59D4ACABB26110A8C43D26E701A44D284F825E510D",
+      "size_bytes": 9256,
+      "observed_at_utc": "2026-09-06T21:28:07+00:00",
+      "supersedes": "SRC-0148",
+      "status": "Part4 implementation; owner review pending",
+      "coverage": "Changed portions inspected against verified Part3/earlier predecessor. Functional, passive-reference and bounded ecological coverage recorded in FACT-0044..0046; earlier coverage stays with predecessor.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R02_Part4_implementation",
+        "attribution": "Transient founder, metrics and runner helpers; root integration, review, execution and canonical KB."
+      }
+    },
+    {
+      "source_id": "SRC-0145",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.App\\NewSimulationDialog.cs"
+      },
+      "sha256": "530C9C9A69E9C02BC662362A485FFAD0EDBA388EEBABB4594B7D7A13DB1479EE",
+      "size_bytes": 10903,
+      "observed_at_utc": "2026-09-06T19:18:14.162714+00:00",
+      "title": "Fistnet.Genepool.App/NewSimulationDialog.cs (R02 Part3)",
+      "status": "Authorized Part3 implementation; automated verification in FACT-0042; owner review pending",
+      "coverage": "Implemented and inspected for Part3 by Seed Analyzer and transient component helpers. Named classes/methods provide locators; exact build/test/performance scope in FACT-0040..FACT-0042. Historical coverage stays with predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part3_implementation",
+        "attribution": "Transient viewer, backend and performance helpers; root integration and canonical verification."
+      },
+      "supersession": {
+        "source_id": "SRC-0163",
+        "actor": "Genepool Analyzer",
+        "reason": "Authorized R02 Part4 optional founder setup, passive ecological evaluation and review support.",
+        "record_ids": [
+          "DEC-0017",
+          "FACT-0044"
+        ],
+        "observed_at": "2026-09-06T21:28:08+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/SRC-0145.cs"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0163",
+      "title": "Fistnet.Genepool.App/NewSimulationDialog.cs (R02 Part4)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.App\\NewSimulationDialog.cs"
+      },
+      "sha256": "7BE5F9B8F7D104E56058E07C54445AFD0F117CFB4F3DA3EDF37479761ED225EF",
+      "size_bytes": 11810,
+      "observed_at_utc": "2026-09-06T21:28:08+00:00",
+      "supersedes": "SRC-0145",
+      "status": "Part4 implementation; owner review pending",
+      "coverage": "Changed portions inspected against verified Part3/earlier predecessor. Functional, passive-reference and bounded ecological coverage recorded in FACT-0044..0046; earlier coverage stays with predecessor.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R02_Part4_implementation",
+        "attribution": "Transient founder, metrics and runner helpers; root integration, review, execution and canonical KB."
+      }
+    },
+    {
+      "source_id": "SRC-0131",
+      "title": "Fistnet.Genepool.App/MainForm.cs (R02 Part3)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.App\\MainForm.cs"
+      },
+      "sha256": "AC33A0992864DCAFEF05F728740187FD645850BDEFB4EC097DD59B4125F21400",
+      "size_bytes": 23363,
+      "observed_at_utc": "2026-09-06T19:18:10+00:00",
+      "supersedes": "SRC-0079",
+      "status": "Authorized Part3 implementation; automated verification in FACT-0042; owner review pending",
+      "coverage": "Implemented and inspected for Part3 by Seed Analyzer and transient component helpers. Named classes/methods provide locators; exact build/test/performance scope in FACT-0040..FACT-0042. Historical coverage stays with predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part3_implementation",
+        "attribution": "Transient viewer, backend and performance helpers; root integration and canonical verification."
+      },
+      "preparation": {
+        "status": "prepared",
+        "level": "searchable_text",
+        "path": "prepared/SRC-0131.jsonl",
+        "version": 1,
+        "preparer_version": 2,
+        "source_sha256": "AC33A0992864DCAFEF05F728740187FD645850BDEFB4EC097DD59B4125F21400",
+        "prepared_sha256": "E818496194E1D1440E4DC01E008CB1F204340D0442FDFDC46C243465C9EF7248",
+        "prepared_at": "2026-09-06T19:28:12+00:00",
+        "coverage": {
+          "encoding": "utf-8-sig",
+          "text": "static bounded line chunks",
+          "execution": "not executed",
+          "external_references": "not followed"
+        }
+      },
+      "supersession": {
+        "source_id": "SRC-0164",
+        "actor": "Genepool Analyzer",
+        "reason": "Authorized R02 Part4 optional founder setup, passive ecological evaluation and review support.",
+        "record_ids": [
+          "DEC-0017",
+          "FACT-0044"
+        ],
+        "observed_at": "2026-09-06T21:28:08+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/SRC-0131.cs"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0164",
+      "title": "Fistnet.Genepool.App/MainForm.cs (R02 Part4)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.App\\MainForm.cs"
+      },
+      "sha256": "6E30D6D207EE8B21E255655BAB6D592BC6F27CC5606E155A03A0BFFF3422AE6C",
+      "size_bytes": 23544,
+      "observed_at_utc": "2026-09-06T21:28:08+00:00",
+      "supersedes": "SRC-0131",
+      "status": "Part4 implementation; owner review pending",
+      "coverage": "Changed portions inspected against verified Part3/earlier predecessor. Functional, passive-reference and bounded ecological coverage recorded in FACT-0044..0046; earlier coverage stays with predecessor.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R02_Part4_implementation",
+        "attribution": "Transient founder, metrics and runner helpers; root integration, review, execution and canonical KB."
+      }
+    },
+    {
+      "source_id": "SRC-0140",
+      "title": "Fistnet.Genepool.Tests/Program.cs (R02 Part3)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\Program.cs"
+      },
+      "sha256": "0EAB2121EAA76B3BF04FADDFCB0CD0D8DC5C35E761685218243C44AE1152F297",
+      "size_bytes": 6774,
+      "observed_at_utc": "2026-09-06T19:18:13+00:00",
+      "supersedes": "SRC-0119",
+      "status": "Authorized Part3 implementation; automated verification in FACT-0042; owner review pending",
+      "coverage": "Implemented and inspected for Part3 by Seed Analyzer and transient component helpers. Named classes/methods provide locators; exact build/test/performance scope in FACT-0040..FACT-0042. Historical coverage stays with predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part3_implementation",
+        "attribution": "Transient viewer, backend and performance helpers; root integration and canonical verification."
+      },
+      "supersession": {
+        "source_id": "SRC-0165",
+        "actor": "Genepool Analyzer",
+        "reason": "Authorized R02 Part4 optional founder setup, passive ecological evaluation and review support.",
+        "record_ids": [
+          "DEC-0017",
+          "FACT-0044"
+        ],
+        "observed_at": "2026-09-06T21:28:08+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/SRC-0140.cs"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0165",
+      "title": "Fistnet.Genepool.Tests/Program.cs (R02 Part4)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\Program.cs"
+      },
+      "sha256": "933E363C0BD236B82D2DD650D87B0E7778139071E80178BFC344CCCE3607DE08",
+      "size_bytes": 7078,
+      "observed_at_utc": "2026-09-06T21:28:08+00:00",
+      "supersedes": "SRC-0140",
+      "status": "Part4 implementation; owner review pending",
+      "coverage": "Changed portions inspected against verified Part3/earlier predecessor. Functional, passive-reference and bounded ecological coverage recorded in FACT-0044..0046; earlier coverage stays with predecessor.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R02_Part4_implementation",
+        "attribution": "Transient founder, metrics and runner helpers; root integration, review, execution and canonical KB."
+      }
+    },
+    {
+      "source_id": "SRC-0141",
+      "title": "Fistnet.Genepool.Tests/README.md (R02 Part3)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\README.md"
+      },
+      "sha256": "F97FC9AFFCD978C549F812B248C7627ADFA81DF62E462DA06649593C6FE1B925",
+      "size_bytes": 19430,
+      "observed_at_utc": "2026-09-06T19:18:13+00:00",
+      "supersedes": "SRC-0120",
+      "status": "Authorized Part3 implementation; automated verification in FACT-0042; owner review pending",
+      "coverage": "Implemented and inspected for Part3 by Seed Analyzer and transient component helpers. Named classes/methods provide locators; exact build/test/performance scope in FACT-0040..FACT-0042. Historical coverage stays with predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part3_implementation",
+        "attribution": "Transient viewer, backend and performance helpers; root integration and canonical verification."
+      },
+      "supersession": {
+        "source_id": "SRC-0166",
+        "actor": "Genepool Analyzer",
+        "reason": "Authorized R02 Part4 optional founder setup, passive ecological evaluation and review support.",
+        "record_ids": [
+          "DEC-0017",
+          "FACT-0044"
+        ],
+        "observed_at": "2026-09-06T21:28:09+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/SRC-0141.md"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0166",
+      "title": "Fistnet.Genepool.Tests/README.md (R02 Part4)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\README.md"
+      },
+      "sha256": "EDD62F14244C20F0015D05BA2922036F9CA856178FD8A5D9439FEF701918A8AA",
+      "size_bytes": 24251,
+      "observed_at_utc": "2026-09-06T21:28:09+00:00",
+      "supersedes": "SRC-0141",
+      "status": "Part4 implementation; owner review pending",
+      "coverage": "Changed portions inspected against verified Part3/earlier predecessor. Functional, passive-reference and bounded ecological coverage recorded in FACT-0044..0046; earlier coverage stays with predecessor.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R02_Part4_implementation",
+        "attribution": "Transient founder, metrics and runner helpers; root integration, review, execution and canonical KB."
+      }
+    },
+    {
+      "source_id": "SRC-0167",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\FounderRepertoire.cs"
+      },
+      "sha256": "AA9C41C9BBFB4D90163451DF16801E9E57640EF5FE67852878730DD9B3E75A80",
+      "size_bytes": 218,
+      "observed_at_utc": "2026-09-06T21:28:06.174580+00:00",
+      "title": "Fistnet.Genepool.Dna/FounderRepertoire.cs (R02 Part4)",
+      "status": "Part4 implementation; owner review pending",
+      "coverage": "Entire new source inspected by responsible root and transient helper reviews. Functional/reference/production coverage and limits in FACT-0044..0046.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R02_Part4_implementation"
+      }
+    },
+    {
+      "source_id": "SRC-0168",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\FounderSetupTests.cs"
+      },
+      "sha256": "85CAC6C98EE412DF0EFD97849091E04A5F5D080B8ABB6901E754DA44F315AC0A",
+      "size_bytes": 13361,
+      "observed_at_utc": "2026-09-06T21:28:06.174580+00:00",
+      "title": "Fistnet.Genepool.Tests/FounderSetupTests.cs (R02 Part4)",
+      "status": "Part4 implementation; owner review pending",
+      "coverage": "Entire new source inspected by responsible root and transient helper reviews. Functional/reference/production coverage and limits in FACT-0044..0046.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R02_Part4_implementation"
+      }
+    },
+    {
+      "source_id": "SRC-0169",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\EcologyMetrics.cs"
+      },
+      "sha256": "25D6E7E10D912217B26F3676D5BF713EAA9C3805D4F51A80C5692A862A4F7D79",
+      "size_bytes": 16570,
+      "observed_at_utc": "2026-09-06T21:28:06.174580+00:00",
+      "title": "Fistnet.Genepool.Tests/EcologyMetrics.cs (R02 Part4)",
+      "status": "Part4 implementation; owner review pending",
+      "coverage": "Entire new source inspected by responsible root and transient helper reviews. Functional/reference/production coverage and limits in FACT-0044..0046.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R02_Part4_implementation"
+      }
+    },
+    {
+      "source_id": "SRC-0170",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\EcologyTests.cs"
+      },
+      "sha256": "DD4E3FCD449AB9B9C0CF2C5600A0E47497F7E1CACBC47D71A35E2445515C46A6",
+      "size_bytes": 17818,
+      "observed_at_utc": "2026-09-06T21:28:06.174580+00:00",
+      "title": "Fistnet.Genepool.Tests/EcologyTests.cs (R02 Part4)",
+      "status": "Part4 implementation; owner review pending",
+      "coverage": "Entire new source inspected by responsible root and transient helper reviews. Functional/reference/production coverage and limits in FACT-0044..0046.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R02_Part4_implementation"
+      }
+    },
+    {
+      "source_id": "SRC-0171",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\EcologyScenarios.cs"
+      },
+      "sha256": "72C3DCB4E4089D022189C2A0515FE11F46AE774DCAEAFCD5C605373113CBB135",
+      "size_bytes": 20858,
+      "observed_at_utc": "2026-09-06T21:28:06.174580+00:00",
+      "title": "Fistnet.Genepool.Tests/EcologyScenarios.cs (R02 Part4)",
+      "status": "Part4 implementation; owner review pending",
+      "coverage": "Entire new source inspected by responsible root and transient helper reviews. Functional/reference/production coverage and limits in FACT-0044..0046.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R02_Part4_implementation"
+      }
+    }
+  ],
+  "core_patch": {
+    "experiment": {
+      "root": "D:\\Posao\\Fistnet.Genepool",
+      "purpose": "Make this experiment a better simulation and more fun to watch.",
+      "purpose_origin_record": "DEC-0002",
+      "status": "R02_Part4_ready_for_owner_review",
+      "phase": "EVOLUTION",
+      "root_semantics": "Exact physical experiment root explicitly assigned by User; KB tools bound to this root.",
+      "model": "Provisional artificial-life sandbox with inherited action repertoires and individual learning.",
+      "model_record": "INF-0001",
+      "model_accepted": false,
+      "design_accepted": true,
+      "trial_authorized": false,
+      "trial_scope": "Part4 bounded comparisons dispatched and ended:16 clean time stops; no active trial. Reserved confirmation not run because no candidate completed2048 seasons.",
+      "design_accepted_scope": "Parts1/2/3 owner-accepted; Part4 authorized implementation is ready for owner review, with inconclusive full-horizon ecology."
+    },
+    "authority": {
+      "assignment_record": "DEC-0001",
+      "actor": "Genepool Analyzer",
+      "knowledgebase_root": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase",
+      "continuing_kb_authority": "Routine in-root KB retrieval, validation, preparation and transactions remain authorized. DEC-0006 permits adapting tools with proportionate checks. The earlier unversioned-KB premise is superseded for canonical files by FACT-0027; current edits still require normal revision/preview/verification safeguards.",
+      "originals": "Part4:15 current source versions,10 predecessors revised with1 exact pinned Git version and9 exact KB snapshots. No new history gap; existing SRC-0115 warning persists.",
+      "next_action": "Present Part4 review and stop. Await owner review/next focused instruction; no policy promotion or R02 closure.",
+      "current_stage_record": "DEC-0017",
+      "environment_assessment": "Historical environment assessment used installed metadata and disposable synthetic probes; subsequent bounded source repair is recorded separately in FACT-0019.",
+      "current_research_scope": "Part4 local work complete. All16 production comparisons time-limited; reserved confirmation not dispatched.",
+      "specialization_record": "DEC-0016"
+    },
+    "owner_decision_ids": [
+      "DEC-0001",
+      "DEC-0002",
+      "DEC-0003",
+      "DEC-0004",
+      "DEC-0005",
+      "DEC-0006",
+      "DEC-0007",
+      "DEC-0008",
+      "DEC-0009",
+      "DEC-0010",
+      "DEC-0011",
+      "DEC-0012",
+      "DEC-0013",
+      "DEC-0014",
+      "DEC-0015",
+      "DEC-0016",
+      "DEC-0017",
+      "DEC-0018"
+    ],
+    "open_question_ids": [],
+    "next_decision_order": [],
+    "routes": {
+      "orientation": {
+        "record_ids": [
+          "FACT-0001",
+          "FACT-0002",
+          "FACT-0011",
+          "INF-0001"
+        ]
+      },
+      "mechanics": {
+        "record_ids": [
+          "FACT-0003",
+          "FACT-0004",
+          "FACT-0005",
+          "INF-0003"
+        ]
+      },
+      "watchability": {
+        "record_ids": [
+          "DEC-0002",
+          "FACT-0006",
+          "FACT-0009",
+          "REC-0001"
+        ]
+      },
+      "material_findings": {
+        "record_ids": [
+          "FACT-0007",
+          "FACT-0008",
+          "FACT-0010",
+          "INF-0002",
+          "FACT-0023"
+        ]
+      },
+      "proposal_and_tests": {
+        "record_ids": [
+          "DEC-0003",
+          "REC-0002",
+          "FACT-0012",
+          "Q-0001",
+          "Q-0002",
+          "DEC-0007",
+          "FACT-0024",
+          "FACT-0025",
+          "FACT-0028",
+          "FACT-0029",
+          "INF-0004",
+          "DEC-0009"
+        ]
+      },
+      "environment_capabilities": {
+        "record_ids": [
+          "DEC-0004",
+          "FACT-0013",
+          "FACT-0014",
+          "FACT-0015",
+          "FACT-0016",
+          "REC-0003",
+          "Q-0002",
+          "CLAIM-0001",
+          "FACT-0017",
+          "FACT-0018",
+          "REC-0004",
+          "DEC-0005",
+          "FACT-0019",
+          "CLAIM-0002",
+          "FACT-0021"
+        ]
+      },
+      "kb_tooling": {
+        "record_ids": [
+          "DEC-0006",
+          "FACT-0020",
+          "FACT-0019",
+          "DEC-0013",
+          "FACT-0036",
+          "FACT-0039",
+          "FACT-0045"
+        ]
+      },
+      "current_implementation": {
+        "record_ids": [
+          "DEC-0017",
+          "DEC-0018",
+          "FACT-0044",
+          "FACT-0045",
+          "FACT-0046",
+          "INF-0009"
+        ]
+      },
+      "r02_research_and_proposal": {
+        "record_ids": [
+          "DEC-0010",
+          "CLAIM-0004",
+          "FACT-0030",
+          "FACT-0031",
+          "FACT-0032",
+          "INF-0005",
+          "CLAIM-0005",
+          "REC-0005",
+          "Q-0001",
+          "DEC-0011",
+          "Q-0003",
+          "DEC-0012"
+        ]
+      },
+      "r02_part1_result": {
+        "record_ids": [
+          "DEC-0012",
+          "FACT-0033",
+          "FACT-0034",
+          "FACT-0035",
+          "INF-0006",
+          "Q-0003"
+        ]
+      },
+      "r02_part2_result": {
+        "record_ids": [
+          "DEC-0014",
+          "FACT-0037",
+          "FACT-0038",
+          "REC-0006",
+          "INF-0007",
+          "Q-0003",
+          "DEC-0015"
+        ]
+      },
+      "r02_part3_result": {
+        "record_ids": [
+          "DEC-0015",
+          "FACT-0040",
+          "FACT-0041",
+          "FACT-0042",
+          "INF-0008",
+          "DEC-0017"
+        ]
+      },
+      "governance": {
+        "record_ids": [
+          "DEC-0016",
+          "FACT-0043",
+          "DEC-0001",
+          "DEC-0006"
+        ]
+      },
+      "r02_part4_result": {
+        "record_ids": [
+          "DEC-0017",
+          "DEC-0018",
+          "Q-0003",
+          "FACT-0044",
+          "FACT-0045",
+          "FACT-0046",
+          "INF-0009"
+        ]
+      }
+    },
+    "proposal": {
+      "id": "R02",
+      "record_id": "REC-0005",
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\IMPROVEMENT_PROPOSAL_R02.md",
+      "sha256": "724B24D27F92C33757C3E3F0589F108B371525CEDD1FEE6FE1B8CA54A68C8B2F",
+      "status": "Parts1/2/3 accepted; Part4 implemented/engineering verified, ecology inconclusive, awaiting owner review",
+      "prepared_at_utc": "2026-09-06T13:56:32.311478+00:00",
+      "external_research_used": true,
+      "tests_implemented": true,
+      "tests_executed": true,
+      "research_authorization_record": "DEC-0010",
+      "implementation_authorized": true,
+      "source_commit_horizon": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+      "result_record_ids": [
+        "FACT-0030",
+        "FACT-0031",
+        "FACT-0032",
+        "INF-0005",
+        "CLAIM-0005",
+        "FACT-0033",
+        "FACT-0034",
+        "FACT-0035",
+        "INF-0006",
+        "FACT-0037",
+        "FACT-0038",
+        "REC-0006",
+        "INF-0007",
+        "FACT-0040",
+        "FACT-0041",
+        "FACT-0042",
+        "INF-0008",
+        "FACT-0044",
+        "FACT-0045",
+        "FACT-0046",
+        "INF-0009"
+      ],
+      "owner_clarification_record": "DEC-0018",
+      "updated_at_utc": "2026-09-06T22:07:59.355030+00:00",
+      "implementation_scope": "Part4 complete for review; no active execution",
+      "implementation_authorization_record": "DEC-0017",
+      "tests_scope": "137/137 Debug+Release; reference passivity;16 production prefixes, none at2048;4 programmatic previews",
+      "resolved_metric_record": "Q-0003"
+    },
+    "previous_iteration_part": {
+      "id": "R02_Part3",
+      "status": "Owner accepted by DEC-0017; recorded Part3 automated evidence and historical limitation preserved",
+      "record_ids": [
+        "DEC-0015",
+        "FACT-0040",
+        "FACT-0041",
+        "FACT-0042",
+        "INF-0008",
+        "DEC-0017"
+      ],
+      "report": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\IMPROVEMENT_RESULT_R02_PART3.md",
+      "verification": "115/115 Debug+Release and prior VS2022/performance/UI evidence preserved. Owner acceptance explicit in DEC-0017; historical-byte warning SRC-0115 remains.",
+      "limits": "Part3 accepted; no ecological balance or R02 closure inferred."
+    },
+    "current_iteration_part": {
+      "id": "R02_Part4",
+      "status": "IMPLEMENTED; engineering PASS;2048-season ecology INCONCLUSIVE; owner review pending",
+      "record_ids": [
+        "DEC-0017",
+        "DEC-0018",
+        "FACT-0044",
+        "FACT-0045",
+        "FACT-0046",
+        "INF-0009"
+      ],
+      "contract": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R02_PART4_CONTRACT.md",
+      "limits": "No full-horizon ecological pass, reserved confirmation, default promotion or R02 closure.",
+      "report": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\IMPROVEMENT_RESULT_R02_PART4.md",
+      "verification": "137/137 each configuration; VS2022 builds; observer passivity;16 time-limited comparisons without observed violations; no qualifying candidate; existing historical warning only."
+    },
+    "tooling": {
+      "record_id": "FACT-0039",
+      "policy": ".SeedAnalyzer/KB.md",
+      "source_revision_command": "KnowledgeBase/tools/kb.py revise-source",
+      "verification": "29distinct source-version/reviewed-commit/snapshot checks passed,1host-symlink fixture skipped; current identities in FACT-0039.",
+      "source_history": "Pinned local Git and exact KB snapshots retain identities. SRC-0115 exact mixed-newline predecessor unavailable; prepared history retained with explicit deep-validation warning (FACT-0042).",
+      "knowledgebase_is_git_versioned": true,
+      "knowledgebase_git_scope": "Local HEADc5a494a412684d801031d1dec2c2c7670f5e3293; canonical KB revision30 was committed there. Part3/specialization/Part4 changes remain local/uncommitted; remote uninspected.",
+      "knowledgebase_owner_decision": "DEC-0008: Keep the KnowledgeBase in Git.",
+      "source_version_record_id": "FACT-0020",
+      "current_maintenance_authority": "DEC-0017",
+      "current_verification_receipt": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r02_part4_verification.json"
+    },
+    "environment": {
+      "status": "Part4 whole-solution VS2022 Debug/Release builds and137/137 tests each verified; SDK9.0.315 retained",
+      "sdk_for_vs2022": "9.0.315",
+      "report": {
+        "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\ENVIRONMENT_CAPABILITIES_R01.md",
+        "sha256": "102A4FE72EA9CC4ACA43A0DEF81E2507CA5BD3D1ADC78FFBCC2B254E81939731",
+        "bytes": 10515,
+        "status": "Environment assessment with dated owner-build clarification"
+      },
+      "vs2022_requirement_record": "DEC-0004",
+      "record_ids": [
+        "FACT-0013",
+        "FACT-0014",
+        "FACT-0015",
+        "FACT-0016",
+        "FACT-0019",
+        "FACT-0021",
+        "FACT-0024",
+        "FACT-0028",
+        "FACT-0038",
+        "FACT-0042",
+        "FACT-0046"
+      ],
+      "refresh": "Existing paths/cache isolation in KnowledgeBase/tools/build_solution.py; recheck material inputs before a future changed build."
+    }
+  }
+}

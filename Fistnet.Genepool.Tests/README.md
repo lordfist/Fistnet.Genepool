@@ -87,8 +87,8 @@ independently counted population/action statistics.
 
 **Reference and production scheduling are different modes.** Reference runs use
 the specified random source, serial cell traversal and explicit effect order.
-Production retains parallel cell refresh/setup; Part2 action selection and shared
-transactions use explicit ordered phases, with seeded shuffled contention order.
+Production supports serial or bounded parallel cell refresh/setup; Part2 action
+selection and shared transactions use explicit ordered phases, with seeded shuffled contention order.
 Production is still not the reference-state export contract. Compare reference hashes only for compatible
 reference versions, configuration, random algorithm and horizons.
 
@@ -111,7 +111,37 @@ The ninth-action-tick organism aging clock is retained. Part2 replaces the old
 double birth count and deferred food/birth accounting with actual committed
 transactions; tests assert those repaired outcomes. Historical Part1 results
 retain the earlier characterization. Rendering/history independence is checked
-against the newly built model, not against an incompatible old state hash.
+against the newly built model. Part3 also checks all four accepted Part2 default
+state hashes and random-draw counts, so two equally changed runs cannot hide a
+regression. The exporter deliberately omits the newly added settings only when
+they equal the prior defaults, and omits display-only choice text. Nondefault
+food/regrowth/reserve settings and nondefault cell scheduling are represented.
+
+## R02 Part 3 viewer and performance checks
+
+The app uses one simulation worker and detached completed-season frames. The
+`viewer-backend` group verifies observation passivity, immutable cell storage,
+settings validation, following an organism through movement and death, bounded
+traces/history, exact one/eight-season stepping, reset and worker ownership.
+The rendering/UI groups cover the passive viewer, board picking/zoom, food layers,
+representative scaling and input handling while a worker is busy. These checks
+do not replace owner review of readability or claim ecological balance.
+
+The `performance` group checks choice ordering and random consumption, invalid
+candidates, and equivalent full execution state under serial/bounded cell phases.
+Timing measurements are separate opt-in commands:
+
+```powershell
+& '.\Fistnet.Genepool.Tests\bin\Release\net9.0-windows7.0\Fistnet.Genepool.Tests.exe' --performance-micro
+& '.\Fistnet.Genepool.Tests\bin\Release\net9.0-windows7.0\Fistnet.Genepool.Tests.exe' --performance-fixture 100 large serial 4
+```
+
+Micro measurements use fixed decision/completion and child-construction work,
+one warmup and five retained repeats, with a 25-second checked batch budget.
+The fixture command accepts density 0/10/50/100, `early`/`large` history,
+`serial`/`parallel`, and one through four eight-season batches. Use a bounded
+external process timeout when comparing versions. Fixture occupancy is held
+constant; these are computation measurements, not population-survival trials.
 
 ## Runner checks and optional output
 
@@ -271,9 +301,10 @@ filtering also means unavailable gather/heal genes wait for context changes or
 mutation instead of running their old failed-target retarget branches.
 
 The application still uses the repaired control defaults: legacy selection,
-legacy overweight threshold and damage-only attacks. Tests exercise the optional
-policies through `SimulationRunOptions.Policy`; the later UI/settings part has
-not been implemented. A code caller can explicitly select candidates at reset:
+legacy overweight threshold and damage-only attacks. The Part 3 New simulation
+dialog now exposes the optional policies without changing those defaults.
+Tests also exercise them through `SimulationRunOptions.Policy`; a code caller
+can explicitly select candidates at reset:
 
 ```csharp
 Board.Reset(new SimulationRunOptions
@@ -295,3 +326,80 @@ fixed species, kin immunity, population quota or guaranteed coexistence.
 The exact reward formula and changed comparability are recorded in
 `KnowledgeBase/R02_PART2_CONTRACT.md`. The Part2 result files are separate from
 the unchanged Part1 baseline. No ecological pass/fail claim follows from tests.
+
+## R02 Part 4: optional founders and ecological measurement
+
+`--group founder-setup` checks the optional starting repertoire and settings;
+`--group ecology` checks ecological accounting and threshold boundaries. The
+complete suite includes these checks without launching long ecological trials.
+
+`SimulationRunOptions.FounderRepertoire` defaults to
+`FounderRepertoire.UnrestrictedRandom`. The optional `GatherAndReproduce` value
+reserves distinct random slots for `GenerateFood` and `CombineDna`, with six
+remaining random genes and the existing per-type cap. It guarantees available
+gene types, not successful gathering, healing, reproduction or survival. Gene
+directions remain random. Offspring still inherit and mutate normally; the
+constraint applies only to initial founders. The new-world dialog exposes this
+choice, a separate **Food regrowth 2** preset, and the existing capped-health
+comparison. None is automatically selected as a new default.
+
+The explicit scenario command is:
+
+```powershell
+& .\Fistnet.Genepool.Tests\bin\Release\net9.0-windows7.0\Fistnet.Genepool.Tests.exe --ecology-scenario 11 2048 production default on
+```
+
+Arguments after the command are a signed integer seed, 1..2048 seasons,
+`production|reference`, `default|constrained|regrowth2|capped`, and collector
+`on|off`. The fixed candidates change one family only: founder repertoire,
+regrowth 1 to 2, or the existing capped-health rule at 50. Other defaults remain
+unchanged. Observer-off reference runs check collection passivity; they cannot
+provide an ecological verdict. Every explicit run has a completed-season soft
+time limit and a 115-second process watchdog; the governed wrapper applies the
+outer 120-second cap and batch limits.
+
+The collector observes every completed season through existing passive hooks.
+It distinguishes living population relative to its actual initial count from
+empty-cell occupancy, cumulative deaths and peak drawdown. Its exact pattern
+key contains all eight ordered action-type/target pairs, excluding random
+legacy codes, learning scores and ancestry. A dominance streak must belong to
+the same key throughout; movement can change targets, so keys are recomputed.
+This grouping is finer than the viewer's action-type-only pattern list.
+
+The owner-accepted screen requires population at or above 10% of its start,
+no exact pattern above 90% for 128 consecutive seasons, and continued
+reproduction with varied actions through 2048 seasons. The prospective activity
+definition checks each complete 128-season window after the first 128 warmup
+seasons for at least one placed birth and two distinct action types with actual
+committed effects. Blocked zero-effect moves do not count. Partial windows and
+zero-population initialization do not establish success. There is no predator
+quota or claim that shared ancestry means monoculture.
+
+Initial/checkpoint/final JSON records report configuration, seed, source-loaded
+assembly identities, RNG draws, actual completed horizon, population/turnover,
+generations, resources, action effects and timings. Threshold accounting is
+per-season; the final display trajectory is explicitly sampled every eight
+seasons. Action resource totals are the reported action outcomes, separate from
+other system/aging costs and the actual board/reserve census. Time-limited runs
+remain inconclusive at the requested horizon even if an earlier threshold
+violation is already known. Full reference state is captured only for a final
+quiescent reference result.
+
+See `KnowledgeBase/R02_PART4_CONTRACT.md` for the frozen comparison seeds,
+budgets, candidate-selection and reserved-confirmation rules. These metrics
+evaluate that bounded screen; they do not prove biological realism, inherited
+adaptation, long-term balance for every seed, or owner acceptance of R02.
+
+The existing Python runtime can run `KnowledgeBase/tools/run_part4_checks.py`
+with `--stage <unique-name> --configuration Release` and exactly one selector:
+`--suite`, `--reference`, or `--comparison <candidate>`. The wrapper validates
+arguments before launching a process, retains one current aggregate report,
+and rejects reuse of an attempted stage name. `--confirmation <candidate>` is
+only for an explicitly recorded selection after all four comparison seeds pass;
+the wrapper never selects a candidate or runs reserved seeds automatically.
+An interrupted run retains earlier observed failures and the exact season of
+its last flushed criteria summary, separately from incomplete horizon coverage.
+`KnowledgeBase/tools/summarize_part4.py` reads that report and prints an
+independent arithmetic, coverage and executable-identity audit, per-seed results
+and candidate eligibility. It launches nothing and writes no files. Eligibility
+requires complete evidence, not just a passing label in a partial report.

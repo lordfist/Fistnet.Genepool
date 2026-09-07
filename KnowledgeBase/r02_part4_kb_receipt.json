@@ -1,0 +1,149 @@
+{
+  "actor": "Genepool Analyzer",
+  "at_utc": "2026-09-06T22:14:39.181827+00:00",
+  "transaction": "r02_part4_transaction.json",
+  "transaction_sha256": "0F1445E80EC5E2415324BD36F1E98A329E6908B584FFFC90A411478DD1C5CEE3",
+  "expected_from_revision": 37,
+  "observed_committed_revision": 38,
+  "preview": {
+    "preview_time": "2026-09-06T22:10:34+00:00",
+    "reviewed_offsets": [
+      0,
+      100,
+      200,
+      300,
+      400
+    ],
+    "field_changes": 472,
+    "automatic_changes": 23,
+    "total_changes_reviewed": 495,
+    "all_pages_complete": true
+  },
+  "apply_invocations": 1,
+  "original_apply_response_available": false,
+  "response_issue": "Orchestration tried parsing the initial yielded exec result before the KB command returned final JSON; original command response was not recovered. No apply retry was made.",
+  "reconciliation": {
+    "status": "COMMIT_INDEPENDENTLY_VERIFIED",
+    "records_equal_to_reviewed_transaction": 10,
+    "sources_equal_to_reviewed_transaction": 25,
+    "core_patch_fields_equal": 11,
+    "canonical_state_hashes_match": true,
+    "no_staging_entries": true,
+    "deep_validation_at_revision38": "PASS;0errors,1existing historical-byte warning",
+    "recovery_required": false
+  },
+  "preparation": [
+    {
+      "source_id": "SRC-0169",
+      "from_revision": 38,
+      "to_revision": 39,
+      "write_outcome": "commit_completed; verification_completed; no cleanup errors or uncertainty",
+      "metadata": {
+        "status": "prepared",
+        "level": "searchable_text",
+        "path": "prepared/SRC-0169.jsonl",
+        "version": 1,
+        "preparer_version": 2,
+        "source_sha256": "25D6E7E10D912217B26F3676D5BF713EAA9C3805D4F51A80C5692A862A4F7D79",
+        "prepared_sha256": "519374F032BDE5B6EFAD12A7DF1D4620B2D97711B3999490A3EB7DA6AEF80A6E",
+        "prepared_at": "2026-09-06T22:14:47+00:00",
+        "coverage": {
+          "encoding": "utf-8-sig",
+          "text": "static bounded line chunks",
+          "execution": "not executed",
+          "external_references": "not followed"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0163",
+      "from_revision": 39,
+      "to_revision": 40,
+      "write_outcome": "commit_completed; verification_completed; no cleanup errors or uncertainty",
+      "metadata": {
+        "status": "prepared",
+        "level": "searchable_text",
+        "path": "prepared/SRC-0163.jsonl",
+        "version": 1,
+        "preparer_version": 2,
+        "source_sha256": "7BE5F9B8F7D104E56058E07C54445AFD0F117CFB4F3DA3EDF37479761ED225EF",
+        "prepared_sha256": "4835D244746FE23D9FEFEE36374F9355D92C3A1C13BF5F101F9AE3F063D7C0D4",
+        "prepared_at": "2026-09-06T22:15:35+00:00",
+        "coverage": {
+          "encoding": "utf-8-sig",
+          "text": "static bounded line chunks",
+          "execution": "not executed",
+          "external_references": "not followed"
+        }
+      }
+    }
+  ],
+  "historical_warning": "Existing SRC-0115 exact mixed-newline predecessor-byte gap, previously recorded in FACT-0042. Part4 adds no new history gap.",
+  "final_validation": {
+    "ok": true,
+    "errors": [],
+    "warnings": [
+      "source SRC-0115 historical bytes unavailable: The registered mixed-newline Part2 Board.cs bytes are not reproduced by local commit c5a494a412684d801031d1dec2c2c7670f5e3293 using raw or LF-to-CRLF transforms. Bounded reconstruction from retained predecessor/successor evidence did not match the registered SHA256. Git code version and historical prepared text remain available, but exact original-byte history is unverified. See FACT-0042."
+    ],
+    "counts": {
+      "records": 87,
+      "sources": 171,
+      "historical_sources": 84,
+      "prepared_sources": 21
+    },
+    "core_estimated_tokens": 3587,
+    "deep": true,
+    "kb_revision": 40
+  },
+  "final_revision": 40,
+  "finalized_at_utc": "2026-09-06T22:17:40.992336+00:00",
+  "canonical_sha256": {
+    "core.json": "93762237C134C7405980CDBEEC3C133EFD178C621FFA23FB5F9425A0C86DDF21",
+    "records.jsonl": "DB9FC977DCCE5E2A6ABCA8349B1140281964B293BD7702CE9A149F8ECDF2538D",
+    "sources.json": "0107E8C465C0C3DE9F409055BF53C6DC83726D67F70F95B6084AA3CD1A17DC5C"
+  },
+  "retrieval_verification": {
+    "revision": 40,
+    "returned": [
+      "DEC-0017",
+      "DEC-0018",
+      "Q-0003",
+      "FACT-0046",
+      "INF-0009"
+    ],
+    "missing_ids": [],
+    "complete": true
+  },
+  "records_added": [
+    "DEC-0017",
+    "DEC-0018",
+    "FACT-0044",
+    "FACT-0045",
+    "FACT-0046",
+    "INF-0009"
+  ],
+  "records_updated": [
+    "Q-0003",
+    "REC-0005",
+    "INF-0008",
+    "FACT-0042"
+  ],
+  "new_source_versions": [
+    "SRC-0157",
+    "SRC-0158",
+    "SRC-0159",
+    "SRC-0160",
+    "SRC-0161",
+    "SRC-0162",
+    "SRC-0163",
+    "SRC-0164",
+    "SRC-0165",
+    "SRC-0166",
+    "SRC-0167",
+    "SRC-0168",
+    "SRC-0169",
+    "SRC-0170",
+    "SRC-0171"
+  ],
+  "source_predecessors_revised": 10
+}

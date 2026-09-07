@@ -16,7 +16,8 @@ internal static class DiagnosticScenarios
     private static readonly object OutputLock = new();
 
     internal record Options(int Seed, int Seasons, SimulationMode Mode, bool Diagnostics,
-        int Batch, bool Render, int Density = 10, string Fixture = null);
+        int Batch, bool Render, int Density = 10, string Fixture = null,
+        CellExecutionMode CellExecution = CellExecutionMode.Automatic);
 
     internal static int RunCli(string[] args)
     {
@@ -52,7 +53,7 @@ internal static class DiagnosticScenarios
     private static bool OnOff(string text) => text == "on" ? true : text == "off" ? false
         : throw new ArgumentException("Diagnostics must be on or off.");
 
-    private static int Run(Options options)
+    internal static int Run(Options options)
     {
         if (options.Seasons < 1 || options.Seasons > MaximumSeasons) throw new ArgumentOutOfRangeException(nameof(options.Seasons));
         if (options.Batch != 1 && options.Batch != 8) throw new ArgumentException("Batch must be 1 or 8.");
@@ -110,7 +111,7 @@ internal static class DiagnosticScenarios
         {
             if (options.Fixture == null)
                 Board.Reset(new SimulationRunOptions { Mode = options.Mode, Seed = options.Seed, InitialPopulationPercent = options.Density });
-            else SetupFixture(options.Density, options.Fixture == "large" ? 32 : 0);
+            else SetupFixture(options.Density, options.Fixture == "large" ? 32 : 0, options.CellExecution);
             if (options.Diagnostics) SimulationDiagnostics.Attach(session = new DiagnosticSession(128, 256));
             if (options.Render) renderer = new GameboardBitmap(800);
 
@@ -219,9 +220,10 @@ internal static class DiagnosticScenarios
         }
     }
 
-    internal static void SetupFixture(int density, int externalContexts)
+    internal static void SetupFixture(int density, int externalContexts, CellExecutionMode cellExecution = CellExecutionMode.Automatic)
     {
-        Board.Reset(new SimulationRunOptions { Mode = SimulationMode.Production, Seed = 29, InitialPopulationPercent = density },
+        Board.Reset(new SimulationRunOptions { Mode = SimulationMode.Production, Seed = 29, InitialPopulationPercent = density,
+            CellExecution = cellExecution },
             (x, y) =>
             {
                 if ((x * Board.BOARD_SIZE + y) % 100 >= density) return null;
