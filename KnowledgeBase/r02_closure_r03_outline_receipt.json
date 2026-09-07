@@ -1,0 +1,68 @@
+{
+  "actor": "Genepool Analyzer",
+  "operation": "R02 closure and unstarted R03 outline",
+  "owner_closure_record": "DEC-0020",
+  "owner_next_iteration_record": "DEC-0021",
+  "preliminary_opinion_record": "REC-0007",
+  "preview": {
+    "reviewed_offsets": [
+      0,
+      100
+    ],
+    "reviewed_changes": 106,
+    "transaction_sha256": "CEA751EB59BDFCDE1689ABEDFB5411AC73573ED7640C25D6599F27026A0A8F7F"
+  },
+  "apply": {
+    "ok": true,
+    "dry_run": false,
+    "from_revision": 41,
+    "to_revision": 42,
+    "effects": {
+      "record_upserts": 6,
+      "source_upserts": 0,
+      "core_fields_patched": 9
+    },
+    "validation_scope": "deep_sources_and_prepared",
+    "write_outcome": {
+      "stage": "commit_completed",
+      "replaced_files": [
+        "records.jsonl",
+        "sources.json",
+        "core.json"
+      ],
+      "commit_completed": true,
+      "verification_completed": true,
+      "rollback_performed": false,
+      "recovery_required": false,
+      "cleanup_errors": [],
+      "replacement_uncertain": false
+    },
+    "transaction_sha256": "CEA751EB59BDFCDE1689ABEDFB5411AC73573ED7640C25D6599F27026A0A8F7F",
+    "hashes": {
+      "core.json": "2BF069DDB3BC656D9B62ECAEF98CDEA85E5993066B6B5A906FFCD6747C59C959",
+      "records.jsonl": "135E938373162D4A32DF127B2FE104813C98163885B34D001E5D3F3014CAA4DC",
+      "sources.json": "0107E8C465C0C3DE9F409055BF53C6DC83726D67F70F95B6084AA3CD1A17DC5C"
+    }
+  },
+  "deep_validation": {
+    "ok": true,
+    "errors": [],
+    "warnings": [
+      "source SRC-0115 historical bytes unavailable: The registered mixed-newline Part2 Board.cs bytes are not reproduced by local commit c5a494a412684d801031d1dec2c2c7670f5e3293 using raw or LF-to-CRLF transforms. Bounded reconstruction from retained predecessor/successor evidence did not match the registered SHA256. Git code version and historical prepared text remain available, but exact original-byte history is unverified. See FACT-0042."
+    ],
+    "counts": {
+      "records": 91,
+      "sources": 171,
+      "historical_sources": 84,
+      "prepared_sources": 21
+    },
+    "core_estimated_tokens": 4019,
+    "deep": true,
+    "kb_revision": 42
+  },
+  "readback": {
+    "records_verified": 6,
+    "core_fields_verified": 9
+  },
+  "scope": "KB maintenance and requested conceptual opinion only. No R03 research, code changes, installations, builds or trials started. R02 ecology closed as inconclusive; accepted engineering results and historical evidence preserved."
+}

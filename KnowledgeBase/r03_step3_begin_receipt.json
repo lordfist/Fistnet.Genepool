@@ -1,0 +1,454 @@
+{
+  "actor": "Genepool Analyzer",
+  "approval": "DEC-0025",
+  "preview": {
+    "ok": true,
+    "dry_run": true,
+    "kb_revision": 45,
+    "from_revision": 45,
+    "to_revision": 46,
+    "effects": {
+      "record_upserts": 2,
+      "source_upserts": 0,
+      "core_fields_patched": 8
+    },
+    "warnings": [
+      "source SRC-0115 historical bytes unavailable: The registered mixed-newline Part2 Board.cs bytes are not reproduced by local commit c5a494a412684d801031d1dec2c2c7670f5e3293 using raw or LF-to-CRLF transforms. Bounded reconstruction from retained predecessor/successor evidence did not match the registered SHA256. Git code version and historical prepared text remain available, but exact original-byte history is unverified. See FACT-0042."
+    ],
+    "warning_count": 1,
+    "warnings_truncated": false,
+    "validation_scope": "deep_sources_and_prepared",
+    "write_outcome": {
+      "stage": "before_replacement",
+      "replaced_files": [],
+      "commit_completed": false,
+      "verification_completed": false,
+      "rollback_performed": false,
+      "recovery_required": false,
+      "cleanup_errors": [],
+      "replacement_uncertain": false
+    },
+    "transaction_sha256": "A56C4536085F9616863C1573641FF07F194FEB7BE10B0B81FC51C9B03BCACE39",
+    "preview_time": "2026-09-07T18:28:28+00:00",
+    "preview": {
+      "affected_counts": {
+        "record": 2,
+        "source": 0,
+        "core": 1,
+        "catalog": 0
+      },
+      "field_change_count": 44,
+      "automatic_change_count": 7,
+      "path_format": "json_pointer",
+      "arrays": "atomic",
+      "values_included": false,
+      "upserts": "whole_object",
+      "core_patch": "shallow_replacement"
+    },
+    "changes": [
+      {
+        "target": "core",
+        "id": "core",
+        "automatic": false,
+        "path": "/authority/current_research_scope",
+        "change": "changed"
+      },
+      {
+        "target": "core",
+        "id": "core",
+        "automatic": false,
+        "path": "/authority/current_stage_record",
+        "change": "changed"
+      },
+      {
+        "target": "core",
+        "id": "core",
+        "automatic": false,
+        "path": "/authority/next_action",
+        "change": "changed"
+      },
+      {
+        "target": "core",
+        "id": "core",
+        "automatic": false,
+        "path": "/authority/originals",
+        "change": "changed"
+      },
+      {
+        "target": "core",
+        "id": "core",
+        "automatic": false,
+        "path": "/current_iteration_part/id",
+        "change": "changed"
+      },
+      {
+        "target": "core",
+        "id": "core",
+        "automatic": false,
+        "path": "/current_iteration_part/limits",
+        "change": "changed"
+      },
+      {
+        "target": "core",
+        "id": "core",
+        "automatic": false,
+        "path": "/current_iteration_part/plan",
+        "change": "added"
+      },
+      {
+        "target": "core",
+        "id": "core",
+        "automatic": false,
+        "path": "/current_iteration_part/record_ids",
+        "change": "changed"
+      },
+      {
+        "target": "core",
+        "id": "core",
+        "automatic": false,
+        "path": "/current_iteration_part/report",
+        "change": "removed"
+      },
+      {
+        "target": "core",
+        "id": "core",
+        "automatic": false,
+        "path": "/current_iteration_part/status",
+        "change": "changed"
+      },
+      {
+        "target": "core",
+        "id": "core",
+        "automatic": false,
+        "path": "/current_iteration_part/verification",
+        "change": "changed"
+      },
+      {
+        "target": "core",
+        "id": "core",
+        "automatic": false,
+        "path": "/experiment/design_accepted_scope",
+        "change": "changed"
+      },
+      {
+        "target": "core",
+        "id": "core",
+        "automatic": false,
+        "path": "/experiment/status",
+        "change": "changed"
+      },
+      {
+        "target": "core",
+        "id": "core",
+        "automatic": false,
+        "path": "/last_maintenance/note",
+        "change": "changed"
+      },
+      {
+        "target": "core",
+        "id": "core",
+        "automatic": false,
+        "path": "/next_iteration/implementation_authorization_record",
+        "change": "added"
+      },
+      {
+        "target": "core",
+        "id": "core",
+        "automatic": false,
+        "path": "/next_iteration/implementation_started",
+        "change": "changed"
+      },
+      {
+        "target": "core",
+        "id": "core",
+        "automatic": false,
+        "path": "/next_iteration/next_action",
+        "change": "changed"
+      },
+      {
+        "target": "core",
+        "id": "core",
+        "automatic": false,
+        "path": "/next_iteration/start_scope",
+        "change": "changed"
+      },
+      {
+        "target": "core",
+        "id": "core",
+        "automatic": false,
+        "path": "/next_iteration/status",
+        "change": "changed"
+      },
+      {
+        "target": "core",
+        "id": "core",
+        "automatic": false,
+        "path": "/owner_decision_ids",
+        "change": "changed"
+      },
+      {
+        "target": "core",
+        "id": "core",
+        "automatic": false,
+        "path": "/proposal/implementation_authorized",
+        "change": "changed"
+      },
+      {
+        "target": "core",
+        "id": "core",
+        "automatic": false,
+        "path": "/proposal/limits",
+        "change": "changed"
+      },
+      {
+        "target": "core",
+        "id": "core",
+        "automatic": false,
+        "path": "/proposal/owner_acceptance_record",
+        "change": "added"
+      },
+      {
+        "target": "core",
+        "id": "core",
+        "automatic": false,
+        "path": "/proposal/status",
+        "change": "changed"
+      },
+      {
+        "target": "core",
+        "id": "core",
+        "automatic": false,
+        "path": "/routes/r03_implementation_plan/record_ids",
+        "change": "changed"
+      },
+      {
+        "target": "core",
+        "id": "core",
+        "automatic": false,
+        "path": "/tooling/current_maintenance_authority",
+        "change": "changed"
+      },
+      {
+        "target": "core",
+        "id": "core",
+        "automatic": false,
+        "path": "/tooling/current_verification_receipt",
+        "change": "changed"
+      },
+      {
+        "target": "record",
+        "id": "DEC-0025",
+        "automatic": false,
+        "path": "/id",
+        "change": "added"
+      },
+      {
+        "target": "record",
+        "id": "DEC-0025",
+        "automatic": false,
+        "path": "/kind",
+        "change": "added"
+      },
+      {
+        "target": "record",
+        "id": "DEC-0025",
+        "automatic": false,
+        "path": "/origin",
+        "change": "added",
+        "object_presence_only": true
+      },
+      {
+        "target": "record",
+        "id": "DEC-0025",
+        "automatic": false,
+        "path": "/origin/actor",
+        "change": "added"
+      },
+      {
+        "target": "record",
+        "id": "DEC-0025",
+        "automatic": false,
+        "path": "/origin/quote",
+        "change": "added"
+      },
+      {
+        "target": "record",
+        "id": "DEC-0025",
+        "automatic": false,
+        "path": "/origin/recorded_at_utc",
+        "change": "added"
+      },
+      {
+        "target": "record",
+        "id": "DEC-0025",
+        "automatic": false,
+        "path": "/origin/type",
+        "change": "added"
+      },
+      {
+        "target": "record",
+        "id": "DEC-0025",
+        "automatic": false,
+        "path": "/related_record_ids",
+        "change": "added"
+      },
+      {
+        "target": "record",
+        "id": "DEC-0025",
+        "automatic": false,
+        "path": "/source_refs",
+        "change": "added"
+      },
+      {
+        "target": "record",
+        "id": "DEC-0025",
+        "automatic": false,
+        "path": "/statement",
+        "change": "added"
+      },
+      {
+        "target": "record",
+        "id": "DEC-0025",
+        "automatic": false,
+        "path": "/status",
+        "change": "added"
+      },
+      {
+        "target": "record",
+        "id": "DEC-0025",
+        "automatic": false,
+        "path": "/tags",
+        "change": "added"
+      },
+      {
+        "target": "record",
+        "id": "DEC-0025",
+        "automatic": false,
+        "path": "/uncertainty",
+        "change": "added"
+      },
+      {
+        "target": "record",
+        "id": "REC-0009",
+        "automatic": false,
+        "path": "/related_record_ids",
+        "change": "changed"
+      },
+      {
+        "target": "record",
+        "id": "REC-0009",
+        "automatic": false,
+        "path": "/resolution_notes",
+        "change": "added"
+      },
+      {
+        "target": "record",
+        "id": "REC-0009",
+        "automatic": false,
+        "path": "/statement",
+        "change": "changed"
+      },
+      {
+        "target": "record",
+        "id": "REC-0009",
+        "automatic": false,
+        "path": "/status",
+        "change": "changed"
+      },
+      {
+        "target": "core",
+        "id": "core",
+        "automatic": true,
+        "path": "/kb_revision",
+        "change": "changed"
+      },
+      {
+        "target": "core",
+        "id": "core",
+        "automatic": true,
+        "path": "/last_maintenance/at",
+        "change": "changed"
+      },
+      {
+        "target": "core",
+        "id": "core",
+        "automatic": true,
+        "path": "/state_files/records_jsonl_sha256",
+        "change": "changed"
+      },
+      {
+        "target": "core",
+        "id": "core",
+        "automatic": true,
+        "path": "/updated_at",
+        "change": "changed"
+      },
+      {
+        "target": "record",
+        "id": "DEC-0025",
+        "automatic": true,
+        "path": "/created_at",
+        "change": "added"
+      },
+      {
+        "target": "record",
+        "id": "DEC-0025",
+        "automatic": true,
+        "path": "/updated_at",
+        "change": "added"
+      },
+      {
+        "target": "record",
+        "id": "REC-0009",
+        "automatic": true,
+        "path": "/updated_at",
+        "change": "changed"
+      }
+    ],
+    "offset": 0,
+    "returned_count": 51,
+    "available_count": 51,
+    "total_count": 51,
+    "omitted_count": 0,
+    "remaining_available_count": 0,
+    "scan_complete": true,
+    "next_offset": null,
+    "continuation_limited": false,
+    "truncated": false,
+    "estimated_tokens": 2227
+  },
+  "apply": {
+    "ok": true,
+    "dry_run": false,
+    "from_revision": 45,
+    "to_revision": 46,
+    "effects": {
+      "record_upserts": 2,
+      "source_upserts": 0,
+      "core_fields_patched": 8
+    },
+    "validation_scope": "deep_sources_and_prepared",
+    "write_outcome": {
+      "stage": "commit_completed",
+      "replaced_files": [
+        "records.jsonl",
+        "sources.json",
+        "core.json"
+      ],
+      "commit_completed": true,
+      "verification_completed": true,
+      "rollback_performed": false,
+      "recovery_required": false,
+      "cleanup_errors": [],
+      "replacement_uncertain": false
+    },
+    "transaction_sha256": "A56C4536085F9616863C1573641FF07F194FEB7BE10B0B81FC51C9B03BCACE39",
+    "hashes": {
+      "core.json": "F0093F0F53869701C0FA04343952B2A112753DAA95491CE5B00E45D3FE92F174",
+      "records.jsonl": "BA88727FCFD0D695E121E065CCB06DF9382F7C7DE63B15F0DE016243FCB0BDCE",
+      "sources.json": "68006B87264935ED7907DA37344172C821A342E899D059BF1AE3F4939689E829"
+    }
+  },
+  "verification": "Apply deeply verified current sources and prepared evidence. Existing SRC-0115 historical warning only.",
+  "source_preservation": "r03_step3_preedit_history.json"
+}

@@ -1,0 +1,8 @@
+{
+  "actor": "Genepool Analyzer",
+  "normal_main_scene_exit_code": 0,
+  "elapsed_seconds": 2.75,
+  "frame_limit": 180,
+  "output": "Godot Engine v4.7.2.stable.mono.official.ed1daf0bf - https://godotengine.org\r\nOpenGL API 3.3.0 Core Profile Context 26.8.1.260806 - Compatibility - Using Device: ATI Technologies Inc. - AMD Radeon RX 6800\r\n\r\n",
+  "limitations": "Default startup smoke, no owner interaction or ecological evaluation. Full graceful worker shutdown exercised in verification scene."
+}

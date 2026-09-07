@@ -1,0 +1,456 @@
+{
+  "actor": "Genepool Analyzer",
+  "note": "Record owner approval and begin bounded Godot 2D implementation; exact existing-source predecessors checked before edits.",
+  "upsert_records": [
+    {
+      "id": "DEC-0025",
+      "kind": "owner_decision",
+      "status": "active",
+      "statement": "Owner approves REC-0009 R03 Godot 2D plan, starts its bounded implementation and authorizes required downloads. Implement and verify setup/2D viewer, then stop for review before 3D/graphics-polish stages. If an issue cannot be resolved, stop and report it for owner help.",
+      "source_refs": [],
+      "related_record_ids": [
+        "DEC-0024",
+        "REC-0009",
+        "DEC-0020"
+      ],
+      "tags": [
+        "R03",
+        "Step3",
+        "Godot",
+        "implementation"
+      ],
+      "origin": {
+        "type": "direct_user_message",
+        "actor": "Genepool Analyzer",
+        "recorded_at_utc": "2026-09-07T18:28:27.175035+00:00",
+        "quote": "Approved. Start the implementation. Download anything you need. If there is an issue you can't fix stop and tell me, I will try to help."
+      },
+      "uncertainty": "Approval authorizes the planned local setup, downloads, edits, builds and bounded verification; it does not establish successful integration or owner acceptance of the resulting viewer. R02 ecology remains closed."
+    },
+    {
+      "id": "REC-0009",
+      "kind": "recommendation",
+      "status": "resolved",
+      "statement": "R03 Step2 Godot 2D implementation plan accepted by owner in DEC-0025. R03 Step3 authorized setup/implementation is in progress; dependency, VS2022, GPU and viewer verification remain to be established. Detailed accepted scope is R03_GODOT_2D_IMPLEMENTATION_PLAN.md; later depth/graphics polish and standalone packaging remain outside this milestone.",
+      "source_refs": [
+        "SRC-0067",
+        "SRC-0052",
+        "SRC-0070",
+        "SRC-0069",
+        "SRC-0002",
+        "SRC-0068",
+        "SRC-0056",
+        "SRC-0147",
+        "SRC-0149",
+        "SRC-0159",
+        "SRC-0163",
+        "SRC-0144",
+        "SRC-0164",
+        "SRC-0152",
+        "SRC-0162",
+        "SRC-0151",
+        "SRC-0202",
+        "SRC-0203",
+        "SRC-0204",
+        "SRC-0205",
+        "SRC-0206",
+        "SRC-0207",
+        "SRC-0208",
+        "SRC-0209",
+        "SRC-0210",
+        "SRC-0211",
+        "SRC-0181",
+        "SRC-0212",
+        "SRC-0213",
+        "SRC-0214",
+        "SRC-0215",
+        "SRC-0216",
+        "SRC-0217",
+        "SRC-0218",
+        "SRC-0219",
+        "SRC-0220",
+        "SRC-0221",
+        "SRC-0222"
+      ],
+      "related_record_ids": [
+        "DEC-0024",
+        "FACT-0048",
+        "CLAIM-0008",
+        "REC-0008",
+        "DEC-0020",
+        "DEC-0025"
+      ],
+      "tags": [
+        "R03",
+        "Step2",
+        "Godot",
+        "VS2022"
+      ],
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step2_planning",
+        "recorded_at_utc": "2026-09-07T17:28:26.589323+00:00"
+      },
+      "uncertainty": "Architecture and timing criteria are proposals; integration and actual GPU capability remain checkpoint risks. Keeping WinForms is the proposed migration/comparison path, not an owner requirement to embed Godot.",
+      "derivation": {
+        "artifacts": [
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_GODOT_2D_IMPLEMENTATION_PLAN.md",
+            "sha256": "513769F12ACED547CB8DFF6DFE29D5E7F1CD18A6A99E65685B3F7B9AAEC08472",
+            "bytes": 18316,
+            "status": "Derived Step2 plan/evidence; not implemented or owner accepted."
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step2_evidence.json",
+            "sha256": "B83F57173A3476192E3C5334F37C0E93264C7502AC7A0FD760B09ADCAE90A3F4",
+            "bytes": 16737,
+            "status": "Derived Step2 plan/evidence; not implemented or owner accepted."
+          }
+        ],
+        "locators": [
+          "Plan numbered dependencies and implementation checkpoints; evidence.local_sources/public_sources/installed_metadata."
+        ]
+      },
+      "created_at": "2026-09-07T17:29:56+00:00",
+      "updated_at": "2026-09-07T17:29:56+00:00",
+      "resolution_notes": [
+        {
+          "at_utc": "2026-09-07T18:28:27.175035+00:00",
+          "actor": "Genepool Analyzer",
+          "prior_statement": "R03 Step2 plan: portable Godot.NET4.7.2 plus implicit NuGet SDK packages; retain SDK9.0.315 and whole VS2022 solution. Add a complete Godot viewer owning the existing simulation worker, two GPU batches for food/organisms, camera and control/details parity. First verify toolchain/GPU/F5, then frozen frames, live integration, parity and bounded tests/performance. Defer standalone export templates,3D and graphics polish. Plan complete awaiting owner review; no implementation started.",
+          "note": "Owner accepted the plan and authorized its implementation/downloads in DEC-0025. Result acceptance remains pending.",
+          "record_ids": [
+            "DEC-0025"
+          ]
+        }
+      ]
+    }
+  ],
+  "upsert_sources": [],
+  "core_patch": {
+    "experiment": {
+      "root": "D:\\Posao\\Fistnet.Genepool",
+      "purpose": "Make this experiment a better simulation and more fun to watch.",
+      "purpose_origin_record": "DEC-0002",
+      "status": "R03_Step3_implementation_in_progress",
+      "phase": "EVOLUTION",
+      "root_semantics": "Exact physical experiment root explicitly assigned by User; KB tools bound to this root.",
+      "model": "Provisional artificial-life sandbox with inherited action repertoires and individual learning.",
+      "model_record": "INF-0001",
+      "model_accepted": false,
+      "design_accepted": true,
+      "trial_authorized": false,
+      "trial_scope": "R02 ecological evaluation closed as INCONCLUSIVE by DEC-0020. Prior 16 comparisons remain time-limited; reserved confirmation was not run. No active or newly authorized trial.",
+      "design_accepted_scope": "R02 Parts1-4 accepted and closed with ecology inconclusive. R03 Godot engine selected by DEC-0024; Step2 plan REC-0009 accepted and bounded setup/2D implementation authorized by DEC-0025."
+    },
+    "owner_decision_ids": [
+      "DEC-0001",
+      "DEC-0002",
+      "DEC-0003",
+      "DEC-0004",
+      "DEC-0005",
+      "DEC-0006",
+      "DEC-0007",
+      "DEC-0008",
+      "DEC-0009",
+      "DEC-0010",
+      "DEC-0011",
+      "DEC-0012",
+      "DEC-0013",
+      "DEC-0014",
+      "DEC-0015",
+      "DEC-0016",
+      "DEC-0017",
+      "DEC-0018",
+      "DEC-0019",
+      "DEC-0020",
+      "DEC-0021",
+      "DEC-0022",
+      "DEC-0023",
+      "DEC-0024",
+      "DEC-0025"
+    ],
+    "authority": {
+      "assignment_record": "DEC-0001",
+      "actor": "Genepool Analyzer",
+      "knowledgebase_root": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase",
+      "continuing_kb_authority": "Routine in-root KB retrieval, validation, preparation and transactions remain authorized. DEC-0006 permits adapting tools with proportionate checks. The earlier unversioned-KB premise is superseded for canonical files by FACT-0027; current edits still require normal revision/preview/verification safeguards.",
+      "originals": "Bounded source edits/builds/tests authorized by DEC-0025; exact pre-edit Git histories checked in r03_step3_preedit_history.json.",
+      "next_action": "Implement approved Godot setup and 2D viewer; verify and stop for owner review or an unresolved blocker.",
+      "current_stage_record": "DEC-0025",
+      "environment_assessment": "Historical environment assessment used installed metadata and disposable synthetic probes; subsequent bounded source repair is recorded separately in FACT-0019.",
+      "current_research_scope": "Implementation-related primary-source research and required downloads authorized; no new ecological evaluation.",
+      "specialization_record": "DEC-0016"
+    },
+    "proposal": {
+      "id": "R03_Step2",
+      "record_id": "REC-0009",
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_GODOT_2D_IMPLEMENTATION_PLAN.md",
+      "sha256": "513769F12ACED547CB8DFF6DFE29D5E7F1CD18A6A99E65685B3F7B9AAEC08472",
+      "status": "OWNER_ACCEPTED_IMPLEMENTATION_AUTHORIZED",
+      "engine": "Godot C#",
+      "engine_selection_record": "DEC-0024",
+      "implementation_authorized": true,
+      "research_authorization_record": "DEC-0024",
+      "selection_criterion_record": "DEC-0023",
+      "result_record_ids": [
+        "FACT-0048",
+        "CLAIM-0008"
+      ],
+      "source_commit_horizon": "bdfaa0c555edf8807f680f46b71e0ef16e387d07",
+      "evidence_manifest": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step2_evidence.json",
+      "limits": "Accepted plan; implementation and verification in progress, outcome not accepted.",
+      "owner_acceptance_record": "DEC-0025"
+    },
+    "current_iteration_part": {
+      "id": "R03_Step3",
+      "status": "IMPLEMENTATION_IN_PROGRESS",
+      "record_ids": [
+        "DEC-0025",
+        "REC-0009"
+      ],
+      "plan": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_GODOT_2D_IMPLEMENTATION_PLAN.md",
+      "verification": "Pending initial toolchain/GPU checkpoint.",
+      "limits": "2D setup/viewer only; stop for review before depth/3D/graphics polish."
+    },
+    "next_iteration": {
+      "id": "R03",
+      "status": "R03_STEP3_IMPLEMENTATION_IN_PROGRESS",
+      "owner_outline_record": "DEC-0021",
+      "preliminary_opinion_record": "REC-0007",
+      "scope": "GPU visualization: research -> plan -> familiar 2D -> either 2.5D or 3D -> improved graphics",
+      "constraints": [
+        "Free for non-commercial use",
+        "Whole solution compatible with Visual Studio 2022",
+        "Useful examples and reusable2D/3D assets",
+        "Proportionate simulation visuals"
+      ],
+      "research_started": true,
+      "plan_started": true,
+      "implementation_started": true,
+      "start_authorized": true,
+      "next_action": "Complete approved setup/2D implementation and verification, then owner review.",
+      "start_scope": "Step3 authorized by DEC-0025",
+      "current_recommendation_record": "REC-0009",
+      "engine_selection_record": "DEC-0024",
+      "implementation_authorization_record": "DEC-0025"
+    },
+    "routes": {
+      "orientation": {
+        "record_ids": [
+          "FACT-0001",
+          "FACT-0002",
+          "FACT-0011",
+          "INF-0001"
+        ]
+      },
+      "mechanics": {
+        "record_ids": [
+          "FACT-0003",
+          "FACT-0004",
+          "FACT-0005",
+          "INF-0003"
+        ]
+      },
+      "watchability": {
+        "record_ids": [
+          "DEC-0002",
+          "FACT-0006",
+          "FACT-0009",
+          "REC-0001"
+        ]
+      },
+      "material_findings": {
+        "record_ids": [
+          "FACT-0007",
+          "FACT-0008",
+          "FACT-0010",
+          "INF-0002",
+          "FACT-0023"
+        ]
+      },
+      "proposal_and_tests": {
+        "record_ids": [
+          "DEC-0003",
+          "REC-0002",
+          "FACT-0012",
+          "Q-0001",
+          "Q-0002",
+          "DEC-0007",
+          "FACT-0024",
+          "FACT-0025",
+          "FACT-0028",
+          "FACT-0029",
+          "INF-0004",
+          "DEC-0009"
+        ]
+      },
+      "environment_capabilities": {
+        "record_ids": [
+          "DEC-0004",
+          "FACT-0013",
+          "FACT-0014",
+          "FACT-0015",
+          "FACT-0016",
+          "REC-0003",
+          "Q-0002",
+          "CLAIM-0001",
+          "FACT-0017",
+          "FACT-0018",
+          "REC-0004",
+          "DEC-0005",
+          "FACT-0019",
+          "CLAIM-0002",
+          "FACT-0021"
+        ]
+      },
+      "kb_tooling": {
+        "record_ids": [
+          "DEC-0006",
+          "FACT-0020",
+          "FACT-0019",
+          "DEC-0013",
+          "FACT-0036",
+          "FACT-0039",
+          "FACT-0045"
+        ]
+      },
+      "current_implementation": {
+        "record_ids": [
+          "DEC-0017",
+          "DEC-0018",
+          "FACT-0044",
+          "FACT-0045",
+          "FACT-0046",
+          "INF-0009",
+          "DEC-0019",
+          "DEC-0020"
+        ]
+      },
+      "r02_research_and_proposal": {
+        "record_ids": [
+          "DEC-0010",
+          "CLAIM-0004",
+          "FACT-0030",
+          "FACT-0031",
+          "FACT-0032",
+          "INF-0005",
+          "CLAIM-0005",
+          "REC-0005",
+          "Q-0001",
+          "DEC-0011",
+          "Q-0003",
+          "DEC-0012",
+          "DEC-0019",
+          "DEC-0020"
+        ]
+      },
+      "r02_part1_result": {
+        "record_ids": [
+          "DEC-0012",
+          "FACT-0033",
+          "FACT-0034",
+          "FACT-0035",
+          "INF-0006",
+          "Q-0003"
+        ]
+      },
+      "r02_part2_result": {
+        "record_ids": [
+          "DEC-0014",
+          "FACT-0037",
+          "FACT-0038",
+          "REC-0006",
+          "INF-0007",
+          "Q-0003",
+          "DEC-0015"
+        ]
+      },
+      "r02_part3_result": {
+        "record_ids": [
+          "DEC-0015",
+          "FACT-0040",
+          "FACT-0041",
+          "FACT-0042",
+          "INF-0008",
+          "DEC-0017"
+        ]
+      },
+      "governance": {
+        "record_ids": [
+          "DEC-0016",
+          "FACT-0043",
+          "DEC-0001",
+          "DEC-0006"
+        ]
+      },
+      "r02_part4_result": {
+        "record_ids": [
+          "DEC-0017",
+          "DEC-0018",
+          "Q-0003",
+          "FACT-0044",
+          "FACT-0045",
+          "FACT-0046",
+          "INF-0009",
+          "DEC-0019",
+          "DEC-0020"
+        ]
+      },
+      "r02_closure": {
+        "record_ids": [
+          "DEC-0020",
+          "DEC-0019",
+          "REC-0005",
+          "FACT-0046",
+          "INF-0009"
+        ]
+      },
+      "r03_outline": {
+        "record_ids": [
+          "DEC-0021",
+          "REC-0007",
+          "DEC-0004",
+          "DEC-0022",
+          "DEC-0023",
+          "REC-0008"
+        ]
+      },
+      "r03_research": {
+        "record_ids": [
+          "DEC-0022",
+          "DEC-0023",
+          "FACT-0047",
+          "CLAIM-0006",
+          "CLAIM-0007",
+          "REC-0008",
+          "DEC-0024",
+          "REC-0009"
+        ]
+      },
+      "r03_implementation_plan": {
+        "record_ids": [
+          "DEC-0024",
+          "FACT-0048",
+          "CLAIM-0008",
+          "REC-0009",
+          "REC-0008",
+          "DEC-0025"
+        ]
+      }
+    },
+    "tooling": {
+      "record_id": "FACT-0039",
+      "policy": ".SeedAnalyzer/KB.md",
+      "source_revision_command": "KnowledgeBase/tools/kb.py revise-source",
+      "verification": "29distinct source-version/reviewed-commit/snapshot checks passed,1host-symlink fixture skipped; current identities in FACT-0039.",
+      "source_history": "Pinned local Git and exact KB snapshots retain identities. SRC-0115 exact mixed-newline predecessor unavailable; prepared history retained with explicit deep-validation warning (FACT-0042).",
+      "knowledgebase_is_git_versioned": true,
+      "knowledgebase_git_scope": "R03 research localHEADbdfaa0c555edf8807f680f46b71e0ef16e387d07; sourcecode clean. KB acceptance/closure and current research edits present; remote uninspected. Prior c5a/Part3-uncommitted observation is historical.",
+      "knowledgebase_owner_decision": "DEC-0008: Keep the KnowledgeBase in Git.",
+      "source_version_record_id": "FACT-0020",
+      "current_maintenance_authority": "DEC-0025",
+      "current_verification_receipt": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step3_begin_receipt.json"
+    }
+  }
+}

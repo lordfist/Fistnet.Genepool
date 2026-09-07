@@ -1,0 +1,454 @@
+{
+  "actor": "Genepool Analyzer",
+  "recorded_at_utc": "2026-09-07T12:43:23.249598+00:00",
+  "retrieval_date": "2026-09-07",
+  "scope": "R03 Step1 research/recommendation only; sources preserved; authorized KB support writes.",
+  "local_head": "bdfaa0c555edf8807f680f46b71e0ef16e387d07",
+  "git_status_before_R03_transaction": [
+    " M KnowledgeBase/core.json",
+    " M KnowledgeBase/records.jsonl",
+    "?? KnowledgeBase/R03_RENDERING_RESEARCH_STEP1.md",
+    "?? KnowledgeBase/r02_closure_r03_outline_receipt.json",
+    "?? KnowledgeBase/r02_closure_r03_outline_transaction.json",
+    "?? KnowledgeBase/r02_part4_acceptance_receipt.json",
+    "?? KnowledgeBase/r02_part4_acceptance_transaction.json"
+  ],
+  "git_scope": "Read-only local metadata; no fetch/remote inspection/commit/push. Code clean; KB changes present.",
+  "local_sources": [
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\global.json",
+      "source_id": "SRC-0067",
+      "sha256": "F5027F7B2D82128C9715C687359EEE846D57DA45AEAB8986CD265107EB32C47A",
+      "size_bytes": 108,
+      "lines": 7,
+      "coverage": "Entire 7-line SDK pin.",
+      "current_bytes_match_registered_identity": true
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.App\\Fistnet.Genepool.App.csproj",
+      "source_id": "SRC-0002",
+      "sha256": "D79B44B872561468641D6D2A56E592B6E264EDB92C680862AC2A629446350746",
+      "size_bytes": 2060,
+      "lines": 51,
+      "coverage": "Entire 51-line project.",
+      "current_bytes_match_registered_identity": true
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Visualization\\Fistnet.Genepool.Visualization.csproj",
+      "source_id": "SRC-0068",
+      "sha256": "9F420B4D3CE6E2497AA545D71A782880A9D411B06FA31DFF59C28B650758581A",
+      "size_bytes": 724,
+      "lines": 17,
+      "coverage": "Entire 17-line project.",
+      "current_bytes_match_registered_identity": true
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\Fistnet.Genepool.Control.csproj",
+      "source_id": "SRC-0069",
+      "sha256": "2A98C92C1375F84A267B8C49F2CA8EFE73549B75FAC73815771C667E556B7CE7",
+      "size_bytes": 519,
+      "lines": 14,
+      "coverage": "Entire 16-line project.",
+      "current_bytes_match_registered_identity": true
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\Fistnet.Genepool.Tests.csproj",
+      "source_id": "SRC-0056",
+      "sha256": "C9517DF945C421AF55E5B0607714857E3DCA02AB8364EEDCB3C5D13965DAB5D2",
+      "size_bytes": 739,
+      "lines": 16,
+      "coverage": "Entire 17-line project.",
+      "current_bytes_match_registered_identity": true
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Visualization\\BoardView.cs",
+      "source_id": "SRC-0152",
+      "sha256": "6D244DCC58ACC13CFA232452E4ABF270C1B9817E4A76D48FFBFF6B6AF68AE613",
+      "size_bytes": 13004,
+      "lines": 252,
+      "coverage": "Entire 252-line control; RebuildRaster around120, OnPaint around157, selection/overlays.",
+      "current_bytes_match_registered_identity": true
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\ViewFrame.cs",
+      "source_id": "SRC-0149",
+      "sha256": "B2D5AFFDF9F8DB78F7D5E62A504D41B16E9F76929A4D0773236A9068D4175F9A",
+      "size_bytes": 2224,
+      "lines": 27,
+      "coverage": "Entire 27-line detached frame model.",
+      "current_bytes_match_registered_identity": true
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\SimulationRunner.cs",
+      "source_id": "SRC-0147",
+      "sha256": "10BDC633721B982940F7670EAAE67C20E5206DF6812D60413272E93EC186A2C6",
+      "size_bytes": 9153,
+      "lines": 191,
+      "coverage": "Lines1-180 plus targeted symbol searches; remaining tail not substantively read.",
+      "current_bytes_match_registered_identity": true
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\ViewCollector.cs",
+      "source_id": "SRC-0162",
+      "sha256": "68A592ACCA7E9DB8EB987A59D4ACABB26110A8C43D26E701A44D284F825E510D",
+      "size_bytes": 9256,
+      "lines": 154,
+      "coverage": "Targeted lines101-154, frame construction/cells/patterns.",
+      "current_bytes_match_registered_identity": true
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.App\\MainForm.cs",
+      "source_id": "SRC-0164",
+      "sha256": "6E30D6D207EE8B21E255655BAB6D592BC6F27CC5606E155A03A0BFFF3422AE6C",
+      "size_bytes": 23544,
+      "lines": 335,
+      "coverage": "Targeted lines93-140 plus rendering/runner symbol matches, not entire file.",
+      "current_bytes_match_registered_identity": true
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.App\\MainForm.Layout.cs",
+      "source_id": "SRC-0144",
+      "sha256": "C87DD3B7BE00BCAA3C54555114AA296B46BA26766870CD6F2BF166B3101A8D6E",
+      "size_bytes": 17390,
+      "lines": 209,
+      "coverage": "Targeted lines93-121 and control/timer references, not entire file.",
+      "current_bytes_match_registered_identity": true
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\Gameboard\\Board.cs",
+      "source_id": "SRC-0160",
+      "sha256": "BDA8E4A625531A7FA4EED03B615498D4AAEC7CEA0724C9A3AD92044C38475DE8",
+      "size_bytes": 18628,
+      "lines": 381,
+      "coverage": "Board dimension declaration and relevant references; no renewed whole-file mechanics analysis.",
+      "current_bytes_match_registered_identity": true
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\ViewerBackendTests.cs",
+      "source_id": "SRC-0151",
+      "sha256": "DBDD356C3B02E9049AF65814DBE9C5A3691351053578BACA86131774E8319C3A",
+      "size_bytes": 17295,
+      "lines": 277,
+      "coverage": "Test names and detached-frame/RNG/passivity symbol matches, not entire test bodies.",
+      "current_bytes_match_registered_identity": true
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\Program.cs",
+      "source_id": "SRC-0165",
+      "sha256": "933E363C0BD236B82D2DD650D87B0E7778139071E80178BFC344CCCE3607DE08",
+      "size_bytes": 7078,
+      "lines": 138,
+      "coverage": "Targeted test registration and runner switches, not entire file.",
+      "current_bytes_match_registered_identity": true
+    }
+  ],
+  "public_sources": [
+    {
+      "url": "https://github.com/mono/SkiaSharp",
+      "title": "SkiaSharp project",
+      "registered_source_id": "SRC-0175",
+      "coverage": "Specific linked claim in research report; retrieved by root or bounded research helpers on2026-09-07. No downloaded packages/model archives or executed samples."
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/dotnet/api/skiasharp.views.desktop.skglcontrol?view=skiasharp-views",
+      "title": "SKGLControl API",
+      "registered_source_id": "SRC-0173",
+      "coverage": "Specific linked claim in research report; retrieved by root or bounded research helpers on2026-09-07. No downloaded packages/model archives or executed samples."
+    },
+    {
+      "url": "https://github.com/mono/SkiaSharp/blob/main/source/SkiaSharp.Views/SkiaSharp.Views.WindowsForms/SKGLControl.cs",
+      "title": "upstream GPU control",
+      "registered_source_id": "SRC-0174",
+      "coverage": "Specific linked claim in research report; retrieved by root or bounded research helpers on2026-09-07. No downloaded packages/model archives or executed samples."
+    },
+    {
+      "url": "https://github.com/mono/SkiaSharp/blob/main/source/SkiaSharp.Views/SkiaSharp.Views.WindowsForms/SKControl.cs",
+      "title": "Raster control implementation",
+      "registered_source_id": null,
+      "coverage": "Specific linked claim in research report; retrieved by root or bounded research helpers on2026-09-07. No downloaded packages/model archives or executed samples."
+    },
+    {
+      "url": "https://www.nuget.org/packages/SkiaSharp.Views.WindowsForms/4.151.2",
+      "title": "SkiaSharp package",
+      "registered_source_id": "SRC-0172",
+      "coverage": "Specific linked claim in research report; retrieved by root or bounded research helpers on2026-09-07. No downloaded packages/model archives or executed samples."
+    },
+    {
+      "url": "https://github.com/opentk/GLControl/blob/master/README.md",
+      "title": "OpenTK WinForms integration",
+      "registered_source_id": "SRC-0176",
+      "coverage": "Specific linked claim in research report; retrieved by root or bounded research helpers on2026-09-07. No downloaded packages/model archives or executed samples."
+    },
+    {
+      "url": "https://www.nuget.org/packages/OpenTK.Graphics/4.9.4",
+      "title": "OpenTK Graphics package",
+      "registered_source_id": null,
+      "coverage": "Specific linked claim in research report; retrieved by root or bounded research helpers on2026-09-07. No downloaded packages/model archives or executed samples."
+    },
+    {
+      "url": "https://www.nuget.org/packages/OpenTK.GLControl/4.0.2",
+      "title": "GLControl package",
+      "registered_source_id": null,
+      "coverage": "Specific linked claim in research report; retrieved by root or bounded research helpers on2026-09-07. No downloaded packages/model archives or executed samples."
+    },
+    {
+      "url": "https://www.nuget.org/packages/MonoGame.Framework.WindowsDX/3.8.5.1",
+      "title": "MonoGame package",
+      "registered_source_id": "SRC-0177",
+      "coverage": "Specific linked claim in research report; retrieved by root or bounded research helpers on2026-09-07. No downloaded packages/model archives or executed samples."
+    },
+    {
+      "url": "https://docs.monogame.net/api/Microsoft.Xna.Framework.Graphics.PresentationParameters.html",
+      "title": "MonoGame host handle",
+      "registered_source_id": null,
+      "coverage": "Specific linked claim in research report; retrieved by root or bounded research helpers on2026-09-07. No downloaded packages/model archives or executed samples."
+    },
+    {
+      "url": "https://www.nuget.org/packages/Stride.Engine/4.2.1.2487",
+      "title": "Stride 4.2 package",
+      "registered_source_id": "SRC-0178",
+      "coverage": "Specific linked claim in research report; retrieved by root or bounded research helpers on2026-09-07. No downloaded packages/model archives or executed samples."
+    },
+    {
+      "url": "https://www.nuget.org/packages/Stride.Engine/4.3.0.2507",
+      "title": "Stride 4.3 package",
+      "registered_source_id": "SRC-0179",
+      "coverage": "Specific linked claim in research report; retrieved by root or bounded research helpers on2026-09-07. No downloaded packages/model archives or executed samples."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/stride3d/stride/64961284/sources/engine/Stride.Games/GameContextWinforms.cs",
+      "title": "version-linked Stride WinForms host",
+      "registered_source_id": "SRC-0180",
+      "coverage": "Specific linked claim in research report; retrieved by root or bounded research helpers on2026-09-07. No downloaded packages/model archives or executed samples."
+    },
+    {
+      "url": "https://docs.godotengine.org/en/stable/tutorials/scripting/c_sharp/c_sharp_basics.html",
+      "title": "Godot C# workflow",
+      "registered_source_id": "SRC-0181",
+      "coverage": "Specific linked claim in research report; retrieved by root or bounded research helpers on2026-09-07. No downloaded packages/model archives or executed samples."
+    },
+    {
+      "url": "https://docs.godotengine.org/en/stable/tutorials/editor/command_line_tutorial.html",
+      "title": "Godot parent-window option",
+      "registered_source_id": null,
+      "coverage": "Specific linked claim in research report; retrieved by root or bounded research helpers on2026-09-07. No downloaded packages/model archives or executed samples."
+    },
+    {
+      "url": "https://www.nuget.org/packages/Raylib-cs/8.1.0",
+      "title": "raylib-cs package/status",
+      "registered_source_id": "SRC-0183",
+      "coverage": "Specific linked claim in research report; retrieved by root or bounded research helpers on2026-09-07. No downloaded packages/model archives or executed samples."
+    },
+    {
+      "url": "https://github.com/mono/SkiaSharp/tree/main/samples/Basic/WindowsForms",
+      "title": "Skia WinForms sample",
+      "registered_source_id": "SRC-0184",
+      "coverage": "Specific linked claim in research report; retrieved by root or bounded research helpers on2026-09-07. No downloaded packages/model archives or executed samples."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/mono/SkiaSharp/main/samples/Basic/WindowsForms/SkiaSharpSample/GpuPage.cs",
+      "title": "GPU page",
+      "registered_source_id": "SRC-0185",
+      "coverage": "Specific linked claim in research report; retrieved by root or bounded research helpers on2026-09-07. No downloaded packages/model archives or executed samples."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/mono/SkiaSharp/main/samples/Basic/WindowsForms/SkiaSharpSample/SkiaSharpSample.csproj",
+      "title": "sample target framework",
+      "registered_source_id": "SRC-0186",
+      "coverage": "Specific linked claim in research report; retrieved by root or bounded research helpers on2026-09-07. No downloaded packages/model archives or executed samples."
+    },
+    {
+      "url": "https://github.com/MonoGame/MonoGame.Samples",
+      "title": "MonoGame samples",
+      "registered_source_id": "SRC-0187",
+      "coverage": "Specific linked claim in research report; retrieved by root or bounded research helpers on2026-09-07. No downloaded packages/model archives or executed samples."
+    },
+    {
+      "url": "https://stride3d.github.io/stride-community-toolkit/manual/code-only/examples/basic-examples.html",
+      "title": "Stride examples",
+      "registered_source_id": "SRC-0188",
+      "coverage": "Specific linked claim in research report; retrieved by root or bounded research helpers on2026-09-07. No downloaded packages/model archives or executed samples."
+    },
+    {
+      "url": "https://github.com/stride3d/stride-community-toolkit/blob/main/docs/manual/getting-started.md",
+      "title": "Stride/toolkit version table",
+      "registered_source_id": "SRC-0189",
+      "coverage": "Specific linked claim in research report; retrieved by root or bounded research helpers on2026-09-07. No downloaded packages/model archives or executed samples."
+    },
+    {
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/05.spawning_mobs.html",
+      "title": "Godot C# scene spawning",
+      "registered_source_id": "SRC-0190",
+      "coverage": "Specific linked claim in research report; retrieved by root or bounded research helpers on2026-09-07. No downloaded packages/model archives or executed samples."
+    },
+    {
+      "url": "https://docs.godotengine.org/en/stable/tutorials/performance/using_multimesh.html",
+      "title": "Godot instancing",
+      "registered_source_id": "SRC-0191",
+      "coverage": "Specific linked claim in research report; retrieved by root or bounded research helpers on2026-09-07. No downloaded packages/model archives or executed samples."
+    },
+    {
+      "url": "https://kenney-assets.itch.io/shape-characters",
+      "title": "Shape Characters",
+      "registered_source_id": "SRC-0192",
+      "coverage": "Specific linked claim in research report; retrieved by root or bounded research helpers on2026-09-07. No downloaded packages/model archives or executed samples."
+    },
+    {
+      "url": "https://kenney.nl/assets/animal-pack",
+      "title": "Animal Pack",
+      "registered_source_id": "SRC-0193",
+      "coverage": "Specific linked claim in research report; retrieved by root or bounded research helpers on2026-09-07. No downloaded packages/model archives or executed samples."
+    },
+    {
+      "url": "https://kenney.nl/assets/isometric-blocks",
+      "title": "Isometric Blocks",
+      "registered_source_id": "SRC-0194",
+      "coverage": "Specific linked claim in research report; retrieved by root or bounded research helpers on2026-09-07. No downloaded packages/model archives or executed samples."
+    },
+    {
+      "url": "https://kenney.nl/assets/pixel-platformer-food-expansion",
+      "title": "Pixel Platformer Food Expansion",
+      "registered_source_id": "SRC-0195",
+      "coverage": "Specific linked claim in research report; retrieved by root or bounded research helpers on2026-09-07. No downloaded packages/model archives or executed samples."
+    },
+    {
+      "url": "https://kenney.nl/assets/cube-pets",
+      "title": "Cube Pets",
+      "registered_source_id": "SRC-0196",
+      "coverage": "Specific linked claim in research report; retrieved by root or bounded research helpers on2026-09-07. No downloaded packages/model archives or executed samples."
+    },
+    {
+      "url": "https://kenney.nl/assets/food-kit",
+      "title": "Food Kit",
+      "registered_source_id": "SRC-0197",
+      "coverage": "Specific linked claim in research report; retrieved by root or bounded research helpers on2026-09-07. No downloaded packages/model archives or executed samples."
+    },
+    {
+      "url": "https://kenney.nl/assets/nature-kit",
+      "title": "Nature Kit",
+      "registered_source_id": "SRC-0198",
+      "coverage": "Specific linked claim in research report; retrieved by root or bounded research helpers on2026-09-07. No downloaded packages/model archives or executed samples."
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/dotnet/api/skiasharp.skimage.fromencodeddata?view=skiasharp",
+      "title": "Skia image loading",
+      "registered_source_id": null,
+      "coverage": "Specific linked claim in research report; retrieved by root or bounded research helpers on2026-09-07. No downloaded packages/model archives or executed samples."
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/dotnet/api/skiasharp.skcanvas.drawatlas?view=skiasharp",
+      "title": "atlas drawing",
+      "registered_source_id": null,
+      "coverage": "Specific linked claim in research report; retrieved by root or bounded research helpers on2026-09-07. No downloaded packages/model archives or executed samples."
+    },
+    {
+      "url": "https://kenney.nl/knowledge-base/game-assets-3d/importing-3d-models-into-game-engines",
+      "title": "Kenney model import guide",
+      "registered_source_id": "SRC-0199",
+      "coverage": "Specific linked claim in research report; retrieved by root or bounded research helpers on2026-09-07. No downloaded packages/model archives or executed samples."
+    },
+    {
+      "url": "https://docs.monogame.net/articles/getting_to_know/whatis/content_pipeline/CP_StdImpsProcs.html",
+      "title": "MonoGame importers",
+      "registered_source_id": null,
+      "coverage": "Specific linked claim in research report; retrieved by root or bounded research helpers on2026-09-07. No downloaded packages/model archives or executed samples."
+    },
+    {
+      "url": "https://doc.stride3d.net/latest/en/manual/animation/import-animations.html",
+      "title": "Stride model import",
+      "registered_source_id": null,
+      "coverage": "Specific linked claim in research report; retrieved by root or bounded research helpers on2026-09-07. No downloaded packages/model archives or executed samples."
+    },
+    {
+      "url": "https://www.nuget.org/packages/SkiaSharp/4.151.2",
+      "title": "SkiaSharp dependencies",
+      "registered_source_id": null,
+      "coverage": "Specific linked claim in research report; retrieved by root or bounded research helpers on2026-09-07. No downloaded packages/model archives or executed samples."
+    },
+    {
+      "url": "https://www.nuget.org/packages/SkiaSharp.NativeAssets.Win32/4.151.2",
+      "title": "Windows native assets",
+      "registered_source_id": null,
+      "coverage": "Specific linked claim in research report; retrieved by root or bounded research helpers on2026-09-07. No downloaded packages/model archives or executed samples."
+    },
+    {
+      "url": "https://www.nuget.org/packages/OpenTK/",
+      "title": "OpenTK versions",
+      "registered_source_id": null,
+      "coverage": "Specific linked claim in research report; retrieved by root or bounded research helpers on2026-09-07. No downloaded packages/model archives or executed samples."
+    },
+    {
+      "url": "https://godotengine.org/download/windows/",
+      "title": "Godot download",
+      "registered_source_id": null,
+      "coverage": "Specific linked claim in research report; retrieved by root or bounded research helpers on2026-09-07. No downloaded packages/model archives or executed samples."
+    },
+    {
+      "url": "https://godotengine.org/article/godotsharp-packages-net8/",
+      "title": "Godot .NET target explanation",
+      "registered_source_id": "SRC-0182",
+      "coverage": "Specific linked claim in research report; retrieved by root or bounded research helpers on2026-09-07. No downloaded packages/model archives or executed samples."
+    },
+    {
+      "url": "https://github.com/godotengine/godot/blob/4.7.2-stable/modules/mono/editor/GodotTools/GodotTools.ProjectEditor/ProjectGenerator.cs",
+      "title": "version-specific project generator",
+      "registered_source_id": null,
+      "coverage": "Specific linked claim in research report; retrieved by root or bounded research helpers on2026-09-07. No downloaded packages/model archives or executed samples."
+    },
+    {
+      "url": "https://github.com/opentk/GLControl/blob/master/LICENSE.md",
+      "title": "GLControl license",
+      "registered_source_id": null,
+      "coverage": "Specific linked claim in research report; retrieved by root or bounded research helpers on2026-09-07. No downloaded packages/model archives or executed samples."
+    },
+    {
+      "url": "https://github.com/stride3d/stride",
+      "title": "Stride license/project",
+      "registered_source_id": null,
+      "coverage": "Specific linked claim in research report; retrieved by root or bounded research helpers on2026-09-07. No downloaded packages/model archives or executed samples."
+    },
+    {
+      "url": "https://godotengine.org/license/",
+      "title": "Godot license",
+      "registered_source_id": null,
+      "coverage": "Specific linked claim in research report; retrieved by root or bounded research helpers on2026-09-07. No downloaded packages/model archives or executed samples."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/MonoGame/MonoGame/v3.8.5.1/LICENSE.txt",
+      "title": "MonoGame license",
+      "registered_source_id": null,
+      "coverage": "Specific linked claim in research report; retrieved by root or bounded research helpers on2026-09-07. No downloaded packages/model archives or executed samples."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/raysan5/raylib/6.0/LICENSE",
+      "title": "raylib native license",
+      "registered_source_id": null,
+      "coverage": "Specific linked claim in research report; retrieved by root or bounded research helpers on2026-09-07. No downloaded packages/model archives or executed samples."
+    }
+  ],
+  "capability_findings": {
+    "skia": "GPU SKGLControl is distinct from CPU SKControl. Package4.151.2 has net9.0-windows10.0.19041 asset. Official current GPU WinForms sample is net10, uses repository references, and needs adaptation. Image/atlas APIs support sprite route; no native 3D scene/model pipeline.",
+    "opentk": "GLControl is a documented WinForms host. Stable Graphics4.9.4/GLControl4.0.2 inspected. Low-level route leaves substantially more graphics/asset infrastructure.",
+    "monogame": "WindowsDX3.8.5.1 net8 Windows package; official2D/FuelCell3D samples identify3.8.4. Model content pipeline documented; modern official drop-in WinForms control not established.",
+    "stride": "4.2.1.2487 net8 and exact GameContextWinforms source; toolkit4.2 pairing preview61. Current4.3.0.2507 net10 unsuitable for unchangedSDK9. Useful3Dexamples; currentbasic2DexamplesWIP; authored models require asset workflow.",
+    "godot": "Current Windows.NET listing4.7.2; official C# VS2022 and net9 targeting path. Helper checked4.7.2 minimum/defaultnet8 source. C# scene/instancing tutorials and GLB import documented. Exact Genepool build/export/hosting untested.",
+    "raylib": "Raylib-cs8.1.0 net8/net10 with native6.0; binding README says passively maintained. No maintained WinForms host established.",
+    "artwork": "Kenney creator pages supply CC0 character/isometric/food assets and3Dpets/nature/food. Asset pack formats and actual imports not verified from archives. Kenney guide describes its glTF assets asGLB and Godot import.",
+    "licensing": "Publisher licenses support requested non-commercial use; software/dependencies/artwork retain separate notices. No complete redistribution inventory."
+  },
+  "environment": {
+    "os_description": "Microsoft Windows 10.0.22621",
+    "is_64bit_operating_system": true,
+    "source": "Read-only RuntimeInformation/Environment queries this task.",
+    "gpu_metadata": "Get-CimInstance Win32_VideoController returned Access denied. Adapter/driver/hardware GPU rendering unverified; no escalation or context probe.",
+    "sdk": "global.json9.0.315; no changed SDK or builds."
+  },
+  "limitations": [
+    "No dependencies installed, no package/model archives downloaded, no sample or experiment executed, no source edits.",
+    "No GPU benchmark, visual acceptance, successful import or local engine compatibility result.",
+    "Private IDE/settings and reserved ecology evidence left unread; no outside-root experiment evidence.",
+    "Shortlist of six relevant options, not all-engine census. Public main/stable pages can differ from exact package versions.",
+    "R02 closed ecologyINCONCLUSIVE remains closed."
+  ],
+  "helper_attribution": "Transient r03_frameworks_research and r03_engine_alternatives supplied complementary primary-source inspection and challenged recommendation; Genepool Analyzer owns final assessment/KB."
+}

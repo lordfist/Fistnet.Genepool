@@ -1,0 +1,214 @@
+{
+  "atUtc": "2026-09-07T19:12:30.8971372+00:00",
+  "mode": "smoke",
+  "ok": true,
+  "failures": 0,
+  "backend": "headless",
+  "adapter": "",
+  "runtime": ".NET 10.0.9",
+  "engine": "4.7.2-stable (official)",
+  "gpuExecuted": false,
+  "externalProcessWatchdogRequired": true,
+  "limits": "Synthetic viewer fixtures and bounded engineering checks. No ecological trial. Frame intervals are main-loop observations, not hardware presentation timings. UI timing covers injected Godot input/signals, not physical mouse-to-photon latency. In-scene waits cannot time out a stalled main loop; the launcher must enforce an external process deadline.",
+  "checks": [
+    {
+      "name": "passive viewer owns no simulation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "two populated instance buffers",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "fitted picking (0, 0)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "fitted picking (50, 50)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "fitted picking (99, 99)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "outside picking rejected",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "zoomed and panned picking",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "inspector explains DNA and actual actions",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "fresh season markers visible",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "acknowledgment cannot revive expired markers",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reset begins with active highlight and selection",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reset clears highlight and selection",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "live viewer owns one worker",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "initial speed matches UI",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "actual Godot observation preserves full paused state and RNG",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "single step settles exactly one season",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "cycle settles exactly eight seasons",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "restart preserves configured seed and state",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "camera remains responsive during blocked simulation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pause handler acknowledges without waiting for simulation",
+      "passed": true,
+      "detail": "0.18 ms"
+    },
+    {
+      "name": "pause settles at completed boundary",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "new simulation button opens random-seed settings",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "signed seed typing preserves an unfinished minus",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "typed signed seed and all numeric settings are read",
+      "passed": true,
+      "detail": "seed=-123; density=0; food=7; regrowth=2; reserves=8; seedText=-123"
+    },
+    {
+      "name": "settings retain hidden execution and policy values",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preset event resets fields and restores random choice",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "cancel leaves world and RNG unchanged",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "create applies settings at a new paused run",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "speed menu controls worker target",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "history rates use actual sampled season gaps",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Godot initializes existing random founder setup",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "transformed selection follows a real organism without stepping",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "real DNA and completed actions reach the inspector",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "populated world retains bounded detached history",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "shutdown completes",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "measurements": [
+    {
+      "kind": "input_handler",
+      "input": "Pause signal during blocked season",
+      "acknowledgeMilliseconds": 0.1769,
+      "excludes": "OS input delivery and physical display latency"
+    },
+    {
+      "kind": "bounded_live_world",
+      "seed": 29,
+      "initialPopulationPercent": 10,
+      "completedSeasons": 8,
+      "endingPopulation": 959,
+      "selectedId": 492,
+      "mode": "DeterministicReference",
+      "ecologicalEvaluation": false
+    }
+  ],
+  "process": {
+    "exitCode": 0,
+    "elapsedSeconds": 3.078,
+    "deadlineSeconds": 90,
+    "engineErrors": []
+  }
+}

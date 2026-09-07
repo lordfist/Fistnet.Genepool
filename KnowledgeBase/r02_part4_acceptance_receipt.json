@@ -1,0 +1,69 @@
+{
+  "actor": "Genepool Analyzer",
+  "operation": "R02 Part4 owner acceptance",
+  "owner_decision_id": "DEC-0019",
+  "transaction": "r02_part4_acceptance_transaction.json",
+  "transaction_sha256": "0F559BC3AA3D79CDBB976E08C4998BF2878535C9A322C488969D78E06F4E71CE",
+  "preview": {
+    "from_revision": 40,
+    "to_revision": 41,
+    "preview_time": "2026-09-07T07:19:07+00:00",
+    "reviewed_changes": 57,
+    "all_pages_reviewed": true
+  },
+  "apply": {
+    "ok": true,
+    "dry_run": false,
+    "from_revision": 40,
+    "to_revision": 41,
+    "effects": {
+      "record_upserts": 5,
+      "source_upserts": 0,
+      "core_fields_patched": 7
+    },
+    "validation_scope": "deep_sources_and_prepared",
+    "write_outcome": {
+      "stage": "commit_completed",
+      "replaced_files": [
+        "records.jsonl",
+        "sources.json",
+        "core.json"
+      ],
+      "commit_completed": true,
+      "verification_completed": true,
+      "rollback_performed": false,
+      "recovery_required": false,
+      "cleanup_errors": [],
+      "replacement_uncertain": false
+    },
+    "transaction_sha256": "0F559BC3AA3D79CDBB976E08C4998BF2878535C9A322C488969D78E06F4E71CE",
+    "hashes": {
+      "core.json": "2E633F82478B12F8AEC9819ECC33001EC86D679E37B70F919F921B8D841931FE",
+      "records.jsonl": "69F08BB63151E5190D09A2B0B266DC56A3995DEE59A821F2E9B2C5CAD775C680",
+      "sources.json": "0107E8C465C0C3DE9F409055BF53C6DC83726D67F70F95B6084AA3CD1A17DC5C"
+    }
+  },
+  "deep_validation": {
+    "ok": true,
+    "errors": [],
+    "warnings": [
+      "source SRC-0115 historical bytes unavailable: The registered mixed-newline Part2 Board.cs bytes are not reproduced by local commit c5a494a412684d801031d1dec2c2c7670f5e3293 using raw or LF-to-CRLF transforms. Bounded reconstruction from retained predecessor/successor evidence did not match the registered SHA256. Git code version and historical prepared text remain available, but exact original-byte history is unverified. See FACT-0042."
+    ],
+    "counts": {
+      "records": 88,
+      "sources": 171,
+      "historical_sources": 84,
+      "prepared_sources": 21
+    },
+    "core_estimated_tokens": 3659,
+    "deep": true,
+    "kb_revision": 41
+  },
+  "readback": {
+    "record_upserts_verified": 5,
+    "core_fields_verified": 7,
+    "source_catalog_hash_unchanged": true
+  },
+  "result": "Part4 owner-accepted. Engineering PASS and 2048-season ecological INCONCLUSIVE results preserved. R02 remains open; work stopped.",
+  "scope": "KB bookkeeping only. One new decision, four linked records and compact orientation updated. No simulation code, settings, builds, trials, original result artifacts or source identities changed."
+}

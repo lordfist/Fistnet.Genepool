@@ -1,0 +1,483 @@
+{
+  "actor": "Genepool Analyzer",
+  "at_utc": "2026-09-07T19:22:24.877464+00:00",
+  "head": "bdfaa0c555edf8807f680f46b71e0ef16e387d07",
+  "implementation_authority": "DEC-0025",
+  "status": "2D ready for owner review; no next-stage implementation",
+  "source_ids": {
+    ".gitignore": "SRC-0223",
+    "Fistnet.Genepool.sln": "SRC-0224",
+    "Fistnet.Genepool.Tests/Program.cs": "SRC-0225",
+    "Fistnet.Genepool.Control/Presentation/BoardPresentation.cs": "SRC-0226",
+    "Fistnet.Genepool.Control/Presentation/SimulationSettings.cs": "SRC-0227",
+    "Fistnet.Genepool.Godot/BoardView2D.cs": "SRC-0228",
+    "Fistnet.Genepool.Godot/BoardView2D.cs.uid": "SRC-0229",
+    "Fistnet.Genepool.Godot/Fistnet.Genepool.Godot.csproj": "SRC-0230",
+    "Fistnet.Genepool.Godot/HistoryView.cs": "SRC-0231",
+    "Fistnet.Genepool.Godot/HistoryView.cs.uid": "SRC-0232",
+    "Fistnet.Genepool.Godot/Main.cs": "SRC-0233",
+    "Fistnet.Genepool.Godot/Main.cs.uid": "SRC-0234",
+    "Fistnet.Genepool.Godot/Main.Inspector.cs": "SRC-0235",
+    "Fistnet.Genepool.Godot/Main.Inspector.cs.uid": "SRC-0236",
+    "Fistnet.Genepool.Godot/Main.Layout.cs": "SRC-0237",
+    "Fistnet.Genepool.Godot/Main.Layout.cs.uid": "SRC-0238",
+    "Fistnet.Genepool.Godot/packages.Debug.lock.json": "SRC-0239",
+    "Fistnet.Genepool.Godot/packages.ExportRelease.lock.json": "SRC-0240",
+    "Fistnet.Genepool.Godot/project.godot": "SRC-0241",
+    "Fistnet.Genepool.Godot/README.md": "SRC-0242",
+    "Fistnet.Genepool.Godot/Scenes/Main.tscn": "SRC-0243",
+    "Fistnet.Genepool.Godot/Scenes/Verification.tscn": "SRC-0244",
+    "Fistnet.Genepool.Godot/SettingsDialog.cs": "SRC-0245",
+    "Fistnet.Genepool.Godot/SettingsDialog.cs.uid": "SRC-0246",
+    "Fistnet.Genepool.Godot/tools/Launch.ps1": "SRC-0247",
+    "Fistnet.Genepool.Godot/tools/Setup.ps1": "SRC-0248",
+    "Fistnet.Genepool.Godot/Verification/VerificationRunner.cs": "SRC-0249",
+    "Fistnet.Genepool.Godot/Verification/VerificationRunner.cs.uid": "SRC-0250",
+    "Fistnet.Genepool.Godot/Verification/ViewerFixtures.cs": "SRC-0251",
+    "Fistnet.Genepool.Godot/Verification/ViewerFixtures.cs.uid": "SRC-0252",
+    "Fistnet.Genepool.Tests/GodotBoardTests.cs": "SRC-0253",
+    "Fistnet.Genepool.Tests/GodotSettingsTests.cs": "SRC-0254",
+    "NuGet.Config": "SRC-0255"
+  },
+  "source_horizon": [
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\.gitignore",
+      "sha256": "40990D3E8E6F53112B09D0686FED0353C5BC7075C91CA61645493D1717783A59",
+      "size_bytes": 892,
+      "source_id": "SRC-0223"
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.sln",
+      "sha256": "742BB4890FA19EAD4D3E1A65919DE1420CC922D9FD5B8E26D655AABF3B86C688",
+      "size_bytes": 7362,
+      "source_id": "SRC-0224"
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\Program.cs",
+      "sha256": "3378FDF6CF07F2D279D57E6E622F7EE43E97C4892ED0111CA355E58CA3F0EB06",
+      "size_bytes": 7179,
+      "source_id": "SRC-0225"
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\Presentation\\BoardPresentation.cs",
+      "sha256": "D1E5DC4B2FFE9A4A8836088E92E1F29341817470D95F4CA8C26E69D1F205676B",
+      "size_bytes": 4759,
+      "source_id": "SRC-0226"
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\Presentation\\SimulationSettings.cs",
+      "sha256": "7650A69908A0B9DDC1CC9B576041039648D6AFFC9425FC9200C2A8C5BD5EA480",
+      "size_bytes": 3433,
+      "source_id": "SRC-0227"
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\BoardView2D.cs",
+      "sha256": "B210328087584F68C702C35154C36F4E024B1FA66279D6C5312FC3C1E8076F37",
+      "size_bytes": 16831,
+      "source_id": "SRC-0228"
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\BoardView2D.cs.uid",
+      "sha256": "D408DD881511635462BA3E8964C9D013BA4AE017C3A2671E30D56EF73FFCA15E",
+      "size_bytes": 19,
+      "source_id": "SRC-0229"
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Fistnet.Genepool.Godot.csproj",
+      "sha256": "1D4174B55D085193027E31A2C30BEADEC253E4C786B0490B5D9149D34BE9DD84",
+      "size_bytes": 1555,
+      "source_id": "SRC-0230"
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\HistoryView.cs",
+      "sha256": "5C53F0DC324E1D88F5C9155568E470A49B1A95AADB3E8D9FDAA14B67936F4C5B",
+      "size_bytes": 4356,
+      "source_id": "SRC-0231"
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\HistoryView.cs.uid",
+      "sha256": "5D8779A494EFFE0417A1D890E28546221D66E190C80FA9FE105CF6F4983087EF",
+      "size_bytes": 18,
+      "source_id": "SRC-0232"
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Main.cs",
+      "sha256": "9A9DE25AA6BE9682993AF609E58737977D4BE9FCE28FB02E56DFDFF6CE453428",
+      "size_bytes": 8836,
+      "source_id": "SRC-0233"
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Main.cs.uid",
+      "sha256": "BF643036E14CE6F23A7022AF7355862C76CBA81C88E9C50BEE01FAB4D205EE60",
+      "size_bytes": 20,
+      "source_id": "SRC-0234"
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Main.Inspector.cs",
+      "sha256": "86AB95A0178D557B4F75516CE9CB2CF1DAC8D9688B192034111A61D1C2F96D68",
+      "size_bytes": 10572,
+      "source_id": "SRC-0235"
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Main.Inspector.cs.uid",
+      "sha256": "EBDB2C32AFAEDDE66CB89756AD35A4DD02C006627180EC2417992A4D3B9A7787",
+      "size_bytes": 20,
+      "source_id": "SRC-0236"
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Main.Layout.cs",
+      "sha256": "D881717B5A4C9EC64151E7C7B8DD45CD8986838FCF81BD04B6483708E7616A63",
+      "size_bytes": 14169,
+      "source_id": "SRC-0237"
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Main.Layout.cs.uid",
+      "sha256": "1BCC5D52503A62AB98A70C3CF3C2C970D343ABDFAF8D85D9B7A1194488CBD894",
+      "size_bytes": 20,
+      "source_id": "SRC-0238"
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\packages.Debug.lock.json",
+      "sha256": "6F60ADDA9860E39493A791EFF567EDAB006A111CA8E25F0D56340494D1981C06",
+      "size_bytes": 1121,
+      "source_id": "SRC-0239"
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\packages.ExportRelease.lock.json",
+      "sha256": "6D1B9963123386167612FAD770B1B7F57A43B36EB826FE5CE2CC16137F0EA2E0",
+      "size_bytes": 803,
+      "source_id": "SRC-0240"
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\project.godot",
+      "sha256": "0B287CB5DAED0837505E1544C0EDE873F7803BE92D62B043D241E34DFE6EE970",
+      "size_bytes": 787,
+      "source_id": "SRC-0241"
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\README.md",
+      "sha256": "B381D02E8CDE814167C5325726B156C15DC141EC8D4BCC7C4AFE1C25CA639314",
+      "size_bytes": 8296,
+      "source_id": "SRC-0242"
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Scenes\\Main.tscn",
+      "sha256": "8727543F18655830C5AA4AE794FBC67909C173D68CC91291E19981845D8465B1",
+      "size_bytes": 261,
+      "source_id": "SRC-0243"
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Scenes\\Verification.tscn",
+      "sha256": "546F440E020677339BC8C37310C74D6753212F81118169A2D22FC4EEFD562939",
+      "size_bytes": 196,
+      "source_id": "SRC-0244"
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\SettingsDialog.cs",
+      "sha256": "7591957E86ED141F960E5937A07FA6BC977AE5B729D7BB1706D04CAE19F4B55C",
+      "size_bytes": 9482,
+      "source_id": "SRC-0245"
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\SettingsDialog.cs.uid",
+      "sha256": "23362068CBFC4313B17E95511C786C37484B20214BFC6C5398575AABE3D8D538",
+      "size_bytes": 20,
+      "source_id": "SRC-0246"
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\tools\\Launch.ps1",
+      "sha256": "21EF7D07B1FEACADF7F384C388EB56BF73B58DF0D5DA2E4B0566F8BE7E5433FA",
+      "size_bytes": 2287,
+      "source_id": "SRC-0247"
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\tools\\Setup.ps1",
+      "sha256": "AB5C242A1E992A98BE997DC79AF2907BEA70B0E81D0F7D6CC8A850256AD4494B",
+      "size_bytes": 3795,
+      "source_id": "SRC-0248"
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Verification\\VerificationRunner.cs",
+      "sha256": "6C0C74049A7441DAC8B0D2E9BFAB78C3F67C9CFAC3A393DF8ED720E470F30614",
+      "size_bytes": 29770,
+      "source_id": "SRC-0249"
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Verification\\VerificationRunner.cs.uid",
+      "sha256": "DB7C3B63F6DC35FA6BDE5FAC3A0FF828F458DB1A842A3C247F67F23CB36E7534",
+      "size_bytes": 20,
+      "source_id": "SRC-0250"
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Verification\\ViewerFixtures.cs",
+      "sha256": "892744E6E231E93EEACFB5556CC529B8E08A846692C3383A47AD778392B218B5",
+      "size_bytes": 5609,
+      "source_id": "SRC-0251"
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Verification\\ViewerFixtures.cs.uid",
+      "sha256": "C96CF4B2C25F372F3B27759B16C7894D91508660FFF6C0B1EAA19E73B1246A4B",
+      "size_bytes": 20,
+      "source_id": "SRC-0252"
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\GodotBoardTests.cs",
+      "sha256": "0532E0B05721AFF8708A0E2B7992FD2395E8E8723333CF55BF9D63198C2C85C9",
+      "size_bytes": 7266,
+      "source_id": "SRC-0253"
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\GodotSettingsTests.cs",
+      "sha256": "E524EAF67C5418D9BB661F208B7F347108C83CABA2DA008EBD58ED787D0EB277",
+      "size_bytes": 5122,
+      "source_id": "SRC-0254"
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\NuGet.Config",
+      "sha256": "F627147DC7798FC65F974826C6B42695CB8E79AED2BFD5EBFD95FC0BA8969C13",
+      "size_bytes": 309,
+      "source_id": "SRC-0255"
+    }
+  ],
+  "verified_build_inputs_and_test_assemblies": {
+    "Debug": {
+      "build_ok": true,
+      "tests_passed": 149,
+      "source_inputs_verified": 108,
+      "loaded_assemblies_verified": 5,
+      "current_godot_assembly": {
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\.godot\\mono\\temp\\bin\\Debug\\Fistnet.Genepool.Godot.dll",
+        "sha256": "77D91F588A3FBBC3FFA20932A27BCEBE0E9BA9D7B9A216E16887836446578F34",
+        "size_bytes": 182272
+      }
+    },
+    "Release": {
+      "build_ok": true,
+      "tests_passed": 149,
+      "source_inputs_verified": 108,
+      "loaded_assemblies_verified": 5,
+      "current_godot_assembly": {
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\.godot\\mono\\temp\\bin\\ExportRelease\\Fistnet.Genepool.Godot.dll",
+        "sha256": "D74C8031DDFC59D5B00A87422A47555C738B8AD373FBE0A6CE12255A891620CA",
+        "size_bytes": 168960
+      }
+    }
+  },
+  "godot_checks": {
+    "gpu_passed": 62,
+    "headless_passed": 35,
+    "renderer_passed": 9,
+    "backend": "Windows",
+    "adapter": "AMD Radeon RX 6800",
+    "native_host_runtime": ".NET 10.0.9",
+    "engine": "4.7.2-stable (official)",
+    "measurements": [
+      {
+        "population": 0,
+        "width": 1920,
+        "height": 1080,
+        "requestedWarmupSeconds": 5,
+        "requestedSampleSeconds": 10,
+        "actualSampleSeconds": 10.0162661,
+        "sampleIntervalStartSeconds": 4.9897568,
+        "sampleIntervalEndSeconds": 15.0060229,
+        "requestedSnapshotHz": 10,
+        "sampleSnapshotsReplayed": 100,
+        "sampleSnapshotsSkipped": 0,
+        "expectedSampleSnapshots": 100,
+        "actualReplayHzDuringRequestedSample": 10,
+        "totalSnapshotsReplayed": 149,
+        "totalSnapshotsSkipped": 0,
+        "frames": 601,
+        "averageFps": 60.00239949695426,
+        "p95FrameMilliseconds": 16.6805,
+        "maxFrameMilliseconds": 16.7233,
+        "p95UploadMilliseconds": 0.8552,
+        "sampleCoverageComplete": true,
+        "replayCoverageComplete": true,
+        "frameBudgetPassed": true,
+        "simulationCalculationIncluded": false
+      },
+      {
+        "population": 1000,
+        "width": 1920,
+        "height": 1080,
+        "requestedWarmupSeconds": 5,
+        "requestedSampleSeconds": 10,
+        "actualSampleSeconds": 10.0162743,
+        "sampleIntervalStartSeconds": 4.9951496,
+        "sampleIntervalEndSeconds": 15.0114239,
+        "requestedSnapshotHz": 10,
+        "sampleSnapshotsReplayed": 100,
+        "sampleSnapshotsSkipped": 0,
+        "expectedSampleSnapshots": 100,
+        "actualReplayHzDuringRequestedSample": 10,
+        "totalSnapshotsReplayed": 149,
+        "totalSnapshotsSkipped": 0,
+        "frames": 601,
+        "averageFps": 60.002350374929335,
+        "p95FrameMilliseconds": 16.6846,
+        "maxFrameMilliseconds": 17.4414,
+        "p95UploadMilliseconds": 1.1625,
+        "sampleCoverageComplete": true,
+        "replayCoverageComplete": true,
+        "frameBudgetPassed": true,
+        "simulationCalculationIncluded": false
+      },
+      {
+        "population": 10000,
+        "width": 1920,
+        "height": 1080,
+        "requestedWarmupSeconds": 5,
+        "requestedSampleSeconds": 10,
+        "actualSampleSeconds": 10.0162628,
+        "sampleIntervalStartSeconds": 4.9873788,
+        "sampleIntervalEndSeconds": 15.0036416,
+        "requestedSnapshotHz": 10,
+        "sampleSnapshotsReplayed": 100,
+        "sampleSnapshotsSkipped": 0,
+        "expectedSampleSnapshots": 100,
+        "actualReplayHzDuringRequestedSample": 10,
+        "totalSnapshotsReplayed": 149,
+        "totalSnapshotsSkipped": 0,
+        "frames": 601,
+        "averageFps": 60.00241926559675,
+        "p95FrameMilliseconds": 16.6857,
+        "maxFrameMilliseconds": 18.1329,
+        "p95UploadMilliseconds": 1.6228,
+        "sampleCoverageComplete": true,
+        "replayCoverageComplete": true,
+        "frameBudgetPassed": true,
+        "simulationCalculationIncluded": false
+      }
+    ],
+    "live_measurements": [
+      {
+        "kind": "input_handler",
+        "input": "Pause signal during blocked season",
+        "acknowledgeMilliseconds": 0.2357,
+        "excludes": "OS input delivery and physical display latency"
+      },
+      {
+        "kind": "bounded_live_world",
+        "seed": 29,
+        "initialPopulationPercent": 10,
+        "completedSeasons": 8,
+        "endingPopulation": 959,
+        "selectedId": 492,
+        "mode": "DeterministicReference",
+        "ecologicalEvaluation": false
+      }
+    ]
+  },
+  "dependency": {
+    "archive": {
+      "path": "D:\\Posao\\Fistnet.Genepool\\.tools\\downloads\\Godot_v4.7.2-stable_mono_win64.zip",
+      "sha256": "A2A48473A7414C5F19FAB690518CAEBB738C09EF9601F6BD2388676A7F53B3C0",
+      "size_bytes": 116582061
+    },
+    "sha512": "79229fd112b0c9cbeab82363a4ef7be18ea70f1caf86bf912789335b136fbe7e01db0053a33461438c5da1c680c17bbb10040bd09bedc51221cd4423d0367757",
+    "sha512_status": "Compared with publisher checksum list during download by transient setup helper.",
+    "extracted_distribution_files_verified": 82,
+    "extraction_method": "Helper compared SHA256 for every extracted original ZIP entry; original distribution retained, portable marker and editor preferences added separately.",
+    "executable": {
+      "path": "D:\\Posao\\Fistnet.Genepool\\.tools\\godot\\4.7.2\\Godot_v4.7.2-stable_mono_win64.exe",
+      "sha256": "45336315EB6F1A52A8923BC4F2CE8079A03DC4939DCB7D531047890F1F7CDFAB",
+      "size_bytes": 181449736
+    },
+    "download_sources": [
+      "https://github.com/godotengine/godot-builds/releases/download/4.7.2-stable/Godot_v4.7.2-stable_mono_win64.zip",
+      "https://github.com/godotengine/godot-builds/releases/download/4.7.2-stable/SHA512-SUMS.txt"
+    ],
+    "new_sdk_installed": false,
+    "export_templates_installed": false
+  },
+  "derived_support": [
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\tools\\build_solution.py",
+      "sha256": "E229D0DC5343BCEA494C7F337E78153E28248BA3EC9E8E85497625630D32274A",
+      "size_bytes": 6182
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\tools\\run_godot_checks.py",
+      "sha256": "167681A5679873CDE94A3D3DD12A7E9692E00E777635A509344B5E934AEB7995",
+      "size_bytes": 2982
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\tools\\run_r03_regressions.py",
+      "sha256": "BDEC9DD1E7549C63EDA8B93F55378ECE136052176C20BE23721AE384D037C3CF",
+      "size_bytes": 1196
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step3_preedit_history.json",
+      "sha256": "9622FD34D86889769BC76FDCC81610E47D7854F15700CA21A57BDE3FD87E8957",
+      "size_bytes": 1842
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step3_builds.json",
+      "sha256": "A5C908D86A6514B21472DE99CAB689132FFC50522BA6A4F12E068571BF5AA702",
+      "size_bytes": 119214
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step3_regressions.json",
+      "sha256": "CCEFF2B7EB9D366098E7A6BF27C6C2FE8B774F3F14D8F56253C6664801B8457F",
+      "size_bytes": 506665
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_godot_verification.json",
+      "sha256": "92AB944CE942A8FD79FBC1C449DCF59C6A9D4B06A5551F55A6E1B612E1A05C26",
+      "size_bytes": 9348
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_godot_headless.json",
+      "sha256": "08DEE86E671A7BC9B85C4611711DFF1001E231257B782528AF193556EFF3D29F",
+      "size_bytes": 5526
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_godot_benchmark.json",
+      "sha256": "8800D3C581384BD747E2F996FADADBC124E382F40D338E9EA54F70F97DC64497",
+      "size_bytes": 4882
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step3_startup.json",
+      "sha256": "A4A09C44E5FF87436EEAF4CB3F96FE4D920C47DC2B53D157736682BE2E404B86",
+      "size_bytes": 511
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03-godot-1920x1080.png",
+      "sha256": "54C153843D4CAB9612AEA93D125A4C32DC291EE67AC5929850544F8173D2681A",
+      "size_bytes": 192924
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03-godot-1366x768.png",
+      "sha256": "8D5FA523B41E8BB35F800D1A63493C0E0E378752EE17E969AD0AD83947D10CA1",
+      "size_bytes": 140217
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03-godot-settings.png",
+      "sha256": "D33D5C53D58235BB71FFD6C1D460937E2CAD80324B092C686200671F8608715F",
+      "size_bytes": 83851
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03-godot-live.png",
+      "sha256": "C44E7DF6C5CCCC17A5A6E2190497312602FC6F1234C88E56B41BA77CA9B4F7FD",
+      "size_bytes": 161465
+    }
+  ],
+  "coverage": {
+    "source_changes": "Three existing registered sources versioned; new Godot app, two pure Control presentation helpers, two test sources and NuGet config. No Dna or simulation engine source changes.",
+    "benchmark_horizon": "Renderer/UI and benchmark method measured before only the last additional populated verification method; this does not claim the entire final assembly was benchmarked.",
+    "framework": "All whole-solution mappings inspected; Debug/Release builds executed; direct ExportRelease project with mapped Release Control/Dna observed. SDK9.0.315/net9 retained.",
+    "limits": "F5/breakpoints/step/locals inside VS2022 unverified; physical monitor transitions and exported release runtime unverified. Fixed fixtures and eight-season engineering world are not ecology. R02 closed INCONCLUSIVE; reserved evidence unread.",
+    "history": "Existing SRC-0115 exact historical bytes unavailable (FACT-0042); no new gap.",
+    "git": "No commit/push. Current implementation and KB are local changes; remote uninspected."
+  },
+  "interventions": [
+    "Restricted SDK/package resolution failed; authorized normal Windows permissions resolved it; project public feed/cache explicit.",
+    "Godot versus crypto RandomNumberGenerator name collision fixed.",
+    "Settings harness initially applied text before programmatic values redrew; synchronization wait fixed the test.",
+    "Actual intermediate-minus seed input issue fixed by committing completed text rather than every keystroke.",
+    "One direct SDK first-use invocation reported ASP.NET developer-certificate generation; no trust command run. Subsequent process settings suppress certificate generation, PATH changes and telemetry."
+  ],
+  "attribution": "Transient setup, GPU renderer and UI helpers contributed bounded implementation and static review; Genepool Analyzer owns integration, actual execution, source reconciliation and canonical KB."
+}

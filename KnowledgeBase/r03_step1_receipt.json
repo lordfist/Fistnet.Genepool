@@ -1,0 +1,121 @@
+{
+  "actor": "Genepool Analyzer",
+  "task": "R03 Step1 GPU renderer research and recommendation",
+  "status": "Complete; stopped for owner review",
+  "preview": {
+    "from_revision": 42,
+    "to_revision": 43,
+    "transaction_sha256": "497D2C0E4F9025CB1D7BCB8FD69BC6FDF8DD5FEA9829F783513C3E2F65FDAFA9",
+    "preview_time": "2026-09-07T12:43:48+00:00",
+    "reviewed_offsets": [
+      0,
+      100,
+      200,
+      300,
+      400,
+      500
+    ],
+    "reviewed_changes": 502,
+    "complete": true,
+    "intervention": "Initial dry-run requested limit200; tool rejected before replacement. Retried with supported limit100, then reviewed all pages. No canonical write was retried."
+  },
+  "apply": {
+    "ok": true,
+    "dry_run": false,
+    "from_revision": 42,
+    "to_revision": 43,
+    "effects": {
+      "record_upserts": 8,
+      "source_upserts": 28,
+      "core_fields_patched": 12
+    },
+    "validation_scope": "deep_sources_and_prepared",
+    "write_outcome": {
+      "stage": "commit_completed",
+      "replaced_files": [
+        "records.jsonl",
+        "sources.json",
+        "core.json"
+      ],
+      "commit_completed": true,
+      "verification_completed": true,
+      "rollback_performed": false,
+      "recovery_required": false,
+      "cleanup_errors": [],
+      "replacement_uncertain": false
+    },
+    "transaction_sha256": "497D2C0E4F9025CB1D7BCB8FD69BC6FDF8DD5FEA9829F783513C3E2F65FDAFA9",
+    "hashes": {
+      "core.json": "C866B07CDD2E7E840D7BCA945716EE5EFD49F1194B5D57594BE6E776AA5DBFBE",
+      "records.jsonl": "541FA0A86FBFAFC1739CE50651BA25954847A43570ADBDFAB6A2CB2D3EBEA5CF",
+      "sources.json": "AC72CCA556CE396AD74BD45DA38CA197B97F2D04F8874C2F68F3CF67C5FFC0C0"
+    }
+  },
+  "deep_validation": {
+    "ok": true,
+    "errors": [],
+    "warnings": [
+      "source SRC-0115 historical bytes unavailable: The registered mixed-newline Part2 Board.cs bytes are not reproduced by local commit c5a494a412684d801031d1dec2c2c7670f5e3293 using raw or LF-to-CRLF transforms. Bounded reconstruction from retained predecessor/successor evidence did not match the registered SHA256. Git code version and historical prepared text remain available, but exact original-byte history is unverified. See FACT-0042."
+    ],
+    "counts": {
+      "records": 97,
+      "sources": 199,
+      "historical_sources": 84,
+      "prepared_sources": 21
+    },
+    "core_estimated_tokens": 3955,
+    "deep": true,
+    "kb_revision": 43
+  },
+  "readback": {
+    "kb_revision": 43,
+    "current_stage": "RESEARCH_COMPLETE; OWNER_REVIEW_PENDING",
+    "records_present": [
+      "DEC-0022",
+      "DEC-0023",
+      "FACT-0047",
+      "CLAIM-0006",
+      "CLAIM-0007",
+      "REC-0008"
+    ],
+    "unchanged_local_sources": 14,
+    "matching_derived_artifacts": 2,
+    "valid_report_local_links": 5,
+    "only_KB_changes": true,
+    "git_status": [
+      " M KnowledgeBase/core.json",
+      " M KnowledgeBase/records.jsonl",
+      " M KnowledgeBase/sources.json",
+      "?? KnowledgeBase/R03_RENDERING_RESEARCH_STEP1.md",
+      "?? KnowledgeBase/r02_closure_r03_outline_receipt.json",
+      "?? KnowledgeBase/r02_closure_r03_outline_transaction.json",
+      "?? KnowledgeBase/r02_part4_acceptance_receipt.json",
+      "?? KnowledgeBase/r02_part4_acceptance_transaction.json",
+      "?? KnowledgeBase/r03_step1_evidence.json",
+      "?? KnowledgeBase/r03_step1_transaction.json"
+    ]
+  },
+  "new_records": [
+    "DEC-0022",
+    "DEC-0023",
+    "FACT-0047",
+    "CLAIM-0006",
+    "CLAIM-0007",
+    "REC-0008"
+  ],
+  "updated_records": [
+    "DEC-0021",
+    "REC-0007"
+  ],
+  "new_sources": {
+    "count": 28,
+    "first": "SRC-0172",
+    "last": "SRC-0199"
+  },
+  "limitations": [
+    "Deep validation verifies current and declared historical local identities, prepared evidence and KB integrity; URL registration does not recrawl websites.",
+    "No graphics package installed, sample/model downloaded or executed, simulation source edited or experiment trial run.",
+    "GPU adapter/driver metadata query denied; actual GPU execution, engine compatibility and performance remain untested.",
+    "Existing SRC-0115 historical exact-byte warning remains; no new validation warnings."
+  ]
+}

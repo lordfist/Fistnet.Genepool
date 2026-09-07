@@ -1,0 +1,330 @@
+{
+  "actor": "Genepool Analyzer",
+  "recorded_at_utc": "2026-09-07T17:28:26.589323+00:00",
+  "scope": "Godot selected; Step2 planning only. No application edits, downloads, installation, build, sample execution or trial.",
+  "local_head": "bdfaa0c555edf8807f680f46b71e0ef16e387d07",
+  "git_status": [
+    " M KnowledgeBase/core.json",
+    " M KnowledgeBase/records.jsonl",
+    " M KnowledgeBase/sources.json",
+    "?? KnowledgeBase/R03_GODOT_2D_IMPLEMENTATION_PLAN.md",
+    "?? KnowledgeBase/R03_RENDERING_RECOMMENDATION_REVIEW.md",
+    "?? KnowledgeBase/R03_RENDERING_RESEARCH_STEP1.md",
+    "?? KnowledgeBase/r02_closure_r03_outline_receipt.json",
+    "?? KnowledgeBase/r02_closure_r03_outline_transaction.json",
+    "?? KnowledgeBase/r02_part4_acceptance_receipt.json",
+    "?? KnowledgeBase/r02_part4_acceptance_transaction.json",
+    "?? KnowledgeBase/r03_recommendation_review_receipt.json",
+    "?? KnowledgeBase/r03_recommendation_review_transaction.json",
+    "?? KnowledgeBase/r03_step1_evidence.json",
+    "?? KnowledgeBase/r03_step1_receipt.json",
+    "?? KnowledgeBase/r03_step1_transaction.json",
+    "?? KnowledgeBase/r03_step2_prepare.py"
+  ],
+  "local_sources": [
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\global.json",
+      "sha256": "F5027F7B2D82128C9715C687359EEE846D57DA45AEAB8986CD265107EB32C47A",
+      "size_bytes": 108,
+      "source_id": "SRC-0067",
+      "coverage": "Complete SDK pin.",
+      "current_bytes_match_registered_identity": true
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.sln",
+      "sha256": "B28C8CDF4D210B23FB3269BEF8FAA8A1F8A493132B03A2C585CD985E49E79A85",
+      "size_bytes": 6142,
+      "source_id": "SRC-0052",
+      "coverage": "Complete solution and all configuration mappings.",
+      "current_bytes_match_registered_identity": true
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Fistnet.Genepool.Dna.csproj",
+      "sha256": "8F3E4C3504EF0BB4429B2B5E255F8669865B4459509EC0C55BF460C4EDF984E7",
+      "size_bytes": 392,
+      "source_id": "SRC-0070",
+      "coverage": "Complete library project.",
+      "current_bytes_match_registered_identity": true
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\Fistnet.Genepool.Control.csproj",
+      "sha256": "2A98C92C1375F84A267B8C49F2CA8EFE73549B75FAC73815771C667E556B7CE7",
+      "size_bytes": 519,
+      "source_id": "SRC-0069",
+      "coverage": "Complete library project.",
+      "current_bytes_match_registered_identity": true
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.App\\Fistnet.Genepool.App.csproj",
+      "sha256": "D79B44B872561468641D6D2A56E592B6E264EDB92C680862AC2A629446350746",
+      "size_bytes": 2060,
+      "source_id": "SRC-0002",
+      "coverage": "Current identity plus Step1 complete project inspection.",
+      "current_bytes_match_registered_identity": true
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Visualization\\Fistnet.Genepool.Visualization.csproj",
+      "sha256": "9F420B4D3CE6E2497AA545D71A782880A9D411B06FA31DFF59C28B650758581A",
+      "size_bytes": 724,
+      "source_id": "SRC-0068",
+      "coverage": "Current identity plus Step1 complete project inspection.",
+      "current_bytes_match_registered_identity": true
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\Fistnet.Genepool.Tests.csproj",
+      "sha256": "C9517DF945C421AF55E5B0607714857E3DCA02AB8364EEDCB3C5D13965DAB5D2",
+      "size_bytes": 739,
+      "source_id": "SRC-0056",
+      "coverage": "Current identity plus Step1 complete project inspection.",
+      "current_bytes_match_registered_identity": true
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\SimulationRunner.cs",
+      "sha256": "10BDC633721B982940F7670EAAE67C20E5206DF6812D60413272E93EC186A2C6",
+      "size_bytes": 9153,
+      "source_id": "SRC-0147",
+      "coverage": "Complete 191-line worker; command methods, LatestFrame, Publish, shutdown and fault paths.",
+      "current_bytes_match_registered_identity": true
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\ViewFrame.cs",
+      "sha256": "B2D5AFFDF9F8DB78F7D5E62A504D41B16E9F76929A4D0773236A9068D4175F9A",
+      "size_bytes": 2224,
+      "source_id": "SRC-0149",
+      "coverage": "Complete detached snapshot model and child records.",
+      "current_bytes_match_registered_identity": true
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\SimulationRunOptions.cs",
+      "sha256": "99D7B4D82C9248262AD9A8D472A5FFDAC1DE2CE1AC6722DB1F85A01CD5873D85",
+      "size_bytes": 1743,
+      "source_id": "SRC-0159",
+      "coverage": "Complete options, defaults, modes, policy and validation.",
+      "current_bytes_match_registered_identity": true
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.App\\NewSimulationDialog.cs",
+      "sha256": "7BE5F9B8F7D104E56058E07C54445AFD0F117CFB4F3DA3EDF37479761ED225EF",
+      "size_bytes": 11810,
+      "source_id": "SRC-0163",
+      "coverage": "Complete settings dialog including LoadOptions and preservation in CreateOptions.",
+      "current_bytes_match_registered_identity": true
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.App\\MainForm.Layout.cs",
+      "sha256": "C87DD3B7BE00BCAA3C54555114AA296B46BA26766870CD6F2BF166B3101A8D6E",
+      "size_bytes": 17390,
+      "source_id": "SRC-0144",
+      "coverage": "Complete layout; control labels, speed choices, timer and panels.",
+      "current_bytes_match_registered_identity": true
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.App\\MainForm.cs",
+      "sha256": "6E30D6D207EE8B21E255655BAB6D592BC6F27CC5606E155A03A0BFFF3422AE6C",
+      "size_bytes": 23544,
+      "source_id": "SRC-0164",
+      "coverage": "Targeted display/commands/selection/settings; transient architecture helper reviewed UI integration.",
+      "current_bytes_match_registered_identity": true
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Visualization\\BoardView.cs",
+      "sha256": "6D244DCC58ACC13CFA232452E4ABF270C1B9817E4A76D48FFBFF6B6AF68AE613",
+      "size_bytes": 13004,
+      "source_id": "SRC-0152",
+      "coverage": "Step1 complete read plus Step2 targeted palette, picking and display-layer review; helper confirms mapping.",
+      "current_bytes_match_registered_identity": true
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\ViewCollector.cs",
+      "sha256": "68A592ACCA7E9DB8EB987A59D4ACABB26110A8C43D26E701A44D284F825E510D",
+      "size_bytes": 9256,
+      "source_id": "SRC-0162",
+      "coverage": "Targeted collection/publication and detached data contract; transient architecture review.",
+      "current_bytes_match_registered_identity": true
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\ViewerBackendTests.cs",
+      "sha256": "DBDD356C3B02E9049AF65814DBE9C5A3691351053578BACA86131774E8319C3A",
+      "size_bytes": 17295,
+      "source_id": "SRC-0151",
+      "coverage": "Transient architecture helper inspected existing viewer tests; root reuses current identity and prior bounded verification only.",
+      "current_bytes_match_registered_identity": true
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\.gitignore",
+      "sha256": "2EC9CA63A1CB07B56E04C9893C0C15556A196ABA16507B94F633B4DEA39FCB8A",
+      "size_bytes": 753,
+      "source_id": "SRC-0202",
+      "coverage": "Complete current exclusions; planned tools/cache exclusions absent.",
+      "current_bytes_match_registered_identity": false
+    }
+  ],
+  "public_sources": [
+    {
+      "source_id": "SRC-0203",
+      "title": "Godot 4.7.2 release archive",
+      "url": "https://godotengine.org/download/archive/4.7.2-stable/",
+      "coverage": "Official release selection and .NET edition; retrieved 2026-09-07.",
+      "retrieval_date": "2026-09-07"
+    },
+    {
+      "source_id": "SRC-0204",
+      "title": "Godot 4.7.2 official release assets",
+      "url": "https://github.com/godotengine/godot-builds/releases/expanded_assets/4.7.2-stable",
+      "coverage": "Transient dependency helper read exact editor/template names, sizes and publisher SHA256 metadata; no archive downloaded.",
+      "retrieval_date": "2026-09-07"
+    },
+    {
+      "source_id": "SRC-0205",
+      "title": "Godot.NET.Sdk 4.7.2 package",
+      "url": "https://www.nuget.org/packages/Godot.NET.Sdk/4.7.2",
+      "coverage": "Exact SDK version, package identity and publication metadata.",
+      "retrieval_date": "2026-09-07"
+    },
+    {
+      "source_id": "SRC-0206",
+      "title": "Godot 4.7.2 SDK configurations",
+      "url": "https://github.com/godotengine/godot/blob/4.7.2-stable/modules/mono/editor/Godot.NET.Sdk/Godot.NET.Sdk/Sdk/Sdk.props",
+      "coverage": "Versioned source via raw equivalent, complete SDK props: configurations, platform and output paths.",
+      "retrieval_date": "2026-09-07"
+    },
+    {
+      "source_id": "SRC-0207",
+      "title": "Godot 4.7.2 implicit C# packages",
+      "url": "https://github.com/godotengine/godot/blob/4.7.2-stable/modules/mono/editor/Godot.NET.Sdk/Godot.NET.Sdk/Sdk/Sdk.targets",
+      "coverage": "Versioned source via raw equivalent, complete SDK targets: implicit bindings/generator and editor-only package.",
+      "retrieval_date": "2026-09-07"
+    },
+    {
+      "source_id": "SRC-0208",
+      "title": "Godot 4.7.2 package version generation",
+      "url": "https://github.com/godotengine/godot/blob/4.7.2-stable/modules/mono/build_scripts/build_assemblies.py",
+      "coverage": "Dependency helper inspected generated SdkPackageVersions.props construction; package version uses stable engine major.minor.patch.",
+      "retrieval_date": "2026-09-07"
+    },
+    {
+      "source_id": "SRC-0209",
+      "title": "Godot 4.7.2 project framework checks",
+      "url": "https://github.com/godotengine/godot/blob/4.7.2-stable/modules/mono/editor/GodotTools/GodotTools.ProjectEditor/ProjectUtils.cs",
+      "coverage": "Dependency helper inspected minimum framework comparison using NuGetFramework.Version; net9 Windows target compatibility is static inference.",
+      "retrieval_date": "2026-09-07"
+    },
+    {
+      "source_id": "SRC-0210",
+      "title": "Godot 4.7.2 solution discovery",
+      "url": "https://github.com/godotengine/godot/blob/4.7.2-stable/modules/mono/editor/GodotTools/GodotTools/Internals/GodotSharpDirs.cs",
+      "coverage": "Complete versioned source via raw equivalent; assembly project path and parent-directory matching solution scan.",
+      "retrieval_date": "2026-09-07"
+    },
+    {
+      "source_id": "SRC-0211",
+      "title": "Microsoft SDK and Visual Studio version matrix",
+      "url": "https://learn.microsoft.com/en-us/dotnet/core/porting/versioning-sdk-msbuild-vs",
+      "coverage": "SDK9.0.3xx primary VS17.14 and net9 minimum VS17.12; dependency helper primary-source check.",
+      "retrieval_date": "2026-09-07"
+    },
+    {
+      "source_id": "SRC-0181",
+      "title": "Godot C# and Visual Studio setup",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/scripting/c_sharp/c_sharp_basics.html",
+      "coverage": "C# prerequisites, VS2022 desktop workload and executable debug launch workflow.",
+      "retrieval_date": "2026-09-07"
+    },
+    {
+      "source_id": "SRC-0212",
+      "title": "MSBuild ProjectReference metadata",
+      "url": "https://learn.microsoft.com/en-us/visualstudio/msbuild/common-msbuild-project-items?view=vs-2022",
+      "coverage": "ProjectReference SetConfiguration and SetPlatform; source supports proposed explicit export-library mapping.",
+      "retrieval_date": "2026-09-07"
+    },
+    {
+      "source_id": "SRC-0213",
+      "title": "Godot portable editor data",
+      "url": "https://docs.godotengine.org/en/4.7/tutorials/io/data_paths.html",
+      "coverage": "Self-contained editor marker and editor_data; no claim that it applies to exported projects.",
+      "retrieval_date": "2026-09-07"
+    },
+    {
+      "source_id": "SRC-0214",
+      "title": "Godot GPU requirements",
+      "url": "https://docs.godotengine.org/en/4.7/about/system_requirements.html",
+      "coverage": "Windows editor minimums and Compatibility OpenGL3.3; local GPU/driver unknown.",
+      "retrieval_date": "2026-09-07"
+    },
+    {
+      "source_id": "SRC-0215",
+      "title": "Godot renderer selection",
+      "url": "https://docs.godotengine.org/en/4.7/tutorials/rendering/renderers.html",
+      "coverage": "Compatibility renderer suitability guidance; no measured local performance.",
+      "retrieval_date": "2026-09-07"
+    },
+    {
+      "source_id": "SRC-0216",
+      "title": "Godot MultiMeshInstance2D API",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_multimeshinstance2d.html",
+      "coverage": "Instanced 2D rendering interface.",
+      "retrieval_date": "2026-09-07"
+    },
+    {
+      "source_id": "SRC-0217",
+      "title": "Godot MultiMesh API",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_multimesh.html",
+      "coverage": "Transform2D, colors, instance allocation, Buffer and VisibleInstanceCount.",
+      "retrieval_date": "2026-09-07"
+    },
+    {
+      "source_id": "SRC-0218",
+      "title": "Godot bulk instance buffer layout",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_renderingserver.html",
+      "coverage": "multimesh_set_buffer section: 2D transforms and optional per-instance color; main-thread bulk upload proposed.",
+      "retrieval_date": "2026-09-07"
+    },
+    {
+      "source_id": "SRC-0219",
+      "title": "Godot scene threading constraints",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/performance/thread_safe_apis.html",
+      "coverage": "Scene/resource ownership constraints supporting main-thread Godot updates.",
+      "retrieval_date": "2026-09-07"
+    },
+    {
+      "source_id": "SRC-0220",
+      "title": "Godot command line",
+      "url": "https://docs.godotengine.org/en/4.7/tutorials/editor/command_line_tutorial.html",
+      "coverage": "Dependency helper checked editor/run/path/import/export forms; future commands not executed.",
+      "retrieval_date": "2026-09-07"
+    },
+    {
+      "source_id": "SRC-0221",
+      "title": "Godot export workflow",
+      "url": "https://docs.godotengine.org/en/4.7/tutorials/export/exporting_projects.html",
+      "coverage": "Matching templates, platform selection, preset and output-directory requirements; packaging deferred.",
+      "retrieval_date": "2026-09-07"
+    },
+    {
+      "source_id": "SRC-0222",
+      "title": "Godot 4.7.2 managed publish",
+      "url": "https://github.com/godotengine/godot/blob/4.7.2-stable/modules/mono/editor/GodotTools/GodotTools/Build/BuildSystem.cs",
+      "coverage": "Dependency helper checked ExportRelease/project/win-x64/self-contained publish arguments; no literal TFM override.",
+      "retrieval_date": "2026-09-07"
+    }
+  ],
+  "derived_support": [
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\tools\\build_solution.py",
+      "sha256": "5FA38D4B3DAA8042D9A4A90AC64117D21763E21C147775C2DBD02C9A3B1B79BD",
+      "size_bytes": 5376,
+      "coverage": "Complete helper inspection: fixed SDK/MSBuild, cleared NuGet sources, disposable caches and input inventory; no modification."
+    }
+  ],
+  "installed_metadata": {
+    "dotnet_sdk": "9.0.315 MSBuild file present, product17.14.43",
+    "netcore_runtime": "9.0.17 core library present",
+    "visual_studio_ide": "VS2022 Community executable product17.14.37411.7",
+    "visual_studio_msbuild": "amd64 MSBuild product17.14.40",
+    "method": "File existence and version metadata, not a new capability execution.",
+    "godot_lookup": "No command under godot/godot4 in checked PATH; not exhaustive installation census.",
+    "gpu": "Unknown; earlier adapter query AccessDenied. Actual renderer must be verified during authorized implementation."
+  },
+  "omissions": "No archive extraction/import, local engine build/run/export or GPU measurement. No private IDE/account settings or reserved ecological evidence. URLs are locators, not archived immutable bytes.",
+  "attribution": "Root canonical writer and plan author; transient dependency and static architecture helpers supplied independently reviewed technical findings."
+}

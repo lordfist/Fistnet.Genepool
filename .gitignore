@@ -20,3 +20,8 @@
 obj
 net9.0-windows7.0
 ProjectEvaluation
+
+# Local Godot editor, package caches and generated engine data.
+/.tools/
+**/.godot/
+/Fistnet.Genepool.Godot/Properties/launchSettings.json

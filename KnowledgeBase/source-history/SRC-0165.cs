@@ -115,8 +115,6 @@ internal static class Program
         cases.AddRange(ActionTransactionTests.Cases());
         cases.AddRange(DnaActionTests.Cases());
         cases.AddRange(ViewerBackendTests.Cases());
-        cases.AddRange(GodotBoardTests.Cases());
-        cases.AddRange(GodotSettingsTests.Cases());
         cases.AddRange(PerformanceBenchmarks.Cases());
         cases.AddRange(FounderSetupTests.Cases());
         cases.AddRange(EcologyTests.Cases());

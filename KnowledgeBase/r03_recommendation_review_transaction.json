@@ -1,0 +1,442 @@
+{
+  "actor": "Genepool Analyzer",
+  "note": "Reassess Skia/Godot lifetime integration tradeoff after owner question; prefer Godot provisionally, preserve original comparison and stop within Step1 review.",
+  "upsert_records": [
+    {
+      "id": "FACT-0047",
+      "kind": "observed_fact",
+      "status": "active",
+      "statement": "R03 read-only inspection confirms100x100 board; BoardView CPU Bitmap/pixel construction plus System.Drawing overlays; detached ViewFrame feed from background SimulationRunner with bounded latest-frame publication and34ms UI polling. Fourteen targeted local files match registered identities at HEADbdfaa0c555edf8807f680f46b71e0ef16e387d07. global.json pinsSDK9.0.315; inspectedApp/Visualization/Control/Tests targetnet9.0-windows7.0. Runtime metadata reports64-bit Windows10.0.22621; GPU metadata query was denied.",
+      "source_refs": [
+        "SRC-0067",
+        "SRC-0002",
+        "SRC-0068",
+        "SRC-0069",
+        "SRC-0056",
+        "SRC-0152",
+        "SRC-0149",
+        "SRC-0147",
+        "SRC-0162",
+        "SRC-0164",
+        "SRC-0144",
+        "SRC-0160",
+        "SRC-0151",
+        "SRC-0165"
+      ],
+      "related_record_ids": [
+        "FACT-0040",
+        "FACT-0041",
+        "FACT-0046",
+        "DEC-0022"
+      ],
+      "tags": [
+        "R03",
+        "Step1",
+        "graphics_research"
+      ],
+      "origin": {
+        "type": "authorized_R03_Step1_research",
+        "actor": "Genepool Analyzer",
+        "recorded_at_utc": "2026-09-07T12:43:23.249598+00:00"
+      },
+      "uncertainty": "Static source/metadata evidence only, not a rendering or simulation benchmark. Public GPU APIs do not establish this adapter's capabilities. Local code clean; current KB edits not established as committed; remote uninspected.",
+      "derivation": {
+        "artifacts": [
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_RENDERING_RESEARCH_STEP1.md",
+            "sha256": "BD6FF2D1D6D1F9D618BA6854F9346AFC43B6B17296DD7DD5C7A9A2911A24F6C2",
+            "bytes": 22046,
+            "status": "Derived R03 Step1 research; current recommendation is the review addendum."
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step1_evidence.json",
+            "sha256": "240F3BDFECAE00AD0005176311189EC80868794DC4C2324E623BB5FC76B0EBB3",
+            "bytes": 26537,
+            "status": "Derived R03 Step1 research support; not original experiment evidence."
+          }
+        ],
+        "locators": [
+          "evidence.local_sources contains exact identities/read coverage",
+          "BoardView.RebuildRaster/OnPaint; SimulationRunner.Publish and worker loop; MainForm.DisplayFrame; Layout timer"
+        ]
+      },
+      "created_at": "2026-09-07T12:45:12+00:00",
+      "updated_at": "2026-09-07T12:45:12+00:00",
+      "resolution_notes": [
+        {
+          "at_utc": "2026-09-07T13:51:53.237312+00:00",
+          "actor": "Genepool Analyzer",
+          "type": "R03_recommendation_review",
+          "note": "Original research document now has a dated navigation banner to the Godot recommendation review; its underlying comparison is preserved. Prior document hash is a historical observation, not the current file identity.",
+          "prior_report_identity": {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_RENDERING_RESEARCH_STEP1.md",
+            "sha256": "C7F7C056D049BC2F6CDE91A87797F3235BC6B93464E9450F8CE8B68CC626BF60",
+            "bytes": 21574,
+            "status": "Derived R03 Step1 research support; not original experiment evidence."
+          },
+          "record_ids": [
+            "REC-0008"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CLAIM-0006",
+      "kind": "source_claim",
+      "status": "active",
+      "statement": "Primary project/package sources describe six viable free-use rendering candidates. SkiaSharpSKGLControl supplies GPU2D in WinForms, with4.151.2 net9 Windows19041 asset. OpenTK4 supplies a direct WinForms OpenGL host with more custom drawing infrastructure. MonoGameWindowsDX3.8.5.1 has net8 assets and2D/3D framework facilities. Stride4.2.1.2487 hasnet8 and WinForms hosting; current4.3 requiresnet10. Godot documents C#/VS2022 andnet9 targeting with scene/model workflows. Raylib-cs8.1.0 hasnet8 assets but describes binding maintenance as passive.",
+      "source_refs": [
+        "SRC-0172",
+        "SRC-0173",
+        "SRC-0174",
+        "SRC-0175",
+        "SRC-0176",
+        "SRC-0177",
+        "SRC-0178",
+        "SRC-0179",
+        "SRC-0180",
+        "SRC-0181",
+        "SRC-0182",
+        "SRC-0183"
+      ],
+      "related_record_ids": [
+        "DEC-0022",
+        "FACT-0047",
+        "CLAIM-0007",
+        "REC-0008"
+      ],
+      "tags": [
+        "R03",
+        "Step1",
+        "graphics_research"
+      ],
+      "origin": {
+        "type": "authorized_R03_Step1_research",
+        "actor": "Genepool Analyzer",
+        "recorded_at_utc": "2026-09-07T12:43:23.249598+00:00"
+      },
+      "uncertainty": "Published capabilities, license declarations and metadata, not local restore/build/performance results. Exact dependencies and native GPU deployment remain untested; detailed license/source links in report.",
+      "derivation": {
+        "artifacts": [
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_RENDERING_RESEARCH_STEP1.md",
+            "sha256": "BD6FF2D1D6D1F9D618BA6854F9346AFC43B6B17296DD7DD5C7A9A2911A24F6C2",
+            "bytes": 22046,
+            "status": "Derived R03 Step1 research; current recommendation is the review addendum."
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step1_evidence.json",
+            "sha256": "240F3BDFECAE00AD0005176311189EC80868794DC4C2324E623BB5FC76B0EBB3",
+            "bytes": 26537,
+            "status": "Derived R03 Step1 research support; not original experiment evidence."
+          }
+        ],
+        "locators": [
+          "report: shortlist, VS2022 implications, licensing",
+          "evidence.capability_findings"
+        ]
+      },
+      "created_at": "2026-09-07T12:45:12+00:00",
+      "updated_at": "2026-09-07T12:45:12+00:00",
+      "resolution_notes": [
+        {
+          "at_utc": "2026-09-07T13:51:53.237312+00:00",
+          "actor": "Genepool Analyzer",
+          "type": "R03_recommendation_review",
+          "note": "Original research document now has a dated navigation banner to the Godot recommendation review; its underlying comparison is preserved. Prior document hash is a historical observation, not the current file identity.",
+          "prior_report_identity": {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_RENDERING_RESEARCH_STEP1.md",
+            "sha256": "C7F7C056D049BC2F6CDE91A87797F3235BC6B93464E9450F8CE8B68CC626BF60",
+            "bytes": 21574,
+            "status": "Derived R03 Step1 research support; not original experiment evidence."
+          },
+          "record_ids": [
+            "REC-0008"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CLAIM-0007",
+      "kind": "source_claim",
+      "status": "active",
+      "statement": "Usable guidance and art exist: official Skia GPU WinForms example isnet10/repository-based and must be adapted to existingnet9; MonoGame has complete2D andFuelCell3D examples; StrideToolkit has3Dscene/material examples with4.2/preview61 matching and unfinished basic2D examples; Godot supplies C# scene and instancing tutorials plus model imports. Kenney creator pages declare reusableCC0 character/isometric/food sprites and3Dpet/food/nature packs; creator guide documentsGLB/Godot import.",
+      "source_refs": [
+        "SRC-0184",
+        "SRC-0185",
+        "SRC-0186",
+        "SRC-0187",
+        "SRC-0188",
+        "SRC-0189",
+        "SRC-0190",
+        "SRC-0191",
+        "SRC-0192",
+        "SRC-0193",
+        "SRC-0194",
+        "SRC-0195",
+        "SRC-0196",
+        "SRC-0197",
+        "SRC-0198",
+        "SRC-0199"
+      ],
+      "related_record_ids": [
+        "DEC-0023",
+        "CLAIM-0006",
+        "REC-0008"
+      ],
+      "tags": [
+        "R03",
+        "Step1",
+        "graphics_research"
+      ],
+      "origin": {
+        "type": "authorized_R03_Step1_research",
+        "actor": "Genepool Analyzer",
+        "recorded_at_utc": "2026-09-07T12:43:23.249598+00:00"
+      },
+      "uncertainty": "No example run or asset archive/import checked. Skia isometric projection/picking/order/animation assembly remain our work; it does not import3Dmesh scenes. Samples are implementation guidance, not proven dense Genepool viewers. Art style not accepted.",
+      "derivation": {
+        "artifacts": [
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_RENDERING_RESEARCH_STEP1.md",
+            "sha256": "BD6FF2D1D6D1F9D618BA6854F9346AFC43B6B17296DD7DD5C7A9A2911A24F6C2",
+            "bytes": 22046,
+            "status": "Derived R03 Step1 research; current recommendation is the review addendum."
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step1_evidence.json",
+            "sha256": "240F3BDFECAE00AD0005176311189EC80868794DC4C2324E623BB5FC76B0EBB3",
+            "bytes": 26537,
+            "status": "Derived R03 Step1 research support; not original experiment evidence."
+          }
+        ],
+        "locators": [
+          "report: Usable examples and existing artwork",
+          "evidence.public_sources and capability_findings.artwork"
+        ]
+      },
+      "created_at": "2026-09-07T12:45:12+00:00",
+      "updated_at": "2026-09-07T12:45:12+00:00",
+      "resolution_notes": [
+        {
+          "at_utc": "2026-09-07T13:51:53.237312+00:00",
+          "actor": "Genepool Analyzer",
+          "type": "R03_recommendation_review",
+          "note": "Original research document now has a dated navigation banner to the Godot recommendation review; its underlying comparison is preserved. Prior document hash is a historical observation, not the current file identity.",
+          "prior_report_identity": {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_RENDERING_RESEARCH_STEP1.md",
+            "sha256": "C7F7C056D049BC2F6CDE91A87797F3235BC6B93464E9450F8CE8B68CC626BF60",
+            "bytes": 21574,
+            "status": "Derived R03 Step1 research support; not original experiment evidence."
+          },
+          "record_ids": [
+            "REC-0008"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REC-0008",
+      "kind": "recommendation",
+      "status": "provisional",
+      "statement": "Recommend Godot C# as the rendering foundation for restrained 2D/2.5D now and a credible later 3D upgrade. The earlier SkiaSharp preference overweighted replacing the existing WinForms control; no measured effort saving established that this justified a later rendering-stack migration. Godot adds initial integration/editor/runtime work but retains the same engine and asset workflow for3D. Keep the existing C# simulation and whole-solution VS2022 requirement. This remains provisional Step1 advice; no owner engine acceptance or Step2 start.",
+      "source_refs": [
+        "SRC-0067",
+        "SRC-0002",
+        "SRC-0068",
+        "SRC-0069",
+        "SRC-0056",
+        "SRC-0152",
+        "SRC-0149",
+        "SRC-0147",
+        "SRC-0162",
+        "SRC-0164",
+        "SRC-0144",
+        "SRC-0160",
+        "SRC-0151",
+        "SRC-0165",
+        "SRC-0172",
+        "SRC-0173",
+        "SRC-0174",
+        "SRC-0175",
+        "SRC-0176",
+        "SRC-0177",
+        "SRC-0178",
+        "SRC-0179",
+        "SRC-0180",
+        "SRC-0181",
+        "SRC-0182",
+        "SRC-0183",
+        "SRC-0184",
+        "SRC-0185",
+        "SRC-0186",
+        "SRC-0187",
+        "SRC-0188",
+        "SRC-0189",
+        "SRC-0190",
+        "SRC-0191",
+        "SRC-0192",
+        "SRC-0193",
+        "SRC-0194",
+        "SRC-0195",
+        "SRC-0196",
+        "SRC-0197",
+        "SRC-0198",
+        "SRC-0199",
+        "SRC-0200",
+        "SRC-0201"
+      ],
+      "related_record_ids": [
+        "DEC-0022",
+        "DEC-0023",
+        "FACT-0047",
+        "CLAIM-0006",
+        "CLAIM-0007",
+        "REC-0007",
+        "DEC-0020"
+      ],
+      "tags": [
+        "R03",
+        "Step1",
+        "graphics_research"
+      ],
+      "origin": {
+        "type": "authorized_R03_Step1_research",
+        "actor": "Genepool Analyzer",
+        "recorded_at_utc": "2026-09-07T12:43:23.249598+00:00"
+      },
+      "uncertainty": "No quantified effort comparison, candidate build, GPU run or asset import. Godot2D-to3D is not automatic: scene presentation, cameras, coordinates and picking change; simulation integration, identifiers, commands and someUI can be reused if separated deliberately. Actual VS2022 solution integration remains to be verified. Existing WinForms app remains available during any authorized transition. R02 ecology stays closedINCONCLUSIVE.",
+      "derivation": {
+        "artifacts": [
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_RENDERING_RESEARCH_STEP1.md",
+            "sha256": "BD6FF2D1D6D1F9D618BA6854F9346AFC43B6B17296DD7DD5C7A9A2911A24F6C2",
+            "bytes": 22046,
+            "status": "Derived R03 Step1 research; current recommendation is the review addendum."
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step1_evidence.json",
+            "sha256": "240F3BDFECAE00AD0005176311189EC80868794DC4C2324E623BB5FC76B0EBB3",
+            "bytes": 26537,
+            "status": "Derived R03 Step1 research support; not original experiment evidence."
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_RENDERING_RECOMMENDATION_REVIEW.md",
+            "sha256": "F0858A646487CE415919E3E0118CE1C20AB7CE94D63B60352D00F3C14172058B",
+            "bytes": 4501,
+            "status": "Derived R03 Step1 research; current recommendation is the review addendum."
+          }
+        ],
+        "locators": [
+          "Current: R03_RENDERING_RECOMMENDATION_REVIEW.md",
+          "Historical comparison plus current navigation banner: R03_RENDERING_RESEARCH_STEP1.md"
+        ],
+        "next_action": "Stop for owner review of proposed direction; await applicable Step2 instruction."
+      },
+      "created_at": "2026-09-07T12:45:12+00:00",
+      "updated_at": "2026-09-07T12:45:12+00:00",
+      "resolution_notes": [
+        {
+          "at_utc": "2026-09-07T13:51:53.237312+00:00",
+          "actor": "Genepool Analyzer",
+          "type": "R03_recommendation_review",
+          "note": "Original research document now has a dated navigation banner to the Godot recommendation review; its underlying comparison is preserved. Prior document hash is a historical observation, not the current file identity. Owner questioned whether initial Skia integration savings justify later replacement for3D; this is a question, not an engine-selection decision. Analyzer corrects the weighting of initial integration versus future reuse.",
+          "prior_report_identity": {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_RENDERING_RESEARCH_STEP1.md",
+            "sha256": "C7F7C056D049BC2F6CDE91A87797F3235BC6B93464E9450F8CE8B68CC626BF60",
+            "bytes": 21574,
+            "status": "Derived R03 Step1 research support; not original experiment evidence."
+          },
+          "record_ids": [
+            "REC-0008"
+          ],
+          "prior_statement": "Recommend SkiaSharp GPU-backed SKGLControl for familiar2D followed by a deliberately modest isometric2.5D view with reusable sprites. Retaining embedded WinForms is Analyzer's integration-cost judgment, not an extra owner requirement. Godot C# is preferred alternative for actual3Dmodels or substantial scene/animation editing; compatibleStride4.2 merits consideration for embedded3D. Step1 research complete, awaiting owner review; Step2 and implementation have not begun.",
+          "prior_uncertainty": "Engine/depth/art choice provisional, not owner-accepted. Skia proposed WindowsTFM adjustment requires later VS2022 build/designer/native checks; recent officialsample cannot be copied unchanged. No performance improvement proved. Maintain current viewer until replacement checks pass; reconsider if actualGPU/native deployment/VS2022 or proportional implementation fails. R02 ecology remains closedINCONCLUSIVE."
+        }
+      ]
+    }
+  ],
+  "upsert_sources": [
+    {
+      "source_id": "SRC-0200",
+      "title": "Godot dedicated 2D facilities",
+      "locator": {
+        "type": "url",
+        "url": "https://docs.godotengine.org/en/stable/tutorials/2d/introduction_to_2d.html"
+      },
+      "observed_at_utc": "2026-09-07T13:51:53.237312+00:00",
+      "coverage": "Official stable documentation: introductory facilities and separate2D/3D workspace/coordinate concepts; retrieved2026-09-07. No sample execution or complete engine audit.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "R03_Step1_recommendation_review"
+      }
+    },
+    {
+      "source_id": "SRC-0201",
+      "title": "Godot 3D facilities and workspace",
+      "locator": {
+        "type": "url",
+        "url": "https://docs.godotengine.org/en/stable/tutorials/3d/introduction_to_3d.html"
+      },
+      "observed_at_utc": "2026-09-07T13:51:53.237312+00:00",
+      "coverage": "Official stable documentation: introductory facilities and separate2D/3D workspace/coordinate concepts; retrieved2026-09-07. No sample execution or complete engine audit.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "R03_Step1_recommendation_review"
+      }
+    }
+  ],
+  "core_patch": {
+    "proposal": {
+      "id": "R03_Step1",
+      "record_id": "REC-0008",
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_RENDERING_RECOMMENDATION_REVIEW.md",
+      "sha256": "F0858A646487CE415919E3E0118CE1C20AB7CE94D63B60352D00F3C14172058B",
+      "status": "RESEARCH_COMPLETE_AWAITING_OWNER_REVIEW",
+      "external_research_used": true,
+      "research_authorization_record": "DEC-0022",
+      "selection_criterion_record": "DEC-0023",
+      "implementation_authorized": false,
+      "result_record_ids": [
+        "FACT-0047",
+        "CLAIM-0006",
+        "CLAIM-0007"
+      ],
+      "source_commit_horizon": "bdfaa0c555edf8807f680f46b71e0ef16e387d07",
+      "evidence_manifest": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step1_evidence.json",
+      "limits": "Godot C# recommended provisionally; no engine accepted or candidate installed/built/run.",
+      "initial_comparison": {
+        "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_RENDERING_RESEARCH_STEP1.md",
+        "sha256": "BD6FF2D1D6D1F9D618BA6854F9346AFC43B6B17296DD7DD5C7A9A2911A24F6C2"
+      }
+    },
+    "current_iteration_part": {
+      "id": "R03_Step1",
+      "status": "RESEARCH_COMPLETE; OWNER_REVIEW_PENDING",
+      "record_ids": [
+        "DEC-0022",
+        "DEC-0023",
+        "FACT-0047",
+        "CLAIM-0006",
+        "CLAIM-0007",
+        "REC-0008"
+      ],
+      "report": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_RENDERING_RECOMMENDATION_REVIEW.md",
+      "verification": "Primary-source and local identity review; KB validation reported separately in r03_step1_receipt.json. No rendering/build/test execution.",
+      "limits": "No Step2 planning or implementation; GPU hardware and actual import/VS2022 integration unverified."
+    },
+    "tooling": {
+      "record_id": "FACT-0039",
+      "policy": ".SeedAnalyzer/KB.md",
+      "source_revision_command": "KnowledgeBase/tools/kb.py revise-source",
+      "verification": "29distinct source-version/reviewed-commit/snapshot checks passed,1host-symlink fixture skipped; current identities in FACT-0039.",
+      "source_history": "Pinned local Git and exact KB snapshots retain identities. SRC-0115 exact mixed-newline predecessor unavailable; prepared history retained with explicit deep-validation warning (FACT-0042).",
+      "knowledgebase_is_git_versioned": true,
+      "knowledgebase_git_scope": "R03 research localHEADbdfaa0c555edf8807f680f46b71e0ef16e387d07; sourcecode clean. KB acceptance/closure and current research edits present; remote uninspected. Prior c5a/Part3-uncommitted observation is historical.",
+      "knowledgebase_owner_decision": "DEC-0008: Keep the KnowledgeBase in Git.",
+      "source_version_record_id": "FACT-0020",
+      "current_maintenance_authority": "DEC-0022",
+      "current_verification_receipt": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_recommendation_review_receipt.json"
+    }
+  }
+}

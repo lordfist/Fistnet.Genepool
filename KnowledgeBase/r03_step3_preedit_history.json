@@ -1,0 +1,46 @@
+{
+  "actor": "Genepool Analyzer",
+  "at_utc": "2026-09-07T18:28:27.175035+00:00",
+  "checks": [
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\.gitignore",
+      "source_id": "SRC-0202",
+      "sha256": "2EC9CA63A1CB07B56E04C9893C0C15556A196ABA16507B94F633B4DEA39FCB8A",
+      "bytes": 753,
+      "git_commit": "bdfaa0c555edf8807f680f46b71e0ef16e387d07",
+      "transform": "lf_to_crlf",
+      "history_file": null,
+      "note": "Exact pinned Git reproduction verified."
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.sln",
+      "source_id": "SRC-0052",
+      "sha256": "B28C8CDF4D210B23FB3269BEF8FAA8A1F8A493132B03A2C585CD985E49E79A85",
+      "bytes": 6142,
+      "git_commit": "bdfaa0c555edf8807f680f46b71e0ef16e387d07",
+      "transform": "lf_to_crlf",
+      "history_file": null,
+      "note": "Exact pinned Git reproduction verified."
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\Program.cs",
+      "source_id": "SRC-0165",
+      "sha256": "933E363C0BD236B82D2DD650D87B0E7778139071E80178BFC344CCCE3607DE08",
+      "bytes": 7078,
+      "git_commit": null,
+      "transform": null,
+      "history_file": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\source-history\\SRC-0165.cs",
+      "note": "Exact working bytes require the single affected-source snapshot; tested raw/CRLF Git forms did not reproduce them."
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\tools\\build_solution.py",
+      "source_id": null,
+      "sha256": "5FA38D4B3DAA8042D9A4A90AC64117D21763E21C147775C2DBD02C9A3B1B79BD",
+      "bytes": 5376,
+      "git_commit": "bdfaa0c555edf8807f680f46b71e0ef16e387d07",
+      "transform": "raw",
+      "history_file": null,
+      "note": "Exact pinned Git reproduction verified."
+    }
+  ]
+}

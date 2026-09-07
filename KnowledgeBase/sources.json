@@ -1,5 +1,5 @@
 {
-  "catalog_revision": 27,
+  "catalog_revision": 31,
   "sources": [
     {
       "source_id": "SRC-0001",
@@ -1502,7 +1502,23 @@
       "observed_at_utc": "2026-09-06T12:47:57+00:00",
       "supersedes": "SRC-0042",
       "status": "Current owner-authorized R01 implementation; Seed Analyzer changes after original discovery",
-      "coverage": "Complete textual implementation/review; 82 lines. Verified final R01 build and bounded suite; not exhaustive runtime proof."
+      "coverage": "Complete textual implementation/review; 82 lines. Verified final R01 build and bounded suite; not exhaustive runtime proof.",
+      "supersession": {
+        "source_id": "SRC-0224",
+        "actor": "Genepool Analyzer",
+        "reason": "Owner-approved R03 Godot 2D implementation; exact predecessor verified before editing.",
+        "record_ids": [
+          "DEC-0025"
+        ],
+        "observed_at": "2026-09-07T19:22:25+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "bdfaa0c555edf8807f680f46b71e0ef16e387d07",
+          "path": "Fistnet.Genepool.sln",
+          "blob_oid": "b0f645df75208492e331f73785c323fa38c4e62e",
+          "transform": "lf_to_crlf"
+        }
+      }
     },
     {
       "source_id": "SRC-0053",
@@ -4358,6 +4374,19 @@
         "actor": "Genepool Analyzer",
         "type": "authorized_R02_Part4_implementation",
         "attribution": "Transient founder, metrics and runner helpers; root integration, review, execution and canonical KB."
+      },
+      "supersession": {
+        "source_id": "SRC-0225",
+        "actor": "Genepool Analyzer",
+        "reason": "Owner-approved R03 Godot 2D implementation; exact predecessor verified before editing.",
+        "record_ids": [
+          "DEC-0025"
+        ],
+        "observed_at": "2026-09-07T19:22:26+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/SRC-0165.cs"
+        }
       }
     },
     {
@@ -4479,7 +4508,1407 @@
         "actor": "Genepool Analyzer",
         "type": "authorized_R02_Part4_implementation"
       }
+    },
+    {
+      "source_id": "SRC-0172",
+      "title": "SkiaSharp package (R03 Step1)",
+      "locator": {
+        "type": "url",
+        "url": "https://www.nuget.org/packages/SkiaSharp.Views.WindowsForms/4.151.2"
+      },
+      "observed_at_utc": "2026-09-07T12:43:23.249598+00:00",
+      "status": "Public research supporting a provisional recommendation; no local integration test.",
+      "coverage": "Relevant published capability, framework/dependency, sample or asset/license sections retrieved 2026-09-07; detailed claim locators and limitations in r03_step1_evidence.json and R03_RENDERING_RESEARCH_STEP1.md. URL registration is not an archived byte identity or a future availability guarantee.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step1_public_research"
+      }
+    },
+    {
+      "source_id": "SRC-0173",
+      "title": "SKGLControl API (R03 Step1)",
+      "locator": {
+        "type": "url",
+        "url": "https://learn.microsoft.com/en-us/dotnet/api/skiasharp.views.desktop.skglcontrol?view=skiasharp-views"
+      },
+      "observed_at_utc": "2026-09-07T12:43:23.249598+00:00",
+      "status": "Public research supporting a provisional recommendation; no local integration test.",
+      "coverage": "Relevant published capability, framework/dependency, sample or asset/license sections retrieved 2026-09-07; detailed claim locators and limitations in r03_step1_evidence.json and R03_RENDERING_RESEARCH_STEP1.md. URL registration is not an archived byte identity or a future availability guarantee.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step1_public_research"
+      }
+    },
+    {
+      "source_id": "SRC-0174",
+      "title": "upstream GPU control (R03 Step1)",
+      "locator": {
+        "type": "url",
+        "url": "https://github.com/mono/SkiaSharp/blob/main/source/SkiaSharp.Views/SkiaSharp.Views.WindowsForms/SKGLControl.cs"
+      },
+      "observed_at_utc": "2026-09-07T12:43:23.249598+00:00",
+      "status": "Public research supporting a provisional recommendation; no local integration test.",
+      "coverage": "Relevant published capability, framework/dependency, sample or asset/license sections retrieved 2026-09-07; detailed claim locators and limitations in r03_step1_evidence.json and R03_RENDERING_RESEARCH_STEP1.md. URL registration is not an archived byte identity or a future availability guarantee.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step1_public_research"
+      }
+    },
+    {
+      "source_id": "SRC-0175",
+      "title": "SkiaSharp project (R03 Step1)",
+      "locator": {
+        "type": "url",
+        "url": "https://github.com/mono/SkiaSharp"
+      },
+      "observed_at_utc": "2026-09-07T12:43:23.249598+00:00",
+      "status": "Public research supporting a provisional recommendation; no local integration test.",
+      "coverage": "Relevant published capability, framework/dependency, sample or asset/license sections retrieved 2026-09-07; detailed claim locators and limitations in r03_step1_evidence.json and R03_RENDERING_RESEARCH_STEP1.md. URL registration is not an archived byte identity or a future availability guarantee.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step1_public_research"
+      }
+    },
+    {
+      "source_id": "SRC-0176",
+      "title": "OpenTK WinForms integration (R03 Step1)",
+      "locator": {
+        "type": "url",
+        "url": "https://github.com/opentk/GLControl/blob/master/README.md"
+      },
+      "observed_at_utc": "2026-09-07T12:43:23.249598+00:00",
+      "status": "Public research supporting a provisional recommendation; no local integration test.",
+      "coverage": "Relevant published capability, framework/dependency, sample or asset/license sections retrieved 2026-09-07; detailed claim locators and limitations in r03_step1_evidence.json and R03_RENDERING_RESEARCH_STEP1.md. URL registration is not an archived byte identity or a future availability guarantee.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step1_public_research"
+      }
+    },
+    {
+      "source_id": "SRC-0177",
+      "title": "MonoGame package (R03 Step1)",
+      "locator": {
+        "type": "url",
+        "url": "https://www.nuget.org/packages/MonoGame.Framework.WindowsDX/3.8.5.1"
+      },
+      "observed_at_utc": "2026-09-07T12:43:23.249598+00:00",
+      "status": "Public research supporting a provisional recommendation; no local integration test.",
+      "coverage": "Relevant published capability, framework/dependency, sample or asset/license sections retrieved 2026-09-07; detailed claim locators and limitations in r03_step1_evidence.json and R03_RENDERING_RESEARCH_STEP1.md. URL registration is not an archived byte identity or a future availability guarantee.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step1_public_research"
+      }
+    },
+    {
+      "source_id": "SRC-0178",
+      "title": "Stride 4.2 package (R03 Step1)",
+      "locator": {
+        "type": "url",
+        "url": "https://www.nuget.org/packages/Stride.Engine/4.2.1.2487"
+      },
+      "observed_at_utc": "2026-09-07T12:43:23.249598+00:00",
+      "status": "Public research supporting a provisional recommendation; no local integration test.",
+      "coverage": "Relevant published capability, framework/dependency, sample or asset/license sections retrieved 2026-09-07; detailed claim locators and limitations in r03_step1_evidence.json and R03_RENDERING_RESEARCH_STEP1.md. URL registration is not an archived byte identity or a future availability guarantee.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step1_public_research"
+      }
+    },
+    {
+      "source_id": "SRC-0179",
+      "title": "Stride 4.3 package (R03 Step1)",
+      "locator": {
+        "type": "url",
+        "url": "https://www.nuget.org/packages/Stride.Engine/4.3.0.2507"
+      },
+      "observed_at_utc": "2026-09-07T12:43:23.249598+00:00",
+      "status": "Public research supporting a provisional recommendation; no local integration test.",
+      "coverage": "Relevant published capability, framework/dependency, sample or asset/license sections retrieved 2026-09-07; detailed claim locators and limitations in r03_step1_evidence.json and R03_RENDERING_RESEARCH_STEP1.md. URL registration is not an archived byte identity or a future availability guarantee.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step1_public_research"
+      }
+    },
+    {
+      "source_id": "SRC-0180",
+      "title": "version-linked Stride WinForms host (R03 Step1)",
+      "locator": {
+        "type": "url",
+        "url": "https://raw.githubusercontent.com/stride3d/stride/64961284/sources/engine/Stride.Games/GameContextWinforms.cs"
+      },
+      "observed_at_utc": "2026-09-07T12:43:23.249598+00:00",
+      "status": "Public research supporting a provisional recommendation; no local integration test.",
+      "coverage": "Relevant published capability, framework/dependency, sample or asset/license sections retrieved 2026-09-07; detailed claim locators and limitations in r03_step1_evidence.json and R03_RENDERING_RESEARCH_STEP1.md. URL registration is not an archived byte identity or a future availability guarantee.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step1_public_research"
+      }
+    },
+    {
+      "source_id": "SRC-0181",
+      "title": "Godot C# workflow (R03 Step1)",
+      "locator": {
+        "type": "url",
+        "url": "https://docs.godotengine.org/en/stable/tutorials/scripting/c_sharp/c_sharp_basics.html"
+      },
+      "observed_at_utc": "2026-09-07T12:43:23.249598+00:00",
+      "status": "Public research supporting a provisional recommendation; no local integration test.",
+      "coverage": "Relevant published capability, framework/dependency, sample or asset/license sections retrieved 2026-09-07; detailed claim locators and limitations in r03_step1_evidence.json and R03_RENDERING_RESEARCH_STEP1.md. URL registration is not an archived byte identity or a future availability guarantee.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step1_public_research"
+      }
+    },
+    {
+      "source_id": "SRC-0182",
+      "title": "Godot .NET target explanation (R03 Step1)",
+      "locator": {
+        "type": "url",
+        "url": "https://godotengine.org/article/godotsharp-packages-net8/"
+      },
+      "observed_at_utc": "2026-09-07T12:43:23.249598+00:00",
+      "status": "Public research supporting a provisional recommendation; no local integration test.",
+      "coverage": "Relevant published capability, framework/dependency, sample or asset/license sections retrieved 2026-09-07; detailed claim locators and limitations in r03_step1_evidence.json and R03_RENDERING_RESEARCH_STEP1.md. URL registration is not an archived byte identity or a future availability guarantee.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step1_public_research"
+      }
+    },
+    {
+      "source_id": "SRC-0183",
+      "title": "raylib-cs package/status (R03 Step1)",
+      "locator": {
+        "type": "url",
+        "url": "https://www.nuget.org/packages/Raylib-cs/8.1.0"
+      },
+      "observed_at_utc": "2026-09-07T12:43:23.249598+00:00",
+      "status": "Public research supporting a provisional recommendation; no local integration test.",
+      "coverage": "Relevant published capability, framework/dependency, sample or asset/license sections retrieved 2026-09-07; detailed claim locators and limitations in r03_step1_evidence.json and R03_RENDERING_RESEARCH_STEP1.md. URL registration is not an archived byte identity or a future availability guarantee.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step1_public_research"
+      }
+    },
+    {
+      "source_id": "SRC-0184",
+      "title": "Skia WinForms sample (R03 Step1)",
+      "locator": {
+        "type": "url",
+        "url": "https://github.com/mono/SkiaSharp/tree/main/samples/Basic/WindowsForms"
+      },
+      "observed_at_utc": "2026-09-07T12:43:23.249598+00:00",
+      "status": "Public research supporting a provisional recommendation; no local integration test.",
+      "coverage": "Relevant published capability, framework/dependency, sample or asset/license sections retrieved 2026-09-07; detailed claim locators and limitations in r03_step1_evidence.json and R03_RENDERING_RESEARCH_STEP1.md. URL registration is not an archived byte identity or a future availability guarantee.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step1_public_research"
+      }
+    },
+    {
+      "source_id": "SRC-0185",
+      "title": "GPU page (R03 Step1)",
+      "locator": {
+        "type": "url",
+        "url": "https://raw.githubusercontent.com/mono/SkiaSharp/main/samples/Basic/WindowsForms/SkiaSharpSample/GpuPage.cs"
+      },
+      "observed_at_utc": "2026-09-07T12:43:23.249598+00:00",
+      "status": "Public research supporting a provisional recommendation; no local integration test.",
+      "coverage": "Relevant published capability, framework/dependency, sample or asset/license sections retrieved 2026-09-07; detailed claim locators and limitations in r03_step1_evidence.json and R03_RENDERING_RESEARCH_STEP1.md. URL registration is not an archived byte identity or a future availability guarantee.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step1_public_research"
+      }
+    },
+    {
+      "source_id": "SRC-0186",
+      "title": "sample target framework (R03 Step1)",
+      "locator": {
+        "type": "url",
+        "url": "https://raw.githubusercontent.com/mono/SkiaSharp/main/samples/Basic/WindowsForms/SkiaSharpSample/SkiaSharpSample.csproj"
+      },
+      "observed_at_utc": "2026-09-07T12:43:23.249598+00:00",
+      "status": "Public research supporting a provisional recommendation; no local integration test.",
+      "coverage": "Relevant published capability, framework/dependency, sample or asset/license sections retrieved 2026-09-07; detailed claim locators and limitations in r03_step1_evidence.json and R03_RENDERING_RESEARCH_STEP1.md. URL registration is not an archived byte identity or a future availability guarantee.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step1_public_research"
+      }
+    },
+    {
+      "source_id": "SRC-0187",
+      "title": "MonoGame samples (R03 Step1)",
+      "locator": {
+        "type": "url",
+        "url": "https://github.com/MonoGame/MonoGame.Samples"
+      },
+      "observed_at_utc": "2026-09-07T12:43:23.249598+00:00",
+      "status": "Public research supporting a provisional recommendation; no local integration test.",
+      "coverage": "Relevant published capability, framework/dependency, sample or asset/license sections retrieved 2026-09-07; detailed claim locators and limitations in r03_step1_evidence.json and R03_RENDERING_RESEARCH_STEP1.md. URL registration is not an archived byte identity or a future availability guarantee.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step1_public_research"
+      }
+    },
+    {
+      "source_id": "SRC-0188",
+      "title": "Stride examples (R03 Step1)",
+      "locator": {
+        "type": "url",
+        "url": "https://stride3d.github.io/stride-community-toolkit/manual/code-only/examples/basic-examples.html"
+      },
+      "observed_at_utc": "2026-09-07T12:43:23.249598+00:00",
+      "status": "Public research supporting a provisional recommendation; no local integration test.",
+      "coverage": "Relevant published capability, framework/dependency, sample or asset/license sections retrieved 2026-09-07; detailed claim locators and limitations in r03_step1_evidence.json and R03_RENDERING_RESEARCH_STEP1.md. URL registration is not an archived byte identity or a future availability guarantee.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step1_public_research"
+      }
+    },
+    {
+      "source_id": "SRC-0189",
+      "title": "Stride/toolkit version table (R03 Step1)",
+      "locator": {
+        "type": "url",
+        "url": "https://github.com/stride3d/stride-community-toolkit/blob/main/docs/manual/getting-started.md"
+      },
+      "observed_at_utc": "2026-09-07T12:43:23.249598+00:00",
+      "status": "Public research supporting a provisional recommendation; no local integration test.",
+      "coverage": "Relevant published capability, framework/dependency, sample or asset/license sections retrieved 2026-09-07; detailed claim locators and limitations in r03_step1_evidence.json and R03_RENDERING_RESEARCH_STEP1.md. URL registration is not an archived byte identity or a future availability guarantee.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step1_public_research"
+      }
+    },
+    {
+      "source_id": "SRC-0190",
+      "title": "Godot C# scene spawning (R03 Step1)",
+      "locator": {
+        "type": "url",
+        "url": "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/05.spawning_mobs.html"
+      },
+      "observed_at_utc": "2026-09-07T12:43:23.249598+00:00",
+      "status": "Public research supporting a provisional recommendation; no local integration test.",
+      "coverage": "Relevant published capability, framework/dependency, sample or asset/license sections retrieved 2026-09-07; detailed claim locators and limitations in r03_step1_evidence.json and R03_RENDERING_RESEARCH_STEP1.md. URL registration is not an archived byte identity or a future availability guarantee.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step1_public_research"
+      }
+    },
+    {
+      "source_id": "SRC-0191",
+      "title": "Godot instancing (R03 Step1)",
+      "locator": {
+        "type": "url",
+        "url": "https://docs.godotengine.org/en/stable/tutorials/performance/using_multimesh.html"
+      },
+      "observed_at_utc": "2026-09-07T12:43:23.249598+00:00",
+      "status": "Public research supporting a provisional recommendation; no local integration test.",
+      "coverage": "Relevant published capability, framework/dependency, sample or asset/license sections retrieved 2026-09-07; detailed claim locators and limitations in r03_step1_evidence.json and R03_RENDERING_RESEARCH_STEP1.md. URL registration is not an archived byte identity or a future availability guarantee.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step1_public_research"
+      }
+    },
+    {
+      "source_id": "SRC-0192",
+      "title": "Shape Characters (R03 Step1)",
+      "locator": {
+        "type": "url",
+        "url": "https://kenney-assets.itch.io/shape-characters"
+      },
+      "observed_at_utc": "2026-09-07T12:43:23.249598+00:00",
+      "status": "Public research supporting a provisional recommendation; no local integration test.",
+      "coverage": "Relevant published capability, framework/dependency, sample or asset/license sections retrieved 2026-09-07; detailed claim locators and limitations in r03_step1_evidence.json and R03_RENDERING_RESEARCH_STEP1.md. URL registration is not an archived byte identity or a future availability guarantee.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step1_public_research"
+      }
+    },
+    {
+      "source_id": "SRC-0193",
+      "title": "Animal Pack (R03 Step1)",
+      "locator": {
+        "type": "url",
+        "url": "https://kenney.nl/assets/animal-pack"
+      },
+      "observed_at_utc": "2026-09-07T12:43:23.249598+00:00",
+      "status": "Public research supporting a provisional recommendation; no local integration test.",
+      "coverage": "Relevant published capability, framework/dependency, sample or asset/license sections retrieved 2026-09-07; detailed claim locators and limitations in r03_step1_evidence.json and R03_RENDERING_RESEARCH_STEP1.md. URL registration is not an archived byte identity or a future availability guarantee.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step1_public_research"
+      }
+    },
+    {
+      "source_id": "SRC-0194",
+      "title": "Isometric Blocks (R03 Step1)",
+      "locator": {
+        "type": "url",
+        "url": "https://kenney.nl/assets/isometric-blocks"
+      },
+      "observed_at_utc": "2026-09-07T12:43:23.249598+00:00",
+      "status": "Public research supporting a provisional recommendation; no local integration test.",
+      "coverage": "Relevant published capability, framework/dependency, sample or asset/license sections retrieved 2026-09-07; detailed claim locators and limitations in r03_step1_evidence.json and R03_RENDERING_RESEARCH_STEP1.md. URL registration is not an archived byte identity or a future availability guarantee.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step1_public_research"
+      }
+    },
+    {
+      "source_id": "SRC-0195",
+      "title": "Pixel Platformer Food Expansion (R03 Step1)",
+      "locator": {
+        "type": "url",
+        "url": "https://kenney.nl/assets/pixel-platformer-food-expansion"
+      },
+      "observed_at_utc": "2026-09-07T12:43:23.249598+00:00",
+      "status": "Public research supporting a provisional recommendation; no local integration test.",
+      "coverage": "Relevant published capability, framework/dependency, sample or asset/license sections retrieved 2026-09-07; detailed claim locators and limitations in r03_step1_evidence.json and R03_RENDERING_RESEARCH_STEP1.md. URL registration is not an archived byte identity or a future availability guarantee.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step1_public_research"
+      }
+    },
+    {
+      "source_id": "SRC-0196",
+      "title": "Cube Pets (R03 Step1)",
+      "locator": {
+        "type": "url",
+        "url": "https://kenney.nl/assets/cube-pets"
+      },
+      "observed_at_utc": "2026-09-07T12:43:23.249598+00:00",
+      "status": "Public research supporting a provisional recommendation; no local integration test.",
+      "coverage": "Relevant published capability, framework/dependency, sample or asset/license sections retrieved 2026-09-07; detailed claim locators and limitations in r03_step1_evidence.json and R03_RENDERING_RESEARCH_STEP1.md. URL registration is not an archived byte identity or a future availability guarantee.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step1_public_research"
+      }
+    },
+    {
+      "source_id": "SRC-0197",
+      "title": "Food Kit (R03 Step1)",
+      "locator": {
+        "type": "url",
+        "url": "https://kenney.nl/assets/food-kit"
+      },
+      "observed_at_utc": "2026-09-07T12:43:23.249598+00:00",
+      "status": "Public research supporting a provisional recommendation; no local integration test.",
+      "coverage": "Relevant published capability, framework/dependency, sample or asset/license sections retrieved 2026-09-07; detailed claim locators and limitations in r03_step1_evidence.json and R03_RENDERING_RESEARCH_STEP1.md. URL registration is not an archived byte identity or a future availability guarantee.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step1_public_research"
+      }
+    },
+    {
+      "source_id": "SRC-0198",
+      "title": "Nature Kit (R03 Step1)",
+      "locator": {
+        "type": "url",
+        "url": "https://kenney.nl/assets/nature-kit"
+      },
+      "observed_at_utc": "2026-09-07T12:43:23.249598+00:00",
+      "status": "Public research supporting a provisional recommendation; no local integration test.",
+      "coverage": "Relevant published capability, framework/dependency, sample or asset/license sections retrieved 2026-09-07; detailed claim locators and limitations in r03_step1_evidence.json and R03_RENDERING_RESEARCH_STEP1.md. URL registration is not an archived byte identity or a future availability guarantee.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step1_public_research"
+      }
+    },
+    {
+      "source_id": "SRC-0199",
+      "title": "Kenney model import guide (R03 Step1)",
+      "locator": {
+        "type": "url",
+        "url": "https://kenney.nl/knowledge-base/game-assets-3d/importing-3d-models-into-game-engines"
+      },
+      "observed_at_utc": "2026-09-07T12:43:23.249598+00:00",
+      "status": "Public research supporting a provisional recommendation; no local integration test.",
+      "coverage": "Relevant published capability, framework/dependency, sample or asset/license sections retrieved 2026-09-07; detailed claim locators and limitations in r03_step1_evidence.json and R03_RENDERING_RESEARCH_STEP1.md. URL registration is not an archived byte identity or a future availability guarantee.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step1_public_research"
+      }
+    },
+    {
+      "source_id": "SRC-0200",
+      "title": "Godot dedicated 2D facilities",
+      "locator": {
+        "type": "url",
+        "url": "https://docs.godotengine.org/en/stable/tutorials/2d/introduction_to_2d.html"
+      },
+      "observed_at_utc": "2026-09-07T13:51:53.237312+00:00",
+      "coverage": "Official stable documentation: introductory facilities and separate2D/3D workspace/coordinate concepts; retrieved2026-09-07. No sample execution or complete engine audit.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "R03_Step1_recommendation_review"
+      }
+    },
+    {
+      "source_id": "SRC-0201",
+      "title": "Godot 3D facilities and workspace",
+      "locator": {
+        "type": "url",
+        "url": "https://docs.godotengine.org/en/stable/tutorials/3d/introduction_to_3d.html"
+      },
+      "observed_at_utc": "2026-09-07T13:51:53.237312+00:00",
+      "coverage": "Official stable documentation: introductory facilities and separate2D/3D workspace/coordinate concepts; retrieved2026-09-07. No sample execution or complete engine audit.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "R03_Step1_recommendation_review"
+      }
+    },
+    {
+      "source_id": "SRC-0202",
+      "title": ".gitignore",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\.gitignore"
+      },
+      "observed_at_utc": "2026-09-07T17:28:26.589323+00:00",
+      "coverage": "Complete current exclusions; planned tools/cache exclusions absent.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step2_planning"
+      },
+      "sha256": "2EC9CA63A1CB07B56E04C9893C0C15556A196ABA16507B94F633B4DEA39FCB8A",
+      "size_bytes": 753,
+      "supersession": {
+        "source_id": "SRC-0223",
+        "actor": "Genepool Analyzer",
+        "reason": "Owner-approved R03 Godot 2D implementation; exact predecessor verified before editing.",
+        "record_ids": [
+          "DEC-0025"
+        ],
+        "observed_at": "2026-09-07T19:22:25+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "bdfaa0c555edf8807f680f46b71e0ef16e387d07",
+          "path": ".gitignore",
+          "blob_oid": "72fa8beb607212310cc4e9300e39746490f8e3c6",
+          "transform": "lf_to_crlf"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0203",
+      "title": "Godot 4.7.2 release archive",
+      "locator": {
+        "type": "url",
+        "url": "https://godotengine.org/download/archive/4.7.2-stable/"
+      },
+      "observed_at_utc": "2026-09-07T17:28:26.589323+00:00",
+      "coverage": "Official release selection and .NET edition; retrieved 2026-09-07.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step2_planning"
+      }
+    },
+    {
+      "source_id": "SRC-0204",
+      "title": "Godot 4.7.2 official release assets",
+      "locator": {
+        "type": "url",
+        "url": "https://github.com/godotengine/godot-builds/releases/expanded_assets/4.7.2-stable"
+      },
+      "observed_at_utc": "2026-09-07T17:28:26.589323+00:00",
+      "coverage": "Transient dependency helper read exact editor/template names, sizes and publisher SHA256 metadata; no archive downloaded.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step2_planning"
+      }
+    },
+    {
+      "source_id": "SRC-0205",
+      "title": "Godot.NET.Sdk 4.7.2 package",
+      "locator": {
+        "type": "url",
+        "url": "https://www.nuget.org/packages/Godot.NET.Sdk/4.7.2"
+      },
+      "observed_at_utc": "2026-09-07T17:28:26.589323+00:00",
+      "coverage": "Exact SDK version, package identity and publication metadata.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step2_planning"
+      }
+    },
+    {
+      "source_id": "SRC-0206",
+      "title": "Godot 4.7.2 SDK configurations",
+      "locator": {
+        "type": "url",
+        "url": "https://github.com/godotengine/godot/blob/4.7.2-stable/modules/mono/editor/Godot.NET.Sdk/Godot.NET.Sdk/Sdk/Sdk.props"
+      },
+      "observed_at_utc": "2026-09-07T17:28:26.589323+00:00",
+      "coverage": "Versioned source via raw equivalent, complete SDK props: configurations, platform and output paths.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step2_planning"
+      }
+    },
+    {
+      "source_id": "SRC-0207",
+      "title": "Godot 4.7.2 implicit C# packages",
+      "locator": {
+        "type": "url",
+        "url": "https://github.com/godotengine/godot/blob/4.7.2-stable/modules/mono/editor/Godot.NET.Sdk/Godot.NET.Sdk/Sdk/Sdk.targets"
+      },
+      "observed_at_utc": "2026-09-07T17:28:26.589323+00:00",
+      "coverage": "Versioned source via raw equivalent, complete SDK targets: implicit bindings/generator and editor-only package.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step2_planning"
+      }
+    },
+    {
+      "source_id": "SRC-0208",
+      "title": "Godot 4.7.2 package version generation",
+      "locator": {
+        "type": "url",
+        "url": "https://github.com/godotengine/godot/blob/4.7.2-stable/modules/mono/build_scripts/build_assemblies.py"
+      },
+      "observed_at_utc": "2026-09-07T17:28:26.589323+00:00",
+      "coverage": "Dependency helper inspected generated SdkPackageVersions.props construction; package version uses stable engine major.minor.patch.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step2_planning"
+      }
+    },
+    {
+      "source_id": "SRC-0209",
+      "title": "Godot 4.7.2 project framework checks",
+      "locator": {
+        "type": "url",
+        "url": "https://github.com/godotengine/godot/blob/4.7.2-stable/modules/mono/editor/GodotTools/GodotTools.ProjectEditor/ProjectUtils.cs"
+      },
+      "observed_at_utc": "2026-09-07T17:28:26.589323+00:00",
+      "coverage": "Dependency helper inspected minimum framework comparison using NuGetFramework.Version; net9 Windows target compatibility is static inference.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step2_planning"
+      }
+    },
+    {
+      "source_id": "SRC-0210",
+      "title": "Godot 4.7.2 solution discovery",
+      "locator": {
+        "type": "url",
+        "url": "https://github.com/godotengine/godot/blob/4.7.2-stable/modules/mono/editor/GodotTools/GodotTools/Internals/GodotSharpDirs.cs"
+      },
+      "observed_at_utc": "2026-09-07T17:28:26.589323+00:00",
+      "coverage": "Complete versioned source via raw equivalent; assembly project path and parent-directory matching solution scan.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step2_planning"
+      }
+    },
+    {
+      "source_id": "SRC-0211",
+      "title": "Microsoft SDK and Visual Studio version matrix",
+      "locator": {
+        "type": "url",
+        "url": "https://learn.microsoft.com/en-us/dotnet/core/porting/versioning-sdk-msbuild-vs"
+      },
+      "observed_at_utc": "2026-09-07T17:28:26.589323+00:00",
+      "coverage": "SDK9.0.3xx primary VS17.14 and net9 minimum VS17.12; dependency helper primary-source check.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step2_planning"
+      }
+    },
+    {
+      "source_id": "SRC-0212",
+      "title": "MSBuild ProjectReference metadata",
+      "locator": {
+        "type": "url",
+        "url": "https://learn.microsoft.com/en-us/visualstudio/msbuild/common-msbuild-project-items?view=vs-2022"
+      },
+      "observed_at_utc": "2026-09-07T17:28:26.589323+00:00",
+      "coverage": "ProjectReference SetConfiguration and SetPlatform; source supports proposed explicit export-library mapping.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step2_planning"
+      }
+    },
+    {
+      "source_id": "SRC-0213",
+      "title": "Godot portable editor data",
+      "locator": {
+        "type": "url",
+        "url": "https://docs.godotengine.org/en/4.7/tutorials/io/data_paths.html"
+      },
+      "observed_at_utc": "2026-09-07T17:28:26.589323+00:00",
+      "coverage": "Self-contained editor marker and editor_data; no claim that it applies to exported projects.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step2_planning"
+      }
+    },
+    {
+      "source_id": "SRC-0214",
+      "title": "Godot GPU requirements",
+      "locator": {
+        "type": "url",
+        "url": "https://docs.godotengine.org/en/4.7/about/system_requirements.html"
+      },
+      "observed_at_utc": "2026-09-07T17:28:26.589323+00:00",
+      "coverage": "Windows editor minimums and Compatibility OpenGL3.3; local GPU/driver unknown.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step2_planning"
+      }
+    },
+    {
+      "source_id": "SRC-0215",
+      "title": "Godot renderer selection",
+      "locator": {
+        "type": "url",
+        "url": "https://docs.godotengine.org/en/4.7/tutorials/rendering/renderers.html"
+      },
+      "observed_at_utc": "2026-09-07T17:28:26.589323+00:00",
+      "coverage": "Compatibility renderer suitability guidance; no measured local performance.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step2_planning"
+      }
+    },
+    {
+      "source_id": "SRC-0216",
+      "title": "Godot MultiMeshInstance2D API",
+      "locator": {
+        "type": "url",
+        "url": "https://docs.godotengine.org/en/stable/classes/class_multimeshinstance2d.html"
+      },
+      "observed_at_utc": "2026-09-07T17:28:26.589323+00:00",
+      "coverage": "Instanced 2D rendering interface.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step2_planning"
+      }
+    },
+    {
+      "source_id": "SRC-0217",
+      "title": "Godot MultiMesh API",
+      "locator": {
+        "type": "url",
+        "url": "https://docs.godotengine.org/en/stable/classes/class_multimesh.html"
+      },
+      "observed_at_utc": "2026-09-07T17:28:26.589323+00:00",
+      "coverage": "Transform2D, colors, instance allocation, Buffer and VisibleInstanceCount.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step2_planning"
+      }
+    },
+    {
+      "source_id": "SRC-0218",
+      "title": "Godot bulk instance buffer layout",
+      "locator": {
+        "type": "url",
+        "url": "https://docs.godotengine.org/en/stable/classes/class_renderingserver.html"
+      },
+      "observed_at_utc": "2026-09-07T17:28:26.589323+00:00",
+      "coverage": "multimesh_set_buffer section: 2D transforms and optional per-instance color; main-thread bulk upload proposed.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step2_planning"
+      }
+    },
+    {
+      "source_id": "SRC-0219",
+      "title": "Godot scene threading constraints",
+      "locator": {
+        "type": "url",
+        "url": "https://docs.godotengine.org/en/stable/tutorials/performance/thread_safe_apis.html"
+      },
+      "observed_at_utc": "2026-09-07T17:28:26.589323+00:00",
+      "coverage": "Scene/resource ownership constraints supporting main-thread Godot updates.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step2_planning"
+      }
+    },
+    {
+      "source_id": "SRC-0220",
+      "title": "Godot command line",
+      "locator": {
+        "type": "url",
+        "url": "https://docs.godotengine.org/en/4.7/tutorials/editor/command_line_tutorial.html"
+      },
+      "observed_at_utc": "2026-09-07T17:28:26.589323+00:00",
+      "coverage": "Dependency helper checked editor/run/path/import/export forms; future commands not executed.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step2_planning"
+      }
+    },
+    {
+      "source_id": "SRC-0221",
+      "title": "Godot export workflow",
+      "locator": {
+        "type": "url",
+        "url": "https://docs.godotengine.org/en/4.7/tutorials/export/exporting_projects.html"
+      },
+      "observed_at_utc": "2026-09-07T17:28:26.589323+00:00",
+      "coverage": "Matching templates, platform selection, preset and output-directory requirements; packaging deferred.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step2_planning"
+      }
+    },
+    {
+      "source_id": "SRC-0222",
+      "title": "Godot 4.7.2 managed publish",
+      "locator": {
+        "type": "url",
+        "url": "https://github.com/godotengine/godot/blob/4.7.2-stable/modules/mono/editor/GodotTools/GodotTools/Build/BuildSystem.cs"
+      },
+      "observed_at_utc": "2026-09-07T17:28:26.589323+00:00",
+      "coverage": "Dependency helper checked ExportRelease/project/win-x64/self-contained publish arguments; no literal TFM override.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step2_planning"
+      }
+    },
+    {
+      "source_id": "SRC-0223",
+      "title": ".gitignore",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\.gitignore"
+      },
+      "sha256": "40990D3E8E6F53112B09D0686FED0353C5BC7075C91CA61645493D1717783A59",
+      "size_bytes": 892,
+      "observed_at_utc": "2026-09-07T19:22:25+00:00",
+      "supersedes": "SRC-0202",
+      "status": "registered current working-file version",
+      "coverage": "Exact current bytes hashed; substantive coverage must be recorded separately."
+    },
+    {
+      "source_id": "SRC-0224",
+      "title": "Fistnet.Genepool.sln",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.sln"
+      },
+      "sha256": "742BB4890FA19EAD4D3E1A65919DE1420CC922D9FD5B8E26D655AABF3B86C688",
+      "size_bytes": 7362,
+      "observed_at_utc": "2026-09-07T19:22:25+00:00",
+      "supersedes": "SRC-0052",
+      "status": "registered current working-file version",
+      "coverage": "Exact current bytes hashed; substantive coverage must be recorded separately."
+    },
+    {
+      "source_id": "SRC-0225",
+      "title": "Fistnet.Genepool.Tests/Program.cs (R02 Part4)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\Program.cs"
+      },
+      "sha256": "3378FDF6CF07F2D279D57E6E622F7EE43E97C4892ED0111CA355E58CA3F0EB06",
+      "size_bytes": 7179,
+      "observed_at_utc": "2026-09-07T19:22:26+00:00",
+      "supersedes": "SRC-0165",
+      "status": "registered current working-file version",
+      "coverage": "Exact current bytes hashed; substantive coverage must be recorded separately."
+    },
+    {
+      "source_id": "SRC-0226",
+      "title": "Fistnet.Genepool.Control/Presentation/BoardPresentation.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\Presentation\\BoardPresentation.cs"
+      },
+      "sha256": "D1E5DC4B2FFE9A4A8836088E92E1F29341817470D95F4CA8C26E69D1F205676B",
+      "size_bytes": 4759,
+      "observed_at_utc": "2026-09-07T19:22:24.877464+00:00",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_2D_implementation",
+        "record_ids": [
+          "DEC-0025"
+        ]
+      },
+      "coverage": "Complete new implementation/configuration source; compiled and exercised where applicable. Godot UID files are editor-generated identity metadata, not simulation evidence."
+    },
+    {
+      "source_id": "SRC-0227",
+      "title": "Fistnet.Genepool.Control/Presentation/SimulationSettings.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\Presentation\\SimulationSettings.cs"
+      },
+      "sha256": "7650A69908A0B9DDC1CC9B576041039648D6AFFC9425FC9200C2A8C5BD5EA480",
+      "size_bytes": 3433,
+      "observed_at_utc": "2026-09-07T19:22:24.877464+00:00",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_2D_implementation",
+        "record_ids": [
+          "DEC-0025"
+        ]
+      },
+      "coverage": "Complete new implementation/configuration source; compiled and exercised where applicable. Godot UID files are editor-generated identity metadata, not simulation evidence."
+    },
+    {
+      "source_id": "SRC-0228",
+      "title": "Fistnet.Genepool.Godot/BoardView2D.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\BoardView2D.cs"
+      },
+      "sha256": "B210328087584F68C702C35154C36F4E024B1FA66279D6C5312FC3C1E8076F37",
+      "size_bytes": 16831,
+      "observed_at_utc": "2026-09-07T19:22:24.877464+00:00",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_2D_implementation",
+        "record_ids": [
+          "DEC-0025"
+        ]
+      },
+      "coverage": "Complete new implementation/configuration source; compiled and exercised where applicable. Godot UID files are editor-generated identity metadata, not simulation evidence."
+    },
+    {
+      "source_id": "SRC-0229",
+      "title": "Fistnet.Genepool.Godot/BoardView2D.cs.uid",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\BoardView2D.cs.uid"
+      },
+      "sha256": "D408DD881511635462BA3E8964C9D013BA4AE017C3A2671E30D56EF73FFCA15E",
+      "size_bytes": 19,
+      "observed_at_utc": "2026-09-07T19:22:24.877464+00:00",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_2D_implementation",
+        "record_ids": [
+          "DEC-0025"
+        ]
+      },
+      "coverage": "Complete new implementation/configuration source; compiled and exercised where applicable. Godot UID files are editor-generated identity metadata, not simulation evidence."
+    },
+    {
+      "source_id": "SRC-0230",
+      "title": "Fistnet.Genepool.Godot/Fistnet.Genepool.Godot.csproj",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Fistnet.Genepool.Godot.csproj"
+      },
+      "sha256": "1D4174B55D085193027E31A2C30BEADEC253E4C786B0490B5D9149D34BE9DD84",
+      "size_bytes": 1555,
+      "observed_at_utc": "2026-09-07T19:22:24.877464+00:00",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_2D_implementation",
+        "record_ids": [
+          "DEC-0025"
+        ]
+      },
+      "coverage": "Complete new implementation/configuration source; compiled and exercised where applicable. Godot UID files are editor-generated identity metadata, not simulation evidence."
+    },
+    {
+      "source_id": "SRC-0231",
+      "title": "Fistnet.Genepool.Godot/HistoryView.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\HistoryView.cs"
+      },
+      "sha256": "5C53F0DC324E1D88F5C9155568E470A49B1A95AADB3E8D9FDAA14B67936F4C5B",
+      "size_bytes": 4356,
+      "observed_at_utc": "2026-09-07T19:22:24.877464+00:00",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_2D_implementation",
+        "record_ids": [
+          "DEC-0025"
+        ]
+      },
+      "coverage": "Complete new implementation/configuration source; compiled and exercised where applicable. Godot UID files are editor-generated identity metadata, not simulation evidence."
+    },
+    {
+      "source_id": "SRC-0232",
+      "title": "Fistnet.Genepool.Godot/HistoryView.cs.uid",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\HistoryView.cs.uid"
+      },
+      "sha256": "5D8779A494EFFE0417A1D890E28546221D66E190C80FA9FE105CF6F4983087EF",
+      "size_bytes": 18,
+      "observed_at_utc": "2026-09-07T19:22:24.877464+00:00",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_2D_implementation",
+        "record_ids": [
+          "DEC-0025"
+        ]
+      },
+      "coverage": "Complete new implementation/configuration source; compiled and exercised where applicable. Godot UID files are editor-generated identity metadata, not simulation evidence."
+    },
+    {
+      "source_id": "SRC-0233",
+      "title": "Fistnet.Genepool.Godot/Main.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Main.cs"
+      },
+      "sha256": "9A9DE25AA6BE9682993AF609E58737977D4BE9FCE28FB02E56DFDFF6CE453428",
+      "size_bytes": 8836,
+      "observed_at_utc": "2026-09-07T19:22:24.877464+00:00",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_2D_implementation",
+        "record_ids": [
+          "DEC-0025"
+        ]
+      },
+      "coverage": "Complete new implementation/configuration source; compiled and exercised where applicable. Godot UID files are editor-generated identity metadata, not simulation evidence."
+    },
+    {
+      "source_id": "SRC-0234",
+      "title": "Fistnet.Genepool.Godot/Main.cs.uid",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Main.cs.uid"
+      },
+      "sha256": "BF643036E14CE6F23A7022AF7355862C76CBA81C88E9C50BEE01FAB4D205EE60",
+      "size_bytes": 20,
+      "observed_at_utc": "2026-09-07T19:22:24.877464+00:00",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_2D_implementation",
+        "record_ids": [
+          "DEC-0025"
+        ]
+      },
+      "coverage": "Complete new implementation/configuration source; compiled and exercised where applicable. Godot UID files are editor-generated identity metadata, not simulation evidence."
+    },
+    {
+      "source_id": "SRC-0235",
+      "title": "Fistnet.Genepool.Godot/Main.Inspector.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Main.Inspector.cs"
+      },
+      "sha256": "86AB95A0178D557B4F75516CE9CB2CF1DAC8D9688B192034111A61D1C2F96D68",
+      "size_bytes": 10572,
+      "observed_at_utc": "2026-09-07T19:22:24.877464+00:00",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_2D_implementation",
+        "record_ids": [
+          "DEC-0025"
+        ]
+      },
+      "coverage": "Complete new implementation/configuration source; compiled and exercised where applicable. Godot UID files are editor-generated identity metadata, not simulation evidence."
+    },
+    {
+      "source_id": "SRC-0236",
+      "title": "Fistnet.Genepool.Godot/Main.Inspector.cs.uid",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Main.Inspector.cs.uid"
+      },
+      "sha256": "EBDB2C32AFAEDDE66CB89756AD35A4DD02C006627180EC2417992A4D3B9A7787",
+      "size_bytes": 20,
+      "observed_at_utc": "2026-09-07T19:22:24.877464+00:00",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_2D_implementation",
+        "record_ids": [
+          "DEC-0025"
+        ]
+      },
+      "coverage": "Complete new implementation/configuration source; compiled and exercised where applicable. Godot UID files are editor-generated identity metadata, not simulation evidence."
+    },
+    {
+      "source_id": "SRC-0237",
+      "title": "Fistnet.Genepool.Godot/Main.Layout.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Main.Layout.cs"
+      },
+      "sha256": "D881717B5A4C9EC64151E7C7B8DD45CD8986838FCF81BD04B6483708E7616A63",
+      "size_bytes": 14169,
+      "observed_at_utc": "2026-09-07T19:22:24.877464+00:00",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_2D_implementation",
+        "record_ids": [
+          "DEC-0025"
+        ]
+      },
+      "coverage": "Complete new implementation/configuration source; compiled and exercised where applicable. Godot UID files are editor-generated identity metadata, not simulation evidence."
+    },
+    {
+      "source_id": "SRC-0238",
+      "title": "Fistnet.Genepool.Godot/Main.Layout.cs.uid",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Main.Layout.cs.uid"
+      },
+      "sha256": "1BCC5D52503A62AB98A70C3CF3C2C970D343ABDFAF8D85D9B7A1194488CBD894",
+      "size_bytes": 20,
+      "observed_at_utc": "2026-09-07T19:22:24.877464+00:00",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_2D_implementation",
+        "record_ids": [
+          "DEC-0025"
+        ]
+      },
+      "coverage": "Complete new implementation/configuration source; compiled and exercised where applicable. Godot UID files are editor-generated identity metadata, not simulation evidence."
+    },
+    {
+      "source_id": "SRC-0239",
+      "title": "Fistnet.Genepool.Godot/packages.Debug.lock.json",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\packages.Debug.lock.json"
+      },
+      "sha256": "6F60ADDA9860E39493A791EFF567EDAB006A111CA8E25F0D56340494D1981C06",
+      "size_bytes": 1121,
+      "observed_at_utc": "2026-09-07T19:22:24.877464+00:00",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_2D_implementation",
+        "record_ids": [
+          "DEC-0025"
+        ]
+      },
+      "coverage": "Complete new implementation/configuration source; compiled and exercised where applicable. Godot UID files are editor-generated identity metadata, not simulation evidence."
+    },
+    {
+      "source_id": "SRC-0240",
+      "title": "Fistnet.Genepool.Godot/packages.ExportRelease.lock.json",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\packages.ExportRelease.lock.json"
+      },
+      "sha256": "6D1B9963123386167612FAD770B1B7F57A43B36EB826FE5CE2CC16137F0EA2E0",
+      "size_bytes": 803,
+      "observed_at_utc": "2026-09-07T19:22:24.877464+00:00",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_2D_implementation",
+        "record_ids": [
+          "DEC-0025"
+        ]
+      },
+      "coverage": "Complete new implementation/configuration source; compiled and exercised where applicable. Godot UID files are editor-generated identity metadata, not simulation evidence."
+    },
+    {
+      "source_id": "SRC-0241",
+      "title": "Fistnet.Genepool.Godot/project.godot",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\project.godot"
+      },
+      "sha256": "0B287CB5DAED0837505E1544C0EDE873F7803BE92D62B043D241E34DFE6EE970",
+      "size_bytes": 787,
+      "observed_at_utc": "2026-09-07T19:22:24.877464+00:00",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_2D_implementation",
+        "record_ids": [
+          "DEC-0025"
+        ]
+      },
+      "coverage": "Complete new implementation/configuration source; compiled and exercised where applicable. Godot UID files are editor-generated identity metadata, not simulation evidence."
+    },
+    {
+      "source_id": "SRC-0242",
+      "title": "Fistnet.Genepool.Godot/README.md",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\README.md"
+      },
+      "sha256": "B381D02E8CDE814167C5325726B156C15DC141EC8D4BCC7C4AFE1C25CA639314",
+      "size_bytes": 8296,
+      "observed_at_utc": "2026-09-07T19:22:24.877464+00:00",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_2D_implementation",
+        "record_ids": [
+          "DEC-0025"
+        ]
+      },
+      "coverage": "Complete new viewer setup, operation and verification documentation."
+    },
+    {
+      "source_id": "SRC-0243",
+      "title": "Fistnet.Genepool.Godot/Scenes/Main.tscn",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Scenes\\Main.tscn"
+      },
+      "sha256": "8727543F18655830C5AA4AE794FBC67909C173D68CC91291E19981845D8465B1",
+      "size_bytes": 261,
+      "observed_at_utc": "2026-09-07T19:22:24.877464+00:00",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_2D_implementation",
+        "record_ids": [
+          "DEC-0025"
+        ]
+      },
+      "coverage": "Complete new implementation/configuration source; compiled and exercised where applicable. Godot UID files are editor-generated identity metadata, not simulation evidence."
+    },
+    {
+      "source_id": "SRC-0244",
+      "title": "Fistnet.Genepool.Godot/Scenes/Verification.tscn",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Scenes\\Verification.tscn"
+      },
+      "sha256": "546F440E020677339BC8C37310C74D6753212F81118169A2D22FC4EEFD562939",
+      "size_bytes": 196,
+      "observed_at_utc": "2026-09-07T19:22:24.877464+00:00",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_2D_implementation",
+        "record_ids": [
+          "DEC-0025"
+        ]
+      },
+      "coverage": "Complete new implementation/configuration source; compiled and exercised where applicable. Godot UID files are editor-generated identity metadata, not simulation evidence."
+    },
+    {
+      "source_id": "SRC-0245",
+      "title": "Fistnet.Genepool.Godot/SettingsDialog.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\SettingsDialog.cs"
+      },
+      "sha256": "7591957E86ED141F960E5937A07FA6BC977AE5B729D7BB1706D04CAE19F4B55C",
+      "size_bytes": 9482,
+      "observed_at_utc": "2026-09-07T19:22:24.877464+00:00",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_2D_implementation",
+        "record_ids": [
+          "DEC-0025"
+        ]
+      },
+      "coverage": "Complete new implementation/configuration source; compiled and exercised where applicable. Godot UID files are editor-generated identity metadata, not simulation evidence."
+    },
+    {
+      "source_id": "SRC-0246",
+      "title": "Fistnet.Genepool.Godot/SettingsDialog.cs.uid",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\SettingsDialog.cs.uid"
+      },
+      "sha256": "23362068CBFC4313B17E95511C786C37484B20214BFC6C5398575AABE3D8D538",
+      "size_bytes": 20,
+      "observed_at_utc": "2026-09-07T19:22:24.877464+00:00",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_2D_implementation",
+        "record_ids": [
+          "DEC-0025"
+        ]
+      },
+      "coverage": "Complete new implementation/configuration source; compiled and exercised where applicable. Godot UID files are editor-generated identity metadata, not simulation evidence."
+    },
+    {
+      "source_id": "SRC-0247",
+      "title": "Fistnet.Genepool.Godot/tools/Launch.ps1",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\tools\\Launch.ps1"
+      },
+      "sha256": "21EF7D07B1FEACADF7F384C388EB56BF73B58DF0D5DA2E4B0566F8BE7E5433FA",
+      "size_bytes": 2287,
+      "observed_at_utc": "2026-09-07T19:22:24.877464+00:00",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_2D_implementation",
+        "record_ids": [
+          "DEC-0025"
+        ]
+      },
+      "coverage": "Complete new implementation/configuration source; compiled and exercised where applicable. Godot UID files are editor-generated identity metadata, not simulation evidence."
+    },
+    {
+      "source_id": "SRC-0248",
+      "title": "Fistnet.Genepool.Godot/tools/Setup.ps1",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\tools\\Setup.ps1"
+      },
+      "sha256": "AB5C242A1E992A98BE997DC79AF2907BEA70B0E81D0F7D6CC8A850256AD4494B",
+      "size_bytes": 3795,
+      "observed_at_utc": "2026-09-07T19:22:24.877464+00:00",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_2D_implementation",
+        "record_ids": [
+          "DEC-0025"
+        ]
+      },
+      "coverage": "Complete new implementation/configuration source; compiled and exercised where applicable. Godot UID files are editor-generated identity metadata, not simulation evidence."
+    },
+    {
+      "source_id": "SRC-0249",
+      "title": "Fistnet.Genepool.Godot/Verification/VerificationRunner.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Verification\\VerificationRunner.cs"
+      },
+      "sha256": "6C0C74049A7441DAC8B0D2E9BFAB78C3F67C9CFAC3A393DF8ED720E470F30614",
+      "size_bytes": 29770,
+      "observed_at_utc": "2026-09-07T19:22:24.877464+00:00",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_2D_implementation",
+        "record_ids": [
+          "DEC-0025"
+        ]
+      },
+      "coverage": "Complete new implementation/configuration source; compiled and exercised where applicable. Godot UID files are editor-generated identity metadata, not simulation evidence."
+    },
+    {
+      "source_id": "SRC-0250",
+      "title": "Fistnet.Genepool.Godot/Verification/VerificationRunner.cs.uid",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Verification\\VerificationRunner.cs.uid"
+      },
+      "sha256": "DB7C3B63F6DC35FA6BDE5FAC3A0FF828F458DB1A842A3C247F67F23CB36E7534",
+      "size_bytes": 20,
+      "observed_at_utc": "2026-09-07T19:22:24.877464+00:00",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_2D_implementation",
+        "record_ids": [
+          "DEC-0025"
+        ]
+      },
+      "coverage": "Complete new implementation/configuration source; compiled and exercised where applicable. Godot UID files are editor-generated identity metadata, not simulation evidence."
+    },
+    {
+      "source_id": "SRC-0251",
+      "title": "Fistnet.Genepool.Godot/Verification/ViewerFixtures.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Verification\\ViewerFixtures.cs"
+      },
+      "sha256": "892744E6E231E93EEACFB5556CC529B8E08A846692C3383A47AD778392B218B5",
+      "size_bytes": 5609,
+      "observed_at_utc": "2026-09-07T19:22:24.877464+00:00",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_2D_implementation",
+        "record_ids": [
+          "DEC-0025"
+        ]
+      },
+      "coverage": "Complete new implementation/configuration source; compiled and exercised where applicable. Godot UID files are editor-generated identity metadata, not simulation evidence."
+    },
+    {
+      "source_id": "SRC-0252",
+      "title": "Fistnet.Genepool.Godot/Verification/ViewerFixtures.cs.uid",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Verification\\ViewerFixtures.cs.uid"
+      },
+      "sha256": "C96CF4B2C25F372F3B27759B16C7894D91508660FFF6C0B1EAA19E73B1246A4B",
+      "size_bytes": 20,
+      "observed_at_utc": "2026-09-07T19:22:24.877464+00:00",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_2D_implementation",
+        "record_ids": [
+          "DEC-0025"
+        ]
+      },
+      "coverage": "Complete new implementation/configuration source; compiled and exercised where applicable. Godot UID files are editor-generated identity metadata, not simulation evidence."
+    },
+    {
+      "source_id": "SRC-0253",
+      "title": "Fistnet.Genepool.Tests/GodotBoardTests.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\GodotBoardTests.cs"
+      },
+      "sha256": "0532E0B05721AFF8708A0E2B7992FD2395E8E8723333CF55BF9D63198C2C85C9",
+      "size_bytes": 7266,
+      "observed_at_utc": "2026-09-07T19:22:24.877464+00:00",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_2D_implementation",
+        "record_ids": [
+          "DEC-0025"
+        ]
+      },
+      "coverage": "Complete new implementation/configuration source; compiled and exercised where applicable. Godot UID files are editor-generated identity metadata, not simulation evidence."
+    },
+    {
+      "source_id": "SRC-0254",
+      "title": "Fistnet.Genepool.Tests/GodotSettingsTests.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\GodotSettingsTests.cs"
+      },
+      "sha256": "E524EAF67C5418D9BB661F208B7F347108C83CABA2DA008EBD58ED787D0EB277",
+      "size_bytes": 5122,
+      "observed_at_utc": "2026-09-07T19:22:24.877464+00:00",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_2D_implementation",
+        "record_ids": [
+          "DEC-0025"
+        ]
+      },
+      "coverage": "Complete new implementation/configuration source; compiled and exercised where applicable. Godot UID files are editor-generated identity metadata, not simulation evidence."
+    },
+    {
+      "source_id": "SRC-0255",
+      "title": "NuGet.Config",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\NuGet.Config"
+      },
+      "sha256": "F627147DC7798FC65F974826C6B42695CB8E79AED2BFD5EBFD95FC0BA8969C13",
+      "size_bytes": 309,
+      "observed_at_utc": "2026-09-07T19:22:24.877464+00:00",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_2D_implementation",
+        "record_ids": [
+          "DEC-0025"
+        ]
+      },
+      "coverage": "Complete new implementation/configuration source; compiled and exercised where applicable. Godot UID files are editor-generated identity metadata, not simulation evidence."
+    },
+    {
+      "source_id": "SRC-0256",
+      "title": "Godot4.7.2 SpinBox behavior",
+      "locator": {
+        "type": "url",
+        "url": "https://raw.githubusercontent.com/godotengine/godot/4.7.2-stable/scene/gui/spin_box.cpp"
+      },
+      "coverage": "Transient UI helper inspected value/text redraw and input parsing; root reproduced settings result and corrected signed input/harness timing.",
+      "observed_at_utc": "2026-09-07T19:22:24.877464+00:00",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "primary_source_implementation_research"
+      }
+    },
+    {
+      "source_id": "SRC-0257",
+      "title": "Godot4.7.2 external editor enum",
+      "locator": {
+        "type": "url",
+        "url": "https://github.com/godotengine/godot/blob/4.7.2-stable/modules/mono/editor/GodotTools/GodotTools/ExternalEditorId.cs"
+      },
+      "coverage": "Transient setup helper verified VisualStudio enum1 used in portable editor preferences.",
+      "observed_at_utc": "2026-09-07T19:22:24.877464+00:00",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "primary_source_implementation_research"
+      }
     }
   ],
-  "updated_at": "2026-09-06T22:15:35+00:00"
+  "updated_at": "2026-09-07T19:27:14+00:00"
 }

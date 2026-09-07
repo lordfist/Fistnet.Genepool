@@ -1,0 +1,1229 @@
+{
+  "actor": "Genepool Analyzer",
+  "note": "R03 Step1 research complete: reconcile start authority and examples/assets steering, record provisional graphics recommendation and stop for owner review.",
+  "upsert_records": [
+    {
+      "id": "DEC-0021",
+      "kind": "owner_decision",
+      "status": "active",
+      "statement": "User defined the five-step R03 GPU visualization outline (research, plan, familiar2D, either2.5D or3D, polish), free for non-commercial use with continuingVS2022 compatibility. The original instruction deferred starting; laterDEC-0022 explicitly startsStep1 only, with examples/assets criterionDEC-0023 and provisional resultREC-0008.",
+      "source_refs": [],
+      "related_record_ids": [
+        "DEC-0020",
+        "DEC-0004",
+        "REC-0007",
+        "DEC-0022",
+        "DEC-0023",
+        "REC-0008"
+      ],
+      "origin": {
+        "type": "owner_message",
+        "actor": "User",
+        "recorded_by": "Genepool Analyzer",
+        "recorded_at_utc": "2026-09-07T10:30:45.332664+00:00",
+        "quote": "This will be R03, don't start it yet, just tell me what you think:"
+      },
+      "tags": [
+        "R03",
+        "owner_outline"
+      ],
+      "planned_parts": [
+        {
+          "part": 1,
+          "scope": "Research rendering engines free for non-commercial use for GPU-accelerated 2D, 2.5D and 3D visualization of Board, Organism and Food."
+        },
+        {
+          "part": 2,
+          "scope": "Plan implementation based on the research results."
+        },
+        {
+          "part": 3,
+          "scope": "Implement GPU 2D visualization with an appearance similar to the current viewer."
+        },
+        {
+          "part": 4,
+          "scope": "Implement either 2.5D or 3D visualization of the simulation."
+        },
+        {
+          "part": 5,
+          "scope": "Implement improved simulation graphics."
+        }
+      ],
+      "uncertainty": "Original outline preserved. Step1 research complete pendingreview; no engine/design acceptance, Step2 start or implementation authorization recorded.",
+      "created_at": "2026-09-07T10:31:34+00:00",
+      "updated_at": "2026-09-07T10:31:34+00:00",
+      "resolution_notes": [
+        {
+          "at_utc": "2026-09-07T12:43:23.249598+00:00",
+          "actor": "Genepool Analyzer",
+          "type": "R03_Step1_start_and_research",
+          "prior_statement": "User names R03 as the next improvement iteration and supplies a five-part GPU visualization outline: engine research, implementation planning, familiar-looking GPU 2D, either 2.5D or 3D, then improved graphics. Engines must be free for non-commercial use. User explicitly says not to start R03 yet and requests only an opinion now. Existing whole-solution Visual Studio 2022 compatibility remains applicable.",
+          "prior_uncertainty": "No engine, license, GPU capability, integration route, detailed implementation plan or 2.5D-versus-3D choice is established. Naming the iteration and requesting an opinion do not authorize its research, dependency installation or implementation.",
+          "note": "Later DEC-0022 starts only Step1; DEC-0023 adds examples/assets criterion. Current research/recommendation is REC-0008. Preserve original outline and preliminary opinion; no accepted engine or Step2 implementation.",
+          "record_ids": [
+            "DEC-0022",
+            "DEC-0023",
+            "REC-0008"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REC-0007",
+      "kind": "recommendation",
+      "status": "historical",
+      "statement": "Historical preliminary R03 opinion favored a shared rendering basis, familiarGPU2D checkpoint and provisionally2.5D. Subsequent authorized Step1 research and examples/assets criterion are addressed inREC-0008; use that record for the current recommendation.",
+      "source_refs": [],
+      "related_record_ids": [
+        "DEC-0021",
+        "DEC-0004",
+        "FACT-0046",
+        "INF-0009",
+        "DEC-0022",
+        "DEC-0023",
+        "REC-0008"
+      ],
+      "origin": {
+        "type": "preliminary_conceptual_opinion_only",
+        "actor": "Genepool Analyzer",
+        "recorded_at_utc": "2026-09-07T10:30:45.332664+00:00",
+        "review": "Transient r03_scope_opinion helper reviewed sequencing conceptually; no files, web research or execution used by that helper."
+      },
+      "uncertainty": "Pre-research opinion preserved in resolution history, not an accepted design. Current researched recommendation remains provisional.",
+      "tags": [
+        "R03",
+        "preliminary_opinion"
+      ],
+      "created_at": "2026-09-07T10:31:34+00:00",
+      "updated_at": "2026-09-07T10:31:34+00:00",
+      "resolution_notes": [
+        {
+          "at_utc": "2026-09-07T12:43:23.249598+00:00",
+          "actor": "Genepool Analyzer",
+          "type": "R03_Step1_start_and_research",
+          "prior_statement": "Preliminary opinion on the owner R03 outline: the five-stage sequence is sensible. Investigate a shared rendering foundation supporting 2D and one depth view, retain the current C# simulation and VS2022 workflow, and use the familiar-looking GPU 2D result as an owner checkpoint before the depth view. Provisionally favor a readable 2.5D/isometric presentation unless later research establishes a useful reason for a freely navigable 3D view. Define the visual direction and bounded polish targets during planning. Later verification should separately evaluate rendering frame time, dense-board interaction, selection/food accuracy and renderer passivity; GPU drawing does not establish faster simulation calculation.",
+          "prior_uncertainty": "This is an Analyzer opinion for discussion, not an accepted design, engine comparison, license finding, performance result or started R03 plan. A 2.5D preference and a shared rendering foundation remain provisional, subject to authorized research and owner review.",
+          "note": "Later DEC-0022 starts only Step1; DEC-0023 adds examples/assets criterion. Current research/recommendation is REC-0008. Preserve original outline and preliminary opinion; no accepted engine or Step2 implementation.",
+          "record_ids": [
+            "DEC-0022",
+            "DEC-0023",
+            "REC-0008"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DEC-0022",
+      "kind": "owner_decision",
+      "status": "active",
+      "statement": "User explicitly authorizes R03 Step1 engine research and a best-fit proposal, with attractive GPU simulation visuals and proportionate complexity. Finish and stop for review. Whole-solution VS2022 compatibility remains required. This supersedes DEC-0021's earlier no-start boundary only for Step1.",
+      "source_refs": [],
+      "related_record_ids": [
+        "DEC-0021",
+        "DEC-0004",
+        "DEC-0023",
+        "REC-0008"
+      ],
+      "tags": [
+        "R03",
+        "Step1",
+        "graphics_research"
+      ],
+      "origin": {
+        "type": "owner_message",
+        "actor": "User",
+        "recorded_by": "Genepool Analyzer",
+        "recorded_at_utc": "2026-09-07T12:43:23.249598+00:00",
+        "quote": "Good! Lets start with step 1. After you are done, stop and let me review your proposal that fits the best for our use case. Bear in mind when researching graphics engine -> we are not making AAA game, we are just trying to have a nice visuals in our simulation that don't rely on \"painting the winform with pixels\" :D"
+      },
+      "uncertainty": "No Step2 planning, dependencies, prototype or implementation authorization follows from the Step1 instruction."
+    },
+    {
+      "id": "DEC-0023",
+      "kind": "owner_decision",
+      "status": "active",
+      "statement": "User adds available relevant examples and reusable 2D/3D artwork/model templates as an engine-selection criterion, to avoid selecting an unfamiliar engine with no practical guidance or assets and having to create everything ourselves.",
+      "source_refs": [],
+      "related_record_ids": [
+        "DEC-0022",
+        "CLAIM-0007",
+        "REC-0008"
+      ],
+      "tags": [
+        "R03",
+        "Step1",
+        "graphics_research"
+      ],
+      "origin": {
+        "type": "owner_message",
+        "actor": "User",
+        "recorded_by": "Genepool Analyzer",
+        "recorded_at_utc": "2026-09-07T12:43:23.249598+00:00",
+        "quote": "When picking graphics engine be conscious about actually having examples and models for that engine available, it would not be good that we have engine that we don't know how to use nor have 2d or 3d model templates online for it so we would need to create that as well... :)"
+      },
+      "uncertainty": "This is a selection criterion, not an instruction to install engines, download/import models or create assets during Step1."
+    },
+    {
+      "id": "FACT-0047",
+      "kind": "observed_fact",
+      "status": "active",
+      "statement": "R03 read-only inspection confirms100x100 board; BoardView CPU Bitmap/pixel construction plus System.Drawing overlays; detached ViewFrame feed from background SimulationRunner with bounded latest-frame publication and34ms UI polling. Fourteen targeted local files match registered identities at HEADbdfaa0c555edf8807f680f46b71e0ef16e387d07. global.json pinsSDK9.0.315; inspectedApp/Visualization/Control/Tests targetnet9.0-windows7.0. Runtime metadata reports64-bit Windows10.0.22621; GPU metadata query was denied.",
+      "source_refs": [
+        "SRC-0067",
+        "SRC-0002",
+        "SRC-0068",
+        "SRC-0069",
+        "SRC-0056",
+        "SRC-0152",
+        "SRC-0149",
+        "SRC-0147",
+        "SRC-0162",
+        "SRC-0164",
+        "SRC-0144",
+        "SRC-0160",
+        "SRC-0151",
+        "SRC-0165"
+      ],
+      "related_record_ids": [
+        "FACT-0040",
+        "FACT-0041",
+        "FACT-0046",
+        "DEC-0022"
+      ],
+      "tags": [
+        "R03",
+        "Step1",
+        "graphics_research"
+      ],
+      "origin": {
+        "type": "authorized_R03_Step1_research",
+        "actor": "Genepool Analyzer",
+        "recorded_at_utc": "2026-09-07T12:43:23.249598+00:00"
+      },
+      "uncertainty": "Static source/metadata evidence only, not a rendering or simulation benchmark. Public GPU APIs do not establish this adapter's capabilities. Local code clean; current KB edits not established as committed; remote uninspected.",
+      "derivation": {
+        "artifacts": [
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_RENDERING_RESEARCH_STEP1.md",
+            "sha256": "C7F7C056D049BC2F6CDE91A87797F3235BC6B93464E9450F8CE8B68CC626BF60",
+            "bytes": 21574,
+            "status": "Derived R03 Step1 research support; not original experiment evidence."
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step1_evidence.json",
+            "sha256": "240F3BDFECAE00AD0005176311189EC80868794DC4C2324E623BB5FC76B0EBB3",
+            "bytes": 26537,
+            "status": "Derived R03 Step1 research support; not original experiment evidence."
+          }
+        ],
+        "locators": [
+          "evidence.local_sources contains exact identities/read coverage",
+          "BoardView.RebuildRaster/OnPaint; SimulationRunner.Publish and worker loop; MainForm.DisplayFrame; Layout timer"
+        ]
+      }
+    },
+    {
+      "id": "CLAIM-0006",
+      "kind": "source_claim",
+      "status": "active",
+      "statement": "Primary project/package sources describe six viable free-use rendering candidates. SkiaSharpSKGLControl supplies GPU2D in WinForms, with4.151.2 net9 Windows19041 asset. OpenTK4 supplies a direct WinForms OpenGL host with more custom drawing infrastructure. MonoGameWindowsDX3.8.5.1 has net8 assets and2D/3D framework facilities. Stride4.2.1.2487 hasnet8 and WinForms hosting; current4.3 requiresnet10. Godot documents C#/VS2022 andnet9 targeting with scene/model workflows. Raylib-cs8.1.0 hasnet8 assets but describes binding maintenance as passive.",
+      "source_refs": [
+        "SRC-0172",
+        "SRC-0173",
+        "SRC-0174",
+        "SRC-0175",
+        "SRC-0176",
+        "SRC-0177",
+        "SRC-0178",
+        "SRC-0179",
+        "SRC-0180",
+        "SRC-0181",
+        "SRC-0182",
+        "SRC-0183"
+      ],
+      "related_record_ids": [
+        "DEC-0022",
+        "FACT-0047",
+        "CLAIM-0007",
+        "REC-0008"
+      ],
+      "tags": [
+        "R03",
+        "Step1",
+        "graphics_research"
+      ],
+      "origin": {
+        "type": "authorized_R03_Step1_research",
+        "actor": "Genepool Analyzer",
+        "recorded_at_utc": "2026-09-07T12:43:23.249598+00:00"
+      },
+      "uncertainty": "Published capabilities, license declarations and metadata, not local restore/build/performance results. Exact dependencies and native GPU deployment remain untested; detailed license/source links in report.",
+      "derivation": {
+        "artifacts": [
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_RENDERING_RESEARCH_STEP1.md",
+            "sha256": "C7F7C056D049BC2F6CDE91A87797F3235BC6B93464E9450F8CE8B68CC626BF60",
+            "bytes": 21574,
+            "status": "Derived R03 Step1 research support; not original experiment evidence."
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step1_evidence.json",
+            "sha256": "240F3BDFECAE00AD0005176311189EC80868794DC4C2324E623BB5FC76B0EBB3",
+            "bytes": 26537,
+            "status": "Derived R03 Step1 research support; not original experiment evidence."
+          }
+        ],
+        "locators": [
+          "report: shortlist, VS2022 implications, licensing",
+          "evidence.capability_findings"
+        ]
+      }
+    },
+    {
+      "id": "CLAIM-0007",
+      "kind": "source_claim",
+      "status": "active",
+      "statement": "Usable guidance and art exist: official Skia GPU WinForms example isnet10/repository-based and must be adapted to existingnet9; MonoGame has complete2D andFuelCell3D examples; StrideToolkit has3Dscene/material examples with4.2/preview61 matching and unfinished basic2D examples; Godot supplies C# scene and instancing tutorials plus model imports. Kenney creator pages declare reusableCC0 character/isometric/food sprites and3Dpet/food/nature packs; creator guide documentsGLB/Godot import.",
+      "source_refs": [
+        "SRC-0184",
+        "SRC-0185",
+        "SRC-0186",
+        "SRC-0187",
+        "SRC-0188",
+        "SRC-0189",
+        "SRC-0190",
+        "SRC-0191",
+        "SRC-0192",
+        "SRC-0193",
+        "SRC-0194",
+        "SRC-0195",
+        "SRC-0196",
+        "SRC-0197",
+        "SRC-0198",
+        "SRC-0199"
+      ],
+      "related_record_ids": [
+        "DEC-0023",
+        "CLAIM-0006",
+        "REC-0008"
+      ],
+      "tags": [
+        "R03",
+        "Step1",
+        "graphics_research"
+      ],
+      "origin": {
+        "type": "authorized_R03_Step1_research",
+        "actor": "Genepool Analyzer",
+        "recorded_at_utc": "2026-09-07T12:43:23.249598+00:00"
+      },
+      "uncertainty": "No example run or asset archive/import checked. Skia isometric projection/picking/order/animation assembly remain our work; it does not import3Dmesh scenes. Samples are implementation guidance, not proven dense Genepool viewers. Art style not accepted.",
+      "derivation": {
+        "artifacts": [
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_RENDERING_RESEARCH_STEP1.md",
+            "sha256": "C7F7C056D049BC2F6CDE91A87797F3235BC6B93464E9450F8CE8B68CC626BF60",
+            "bytes": 21574,
+            "status": "Derived R03 Step1 research support; not original experiment evidence."
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step1_evidence.json",
+            "sha256": "240F3BDFECAE00AD0005176311189EC80868794DC4C2324E623BB5FC76B0EBB3",
+            "bytes": 26537,
+            "status": "Derived R03 Step1 research support; not original experiment evidence."
+          }
+        ],
+        "locators": [
+          "report: Usable examples and existing artwork",
+          "evidence.public_sources and capability_findings.artwork"
+        ]
+      }
+    },
+    {
+      "id": "REC-0008",
+      "kind": "recommendation",
+      "status": "provisional",
+      "statement": "Recommend SkiaSharp GPU-backed SKGLControl for familiar2D followed by a deliberately modest isometric2.5D view with reusable sprites. Retaining embedded WinForms is Analyzer's integration-cost judgment, not an extra owner requirement. Godot C# is preferred alternative for actual3Dmodels or substantial scene/animation editing; compatibleStride4.2 merits consideration for embedded3D. Step1 research complete, awaiting owner review; Step2 and implementation have not begun.",
+      "source_refs": [
+        "SRC-0067",
+        "SRC-0002",
+        "SRC-0068",
+        "SRC-0069",
+        "SRC-0056",
+        "SRC-0152",
+        "SRC-0149",
+        "SRC-0147",
+        "SRC-0162",
+        "SRC-0164",
+        "SRC-0144",
+        "SRC-0160",
+        "SRC-0151",
+        "SRC-0165",
+        "SRC-0172",
+        "SRC-0173",
+        "SRC-0174",
+        "SRC-0175",
+        "SRC-0176",
+        "SRC-0177",
+        "SRC-0178",
+        "SRC-0179",
+        "SRC-0180",
+        "SRC-0181",
+        "SRC-0182",
+        "SRC-0183",
+        "SRC-0184",
+        "SRC-0185",
+        "SRC-0186",
+        "SRC-0187",
+        "SRC-0188",
+        "SRC-0189",
+        "SRC-0190",
+        "SRC-0191",
+        "SRC-0192",
+        "SRC-0193",
+        "SRC-0194",
+        "SRC-0195",
+        "SRC-0196",
+        "SRC-0197",
+        "SRC-0198",
+        "SRC-0199"
+      ],
+      "related_record_ids": [
+        "DEC-0022",
+        "DEC-0023",
+        "FACT-0047",
+        "CLAIM-0006",
+        "CLAIM-0007",
+        "REC-0007",
+        "DEC-0020"
+      ],
+      "tags": [
+        "R03",
+        "Step1",
+        "graphics_research"
+      ],
+      "origin": {
+        "type": "authorized_R03_Step1_research",
+        "actor": "Genepool Analyzer",
+        "recorded_at_utc": "2026-09-07T12:43:23.249598+00:00"
+      },
+      "uncertainty": "Engine/depth/art choice provisional, not owner-accepted. Skia proposed WindowsTFM adjustment requires later VS2022 build/designer/native checks; recent officialsample cannot be copied unchanged. No performance improvement proved. Maintain current viewer until replacement checks pass; reconsider if actualGPU/native deployment/VS2022 or proportional implementation fails. R02 ecology remains closedINCONCLUSIVE.",
+      "derivation": {
+        "artifacts": [
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_RENDERING_RESEARCH_STEP1.md",
+            "sha256": "C7F7C056D049BC2F6CDE91A87797F3235BC6B93464E9450F8CE8B68CC626BF60",
+            "bytes": 21574,
+            "status": "Derived R03 Step1 research support; not original experiment evidence."
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step1_evidence.json",
+            "sha256": "240F3BDFECAE00AD0005176311189EC80868794DC4C2324E623BB5FC76B0EBB3",
+            "bytes": 26537,
+            "status": "Derived R03 Step1 research support; not original experiment evidence."
+          }
+        ],
+        "locators": [
+          "report: recommendation, examples, checkpoint, inspected horizon"
+        ],
+        "next_action": "Stop for owner review of proposed direction; await applicable Step2 instruction."
+      }
+    }
+  ],
+  "upsert_sources": [
+    {
+      "source_id": "SRC-0172",
+      "title": "SkiaSharp package (R03 Step1)",
+      "locator": {
+        "type": "url",
+        "url": "https://www.nuget.org/packages/SkiaSharp.Views.WindowsForms/4.151.2"
+      },
+      "observed_at_utc": "2026-09-07T12:43:23.249598+00:00",
+      "status": "Public research supporting a provisional recommendation; no local integration test.",
+      "coverage": "Relevant published capability, framework/dependency, sample or asset/license sections retrieved 2026-09-07; detailed claim locators and limitations in r03_step1_evidence.json and R03_RENDERING_RESEARCH_STEP1.md. URL registration is not an archived byte identity or a future availability guarantee.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step1_public_research"
+      }
+    },
+    {
+      "source_id": "SRC-0173",
+      "title": "SKGLControl API (R03 Step1)",
+      "locator": {
+        "type": "url",
+        "url": "https://learn.microsoft.com/en-us/dotnet/api/skiasharp.views.desktop.skglcontrol?view=skiasharp-views"
+      },
+      "observed_at_utc": "2026-09-07T12:43:23.249598+00:00",
+      "status": "Public research supporting a provisional recommendation; no local integration test.",
+      "coverage": "Relevant published capability, framework/dependency, sample or asset/license sections retrieved 2026-09-07; detailed claim locators and limitations in r03_step1_evidence.json and R03_RENDERING_RESEARCH_STEP1.md. URL registration is not an archived byte identity or a future availability guarantee.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step1_public_research"
+      }
+    },
+    {
+      "source_id": "SRC-0174",
+      "title": "upstream GPU control (R03 Step1)",
+      "locator": {
+        "type": "url",
+        "url": "https://github.com/mono/SkiaSharp/blob/main/source/SkiaSharp.Views/SkiaSharp.Views.WindowsForms/SKGLControl.cs"
+      },
+      "observed_at_utc": "2026-09-07T12:43:23.249598+00:00",
+      "status": "Public research supporting a provisional recommendation; no local integration test.",
+      "coverage": "Relevant published capability, framework/dependency, sample or asset/license sections retrieved 2026-09-07; detailed claim locators and limitations in r03_step1_evidence.json and R03_RENDERING_RESEARCH_STEP1.md. URL registration is not an archived byte identity or a future availability guarantee.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step1_public_research"
+      }
+    },
+    {
+      "source_id": "SRC-0175",
+      "title": "SkiaSharp project (R03 Step1)",
+      "locator": {
+        "type": "url",
+        "url": "https://github.com/mono/SkiaSharp"
+      },
+      "observed_at_utc": "2026-09-07T12:43:23.249598+00:00",
+      "status": "Public research supporting a provisional recommendation; no local integration test.",
+      "coverage": "Relevant published capability, framework/dependency, sample or asset/license sections retrieved 2026-09-07; detailed claim locators and limitations in r03_step1_evidence.json and R03_RENDERING_RESEARCH_STEP1.md. URL registration is not an archived byte identity or a future availability guarantee.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step1_public_research"
+      }
+    },
+    {
+      "source_id": "SRC-0176",
+      "title": "OpenTK WinForms integration (R03 Step1)",
+      "locator": {
+        "type": "url",
+        "url": "https://github.com/opentk/GLControl/blob/master/README.md"
+      },
+      "observed_at_utc": "2026-09-07T12:43:23.249598+00:00",
+      "status": "Public research supporting a provisional recommendation; no local integration test.",
+      "coverage": "Relevant published capability, framework/dependency, sample or asset/license sections retrieved 2026-09-07; detailed claim locators and limitations in r03_step1_evidence.json and R03_RENDERING_RESEARCH_STEP1.md. URL registration is not an archived byte identity or a future availability guarantee.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step1_public_research"
+      }
+    },
+    {
+      "source_id": "SRC-0177",
+      "title": "MonoGame package (R03 Step1)",
+      "locator": {
+        "type": "url",
+        "url": "https://www.nuget.org/packages/MonoGame.Framework.WindowsDX/3.8.5.1"
+      },
+      "observed_at_utc": "2026-09-07T12:43:23.249598+00:00",
+      "status": "Public research supporting a provisional recommendation; no local integration test.",
+      "coverage": "Relevant published capability, framework/dependency, sample or asset/license sections retrieved 2026-09-07; detailed claim locators and limitations in r03_step1_evidence.json and R03_RENDERING_RESEARCH_STEP1.md. URL registration is not an archived byte identity or a future availability guarantee.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step1_public_research"
+      }
+    },
+    {
+      "source_id": "SRC-0178",
+      "title": "Stride 4.2 package (R03 Step1)",
+      "locator": {
+        "type": "url",
+        "url": "https://www.nuget.org/packages/Stride.Engine/4.2.1.2487"
+      },
+      "observed_at_utc": "2026-09-07T12:43:23.249598+00:00",
+      "status": "Public research supporting a provisional recommendation; no local integration test.",
+      "coverage": "Relevant published capability, framework/dependency, sample or asset/license sections retrieved 2026-09-07; detailed claim locators and limitations in r03_step1_evidence.json and R03_RENDERING_RESEARCH_STEP1.md. URL registration is not an archived byte identity or a future availability guarantee.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step1_public_research"
+      }
+    },
+    {
+      "source_id": "SRC-0179",
+      "title": "Stride 4.3 package (R03 Step1)",
+      "locator": {
+        "type": "url",
+        "url": "https://www.nuget.org/packages/Stride.Engine/4.3.0.2507"
+      },
+      "observed_at_utc": "2026-09-07T12:43:23.249598+00:00",
+      "status": "Public research supporting a provisional recommendation; no local integration test.",
+      "coverage": "Relevant published capability, framework/dependency, sample or asset/license sections retrieved 2026-09-07; detailed claim locators and limitations in r03_step1_evidence.json and R03_RENDERING_RESEARCH_STEP1.md. URL registration is not an archived byte identity or a future availability guarantee.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step1_public_research"
+      }
+    },
+    {
+      "source_id": "SRC-0180",
+      "title": "version-linked Stride WinForms host (R03 Step1)",
+      "locator": {
+        "type": "url",
+        "url": "https://raw.githubusercontent.com/stride3d/stride/64961284/sources/engine/Stride.Games/GameContextWinforms.cs"
+      },
+      "observed_at_utc": "2026-09-07T12:43:23.249598+00:00",
+      "status": "Public research supporting a provisional recommendation; no local integration test.",
+      "coverage": "Relevant published capability, framework/dependency, sample or asset/license sections retrieved 2026-09-07; detailed claim locators and limitations in r03_step1_evidence.json and R03_RENDERING_RESEARCH_STEP1.md. URL registration is not an archived byte identity or a future availability guarantee.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step1_public_research"
+      }
+    },
+    {
+      "source_id": "SRC-0181",
+      "title": "Godot C# workflow (R03 Step1)",
+      "locator": {
+        "type": "url",
+        "url": "https://docs.godotengine.org/en/stable/tutorials/scripting/c_sharp/c_sharp_basics.html"
+      },
+      "observed_at_utc": "2026-09-07T12:43:23.249598+00:00",
+      "status": "Public research supporting a provisional recommendation; no local integration test.",
+      "coverage": "Relevant published capability, framework/dependency, sample or asset/license sections retrieved 2026-09-07; detailed claim locators and limitations in r03_step1_evidence.json and R03_RENDERING_RESEARCH_STEP1.md. URL registration is not an archived byte identity or a future availability guarantee.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step1_public_research"
+      }
+    },
+    {
+      "source_id": "SRC-0182",
+      "title": "Godot .NET target explanation (R03 Step1)",
+      "locator": {
+        "type": "url",
+        "url": "https://godotengine.org/article/godotsharp-packages-net8/"
+      },
+      "observed_at_utc": "2026-09-07T12:43:23.249598+00:00",
+      "status": "Public research supporting a provisional recommendation; no local integration test.",
+      "coverage": "Relevant published capability, framework/dependency, sample or asset/license sections retrieved 2026-09-07; detailed claim locators and limitations in r03_step1_evidence.json and R03_RENDERING_RESEARCH_STEP1.md. URL registration is not an archived byte identity or a future availability guarantee.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step1_public_research"
+      }
+    },
+    {
+      "source_id": "SRC-0183",
+      "title": "raylib-cs package/status (R03 Step1)",
+      "locator": {
+        "type": "url",
+        "url": "https://www.nuget.org/packages/Raylib-cs/8.1.0"
+      },
+      "observed_at_utc": "2026-09-07T12:43:23.249598+00:00",
+      "status": "Public research supporting a provisional recommendation; no local integration test.",
+      "coverage": "Relevant published capability, framework/dependency, sample or asset/license sections retrieved 2026-09-07; detailed claim locators and limitations in r03_step1_evidence.json and R03_RENDERING_RESEARCH_STEP1.md. URL registration is not an archived byte identity or a future availability guarantee.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step1_public_research"
+      }
+    },
+    {
+      "source_id": "SRC-0184",
+      "title": "Skia WinForms sample (R03 Step1)",
+      "locator": {
+        "type": "url",
+        "url": "https://github.com/mono/SkiaSharp/tree/main/samples/Basic/WindowsForms"
+      },
+      "observed_at_utc": "2026-09-07T12:43:23.249598+00:00",
+      "status": "Public research supporting a provisional recommendation; no local integration test.",
+      "coverage": "Relevant published capability, framework/dependency, sample or asset/license sections retrieved 2026-09-07; detailed claim locators and limitations in r03_step1_evidence.json and R03_RENDERING_RESEARCH_STEP1.md. URL registration is not an archived byte identity or a future availability guarantee.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step1_public_research"
+      }
+    },
+    {
+      "source_id": "SRC-0185",
+      "title": "GPU page (R03 Step1)",
+      "locator": {
+        "type": "url",
+        "url": "https://raw.githubusercontent.com/mono/SkiaSharp/main/samples/Basic/WindowsForms/SkiaSharpSample/GpuPage.cs"
+      },
+      "observed_at_utc": "2026-09-07T12:43:23.249598+00:00",
+      "status": "Public research supporting a provisional recommendation; no local integration test.",
+      "coverage": "Relevant published capability, framework/dependency, sample or asset/license sections retrieved 2026-09-07; detailed claim locators and limitations in r03_step1_evidence.json and R03_RENDERING_RESEARCH_STEP1.md. URL registration is not an archived byte identity or a future availability guarantee.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step1_public_research"
+      }
+    },
+    {
+      "source_id": "SRC-0186",
+      "title": "sample target framework (R03 Step1)",
+      "locator": {
+        "type": "url",
+        "url": "https://raw.githubusercontent.com/mono/SkiaSharp/main/samples/Basic/WindowsForms/SkiaSharpSample/SkiaSharpSample.csproj"
+      },
+      "observed_at_utc": "2026-09-07T12:43:23.249598+00:00",
+      "status": "Public research supporting a provisional recommendation; no local integration test.",
+      "coverage": "Relevant published capability, framework/dependency, sample or asset/license sections retrieved 2026-09-07; detailed claim locators and limitations in r03_step1_evidence.json and R03_RENDERING_RESEARCH_STEP1.md. URL registration is not an archived byte identity or a future availability guarantee.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step1_public_research"
+      }
+    },
+    {
+      "source_id": "SRC-0187",
+      "title": "MonoGame samples (R03 Step1)",
+      "locator": {
+        "type": "url",
+        "url": "https://github.com/MonoGame/MonoGame.Samples"
+      },
+      "observed_at_utc": "2026-09-07T12:43:23.249598+00:00",
+      "status": "Public research supporting a provisional recommendation; no local integration test.",
+      "coverage": "Relevant published capability, framework/dependency, sample or asset/license sections retrieved 2026-09-07; detailed claim locators and limitations in r03_step1_evidence.json and R03_RENDERING_RESEARCH_STEP1.md. URL registration is not an archived byte identity or a future availability guarantee.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step1_public_research"
+      }
+    },
+    {
+      "source_id": "SRC-0188",
+      "title": "Stride examples (R03 Step1)",
+      "locator": {
+        "type": "url",
+        "url": "https://stride3d.github.io/stride-community-toolkit/manual/code-only/examples/basic-examples.html"
+      },
+      "observed_at_utc": "2026-09-07T12:43:23.249598+00:00",
+      "status": "Public research supporting a provisional recommendation; no local integration test.",
+      "coverage": "Relevant published capability, framework/dependency, sample or asset/license sections retrieved 2026-09-07; detailed claim locators and limitations in r03_step1_evidence.json and R03_RENDERING_RESEARCH_STEP1.md. URL registration is not an archived byte identity or a future availability guarantee.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step1_public_research"
+      }
+    },
+    {
+      "source_id": "SRC-0189",
+      "title": "Stride/toolkit version table (R03 Step1)",
+      "locator": {
+        "type": "url",
+        "url": "https://github.com/stride3d/stride-community-toolkit/blob/main/docs/manual/getting-started.md"
+      },
+      "observed_at_utc": "2026-09-07T12:43:23.249598+00:00",
+      "status": "Public research supporting a provisional recommendation; no local integration test.",
+      "coverage": "Relevant published capability, framework/dependency, sample or asset/license sections retrieved 2026-09-07; detailed claim locators and limitations in r03_step1_evidence.json and R03_RENDERING_RESEARCH_STEP1.md. URL registration is not an archived byte identity or a future availability guarantee.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step1_public_research"
+      }
+    },
+    {
+      "source_id": "SRC-0190",
+      "title": "Godot C# scene spawning (R03 Step1)",
+      "locator": {
+        "type": "url",
+        "url": "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/05.spawning_mobs.html"
+      },
+      "observed_at_utc": "2026-09-07T12:43:23.249598+00:00",
+      "status": "Public research supporting a provisional recommendation; no local integration test.",
+      "coverage": "Relevant published capability, framework/dependency, sample or asset/license sections retrieved 2026-09-07; detailed claim locators and limitations in r03_step1_evidence.json and R03_RENDERING_RESEARCH_STEP1.md. URL registration is not an archived byte identity or a future availability guarantee.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step1_public_research"
+      }
+    },
+    {
+      "source_id": "SRC-0191",
+      "title": "Godot instancing (R03 Step1)",
+      "locator": {
+        "type": "url",
+        "url": "https://docs.godotengine.org/en/stable/tutorials/performance/using_multimesh.html"
+      },
+      "observed_at_utc": "2026-09-07T12:43:23.249598+00:00",
+      "status": "Public research supporting a provisional recommendation; no local integration test.",
+      "coverage": "Relevant published capability, framework/dependency, sample or asset/license sections retrieved 2026-09-07; detailed claim locators and limitations in r03_step1_evidence.json and R03_RENDERING_RESEARCH_STEP1.md. URL registration is not an archived byte identity or a future availability guarantee.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step1_public_research"
+      }
+    },
+    {
+      "source_id": "SRC-0192",
+      "title": "Shape Characters (R03 Step1)",
+      "locator": {
+        "type": "url",
+        "url": "https://kenney-assets.itch.io/shape-characters"
+      },
+      "observed_at_utc": "2026-09-07T12:43:23.249598+00:00",
+      "status": "Public research supporting a provisional recommendation; no local integration test.",
+      "coverage": "Relevant published capability, framework/dependency, sample or asset/license sections retrieved 2026-09-07; detailed claim locators and limitations in r03_step1_evidence.json and R03_RENDERING_RESEARCH_STEP1.md. URL registration is not an archived byte identity or a future availability guarantee.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step1_public_research"
+      }
+    },
+    {
+      "source_id": "SRC-0193",
+      "title": "Animal Pack (R03 Step1)",
+      "locator": {
+        "type": "url",
+        "url": "https://kenney.nl/assets/animal-pack"
+      },
+      "observed_at_utc": "2026-09-07T12:43:23.249598+00:00",
+      "status": "Public research supporting a provisional recommendation; no local integration test.",
+      "coverage": "Relevant published capability, framework/dependency, sample or asset/license sections retrieved 2026-09-07; detailed claim locators and limitations in r03_step1_evidence.json and R03_RENDERING_RESEARCH_STEP1.md. URL registration is not an archived byte identity or a future availability guarantee.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step1_public_research"
+      }
+    },
+    {
+      "source_id": "SRC-0194",
+      "title": "Isometric Blocks (R03 Step1)",
+      "locator": {
+        "type": "url",
+        "url": "https://kenney.nl/assets/isometric-blocks"
+      },
+      "observed_at_utc": "2026-09-07T12:43:23.249598+00:00",
+      "status": "Public research supporting a provisional recommendation; no local integration test.",
+      "coverage": "Relevant published capability, framework/dependency, sample or asset/license sections retrieved 2026-09-07; detailed claim locators and limitations in r03_step1_evidence.json and R03_RENDERING_RESEARCH_STEP1.md. URL registration is not an archived byte identity or a future availability guarantee.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step1_public_research"
+      }
+    },
+    {
+      "source_id": "SRC-0195",
+      "title": "Pixel Platformer Food Expansion (R03 Step1)",
+      "locator": {
+        "type": "url",
+        "url": "https://kenney.nl/assets/pixel-platformer-food-expansion"
+      },
+      "observed_at_utc": "2026-09-07T12:43:23.249598+00:00",
+      "status": "Public research supporting a provisional recommendation; no local integration test.",
+      "coverage": "Relevant published capability, framework/dependency, sample or asset/license sections retrieved 2026-09-07; detailed claim locators and limitations in r03_step1_evidence.json and R03_RENDERING_RESEARCH_STEP1.md. URL registration is not an archived byte identity or a future availability guarantee.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step1_public_research"
+      }
+    },
+    {
+      "source_id": "SRC-0196",
+      "title": "Cube Pets (R03 Step1)",
+      "locator": {
+        "type": "url",
+        "url": "https://kenney.nl/assets/cube-pets"
+      },
+      "observed_at_utc": "2026-09-07T12:43:23.249598+00:00",
+      "status": "Public research supporting a provisional recommendation; no local integration test.",
+      "coverage": "Relevant published capability, framework/dependency, sample or asset/license sections retrieved 2026-09-07; detailed claim locators and limitations in r03_step1_evidence.json and R03_RENDERING_RESEARCH_STEP1.md. URL registration is not an archived byte identity or a future availability guarantee.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step1_public_research"
+      }
+    },
+    {
+      "source_id": "SRC-0197",
+      "title": "Food Kit (R03 Step1)",
+      "locator": {
+        "type": "url",
+        "url": "https://kenney.nl/assets/food-kit"
+      },
+      "observed_at_utc": "2026-09-07T12:43:23.249598+00:00",
+      "status": "Public research supporting a provisional recommendation; no local integration test.",
+      "coverage": "Relevant published capability, framework/dependency, sample or asset/license sections retrieved 2026-09-07; detailed claim locators and limitations in r03_step1_evidence.json and R03_RENDERING_RESEARCH_STEP1.md. URL registration is not an archived byte identity or a future availability guarantee.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step1_public_research"
+      }
+    },
+    {
+      "source_id": "SRC-0198",
+      "title": "Nature Kit (R03 Step1)",
+      "locator": {
+        "type": "url",
+        "url": "https://kenney.nl/assets/nature-kit"
+      },
+      "observed_at_utc": "2026-09-07T12:43:23.249598+00:00",
+      "status": "Public research supporting a provisional recommendation; no local integration test.",
+      "coverage": "Relevant published capability, framework/dependency, sample or asset/license sections retrieved 2026-09-07; detailed claim locators and limitations in r03_step1_evidence.json and R03_RENDERING_RESEARCH_STEP1.md. URL registration is not an archived byte identity or a future availability guarantee.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step1_public_research"
+      }
+    },
+    {
+      "source_id": "SRC-0199",
+      "title": "Kenney model import guide (R03 Step1)",
+      "locator": {
+        "type": "url",
+        "url": "https://kenney.nl/knowledge-base/game-assets-3d/importing-3d-models-into-game-engines"
+      },
+      "observed_at_utc": "2026-09-07T12:43:23.249598+00:00",
+      "status": "Public research supporting a provisional recommendation; no local integration test.",
+      "coverage": "Relevant published capability, framework/dependency, sample or asset/license sections retrieved 2026-09-07; detailed claim locators and limitations in r03_step1_evidence.json and R03_RENDERING_RESEARCH_STEP1.md. URL registration is not an archived byte identity or a future availability guarantee.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step1_public_research"
+      }
+    }
+  ],
+  "core_patch": {
+    "experiment": {
+      "root": "D:\\Posao\\Fistnet.Genepool",
+      "purpose": "Make this experiment a better simulation and more fun to watch.",
+      "purpose_origin_record": "DEC-0002",
+      "status": "R03_Step1_research_complete_awaiting_owner_review",
+      "phase": "EVOLUTION",
+      "root_semantics": "Exact physical experiment root explicitly assigned by User; KB tools bound to this root.",
+      "model": "Provisional artificial-life sandbox with inherited action repertoires and individual learning.",
+      "model_record": "INF-0001",
+      "model_accepted": false,
+      "design_accepted": true,
+      "trial_authorized": false,
+      "trial_scope": "R02 ecological evaluation closed as INCONCLUSIVE by DEC-0020. Prior 16 comparisons remain time-limited; reserved confirmation was not run. No active or newly authorized trial.",
+      "design_accepted_scope": "R02 Parts 1-4 owner-accepted and R02 closed by DEC-0020 with ecological evaluation inconclusive. No R03 design is accepted."
+    },
+    "owner_decision_ids": [
+      "DEC-0001",
+      "DEC-0002",
+      "DEC-0003",
+      "DEC-0004",
+      "DEC-0005",
+      "DEC-0006",
+      "DEC-0007",
+      "DEC-0008",
+      "DEC-0009",
+      "DEC-0010",
+      "DEC-0011",
+      "DEC-0012",
+      "DEC-0013",
+      "DEC-0014",
+      "DEC-0015",
+      "DEC-0016",
+      "DEC-0017",
+      "DEC-0018",
+      "DEC-0019",
+      "DEC-0020",
+      "DEC-0021",
+      "DEC-0022",
+      "DEC-0023"
+    ],
+    "routes": {
+      "orientation": {
+        "record_ids": [
+          "FACT-0001",
+          "FACT-0002",
+          "FACT-0011",
+          "INF-0001"
+        ]
+      },
+      "mechanics": {
+        "record_ids": [
+          "FACT-0003",
+          "FACT-0004",
+          "FACT-0005",
+          "INF-0003"
+        ]
+      },
+      "watchability": {
+        "record_ids": [
+          "DEC-0002",
+          "FACT-0006",
+          "FACT-0009",
+          "REC-0001"
+        ]
+      },
+      "material_findings": {
+        "record_ids": [
+          "FACT-0007",
+          "FACT-0008",
+          "FACT-0010",
+          "INF-0002",
+          "FACT-0023"
+        ]
+      },
+      "proposal_and_tests": {
+        "record_ids": [
+          "DEC-0003",
+          "REC-0002",
+          "FACT-0012",
+          "Q-0001",
+          "Q-0002",
+          "DEC-0007",
+          "FACT-0024",
+          "FACT-0025",
+          "FACT-0028",
+          "FACT-0029",
+          "INF-0004",
+          "DEC-0009"
+        ]
+      },
+      "environment_capabilities": {
+        "record_ids": [
+          "DEC-0004",
+          "FACT-0013",
+          "FACT-0014",
+          "FACT-0015",
+          "FACT-0016",
+          "REC-0003",
+          "Q-0002",
+          "CLAIM-0001",
+          "FACT-0017",
+          "FACT-0018",
+          "REC-0004",
+          "DEC-0005",
+          "FACT-0019",
+          "CLAIM-0002",
+          "FACT-0021"
+        ]
+      },
+      "kb_tooling": {
+        "record_ids": [
+          "DEC-0006",
+          "FACT-0020",
+          "FACT-0019",
+          "DEC-0013",
+          "FACT-0036",
+          "FACT-0039",
+          "FACT-0045"
+        ]
+      },
+      "current_implementation": {
+        "record_ids": [
+          "DEC-0017",
+          "DEC-0018",
+          "FACT-0044",
+          "FACT-0045",
+          "FACT-0046",
+          "INF-0009",
+          "DEC-0019",
+          "DEC-0020"
+        ]
+      },
+      "r02_research_and_proposal": {
+        "record_ids": [
+          "DEC-0010",
+          "CLAIM-0004",
+          "FACT-0030",
+          "FACT-0031",
+          "FACT-0032",
+          "INF-0005",
+          "CLAIM-0005",
+          "REC-0005",
+          "Q-0001",
+          "DEC-0011",
+          "Q-0003",
+          "DEC-0012",
+          "DEC-0019",
+          "DEC-0020"
+        ]
+      },
+      "r02_part1_result": {
+        "record_ids": [
+          "DEC-0012",
+          "FACT-0033",
+          "FACT-0034",
+          "FACT-0035",
+          "INF-0006",
+          "Q-0003"
+        ]
+      },
+      "r02_part2_result": {
+        "record_ids": [
+          "DEC-0014",
+          "FACT-0037",
+          "FACT-0038",
+          "REC-0006",
+          "INF-0007",
+          "Q-0003",
+          "DEC-0015"
+        ]
+      },
+      "r02_part3_result": {
+        "record_ids": [
+          "DEC-0015",
+          "FACT-0040",
+          "FACT-0041",
+          "FACT-0042",
+          "INF-0008",
+          "DEC-0017"
+        ]
+      },
+      "governance": {
+        "record_ids": [
+          "DEC-0016",
+          "FACT-0043",
+          "DEC-0001",
+          "DEC-0006"
+        ]
+      },
+      "r02_part4_result": {
+        "record_ids": [
+          "DEC-0017",
+          "DEC-0018",
+          "Q-0003",
+          "FACT-0044",
+          "FACT-0045",
+          "FACT-0046",
+          "INF-0009",
+          "DEC-0019",
+          "DEC-0020"
+        ]
+      },
+      "r02_closure": {
+        "record_ids": [
+          "DEC-0020",
+          "DEC-0019",
+          "REC-0005",
+          "FACT-0046",
+          "INF-0009"
+        ]
+      },
+      "r03_outline": {
+        "record_ids": [
+          "DEC-0021",
+          "REC-0007",
+          "DEC-0004",
+          "DEC-0022",
+          "DEC-0023",
+          "REC-0008"
+        ]
+      },
+      "r03_research": {
+        "record_ids": [
+          "DEC-0022",
+          "DEC-0023",
+          "FACT-0047",
+          "CLAIM-0006",
+          "CLAIM-0007",
+          "REC-0008"
+        ]
+      }
+    },
+    "authority": {
+      "assignment_record": "DEC-0001",
+      "actor": "Genepool Analyzer",
+      "knowledgebase_root": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase",
+      "continuing_kb_authority": "Routine in-root KB retrieval, validation, preparation and transactions remain authorized. DEC-0006 permits adapting tools with proportionate checks. The earlier unversioned-KB premise is superseded for canonical files by FACT-0027; current edits still require normal revision/preview/verification safeguards.",
+      "originals": "R03 Step1:14 local files match registered source identities; no source edits or execution. ExistingSRC-0115 historical gap persists.",
+      "next_action": "Stop for owner review of R03 Step1 recommendation; await Step2 instruction. R02 remains closed; no further ecology evaluation.",
+      "current_stage_record": "DEC-0022",
+      "environment_assessment": "Historical environment assessment used installed metadata and disposable synthetic probes; subsequent bounded source repair is recorded separately in FACT-0019.",
+      "current_research_scope": "R03 Step1 public engine/example/asset research and relevant static viewer inspection completed; no detailed implementation plan, install, prototype or trial.",
+      "specialization_record": "DEC-0016"
+    },
+    "last_maintenance": {
+      "at": "2026-09-07T12:43:23.249598+00:00",
+      "actor": "Genepool Analyzer",
+      "note": "Record R03 Step1 start, examples/assets criterion and research recommendation; stop for review."
+    },
+    "previous_proposal": {
+      "id": "R02",
+      "record_id": "REC-0005",
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\IMPROVEMENT_PROPOSAL_R02.md",
+      "sha256": "724B24D27F92C33757C3E3F0589F108B371525CEDD1FEE6FE1B8CA54A68C8B2F",
+      "status": "R02 CLOSED by User; Parts 1-4 accepted; ecological evaluation INCONCLUSIVE and further evaluation deprioritized",
+      "owner_closure_record": "DEC-0020",
+      "ecological_evaluation_status": "INCONCLUSIVE; closed by owner priority decision"
+    },
+    "proposal": {
+      "id": "R03_Step1",
+      "record_id": "REC-0008",
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_RENDERING_RESEARCH_STEP1.md",
+      "sha256": "C7F7C056D049BC2F6CDE91A87797F3235BC6B93464E9450F8CE8B68CC626BF60",
+      "status": "RESEARCH_COMPLETE_AWAITING_OWNER_REVIEW",
+      "external_research_used": true,
+      "research_authorization_record": "DEC-0022",
+      "selection_criterion_record": "DEC-0023",
+      "implementation_authorized": false,
+      "result_record_ids": [
+        "FACT-0047",
+        "CLAIM-0006",
+        "CLAIM-0007"
+      ],
+      "source_commit_horizon": "bdfaa0c555edf8807f680f46b71e0ef16e387d07",
+      "evidence_manifest": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step1_evidence.json",
+      "limits": "No candidate installed/built/run; engine and2.5D proposal unaccepted."
+    },
+    "previous_iteration_part": {
+      "id": "R02_Part4",
+      "status": "OWNER_ACCEPTED; parent R02 CLOSED; engineering PASS; 2048-season ecology INCONCLUSIVE",
+      "record_ids": [
+        "DEC-0017",
+        "DEC-0018",
+        "FACT-0044",
+        "FACT-0045",
+        "FACT-0046",
+        "INF-0009",
+        "DEC-0019",
+        "DEC-0020"
+      ],
+      "contract": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R02_PART4_CONTRACT.md",
+      "limits": "Ecological outcomes remain inconclusive; no reserved confirmation or default promotion. Parent R02 explicitly closed by DEC-0020.",
+      "report": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\IMPROVEMENT_RESULT_R02_PART4.md",
+      "verification": "137/137 each configuration; VS2022 builds; observer passivity;16 time-limited comparisons without observed violations; no qualifying candidate; existing historical warning only.",
+      "owner_acceptance_record": "DEC-0019",
+      "iteration_closure_record": "DEC-0020"
+    },
+    "current_iteration_part": {
+      "id": "R03_Step1",
+      "status": "RESEARCH_COMPLETE; OWNER_REVIEW_PENDING",
+      "record_ids": [
+        "DEC-0022",
+        "DEC-0023",
+        "FACT-0047",
+        "CLAIM-0006",
+        "CLAIM-0007",
+        "REC-0008"
+      ],
+      "report": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_RENDERING_RESEARCH_STEP1.md",
+      "verification": "Primary-source and local identity review; KB validation reported separately in r03_step1_receipt.json. No rendering/build/test execution.",
+      "limits": "No Step2 planning or implementation; GPU hardware and actual import/VS2022 integration unverified."
+    },
+    "next_iteration": {
+      "id": "R03",
+      "status": "R03_STARTED_STEP1_COMPLETE_REVIEW_PENDING",
+      "owner_outline_record": "DEC-0021",
+      "preliminary_opinion_record": "REC-0007",
+      "scope": "GPU visualization: research -> plan -> familiar 2D -> either 2.5D or 3D -> improved graphics",
+      "constraints": [
+        "Free for non-commercial use",
+        "Whole solution compatible with Visual Studio 2022",
+        "Useful examples and reusable2D/3D assets",
+        "Proportionate simulation visuals"
+      ],
+      "research_started": true,
+      "plan_started": false,
+      "implementation_started": false,
+      "start_authorized": true,
+      "next_action": "Await review and applicableStep2 instruction.",
+      "start_scope": "Step1 only byDEC-0022",
+      "current_recommendation_record": "REC-0008"
+    },
+    "tooling": {
+      "record_id": "FACT-0039",
+      "policy": ".SeedAnalyzer/KB.md",
+      "source_revision_command": "KnowledgeBase/tools/kb.py revise-source",
+      "verification": "29distinct source-version/reviewed-commit/snapshot checks passed,1host-symlink fixture skipped; current identities in FACT-0039.",
+      "source_history": "Pinned local Git and exact KB snapshots retain identities. SRC-0115 exact mixed-newline predecessor unavailable; prepared history retained with explicit deep-validation warning (FACT-0042).",
+      "knowledgebase_is_git_versioned": true,
+      "knowledgebase_git_scope": "R03 research localHEADbdfaa0c555edf8807f680f46b71e0ef16e387d07; sourcecode clean. KB acceptance/closure and current research edits present; remote uninspected. Prior c5a/Part3-uncommitted observation is historical.",
+      "knowledgebase_owner_decision": "DEC-0008: Keep the KnowledgeBase in Git.",
+      "source_version_record_id": "FACT-0020",
+      "current_maintenance_authority": "DEC-0022",
+      "current_verification_receipt": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step1_receipt.json"
+    },
+    "environment": {
+      "status": "Part4 whole-solution VS2022 Debug/Release builds and137/137 tests each verified; SDK9.0.315 retained",
+      "sdk_for_vs2022": "9.0.315",
+      "report": {
+        "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\ENVIRONMENT_CAPABILITIES_R01.md",
+        "sha256": "102A4FE72EA9CC4ACA43A0DEF81E2507CA5BD3D1ADC78FFBCC2B254E81939731",
+        "bytes": 10515,
+        "status": "Environment assessment with dated owner-build clarification"
+      },
+      "vs2022_requirement_record": "DEC-0004",
+      "record_ids": [
+        "FACT-0013",
+        "FACT-0014",
+        "FACT-0015",
+        "FACT-0016",
+        "FACT-0019",
+        "FACT-0021",
+        "FACT-0024",
+        "FACT-0028",
+        "FACT-0038",
+        "FACT-0042",
+        "FACT-0046",
+        "FACT-0047"
+      ],
+      "refresh": "Existing paths/cache isolation in KnowledgeBase/tools/build_solution.py; recheck material inputs before a future changed build.",
+      "r03_gpu_research": "Windows10.0.22621 x64 metadata; adapter/driver queryAccessDenied; actualGPUcontext and candidateVS2022 integration untested."
+    }
+  }
+}

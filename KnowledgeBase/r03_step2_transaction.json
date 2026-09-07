@@ -1,0 +1,1044 @@
+{
+  "actor": "Genepool Analyzer",
+  "note": "Record owner Godot selection, exact Step2 setup/2D plan and evidence; stop before implementation.",
+  "upsert_records": [
+    {
+      "id": "DEC-0024",
+      "kind": "owner_decision",
+      "status": "active",
+      "statement": "Owner selects Godot and authorizes R03 Step2 exact planning for libraries/installations, where to obtain them, and steps for the 2D viewer. Stop for owner review before actual implementation.",
+      "source_refs": [],
+      "related_record_ids": [
+        "DEC-0022",
+        "DEC-0023",
+        "REC-0008",
+        "REC-0009"
+      ],
+      "tags": [
+        "R03",
+        "Step2",
+        "Godot",
+        "VS2022"
+      ],
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "direct_user_message",
+        "recorded_at_utc": "2026-09-07T17:28:26.589323+00:00",
+        "quote": "Ok lets pick Godot! But before we start the actual implementation I want the exact plan on: 1) What we need from libraries and installations 2) Where to get them 3) What are the steps for building the actual 2D visualisation using Godot. When you have the exact plan on how we do this stop and i will review it."
+      },
+      "uncertainty": "Godot choice is accepted. The detailed plan, installation footprint, metrics and implementation are not yet accepted or authorized. R02 closure is unchanged.",
+      "derivation": {
+        "artifacts": [
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_GODOT_2D_IMPLEMENTATION_PLAN.md",
+            "sha256": "513769F12ACED547CB8DFF6DFE29D5E7F1CD18A6A99E65685B3F7B9AAEC08472",
+            "bytes": 18316,
+            "status": "Derived Step2 plan/evidence; not implemented or owner accepted."
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step2_evidence.json",
+            "sha256": "B83F57173A3476192E3C5334F37C0E93264C7502AC7A0FD760B09ADCAE90A3F4",
+            "bytes": 16737,
+            "status": "Derived Step2 plan/evidence; not implemented or owner accepted."
+          }
+        ],
+        "locators": [
+          "Plan numbered dependencies and implementation checkpoints; evidence.local_sources/public_sources/installed_metadata."
+        ]
+      }
+    },
+    {
+      "id": "FACT-0048",
+      "kind": "observed_fact",
+      "status": "active",
+      "statement": "R03 Step2 static inspection supports reusing one existing SimulationRunner and detached LatestFrame in a new Godot application. Control references Dna; library projects target net9.0-windows7.0. Root SDK pin is9.0.315; installed SDK/runtime/VS2022 metadata is present. Existing build helper clears NuGet sources and uses disposable package caches, so it needs a scoped package-resolution adaptation for the proposed Godot SDK. Current source identities match catalog; no simulation source changes or new execution.",
+      "source_refs": [
+        "SRC-0067",
+        "SRC-0052",
+        "SRC-0070",
+        "SRC-0069",
+        "SRC-0002",
+        "SRC-0068",
+        "SRC-0056",
+        "SRC-0147",
+        "SRC-0149",
+        "SRC-0159",
+        "SRC-0163",
+        "SRC-0144",
+        "SRC-0164",
+        "SRC-0152",
+        "SRC-0162",
+        "SRC-0151",
+        "SRC-0202"
+      ],
+      "related_record_ids": [
+        "FACT-0047",
+        "FACT-0046",
+        "DEC-0024"
+      ],
+      "tags": [
+        "R03",
+        "Step2",
+        "Godot",
+        "VS2022"
+      ],
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step2_planning",
+        "recorded_at_utc": "2026-09-07T17:28:26.589323+00:00"
+      },
+      "uncertainty": "Direct Godot project integration, package restore, effective SDK/configuration mapping, F5 and actual GPU remain untested. Previous137/137 tests are dated Part4 evidence, not rerun in planning.",
+      "derivation": {
+        "artifacts": [
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_GODOT_2D_IMPLEMENTATION_PLAN.md",
+            "sha256": "513769F12ACED547CB8DFF6DFE29D5E7F1CD18A6A99E65685B3F7B9AAEC08472",
+            "bytes": 18316,
+            "status": "Derived Step2 plan/evidence; not implemented or owner accepted."
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step2_evidence.json",
+            "sha256": "B83F57173A3476192E3C5334F37C0E93264C7502AC7A0FD760B09ADCAE90A3F4",
+            "bytes": 16737,
+            "status": "Derived Step2 plan/evidence; not implemented or owner accepted."
+          }
+        ],
+        "locators": [
+          "Plan numbered dependencies and implementation checkpoints; evidence.local_sources/public_sources/installed_metadata."
+        ]
+      }
+    },
+    {
+      "id": "CLAIM-0008",
+      "kind": "source_claim",
+      "status": "active",
+      "statement": "Official Godot4.7.2 release/package/source documentation supports a portable .NET Windows x64 editor, matching4.7.2 SDK bindings, Debug/ExportDebug/ExportRelease configurations, parent-solution discovery, bulk2D instancing and separate export templates. Microsoft documents SDK9.0.3xx with VS2022 net9 support. Versioned Godot framework checks support the proposed Windows-qualified net9 target by static inference.",
+      "source_refs": [
+        "SRC-0203",
+        "SRC-0204",
+        "SRC-0205",
+        "SRC-0206",
+        "SRC-0207",
+        "SRC-0208",
+        "SRC-0209",
+        "SRC-0210",
+        "SRC-0211",
+        "SRC-0181",
+        "SRC-0212",
+        "SRC-0213",
+        "SRC-0214",
+        "SRC-0215",
+        "SRC-0216",
+        "SRC-0217",
+        "SRC-0218",
+        "SRC-0219",
+        "SRC-0220",
+        "SRC-0221",
+        "SRC-0222"
+      ],
+      "related_record_ids": [
+        "DEC-0024",
+        "REC-0009",
+        "CLAIM-0006"
+      ],
+      "tags": [
+        "R03",
+        "Step2",
+        "Godot",
+        "VS2022"
+      ],
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step2_planning",
+        "recorded_at_utc": "2026-09-07T17:28:26.589323+00:00"
+      },
+      "uncertainty": "Publisher/source claims and static compatibility inference, not project measurements. Asset sizes/digests are published metadata without local binary verification. Stable documentation may evolve; versioned engine links pin implementation claims.",
+      "derivation": {
+        "artifacts": [
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_GODOT_2D_IMPLEMENTATION_PLAN.md",
+            "sha256": "513769F12ACED547CB8DFF6DFE29D5E7F1CD18A6A99E65685B3F7B9AAEC08472",
+            "bytes": 18316,
+            "status": "Derived Step2 plan/evidence; not implemented or owner accepted."
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step2_evidence.json",
+            "sha256": "B83F57173A3476192E3C5334F37C0E93264C7502AC7A0FD760B09ADCAE90A3F4",
+            "bytes": 16737,
+            "status": "Derived Step2 plan/evidence; not implemented or owner accepted."
+          }
+        ],
+        "locators": [
+          "Plan numbered dependencies and implementation checkpoints; evidence.local_sources/public_sources/installed_metadata."
+        ]
+      }
+    },
+    {
+      "id": "REC-0009",
+      "kind": "recommendation",
+      "status": "provisional",
+      "statement": "R03 Step2 plan: portable Godot.NET4.7.2 plus implicit NuGet SDK packages; retain SDK9.0.315 and whole VS2022 solution. Add a complete Godot viewer owning the existing simulation worker, two GPU batches for food/organisms, camera and control/details parity. First verify toolchain/GPU/F5, then frozen frames, live integration, parity and bounded tests/performance. Defer standalone export templates,3D and graphics polish. Plan complete awaiting owner review; no implementation started.",
+      "source_refs": [
+        "SRC-0067",
+        "SRC-0052",
+        "SRC-0070",
+        "SRC-0069",
+        "SRC-0002",
+        "SRC-0068",
+        "SRC-0056",
+        "SRC-0147",
+        "SRC-0149",
+        "SRC-0159",
+        "SRC-0163",
+        "SRC-0144",
+        "SRC-0164",
+        "SRC-0152",
+        "SRC-0162",
+        "SRC-0151",
+        "SRC-0202",
+        "SRC-0203",
+        "SRC-0204",
+        "SRC-0205",
+        "SRC-0206",
+        "SRC-0207",
+        "SRC-0208",
+        "SRC-0209",
+        "SRC-0210",
+        "SRC-0211",
+        "SRC-0181",
+        "SRC-0212",
+        "SRC-0213",
+        "SRC-0214",
+        "SRC-0215",
+        "SRC-0216",
+        "SRC-0217",
+        "SRC-0218",
+        "SRC-0219",
+        "SRC-0220",
+        "SRC-0221",
+        "SRC-0222"
+      ],
+      "related_record_ids": [
+        "DEC-0024",
+        "FACT-0048",
+        "CLAIM-0008",
+        "REC-0008",
+        "DEC-0020"
+      ],
+      "tags": [
+        "R03",
+        "Step2",
+        "Godot",
+        "VS2022"
+      ],
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step2_planning",
+        "recorded_at_utc": "2026-09-07T17:28:26.589323+00:00"
+      },
+      "uncertainty": "Architecture and timing criteria are proposals; integration and actual GPU capability remain checkpoint risks. Keeping WinForms is the proposed migration/comparison path, not an owner requirement to embed Godot.",
+      "derivation": {
+        "artifacts": [
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_GODOT_2D_IMPLEMENTATION_PLAN.md",
+            "sha256": "513769F12ACED547CB8DFF6DFE29D5E7F1CD18A6A99E65685B3F7B9AAEC08472",
+            "bytes": 18316,
+            "status": "Derived Step2 plan/evidence; not implemented or owner accepted."
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step2_evidence.json",
+            "sha256": "B83F57173A3476192E3C5334F37C0E93264C7502AC7A0FD760B09ADCAE90A3F4",
+            "bytes": 16737,
+            "status": "Derived Step2 plan/evidence; not implemented or owner accepted."
+          }
+        ],
+        "locators": [
+          "Plan numbered dependencies and implementation checkpoints; evidence.local_sources/public_sources/installed_metadata."
+        ]
+      }
+    },
+    {
+      "id": "REC-0008",
+      "kind": "recommendation",
+      "status": "resolved",
+      "statement": "Godot C# rendering recommendation was accepted as engine choice by the owner in DEC-0024. Current R03 Step2 dependency and 2D implementation plan is REC-0009, awaiting owner review. Earlier Skia/Godot tradeoff and uncertainty remain dated analysis; engine acceptance does not accept the detailed design or authorize installation/implementation.",
+      "source_refs": [
+        "SRC-0067",
+        "SRC-0002",
+        "SRC-0068",
+        "SRC-0069",
+        "SRC-0056",
+        "SRC-0152",
+        "SRC-0149",
+        "SRC-0147",
+        "SRC-0162",
+        "SRC-0164",
+        "SRC-0144",
+        "SRC-0160",
+        "SRC-0151",
+        "SRC-0165",
+        "SRC-0172",
+        "SRC-0173",
+        "SRC-0174",
+        "SRC-0175",
+        "SRC-0176",
+        "SRC-0177",
+        "SRC-0178",
+        "SRC-0179",
+        "SRC-0180",
+        "SRC-0181",
+        "SRC-0182",
+        "SRC-0183",
+        "SRC-0184",
+        "SRC-0185",
+        "SRC-0186",
+        "SRC-0187",
+        "SRC-0188",
+        "SRC-0189",
+        "SRC-0190",
+        "SRC-0191",
+        "SRC-0192",
+        "SRC-0193",
+        "SRC-0194",
+        "SRC-0195",
+        "SRC-0196",
+        "SRC-0197",
+        "SRC-0198",
+        "SRC-0199",
+        "SRC-0200",
+        "SRC-0201"
+      ],
+      "related_record_ids": [
+        "DEC-0022",
+        "DEC-0023",
+        "FACT-0047",
+        "CLAIM-0006",
+        "CLAIM-0007",
+        "REC-0007",
+        "DEC-0020",
+        "DEC-0024",
+        "REC-0009"
+      ],
+      "tags": [
+        "R03",
+        "Step1",
+        "graphics_research"
+      ],
+      "origin": {
+        "type": "authorized_R03_Step1_research",
+        "actor": "Genepool Analyzer",
+        "recorded_at_utc": "2026-09-07T12:43:23.249598+00:00"
+      },
+      "uncertainty": "No quantified effort comparison, candidate build, GPU run or asset import. Godot2D-to3D is not automatic: scene presentation, cameras, coordinates and picking change; simulation integration, identifiers, commands and someUI can be reused if separated deliberately. Actual VS2022 solution integration remains to be verified. Existing WinForms app remains available during any authorized transition. R02 ecology stays closedINCONCLUSIVE.",
+      "derivation": {
+        "artifacts": [
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_RENDERING_RESEARCH_STEP1.md",
+            "sha256": "BD6FF2D1D6D1F9D618BA6854F9346AFC43B6B17296DD7DD5C7A9A2911A24F6C2",
+            "bytes": 22046,
+            "status": "Derived R03 Step1 research; current recommendation is the review addendum."
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step1_evidence.json",
+            "sha256": "240F3BDFECAE00AD0005176311189EC80868794DC4C2324E623BB5FC76B0EBB3",
+            "bytes": 26537,
+            "status": "Derived R03 Step1 research support; not original experiment evidence."
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_RENDERING_RECOMMENDATION_REVIEW.md",
+            "sha256": "F0858A646487CE415919E3E0118CE1C20AB7CE94D63B60352D00F3C14172058B",
+            "bytes": 4501,
+            "status": "Derived R03 Step1 research; current recommendation is the review addendum."
+          }
+        ],
+        "locators": [
+          "Current: R03_RENDERING_RECOMMENDATION_REVIEW.md",
+          "Historical comparison plus current navigation banner: R03_RENDERING_RESEARCH_STEP1.md"
+        ],
+        "next_action": "Current route: REC-0009 and R03_GODOT_2D_IMPLEMENTATION_PLAN.md; stop for Step2 plan review."
+      },
+      "created_at": "2026-09-07T12:45:12+00:00",
+      "updated_at": "2026-09-07T13:52:24+00:00",
+      "resolution_notes": [
+        {
+          "at_utc": "2026-09-07T13:51:53.237312+00:00",
+          "actor": "Genepool Analyzer",
+          "type": "R03_recommendation_review",
+          "note": "Original research document now has a dated navigation banner to the Godot recommendation review; its underlying comparison is preserved. Prior document hash is a historical observation, not the current file identity. Owner questioned whether initial Skia integration savings justify later replacement for3D; this is a question, not an engine-selection decision. Analyzer corrects the weighting of initial integration versus future reuse.",
+          "prior_report_identity": {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_RENDERING_RESEARCH_STEP1.md",
+            "sha256": "C7F7C056D049BC2F6CDE91A87797F3235BC6B93464E9450F8CE8B68CC626BF60",
+            "bytes": 21574,
+            "status": "Derived R03 Step1 research support; not original experiment evidence."
+          },
+          "record_ids": [
+            "REC-0008"
+          ],
+          "prior_statement": "Recommend SkiaSharp GPU-backed SKGLControl for familiar2D followed by a deliberately modest isometric2.5D view with reusable sprites. Retaining embedded WinForms is Analyzer's integration-cost judgment, not an extra owner requirement. Godot C# is preferred alternative for actual3Dmodels or substantial scene/animation editing; compatibleStride4.2 merits consideration for embedded3D. Step1 research complete, awaiting owner review; Step2 and implementation have not begun.",
+          "prior_uncertainty": "Engine/depth/art choice provisional, not owner-accepted. Skia proposed WindowsTFM adjustment requires later VS2022 build/designer/native checks; recent officialsample cannot be copied unchanged. No performance improvement proved. Maintain current viewer until replacement checks pass; reconsider if actualGPU/native deployment/VS2022 or proportional implementation fails. R02 ecology remains closedINCONCLUSIVE."
+        },
+        {
+          "at_utc": "2026-09-07T17:28:26.589323+00:00",
+          "actor": "Genepool Analyzer",
+          "type": "owner_engine_selection_and_Step2_plan",
+          "prior_statement": "Recommend Godot C# as the rendering foundation for restrained 2D/2.5D now and a credible later 3D upgrade. The earlier SkiaSharp preference overweighted replacing the existing WinForms control; no measured effort saving established that this justified a later rendering-stack migration. Godot adds initial integration/editor/runtime work but retains the same engine and asset workflow for3D. Keep the existing C# simulation and whole-solution VS2022 requirement. This remains provisional Step1 advice; no owner engine acceptance or Step2 start.",
+          "note": "Godot selected by DEC-0024. Current detailed plan is REC-0009; its acceptance/implementation remain pending. Earlier research comparisons retain dated provenance.",
+          "record_ids": [
+            "DEC-0024",
+            "REC-0009"
+          ]
+        }
+      ]
+    }
+  ],
+  "upsert_sources": [
+    {
+      "source_id": "SRC-0202",
+      "title": ".gitignore",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\.gitignore"
+      },
+      "observed_at_utc": "2026-09-07T17:28:26.589323+00:00",
+      "coverage": "Complete current exclusions; planned tools/cache exclusions absent.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step2_planning"
+      },
+      "sha256": "2EC9CA63A1CB07B56E04C9893C0C15556A196ABA16507B94F633B4DEA39FCB8A",
+      "size_bytes": 753
+    },
+    {
+      "source_id": "SRC-0203",
+      "title": "Godot 4.7.2 release archive",
+      "locator": {
+        "type": "url",
+        "url": "https://godotengine.org/download/archive/4.7.2-stable/"
+      },
+      "observed_at_utc": "2026-09-07T17:28:26.589323+00:00",
+      "coverage": "Official release selection and .NET edition; retrieved 2026-09-07.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step2_planning"
+      }
+    },
+    {
+      "source_id": "SRC-0204",
+      "title": "Godot 4.7.2 official release assets",
+      "locator": {
+        "type": "url",
+        "url": "https://github.com/godotengine/godot-builds/releases/expanded_assets/4.7.2-stable"
+      },
+      "observed_at_utc": "2026-09-07T17:28:26.589323+00:00",
+      "coverage": "Transient dependency helper read exact editor/template names, sizes and publisher SHA256 metadata; no archive downloaded.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step2_planning"
+      }
+    },
+    {
+      "source_id": "SRC-0205",
+      "title": "Godot.NET.Sdk 4.7.2 package",
+      "locator": {
+        "type": "url",
+        "url": "https://www.nuget.org/packages/Godot.NET.Sdk/4.7.2"
+      },
+      "observed_at_utc": "2026-09-07T17:28:26.589323+00:00",
+      "coverage": "Exact SDK version, package identity and publication metadata.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step2_planning"
+      }
+    },
+    {
+      "source_id": "SRC-0206",
+      "title": "Godot 4.7.2 SDK configurations",
+      "locator": {
+        "type": "url",
+        "url": "https://github.com/godotengine/godot/blob/4.7.2-stable/modules/mono/editor/Godot.NET.Sdk/Godot.NET.Sdk/Sdk/Sdk.props"
+      },
+      "observed_at_utc": "2026-09-07T17:28:26.589323+00:00",
+      "coverage": "Versioned source via raw equivalent, complete SDK props: configurations, platform and output paths.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step2_planning"
+      }
+    },
+    {
+      "source_id": "SRC-0207",
+      "title": "Godot 4.7.2 implicit C# packages",
+      "locator": {
+        "type": "url",
+        "url": "https://github.com/godotengine/godot/blob/4.7.2-stable/modules/mono/editor/Godot.NET.Sdk/Godot.NET.Sdk/Sdk/Sdk.targets"
+      },
+      "observed_at_utc": "2026-09-07T17:28:26.589323+00:00",
+      "coverage": "Versioned source via raw equivalent, complete SDK targets: implicit bindings/generator and editor-only package.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step2_planning"
+      }
+    },
+    {
+      "source_id": "SRC-0208",
+      "title": "Godot 4.7.2 package version generation",
+      "locator": {
+        "type": "url",
+        "url": "https://github.com/godotengine/godot/blob/4.7.2-stable/modules/mono/build_scripts/build_assemblies.py"
+      },
+      "observed_at_utc": "2026-09-07T17:28:26.589323+00:00",
+      "coverage": "Dependency helper inspected generated SdkPackageVersions.props construction; package version uses stable engine major.minor.patch.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step2_planning"
+      }
+    },
+    {
+      "source_id": "SRC-0209",
+      "title": "Godot 4.7.2 project framework checks",
+      "locator": {
+        "type": "url",
+        "url": "https://github.com/godotengine/godot/blob/4.7.2-stable/modules/mono/editor/GodotTools/GodotTools.ProjectEditor/ProjectUtils.cs"
+      },
+      "observed_at_utc": "2026-09-07T17:28:26.589323+00:00",
+      "coverage": "Dependency helper inspected minimum framework comparison using NuGetFramework.Version; net9 Windows target compatibility is static inference.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step2_planning"
+      }
+    },
+    {
+      "source_id": "SRC-0210",
+      "title": "Godot 4.7.2 solution discovery",
+      "locator": {
+        "type": "url",
+        "url": "https://github.com/godotengine/godot/blob/4.7.2-stable/modules/mono/editor/GodotTools/GodotTools/Internals/GodotSharpDirs.cs"
+      },
+      "observed_at_utc": "2026-09-07T17:28:26.589323+00:00",
+      "coverage": "Complete versioned source via raw equivalent; assembly project path and parent-directory matching solution scan.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step2_planning"
+      }
+    },
+    {
+      "source_id": "SRC-0211",
+      "title": "Microsoft SDK and Visual Studio version matrix",
+      "locator": {
+        "type": "url",
+        "url": "https://learn.microsoft.com/en-us/dotnet/core/porting/versioning-sdk-msbuild-vs"
+      },
+      "observed_at_utc": "2026-09-07T17:28:26.589323+00:00",
+      "coverage": "SDK9.0.3xx primary VS17.14 and net9 minimum VS17.12; dependency helper primary-source check.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step2_planning"
+      }
+    },
+    {
+      "source_id": "SRC-0212",
+      "title": "MSBuild ProjectReference metadata",
+      "locator": {
+        "type": "url",
+        "url": "https://learn.microsoft.com/en-us/visualstudio/msbuild/common-msbuild-project-items?view=vs-2022"
+      },
+      "observed_at_utc": "2026-09-07T17:28:26.589323+00:00",
+      "coverage": "ProjectReference SetConfiguration and SetPlatform; source supports proposed explicit export-library mapping.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step2_planning"
+      }
+    },
+    {
+      "source_id": "SRC-0213",
+      "title": "Godot portable editor data",
+      "locator": {
+        "type": "url",
+        "url": "https://docs.godotengine.org/en/4.7/tutorials/io/data_paths.html"
+      },
+      "observed_at_utc": "2026-09-07T17:28:26.589323+00:00",
+      "coverage": "Self-contained editor marker and editor_data; no claim that it applies to exported projects.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step2_planning"
+      }
+    },
+    {
+      "source_id": "SRC-0214",
+      "title": "Godot GPU requirements",
+      "locator": {
+        "type": "url",
+        "url": "https://docs.godotengine.org/en/4.7/about/system_requirements.html"
+      },
+      "observed_at_utc": "2026-09-07T17:28:26.589323+00:00",
+      "coverage": "Windows editor minimums and Compatibility OpenGL3.3; local GPU/driver unknown.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step2_planning"
+      }
+    },
+    {
+      "source_id": "SRC-0215",
+      "title": "Godot renderer selection",
+      "locator": {
+        "type": "url",
+        "url": "https://docs.godotengine.org/en/4.7/tutorials/rendering/renderers.html"
+      },
+      "observed_at_utc": "2026-09-07T17:28:26.589323+00:00",
+      "coverage": "Compatibility renderer suitability guidance; no measured local performance.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step2_planning"
+      }
+    },
+    {
+      "source_id": "SRC-0216",
+      "title": "Godot MultiMeshInstance2D API",
+      "locator": {
+        "type": "url",
+        "url": "https://docs.godotengine.org/en/stable/classes/class_multimeshinstance2d.html"
+      },
+      "observed_at_utc": "2026-09-07T17:28:26.589323+00:00",
+      "coverage": "Instanced 2D rendering interface.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step2_planning"
+      }
+    },
+    {
+      "source_id": "SRC-0217",
+      "title": "Godot MultiMesh API",
+      "locator": {
+        "type": "url",
+        "url": "https://docs.godotengine.org/en/stable/classes/class_multimesh.html"
+      },
+      "observed_at_utc": "2026-09-07T17:28:26.589323+00:00",
+      "coverage": "Transform2D, colors, instance allocation, Buffer and VisibleInstanceCount.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step2_planning"
+      }
+    },
+    {
+      "source_id": "SRC-0218",
+      "title": "Godot bulk instance buffer layout",
+      "locator": {
+        "type": "url",
+        "url": "https://docs.godotengine.org/en/stable/classes/class_renderingserver.html"
+      },
+      "observed_at_utc": "2026-09-07T17:28:26.589323+00:00",
+      "coverage": "multimesh_set_buffer section: 2D transforms and optional per-instance color; main-thread bulk upload proposed.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step2_planning"
+      }
+    },
+    {
+      "source_id": "SRC-0219",
+      "title": "Godot scene threading constraints",
+      "locator": {
+        "type": "url",
+        "url": "https://docs.godotengine.org/en/stable/tutorials/performance/thread_safe_apis.html"
+      },
+      "observed_at_utc": "2026-09-07T17:28:26.589323+00:00",
+      "coverage": "Scene/resource ownership constraints supporting main-thread Godot updates.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step2_planning"
+      }
+    },
+    {
+      "source_id": "SRC-0220",
+      "title": "Godot command line",
+      "locator": {
+        "type": "url",
+        "url": "https://docs.godotengine.org/en/4.7/tutorials/editor/command_line_tutorial.html"
+      },
+      "observed_at_utc": "2026-09-07T17:28:26.589323+00:00",
+      "coverage": "Dependency helper checked editor/run/path/import/export forms; future commands not executed.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step2_planning"
+      }
+    },
+    {
+      "source_id": "SRC-0221",
+      "title": "Godot export workflow",
+      "locator": {
+        "type": "url",
+        "url": "https://docs.godotengine.org/en/4.7/tutorials/export/exporting_projects.html"
+      },
+      "observed_at_utc": "2026-09-07T17:28:26.589323+00:00",
+      "coverage": "Matching templates, platform selection, preset and output-directory requirements; packaging deferred.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step2_planning"
+      }
+    },
+    {
+      "source_id": "SRC-0222",
+      "title": "Godot 4.7.2 managed publish",
+      "locator": {
+        "type": "url",
+        "url": "https://github.com/godotengine/godot/blob/4.7.2-stable/modules/mono/editor/GodotTools/GodotTools/Build/BuildSystem.cs"
+      },
+      "observed_at_utc": "2026-09-07T17:28:26.589323+00:00",
+      "coverage": "Dependency helper checked ExportRelease/project/win-x64/self-contained publish arguments; no literal TFM override.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_Step2_planning"
+      }
+    }
+  ],
+  "core_patch": {
+    "experiment": {
+      "root": "D:\\Posao\\Fistnet.Genepool",
+      "purpose": "Make this experiment a better simulation and more fun to watch.",
+      "purpose_origin_record": "DEC-0002",
+      "status": "R03_Step2_plan_complete_awaiting_owner_review",
+      "phase": "EVOLUTION",
+      "root_semantics": "Exact physical experiment root explicitly assigned by User; KB tools bound to this root.",
+      "model": "Provisional artificial-life sandbox with inherited action repertoires and individual learning.",
+      "model_record": "INF-0001",
+      "model_accepted": false,
+      "design_accepted": true,
+      "trial_authorized": false,
+      "trial_scope": "R02 ecological evaluation closed as INCONCLUSIVE by DEC-0020. Prior 16 comparisons remain time-limited; reserved confirmation was not run. No active or newly authorized trial.",
+      "design_accepted_scope": "R02 Parts 1-4 owner-accepted and R02 closed by DEC-0020 with ecological evaluation inconclusive. No R03 design is accepted. Godot engine selected by DEC-0024; R03 detailed plan remains pending."
+    },
+    "owner_decision_ids": [
+      "DEC-0001",
+      "DEC-0002",
+      "DEC-0003",
+      "DEC-0004",
+      "DEC-0005",
+      "DEC-0006",
+      "DEC-0007",
+      "DEC-0008",
+      "DEC-0009",
+      "DEC-0010",
+      "DEC-0011",
+      "DEC-0012",
+      "DEC-0013",
+      "DEC-0014",
+      "DEC-0015",
+      "DEC-0016",
+      "DEC-0017",
+      "DEC-0018",
+      "DEC-0019",
+      "DEC-0020",
+      "DEC-0021",
+      "DEC-0022",
+      "DEC-0023",
+      "DEC-0024"
+    ],
+    "routes": {
+      "orientation": {
+        "record_ids": [
+          "FACT-0001",
+          "FACT-0002",
+          "FACT-0011",
+          "INF-0001"
+        ]
+      },
+      "mechanics": {
+        "record_ids": [
+          "FACT-0003",
+          "FACT-0004",
+          "FACT-0005",
+          "INF-0003"
+        ]
+      },
+      "watchability": {
+        "record_ids": [
+          "DEC-0002",
+          "FACT-0006",
+          "FACT-0009",
+          "REC-0001"
+        ]
+      },
+      "material_findings": {
+        "record_ids": [
+          "FACT-0007",
+          "FACT-0008",
+          "FACT-0010",
+          "INF-0002",
+          "FACT-0023"
+        ]
+      },
+      "proposal_and_tests": {
+        "record_ids": [
+          "DEC-0003",
+          "REC-0002",
+          "FACT-0012",
+          "Q-0001",
+          "Q-0002",
+          "DEC-0007",
+          "FACT-0024",
+          "FACT-0025",
+          "FACT-0028",
+          "FACT-0029",
+          "INF-0004",
+          "DEC-0009"
+        ]
+      },
+      "environment_capabilities": {
+        "record_ids": [
+          "DEC-0004",
+          "FACT-0013",
+          "FACT-0014",
+          "FACT-0015",
+          "FACT-0016",
+          "REC-0003",
+          "Q-0002",
+          "CLAIM-0001",
+          "FACT-0017",
+          "FACT-0018",
+          "REC-0004",
+          "DEC-0005",
+          "FACT-0019",
+          "CLAIM-0002",
+          "FACT-0021"
+        ]
+      },
+      "kb_tooling": {
+        "record_ids": [
+          "DEC-0006",
+          "FACT-0020",
+          "FACT-0019",
+          "DEC-0013",
+          "FACT-0036",
+          "FACT-0039",
+          "FACT-0045"
+        ]
+      },
+      "current_implementation": {
+        "record_ids": [
+          "DEC-0017",
+          "DEC-0018",
+          "FACT-0044",
+          "FACT-0045",
+          "FACT-0046",
+          "INF-0009",
+          "DEC-0019",
+          "DEC-0020"
+        ]
+      },
+      "r02_research_and_proposal": {
+        "record_ids": [
+          "DEC-0010",
+          "CLAIM-0004",
+          "FACT-0030",
+          "FACT-0031",
+          "FACT-0032",
+          "INF-0005",
+          "CLAIM-0005",
+          "REC-0005",
+          "Q-0001",
+          "DEC-0011",
+          "Q-0003",
+          "DEC-0012",
+          "DEC-0019",
+          "DEC-0020"
+        ]
+      },
+      "r02_part1_result": {
+        "record_ids": [
+          "DEC-0012",
+          "FACT-0033",
+          "FACT-0034",
+          "FACT-0035",
+          "INF-0006",
+          "Q-0003"
+        ]
+      },
+      "r02_part2_result": {
+        "record_ids": [
+          "DEC-0014",
+          "FACT-0037",
+          "FACT-0038",
+          "REC-0006",
+          "INF-0007",
+          "Q-0003",
+          "DEC-0015"
+        ]
+      },
+      "r02_part3_result": {
+        "record_ids": [
+          "DEC-0015",
+          "FACT-0040",
+          "FACT-0041",
+          "FACT-0042",
+          "INF-0008",
+          "DEC-0017"
+        ]
+      },
+      "governance": {
+        "record_ids": [
+          "DEC-0016",
+          "FACT-0043",
+          "DEC-0001",
+          "DEC-0006"
+        ]
+      },
+      "r02_part4_result": {
+        "record_ids": [
+          "DEC-0017",
+          "DEC-0018",
+          "Q-0003",
+          "FACT-0044",
+          "FACT-0045",
+          "FACT-0046",
+          "INF-0009",
+          "DEC-0019",
+          "DEC-0020"
+        ]
+      },
+      "r02_closure": {
+        "record_ids": [
+          "DEC-0020",
+          "DEC-0019",
+          "REC-0005",
+          "FACT-0046",
+          "INF-0009"
+        ]
+      },
+      "r03_outline": {
+        "record_ids": [
+          "DEC-0021",
+          "REC-0007",
+          "DEC-0004",
+          "DEC-0022",
+          "DEC-0023",
+          "REC-0008"
+        ]
+      },
+      "r03_research": {
+        "record_ids": [
+          "DEC-0022",
+          "DEC-0023",
+          "FACT-0047",
+          "CLAIM-0006",
+          "CLAIM-0007",
+          "REC-0008",
+          "DEC-0024",
+          "REC-0009"
+        ]
+      },
+      "r03_implementation_plan": {
+        "record_ids": [
+          "DEC-0024",
+          "FACT-0048",
+          "CLAIM-0008",
+          "REC-0009",
+          "REC-0008"
+        ]
+      }
+    },
+    "authority": {
+      "assignment_record": "DEC-0001",
+      "actor": "Genepool Analyzer",
+      "knowledgebase_root": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase",
+      "continuing_kb_authority": "Routine in-root KB retrieval, validation, preparation and transactions remain authorized. DEC-0006 permits adapting tools with proportionate checks. The earlier unversioned-KB premise is superseded for canonical files by FACT-0027; current edits still require normal revision/preview/verification safeguards.",
+      "originals": "Step2 static inspection; simulation sources preserved. Registered source identities checked; existing SRC-0115 historical gap persists.",
+      "next_action": "Stop for owner review of Step2 Godot plan; await explicit bounded setup/implementation instruction.",
+      "current_stage_record": "DEC-0024",
+      "environment_assessment": "Historical environment assessment used installed metadata and disposable synthetic probes; subsequent bounded source repair is recorded separately in FACT-0019.",
+      "current_research_scope": "R03 Step2 exact dependencies, official sources and local integration plan complete; no download, installation, implementation, build, run or trial.",
+      "specialization_record": "DEC-0016"
+    },
+    "proposal": {
+      "id": "R03_Step2",
+      "record_id": "REC-0009",
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_GODOT_2D_IMPLEMENTATION_PLAN.md",
+      "sha256": "513769F12ACED547CB8DFF6DFE29D5E7F1CD18A6A99E65685B3F7B9AAEC08472",
+      "status": "PLAN_COMPLETE_AWAITING_OWNER_REVIEW",
+      "engine": "Godot C#",
+      "engine_selection_record": "DEC-0024",
+      "implementation_authorized": false,
+      "research_authorization_record": "DEC-0024",
+      "selection_criterion_record": "DEC-0023",
+      "result_record_ids": [
+        "FACT-0048",
+        "CLAIM-0008"
+      ],
+      "source_commit_horizon": "bdfaa0c555edf8807f680f46b71e0ef16e387d07",
+      "evidence_manifest": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step2_evidence.json",
+      "limits": "Plan/source verification only. No Godot installation, import, build, launch, export or GPU measurement."
+    },
+    "environment": {
+      "status": "Part4 whole-solution VS2022 Debug/Release builds and137/137 tests each verified; SDK9.0.315 retained",
+      "sdk_for_vs2022": "9.0.315",
+      "report": {
+        "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\ENVIRONMENT_CAPABILITIES_R01.md",
+        "sha256": "102A4FE72EA9CC4ACA43A0DEF81E2507CA5BD3D1ADC78FFBCC2B254E81939731",
+        "bytes": 10515,
+        "status": "Environment assessment with dated owner-build clarification"
+      },
+      "vs2022_requirement_record": "DEC-0004",
+      "record_ids": [
+        "FACT-0013",
+        "FACT-0014",
+        "FACT-0015",
+        "FACT-0016",
+        "FACT-0019",
+        "FACT-0021",
+        "FACT-0024",
+        "FACT-0028",
+        "FACT-0038",
+        "FACT-0042",
+        "FACT-0046",
+        "FACT-0047",
+        "FACT-0048"
+      ],
+      "refresh": "Existing paths/cache isolation in KnowledgeBase/tools/build_solution.py; recheck material inputs before a future changed build.",
+      "r03_gpu_research": "Godot4.7.2 chosen. Existing SDK9.0.315, runtime9.0.17 and VS2022 17.14 file metadata refreshed. GPU/driver and candidate integration unverified; first implementation checkpoint."
+    },
+    "tooling": {
+      "record_id": "FACT-0039",
+      "policy": ".SeedAnalyzer/KB.md",
+      "source_revision_command": "KnowledgeBase/tools/kb.py revise-source",
+      "verification": "29distinct source-version/reviewed-commit/snapshot checks passed,1host-symlink fixture skipped; current identities in FACT-0039.",
+      "source_history": "Pinned local Git and exact KB snapshots retain identities. SRC-0115 exact mixed-newline predecessor unavailable; prepared history retained with explicit deep-validation warning (FACT-0042).",
+      "knowledgebase_is_git_versioned": true,
+      "knowledgebase_git_scope": "R03 research localHEADbdfaa0c555edf8807f680f46b71e0ef16e387d07; sourcecode clean. KB acceptance/closure and current research edits present; remote uninspected. Prior c5a/Part3-uncommitted observation is historical.",
+      "knowledgebase_owner_decision": "DEC-0008: Keep the KnowledgeBase in Git.",
+      "source_version_record_id": "FACT-0020",
+      "current_maintenance_authority": "DEC-0024",
+      "current_verification_receipt": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step2_receipt.json"
+    },
+    "current_iteration_part": {
+      "id": "R03_Step2",
+      "status": "PLAN_COMPLETE; OWNER_REVIEW_PENDING",
+      "record_ids": [
+        "DEC-0024",
+        "FACT-0048",
+        "CLAIM-0008",
+        "REC-0009"
+      ],
+      "report": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_GODOT_2D_IMPLEMENTATION_PLAN.md",
+      "verification": "Static code and primary-source review; KB deep validation in r03_step2_receipt.json. No implementation execution.",
+      "limits": "Godot engine accepted; detailed plan pending. Stop before install/implementation."
+    },
+    "next_iteration": {
+      "id": "R03",
+      "status": "R03_STEP2_PLAN_COMPLETE_REVIEW_PENDING",
+      "owner_outline_record": "DEC-0021",
+      "preliminary_opinion_record": "REC-0007",
+      "scope": "GPU visualization: research -> plan -> familiar 2D -> either 2.5D or 3D -> improved graphics",
+      "constraints": [
+        "Free for non-commercial use",
+        "Whole solution compatible with Visual Studio 2022",
+        "Useful examples and reusable2D/3D assets",
+        "Proportionate simulation visuals"
+      ],
+      "research_started": true,
+      "plan_started": true,
+      "implementation_started": false,
+      "start_authorized": true,
+      "next_action": "Review Godot Step2 plan; await bounded setup/2D implementation authorization.",
+      "start_scope": "Step2 planning only by DEC-0024; Step1 research completed.",
+      "current_recommendation_record": "REC-0009",
+      "engine_selection_record": "DEC-0024"
+    }
+  }
+}

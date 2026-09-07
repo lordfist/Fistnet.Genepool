@@ -1,0 +1,27 @@
+<Project Sdk="Godot.NET.Sdk/4.7.2">
+  <PropertyGroup>
+    <TargetFramework>net9.0-windows7.0</TargetFramework>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+    <RootNamespace>Fistnet.Genepool.GodotViewer</RootNamespace>
+    <GodotTargetPlatform>windows</GodotTargetPlatform>
+    <PlatformTarget>x64</PlatformTarget>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+    <NuGetLockFilePath>packages.$(Configuration).lock.json</NuGetLockFilePath>
+    <DisableTransitiveProjectReferences>true</DisableTransitiveProjectReferences>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Fistnet.Genepool.Control\Fistnet.Genepool.Control.csproj">
+      <SetConfiguration Condition="'$(Configuration)' == 'ExportDebug'">Configuration=Debug</SetConfiguration>
+      <SetConfiguration Condition="'$(Configuration)' == 'ExportRelease'">Configuration=Release</SetConfiguration>
+      <SetPlatform>Platform=AnyCPU</SetPlatform>
+    </ProjectReference>
+    <!-- Explicit mapping also covers the SDK's transitive build graph during export. -->
+    <ProjectReference Include="..\Fistnet.Genepool.Dna\Fistnet.Genepool.Dna.csproj">
+      <SetConfiguration Condition="'$(Configuration)' == 'ExportDebug'">Configuration=Debug</SetConfiguration>
+      <SetConfiguration Condition="'$(Configuration)' == 'ExportRelease'">Configuration=Release</SetConfiguration>
+      <SetPlatform>Platform=AnyCPU</SetPlatform>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

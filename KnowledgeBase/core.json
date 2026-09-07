@@ -3,7 +3,7 @@
     "root": "D:\\Posao\\Fistnet.Genepool",
     "purpose": "Make this experiment a better simulation and more fun to watch.",
     "purpose_origin_record": "DEC-0002",
-    "status": "R02_Part4_ready_for_owner_review",
+    "status": "R03_2D_implemented_ready_for_owner_review",
     "phase": "EVOLUTION",
     "root_semantics": "Exact physical experiment root explicitly assigned by User; KB tools bound to this root.",
     "model": "Provisional artificial-life sandbox with inherited action repertoires and individual learning.",
@@ -11,10 +11,10 @@
     "model_accepted": false,
     "design_accepted": true,
     "trial_authorized": false,
-    "trial_scope": "Part4 bounded comparisons dispatched and ended:16 clean time stops; no active trial. Reserved confirmation not run because no candidate completed2048 seasons.",
-    "design_accepted_scope": "Parts1/2/3 owner-accepted; Part4 authorized implementation is ready for owner review, with inconclusive full-horizon ecology."
+    "trial_scope": "R02 ecological evaluation closed as INCONCLUSIVE by DEC-0020. Prior 16 comparisons remain time-limited; reserved confirmation was not run. No active or newly authorized trial.",
+    "design_accepted_scope": "R02 Parts1-4 accepted and closed with ecology inconclusive. R03 Godot engine selected by DEC-0024; Step2 plan REC-0009 accepted and bounded setup/2D implementation authorized by DEC-0025."
   },
-  "kb_revision": 40,
+  "kb_revision": 47,
   "next_decision_order": [],
   "open_question_ids": [],
   "owner_decision_ids": [
@@ -35,7 +35,14 @@
     "DEC-0015",
     "DEC-0016",
     "DEC-0017",
-    "DEC-0018"
+    "DEC-0018",
+    "DEC-0019",
+    "DEC-0020",
+    "DEC-0021",
+    "DEC-0022",
+    "DEC-0023",
+    "DEC-0024",
+    "DEC-0025"
   ],
   "pinned_record_ids": [
     "DEC-0001",
@@ -116,7 +123,9 @@
         "DEC-0005",
         "FACT-0019",
         "CLAIM-0002",
-        "FACT-0021"
+        "FACT-0021",
+        "FACT-0049",
+        "FACT-0051"
       ]
     },
     "kb_tooling": {
@@ -132,12 +141,10 @@
     },
     "current_implementation": {
       "record_ids": [
-        "DEC-0017",
-        "DEC-0018",
-        "FACT-0044",
-        "FACT-0045",
-        "FACT-0046",
-        "INF-0009"
+        "DEC-0025",
+        "FACT-0049",
+        "FACT-0050",
+        "FACT-0051"
       ]
     },
     "r02_research_and_proposal": {
@@ -153,7 +160,9 @@
         "Q-0001",
         "DEC-0011",
         "Q-0003",
-        "DEC-0012"
+        "DEC-0012",
+        "DEC-0019",
+        "DEC-0020"
       ]
     },
     "r02_part1_result": {
@@ -203,16 +212,68 @@
         "FACT-0044",
         "FACT-0045",
         "FACT-0046",
+        "INF-0009",
+        "DEC-0019",
+        "DEC-0020"
+      ]
+    },
+    "r02_closure": {
+      "record_ids": [
+        "DEC-0020",
+        "DEC-0019",
+        "REC-0005",
+        "FACT-0046",
         "INF-0009"
+      ]
+    },
+    "r03_outline": {
+      "record_ids": [
+        "DEC-0021",
+        "REC-0007",
+        "DEC-0004",
+        "DEC-0022",
+        "DEC-0023",
+        "REC-0008"
+      ]
+    },
+    "r03_research": {
+      "record_ids": [
+        "DEC-0022",
+        "DEC-0023",
+        "FACT-0047",
+        "CLAIM-0006",
+        "CLAIM-0007",
+        "REC-0008",
+        "DEC-0024",
+        "REC-0009"
+      ]
+    },
+    "r03_implementation_plan": {
+      "record_ids": [
+        "DEC-0024",
+        "FACT-0048",
+        "CLAIM-0008",
+        "REC-0009",
+        "REC-0008",
+        "DEC-0025"
+      ]
+    },
+    "r03_2d_result": {
+      "record_ids": [
+        "DEC-0025",
+        "FACT-0049",
+        "FACT-0050",
+        "FACT-0051",
+        "REC-0009"
       ]
     }
   },
   "schema_version": 1,
   "state_files": {
-    "records_jsonl_sha256": "DB9FC977DCCE5E2A6ABCA8349B1140281964B293BD7702CE9A149F8ECDF2538D",
-    "sources_json_sha256": "0107E8C465C0C3DE9F409055BF53C6DC83726D67F70F95B6084AA3CD1A17DC5C"
+    "records_jsonl_sha256": "29782A5C7538724BE8E513F5280A2EEDC9AAFDD3AE1A5059FCE29F57576E3781",
+    "sources_json_sha256": "D333F5E2DC9272B7C6FACFE244EF8E1C19FA3EC69C964EBE3F8A0F4CC634F5F8"
   },
-  "updated_at": "2026-09-06T22:15:35+00:00",
+  "updated_at": "2026-09-07T19:27:14+00:00",
   "discovery": {
     "actor": "Seed Analyzer",
     "source_horizon_utc": "2026-09-06T01:04:55.1867052Z",
@@ -236,64 +297,41 @@
     "actor": "Genepool Analyzer",
     "knowledgebase_root": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase",
     "continuing_kb_authority": "Routine in-root KB retrieval, validation, preparation and transactions remain authorized. DEC-0006 permits adapting tools with proportionate checks. The earlier unversioned-KB premise is superseded for canonical files by FACT-0027; current edits still require normal revision/preview/verification safeguards.",
-    "originals": "Part4:15 current source versions,10 predecessors revised with1 exact pinned Git version and9 exact KB snapshots. No new history gap; existing SRC-0115 warning persists.",
-    "next_action": "Present Part4 review and stop. Await owner review/next focused instruction; no policy promotion or R02 closure.",
-    "current_stage_record": "DEC-0017",
+    "originals": "Approved R03 2D source edits and bounded builds/tests complete; source predecessors reconciled.",
+    "next_action": "Stop for owner review of Godot2D and VS2022 interactive startup/debugger workflow. No next-stage work.",
+    "current_stage_record": "DEC-0025",
     "environment_assessment": "Historical environment assessment used installed metadata and disposable synthetic probes; subsequent bounded source repair is recorded separately in FACT-0019.",
-    "current_research_scope": "Part4 local work complete. All16 production comparisons time-limited; reserved confirmation not dispatched.",
+    "current_research_scope": "R03 implementation-related research/downloads completed; no active ecology or further installation.",
     "specialization_record": "DEC-0016"
   },
   "last_maintenance": {
-    "at": "2026-09-06T22:15:35+00:00",
+    "at": "2026-09-07T19:27:14+00:00",
     "actor": "Genepool Analyzer",
-    "tool": "prepare.py",
-    "note": "Prepared 1 registered source(s)."
+    "note": "Record completed Godot2D implementation and bounded verification, preserve exact source lineage, and stop for owner review with explicit IDE/runtime and history limits."
   },
   "proposal": {
-    "id": "R02",
-    "record_id": "REC-0005",
-    "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\IMPROVEMENT_PROPOSAL_R02.md",
-    "sha256": "724B24D27F92C33757C3E3F0589F108B371525CEDD1FEE6FE1B8CA54A68C8B2F",
-    "status": "Parts1/2/3 accepted; Part4 implemented/engineering verified, ecology inconclusive, awaiting owner review",
-    "prepared_at_utc": "2026-09-06T13:56:32.311478+00:00",
-    "external_research_used": true,
-    "tests_implemented": true,
-    "tests_executed": true,
-    "research_authorization_record": "DEC-0010",
+    "id": "R03_Step2",
+    "record_id": "REC-0009",
+    "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_GODOT_2D_IMPLEMENTATION_PLAN.md",
+    "sha256": "513769F12ACED547CB8DFF6DFE29D5E7F1CD18A6A99E65685B3F7B9AAEC08472",
+    "status": "ACCEPTED_PLAN_IMPLEMENTED_RESULT_REVIEW_PENDING",
+    "engine": "Godot C#",
+    "engine_selection_record": "DEC-0024",
     "implementation_authorized": true,
-    "source_commit_horizon": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685",
+    "research_authorization_record": "DEC-0024",
+    "selection_criterion_record": "DEC-0023",
     "result_record_ids": [
-      "FACT-0030",
-      "FACT-0031",
-      "FACT-0032",
-      "INF-0005",
-      "CLAIM-0005",
-      "FACT-0033",
-      "FACT-0034",
-      "FACT-0035",
-      "INF-0006",
-      "FACT-0037",
-      "FACT-0038",
-      "REC-0006",
-      "INF-0007",
-      "FACT-0040",
-      "FACT-0041",
-      "FACT-0042",
-      "INF-0008",
-      "FACT-0044",
-      "FACT-0045",
-      "FACT-0046",
-      "INF-0009"
+      "FACT-0049",
+      "FACT-0050",
+      "FACT-0051"
     ],
-    "owner_clarification_record": "DEC-0018",
-    "updated_at_utc": "2026-09-06T22:07:59.355030+00:00",
-    "implementation_scope": "Part4 complete for review; no active execution",
-    "implementation_authorization_record": "DEC-0017",
-    "tests_scope": "137/137 Debug+Release; reference passivity;16 production prefixes, none at2048;4 programmatic previews",
-    "resolved_metric_record": "Q-0003"
+    "source_commit_horizon": "bdfaa0c555edf8807f680f46b71e0ef16e387d07",
+    "evidence_manifest": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step2_evidence.json",
+    "limits": "Implementation complete with stated verification limits; owner result acceptance pending.",
+    "owner_acceptance_record": "DEC-0025"
   },
   "environment": {
-    "status": "Part4 whole-solution VS2022 Debug/Release builds and137/137 tests each verified; SDK9.0.315 retained",
+    "status": "R03 whole-solution VS2022 Debug/Release builds and149/149tests each pass; Godot4.7.2 RX6800 GPU verified.",
     "sdk_for_vs2022": "9.0.315",
     "report": {
       "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\ENVIRONMENT_CAPABILITIES_R01.md",
@@ -313,9 +351,14 @@
       "FACT-0028",
       "FACT-0038",
       "FACT-0042",
-      "FACT-0046"
+      "FACT-0046",
+      "FACT-0047",
+      "FACT-0048",
+      "FACT-0049",
+      "FACT-0051"
     ],
-    "refresh": "Existing paths/cache isolation in KnowledgeBase/tools/build_solution.py; recheck material inputs before a future changed build."
+    "refresh": "Existing paths/cache isolation in KnowledgeBase/tools/build_solution.py; recheck material inputs before a future changed build.",
+    "r03_gpu_research": "Installed portable Godot4.7.2. OpenGL3.3 RX6800:~60FPS/16.7msp95 with0/1000/10000fixtures. SDK9.0.315/net9 retained; Godot host.NET10.0.9. IDE F5/debug interaction unverified."
   },
   "tooling": {
     "record_id": "FACT-0039",
@@ -324,11 +367,11 @@
     "verification": "29distinct source-version/reviewed-commit/snapshot checks passed,1host-symlink fixture skipped; current identities in FACT-0039.",
     "source_history": "Pinned local Git and exact KB snapshots retain identities. SRC-0115 exact mixed-newline predecessor unavailable; prepared history retained with explicit deep-validation warning (FACT-0042).",
     "knowledgebase_is_git_versioned": true,
-    "knowledgebase_git_scope": "Local HEADc5a494a412684d801031d1dec2c2c7670f5e3293; canonical KB revision30 was committed there. Part3/specialization/Part4 changes remain local/uncommitted; remote uninspected.",
+    "knowledgebase_git_scope": "HEADbdfaa0c555edf8807f680f46b71e0ef16e387d07; approved R03 source and KB edits remain local/uncommitted. No commit/push or remote inspection.",
     "knowledgebase_owner_decision": "DEC-0008: Keep the KnowledgeBase in Git.",
     "source_version_record_id": "FACT-0020",
-    "current_maintenance_authority": "DEC-0017",
-    "current_verification_receipt": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r02_part4_verification.json"
+    "current_maintenance_authority": "DEC-0025",
+    "current_verification_receipt": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step3_receipt.json"
   },
   "implementation": {
     "status": "R01 CLOSED successful/useful by User",
@@ -347,50 +390,46 @@
     "committed_horizon": "2bb2b99d2f77774a3d2a0614c8dc7747349c5685"
   },
   "previous_proposal": {
-    "id": "R01",
-    "status": "CLOSED: successful and useful by owner",
-    "owner_closure_record_id": "DEC-0009",
-    "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\IMPROVEMENT_PROPOSAL_R01.md",
-    "sha256": "081D59AA71063698BC7A66620BF945BF5F4EC201C3A0708EC4C92FCFC3789996",
-    "result_record_ids": [
-      "FACT-0023",
-      "FACT-0024",
-      "FACT-0025",
-      "FACT-0028",
-      "FACT-0029",
-      "INF-0004"
-    ]
+    "id": "R02",
+    "record_id": "REC-0005",
+    "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\IMPROVEMENT_PROPOSAL_R02.md",
+    "sha256": "724B24D27F92C33757C3E3F0589F108B371525CEDD1FEE6FE1B8CA54A68C8B2F",
+    "status": "R02 CLOSED by User; Parts 1-4 accepted; ecological evaluation INCONCLUSIVE and further evaluation deprioritized",
+    "owner_closure_record": "DEC-0020",
+    "ecological_evaluation_status": "INCONCLUSIVE; closed by owner priority decision"
   },
   "current_iteration_part": {
+    "id": "R03_Step3",
+    "status": "IMPLEMENTED_VERIFIED_WITH_LIMITS; OWNER_REVIEW_PENDING",
+    "record_ids": [
+      "DEC-0025",
+      "FACT-0049",
+      "FACT-0050",
+      "FACT-0051"
+    ],
+    "report": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\IMPROVEMENT_RESULT_R03_2D.md",
+    "verification": "VS2022 whole builds;149/149tests each;GPU/headless/pixels/live controls/renderer budget pass. See evidence and receipt.",
+    "limits": "Actual IDE debugging and monitor transitions unverified. Stop before depth/3D/artwork/export. Owner acceptance pending."
+  },
+  "previous_iteration_part": {
     "id": "R02_Part4",
-    "status": "IMPLEMENTED; engineering PASS;2048-season ecology INCONCLUSIVE; owner review pending",
+    "status": "OWNER_ACCEPTED; parent R02 CLOSED; engineering PASS; 2048-season ecology INCONCLUSIVE",
     "record_ids": [
       "DEC-0017",
       "DEC-0018",
       "FACT-0044",
       "FACT-0045",
       "FACT-0046",
-      "INF-0009"
+      "INF-0009",
+      "DEC-0019",
+      "DEC-0020"
     ],
     "contract": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R02_PART4_CONTRACT.md",
-    "limits": "No full-horizon ecological pass, reserved confirmation, default promotion or R02 closure.",
+    "limits": "Ecological outcomes remain inconclusive; no reserved confirmation or default promotion. Parent R02 explicitly closed by DEC-0020.",
     "report": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\IMPROVEMENT_RESULT_R02_PART4.md",
-    "verification": "137/137 each configuration; VS2022 builds; observer passivity;16 time-limited comparisons without observed violations; no qualifying candidate; existing historical warning only."
-  },
-  "previous_iteration_part": {
-    "id": "R02_Part3",
-    "status": "Owner accepted by DEC-0017; recorded Part3 automated evidence and historical limitation preserved",
-    "record_ids": [
-      "DEC-0015",
-      "FACT-0040",
-      "FACT-0041",
-      "FACT-0042",
-      "INF-0008",
-      "DEC-0017"
-    ],
-    "report": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\IMPROVEMENT_RESULT_R02_PART3.md",
-    "verification": "115/115 Debug+Release and prior VS2022/performance/UI evidence preserved. Owner acceptance explicit in DEC-0017; historical-byte warning SRC-0115 remains.",
-    "limits": "Part3 accepted; no ecological balance or R02 closure inferred."
+    "verification": "137/137 each configuration; VS2022 builds; observer passivity;16 time-limited comparisons without observed violations; no qualifying candidate; existing historical warning only.",
+    "owner_acceptance_record": "DEC-0019",
+    "iteration_closure_record": "DEC-0020"
   },
   "governance": {
     "actor": "Genepool Analyzer",
@@ -407,5 +446,27 @@
       "SRC-0156"
     ],
     "scope": "Permanent project specialization; current iteration and acceptance state remain in their existing core fields."
+  },
+  "next_iteration": {
+    "id": "R03",
+    "status": "R03_2D_READY_FOR_OWNER_REVIEW",
+    "owner_outline_record": "DEC-0021",
+    "preliminary_opinion_record": "REC-0007",
+    "scope": "GPU visualization: research -> plan -> familiar 2D -> either 2.5D or 3D -> improved graphics",
+    "constraints": [
+      "Free for non-commercial use",
+      "Whole solution compatible with Visual Studio 2022",
+      "Useful examples and reusable2D/3D assets",
+      "Proportionate simulation visuals"
+    ],
+    "research_started": true,
+    "plan_started": true,
+    "implementation_started": true,
+    "start_authorized": true,
+    "next_action": "Owner reviews2D result and VS2022 workflow; await next applicable instruction.",
+    "start_scope": "Authorized Step3 complete; later stages await instruction.",
+    "current_recommendation_record": "REC-0009",
+    "engine_selection_record": "DEC-0024",
+    "implementation_authorization_record": "DEC-0025"
   }
 }
