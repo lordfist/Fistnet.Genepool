@@ -1,0 +1,95 @@
+{
+  "validation": {
+    "ok": true,
+    "errors": [],
+    "warnings": [
+      "source SRC-0115 historical bytes unavailable: The registered mixed-newline Part2 Board.cs bytes are not reproduced by local commit c5a494a412684d801031d1dec2c2c7670f5e3293 using raw or LF-to-CRLF transforms. Bounded reconstruction from retained predecessor/successor evidence did not match the registered SHA256. Git code version and historical prepared text remain available, but exact original-byte history is unverified. See FACT-0042."
+    ],
+    "counts": {
+      "records": 116,
+      "sources": 260,
+      "historical_sources": 88,
+      "prepared_sources": 21
+    },
+    "core_estimated_tokens": 4778,
+    "deep": true,
+    "kb_revision": 54
+  },
+  "actual_lookups": [
+    {
+      "topic": "r03_step4_design",
+      "first_ids": [
+        "DEC-0031",
+        "REC-0010",
+        "DEC-0030",
+        "DEC-0029"
+      ],
+      "estimated_tokens": 1752,
+      "next_offset": 4,
+      "first_statement": "Owner accepts the current R03 Step4 visual design and updated mockups as good for now, explicitly allowing later improvement, and asks what comes next."
+    },
+    {
+      "topic": "r03_2d_result",
+      "first_ids": [
+        "DEC-0026",
+        "FACT-0051",
+        "FACT-0050"
+      ],
+      "estimated_tokens": 1691,
+      "next_offset": 3,
+      "first_statement": "Owner reports having tried the Godot 2D viewer and that it works great. This completes positive owner review of the practical 2D viewer (R03 Step3). Owner asks what is next in the plan; no next-stage implementation is started by this status question."
+    },
+    {
+      "topic": "current_implementation",
+      "first_ids": [
+        "DEC-0026",
+        "FACT-0051",
+        "FACT-0050"
+      ],
+      "estimated_tokens": 1694,
+      "next_offset": 3,
+      "first_statement": "Owner reports having tried the Godot 2D viewer and that it works great. This completes positive owner review of the practical 2D viewer (R03 Step3). Owner asks what is next in the plan; no next-stage implementation is started by this status question."
+    },
+    {
+      "topic": "r02_closure",
+      "first_ids": [
+        "DEC-0020",
+        "FACT-0046",
+        "INF-0009"
+      ],
+      "estimated_tokens": 1697,
+      "next_offset": 3,
+      "first_statement": "User explicitly closes R02 with ecological evaluation INCONCLUSIVE, regards the attempt as worthwhile but further ecological evaluation as insufficiently relevant to spend more time on, and moves the intended agenda to R03. Preserve accepted engineering work, measurements and ecological limitations; do not continue ecological trials to obtain a passing resul…"
+    },
+    {
+      "topic": "kb_tooling",
+      "first_ids": [
+        "FACT-0054",
+        "DEC-0006",
+        "FACT-0039"
+      ],
+      "estimated_tokens": 1492,
+      "next_offset": 3,
+      "first_statement": "KB retrieval upgrade R01 adds a records-only 2000-token brief, local current-stage orientation, field-weighted current matching with opt-in all-field history, exact-ID priority and authored exact-route ordering. Current R03 acceptance and R02 closure routes are updated locally.49 distinct checks pass;1host-symlink check skipped. Existing validation, source-h…"
+    },
+    {
+      "old_lookup": "DEC-0028",
+      "current_pointer": "DEC-0031",
+      "verified": true
+    },
+    {
+      "old_lookup": "FACT-0039",
+      "current_pointer": "FACT-0054",
+      "verified": true
+    },
+    {
+      "tool_name_lookup": "history-file",
+      "source_history_record_found": true
+    }
+  ],
+  "artifact_hashes_verified": 4,
+  "receipt_hashes_verified": 3,
+  "disposable_fixtures_remaining": [],
+  "recent_cache_absent": true,
+  "implementation_unstarted": true
+}

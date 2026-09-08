@@ -68,6 +68,7 @@ Keep the runtime modules together. Baseline operations and non-PDF parsers use t
 ```text
 python -X utf8 -B KnowledgeBase/tools/kb.py validate --compact
 python -X utf8 -B KnowledgeBase/tools/kb.py core --budget 6000 --compact
+python -X utf8 -B KnowledgeBase/tools/kb.py context --topic r03_step4_design --brief --compact
 python -X utf8 -B KnowledgeBase/tools/kb.py context --topic TOPIC --records-only --no-core --summary --budget 2500 --compact
 ```
 
@@ -119,6 +120,8 @@ Run `python -X utf8 -B KnowledgeBase/tools/test_source_versions.py` using the ex
 | `--metadata-only` | Single-source metadata without original/prepared content reads/hashes; canonical loading and ordinary metadata validation still occur. |
 | `--fields`; `--summary`; `--ids-only` | Up to 32 named/dotted fields with identity retained; labeled summary/ID projections. Summary may shorten statements and omit optional fields. |
 | `context --records-only` or `--evidence-limit 0` | Skip prepared scans. `search --records-only` excludes catalog and prepared hits. |
+| `context --topic TOPIC --brief` | Ordinary validation once, a projected Genepool orientation and records-only brief retrieval; default **total** budget 2,000 estimated tokens. Reads no original or prepared content, writes no cache/canonical state. Explicit `--budget` overrides the default; non-brief context retains 6,000. |
+| `context/search --history` | Also match archived and other fields omitted from ordinary semantic ranking. This is not a historical-record-only filter; all record statuses, including resolved rules, remain eligible. |
 | `--no-core` | Omit core from `core`/`context` after loading it. Core/context `--fields` projects accompanying records only; default core is full (`core_is_projection:false`), `--summary` selects a compact subset. |
 | `questions`; `decisions` | Kinds `open_question`; `owner_decision`, limited to statuses `open`, `active`, `provisional` unless `--all`. |
 
@@ -129,7 +132,15 @@ python -X utf8 -B KnowledgeBase/tools/kb.py questions --ids-only --limit 10 --bu
 
 Evidence retrieval checks prepared-file hashes and first-row metadata type/source ID/source hash, excluding stale or inconsistent representations without claiming completeness. It does not rehash originals. Use evidence modes only within corresponding content-read scope.
 
-Search ranks complete records of every status, including historical/corrected ones. Its `projection_scope:search_hit` supports `id`, `kind`, `record_kind`, `status`, `title`, `snippet`, `score`, `type`, `locator`, `matched_fields`, `resolution_notes_snippet`. Other requested fields return `unsupported_search_fields`. Hits expose recorded title, matching top-level fields and bounded correction-note snippets as navigation. Retrieve the full record with `get` for provenance and correction scope/status.
+Ordinary record ranking weights IDs, titles, statements, topics/tags, current resolutions, correction notes, uncertainty and usable derivation fields. Repeated words are bounded per field; old `prior_*` values, history/audit fields and byte identities do not gain ordinary relevance. `--history` restores all-field matching. No status, timestamp, numeric ID or relevance score establishes authority, truth or supersession. Source/prepared matching keeps its existing evidence and historical-source labels.
+
+An exact record ID leads. An exact context route (or exact topic hint) preserves the route author's record order, with multiple routes considered in requested topic order. Keyword queries retain weighted relevance. Maintain only affected routes with current decisions/results/rules first, retaining earlier members. Do not sort routes by date as a substitute for understanding acceptance or closure.
+
+Brief records expose full-detail IDs, evidence/correction pointers and explicit clipping/omission markers. `detail_available` means `get ID` can supply the full record; `detail_required` means this projection omitted material, so retrieve it when a dependent claim needs that evidence. It is not a command to expand every result. Relation pointers do not themselves assert supersession. Briefs and search hits are projections and must never become whole-record upserts. Search supports the existing hit fields plus `current_resolution`, `related_record_ids`, `detail_id` and `detail_available`; other requested fields return `unsupported_search_fields`.
+
+The bounded brief supplements the existing **complete core and instruction-loading contract** in AGENTS.md/CONSTITUTION.md; it does not replace required task-entry loading. After that required context is present, one brief ordinarily suffices for a topic lookup: avoid redundant validation/core/search/deep-validation calls unless the task needs them. Acknowledgements need no compulsory retrieval. Deep verification remains required for reviewed maintenance and source-integrity claims. No recent-task cache or recency-write feature is installed by this adaptation.
+
+For a material correction, acceptance or priority change, update its current short answer and affected route. Preserve dated earlier claims and evidence, add a current-resolution pointer when an older lookup could otherwise mislead, and verify that lookup reaches the correction. Do not rewrite the corpus or copy each change into every related record.
 
 ## Budgets and continuation
 

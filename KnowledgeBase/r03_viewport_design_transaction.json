@@ -1,0 +1,559 @@
+{
+  "actor": "Genepool Analyzer",
+  "note": "Record approved ground appearance and owner viewport/action rules; reconcile design revision2 without coding.",
+  "upsert_records": [
+    {
+      "id": "DEC-0030",
+      "kind": "owner_decision",
+      "status": "active",
+      "statement": "Owner approves grass and dirt appearance. At zoom levels2–4 render only the visible board area, showing a boundary only where the real board ends and making mouse panning/continuation apparent. Level3 action visualization covers all visible board cells with muted cues. Level4 shows full action detail only for the focused organism.",
+      "uncertainty": "These refine the Step4 design; no code/implementation instruction is given. Focus is interpreted as the existing explicitly selected organism, not hover. Empty or inactive cells need no invented action. Exact muted styling and data representation remain implementation choices. Deferred food growth mechanics are unchanged.",
+      "source_refs": [],
+      "related_record_ids": [
+        "DEC-0028",
+        "DEC-0029",
+        "REC-0010",
+        "FACT-0053"
+      ],
+      "origin": {
+        "actor": "User",
+        "recorded_by": "Genepool Analyzer",
+        "type": "direct_user_message",
+        "recorded_at_utc": "2026-09-07T23:37:26.452235+00:00",
+        "quotes": [
+          "Grass and dirt look great! I approve them.",
+          "when zoom levels 2 to 4 are active, you don't need to draw the entire board just the visible area but you should also not draw the \"border\" where there isn't one, user should see when it zooms in that view area is not necessarily the end so it can know that the board view area can \"move\" with mouse",
+          "the \"actions\" visualisation in view level 3 should be for every board block visible in the view port but kinda \"muted\" so it doesn't overwhelm the viewable area",
+          "the \"actions\" visualisation in view level 4 are ok to be fully visible but only for focused organism"
+        ]
+      },
+      "derivation": {
+        "artifacts": [
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_STEP4_DESIGN_PROPOSAL.md",
+            "sha256": "74E0287BA80DFB87652BB909473C981C85747310393F562FA90492FD21CB97F6",
+            "bytes": 15221
+          }
+        ],
+        "locators": [
+          "Proposal revision2: Board appearance and layout; Four levels; DNA actions; verification boundary"
+        ]
+      }
+    },
+    {
+      "id": "REC-0010",
+      "kind": "recommendation",
+      "status": "provisional",
+      "statement": "R03 Step4 revised design: owner-preferred mould-like colonies and approved grass/dirt; zoom2–4 render the visible area with true world borders only and discoverable panning. Level3 shows muted actual-action cues throughout all visible cells; level4 emphasizes only the focused organism and its affected targets. A bounded viewport-wide observation extension is now required by the design, replacing the optional Nearby idea. Current proposal revision2 incorporates DEC-0029/0030; implementation remains unstarted.",
+      "uncertainty": "Specified appearance and viewport/action rules are owner decisions, not blanket acceptance of all technical choices or coding authorization. Exact zoom thresholds and rendering/event representation remain provisional. Existing selected-only data is insufficient for level3. Spatial coverage must not be silently reduced to selected/nearest-N cells; sampled seasons or combined events must be labeled honestly. VS2022 compatibility and deferred food mechanics remain unchanged.",
+      "source_refs": [
+        "SRC-0228",
+        "SRC-0226",
+        "SRC-0149",
+        "SRC-0162",
+        "SRC-0217",
+        "SRC-0258",
+        "SRC-0259"
+      ],
+      "related_record_ids": [
+        "DEC-0028",
+        "FACT-0052",
+        "FACT-0053",
+        "REC-0009",
+        "DEC-0027",
+        "DEC-0029",
+        "DEC-0030"
+      ],
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "bounded_design_and_static_review",
+        "recorded_at_utc": "2026-09-07T23:06:09.087658+00:00"
+      },
+      "derivation": {
+        "artifacts": [
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_STEP4_DESIGN_PROPOSAL.md",
+            "sha256": "74E0287BA80DFB87652BB909473C981C85747310393F562FA90492FD21CB97F6",
+            "bytes": 15221
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_STEP4_DESIGN_PROMPTS.md",
+            "sha256": "B94E2166BD1E21546E87D559C8B612BA96360764B87F679FF096C31D6C6DBB6D",
+            "bytes": 12559
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_STEP4_DESIGN\\concept-a-board.png",
+            "sha256": "2A701BA928305F62ABBB59160EFB95AEA0D29419C599D755C60015423B65AC77",
+            "bytes": 2446474
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_STEP4_DESIGN\\concept-b-zoom.png",
+            "sha256": "E0BEDE9CB1D862E72A1B087BCAE4667C84731A1EA29940A1EEEC00C0D41C1071",
+            "bytes": 2299232
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_STEP4_DESIGN\\concept-c-actions.png",
+            "sha256": "DAFE01632E8D4F3FF24140BCFA57C80B17E86C18C3F84EA729CE638460ED6F67",
+            "bytes": 2086519
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_STEP4_MOULD_DIRECTION.md",
+            "sha256": "A853D995803C472AF6BB4575C97EA7AFB72AAB8B161BC1F16B0F2F4365EF4ADF",
+            "bytes": 1652
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_STEP4_DESIGN\\concept-d-mould.png",
+            "sha256": "041CF2F99E4A079AA032B5166EE6E3CA15CF79F6D24BFEBC0D5A0E9B5C6ADE7D",
+            "bytes": 2735023
+          }
+        ],
+        "image_method": "Built-in image-generation; inspected A/B/C, targeted outcome/adjacency corrections applied to final B/C. Concepts only.",
+        "external_documentation_observed_at": "2026-09-07T23:06:09.087658+00:00",
+        "review": "Transient independent static design review found no material corrections; root retains ownership.",
+        "next_action": "Await further owner design feedback or implementation instruction; do not reopen approved ground appearance or stated zoom/action scope.",
+        "current_appearance_addendum": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_STEP4_MOULD_DIRECTION.md",
+        "revision2_review": "Transient read-only reviewer confirmed true-edge/partial-cell rendering, all-visible-cell coverage, bounded honest event summaries and explicit selected-organism focus."
+      },
+      "created_at": "2026-09-07T23:07:23+00:00",
+      "updated_at": "2026-09-07T23:23:41+00:00",
+      "resolution_notes": [
+        {
+          "actor": "Genepool Analyzer",
+          "at_utc": "2026-09-07T23:23:25.029585+00:00",
+          "prior_statement": "R03 Step4 proposal: a flat modest 3D board with top-down/angled orthographic presets and retained2D option; quiet brown→olive→green food; larger outlined rounded organisms; four progressive detail levels (World, Habitat, Organism, Inspect); selected completed-action cues first and a separately bounded Nearby event-feed extension if approved. Three generated visual concepts and a full design proposal are ready for owner review.",
+          "prior_uncertainty": "Proposed design only; no source, dependency, settings, simulation or trial changes. Mockups are illustrative, not actual data, production models, proof of performance or accepted art. Palette mappings do not uniquely identify every pattern or create species. Exact visual thresholds, event caps and 3D costs require implementation checks. Step5 polish and food cycle remain deferred. Whole-solution VS2022 compatibility remains mandatory.",
+          "note": "DEC-0029 selects the mould-like visual direction for organism appearance. Addendum and Concept D supersede rounded-body artwork only; earlier proposal/images remain comparison drafts. Overall proposal and implementation remain pending.",
+          "record_ids": [
+            "DEC-0029"
+          ]
+        },
+        {
+          "actor": "Genepool Analyzer",
+          "at_utc": "2026-09-07T23:37:26.452235+00:00",
+          "prior_statement": "R03 Step4 proposal retains the modest 3D board, brown-to-green food, four progressive detail bands and selected-action cues. Owner now prefers flat mould-like organism patches with irregular branching edges (DEC-0029), replacing the rounded body direction. Current appearance addendum is R03_STEP4_MOULD_DIRECTION.md; other design choices remain provisional.",
+          "prior_uncertainty": "Mould-like appearance is owner-preferred; overall Step4 design and implementation remain pending. Generated visuals do not establish biological rules or 3D performance. No source/runtime changes; VS2022 compatibility and deferred food scope remain. Earlier proposal artifacts retain their dated appearance baseline.",
+          "prior_proposal_identity": {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_STEP4_DESIGN_PROPOSAL.md",
+            "sha256": "173825FCD1C377E6C05A709DF992955558DE64C4C27B565EA45B7EA33C031454",
+            "bytes": 11537
+          },
+          "note": "DEC-0030 approves grass/dirt and defines viewport-only rendering with true borders, all-visible-cell muted actions at level3 and focused full actions at level4. Proposal revision2 incorporates these and prior mould preference. This supersedes Selected-default/optional-Nearby, rounded-body and mini-board-border draft instructions. No implementation started. Earlier document hash is historical; generated comparison images remain unchanged.",
+          "record_ids": [
+            "DEC-0030",
+            "DEC-0029"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DEC-0028",
+      "kind": "owner_decision",
+      "status": "active",
+      "statement": "Owner requests recording the latest crash/completion review and starting R03 Step4 with a design proposal and a few visual examples. Priorities: clearer/larger organisms, brown-to-green food, on-board DNA action details, and 3–5 zoom levels progressively revealing detail. Explicitly no code; stop for visual review and suggestions.",
+      "uncertainty": "The owner has not accepted a particular 3D style, four-level scheme, action-feed extension or implementation. Food growth cycle remains deferred in DEC-0027.",
+      "source_refs": [],
+      "related_record_ids": [
+        "DEC-0021",
+        "DEC-0026",
+        "DEC-0027",
+        "REC-0010",
+        "DEC-0029",
+        "DEC-0030"
+      ],
+      "origin": {
+        "actor": "User",
+        "recorded_by": "Genepool Analyzer",
+        "type": "direct_user_message",
+        "recorded_at_utc": "2026-09-07T23:06:09.087658+00:00",
+        "quotes": [
+          "Update the KB with latest things you mentioned and start step 4 please. Lets see the proposal for design updates.",
+          "currently design of the board is a bit messy, it is hard to see organisms (they are very small dots)",
+          "that black to green gradient for food is weird, i think brown to green is much more realistic",
+          "we should think about also adding details for DNA actions when they happen on the board",
+          "we should think about having like 3-5 zoom levels that gradually expose more detail, it is fine if organisms are small dots when fully zoomed out but when you zoom in you should gradually see more details on the board",
+          "Don't code anything yet, just give me a few visual examples how this would look like for me to review and give suggestions."
+        ]
+      },
+      "created_at": "2026-09-07T23:07:23+00:00",
+      "updated_at": "2026-09-07T23:07:23+00:00",
+      "resolution_notes": [
+        {
+          "actor": "Genepool Analyzer",
+          "at_utc": "2026-09-07T23:37:26.452235+00:00",
+          "note": "Subsequent DEC-0029 chooses mould-like appearance; DEC-0030 approves grass/dirt and specifies viewport and level3/4 action rules. Original design-only/no-code instruction remains applicable. Current consolidated proposal REC-0010 revision2.",
+          "record_ids": [
+            "DEC-0029",
+            "DEC-0030",
+            "REC-0010"
+          ]
+        }
+      ]
+    }
+  ],
+  "upsert_sources": [],
+  "core_patch": {
+    "owner_decision_ids": [
+      "DEC-0001",
+      "DEC-0002",
+      "DEC-0003",
+      "DEC-0004",
+      "DEC-0005",
+      "DEC-0006",
+      "DEC-0007",
+      "DEC-0008",
+      "DEC-0009",
+      "DEC-0010",
+      "DEC-0011",
+      "DEC-0012",
+      "DEC-0013",
+      "DEC-0014",
+      "DEC-0015",
+      "DEC-0016",
+      "DEC-0017",
+      "DEC-0018",
+      "DEC-0019",
+      "DEC-0020",
+      "DEC-0021",
+      "DEC-0022",
+      "DEC-0023",
+      "DEC-0024",
+      "DEC-0025",
+      "DEC-0026",
+      "DEC-0027",
+      "DEC-0028",
+      "DEC-0029",
+      "DEC-0030"
+    ],
+    "routes": {
+      "orientation": {
+        "record_ids": [
+          "FACT-0001",
+          "FACT-0002",
+          "FACT-0011",
+          "INF-0001"
+        ]
+      },
+      "mechanics": {
+        "record_ids": [
+          "FACT-0003",
+          "FACT-0004",
+          "FACT-0005",
+          "INF-0003"
+        ]
+      },
+      "watchability": {
+        "record_ids": [
+          "DEC-0002",
+          "FACT-0006",
+          "FACT-0009",
+          "REC-0001"
+        ]
+      },
+      "material_findings": {
+        "record_ids": [
+          "FACT-0007",
+          "FACT-0008",
+          "FACT-0010",
+          "INF-0002",
+          "FACT-0023"
+        ]
+      },
+      "proposal_and_tests": {
+        "record_ids": [
+          "DEC-0003",
+          "REC-0002",
+          "FACT-0012",
+          "Q-0001",
+          "Q-0002",
+          "DEC-0007",
+          "FACT-0024",
+          "FACT-0025",
+          "FACT-0028",
+          "FACT-0029",
+          "INF-0004",
+          "DEC-0009"
+        ]
+      },
+      "environment_capabilities": {
+        "record_ids": [
+          "DEC-0004",
+          "FACT-0013",
+          "FACT-0014",
+          "FACT-0015",
+          "FACT-0016",
+          "REC-0003",
+          "Q-0002",
+          "CLAIM-0001",
+          "FACT-0017",
+          "FACT-0018",
+          "REC-0004",
+          "DEC-0005",
+          "FACT-0019",
+          "CLAIM-0002",
+          "FACT-0021",
+          "FACT-0049",
+          "FACT-0051"
+        ]
+      },
+      "kb_tooling": {
+        "record_ids": [
+          "DEC-0006",
+          "FACT-0020",
+          "FACT-0019",
+          "DEC-0013",
+          "FACT-0036",
+          "FACT-0039",
+          "FACT-0045"
+        ]
+      },
+      "current_implementation": {
+        "record_ids": [
+          "DEC-0025",
+          "FACT-0049",
+          "FACT-0050",
+          "FACT-0051"
+        ]
+      },
+      "r02_research_and_proposal": {
+        "record_ids": [
+          "DEC-0010",
+          "CLAIM-0004",
+          "FACT-0030",
+          "FACT-0031",
+          "FACT-0032",
+          "INF-0005",
+          "CLAIM-0005",
+          "REC-0005",
+          "Q-0001",
+          "DEC-0011",
+          "Q-0003",
+          "DEC-0012",
+          "DEC-0019",
+          "DEC-0020"
+        ]
+      },
+      "r02_part1_result": {
+        "record_ids": [
+          "DEC-0012",
+          "FACT-0033",
+          "FACT-0034",
+          "FACT-0035",
+          "INF-0006",
+          "Q-0003"
+        ]
+      },
+      "r02_part2_result": {
+        "record_ids": [
+          "DEC-0014",
+          "FACT-0037",
+          "FACT-0038",
+          "REC-0006",
+          "INF-0007",
+          "Q-0003",
+          "DEC-0015"
+        ]
+      },
+      "r02_part3_result": {
+        "record_ids": [
+          "DEC-0015",
+          "FACT-0040",
+          "FACT-0041",
+          "FACT-0042",
+          "INF-0008",
+          "DEC-0017"
+        ]
+      },
+      "governance": {
+        "record_ids": [
+          "DEC-0016",
+          "FACT-0043",
+          "DEC-0001",
+          "DEC-0006"
+        ]
+      },
+      "r02_part4_result": {
+        "record_ids": [
+          "DEC-0017",
+          "DEC-0018",
+          "Q-0003",
+          "FACT-0044",
+          "FACT-0045",
+          "FACT-0046",
+          "INF-0009",
+          "DEC-0019",
+          "DEC-0020"
+        ]
+      },
+      "r02_closure": {
+        "record_ids": [
+          "DEC-0020",
+          "DEC-0019",
+          "REC-0005",
+          "FACT-0046",
+          "INF-0009"
+        ]
+      },
+      "r03_outline": {
+        "record_ids": [
+          "DEC-0021",
+          "REC-0007",
+          "DEC-0004",
+          "DEC-0022",
+          "DEC-0023",
+          "REC-0008",
+          "DEC-0026",
+          "DEC-0028",
+          "REC-0010"
+        ]
+      },
+      "r03_research": {
+        "record_ids": [
+          "DEC-0022",
+          "DEC-0023",
+          "FACT-0047",
+          "CLAIM-0006",
+          "CLAIM-0007",
+          "REC-0008",
+          "DEC-0024",
+          "REC-0009"
+        ]
+      },
+      "r03_implementation_plan": {
+        "record_ids": [
+          "DEC-0024",
+          "FACT-0048",
+          "CLAIM-0008",
+          "REC-0009",
+          "REC-0008",
+          "DEC-0025"
+        ]
+      },
+      "r03_2d_result": {
+        "record_ids": [
+          "DEC-0025",
+          "FACT-0049",
+          "FACT-0050",
+          "FACT-0051",
+          "REC-0009",
+          "DEC-0026"
+        ]
+      },
+      "deferred_improvements": {
+        "record_ids": [
+          "DEC-0027"
+        ]
+      },
+      "r03_step4_design": {
+        "record_ids": [
+          "DEC-0028",
+          "FACT-0053",
+          "REC-0010",
+          "DEC-0029",
+          "DEC-0030"
+        ]
+      },
+      "recovery_review": {
+        "record_ids": [
+          "FACT-0052"
+        ]
+      }
+    },
+    "proposal": {
+      "id": "R03_Step4",
+      "record_id": "REC-0010",
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_STEP4_DESIGN_PROPOSAL.md",
+      "sha256": "74E0287BA80DFB87652BB909473C981C85747310393F562FA90492FD21CB97F6",
+      "status": "DESIGN_PROPOSED_OWNER_REVIEW_PENDING",
+      "engine": "Godot C#",
+      "engine_selection_record": "DEC-0024",
+      "design_authority_record": "DEC-0028",
+      "implementation_authorized": false,
+      "limits": "Visual concepts only; no new 3D implementation/performance claim. Step3 acceptance DEC-0026 remains valid.",
+      "previous_accepted_plan_record": "REC-0009",
+      "organism_appearance": "Owner-preferred mould-like flat patches with irregular branching edges",
+      "appearance_decision_record": "DEC-0029",
+      "appearance_addendum": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_STEP4_MOULD_DIRECTION.md",
+      "design_revision": 2,
+      "ground_appearance": "Grass/dirt appearance approved by DEC-0030",
+      "viewport_rule": "Levels2–4 draw visible area only; board rim only at actual world boundary; visible panning affordance",
+      "action_scope_by_level": {
+        "3": "Muted actual-action cues for all visible board cells",
+        "4": "Full cues only for focused organism and its affected targets"
+      },
+      "viewport_and_ground_decision_record": "DEC-0030"
+    },
+    "current_iteration_part": {
+      "id": "R03_Step4",
+      "status": "DESIGN_FEEDBACK_INCORPORATED_IMPLEMENTATION_UNSTARTED",
+      "record_ids": [
+        "DEC-0028",
+        "FACT-0052",
+        "FACT-0053",
+        "REC-0010",
+        "DEC-0029",
+        "DEC-0030"
+      ],
+      "report": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_STEP4_DESIGN_PROPOSAL.md",
+      "verification": "Static code/documentation review, mockup visual inspection and KB verification only; no builds/tests/trials.",
+      "limits": "Owner appearance and viewport/action rules recorded; exact technical choices remain provisional. Await implementation instruction. No source edits.",
+      "appearance_decision_record": "DEC-0029"
+    },
+    "next_iteration": {
+      "id": "R03",
+      "status": "R03_STEP4_DESIGN_REVIEW_PENDING",
+      "owner_outline_record": "DEC-0021",
+      "preliminary_opinion_record": "REC-0007",
+      "scope": "GPU visualization: research -> plan -> familiar 2D -> either 2.5D or 3D -> improved graphics",
+      "constraints": [
+        "Free for non-commercial use",
+        "Whole solution compatible with Visual Studio 2022",
+        "Useful examples and reusable2D/3D assets",
+        "Proportionate simulation visuals"
+      ],
+      "research_started": true,
+      "plan_started": true,
+      "implementation_started": true,
+      "start_authorized": true,
+      "next_action": "Owner reviews consolidated design revision2 or instructs implementation. Grass/dirt and viewport/action rules are resolved; do not start coding automatically.",
+      "start_scope": "Step4 design-only per DEC-0028; implementation unstarted. Step5 polish remains later.",
+      "current_recommendation_record": "REC-0010",
+      "engine_selection_record": "DEC-0024",
+      "implementation_authorization_record": "DEC-0025",
+      "current_implementation_acceptance_record": "DEC-0026",
+      "step4_design_authorization_record": "DEC-0028",
+      "step4_implementation_authorized": false
+    },
+    "tooling": {
+      "record_id": "FACT-0039",
+      "policy": ".SeedAnalyzer/KB.md",
+      "source_revision_command": "KnowledgeBase/tools/kb.py revise-source",
+      "verification": "29distinct source-version/reviewed-commit/snapshot checks passed,1host-symlink fixture skipped; current identities in FACT-0039.",
+      "source_history": "Pinned local Git and exact KB snapshots retain identities. SRC-0115 exact mixed-newline predecessor unavailable; prepared history retained with explicit deep-validation warning (FACT-0042).",
+      "knowledgebase_is_git_versioned": true,
+      "knowledgebase_git_scope": "Local HEAD d5da91152c6d5f915abdd961a0a4f4cb285bdc68 contains Godot2D implementation; current outstanding edits are KB acceptance/design support. Dated review in FACT-0052; no commit/push this turn.",
+      "knowledgebase_owner_decision": "DEC-0008: Keep the KnowledgeBase in Git.",
+      "source_version_record_id": "FACT-0020",
+      "current_maintenance_authority": "DEC-0030",
+      "current_verification_receipt": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_viewport_design_receipt.json"
+    },
+    "experiment": {
+      "root": "D:\\Posao\\Fistnet.Genepool",
+      "purpose": "Make this experiment a better simulation and more fun to watch.",
+      "purpose_origin_record": "DEC-0002",
+      "status": "R03_Step4_design_proposed_owner_review_pending",
+      "phase": "EVOLUTION",
+      "root_semantics": "Exact physical experiment root explicitly assigned by User; KB tools bound to this root.",
+      "model": "Provisional artificial-life sandbox with inherited action repertoires and individual learning.",
+      "model_record": "INF-0001",
+      "model_accepted": false,
+      "design_accepted": true,
+      "trial_authorized": false,
+      "trial_scope": "R02 ecological evaluation closed as INCONCLUSIVE by DEC-0020. Prior 16 comparisons remain time-limited; reserved confirmation was not run. No active or newly authorized trial.",
+      "design_accepted_scope": "R02 Parts1-4 accepted and closed with ecology inconclusive. R03 Godot engine selected by DEC-0024; Step2 plan REC-0009 accepted and bounded setup/2D implementation authorized by DEC-0025. Practical Godot2D viewer positively reviewed in DEC-0026. DEC-0028 starts Step4 proposal/mockups only; REC-0010 is not yet accepted. DEC-0029 prefers mould appearance; DEC-0030 approves grass/dirt and defines visible-area borders and level3/4 action scope. Step4 implementation remains unstarted."
+    },
+    "last_maintenance": {
+      "actor": "Genepool Analyzer",
+      "note": "Record approved ground appearance and owner viewport/action rules; reconcile design revision2 without coding."
+    }
+  }
+}

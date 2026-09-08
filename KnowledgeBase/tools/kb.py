@@ -596,6 +596,124 @@ def score_value(value: Any, terms: list[str]) -> int:
     return sum(blob.count(term) for term in terms)
 
 
+def current_match_value(value: Any) -> Any:
+    """Exclude archived claims/byte identities from ordinary semantic ranking."""
+    if isinstance(value, dict):
+        return {key: current_match_value(item) for key, item in value.items()
+                if not key.startswith("prior_") and not key.endswith("_sha256") and key not in {
+                    "history", "previous_versions", "audit_trail", "sha256", "bytes",
+                    "created_at", "updated_at", "recorded_at_utc", "at_utc"}}
+    if isinstance(value, list):
+        return [current_match_value(item) for item in value]
+    return value
+
+
+def rank_record(row: dict[str, Any], terms: list[str], *, history: bool = False) -> tuple[int, list[str]]:
+    """Field-weighted presence; repeated prose and recency do not confer authority."""
+    weights = {"id": 12, "title": 8, "statement": 6, "tags": 8, "topics": 8,
+               "current_resolution": 8, "resolution_notes": 4, "uncertainty": 3,
+               "derivation": 3, "applicability": 5, "action": 5, "exceptions": 3,
+               "limits": 3, "lessons": 5}
+    matches, covered, score = [], set(), 0
+    for key, value in row.items():
+        if key not in weights and not history:
+            continue
+        blob = text_blob(value if history else current_match_value(value))
+        found = {term for term in set(terms) if term in blob}
+        if found:
+            matches.append(key)
+            covered.update(found)
+            score += len(found) * weights.get(key, 1)
+    return score + len(covered) * 30, matches
+
+
+def route_order(core: dict[str, Any], topics: list[str]) -> dict[str, int]:
+    """Exact routes preserve authored order in requested topic order."""
+    order: dict[str, int] = {}
+    for topic in topics:
+        for name, route in core.get("routes", {}).items():
+            labels = [name.casefold(), *[str(x).casefold() for x in route.get("topic_hints", [])]]
+            if topic in labels:
+                for identifier in route.get("record_ids", []):
+                    order.setdefault(identifier, len(order))
+    return order
+
+
+def compact_record(row: dict[str, Any]) -> dict[str, Any]:
+    """A navigation projection, never a replacement record or semantic verdict."""
+    clipped: list[str] = []
+
+    def shorten(value: Any, path: str, width: int = 180, depth: int = 0) -> Any:
+        if isinstance(value, str) and len(value) > width:
+            clipped.append(path)
+            return value[:width] + "…"
+        if isinstance(value, (dict, list)) and depth >= 3:
+            clipped.append(path)
+            return "[get full detail]"
+        if isinstance(value, list):
+            if len(value) > 4:
+                clipped.append(path)
+            return [shorten(x, path, width, depth + 1) for x in value[:4]]
+        if isinstance(value, dict):
+            if len(value) > 6:
+                clipped.append(path)
+            return {k: shorten(v, path + "." + k, width, depth + 1)
+                    for k, v in list(value.items())[:6]}
+        return value
+
+    keys = ("id", "kind", "status", "title", "statement", "uncertainty",
+            "source_refs", "current_resolution", "related_record_ids")
+    result = {key: shorten(row[key], key, 360 if key == "statement" else 180)
+              for key in keys if key in row}
+    notes = row.get("resolution_notes")
+    note = notes[-1] if isinstance(notes, list) and notes else notes
+    if note:
+        result["resolution_notes"] = shorten(
+            [{k: v for k, v in note.items() if not k.startswith("prior_")}] if isinstance(note, dict) else [note],
+            "resolution_notes")
+        clipped.append("resolution_notes")
+    for key in ("resolution_notes", "related_record_ids", "title"):
+        if estimate_tokens(result) <= 480:
+            break
+        if key in result:
+            # Keep correction targets even when its prose does not fit.
+            if key == "resolution_notes" and isinstance(note, dict):
+                result["correction_record_ids"] = shorten(note.get("record_ids", []), "correction_record_ids")
+            result.pop(key)
+            clipped.append(key)
+    omitted = set(row) - set(result)
+    result.update(detail_id=row["id"], detail_available=True,
+                  detail_required=bool(clipped or omitted),
+                  truncated_fields=sorted(set(clipped)), omitted_field_count=len(omitted),
+                  relation_semantics="pointers_only_not_inferred_supersession")
+    return result
+
+
+def compact_core(core: dict[str, Any]) -> dict[str, Any]:
+    """Local Genepool orientation; current part/authority outrank historical pins."""
+    selections = {
+        "experiment": ("root", "purpose", "status"),
+        "proposal": ("id", "status", "implementation_authorized", "owner_acceptance_record"),
+        "current_iteration_part": ("id", "status", "owner_design_acceptance_record"),
+        "authority": ("actor", "current_stage_record", "next_action"),
+    }
+    view: dict[str, Any] = {}
+    clipped = []
+    for name, keys in selections.items():
+        value = core.get(name, {})
+        view[name] = {}
+        for key in keys:
+            if key in value:
+                item = value[key]
+                if isinstance(item, str) and len(item) > 220:
+                    clipped.append(name + "." + key)
+                    item = item[:220] + "…"
+                view[name][key] = item
+    view.update(is_projection=True, detail_available=True, detail_required=True,
+                truncated_fields=clipped, detail_hint="Load complete core at required task entry; get ID for dependent record detail.")
+    return view
+
+
 def snippet(text: str, terms: list[str], width: int = 420) -> str:
     flat = re.sub(r"\s+", " ", text).strip()
     if len(flat) <= width:
@@ -688,7 +806,7 @@ def check_read_revision(args: argparse.Namespace, core: dict[str, Any]) -> None:
 
 def projection_info(args: argparse.Namespace) -> dict[str, Any]:
     fields = getattr(args, "fields", None)
-    mode = "ids" if getattr(args, "ids_only", False) else "summary" if getattr(args, "summary", False) else "fields" if fields else "full"
+    mode = "brief" if getattr(args, "brief", False) else "ids" if getattr(args, "ids_only", False) else "summary" if getattr(args, "summary", False) else "fields" if fields else "full"
     return {"is_projection": mode != "full", "mode": mode, "fields": fields or []}
 
 
@@ -810,8 +928,23 @@ def command_context(args: argparse.Namespace) -> None:
         route_blob = " ".join([str(route_name), *route.get("topic_hints", [])]).casefold()
         if any(term in route_blob for term in terms):
             routed_ids.update(route.get("record_ids", []))
-    scored = [(score_value(row, terms) + (500 if row["id"] in routed_ids else 0), row) for row in records]
-    scored = sorted((x for x in scored if x[0]), key=lambda x: (-x[0], x[1]["id"]))
+    ordered = route_order(core, topics)
+    scored = [(rank_record(row, terms, history=args.history)[0] + (300 if row["id"] in routed_ids else 0), row) for row in records]
+    scored = sorted((x for x in scored if x[0]), key=lambda x: (
+        -(x[1]["id"].casefold() in topics), ordered.get(x[1]["id"], len(ordered)), -x[0], x[1]["id"]))
+    if args.brief:
+        base = {
+            "query": args.topic, "kb_revision": core["kb_revision"],
+            "projection": projection_info(args), "validation_scope": "ordinary_state_records_sources",
+            "evidence_scope": "not_requested", "history_scope": "all_record_fields" if args.history else "current_fields",
+            "reference_status": "structural_validation_only; source_bytes_and_semantic_currentness_not_checked",
+            "detail_hint": "get ID for full details needed by a dependent claim; projections must not replace records.",
+        }
+        if not args.no_core:
+            base["orientation"] = compact_core(core)
+        result = bounded_page(base, "records", [compact_record(row) for _, row in scored], args)
+        emit_bounded(result, args)
+        return
     records_only = args.records_only or args.evidence_limit == 0
     base: dict[str, Any] = {
         "query": args.topic, "kb_revision": core["kb_revision"],
@@ -822,7 +955,9 @@ def command_context(args: argparse.Namespace) -> None:
         "pagination_scope": "records", "evidence_scan_reason": "not_requested" if records_only else "budget_or_no_terms",
     }
     if not args.no_core:
-        base["core"] = core
+        base["core"] = compact_core(core) if args.summary else core
+        base["core_is_projection"] = args.summary
+    base["history_scope"] = "all_record_fields" if args.history else "current_fields"
     result = bounded_page(base, "records", [project_value(row, args) for _, row in scored], args)
     result["returned_record_count"] = result["returned_count"]
     result["omitted_record_match_count"] = result["omitted_count"]
@@ -864,7 +999,8 @@ def command_search(args: argparse.Namespace) -> None:
     check_read_revision(args, core)
     hit_fields = {"id", "kind", "record_kind", "status", "title", "snippet", "score",
                   "type", "locator", "matched_fields", "resolution_notes_snippet",
-                  "historical_source", "superseded_by"}
+                  "historical_source", "superseded_by", "current_resolution", "related_record_ids",
+                  "detail_id", "detail_available"}
     unsupported = sorted(set(args.fields or []) - hit_fields)
     if unsupported:
         raise KBError(
@@ -877,17 +1013,19 @@ def command_search(args: argparse.Namespace) -> None:
         raise KBError("search query contains no usable terms")
     hits: list[tuple[int, dict[str, Any]]] = []
     for row in records:
-        score = score_value(row, terms)
+        score, matched = rank_record(row, terms, history=args.history)
         if score:
             hit = {
                 "kind": "record", "id": row["id"], "record_kind": row["kind"],
                 "status": row["status"], "snippet": snippet(row["statement"], terms),
                 "title": row.get("title"),
-                "matched_fields": [key for key, value in row.items() if score_value(value, terms)],
+                "matched_fields": matched, "detail_id": row["id"], "detail_available": True,
+                **{key: row[key] for key in ("current_resolution", "related_record_ids") if key in row},
             }
             if row.get("resolution_notes"):
+                notes = row["resolution_notes"]
                 hit["resolution_notes_snippet"] = snippet(
-                    json.dumps(row["resolution_notes"], ensure_ascii=False), terms
+                    json.dumps(current_match_value(notes[-1:] if isinstance(notes, list) else notes), ensure_ascii=False), terms
                 )
             hits.append((score + 20, hit))
     if not args.records_only:
@@ -916,13 +1054,15 @@ def command_search(args: argparse.Namespace) -> None:
                     complete = False
                     break
         complete = complete and not stale
-    hits.sort(key=lambda x: (-x[0], str(x[1].get("id")), str(x[1].get("locator", ""))))
+    hits.sort(key=lambda x: (-(str(x[1].get("id", "")).casefold() == args.query.casefold()),
+                             -x[0], str(x[1].get("id")), str(x[1].get("locator", ""))))
     rows = [project_value(dict(hit, score=score), args) for score, hit in hits]
     result = bounded_page({
         "query": args.query, "terms": terms, "kb_revision": core["kb_revision"],
         "projection": projection_info(args), "stale_sources_excluded": sorted(set(stale)),
         "projection_scope": "search_hit",
         "search_scope": "records_only" if args.records_only else "records_sources_prepared",
+        "history_scope": "all_record_fields" if args.history else "current_fields",
         "prepared_match_cap": prepared_cap if not args.records_only else 0,
     }, "hits", rows, args, scan_complete=complete)
     emit_bounded(result, args)
@@ -1464,7 +1604,7 @@ def add_common_output(parser: argparse.ArgumentParser) -> None:
     parser.add_argument("--compact", action="store_true", help="emit compact JSON")
 
 
-def add_read_output(parser: argparse.ArgumentParser, *, budget: int = 6000, limit: int = 100) -> None:
+def add_read_output(parser: argparse.ArgumentParser, *, budget: int | None = 6000, limit: int = 100, brief: bool = False) -> None:
     add_common_output(parser)
     parser.add_argument("--budget", type=int, default=budget, help="estimated compact-JSON token budget")
     parser.add_argument("--limit", type=int, default=limit, help="maximum items in this page")
@@ -1474,6 +1614,8 @@ def add_read_output(parser: argparse.ArgumentParser, *, budget: int = 6000, limi
     view.add_argument("--fields", nargs="+", help="selected fields, including dotted metadata paths")
     view.add_argument("--summary", action="store_true", help="explicit projected summary")
     view.add_argument("--ids-only", action="store_true", help="explicit identity-only projection")
+    if brief:
+        view.add_argument("--brief", action="store_true", help="records-only orientation and short records; default total budget 2000")
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -1494,12 +1636,14 @@ def build_parser() -> argparse.ArgumentParser:
     context.add_argument("--evidence-limit", type=int, default=12)
     context.add_argument("--records-only", action="store_true", help="never read or hash prepared contents")
     context.add_argument("--no-core", action="store_true")
-    add_read_output(context)
+    context.add_argument("--history", action="store_true", help="also match archived and other omitted record fields")
+    add_read_output(context, budget=None, brief=True)
     context.set_defaults(func=command_context)
 
     search = subparsers.add_parser("search", help="search records, sources, and prepared chunks")
     search.add_argument("query")
     search.add_argument("--records-only", action="store_true", help="search only recorded knowledge")
+    search.add_argument("--history", action="store_true", help="also match archived and other omitted record fields")
     add_read_output(search, limit=20)
     search.set_defaults(func=command_search)
 
@@ -1557,6 +1701,8 @@ def build_parser() -> argparse.ArgumentParser:
 def main(argv: list[str] | None = None) -> int:
     parser = build_parser()
     args = parser.parse_args(argv)
+    if args.command == "context" and args.budget is None:
+        args.budget = 2000 if args.brief else 6000
     if hasattr(args, "budget") and args.budget < 300:
         raise KBError("budget must be at least 300 estimated tokens")
     if hasattr(args, "budget") and args.budget > 20_000:

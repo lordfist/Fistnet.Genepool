@@ -1,5 +1,5 @@
 {
-  "catalog_revision": 31,
+  "catalog_revision": 33,
   "sources": [
     {
       "source_id": "SRC-0001",
@@ -4187,6 +4187,23 @@
           "FACT-0043"
         ],
         "purpose": "Register specialized governance identity for future retrieval and integrity verification."
+      },
+      "supersession": {
+        "source_id": "SRC-0260",
+        "actor": "Genepool Analyzer",
+        "reason": "Bounded retrieval usage upgrade; required policy and complete-loading contract unchanged",
+        "record_ids": [
+          "FACT-0054",
+          "DEC-0032"
+        ],
+        "observed_at": "2026-09-08T00:18:00+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "d5da91152c6d5f915abdd961a0a4f4cb285bdc68",
+          "path": ".SeedAnalyzer/KB.md",
+          "blob_oid": "73625a41310709362446bddfaaf223b49c2acbe8",
+          "transform": "lf_to_crlf"
+        }
       }
     },
     {
@@ -5908,7 +5925,57 @@
         "actor": "Genepool Analyzer",
         "type": "primary_source_implementation_research"
       }
+    },
+    {
+      "source_id": "SRC-0258",
+      "title": "Godot Camera3D orthographic projection",
+      "locator": {
+        "type": "url",
+        "url": "https://docs.godotengine.org/en/stable/classes/class_camera3d.html"
+      },
+      "coverage": "Official API description, orthographic projection behavior and camera projection methods read for design feasibility; no engine execution.",
+      "observed_at_utc": "2026-09-07T23:06:09.087658+00:00",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "official_documentation_design_reference"
+      }
+    },
+    {
+      "source_id": "SRC-0259",
+      "title": "Godot built-in primitive meshes",
+      "locator": {
+        "type": "url",
+        "url": "https://docs.godotengine.org/en/stable/classes/class_primitivemesh.html"
+      },
+      "coverage": "Official primitive mesh types and description read; sphere/capsule/plane availability supports economical base graphics. No external asset download or import.",
+      "observed_at_utc": "2026-09-07T23:06:09.087658+00:00",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "official_documentation_design_reference"
+      }
+    },
+    {
+      "source_id": "SRC-0260",
+      "title": "Genepool KnowledgeBase policy and reference",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\.SeedAnalyzer\\KB.md"
+      },
+      "sha256": "50F4283B2206697941FD4AE9205EFDAFD62CEE6509AF032BC7E0675B944395C2",
+      "size_bytes": 34270,
+      "observed_at_utc": "2026-09-08T00:18:00+00:00",
+      "supersedes": "SRC-0156",
+      "status": "registered current working-file version",
+      "coverage": "Required-policy prefix unchanged; complete modified retrieval/reference text read and contract-tested. No new source preparation.",
+      "provenance": {
+        "actor": "Genepool Analyzer",
+        "record_ids": [
+          "DEC-0032",
+          "FACT-0054"
+        ],
+        "purpose": "Local KB usage reference adaptation, not a simulation or role change."
+      }
     }
   ],
-  "updated_at": "2026-09-07T19:27:14+00:00"
+  "updated_at": "2026-09-08T00:19:23+00:00"
 }
