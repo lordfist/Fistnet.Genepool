@@ -1,0 +1,312 @@
+{
+  "kb_revision": 64,
+  "head": "14b39d984555897e88c279ed21651df7c114e05d",
+  "sources": [
+    {
+      "source_id": "SRC-0002",
+      "path": "Fistnet.Genepool.App/Fistnet.Genepool.App.csproj",
+      "sha256": "D79B44B872561468641D6D2A56E592B6E264EDB92C680862AC2A629446350746",
+      "history": {
+        "kind": "git",
+        "commit": "14b39d984555897e88c279ed21651df7c114e05d",
+        "path": "Fistnet.Genepool.App/Fistnet.Genepool.App.csproj",
+        "blob_oid": "614fe3428821c03d9864f4aac4b5ee264e3ba8a2",
+        "transform": "lf_to_crlf"
+      }
+    },
+    {
+      "source_id": "SRC-0056",
+      "path": "Fistnet.Genepool.Tests/Fistnet.Genepool.Tests.csproj",
+      "sha256": "C9517DF945C421AF55E5B0607714857E3DCA02AB8364EEDCB3C5D13965DAB5D2",
+      "history": {
+        "kind": "git",
+        "commit": "14b39d984555897e88c279ed21651df7c114e05d",
+        "path": "Fistnet.Genepool.Tests/Fistnet.Genepool.Tests.csproj",
+        "blob_oid": "fbdda3263a7ee33d20a6ed5de799dedebdda6f44",
+        "transform": "raw"
+      }
+    },
+    {
+      "source_id": "SRC-0067",
+      "path": "global.json",
+      "sha256": "F5027F7B2D82128C9715C687359EEE846D57DA45AEAB8986CD265107EB32C47A",
+      "history": {
+        "kind": "git",
+        "commit": "14b39d984555897e88c279ed21651df7c114e05d",
+        "path": "global.json",
+        "blob_oid": "1fadcbcc5fef968c3e81ede6d9b2543a7bdc5d9f",
+        "transform": "raw"
+      }
+    },
+    {
+      "source_id": "SRC-0068",
+      "path": "Fistnet.Genepool.Visualization/Fistnet.Genepool.Visualization.csproj",
+      "sha256": "9F420B4D3CE6E2497AA545D71A782880A9D411B06FA31DFF59C28B650758581A",
+      "history": {
+        "kind": "git",
+        "commit": "14b39d984555897e88c279ed21651df7c114e05d",
+        "path": "Fistnet.Genepool.Visualization/Fistnet.Genepool.Visualization.csproj",
+        "blob_oid": "82945e3de37b83942dfadb2c204ddabf7938e3b8",
+        "transform": "lf_to_crlf"
+      }
+    },
+    {
+      "source_id": "SRC-0069",
+      "path": "Fistnet.Genepool.Control/Fistnet.Genepool.Control.csproj",
+      "sha256": "2A98C92C1375F84A267B8C49F2CA8EFE73549B75FAC73815771C667E556B7CE7",
+      "history": {
+        "kind": "git",
+        "commit": "14b39d984555897e88c279ed21651df7c114e05d",
+        "path": "Fistnet.Genepool.Control/Fistnet.Genepool.Control.csproj",
+        "blob_oid": "4de4856462fe92ef2bba22892dcf7e1f516f429c",
+        "transform": "lf_to_crlf"
+      }
+    },
+    {
+      "source_id": "SRC-0070",
+      "path": "Fistnet.Genepool.Dna/Fistnet.Genepool.Dna.csproj",
+      "sha256": "8F3E4C3504EF0BB4429B2B5E255F8669865B4459509EC0C55BF460C4EDF984E7",
+      "history": {
+        "kind": "git",
+        "commit": "14b39d984555897e88c279ed21651df7c114e05d",
+        "path": "Fistnet.Genepool.Dna/Fistnet.Genepool.Dna.csproj",
+        "blob_oid": "e803a3a00141ae38611c01d05e4a237c01f976ae",
+        "transform": "lf_to_crlf"
+      }
+    },
+    {
+      "source_id": "SRC-0154",
+      "path": "AGENTS.md",
+      "sha256": "2C92F42355CE071962BCDCEFA7A962CB1F058F7F2499FD8CB50E2BF2B5B9D1AD",
+      "history": {
+        "kind": "git",
+        "commit": "14b39d984555897e88c279ed21651df7c114e05d",
+        "path": "AGENTS.md",
+        "blob_oid": "0102b49750b4ffa1e793693740690740b64d0b30",
+        "transform": "lf_to_crlf"
+      }
+    },
+    {
+      "source_id": "SRC-0155",
+      "path": ".SeedAnalyzer/CONSTITUTION.md",
+      "sha256": "E6E78C0CBBD4709DE573C86228E79AACE252927FA5818F60AE4542860F42D274",
+      "history": {
+        "kind": "git",
+        "commit": "14b39d984555897e88c279ed21651df7c114e05d",
+        "path": ".SeedAnalyzer/CONSTITUTION.md",
+        "blob_oid": "dfb6f01b3579e30058f5b02ce7da330e03f8c62a",
+        "transform": "lf_to_crlf"
+      }
+    },
+    {
+      "source_id": "SRC-0224",
+      "path": "Fistnet.Genepool.sln",
+      "sha256": "742BB4890FA19EAD4D3E1A65919DE1420CC922D9FD5B8E26D655AABF3B86C688",
+      "history": {
+        "kind": "unchanged_current_file",
+        "note": "Legacy solution remains byte-identical. Unused task pre-edit snapshot removed; no source revision was needed."
+      }
+    },
+    {
+      "source_id": "SRC-0230",
+      "path": "Fistnet.Genepool.Godot/Fistnet.Genepool.Godot.csproj",
+      "sha256": "1D4174B55D085193027E31A2C30BEADEC253E4C786B0490B5D9149D34BE9DD84",
+      "history": {
+        "kind": "git",
+        "commit": "14b39d984555897e88c279ed21651df7c114e05d",
+        "path": "Fistnet.Genepool.Godot/Fistnet.Genepool.Godot.csproj",
+        "blob_oid": "5d27b34fd1c9113fc54210e2352470a619257947",
+        "transform": "raw"
+      }
+    },
+    {
+      "source_id": "SRC-0239",
+      "path": "Fistnet.Genepool.Godot/packages.Debug.lock.json",
+      "sha256": "6F60ADDA9860E39493A791EFF567EDAB006A111CA8E25F0D56340494D1981C06",
+      "history": {
+        "kind": "git",
+        "commit": "14b39d984555897e88c279ed21651df7c114e05d",
+        "path": "Fistnet.Genepool.Godot/packages.Debug.lock.json",
+        "blob_oid": "abb0afd18f23084022fc7f63bec1bbca96ca625b",
+        "transform": "lf_to_crlf"
+      }
+    },
+    {
+      "source_id": "SRC-0240",
+      "path": "Fistnet.Genepool.Godot/packages.ExportRelease.lock.json",
+      "sha256": "6D1B9963123386167612FAD770B1B7F57A43B36EB826FE5CE2CC16137F0EA2E0",
+      "history": {
+        "kind": "git",
+        "commit": "14b39d984555897e88c279ed21651df7c114e05d",
+        "path": "Fistnet.Genepool.Godot/packages.ExportRelease.lock.json",
+        "blob_oid": "d1c2a95d43137a40d7e409c006a98453bd185a77",
+        "transform": "lf_to_crlf"
+      }
+    },
+    {
+      "source_id": "SRC-0247",
+      "path": "Fistnet.Genepool.Godot/tools/Launch.ps1",
+      "sha256": "21EF7D07B1FEACADF7F384C388EB56BF73B58DF0D5DA2E4B0566F8BE7E5433FA",
+      "history": {
+        "kind": "git",
+        "commit": "14b39d984555897e88c279ed21651df7c114e05d",
+        "path": "Fistnet.Genepool.Godot/tools/Launch.ps1",
+        "blob_oid": "acc1222fa9105fa482be5a1cca099ee3634fdd29",
+        "transform": "raw"
+      }
+    },
+    {
+      "source_id": "SRC-0248",
+      "path": "Fistnet.Genepool.Godot/tools/Setup.ps1",
+      "sha256": "AB5C242A1E992A98BE997DC79AF2907BEA70B0E81D0F7D6CC8A850256AD4494B",
+      "history": {
+        "kind": "git",
+        "commit": "14b39d984555897e88c279ed21651df7c114e05d",
+        "path": "Fistnet.Genepool.Godot/tools/Setup.ps1",
+        "blob_oid": "1fd2a1ea062b081ab0679839c012cffd4b145c52",
+        "transform": "raw"
+      }
+    },
+    {
+      "source_id": "SRC-0263",
+      "path": "Fistnet.Genepool.Tests/README.md",
+      "sha256": "667D7196276FF0680FBB4A5FF501773440C4263BA83DE41703FA9F38233CFCD5",
+      "history": {
+        "kind": "kb_snapshot",
+        "path": "source-history/r04-step1-SRC-0263.md"
+      }
+    },
+    {
+      "source_id": "SRC-0269",
+      "path": "Fistnet.Genepool.Godot/Verification/VerificationRunner.cs",
+      "sha256": "694F34275C245C5E5739F9A814F42D155888BCAA353F542D7ED233837DD625C1",
+      "history": {
+        "kind": "kb_snapshot",
+        "path": "source-history/r04-step1-SRC-0269.cs"
+      }
+    },
+    {
+      "source_id": "SRC-0303",
+      "path": "Fistnet.Genepool.Godot/README.md",
+      "sha256": "F65300205853BCFFD2A3D08D5266B42E2C0C75A393719DAC05D85FDFBDB77A3F",
+      "history": {
+        "kind": "kb_snapshot",
+        "path": "source-history/r04-step1-SRC-0303.md"
+      }
+    },
+    {
+      "source_id": "SRC-0161",
+      "path": "Fistnet.Genepool.Control/SimulationSnapshot.cs",
+      "sha256": "5B5A7C9DA8C5B3226DA98345ABCFF92617F966756BCA953229BB45196B74852B",
+      "history": {
+        "kind": "git",
+        "commit": "14b39d984555897e88c279ed21651df7c114e05d",
+        "path": "Fistnet.Genepool.Control/SimulationSnapshot.cs",
+        "blob_oid": "e67e03cd2fb44f99327029a70a4c8f87ffa77dbb",
+        "transform": "raw"
+      }
+    }
+  ],
+  "cs_sha256": {
+    "Fistnet.Genepool.App/MainForm.cs": "6E30D6D207EE8B21E255655BAB6D592BC6F27CC5606E155A03A0BFFF3422AE6C",
+    "Fistnet.Genepool.App/MainForm.Designer.cs": "0D957BBF630E053C6BF98EDC82D3FF1C834797883F89A1286240DE21DE60367E",
+    "Fistnet.Genepool.App/MainForm.Layout.cs": "C87DD3B7BE00BCAA3C54555114AA296B46BA26766870CD6F2BF166B3101A8D6E",
+    "Fistnet.Genepool.App/NewSimulationDialog.cs": "7BE5F9B8F7D104E56058E07C54445AFD0F117CFB4F3DA3EDF37479761ED225EF",
+    "Fistnet.Genepool.App/Program.cs": "811C5D687B417E7AD1B9040C47B458F0BF5553CDA79AD73A8EE9F6ED46EAACC1",
+    "Fistnet.Genepool.App/Properties/AssemblyInfo.cs": "4DDB0CBC30A817181B227D7E68C40E99E497FCFA68E873AA0C5D7EC9D7F5498F",
+    "Fistnet.Genepool.App/Properties/Resources.Designer.cs": "732EA0CBFD24A24D5013D8F7128D0C44A3154B2FA7D93FAAFE327A76756FA2E0",
+    "Fistnet.Genepool.App/Properties/Settings.Designer.cs": "7C45233D5AFFF1466B8A2615AEE4F62CD567D04C6ACA68BBF2F054B1FE4B96FC",
+    "Fistnet.Genepool.Control/RuleManager.cs": "44F860A3AC5CE3196B71B29406C83DD5495628DCA3113996C9D61D7B13A93577",
+    "Fistnet.Genepool.Control/SimulationRunner.cs": "10BDC633721B982940F7670EAAE67C20E5206DF6812D60413272E93EC186A2C6",
+    "Fistnet.Genepool.Control/SimulationRunOptions.cs": "99D7B4D82C9248262AD9A8D472A5FFDAC1DE2CE1AC6722DB1F85A01CD5873D85",
+    "Fistnet.Genepool.Control/SimulationSnapshot.cs": "5B5A7C9DA8C5B3226DA98345ABCFF92617F966756BCA953229BB45196B74852B",
+    "Fistnet.Genepool.Control/ViewCollector.cs": "68839A8D40666E9530CE5F7BF4D1256251E61923671079D8D3908FACD8ADF616",
+    "Fistnet.Genepool.Control/ViewFrame.cs": "A4551BD84938088F61D3F814E4530C6FF19B69BC3E819304E4045A79683616C1",
+    "Fistnet.Genepool.Control/Gameboard/Board.cs": "BDA8E4A625531A7FA4EED03B615498D4AAEC7CEA0724C9A3AD92044C38475DE8",
+    "Fistnet.Genepool.Control/Gameboard/BoardSquare.cs": "FD595CA69E209FA5AA6F6F1C9BEC863B995B3B66836F4C0EE7C1570DDD0041FF",
+    "Fistnet.Genepool.Control/Presentation/BoardPresentation.cs": "D1E5DC4B2FFE9A4A8836088E92E1F29341817470D95F4CA8C26E69D1F205676B",
+    "Fistnet.Genepool.Control/Presentation/SimulationSettings.cs": "7650A69908A0B9DDC1CC9B576041039648D6AFFC9425FC9200C2A8C5BD5EA480",
+    "Fistnet.Genepool.Control/Properties/AssemblyInfo.cs": "49648A016BE544C4F78874036B354091D6A9B33CEAEAF87223FF4530B85B52C8",
+    "Fistnet.Genepool.Control/Rules/ExecuteOgranismSetup.cs": "B3AC4C59AA49DC4FA8146B3B89F92CBCD7271BC3AB1B6098B3226A29F17F4FE6",
+    "Fistnet.Genepool.Control/Rules/ExecuteOrganismDeadRule.cs": "6935CF12214C699C9FC04F531E56D9A8378E7E7172B1ADAF7F4AEFCA455EA83E",
+    "Fistnet.Genepool.Control/Rules/ExecuteOrganismEffectsRule.cs": "07FB5A529DF99BD0853FBBF46C4FFC667477FC096806FDECF37C2B58943174AC",
+    "Fistnet.Genepool.Control/Rules/ExecuteOrganismMoveRule.cs": "5CE5262FCED3E2B2CF37DBAC6E00C4231DD3DBA0F65D3A32F3856E62FA12D69A",
+    "Fistnet.Genepool.Control/Rules/ExecuteOrganismSequenceRule.cs": "63987BBD68D0B2FB7D011228AEF3D9EF546D224C12EDA9AE1EBFCDCD3362C88F",
+    "Fistnet.Genepool.Control/Rules/ExecuteRefreshRule.cs": "51F95993AAB4EF92FE195E9BE01B8239BF511DB4B3945C41911CBB614C678B9C",
+    "Fistnet.Genepool.Control/Rules/IBoardSquareRule.cs": "93E10F9553C5FA8D818D577518BA1B9B5A0D6045AB6633301FCE831C5658736F",
+    "Fistnet.Genepool.Dna/ActionModel.cs": "7FD65675DCB8F9EDCD55E1E7F64FD0C5B494138E719E18B4197068D1BA6DB81D",
+    "Fistnet.Genepool.Dna/Common.cs": "5FCD695C512591F2B98E203FAB05503EF3DBFE2F900D82542143EE68796E333D",
+    "Fistnet.Genepool.Dna/DnaElementFactory.cs": "4B74798B73FEEB5FA395DC987286389CE887696A2FC499307201BC8B9E7EAD82",
+    "Fistnet.Genepool.Dna/FounderRepertoire.cs": "AA9C41C9BBFB4D90163451DF16801E9E57640EF5FE67852878730DD9B3E75A80",
+    "Fistnet.Genepool.Dna/IRandomSource.cs": "3634A42C4C99CA0765DE24028244DA8EB695E699764D6FBFF085D3774B0CB644",
+    "Fistnet.Genepool.Dna/Organism.cs": "0269EE3E1E6BA4B32D12B4E9F5208940E4A06DD048EEFE6E99E08EA75C17A105",
+    "Fistnet.Genepool.Dna/OrganismSnapshot.cs": "9E405ACC00D95CD72BAE3CBDB5C42005E7A4E41F015A35EB2841F96C19250568",
+    "Fistnet.Genepool.Dna/SimulationDiagnostics.cs": "122B37AF017CED6779A4C6CFBFE1C09C29CA1337C81E7960556A1E168364DB96",
+    "Fistnet.Genepool.Dna/Effects/BirthEffect.cs": "931F43DD43DF3EFE5776BB93A3FAD10B273B9061E965CED2D3F5B1F658A183FC",
+    "Fistnet.Genepool.Dna/Effects/ChangeAgeEffect.cs": "A9D0DC18DFC1B962E4DBD0E4D28408D6FE1C3F551A9B348BB7E1D0ED3983E65C",
+    "Fistnet.Genepool.Dna/Effects/ChangeFoodEffect.cs": "E2A3DE1CEC5F60E3AC9905C8CF2D1F1F01E1B179181CB54F79AF73058A757823",
+    "Fistnet.Genepool.Dna/Effects/ChangeHealthEffect.cs": "CD4F33FA8212F8D29E761B96895C45AB413EE45179CF646155C1D6D897A9AF6A",
+    "Fistnet.Genepool.Dna/Effects/ChangePositionEffect.cs": "B9FEEA58624A70B1D8AAC3F29559C9AE7127EBC3784C1BA29D6705B580A83388",
+    "Fistnet.Genepool.Dna/Effects/IDnaEffect.cs": "9E597FE334459DE3FCE08840A25BD03ED151BA57851F6A1DB7CA628D61C7A863",
+    "Fistnet.Genepool.Dna/Effects/MutateEffect.cs": "C58CB5ED91858C700FFE9A7473B6A35673E07F226A85365226BBA0763D4CF2C2",
+    "Fistnet.Genepool.Dna/Elements/CombineDnaElement.cs": "E8749BFC4EE2CAA9044E2DF184CEB4C123E76013DA696BBF7DA3AB5C0F43F4C7",
+    "Fistnet.Genepool.Dna/Elements/CreateFoodDnaElement.cs": "F6659F3D9076FD17D818D2BFC972BE5651006812DB0EE8107DBBA1C2F7EB39B1",
+    "Fistnet.Genepool.Dna/Elements/EatDnaElement.cs": "FA8DFA2678C544F7C097054C1BC4EB7CA2A1EDFC4CBAE3183EDBA1C7416947FD",
+    "Fistnet.Genepool.Dna/Elements/EvolveDnaElement.cs": "95C08914D783FE84DFE63B414EC707FE10EBA890447D064017F5722CACB980A6",
+    "Fistnet.Genepool.Dna/Elements/HealDnaElement.cs": "2AAEFB086CE109316E4353C6DBD512E7DB715F94E17AF7689194005F66F66C4F",
+    "Fistnet.Genepool.Dna/Elements/IDnaElement.cs": "47126ED6764A9960F278FDA276086F69B4EF0593643232CD63B1D27ACF475CAA",
+    "Fistnet.Genepool.Dna/Elements/InfectDnaElement.cs": "0ABC975CD79B4E10E14F9B69FAF106BBC1C217F0F3B312F501CC8E75B426BA3F",
+    "Fistnet.Genepool.Dna/Elements/KillDnaElement.cs": "3E4B5852EF0972506A812657B8BA71614231CA287AC94D2A82A848E5018AE6F0",
+    "Fistnet.Genepool.Dna/Elements/MoveDnaElement.cs": "A73C4DF5D2D6F0F74D110CB1D0539F23F72C89EE9942CE13505B6653709B563F",
+    "Fistnet.Genepool.Dna/Properties/AssemblyInfo.cs": "38008930FE25205485924534A77B838CAB29B16B25AAAD7C79AD5A71DA1AD991",
+    "Fistnet.Genepool.Dna/Elements/Brain/OrganismEvaluation.cs": "CFE2E720FE0EE0DDC2F6687E09E770FE95A872F63B9221FDB0998C637D8B5999",
+    "Fistnet.Genepool.Dna/Elements/Brain/StrategyNetwork.cs": "2A10BFE09C1A5C88E8E187FE9FE97817569CB18E6EC9F95B2859493EA24BB946",
+    "Fistnet.Genepool.Godot/BoardView2D.cs": "B210328087584F68C702C35154C36F4E024B1FA66279D6C5312FC3C1E8076F37",
+    "Fistnet.Genepool.Godot/BoardView3D.Actions.cs": "A534C007582F8D17C310C2F4530F3F028747545AA0B657F38E5EA596D32A60B5",
+    "Fistnet.Genepool.Godot/BoardView3D.cs": "360DA390AA3EFF5536B9225D59973EEE23600E3A99A2A4CF8D2A8F8D5664F788",
+    "Fistnet.Genepool.Godot/BoardView3D.Materials.cs": "72F412CE9BC4D7A8446D2F365107377BFE13E8508E3F27AABFD2F228A5DB6B8A",
+    "Fistnet.Genepool.Godot/BoardView3D.Projection.cs": "3ACBFB0275C4C314C31A6D05443FCB3755D486242926A8F6BCFF30355B62F01A",
+    "Fistnet.Genepool.Godot/HistoryView.cs": "5C53F0DC324E1D88F5C9155568E470A49B1A95AADB3E8D9FDAA14B67936F4C5B",
+    "Fistnet.Genepool.Godot/Main.cs": "C0A6595C2909AD095360BC448DE589914B9A085691FEF09075EE552B33590B6A",
+    "Fistnet.Genepool.Godot/Main.Inspector.cs": "EE172FE41DF90FCDA00B7AAE76B48F6BABBEE4604D0576BF4807225B64E1488F",
+    "Fistnet.Genepool.Godot/Main.Layout.cs": "5B5C45F4C91BC4ECFD763D583A8EA941B0E110CB010B634658748C8339BFD5A7",
+    "Fistnet.Genepool.Godot/Main.Views.cs": "1022CD6841CB86D0AB42B6307CD00CAADF0829137469F391E982D5F3A87E318B",
+    "Fistnet.Genepool.Godot/MinimapView.cs": "D39CC2642C2B80843F6782010B6A520780A9A9281C6EACCF2D528E854A2FF165",
+    "Fistnet.Genepool.Godot/SettingsDialog.cs": "7591957E86ED141F960E5937A07FA6BC977AE5B729D7BB1706D04CAE19F4B55C",
+    "Fistnet.Genepool.Godot/Verification/Step4Fixtures.cs": "C30E23F3113C45F3C662C0CB2D295CE7394186CB5BDDA5E33F4DCC9530652C19",
+    "Fistnet.Genepool.Godot/Verification/VerificationRunner.cs": "694F34275C245C5E5739F9A814F42D155888BCAA353F542D7ED233837DD625C1",
+    "Fistnet.Genepool.Godot/Verification/VerificationRunner.Perspective.cs": "589CE9137CB2DBD20EF24A448C66018211DF786FAB15B8C7809545EDA6506D61",
+    "Fistnet.Genepool.Godot/Verification/VerificationRunner.Step4.cs": "54BB139F961FAF3F815354D599733CFF8057812B122D427A9765FD2407AB3499",
+    "Fistnet.Genepool.Godot/Verification/VerificationRunner.Step5.cs": "11431EBEE8ACF67771B02444B2E6A96ED09A4317357AE0904BFC37F11DC8C343",
+    "Fistnet.Genepool.Godot/Verification/ViewerFixtures.cs": "892744E6E231E93EEACFB5556CC529B8E08A846692C3383A47AD778392B218B5",
+    "Fistnet.Genepool.Tests/ActionTransactionTests.cs": "0DF77FFA51F86B8F23C76B1139C69012D094A1DD00867C7AD1DD5A86EAAFF804",
+    "Fistnet.Genepool.Tests/DiagnosticScenarios.cs": "9C1F88EE92647832466FE9855C2E7886815F910A2D5549FB510C760D6BF95670",
+    "Fistnet.Genepool.Tests/DiagnosticsTests.cs": "AAD494A999679640A73D4D28A0CBB7628169CB20A9722C0C4656DC402E829AC5",
+    "Fistnet.Genepool.Tests/DnaActionTests.cs": "76398BD793F87F0EA3AA1DB45D2A62A5EFD91B3342F81B12A7260E490C6E0D7C",
+    "Fistnet.Genepool.Tests/EcologyMetrics.cs": "25D6E7E10D912217B26F3676D5BF713EAA9C3805D4F51A80C5692A862A4F7D79",
+    "Fistnet.Genepool.Tests/EcologyScenarios.cs": "72C3DCB4E4089D022189C2A0515FE11F46AE774DCAEAFCD5C605373113CBB135",
+    "Fistnet.Genepool.Tests/EcologyTests.cs": "DD4E3FCD449AB9B9C0CF2C5600A0E47497F7E1CACBC47D71A35E2445515C46A6",
+    "Fistnet.Genepool.Tests/FounderSetupTests.cs": "85CAC6C98EE412DF0EFD97849091E04A5F5D080B8ABB6901E754DA44F315AC0A",
+    "Fistnet.Genepool.Tests/GodotBoardTests.cs": "0532E0B05721AFF8708A0E2B7992FD2395E8E8723333CF55BF9D63198C2C85C9",
+    "Fistnet.Genepool.Tests/GodotSettingsTests.cs": "E524EAF67C5418D9BB661F208B7F347108C83CABA2DA008EBD58ED787D0EB277",
+    "Fistnet.Genepool.Tests/IntegrationTests.cs": "D66AEE80B5D7E14782322C6A8D1C07B85AD36BB7685600AE0A0D89035DE381CB",
+    "Fistnet.Genepool.Tests/LearningPolicyTests.cs": "9544E23495717B643480E244053C696474E9A569034AE71ADF54D528DD4AD3D7",
+    "Fistnet.Genepool.Tests/MechanicsTests.cs": "E51D511101679496AF2FDCBB7A850F72DFDD98BE6F2F95F3AD9A00DBBC7DF3EC",
+    "Fistnet.Genepool.Tests/PerformanceBenchmarks.cs": "A06129AFE1FEC4C89F596B7ED87542DD5AF8AA912F4402008D29E1510EA85167",
+    "Fistnet.Genepool.Tests/Program.cs": "A5A3A8AFD9848A5B2EA8C23330A94F689ADB2AE2C17CFCE64D13BF8C81CE1ED0",
+    "Fistnet.Genepool.Tests/RegressionTests.cs": "98F6C7F564E4315F2792BEC7A478515DFE7F3F2376FBD81B6AD61860DB32692D",
+    "Fistnet.Genepool.Tests/RenderingTests.cs": "432AD91A86DBA2CB791E226930422F81E6EA659F7CAC44CC30D116BDE5F0B9D2",
+    "Fistnet.Genepool.Tests/ScenarioRunner.cs": "BE3F731E2813C921B5FC5DA3F4DB5BEFF5AB014267A31AA1F0A81DFAEC2B42DA",
+    "Fistnet.Genepool.Tests/SeasonObservationBenchmark.cs": "03BBE23DC6860FB411B0319E8C7D84AC84999647C26FDD833EA0E64A85099904",
+    "Fistnet.Genepool.Tests/SeasonObservationTests.cs": "7217B4A0F3BC15DAB7D588C4809964C8E041855B19380C681FB178AAE155B9BE",
+    "Fistnet.Genepool.Tests/TestSupport.cs": "14F743DCFCA78644250A114986267A13492732BB1D7CBEE66926A0E0B7E8E286",
+    "Fistnet.Genepool.Tests/UiDiagnosticsTests.cs": "4C10A42F6C1F60421A806E1CCD8A6D1E5E87CDCCB1C6001454CDBFC272C8047D",
+    "Fistnet.Genepool.Tests/ViewerBackendTests.cs": "DBDD356C3B02E9049AF65814DBE9C5A3691351053578BACA86131774E8319C3A",
+    "Fistnet.Genepool.Visualization/BoardView.cs": "6D244DCC58ACC13CFA232452E4ABF270C1B9817E4A76D48FFBFF6B6AF68AE613",
+    "Fistnet.Genepool.Visualization/GameboardBitmap.cs": "D9C6B3DD0F6403B8811696F7A716F0258138CCD0E051F5093782225397C0BD66",
+    "Fistnet.Genepool.Visualization/PopulationHistory.cs": "79A228D3BD781E88868C0DD59BF54AFE0014077A4EBFD2842F2B3B94A923E2B8",
+    "Fistnet.Genepool.Visualization/PopulationHistoryView.cs": "B37A04BF630DD9A269B958973C11117F482DFA9208525C8EF8F115EC75CD900B",
+    "Fistnet.Genepool.Visualization/SimulationHistoryView.cs": "864267600B37273AF377787D3B7AD3CDC2ECE84995FA8AED8C69083C687337E1",
+    "Fistnet.Genepool.Visualization/Properties/AssemblyInfo.cs": "4096413F80607A3B0290F70A6532F2886F226CFEB8786FC7587B247DEA4AF0F8"
+  }
+}

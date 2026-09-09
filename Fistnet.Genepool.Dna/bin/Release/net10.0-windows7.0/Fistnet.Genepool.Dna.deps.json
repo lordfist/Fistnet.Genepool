@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "Fistnet.Genepool.Dna/1.0.0": {
+        "runtime": {
+          "Fistnet.Genepool.Dna.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Fistnet.Genepool.Dna/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

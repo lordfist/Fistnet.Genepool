@@ -1,5 +1,5 @@
 {
-  "atUtc": "2026-09-07T19:11:35.4042592+00:00",
+  "atUtc": "2026-09-08T11:22:27.2958405+00:00",
   "mode": "smoke",
   "ok": true,
   "failures": 0,
@@ -74,82 +74,82 @@
     {
       "name": "GPU food zero sample lies inside image",
       "passed": true,
-      "detail": "point=(411.75, 17.25); image=1467x678"
+      "detail": "point=(455.04, 17.04); image=1512x636"
     },
     {
       "name": "GPU food zero",
       "passed": true,
-      "detail": "pixel(411,17)=17,28,37; expected 17,28,37, tolerance2"
+      "detail": "pixel(455,17)=17,28,37; expected 17,28,37, tolerance2"
     },
     {
       "name": "GPU food under organism sample lies inside image",
       "passed": true,
-      "detail": "point=(431.25, 43.25); image=1467x678"
+      "detail": "point=(473.28, 41.36); image=1512x636"
     },
     {
       "name": "GPU food under organism",
       "passed": true,
-      "detail": "pixel(431,43)=46,76,66; expected 46,76,66, tolerance2"
+      "detail": "pixel(473,41)=46,76,66; expected 46,76,66, tolerance2"
     },
     {
       "name": "GPU food maximum and axes sample lies inside image",
       "passed": true,
-      "detail": "point=(437.75, 36.75); image=1467x678"
+      "detail": "point=(479.36, 35.28); image=1512x636"
     },
     {
       "name": "GPU food maximum and axes",
       "passed": true,
-      "detail": "pixel(437,36)=116,188,136; expected 116,188,136, tolerance2"
+      "detail": "pixel(479,35)=116,188,136; expected 116,188,136, tolerance2"
     },
     {
       "name": "GPU black DNA stays visible sample lies inside image",
       "passed": true,
-      "detail": "point=(431.25, 43.25); image=1467x678"
+      "detail": "point=(473.28, 41.36); image=1512x636"
     },
     {
       "name": "GPU black DNA stays visible",
       "passed": true,
-      "detail": "pixel(431,43)=95,112,133; expected 95,112,133, tolerance2"
+      "detail": "pixel(473,41)=95,112,133; expected 95,112,133, tolerance2"
     },
     {
       "name": "GPU organism color sample lies inside image",
       "passed": true,
-      "detail": "point=(444.25, 43.25); image=1467x678"
+      "detail": "point=(485.44003, 41.36); image=1512x636"
     },
     {
       "name": "GPU organism color",
       "passed": true,
-      "detail": "pixel(444,43)=255,96,96; expected 255,96,96, tolerance2"
+      "detail": "pixel(485,41)=255,96,96; expected 255,96,96, tolerance2"
     },
     {
       "name": "GPU other patterns dim rather than disappear sample lies inside image",
       "passed": true,
-      "detail": "point=(444.25, 43.25); image=1467x678"
+      "detail": "point=(485.44003, 41.36); image=1512x636"
     },
     {
       "name": "GPU other patterns dim rather than disappear",
       "passed": true,
-      "detail": "pixel(444,43)=79,40,44; expected 79,40,44, tolerance2"
+      "detail": "pixel(485,41)=79,40,44; expected 79,40,44, tolerance2"
     },
     {
       "name": "GPU combined organism center sample lies inside image",
       "passed": true,
-      "detail": "point=(431.25, 43.25); image=1467x678"
+      "detail": "point=(473.28, 41.36); image=1512x636"
     },
     {
       "name": "GPU combined organism center",
       "passed": true,
-      "detail": "pixel(431,43)=95,112,133; expected 95,112,133, tolerance2"
+      "detail": "pixel(473,41)=95,112,133; expected 95,112,133, tolerance2"
     },
     {
       "name": "GPU combined food surround sample lies inside image",
       "passed": true,
-      "detail": "point=(428.78, 40.78); image=1467x678"
+      "detail": "point=(470.9696, 39.049606); image=1512x636"
     },
     {
       "name": "GPU combined food surround",
       "passed": true,
-      "detail": "pixel(428,40)=46,76,66; expected 46,76,66, tolerance2"
+      "detail": "pixel(470,39)=46,76,66; expected 46,76,66, tolerance2"
     },
     {
       "name": "Godot input selects the displayed empty cell",
@@ -234,7 +234,7 @@
     {
       "name": "pause handler acknowledges without waiting for simulation",
       "passed": true,
-      "detail": "0.24 ms"
+      "detail": "0.33 ms"
     },
     {
       "name": "pause settles at completed boundary",
@@ -326,7 +326,7 @@
     {
       "kind": "input_handler",
       "input": "Pause signal during blocked season",
-      "acknowledgeMilliseconds": 0.2357,
+      "acknowledgeMilliseconds": 0.3294,
       "excludes": "OS input delivery and physical display latency"
     },
     {
@@ -342,7 +342,7 @@
   ],
   "process": {
     "exitCode": 0,
-    "elapsedSeconds": 4.547,
+    "elapsedSeconds": 4.594,
     "deadlineSeconds": 90,
     "engineErrors": []
   }

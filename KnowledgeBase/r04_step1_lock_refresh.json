@@ -1,0 +1,364 @@
+{
+  "actor": "Genepool Analyzer",
+  "at_utc": "2026-09-09T11:34:25.393491+00:00",
+  "ok": true,
+  "restores": [
+    {
+      "command": [
+        "C:\\Program Files\\dotnet\\dotnet.EXE",
+        "restore",
+        "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.slnx",
+        "--configfile",
+        "D:\\Posao\\Fistnet.Genepool\\NuGet.Config",
+        "--disable-parallel",
+        "--force-evaluate",
+        "-p:RestoreLockedMode=false",
+        "-p:UseSharedCompilation=false",
+        "-nr:false",
+        "-nologo",
+        "-verbosity:minimal",
+        "-p:Configuration=Debug",
+        "-p:Platform=Any CPU",
+        "-p:TargetPlatformSdkRootOverride=D:\\Windows Kits\\10",
+        "-p:TargetPlatformDisplayName=Windows"
+      ],
+      "tool": "dotnet.EXE",
+      "exit_code": 0,
+      "seconds": 1.781,
+      "warning_codes": {},
+      "errors": [],
+      "output_tail": [
+        "  Determining projects to restore...",
+        "  Restored D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Fistnet.Genepool.Godot.csproj (in 540 ms).",
+        "  Restored D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.App\\Fistnet.Genepool.App.csproj (in 8 ms).",
+        "  Restored D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\Fistnet.Genepool.Tests.csproj (in 3 ms).",
+        "  Restored D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Visualization\\Fistnet.Genepool.Visualization.csproj (in 2 ms).",
+        "  Restored D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Fistnet.Genepool.Dna.csproj (in 12 ms).",
+        "  Restored D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\Fistnet.Genepool.Control.csproj (in 1 ms)."
+      ]
+    },
+    {
+      "command": [
+        "C:\\Program Files\\dotnet\\dotnet.EXE",
+        "restore",
+        "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.slnx",
+        "--configfile",
+        "D:\\Posao\\Fistnet.Genepool\\NuGet.Config",
+        "--disable-parallel",
+        "--force-evaluate",
+        "-p:RestoreLockedMode=false",
+        "-p:UseSharedCompilation=false",
+        "-nr:false",
+        "-nologo",
+        "-verbosity:minimal",
+        "-p:Configuration=Release",
+        "-p:Platform=Any CPU",
+        "-p:TargetPlatformSdkRootOverride=D:\\Windows Kits\\10",
+        "-p:TargetPlatformDisplayName=Windows"
+      ],
+      "tool": "dotnet.EXE",
+      "exit_code": 0,
+      "seconds": 1.438,
+      "warning_codes": {},
+      "errors": [],
+      "output_tail": [
+        "  Determining projects to restore...",
+        "  Restored D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.App\\Fistnet.Genepool.App.csproj (in 109 ms).",
+        "  Restored D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\Fistnet.Genepool.Control.csproj (in 6 ms).",
+        "  Restored D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\Fistnet.Genepool.Tests.csproj (in 4 ms).",
+        "  Restored D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Visualization\\Fistnet.Genepool.Visualization.csproj (in 2 ms).",
+        "  Restored D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Fistnet.Genepool.Godot.csproj (in 128 ms).",
+        "  Restored D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Fistnet.Genepool.Dna.csproj (in 2 ms)."
+      ]
+    }
+  ],
+  "before": {
+    "packages.Debug.lock.json": {
+      "version": 1,
+      "dependencies": {
+        "net9.0-windows7.0": {
+          "Godot.SourceGenerators": {
+            "type": "Direct",
+            "requested": "[4.7.2, )",
+            "resolved": "4.7.2",
+            "contentHash": "PeYESFlRxlmeClrPhlMINhVvt2HiKnx2Ux/FYA10rimDevHljji3/jmRZOMo9XDNQsZzPH4uQmDyPgQgzTFvAg=="
+          },
+          "GodotSharp": {
+            "type": "Direct",
+            "requested": "[4.7.2, )",
+            "resolved": "4.7.2",
+            "contentHash": "EPvfayB7b7MrBNdASvy86jRS5AbM9dprkVivcRD80g+ngn2M8KAIrBQH4NhyQL+pwxni0xVnuqhD9AFpZeNQpw=="
+          },
+          "GodotSharpEditor": {
+            "type": "Direct",
+            "requested": "[4.7.2, )",
+            "resolved": "4.7.2",
+            "contentHash": "Fuf2rNvajla9N8Z+ksxsSIt326wsjpB2F2uZCtxkdfWIsApabCHy5fsE2EKxOlQ4NaINGdgMIv62D0n583qe1A==",
+            "dependencies": {
+              "GodotSharp": "4.7.2"
+            }
+          },
+          "fistnet.genepool.control": {
+            "type": "Project",
+            "dependencies": {
+              "Fistnet.Genepool.Dna": "[1.0.0, )"
+            }
+          },
+          "fistnet.genepool.dna": {
+            "type": "Project"
+          }
+        }
+      }
+    },
+    "packages.ExportRelease.lock.json": {
+      "version": 1,
+      "dependencies": {
+        "net9.0-windows7.0": {
+          "Godot.SourceGenerators": {
+            "type": "Direct",
+            "requested": "[4.7.2, )",
+            "resolved": "4.7.2",
+            "contentHash": "PeYESFlRxlmeClrPhlMINhVvt2HiKnx2Ux/FYA10rimDevHljji3/jmRZOMo9XDNQsZzPH4uQmDyPgQgzTFvAg=="
+          },
+          "GodotSharp": {
+            "type": "Direct",
+            "requested": "[4.7.2, )",
+            "resolved": "4.7.2",
+            "contentHash": "EPvfayB7b7MrBNdASvy86jRS5AbM9dprkVivcRD80g+ngn2M8KAIrBQH4NhyQL+pwxni0xVnuqhD9AFpZeNQpw=="
+          },
+          "fistnet.genepool.control": {
+            "type": "Project",
+            "dependencies": {
+              "Fistnet.Genepool.Dna": "[1.0.0, )"
+            }
+          },
+          "fistnet.genepool.dna": {
+            "type": "Project"
+          }
+        }
+      }
+    }
+  },
+  "tool_queries": [
+    {
+      "command": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Installer\\vswhere.exe",
+        "-latest",
+        "-products",
+        "*",
+        "-version",
+        "[18.0,19.0)",
+        "-requires",
+        "Microsoft.Component.MSBuild",
+        "-format",
+        "json",
+        "-utf8"
+      ],
+      "tool": "vswhere.exe",
+      "exit_code": 0,
+      "seconds": 0.031,
+      "warning_codes": {},
+      "errors": [],
+      "output_tail": [
+        "      \"productSemanticVersion\": \"18.9.3+12128.139\",",
+        "      \"requiredEngineVersion\": \"4.9.50.62957\"",
+        "    },",
+        "    \"properties\": {",
+        "      \"campaignId\": \"2500:4940ae724c7f4da3832d706c2f349487\",",
+        "      \"channelManifestId\": \"VisualStudio.18.Release/18.9.3+12128.139\",",
+        "      \"includeRecommended\": \"1\",",
+        "      \"nickname\": \"\",",
+        "      \"setupEngineFilePath\": \"C:\\\\Program Files (x86)\\\\Microsoft Visual Studio\\\\Installer\\\\setup.exe\"",
+        "    }",
+        "  }",
+        "]"
+      ]
+    },
+    {
+      "command": [
+        "C:\\Program Files\\dotnet\\dotnet.EXE",
+        "--version"
+      ],
+      "tool": "dotnet.EXE",
+      "exit_code": 0,
+      "seconds": 0.141,
+      "warning_codes": {},
+      "errors": [],
+      "output_tail": [
+        "10.0.401"
+      ]
+    },
+    {
+      "command": [
+        "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.exe",
+        "-version",
+        "-nologo"
+      ],
+      "tool": "MSBuild.exe",
+      "exit_code": 0,
+      "seconds": 0.063,
+      "warning_codes": {},
+      "errors": [],
+      "output_tail": [
+        "18.9.1.35102"
+      ]
+    },
+    {
+      "command": [
+        "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.exe",
+        "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Fistnet.Genepool.Dna.csproj",
+        "-getProperty:NETCoreSdkVersion",
+        "-nologo",
+        "-p:TargetPlatformSdkRootOverride=D:\\Windows Kits\\10",
+        "-p:TargetPlatformDisplayName=Windows"
+      ],
+      "tool": "MSBuild.exe",
+      "exit_code": 0,
+      "seconds": 0.328,
+      "warning_codes": {},
+      "errors": [],
+      "output_tail": [
+        "10.0.401"
+      ]
+    },
+    {
+      "command": [
+        "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.exe",
+        "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Fistnet.Genepool.Godot.csproj",
+        "-getProperty:NETCoreSdkVersion",
+        "-nologo",
+        "-p:TargetPlatformSdkRootOverride=D:\\Windows Kits\\10",
+        "-p:TargetPlatformDisplayName=Windows"
+      ],
+      "tool": "MSBuild.exe",
+      "exit_code": 0,
+      "seconds": 0.39,
+      "warning_codes": {},
+      "errors": [],
+      "output_tail": [
+        "10.0.401"
+      ]
+    },
+    {
+      "command": [
+        "C:\\Program Files\\dotnet\\dotnet.EXE",
+        "nuget",
+        "list",
+        "source",
+        "--configfile",
+        "D:\\Posao\\Fistnet.Genepool\\NuGet.Config"
+      ],
+      "tool": "dotnet.EXE",
+      "exit_code": 0,
+      "seconds": 0.297,
+      "warning_codes": {},
+      "errors": [],
+      "output_tail": [
+        "Registered Sources:",
+        "  1.  nuget.org [Enabled]",
+        "      https://api.nuget.org/v3/index.json"
+      ]
+    }
+  ],
+  "windows_sdk": {
+    "path": "D:\\Windows Kits\\10",
+    "discovery_source": "HKLM\\SOFTWARE\\Microsoft\\Windows Kits\\Installed Roots\\KitsRoot10 (registry view 256)"
+  },
+  "toolchain": {
+    "dotnet": "C:\\Program Files\\dotnet\\dotnet.EXE",
+    "sdk_version": "10.0.401",
+    "msbuild": "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.exe",
+    "msbuild_version": "18.9.1.35102",
+    "msbuild_sdk_version": "10.0.401",
+    "godot_msbuild_sdk_version": "10.0.401",
+    "visual_studio_version": "18.9.12128.139",
+    "global_json": {
+      "sdk": {
+        "version": "10.0.401",
+        "rollForward": "latestPatch",
+        "allowPrerelease": false
+      }
+    },
+    "nuget_config": "D:\\Posao\\Fistnet.Genepool\\NuGet.Config",
+    "package_sources": "Registered Sources:\r\n  1.  nuget.org [Enabled]\r\n      https://api.nuget.org/v3/index.json",
+    "package_sources_scope": "Explicit restore uses only root NuGet.Config",
+    "sdk_resolver_settings": "Visual Studio NuGet SDK resolver uses the standard inherited NuGet settings chain including root NuGet.Config; user configuration is not redirected by APPDATA",
+    "package_cache": "D:\\Posao\\Fistnet.Genepool\\.tools\\nuget\\packages",
+    "windows_sdk": {
+      "path": "D:\\Windows Kits\\10",
+      "discovery_source": "HKLM\\SOFTWARE\\Microsoft\\Windows Kits\\Installed Roots\\KitsRoot10 (registry view 256)"
+    }
+  },
+  "scratch_removed": true,
+  "after": {
+    "packages.Debug.lock.json": {
+      "version": 1,
+      "dependencies": {
+        "net10.0-windows7.0": {
+          "Godot.SourceGenerators": {
+            "type": "Direct",
+            "requested": "[4.7.2, )",
+            "resolved": "4.7.2",
+            "contentHash": "PeYESFlRxlmeClrPhlMINhVvt2HiKnx2Ux/FYA10rimDevHljji3/jmRZOMo9XDNQsZzPH4uQmDyPgQgzTFvAg=="
+          },
+          "GodotSharp": {
+            "type": "Direct",
+            "requested": "[4.7.2, )",
+            "resolved": "4.7.2",
+            "contentHash": "EPvfayB7b7MrBNdASvy86jRS5AbM9dprkVivcRD80g+ngn2M8KAIrBQH4NhyQL+pwxni0xVnuqhD9AFpZeNQpw=="
+          },
+          "GodotSharpEditor": {
+            "type": "Direct",
+            "requested": "[4.7.2, )",
+            "resolved": "4.7.2",
+            "contentHash": "Fuf2rNvajla9N8Z+ksxsSIt326wsjpB2F2uZCtxkdfWIsApabCHy5fsE2EKxOlQ4NaINGdgMIv62D0n583qe1A==",
+            "dependencies": {
+              "GodotSharp": "4.7.2"
+            }
+          },
+          "fistnet.genepool.control": {
+            "type": "Project",
+            "dependencies": {
+              "Fistnet.Genepool.Dna": "[1.0.0, )"
+            }
+          },
+          "fistnet.genepool.dna": {
+            "type": "Project"
+          }
+        }
+      }
+    },
+    "packages.ExportRelease.lock.json": {
+      "version": 1,
+      "dependencies": {
+        "net10.0-windows7.0": {
+          "Godot.SourceGenerators": {
+            "type": "Direct",
+            "requested": "[4.7.2, )",
+            "resolved": "4.7.2",
+            "contentHash": "PeYESFlRxlmeClrPhlMINhVvt2HiKnx2Ux/FYA10rimDevHljji3/jmRZOMo9XDNQsZzPH4uQmDyPgQgzTFvAg=="
+          },
+          "GodotSharp": {
+            "type": "Direct",
+            "requested": "[4.7.2, )",
+            "resolved": "4.7.2",
+            "contentHash": "EPvfayB7b7MrBNdASvy86jRS5AbM9dprkVivcRD80g+ngn2M8KAIrBQH4NhyQL+pwxni0xVnuqhD9AFpZeNQpw=="
+          },
+          "fistnet.genepool.control": {
+            "type": "Project",
+            "dependencies": {
+              "Fistnet.Genepool.Dna": "[1.0.0, )"
+            }
+          },
+          "fistnet.genepool.dna": {
+            "type": "Project"
+          }
+        }
+      }
+    }
+  },
+  "sha256": {
+    "packages.Debug.lock.json": "AF74828D8BD52E6B4EDB9993EB09DE6FF879A34C9365833BF2A049F2919760F0",
+    "packages.ExportRelease.lock.json": "FE89010C2445A573BE98D3C299A400665C7969055A56797D9F45C3DC95CA6E29"
+  }
+}

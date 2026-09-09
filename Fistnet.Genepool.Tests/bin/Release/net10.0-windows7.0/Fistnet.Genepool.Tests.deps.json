@@ -1,0 +1,93 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "Fistnet.Genepool.Tests/1.0.0": {
+        "dependencies": {
+          "Fistnet.Genepool.App": "1.0.0",
+          "Fistnet.Genepool.Control": "1.0.0",
+          "Fistnet.Genepool.Dna": "1.0.0",
+          "Fistnet.Genepool.Visualization": "1.0.0"
+        },
+        "runtime": {
+          "Fistnet.Genepool.Tests.dll": {}
+        }
+      },
+      "Fistnet.Genepool.App/1.0.0": {
+        "dependencies": {
+          "Fistnet.Genepool.Control": "1.0.0",
+          "Fistnet.Genepool.Dna": "1.0.0",
+          "Fistnet.Genepool.Visualization": "1.0.0"
+        },
+        "runtime": {
+          "Fistnet.Genepool.App.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Fistnet.Genepool.Control/1.0.0": {
+        "dependencies": {
+          "Fistnet.Genepool.Dna": "1.0.0"
+        },
+        "runtime": {
+          "Fistnet.Genepool.Control.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Fistnet.Genepool.Dna/1.0.0": {
+        "runtime": {
+          "Fistnet.Genepool.Dna.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Fistnet.Genepool.Visualization/1.0.0": {
+        "dependencies": {
+          "Fistnet.Genepool.Control": "1.0.0",
+          "Fistnet.Genepool.Dna": "1.0.0"
+        },
+        "runtime": {
+          "Fistnet.Genepool.Visualization.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Fistnet.Genepool.Tests/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Fistnet.Genepool.App/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Fistnet.Genepool.Control/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Fistnet.Genepool.Dna/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Fistnet.Genepool.Visualization/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

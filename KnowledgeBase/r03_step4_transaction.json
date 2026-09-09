@@ -1,0 +1,1595 @@
+{
+  "actor": "Genepool Analyzer",
+  "note": "Record authorized R03 Step4 implementation, verification, repaired dense-action slowdown and owner-review checkpoint.",
+  "upsert_records": [
+    {
+      "id": "DEC-0033",
+      "kind": "owner_decision",
+      "status": "active",
+      "statement": "Owner authorizes starting R03 Step4 implementation from the accepted visual design and will review the work after sleeping.",
+      "uncertainty": "Implementation authorization is not acceptance of the result, Step5 authorization, ecological trial permission or approval of deferred food-rule changes.",
+      "source_refs": [],
+      "related_record_ids": [
+        "DEC-0031",
+        "REC-0010"
+      ],
+      "origin": {
+        "actor": "User",
+        "recorded_by": "Genepool Analyzer",
+        "type": "direct_user_message",
+        "recorded_at_utc": "2026-09-08T01:54:13.964569+00:00",
+        "quote": "Good! You can start now with step 4. I am off to sleep. I will see what you did in the morning :D"
+      },
+      "derivation": {}
+    },
+    {
+      "id": "FACT-0055",
+      "kind": "observed_fact",
+      "status": "active",
+      "statement": "R03 Step4 implemented: Godot depth viewport with angled/top-down cameras, brown-green procedural terrain, identity-stable mould colonies, four detail presets, visible-cell batching, true world edges, minimap/focus navigation, complete detached season outcomes and level3 all-visible muted versus level4 focused feedback. Existing Godot2D and WinForms entry points remain.",
+      "uncertainty": "Working implementation awaiting owner review. Finite colors and procedural shapes are display aids; effects refer to action-time cells. Fast playback samples whole seasons. Step5 and deferred food mechanics remain unstarted; no simulation rules/RNG changed.",
+      "source_refs": [
+        "SRC-0261",
+        "SRC-0262",
+        "SRC-0263",
+        "SRC-0264",
+        "SRC-0265",
+        "SRC-0266",
+        "SRC-0267",
+        "SRC-0268",
+        "SRC-0269",
+        "SRC-0270",
+        "SRC-0271",
+        "SRC-0272",
+        "SRC-0273",
+        "SRC-0274",
+        "SRC-0275",
+        "SRC-0276",
+        "SRC-0277",
+        "SRC-0278"
+      ],
+      "related_record_ids": [
+        "DEC-0033",
+        "DEC-0031",
+        "REC-0010",
+        "FACT-0056",
+        "DEC-0027"
+      ],
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_implementation_and_verification",
+        "recorded_at_utc": "2026-09-08T01:54:13.964569+00:00"
+      },
+      "derivation": {
+        "artifacts": [
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\IMPROVEMENT_RESULT_R03_STEP4.md",
+            "sha256": "494F4602109CEFFC5283000B4D202E48E2011015D20679C43167936249119AD7",
+            "bytes": 10498
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step4_builds.json",
+            "sha256": "EB810AAE73D99C6F4F6D71B3EC03C225C78075B7319B8752F869151268758ED0",
+            "bytes": 105486
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step4_tests_debug.json",
+            "sha256": "23B46089D67AF4DE8EAC9E16488B83005E722414B684E9A2EC22D8BB739F7763",
+            "bytes": 6685
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step4_tests_release.json",
+            "sha256": "2677191E7B376DEB866DF93A31BCB675E39DAC8323E0BAC509973CE47E4F813E",
+            "bytes": 6687
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step4_verification.json",
+            "sha256": "1A111A0AFFF4364A55491839B373608AD7EA895C3E31D3CA84DE64D4DD5104C5",
+            "bytes": 14704
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step4_headless.json",
+            "sha256": "0D4A389EF06DEE1C48A9F130603DCD1BB2D0D069AF4B7B4A0A9FB195DF5204D6",
+            "bytes": 13120
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step4_benchmark.json",
+            "sha256": "91402A060A7B31D092D6518F40A6C07063372655A08C12F3E1956A2E66413FD7",
+            "bytes": 7122
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_godot_verification.json",
+            "sha256": "AE92839B116FA3EBFA21BF60237697F5C0E6AF04EBE2853BCFFFDCD55AE17A45",
+            "bytes": 9359
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step4_habitat.png",
+            "sha256": "139D7A238609D702AC16F8739EE397B0CDE51E485095304AADE1EAD7DD348AFD",
+            "bytes": 1877594
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step4_organism.png",
+            "sha256": "CA8B3F1791268C15DB24136685A86ED6E958D2D9BF36F3BDF4093D4D007FA926",
+            "bytes": 1672289
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step4_inspect.png",
+            "sha256": "203D2BB5D0D6B38B4642D859E1A9F800A7423505F8B82BC46AFEF2170D6C2991",
+            "bytes": 1385903
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\tools\\run_godot_checks.py",
+            "sha256": "6543DB25A6A5CB10F7098EB763988512F8DB46A9EE97787BF7643075550F8847",
+            "bytes": 3250
+          }
+        ],
+        "source_horizon_utc": "2026-09-08T01:54:13.964569+00:00",
+        "base_commit": "14b39d984555897e88c279ed21651df7c114e05d",
+        "owner_acceptance": "pending",
+        "author": "Genepool Analyzer with bounded transient helper contributions",
+        "locators": [
+          "BoardView3D: camera/culling/material batches",
+          "BoardView3D.Actions: actual outcomes, death/history and batched muted geometry",
+          "ViewCollector.ActorCompleted/Born/Capture: complete current cohort and actual child placement",
+          "Main.Views/MinimapView: navigation and viewer selection"
+        ]
+      }
+    },
+    {
+      "id": "FACT-0056",
+      "kind": "observed_fact",
+      "status": "active",
+      "statement": "R03 Step4 verification passed: whole-solution VS2022 Debug/Release zero-error builds,159/159 console checks in each;106 GPU,94 headless and62 retained2D checks. RX6800 1920x1080 overview0/1000/10000 and denseL3 all about60FPS,p95 about16.7ms,complete10Hz replay. Initial denseL3 p9542.94ms repaired through batched cues without dropping364visible outcomes.",
+      "uncertainty": "Local bounded synthetic workloads, not ecological or physical presentation results.106existingCA1416warnings. Full collector-versus-none cost is measured separately and is not the incremental regression from the old viewer. IDEdebugging/physicalDPI/export not newly established. KnownSRC0115historical-byte gap persists.",
+      "source_refs": [
+        "SRC-0261",
+        "SRC-0262",
+        "SRC-0263",
+        "SRC-0264",
+        "SRC-0265",
+        "SRC-0266",
+        "SRC-0267",
+        "SRC-0268",
+        "SRC-0269",
+        "SRC-0270",
+        "SRC-0271",
+        "SRC-0272",
+        "SRC-0273",
+        "SRC-0274",
+        "SRC-0275",
+        "SRC-0276",
+        "SRC-0277",
+        "SRC-0278"
+      ],
+      "related_record_ids": [
+        "FACT-0055",
+        "DEC-0033"
+      ],
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_implementation_and_verification",
+        "recorded_at_utc": "2026-09-08T01:54:13.964569+00:00"
+      },
+      "derivation": {
+        "artifacts": [
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\IMPROVEMENT_RESULT_R03_STEP4.md",
+            "sha256": "494F4602109CEFFC5283000B4D202E48E2011015D20679C43167936249119AD7",
+            "bytes": 10498
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step4_builds.json",
+            "sha256": "EB810AAE73D99C6F4F6D71B3EC03C225C78075B7319B8752F869151268758ED0",
+            "bytes": 105486
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step4_tests_debug.json",
+            "sha256": "23B46089D67AF4DE8EAC9E16488B83005E722414B684E9A2EC22D8BB739F7763",
+            "bytes": 6685
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step4_tests_release.json",
+            "sha256": "2677191E7B376DEB866DF93A31BCB675E39DAC8323E0BAC509973CE47E4F813E",
+            "bytes": 6687
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step4_verification.json",
+            "sha256": "1A111A0AFFF4364A55491839B373608AD7EA895C3E31D3CA84DE64D4DD5104C5",
+            "bytes": 14704
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step4_headless.json",
+            "sha256": "0D4A389EF06DEE1C48A9F130603DCD1BB2D0D069AF4B7B4A0A9FB195DF5204D6",
+            "bytes": 13120
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step4_benchmark.json",
+            "sha256": "91402A060A7B31D092D6518F40A6C07063372655A08C12F3E1956A2E66413FD7",
+            "bytes": 7122
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_godot_verification.json",
+            "sha256": "AE92839B116FA3EBFA21BF60237697F5C0E6AF04EBE2853BCFFFDCD55AE17A45",
+            "bytes": 9359
+          }
+        ],
+        "gpu_measurements": [
+          {
+            "kind": "depth_renderer",
+            "population": 0,
+            "detailLevel": 1,
+            "angled": true,
+            "width": 1920,
+            "height": 1080,
+            "visibleFoodInstances": 10000,
+            "visibleOrganismInstances": 0,
+            "visibleActionCues": 0,
+            "requestedWarmupSeconds": 3,
+            "requestedSampleSeconds": 7,
+            "actualSampleSeconds": 7.0163914,
+            "requestedSnapshotHz": 10,
+            "expectedSampleSnapshots": 70,
+            "sampleSnapshotsReplayed": 70,
+            "sampleSnapshotsSkipped": 0,
+            "frames": 421,
+            "averageFps": 60.00235391657313,
+            "p95FrameMilliseconds": 16.6805,
+            "maxFrameMilliseconds": 16.8966,
+            "p95UploadMilliseconds": 4.6682,
+            "sampleCoverageComplete": true,
+            "replayCoverageComplete": true,
+            "frameBudgetPassed": true,
+            "simulationCalculationIncluded": false,
+            "notes": "Detached snapshots. Dense detail3 includes full 10000-outcome batches at10Hz; no spatial event cap. Intervals include replay stamping and UI upload, but exclude simulation calculation. Main-loop observations, not hardware presentation timings."
+          },
+          {
+            "kind": "depth_renderer",
+            "population": 1000,
+            "detailLevel": 1,
+            "angled": true,
+            "width": 1920,
+            "height": 1080,
+            "visibleFoodInstances": 10000,
+            "visibleOrganismInstances": 1000,
+            "visibleActionCues": 0,
+            "requestedWarmupSeconds": 3,
+            "requestedSampleSeconds": 7,
+            "actualSampleSeconds": 7.0163853,
+            "requestedSnapshotHz": 10,
+            "expectedSampleSnapshots": 70,
+            "sampleSnapshotsReplayed": 70,
+            "sampleSnapshotsSkipped": 0,
+            "frames": 421,
+            "averageFps": 60.002406082231545,
+            "p95FrameMilliseconds": 16.6803,
+            "maxFrameMilliseconds": 29.953,
+            "p95UploadMilliseconds": 5.3669,
+            "sampleCoverageComplete": true,
+            "replayCoverageComplete": true,
+            "frameBudgetPassed": true,
+            "simulationCalculationIncluded": false,
+            "notes": "Detached snapshots. Dense detail3 includes full 10000-outcome batches at10Hz; no spatial event cap. Intervals include replay stamping and UI upload, but exclude simulation calculation. Main-loop observations, not hardware presentation timings."
+          },
+          {
+            "kind": "depth_renderer",
+            "population": 10000,
+            "detailLevel": 1,
+            "angled": true,
+            "width": 1920,
+            "height": 1080,
+            "visibleFoodInstances": 10000,
+            "visibleOrganismInstances": 10000,
+            "visibleActionCues": 0,
+            "requestedWarmupSeconds": 3,
+            "requestedSampleSeconds": 7,
+            "actualSampleSeconds": 7.016387,
+            "requestedSnapshotHz": 10,
+            "expectedSampleSnapshots": 70,
+            "sampleSnapshotsReplayed": 70,
+            "sampleSnapshotsSkipped": 0,
+            "frames": 421,
+            "averageFps": 60.00239154425205,
+            "p95FrameMilliseconds": 16.6804,
+            "maxFrameMilliseconds": 23.7773,
+            "p95UploadMilliseconds": 7.2231,
+            "sampleCoverageComplete": true,
+            "replayCoverageComplete": true,
+            "frameBudgetPassed": true,
+            "simulationCalculationIncluded": false,
+            "notes": "Detached snapshots. Dense detail3 includes full 10000-outcome batches at10Hz; no spatial event cap. Intervals include replay stamping and UI upload, but exclude simulation calculation. Main-loop observations, not hardware presentation timings."
+          },
+          {
+            "kind": "depth_renderer",
+            "population": 10000,
+            "detailLevel": 3,
+            "angled": true,
+            "width": 1920,
+            "height": 1080,
+            "visibleFoodInstances": 364,
+            "visibleOrganismInstances": 364,
+            "visibleActionCues": 364,
+            "requestedWarmupSeconds": 3,
+            "requestedSampleSeconds": 7,
+            "actualSampleSeconds": 7.0163868,
+            "requestedSnapshotHz": 10,
+            "expectedSampleSnapshots": 70,
+            "sampleSnapshotsReplayed": 70,
+            "sampleSnapshotsSkipped": 0,
+            "frames": 421,
+            "averageFps": 60.00239325460221,
+            "p95FrameMilliseconds": 16.6924,
+            "maxFrameMilliseconds": 28.6855,
+            "p95UploadMilliseconds": 0.5976,
+            "sampleCoverageComplete": true,
+            "replayCoverageComplete": true,
+            "frameBudgetPassed": true,
+            "simulationCalculationIncluded": false,
+            "notes": "Detached snapshots. Dense detail3 includes full 10000-outcome batches at10Hz; no spatial event cap. Intervals include replay stamping and UI upload, but exclude simulation calculation. Main-loop observations, not hardware presentation timings."
+          }
+        ],
+        "observation_cost_report": "r03_step4_tests_release.json",
+        "initial_failures": [
+          "Sandbox NuGet access; host build resolved it",
+          "Incorrect KeepHeight enum and Material hiding warning fixed",
+          "Sandbox GPU certificate-store error; host run clean",
+          "DenseL3 initial54.16FPS,p9542.94ms,max58.48ms; same364cue workload passes after batching"
+        ],
+        "debug_assembly_identities_rechecked": true
+      }
+    },
+    {
+      "id": "REC-0010",
+      "kind": "recommendation",
+      "status": "active",
+      "statement": "The accepted R03 Step4 design is now implemented and verified under DEC-0033; current result FACT-0055/0056 and IMPROVEMENT_RESULT_R03_STEP4.md await owner review. No Step5 start or food-cycle change.",
+      "uncertainty": "Owner accepted the design, not yet this implementation. Performance and interaction coverage are bounded as recorded in FACT-0056.",
+      "source_refs": [
+        "SRC-0228",
+        "SRC-0226",
+        "SRC-0149",
+        "SRC-0162",
+        "SRC-0217",
+        "SRC-0258",
+        "SRC-0259"
+      ],
+      "related_record_ids": [
+        "DEC-0028",
+        "FACT-0052",
+        "FACT-0053",
+        "REC-0009",
+        "DEC-0027",
+        "DEC-0029",
+        "DEC-0030",
+        "DEC-0031"
+      ],
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "bounded_design_and_static_review",
+        "recorded_at_utc": "2026-09-07T23:06:09.087658+00:00"
+      },
+      "derivation": {
+        "artifacts": [
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_STEP4_DESIGN_PROPOSAL.md",
+            "sha256": "7BEE013BBE2DF0570A2CD9CD2568BB56DD612E6D2AE9CC460C32FCBEB529B31B",
+            "bytes": 15844
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_STEP4_DESIGN_PROMPTS.md",
+            "sha256": "B94E2166BD1E21546E87D559C8B612BA96360764B87F679FF096C31D6C6DBB6D",
+            "bytes": 12559
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_STEP4_DESIGN\\concept-a-board.png",
+            "sha256": "2A701BA928305F62ABBB59160EFB95AEA0D29419C599D755C60015423B65AC77",
+            "bytes": 2446474
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_STEP4_DESIGN\\concept-b-zoom.png",
+            "sha256": "E0BEDE9CB1D862E72A1B087BCAE4667C84731A1EA29940A1EEEC00C0D41C1071",
+            "bytes": 2299232
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_STEP4_DESIGN\\concept-c-actions.png",
+            "sha256": "DAFE01632E8D4F3FF24140BCFA57C80B17E86C18C3F84EA729CE638460ED6F67",
+            "bytes": 2086519
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_STEP4_MOULD_DIRECTION.md",
+            "sha256": "A853D995803C472AF6BB4575C97EA7AFB72AAB8B161BC1F16B0F2F4365EF4ADF",
+            "bytes": 1652
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_STEP4_DESIGN\\concept-d-mould.png",
+            "sha256": "041CF2F99E4A079AA032B5166EE6E3CA15CF79F6D24BFEBC0D5A0E9B5C6ADE7D",
+            "bytes": 2735023
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_STEP4_REVIEW_MOCKUPS.md",
+            "sha256": "7A94EE802B3BFFFAD475FAB13F67FE8A09842CBFEFA971AC47FE520299FF182C",
+            "bytes": 13074
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_STEP4_DESIGN\\concept-e-habitat.png",
+            "sha256": "7C529FA55DC37C68371EA22FBB2BF2CB5F5D5A61D610D03625EEA0548460DF40",
+            "bytes": 2703631
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_STEP4_DESIGN\\concept-f-organism.png",
+            "sha256": "F46D717F4DDECA2DF4A7BBE9FD4B5468242FE251C60184C51D564C3998D413A7",
+            "bytes": 2726425
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_STEP4_DESIGN\\concept-g-inspect.png",
+            "sha256": "FA803D9FAE71AD144F67CDDF946651C09C626FF7B2BB1F5E8512DB62AFBB091E",
+            "bytes": 2905179
+          }
+        ],
+        "image_method": "Built-in image-generation; inspected A/B/C, targeted outcome/adjacency corrections applied to final B/C. Concepts only.",
+        "external_documentation_observed_at": "2026-09-07T23:06:09.087658+00:00",
+        "review": "Transient independent static design review found no material corrections; root retains ownership.",
+        "next_action": "Stop for owner review of implemented Step4.",
+        "current_appearance_addendum": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_STEP4_MOULD_DIRECTION.md",
+        "revision2_review": "Transient read-only reviewer confirmed true-edge/partial-cell rendering, all-visible-cell coverage, bounded honest event summaries and explicit selected-organism focus.",
+        "latest_visual_review": {
+          "at_utc": "2026-09-07T23:55:47.518938+00:00",
+          "actor": "Genepool Analyzer",
+          "request_quote": "Ok before i fully accept this proposal, draw out a few images so we can see what exactly are you planning.",
+          "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_STEP4_REVIEW_MOCKUPS.md",
+          "method": "Three built-in image generations using approved mould concept as reference; one targeted Organism consistency edit; final visual inspection.",
+          "coverage": "Habitat L2 quiet continuous crop; Organism L3 muted viewport feedback; Inspect L4 focused completed Move East. Level1 unchanged in proposal.",
+          "limits": "Illustrative independent mockups, not implemented UI, deterministic linked states, measured event coverage or accepted design. Exact cell counts and incidental artwork are illustrative. No source edits or tests."
+        },
+        "owner_acceptance_record": "DEC-0031"
+      },
+      "created_at": "2026-09-07T23:07:23+00:00",
+      "updated_at": "2026-09-08T00:01:02+00:00",
+      "resolution_notes": [
+        {
+          "actor": "Genepool Analyzer",
+          "at_utc": "2026-09-07T23:23:25.029585+00:00",
+          "prior_statement": "R03 Step4 proposal: a flat modest 3D board with top-down/angled orthographic presets and retained2D option; quiet brown→olive→green food; larger outlined rounded organisms; four progressive detail levels (World, Habitat, Organism, Inspect); selected completed-action cues first and a separately bounded Nearby event-feed extension if approved. Three generated visual concepts and a full design proposal are ready for owner review.",
+          "prior_uncertainty": "Proposed design only; no source, dependency, settings, simulation or trial changes. Mockups are illustrative, not actual data, production models, proof of performance or accepted art. Palette mappings do not uniquely identify every pattern or create species. Exact visual thresholds, event caps and 3D costs require implementation checks. Step5 polish and food cycle remain deferred. Whole-solution VS2022 compatibility remains mandatory.",
+          "note": "DEC-0029 selects the mould-like visual direction for organism appearance. Addendum and Concept D supersede rounded-body artwork only; earlier proposal/images remain comparison drafts. Overall proposal and implementation remain pending.",
+          "record_ids": [
+            "DEC-0029"
+          ]
+        },
+        {
+          "actor": "Genepool Analyzer",
+          "at_utc": "2026-09-07T23:37:26.452235+00:00",
+          "prior_statement": "R03 Step4 proposal retains the modest 3D board, brown-to-green food, four progressive detail bands and selected-action cues. Owner now prefers flat mould-like organism patches with irregular branching edges (DEC-0029), replacing the rounded body direction. Current appearance addendum is R03_STEP4_MOULD_DIRECTION.md; other design choices remain provisional.",
+          "prior_uncertainty": "Mould-like appearance is owner-preferred; overall Step4 design and implementation remain pending. Generated visuals do not establish biological rules or 3D performance. No source/runtime changes; VS2022 compatibility and deferred food scope remain. Earlier proposal artifacts retain their dated appearance baseline.",
+          "prior_proposal_identity": {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_STEP4_DESIGN_PROPOSAL.md",
+            "sha256": "173825FCD1C377E6C05A709DF992955558DE64C4C27B565EA45B7EA33C031454",
+            "bytes": 11537
+          },
+          "note": "DEC-0030 approves grass/dirt and defines viewport-only rendering with true borders, all-visible-cell muted actions at level3 and focused full actions at level4. Proposal revision2 incorporates these and prior mould preference. This supersedes Selected-default/optional-Nearby, rounded-body and mini-board-border draft instructions. No implementation started. Earlier document hash is historical; generated comparison images remain unchanged.",
+          "record_ids": [
+            "DEC-0030",
+            "DEC-0029"
+          ]
+        },
+        {
+          "actor": "Genepool Analyzer",
+          "at_utc": "2026-09-08T00:00:25.998793+00:00",
+          "prior_statement": "R03 Step4 revised design: owner-preferred mould-like colonies and approved grass/dirt; zoom2–4 render the visible area with true world borders only and discoverable panning. Level3 shows muted actual-action cues throughout all visible cells; level4 emphasizes only the focused organism and its affected targets. A bounded viewport-wide observation extension is now required by the design, replacing the optional Nearby idea. Current proposal revision2 incorporates DEC-0029/0030; implementation remains unstarted.",
+          "prior_uncertainty": "Specified appearance and viewport/action rules are owner decisions, not blanket acceptance of all technical choices or coding authorization. Exact zoom thresholds and rendering/event representation remain provisional. Existing selected-only data is insufficient for level3. Spatial coverage must not be silently reduced to selected/nearest-N cells; sampled seasons or combined events must be labeled honestly. VS2022 compatibility and deferred food mechanics remain unchanged.",
+          "prior_document_identities": [
+            {
+              "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_STEP4_DESIGN_PROPOSAL.md",
+              "sha256": "74E0287BA80DFB87652BB909473C981C85747310393F562FA90492FD21CB97F6",
+              "bytes": 15221
+            },
+            {
+              "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_STEP4_REVIEW_MOCKUPS.md",
+              "sha256": "C538BB65C20704B9EF3D543305B9FDB0D571FEA3157743A8FD86D24F5E9D2F18",
+              "bytes": 12764
+            }
+          ],
+          "note": "DEC-0031 accepts the current design and updated visual set as a working direction with later refinement. Documentation acceptance notes updated; proposal substance and images unchanged. Implementation remains unstarted; owner asks what comes next.",
+          "record_ids": [
+            "DEC-0031"
+          ]
+        },
+        {
+          "actor": "Genepool Analyzer",
+          "at_utc": "2026-09-08T01:54:13.964569+00:00",
+          "prior_statement": "Owner accepted R03 Step4 design revision2 and updated Habitat/Organism/Inspect mockups as the current working direction (DEC-0031), with later visual refinement allowed. Mould colonies, grass/dirt, continuous cropped zoom views, muted viewport-wide level3 cues and focused level4 details form the accepted design. Implementation remains unstarted.",
+          "note": "DEC-0033 starts implementation; FACT-0055/0056 record completed engineering and current checks. Owner result review remains pending.",
+          "record_ids": [
+            "DEC-0033",
+            "FACT-0055",
+            "FACT-0056"
+          ]
+        }
+      ],
+      "current_resolution": {
+        "record_ids": [
+          "FACT-0055",
+          "FACT-0056"
+        ],
+        "statement": "Implementation ready for owner review; design history retained."
+      }
+    },
+    {
+      "id": "FACT-0053",
+      "kind": "observed_fact",
+      "status": "active",
+      "statement": "Current Godot combined mode uses a one-third-cell-width organism square over a full-cell food tile. Food palette is #111C25→#74BC88; organism RGB derives from ordered action types. Zoom is continuous1×–12× with a cell-grid threshold, not four detail representations. ViewFrame has per-cell food/id/color/pattern but detailed actions only for the selected organism, last16 observations since selection. Generic birth/death/selected-action markers are capped64. World-wide detailed action cues require new bounded observation data.",
+      "uncertainty": "Static inspection plus the saved 1920×1080 preview; no new runtime measurements. Blending/low contrast is a design inference consistent with owner feedback. Selected action effects differ from whole-season resource changes. Chosen mutation/infection actions do not establish specific changed genes.",
+      "source_refs": [
+        "SRC-0228",
+        "SRC-0226",
+        "SRC-0149",
+        "SRC-0162",
+        "SRC-0143"
+      ],
+      "related_record_ids": [
+        "DEC-0028",
+        "REC-0010"
+      ],
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "bounded_design_and_static_review",
+        "recorded_at_utc": "2026-09-07T23:06:09.087658+00:00"
+      },
+      "derivation": {
+        "locators": [
+          "BoardView2D.cs: UploadFrame (organismSide), ZoomAt, overlay grid/marker expiry",
+          "BoardPresentation.cs: FoodArgb, OrganismArgb",
+          "ViewFrame.cs: ViewCell, ViewAction, ViewOrganism",
+          "ViewCollector.cs: Select, Marker, ActorCompleted, PatternCode, Capture",
+          "ActionModel.cs: ActionOutcome.Mutations not exposed in ViewAction"
+        ],
+        "helper": "Transient read-only component inspection independently reviewed by root against relevant current text."
+      },
+      "created_at": "2026-09-07T23:07:23+00:00",
+      "updated_at": "2026-09-07T23:07:23+00:00",
+      "current_resolution": {
+        "record_ids": [
+          "FACT-0055",
+          "FACT-0056"
+        ],
+        "statement": "The earlier limits describe the prior2D implementation. Step4 adds a separate depth view and complete-season outcome feed; earlier2Dappearance/markers remain available."
+      }
+    },
+    {
+      "id": "DEC-0031",
+      "kind": "owner_decision",
+      "status": "active",
+      "statement": "Owner accepts the current R03 Step4 visual design and updated mockups as good for now, explicitly allowing later improvement, and asks what comes next.",
+      "uncertainty": "Acceptance is of the design direction; implementation is unstarted. The message asks for next steps, without instructing coding to begin. No ecological trial or deferred food-rule change is authorized.",
+      "source_refs": [],
+      "related_record_ids": [
+        "REC-0010",
+        "DEC-0028",
+        "DEC-0029",
+        "DEC-0030"
+      ],
+      "origin": {
+        "actor": "User",
+        "recorded_by": "Genepool Analyzer",
+        "type": "direct_user_message",
+        "recorded_at_utc": "2026-09-08T00:00:25.998793+00:00",
+        "quote": "Ok this looks good for now. We can improve on this later. Accepted. Whats next?"
+      },
+      "derivation": {
+        "accepted_design": "R03_STEP4_DESIGN_PROPOSAL.md revision2 and latest E/F/G visual review set",
+        "next_step_recommendation_actor": "Genepool Analyzer",
+        "next_step_recommendation": "Implement Step4 increment1: ground, mould appearance, modest depth camera; verify and present working-view review before navigation and action increments."
+      },
+      "created_at": "2026-09-08T00:01:02+00:00",
+      "updated_at": "2026-09-08T00:01:02+00:00",
+      "current_resolution": {
+        "record_ids": [
+          "DEC-0033",
+          "FACT-0055",
+          "FACT-0056"
+        ],
+        "statement": "Subsequent owner instruction starts implementation; engineering complete and owner review pending."
+      }
+    }
+  ],
+  "upsert_sources": [
+    {
+      "source_id": "SRC-0149",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\ViewFrame.cs"
+      },
+      "sha256": "B2D5AFFDF9F8DB78F7D5E62A504D41B16E9F76929A4D0773236A9068D4175F9A",
+      "size_bytes": 2224,
+      "observed_at_utc": "2026-09-06T19:18:14.163711+00:00",
+      "title": "Fistnet.Genepool.Control/ViewFrame.cs (R02 Part3)",
+      "status": "Authorized Part3 implementation; automated verification in FACT-0042; owner review pending",
+      "coverage": "Implemented and inspected for Part3 by Seed Analyzer and transient component helpers. Named classes/methods provide locators; exact build/test/performance scope in FACT-0040..FACT-0042. Historical coverage stays with predecessor.",
+      "origin": {
+        "actor": "Seed Analyzer",
+        "type": "authorized_R02_Part3_implementation",
+        "attribution": "Transient viewer, backend and performance helpers; root integration and canonical verification."
+      },
+      "supersession": {
+        "source_id": "SRC-0261",
+        "actor": "Genepool Analyzer",
+        "reason": "Authorized R03 Step4 implementation and verification",
+        "record_ids": [
+          "DEC-0033",
+          "FACT-0055"
+        ],
+        "observed_at": "2026-09-08T01:54:14+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "14b39d984555897e88c279ed21651df7c114e05d",
+          "path": "Fistnet.Genepool.Control/ViewFrame.cs",
+          "blob_oid": "e9d32eb19b5ad716e4cd8e4abea90355a3aef140",
+          "transform": "raw"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0261",
+      "title": "Fistnet.Genepool.Control/ViewFrame.cs (R02 Part3)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\ViewFrame.cs"
+      },
+      "sha256": "A4551BD84938088F61D3F814E4530C6FF19B69BC3E819304E4045A79683616C1",
+      "size_bytes": 2729,
+      "observed_at_utc": "2026-09-08T01:54:14+00:00",
+      "supersedes": "SRC-0149",
+      "status": "registered current working-file version",
+      "coverage": "Relevant implementation or documentation changes inspected by root and bounded helpers; integrated builds and checks documented in IMPROVEMENT_RESULT_R03_STEP4.md. Exact current bytes hashed."
+    },
+    {
+      "source_id": "SRC-0162",
+      "title": "Fistnet.Genepool.Control/ViewCollector.cs (R02 Part4)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\ViewCollector.cs"
+      },
+      "sha256": "68A592ACCA7E9DB8EB987A59D4ACABB26110A8C43D26E701A44D284F825E510D",
+      "size_bytes": 9256,
+      "observed_at_utc": "2026-09-06T21:28:07+00:00",
+      "supersedes": "SRC-0148",
+      "status": "Part4 implementation; owner review pending",
+      "coverage": "Changed portions inspected against verified Part3/earlier predecessor. Functional, passive-reference and bounded ecological coverage recorded in FACT-0044..0046; earlier coverage stays with predecessor.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R02_Part4_implementation",
+        "attribution": "Transient founder, metrics and runner helpers; root integration, review, execution and canonical KB."
+      },
+      "supersession": {
+        "source_id": "SRC-0262",
+        "actor": "Genepool Analyzer",
+        "reason": "Authorized R03 Step4 implementation and verification",
+        "record_ids": [
+          "DEC-0033",
+          "FACT-0055"
+        ],
+        "observed_at": "2026-09-08T01:54:14+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "14b39d984555897e88c279ed21651df7c114e05d",
+          "path": "Fistnet.Genepool.Control/ViewCollector.cs",
+          "blob_oid": "f4bf417db62d2335ad2c6cce8503d9260542e7b8",
+          "transform": "raw"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0262",
+      "title": "Fistnet.Genepool.Control/ViewCollector.cs (R02 Part4)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\ViewCollector.cs"
+      },
+      "sha256": "68839A8D40666E9530CE5F7BF4D1256251E61923671079D8D3908FACD8ADF616",
+      "size_bytes": 11364,
+      "observed_at_utc": "2026-09-08T01:54:14+00:00",
+      "supersedes": "SRC-0162",
+      "status": "registered current working-file version",
+      "coverage": "Relevant implementation or documentation changes inspected by root and bounded helpers; integrated builds and checks documented in IMPROVEMENT_RESULT_R03_STEP4.md. Exact current bytes hashed."
+    },
+    {
+      "source_id": "SRC-0166",
+      "title": "Fistnet.Genepool.Tests/README.md (R02 Part4)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\README.md"
+      },
+      "sha256": "EDD62F14244C20F0015D05BA2922036F9CA856178FD8A5D9439FEF701918A8AA",
+      "size_bytes": 24251,
+      "observed_at_utc": "2026-09-06T21:28:09+00:00",
+      "supersedes": "SRC-0141",
+      "status": "Part4 implementation; owner review pending",
+      "coverage": "Changed portions inspected against verified Part3/earlier predecessor. Functional, passive-reference and bounded ecological coverage recorded in FACT-0044..0046; earlier coverage stays with predecessor.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R02_Part4_implementation",
+        "attribution": "Transient founder, metrics and runner helpers; root integration, review, execution and canonical KB."
+      },
+      "supersession": {
+        "source_id": "SRC-0263",
+        "actor": "Genepool Analyzer",
+        "reason": "Authorized R03 Step4 implementation and verification",
+        "record_ids": [
+          "DEC-0033",
+          "FACT-0055"
+        ],
+        "observed_at": "2026-09-08T01:54:15+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/step4-SRC-0166.md"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0263",
+      "title": "Fistnet.Genepool.Tests/README.md (R02 Part4)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\README.md"
+      },
+      "sha256": "667D7196276FF0680FBB4A5FF501773440C4263BA83DE41703FA9F38233CFCD5",
+      "size_bytes": 25078,
+      "observed_at_utc": "2026-09-08T01:54:15+00:00",
+      "supersedes": "SRC-0166",
+      "status": "registered current working-file version",
+      "coverage": "Relevant implementation or documentation changes inspected by root and bounded helpers; integrated builds and checks documented in IMPROVEMENT_RESULT_R03_STEP4.md. Exact current bytes hashed."
+    },
+    {
+      "source_id": "SRC-0225",
+      "title": "Fistnet.Genepool.Tests/Program.cs (R02 Part4)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\Program.cs"
+      },
+      "sha256": "3378FDF6CF07F2D279D57E6E622F7EE43E97C4892ED0111CA355E58CA3F0EB06",
+      "size_bytes": 7179,
+      "observed_at_utc": "2026-09-07T19:22:26+00:00",
+      "supersedes": "SRC-0165",
+      "status": "registered current working-file version",
+      "coverage": "Exact current bytes hashed; substantive coverage must be recorded separately.",
+      "supersession": {
+        "source_id": "SRC-0264",
+        "actor": "Genepool Analyzer",
+        "reason": "Authorized R03 Step4 implementation and verification",
+        "record_ids": [
+          "DEC-0033",
+          "FACT-0055"
+        ],
+        "observed_at": "2026-09-08T01:54:15+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/step4-SRC-0225.cs"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0264",
+      "title": "Fistnet.Genepool.Tests/Program.cs (R02 Part4)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\Program.cs"
+      },
+      "sha256": "A5A3A8AFD9848A5B2EA8C23330A94F689ADB2AE2C17CFCE64D13BF8C81CE1ED0",
+      "size_bytes": 7376,
+      "observed_at_utc": "2026-09-08T01:54:15+00:00",
+      "supersedes": "SRC-0225",
+      "status": "registered current working-file version",
+      "coverage": "Relevant implementation or documentation changes inspected by root and bounded helpers; integrated builds and checks documented in IMPROVEMENT_RESULT_R03_STEP4.md. Exact current bytes hashed."
+    },
+    {
+      "source_id": "SRC-0233",
+      "title": "Fistnet.Genepool.Godot/Main.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Main.cs"
+      },
+      "sha256": "9A9DE25AA6BE9682993AF609E58737977D4BE9FCE28FB02E56DFDFF6CE453428",
+      "size_bytes": 8836,
+      "observed_at_utc": "2026-09-07T19:22:24.877464+00:00",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_2D_implementation",
+        "record_ids": [
+          "DEC-0025"
+        ]
+      },
+      "coverage": "Complete new implementation/configuration source; compiled and exercised where applicable. Godot UID files are editor-generated identity metadata, not simulation evidence.",
+      "supersession": {
+        "source_id": "SRC-0265",
+        "actor": "Genepool Analyzer",
+        "reason": "Authorized R03 Step4 implementation and verification",
+        "record_ids": [
+          "DEC-0033",
+          "FACT-0055"
+        ],
+        "observed_at": "2026-09-08T01:54:15+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "14b39d984555897e88c279ed21651df7c114e05d",
+          "path": "Fistnet.Genepool.Godot/Main.cs",
+          "blob_oid": "ff0cde887b612460081924bdeb275e12b4b1c44f",
+          "transform": "raw"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0265",
+      "title": "Fistnet.Genepool.Godot/Main.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Main.cs"
+      },
+      "sha256": "C0A6595C2909AD095360BC448DE589914B9A085691FEF09075EE552B33590B6A",
+      "size_bytes": 9261,
+      "observed_at_utc": "2026-09-08T01:54:15+00:00",
+      "supersedes": "SRC-0233",
+      "status": "registered current working-file version",
+      "coverage": "Relevant implementation or documentation changes inspected by root and bounded helpers; integrated builds and checks documented in IMPROVEMENT_RESULT_R03_STEP4.md. Exact current bytes hashed."
+    },
+    {
+      "source_id": "SRC-0235",
+      "title": "Fistnet.Genepool.Godot/Main.Inspector.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Main.Inspector.cs"
+      },
+      "sha256": "86AB95A0178D557B4F75516CE9CB2CF1DAC8D9688B192034111A61D1C2F96D68",
+      "size_bytes": 10572,
+      "observed_at_utc": "2026-09-07T19:22:24.877464+00:00",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_2D_implementation",
+        "record_ids": [
+          "DEC-0025"
+        ]
+      },
+      "coverage": "Complete new implementation/configuration source; compiled and exercised where applicable. Godot UID files are editor-generated identity metadata, not simulation evidence.",
+      "supersession": {
+        "source_id": "SRC-0266",
+        "actor": "Genepool Analyzer",
+        "reason": "Authorized R03 Step4 implementation and verification",
+        "record_ids": [
+          "DEC-0033",
+          "FACT-0055"
+        ],
+        "observed_at": "2026-09-08T01:54:16+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "14b39d984555897e88c279ed21651df7c114e05d",
+          "path": "Fistnet.Genepool.Godot/Main.Inspector.cs",
+          "blob_oid": "0d502de7edb3d960ee6dc9aa0016aa8ba98ae93b",
+          "transform": "raw"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0266",
+      "title": "Fistnet.Genepool.Godot/Main.Inspector.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Main.Inspector.cs"
+      },
+      "sha256": "F86F40C6BBA8474E6BA193066ECD2FB3C8F47B46DBAE52DDA0D13A3A4C4B1B17",
+      "size_bytes": 11668,
+      "observed_at_utc": "2026-09-08T01:54:16+00:00",
+      "supersedes": "SRC-0235",
+      "status": "registered current working-file version",
+      "coverage": "Relevant implementation or documentation changes inspected by root and bounded helpers; integrated builds and checks documented in IMPROVEMENT_RESULT_R03_STEP4.md. Exact current bytes hashed."
+    },
+    {
+      "source_id": "SRC-0237",
+      "title": "Fistnet.Genepool.Godot/Main.Layout.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Main.Layout.cs"
+      },
+      "sha256": "D881717B5A4C9EC64151E7C7B8DD45CD8986838FCF81BD04B6483708E7616A63",
+      "size_bytes": 14169,
+      "observed_at_utc": "2026-09-07T19:22:24.877464+00:00",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_2D_implementation",
+        "record_ids": [
+          "DEC-0025"
+        ]
+      },
+      "coverage": "Complete new implementation/configuration source; compiled and exercised where applicable. Godot UID files are editor-generated identity metadata, not simulation evidence.",
+      "supersession": {
+        "source_id": "SRC-0267",
+        "actor": "Genepool Analyzer",
+        "reason": "Authorized R03 Step4 implementation and verification",
+        "record_ids": [
+          "DEC-0033",
+          "FACT-0055"
+        ],
+        "observed_at": "2026-09-08T01:54:16+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "14b39d984555897e88c279ed21651df7c114e05d",
+          "path": "Fistnet.Genepool.Godot/Main.Layout.cs",
+          "blob_oid": "b644e90073f77cea5d69a234a165400f6a903bf7",
+          "transform": "raw"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0267",
+      "title": "Fistnet.Genepool.Godot/Main.Layout.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Main.Layout.cs"
+      },
+      "sha256": "5B5C45F4C91BC4ECFD763D583A8EA941B0E110CB010B634658748C8339BFD5A7",
+      "size_bytes": 16582,
+      "observed_at_utc": "2026-09-08T01:54:16+00:00",
+      "supersedes": "SRC-0237",
+      "status": "registered current working-file version",
+      "coverage": "Relevant implementation or documentation changes inspected by root and bounded helpers; integrated builds and checks documented in IMPROVEMENT_RESULT_R03_STEP4.md. Exact current bytes hashed."
+    },
+    {
+      "source_id": "SRC-0242",
+      "title": "Fistnet.Genepool.Godot/README.md",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\README.md"
+      },
+      "sha256": "B381D02E8CDE814167C5325726B156C15DC141EC8D4BCC7C4AFE1C25CA639314",
+      "size_bytes": 8296,
+      "observed_at_utc": "2026-09-07T19:22:24.877464+00:00",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_2D_implementation",
+        "record_ids": [
+          "DEC-0025"
+        ]
+      },
+      "coverage": "Complete new viewer setup, operation and verification documentation.",
+      "supersession": {
+        "source_id": "SRC-0268",
+        "actor": "Genepool Analyzer",
+        "reason": "Authorized R03 Step4 implementation and verification",
+        "record_ids": [
+          "DEC-0033",
+          "FACT-0055"
+        ],
+        "observed_at": "2026-09-08T01:54:17+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "14b39d984555897e88c279ed21651df7c114e05d",
+          "path": "Fistnet.Genepool.Godot/README.md",
+          "blob_oid": "3d35788a6e0043ccb7f1588624f080d10c33c246",
+          "transform": "raw"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0268",
+      "title": "Fistnet.Genepool.Godot/README.md",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\README.md"
+      },
+      "sha256": "CF11F630D7299D9D5A6A248B5218AA5BC83903CAB37EA743D6E71DAC214168F3",
+      "size_bytes": 11450,
+      "observed_at_utc": "2026-09-08T01:54:17+00:00",
+      "supersedes": "SRC-0242",
+      "status": "registered current working-file version",
+      "coverage": "Relevant implementation or documentation changes inspected by root and bounded helpers; integrated builds and checks documented in IMPROVEMENT_RESULT_R03_STEP4.md. Exact current bytes hashed."
+    },
+    {
+      "source_id": "SRC-0249",
+      "title": "Fistnet.Genepool.Godot/Verification/VerificationRunner.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Verification\\VerificationRunner.cs"
+      },
+      "sha256": "6C0C74049A7441DAC8B0D2E9BFAB78C3F67C9CFAC3A393DF8ED720E470F30614",
+      "size_bytes": 29770,
+      "observed_at_utc": "2026-09-07T19:22:24.877464+00:00",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_R03_2D_implementation",
+        "record_ids": [
+          "DEC-0025"
+        ]
+      },
+      "coverage": "Complete new implementation/configuration source; compiled and exercised where applicable. Godot UID files are editor-generated identity metadata, not simulation evidence.",
+      "supersession": {
+        "source_id": "SRC-0269",
+        "actor": "Genepool Analyzer",
+        "reason": "Authorized R03 Step4 implementation and verification",
+        "record_ids": [
+          "DEC-0033",
+          "FACT-0055"
+        ],
+        "observed_at": "2026-09-08T01:54:17+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "14b39d984555897e88c279ed21651df7c114e05d",
+          "path": "Fistnet.Genepool.Godot/Verification/VerificationRunner.cs",
+          "blob_oid": "b91c3a86247d11f5b8a3712d434afde7baa2b7c1",
+          "transform": "raw"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0269",
+      "title": "Fistnet.Genepool.Godot/Verification/VerificationRunner.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Verification\\VerificationRunner.cs"
+      },
+      "sha256": "694F34275C245C5E5739F9A814F42D155888BCAA353F542D7ED233837DD625C1",
+      "size_bytes": 30396,
+      "observed_at_utc": "2026-09-08T01:54:17+00:00",
+      "supersedes": "SRC-0249",
+      "status": "registered current working-file version",
+      "coverage": "Relevant implementation or documentation changes inspected by root and bounded helpers; integrated builds and checks documented in IMPROVEMENT_RESULT_R03_STEP4.md. Exact current bytes hashed."
+    },
+    {
+      "source_id": "SRC-0270",
+      "title": "Fistnet.Genepool.Godot/BoardView3D.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\BoardView3D.cs"
+      },
+      "sha256": "80D29246CF9B0BA9C9D829EFFEA5C46E8B802698F1A57A9F2BE1E1B762BEF475",
+      "size_bytes": 19476,
+      "observed_at_utc": "2026-09-08T01:54:13.964569+00:00",
+      "status": "implemented current working-tree source; owner review pending",
+      "coverage": "New implementation authored by root or bounded transient helper, reviewed and integrated; relevant contracts verified in R03 Step4 current reports. Exact bytes hashed."
+    },
+    {
+      "source_id": "SRC-0271",
+      "title": "Fistnet.Genepool.Godot/BoardView3D.Materials.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\BoardView3D.Materials.cs"
+      },
+      "sha256": "8E4FAA1A0DA675EAE0E9C79698A10557E55CCCF03AA0257E06E19D192FD63D97",
+      "size_bytes": 4912,
+      "observed_at_utc": "2026-09-08T01:54:13.964569+00:00",
+      "status": "implemented current working-tree source; owner review pending",
+      "coverage": "New implementation authored by root or bounded transient helper, reviewed and integrated; relevant contracts verified in R03 Step4 current reports. Exact bytes hashed."
+    },
+    {
+      "source_id": "SRC-0272",
+      "title": "Fistnet.Genepool.Godot/BoardView3D.Actions.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\BoardView3D.Actions.cs"
+      },
+      "sha256": "D8D0B75A3E294DC6CD8E811E30D096F27975C1F57C5C853036F95BD28DF11C3C",
+      "size_bytes": 16419,
+      "observed_at_utc": "2026-09-08T01:54:13.964569+00:00",
+      "status": "implemented current working-tree source; owner review pending",
+      "coverage": "New implementation authored by root or bounded transient helper, reviewed and integrated; relevant contracts verified in R03 Step4 current reports. Exact bytes hashed."
+    },
+    {
+      "source_id": "SRC-0273",
+      "title": "Fistnet.Genepool.Godot/Main.Views.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Main.Views.cs"
+      },
+      "sha256": "E3074C3420013B8B3E695CC819731949F4ACE2E7C28FD80AA805BB17F0643042",
+      "size_bytes": 3945,
+      "observed_at_utc": "2026-09-08T01:54:13.964569+00:00",
+      "status": "implemented current working-tree source; owner review pending",
+      "coverage": "New implementation authored by root or bounded transient helper, reviewed and integrated; relevant contracts verified in R03 Step4 current reports. Exact bytes hashed."
+    },
+    {
+      "source_id": "SRC-0274",
+      "title": "Fistnet.Genepool.Godot/MinimapView.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\MinimapView.cs"
+      },
+      "sha256": "E43B2B7785C132262920DB6CA8FFFB427A112012B45BDFF96E1AA2388D6EB664",
+      "size_bytes": 4009,
+      "observed_at_utc": "2026-09-08T01:54:13.964569+00:00",
+      "status": "implemented current working-tree source; owner review pending",
+      "coverage": "New implementation authored by root or bounded transient helper, reviewed and integrated; relevant contracts verified in R03 Step4 current reports. Exact bytes hashed."
+    },
+    {
+      "source_id": "SRC-0275",
+      "title": "Fistnet.Genepool.Godot/Verification/Step4Fixtures.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Verification\\Step4Fixtures.cs"
+      },
+      "sha256": "C30E23F3113C45F3C662C0CB2D295CE7394186CB5BDDA5E33F4DCC9530652C19",
+      "size_bytes": 2855,
+      "observed_at_utc": "2026-09-08T01:54:13.964569+00:00",
+      "status": "implemented current working-tree source; owner review pending",
+      "coverage": "New implementation authored by root or bounded transient helper, reviewed and integrated; relevant contracts verified in R03 Step4 current reports. Exact bytes hashed."
+    },
+    {
+      "source_id": "SRC-0276",
+      "title": "Fistnet.Genepool.Godot/Verification/VerificationRunner.Step4.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Verification\\VerificationRunner.Step4.cs"
+      },
+      "sha256": "344C0B89007AB0C1F960D857EBA602BA7AE9E91FF4F3613D50043D9D8F9D61CD",
+      "size_bytes": 27600,
+      "observed_at_utc": "2026-09-08T01:54:13.964569+00:00",
+      "status": "implemented current working-tree source; owner review pending",
+      "coverage": "New implementation authored by root or bounded transient helper, reviewed and integrated; relevant contracts verified in R03 Step4 current reports. Exact bytes hashed."
+    },
+    {
+      "source_id": "SRC-0277",
+      "title": "Fistnet.Genepool.Tests/SeasonObservationTests.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\SeasonObservationTests.cs"
+      },
+      "sha256": "7217B4A0F3BC15DAB7D588C4809964C8E041855B19380C681FB178AAE155B9BE",
+      "size_bytes": 15317,
+      "observed_at_utc": "2026-09-08T01:54:13.964569+00:00",
+      "status": "implemented current working-tree source; owner review pending",
+      "coverage": "New implementation authored by root or bounded transient helper, reviewed and integrated; relevant contracts verified in R03 Step4 current reports. Exact bytes hashed."
+    },
+    {
+      "source_id": "SRC-0278",
+      "title": "Fistnet.Genepool.Tests/SeasonObservationBenchmark.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\SeasonObservationBenchmark.cs"
+      },
+      "sha256": "03BBE23DC6860FB411B0319E8C7D84AC84999647C26FDD833EA0E64A85099904",
+      "size_bytes": 9378,
+      "observed_at_utc": "2026-09-08T01:54:13.964569+00:00",
+      "status": "implemented current working-tree source; owner review pending",
+      "coverage": "New implementation authored by root or bounded transient helper, reviewed and integrated; relevant contracts verified in R03 Step4 current reports. Exact bytes hashed."
+    }
+  ],
+  "core_patch": {
+    "experiment": {
+      "root": "D:\\Posao\\Fistnet.Genepool",
+      "purpose": "Make this experiment a better simulation and more fun to watch.",
+      "purpose_origin_record": "DEC-0002",
+      "status": "R03_Step4_implemented_verified_awaiting_owner_review",
+      "phase": "EVOLUTION",
+      "root_semantics": "Exact physical experiment root explicitly assigned by User; KB tools bound to this root.",
+      "model": "Provisional artificial-life sandbox with inherited action repertoires and individual learning.",
+      "model_record": "INF-0001",
+      "model_accepted": false,
+      "design_accepted": true,
+      "trial_authorized": false,
+      "trial_scope": "R02 ecological evaluation closed as INCONCLUSIVE by DEC-0020. Prior 16 comparisons remain time-limited; reserved confirmation was not run. No active or newly authorized trial.",
+      "design_accepted_scope": "R02 closed with ecology inconclusive; R03Godot2D accepted; Step4 design accepted DEC0031 and implemented under DEC0033. Result review pending; no active trial."
+    },
+    "authority": {
+      "assignment_record": "DEC-0001",
+      "actor": "Genepool Analyzer",
+      "knowledgebase_root": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase",
+      "continuing_kb_authority": "Routine in-root KB retrieval, validation, preparation and transactions remain authorized. DEC-0006 permits adapting tools with proportionate checks. The earlier unversioned-KB premise is superseded for canonical files by FACT-0027; current edits still require normal revision/preview/verification safeguards.",
+      "originals": "Owner-authorized bounded Step4 edits, builds and verification completed; stop before next part.",
+      "next_action": "Stop for owner review of R03 Step4 implementation.",
+      "current_stage_record": "DEC-0033",
+      "environment_assessment": "Historical environment assessment used installed metadata and disposable synthetic probes; subsequent bounded source repair is recorded separately in FACT-0019.",
+      "current_research_scope": "Narrow official Godot design documentation and generated visual mockups; no installs or active ecology.",
+      "specialization_record": "DEC-0016"
+    },
+    "proposal": {
+      "id": "R03_Step4",
+      "record_id": "REC-0010",
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_STEP4_DESIGN_PROPOSAL.md",
+      "sha256": "7BEE013BBE2DF0570A2CD9CD2568BB56DD612E6D2AE9CC460C32FCBEB529B31B",
+      "status": "IMPLEMENTED_VERIFIED_AWAITING_OWNER_REVIEW",
+      "engine": "Godot C#",
+      "engine_selection_record": "DEC-0024",
+      "design_authority_record": "DEC-0028",
+      "implementation_authorized": true,
+      "limits": "Current implementation and bounded checks completed; result acceptance pending. Step5/deferred food remain later.",
+      "previous_accepted_plan_record": "REC-0009",
+      "organism_appearance": "Owner-preferred mould-like flat patches with irregular branching edges",
+      "appearance_decision_record": "DEC-0029",
+      "appearance_addendum": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_STEP4_MOULD_DIRECTION.md",
+      "design_revision": 2,
+      "ground_appearance": "Grass/dirt appearance approved by DEC-0030",
+      "viewport_rule": "Levels2–4 draw visible area only; board rim only at actual world boundary; visible panning affordance",
+      "action_scope_by_level": {
+        "3": "Muted actual-action cues for all visible board cells",
+        "4": "Full cues only for focused organism and its affected targets"
+      },
+      "viewport_and_ground_decision_record": "DEC-0030",
+      "latest_mockups": {
+        "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_STEP4_REVIEW_MOCKUPS.md",
+        "sha256": "7A94EE802B3BFFFAD475FAB13F67FE8A09842CBFEFA971AC47FE520299FF182C",
+        "images": [
+          "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_STEP4_DESIGN\\concept-e-habitat.png",
+          "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_STEP4_DESIGN\\concept-f-organism.png",
+          "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_STEP4_DESIGN\\concept-g-inspect.png"
+        ],
+        "status": "OWNER_ACCEPTED_CURRENT_VISUAL_DIRECTION"
+      },
+      "owner_acceptance_record": "DEC-0031",
+      "implementation_authority_record": "DEC-0033",
+      "result_record": "FACT-0055",
+      "result_path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\IMPROVEMENT_RESULT_R03_STEP4.md"
+    },
+    "current_iteration_part": {
+      "id": "R03_Step4",
+      "status": "IMPLEMENTED_VERIFIED_AWAITING_OWNER_REVIEW",
+      "record_ids": [
+        "DEC-0033",
+        "FACT-0055",
+        "FACT-0056",
+        "REC-0010",
+        "DEC-0031",
+        "DEC-0030",
+        "DEC-0029"
+      ],
+      "report": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\IMPROVEMENT_RESULT_R03_STEP4.md",
+      "verification": "VS2022 Debug/Release builds and159/159tests each;106GPU94headless62original2Dchecks;12benchmarkchecks pass.",
+      "limits": "Owner implementation review pending. No new ecological trial; Step5, export and food-cycle remain deferred.",
+      "appearance_decision_record": "DEC-0029",
+      "owner_design_acceptance_record": "DEC-0031"
+    },
+    "next_iteration": {
+      "id": "R03",
+      "status": "R03_STEP4_IMPLEMENTED_AWAITING_REVIEW",
+      "owner_outline_record": "DEC-0021",
+      "preliminary_opinion_record": "REC-0007",
+      "scope": "GPU visualization: research -> plan -> familiar 2D -> either 2.5D or 3D -> improved graphics",
+      "constraints": [
+        "Free for non-commercial use",
+        "Whole solution compatible with Visual Studio 2022",
+        "Useful examples and reusable2D/3D assets",
+        "Proportionate simulation visuals"
+      ],
+      "research_started": true,
+      "plan_started": true,
+      "implementation_started": true,
+      "start_authorized": true,
+      "next_action": "Stop for owner review of Step4; Step5 needs next instruction.",
+      "start_scope": "Step4 implemented underDEC0033; result awaitingreview.",
+      "current_recommendation_record": "REC-0010",
+      "engine_selection_record": "DEC-0024",
+      "implementation_authorization_record": "DEC-0025",
+      "current_implementation_acceptance_record": "DEC-0026",
+      "step4_design_authorization_record": "DEC-0028",
+      "step4_implementation_authorized": true,
+      "step4_design_acceptance_record": "DEC-0031",
+      "step4_implementation_authority_record": "DEC-0033"
+    },
+    "routes": {
+      "orientation": {
+        "record_ids": [
+          "FACT-0001",
+          "FACT-0002",
+          "FACT-0011",
+          "INF-0001"
+        ]
+      },
+      "mechanics": {
+        "record_ids": [
+          "FACT-0003",
+          "FACT-0004",
+          "FACT-0005",
+          "INF-0003"
+        ]
+      },
+      "watchability": {
+        "record_ids": [
+          "DEC-0002",
+          "FACT-0006",
+          "FACT-0009",
+          "REC-0001"
+        ]
+      },
+      "material_findings": {
+        "record_ids": [
+          "FACT-0007",
+          "FACT-0008",
+          "FACT-0010",
+          "INF-0002",
+          "FACT-0023"
+        ]
+      },
+      "proposal_and_tests": {
+        "record_ids": [
+          "DEC-0003",
+          "REC-0002",
+          "FACT-0012",
+          "Q-0001",
+          "Q-0002",
+          "DEC-0007",
+          "FACT-0024",
+          "FACT-0025",
+          "FACT-0028",
+          "FACT-0029",
+          "INF-0004",
+          "DEC-0009"
+        ]
+      },
+      "environment_capabilities": {
+        "record_ids": [
+          "DEC-0004",
+          "FACT-0013",
+          "FACT-0014",
+          "FACT-0015",
+          "FACT-0016",
+          "REC-0003",
+          "Q-0002",
+          "CLAIM-0001",
+          "FACT-0017",
+          "FACT-0018",
+          "REC-0004",
+          "DEC-0005",
+          "FACT-0019",
+          "CLAIM-0002",
+          "FACT-0021",
+          "FACT-0049",
+          "FACT-0051"
+        ]
+      },
+      "kb_tooling": {
+        "record_ids": [
+          "FACT-0054",
+          "DEC-0006",
+          "FACT-0039",
+          "FACT-0036",
+          "FACT-0020",
+          "FACT-0019",
+          "DEC-0013",
+          "FACT-0045"
+        ]
+      },
+      "current_implementation": {
+        "record_ids": [
+          "FACT-0055",
+          "FACT-0056",
+          "DEC-0033",
+          "DEC-0026",
+          "FACT-0051",
+          "FACT-0050",
+          "FACT-0049",
+          "DEC-0025"
+        ]
+      },
+      "r02_research_and_proposal": {
+        "record_ids": [
+          "DEC-0010",
+          "CLAIM-0004",
+          "FACT-0030",
+          "FACT-0031",
+          "FACT-0032",
+          "INF-0005",
+          "CLAIM-0005",
+          "REC-0005",
+          "Q-0001",
+          "DEC-0011",
+          "Q-0003",
+          "DEC-0012",
+          "DEC-0019",
+          "DEC-0020"
+        ]
+      },
+      "r02_part1_result": {
+        "record_ids": [
+          "DEC-0012",
+          "FACT-0033",
+          "FACT-0034",
+          "FACT-0035",
+          "INF-0006",
+          "Q-0003"
+        ]
+      },
+      "r02_part2_result": {
+        "record_ids": [
+          "DEC-0014",
+          "FACT-0037",
+          "FACT-0038",
+          "REC-0006",
+          "INF-0007",
+          "Q-0003",
+          "DEC-0015"
+        ]
+      },
+      "r02_part3_result": {
+        "record_ids": [
+          "DEC-0015",
+          "FACT-0040",
+          "FACT-0041",
+          "FACT-0042",
+          "INF-0008",
+          "DEC-0017"
+        ]
+      },
+      "governance": {
+        "record_ids": [
+          "DEC-0016",
+          "FACT-0043",
+          "DEC-0001",
+          "DEC-0006"
+        ]
+      },
+      "r02_part4_result": {
+        "record_ids": [
+          "DEC-0017",
+          "DEC-0018",
+          "Q-0003",
+          "FACT-0044",
+          "FACT-0045",
+          "FACT-0046",
+          "INF-0009",
+          "DEC-0019",
+          "DEC-0020"
+        ]
+      },
+      "r02_closure": {
+        "record_ids": [
+          "DEC-0020",
+          "FACT-0046",
+          "INF-0009",
+          "DEC-0019",
+          "REC-0005"
+        ]
+      },
+      "r03_outline": {
+        "record_ids": [
+          "DEC-0021",
+          "REC-0007",
+          "DEC-0004",
+          "DEC-0022",
+          "DEC-0023",
+          "REC-0008",
+          "DEC-0026",
+          "DEC-0028",
+          "REC-0010"
+        ]
+      },
+      "r03_research": {
+        "record_ids": [
+          "DEC-0022",
+          "DEC-0023",
+          "FACT-0047",
+          "CLAIM-0006",
+          "CLAIM-0007",
+          "REC-0008",
+          "DEC-0024",
+          "REC-0009"
+        ]
+      },
+      "r03_implementation_plan": {
+        "record_ids": [
+          "DEC-0024",
+          "FACT-0048",
+          "CLAIM-0008",
+          "REC-0009",
+          "REC-0008",
+          "DEC-0025"
+        ]
+      },
+      "r03_2d_result": {
+        "record_ids": [
+          "DEC-0026",
+          "FACT-0051",
+          "FACT-0050",
+          "FACT-0049",
+          "DEC-0025",
+          "REC-0009"
+        ]
+      },
+      "deferred_improvements": {
+        "record_ids": [
+          "DEC-0027"
+        ]
+      },
+      "r03_step4_design": {
+        "record_ids": [
+          "FACT-0055",
+          "FACT-0056",
+          "DEC-0033",
+          "DEC-0031",
+          "REC-0010",
+          "DEC-0030",
+          "DEC-0029",
+          "FACT-0053",
+          "DEC-0028"
+        ]
+      },
+      "recovery_review": {
+        "record_ids": [
+          "FACT-0052"
+        ]
+      },
+      "r03_step4_result": {
+        "record_ids": [
+          "FACT-0055",
+          "FACT-0056",
+          "DEC-0033",
+          "REC-0010",
+          "DEC-0031"
+        ]
+      }
+    },
+    "owner_decision_ids": [
+      "DEC-0001",
+      "DEC-0002",
+      "DEC-0003",
+      "DEC-0004",
+      "DEC-0005",
+      "DEC-0006",
+      "DEC-0007",
+      "DEC-0008",
+      "DEC-0009",
+      "DEC-0010",
+      "DEC-0011",
+      "DEC-0012",
+      "DEC-0013",
+      "DEC-0014",
+      "DEC-0015",
+      "DEC-0016",
+      "DEC-0017",
+      "DEC-0018",
+      "DEC-0019",
+      "DEC-0020",
+      "DEC-0021",
+      "DEC-0022",
+      "DEC-0023",
+      "DEC-0024",
+      "DEC-0025",
+      "DEC-0026",
+      "DEC-0027",
+      "DEC-0028",
+      "DEC-0029",
+      "DEC-0030",
+      "DEC-0031",
+      "DEC-0032",
+      "DEC-0033"
+    ],
+    "environment": {
+      "status": "R03Step4 VS2022 Debug/Release builds pass and159/159consolechecks each; GodotRX6800 depth/pixels/control/benchmark verified.",
+      "sdk_for_vs2022": "9.0.315",
+      "report": {
+        "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\ENVIRONMENT_CAPABILITIES_R01.md",
+        "sha256": "102A4FE72EA9CC4ACA43A0DEF81E2507CA5BD3D1ADC78FFBCC2B254E81939731",
+        "bytes": 10515,
+        "status": "Environment assessment with dated owner-build clarification"
+      },
+      "vs2022_requirement_record": "DEC-0004",
+      "record_ids": [
+        "FACT-0013",
+        "FACT-0014",
+        "FACT-0015",
+        "FACT-0016",
+        "FACT-0019",
+        "FACT-0021",
+        "FACT-0024",
+        "FACT-0028",
+        "FACT-0038",
+        "FACT-0042",
+        "FACT-0046",
+        "FACT-0047",
+        "FACT-0048",
+        "FACT-0049",
+        "FACT-0051",
+        "FACT-0056"
+      ],
+      "refresh": "Existing paths/cache isolation in KnowledgeBase/tools/build_solution.py; recheck material inputs before a future changed build.",
+      "r03_gpu_research": "Godot4.7.2 RX6800 Compatibility: Step4overview0/1000/10000 anddenseL3~60FPS,p95~16.7ms at1920x1080. SDK9.0.315/net9retained; installednativehost.NET10.0.9. Bounded results FACT0056."
+    },
+    "tooling": {
+      "record_id": "FACT-0054",
+      "policy": ".SeedAnalyzer/KB.md",
+      "source_revision_command": "KnowledgeBase/tools/kb.py revise-source",
+      "verification": "49 distinct KB checks passed,1actual-symlink check skipped; current retrieval/tool identities in FACT-0054.",
+      "source_history": "Pinned local Git and exact KB snapshots retain identities. SRC-0115 exact mixed-newline predecessor unavailable; prepared history retained with explicit deep-validation warning (FACT-0042).",
+      "knowledgebase_is_git_versioned": true,
+      "knowledgebase_git_scope": "CurrentbaseGitHEAD 14b39d984555897e88c279ed21651df7c114e05d; pre-edit trackedtreeclean. Step4 source/KB changes left uncommitted for owner review. No commit/push.",
+      "knowledgebase_owner_decision": "DEC-0008: Keep the KnowledgeBase in Git.",
+      "source_version_record_id": "FACT-0020",
+      "current_maintenance_authority": "DEC-0032",
+      "current_verification_receipt": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\kb_retrieval_upgrade_receipt.json"
+    }
+  }
+}

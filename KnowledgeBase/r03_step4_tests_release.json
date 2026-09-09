@@ -1,0 +1,195 @@
+{
+  "exitCode": 0,
+  "total": 159,
+  "passed": 159,
+  "failed": 0,
+  "seconds": 60.7471265,
+  "assemblySha256": {
+    "Fistnet.Genepool.Tests": "F9EF42729A131A8EF7DFE29612C4BCB7626441A9C2C19A22650427BF09D89BDF",
+    "Fistnet.Genepool.Control": "43480F2ADF97BAB6F893091599B7B1671E3F717F24DB55FB996251DC7F212449",
+    "Fistnet.Genepool.Dna": "2A5E4B6E48624B82CCF7A9981BC3C1E1E85272A8715F8A95915C5EDA0DCF745D",
+    "Fistnet.Genepool.Visualization": "9ED74A67549CC3D7B6355137F1B1BC8DD72CFF1D9008A1549B6813254151A502",
+    "Fistnet.Genepool.App": "AC9A926AA2B3AD1A105A1D10C8F1A63CA4E5D67F54AA7A1CE9BD165506F5AB36"
+  },
+  "failedTests": [],
+  "observationCost": {
+    "schema": "r03-step4-observation-cost-v1",
+    "complete": true,
+    "requestedPairs": 2,
+    "completedPairs": 2,
+    "population": 10000,
+    "warmupSeasons": 3,
+    "measuredSeasonsPerRun": 5,
+    "elapsedSeconds": 4.8209734,
+    "pairs": [
+      {
+        "repeat": 1,
+        "executionOrder": "off, on",
+        "observerOff": {
+          "Observed": false,
+          "SeasonMilliseconds": [
+            126.4661,
+            109.5554,
+            126.735,
+            102.0108,
+            172.6794
+          ],
+          "CaptureMilliseconds": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "SeasonAllocatedBytes": [
+            34598776,
+            34598760,
+            34598752,
+            34598456,
+            34604200
+          ],
+          "CaptureAllocatedBytes": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "Digest": "77A7D91B5FB95683B91566161A3D9DBBCD2763B1D23252DE7829E6DD7556ACD0",
+          "RandomState": "1CB75793",
+          "RandomDraws": 329992,
+          "Population": 10000,
+          "CompletedSeasons": 8
+        },
+        "observerOn": {
+          "Observed": true,
+          "SeasonMilliseconds": [
+            86.4452,
+            188.6667,
+            142.1319,
+            151.7504,
+            110.174
+          ],
+          "CaptureMilliseconds": [
+            3.1356,
+            3.6012,
+            3.7239,
+            3.0616,
+            3.2227
+          ],
+          "SeasonAllocatedBytes": [
+            36839576,
+            36842744,
+            36839880,
+            36841328,
+            36839632
+          ],
+          "CaptureAllocatedBytes": [
+            483120,
+            483216,
+            483136,
+            483144,
+            483152
+          ],
+          "Digest": "77A7D91B5FB95683B91566161A3D9DBBCD2763B1D23252DE7829E6DD7556ACD0",
+          "RandomState": "1CB75793",
+          "RandomDraws": 329992,
+          "Population": 10000,
+          "CompletedSeasons": 8
+        },
+        "meanSeasonOverheadMilliseconds": 8.344300000000004,
+        "meanSeasonOverheadPercent": 6.545096240987691,
+        "meanCaptureMilliseconds": 3.349,
+        "meanAdditionalSeasonAllocatedBytes": 2240843.200000003,
+        "meanCaptureAllocatedBytes": 483153.6
+      },
+      {
+        "repeat": 2,
+        "executionOrder": "on, off",
+        "observerOff": {
+          "Observed": false,
+          "SeasonMilliseconds": [
+            92.7802,
+            188.7304,
+            77.4854,
+            94.5705,
+            73.8941
+          ],
+          "CaptureMilliseconds": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "SeasonAllocatedBytes": [
+            34598456,
+            34599088,
+            34598456,
+            34598744,
+            34598456
+          ],
+          "CaptureAllocatedBytes": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "Digest": "77A7D91B5FB95683B91566161A3D9DBBCD2763B1D23252DE7829E6DD7556ACD0",
+          "RandomState": "1CB75793",
+          "RandomDraws": 329992,
+          "Population": 10000,
+          "CompletedSeasons": 8
+        },
+        "observerOn": {
+          "Observed": true,
+          "SeasonMilliseconds": [
+            186.3816,
+            78.3659,
+            138.7998,
+            118.1971,
+            139.1736
+          ],
+          "CaptureMilliseconds": [
+            3.4868,
+            2.9778,
+            3.1197,
+            3.0466,
+            3.1961
+          ],
+          "SeasonAllocatedBytes": [
+            36841264,
+            36839576,
+            36841264,
+            36841096,
+            36841272
+          ],
+          "CaptureAllocatedBytes": [
+            483120,
+            483216,
+            483136,
+            483144,
+            483152
+          ],
+          "Digest": "77A7D91B5FB95683B91566161A3D9DBBCD2763B1D23252DE7829E6DD7556ACD0",
+          "RandomState": "1CB75793",
+          "RandomDraws": 329992,
+          "Population": 10000,
+          "CompletedSeasons": 8
+        },
+        "meanSeasonOverheadMilliseconds": 26.691480000000013,
+        "meanSeasonOverheadPercent": 25.301870888555488,
+        "meanCaptureMilliseconds": 3.1653999999999995,
+        "meanAdditionalSeasonAllocatedBytes": 2242254.3999999985,
+        "meanCaptureAllocatedBytes": 483153.6
+      }
+    ],
+    "partial": [],
+    "boundary": "10-second cooperative budget checked before setup and between completed seasons. An already-running season finishes; no timing threshold determines test success.",
+    "workload": "Deterministic reference mode, serial cell phases, seed 17293, 10000 occupied cells, fixed Move/Self repertoire, no births/deaths/movement. No selected organism. First three seasons and captures discarded; five measured seasons per run. Pair order alternates; setup, checks and compact digest are outside phase measurements.",
+    "allocationScope": "GC.GetAllocatedBytesForCurrentThread; fixture engine and collector both execute synchronously on this thread. No forced GC. Engine phase includes BeginSeason and observation callbacks; capture is measured separately.",
+    "verificationScope": "Paired digest compares every cell's food and occupant ID/position/health/reserves/age/sequence age/lifetime/DNA code and all gene slot/type/target/codes, plus board season/rule and RNG state/draw count. It excludes learning internals and does not replace the separate full-state passivity regression.",
+    "limitations": "Synthetic full occupancy with one action type measures this host/run only. It does not establish mixed-action or long-history throughput, and percentage differences can include JIT, GC and other host activity. Incomplete pairs are reported without comparison."
+  }
+}

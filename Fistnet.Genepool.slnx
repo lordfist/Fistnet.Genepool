@@ -1,0 +1,21 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="Mixed Platforms" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="Fistnet.Genepool.App/Fistnet.Genepool.App.csproj" />
+  <Project Path="Fistnet.Genepool.Control/Fistnet.Genepool.Control.csproj">
+    <Build Solution="*|x86" Project="false" />
+  </Project>
+  <Project Path="Fistnet.Genepool.Dna/Fistnet.Genepool.Dna.csproj">
+    <Build Solution="*|x86" Project="false" />
+  </Project>
+  <Project Path="Fistnet.Genepool.Godot/Fistnet.Genepool.Godot.csproj">
+    <BuildType Solution="Release|*" Project="ExportRelease" />
+  </Project>
+  <Project Path="Fistnet.Genepool.Tests/Fistnet.Genepool.Tests.csproj" />
+  <Project Path="Fistnet.Genepool.Visualization/Fistnet.Genepool.Visualization.csproj">
+    <Build Solution="*|x86" Project="false" />
+  </Project>
+</Solution>

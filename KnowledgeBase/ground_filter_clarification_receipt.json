@@ -1,0 +1,32 @@
+{
+  "ok": true,
+  "dry_run": false,
+  "from_revision": 57,
+  "to_revision": 58,
+  "effects": {
+    "record_upserts": 1,
+    "source_upserts": 0,
+    "core_fields_patched": 1
+  },
+  "validation_scope": "deep_sources_and_prepared",
+  "write_outcome": {
+    "stage": "commit_completed",
+    "replaced_files": [
+      "records.jsonl",
+      "sources.json",
+      "core.json"
+    ],
+    "commit_completed": true,
+    "verification_completed": true,
+    "rollback_performed": false,
+    "recovery_required": false,
+    "cleanup_errors": [],
+    "replacement_uncertain": false
+  },
+  "transaction_sha256": "199A621138994F11814F424C34C5CCD383E3C4880F131AAD4ED3B2B49D6C9CF4",
+  "hashes": {
+    "core.json": "7E23FEA8DF05EBB8EA8C72C87FCB6779829793AE7099E120045D0015584C415E",
+    "records.jsonl": "1F7D9176DF5BB99005D4DE71DF16B3364066227B07ED355CEB1BA7AFA1F57E1E",
+    "sources.json": "8DE077E54A75A8BE73000B0EF5C691FF1C220BDB1F12369B54DBEE823C5F19A5"
+  }
+}

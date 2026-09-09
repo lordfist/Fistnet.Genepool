@@ -1,0 +1,26 @@
+{
+  "actor": "Genepool Analyzer",
+  "removed_obsolete_generated_outputs": [
+    "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.App\\bin\\Debug\\net9.0-windows7.0",
+    "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.App\\bin\\Release\\net9.0-windows7.0",
+    "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\bin\\Debug\\net9.0-windows7.0",
+    "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\bin\\Release\\net9.0-windows7.0",
+    "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\bin\\Debug\\net9.0-windows7.0",
+    "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\bin\\Release\\net9.0-windows7.0",
+    "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\bin\\Debug\\net9.0-windows7.0",
+    "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\bin\\Release\\net9.0-windows7.0",
+    "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Visualization\\bin\\Debug\\net9.0-windows7.0",
+    "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Visualization\\bin\\Release\\net9.0-windows7.0"
+  ],
+  "all_removed": true,
+  "scope": "Only exact obsolete net9 bin target folders after completed migration verification; no project sources or current net10 outputs",
+  "removed_task_scripts": [
+    ".r04_step1_begin.py",
+    ".r04_step1_retarget.py",
+    ".r04_step1_verify.py",
+    ".r04_step1_refresh_locks.py",
+    ".r04_step1_finish.py",
+    ".r04_step1_result.py"
+  ],
+  "task_scripts_removed": true
+}

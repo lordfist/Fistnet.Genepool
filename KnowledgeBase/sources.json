@@ -1,5 +1,5 @@
 {
-  "catalog_revision": 33,
+  "catalog_revision": 40,
   "sources": [
     {
       "source_id": "SRC-0001",
@@ -42,7 +42,24 @@
       "size_bytes": 2060,
       "observed_at_utc": "2026-09-06T01:04:55.1867052Z",
       "coverage": "complete textual reading; 51 file lines; exact bytes hashed; no execution or runtime validation.",
-      "status": "inspected working-tree original; not owner-approved domain authority"
+      "status": "inspected working-tree original; not owner-approved domain authority",
+      "supersession": {
+        "source_id": "SRC-0313",
+        "actor": "Genepool Analyzer",
+        "reason": "Owner-authorized R04 Step1 VS2026/.NET10 migration; exact predecessor preserved before editing.",
+        "record_ids": [
+          "FACT-0065",
+          "DEC-0042"
+        ],
+        "observed_at": "2026-09-09T11:50:08+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "14b39d984555897e88c279ed21651df7c114e05d",
+          "path": "Fistnet.Genepool.App/Fistnet.Genepool.App.csproj",
+          "blob_oid": "614fe3428821c03d9864f4aac4b5ee264e3ba8a2",
+          "transform": "lf_to_crlf"
+        }
+      }
     },
     {
       "source_id": "SRC-0003",
@@ -1630,6 +1647,23 @@
           "DEC-0007",
           "FACT-0023"
         ]
+      },
+      "supersession": {
+        "source_id": "SRC-0314",
+        "actor": "Genepool Analyzer",
+        "reason": "Owner-authorized R04 Step1 VS2026/.NET10 migration; exact predecessor preserved before editing.",
+        "record_ids": [
+          "FACT-0065",
+          "DEC-0042"
+        ],
+        "observed_at": "2026-09-09T11:50:09+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "14b39d984555897e88c279ed21651df7c114e05d",
+          "path": "Fistnet.Genepool.Tests/Fistnet.Genepool.Tests.csproj",
+          "blob_oid": "fbdda3263a7ee33d20a6ed5de799dedebdda6f44",
+          "transform": "raw"
+        }
       }
     },
     {
@@ -1979,6 +2013,23 @@
           "DEC-0007",
           "FACT-0023"
         ]
+      },
+      "supersession": {
+        "source_id": "SRC-0315",
+        "actor": "Genepool Analyzer",
+        "reason": "Owner-authorized R04 Step1 VS2026/.NET10 migration; exact predecessor preserved before editing.",
+        "record_ids": [
+          "FACT-0065",
+          "DEC-0042"
+        ],
+        "observed_at": "2026-09-09T11:50:09+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "14b39d984555897e88c279ed21651df7c114e05d",
+          "path": "global.json",
+          "blob_oid": "1fadcbcc5fef968c3e81ede6d9b2543a7bdc5d9f",
+          "transform": "raw"
+        }
       }
     },
     {
@@ -1993,7 +2044,24 @@
       "observed_at_utc": "2026-09-06T13:05:16+00:00",
       "supersedes": "SRC-0005",
       "status": "Owner-edited source; removal directly inspected; owner reports continued successful operation",
-      "coverage": "Complete textual reading of current 17-line Visualization project and local Git diff. Only the Newtonsoft.Json reference ItemGroup was removed; other properties/project references match the registered predecessor."
+      "coverage": "Complete textual reading of current 17-line Visualization project and local Git diff. Only the Newtonsoft.Json reference ItemGroup was removed; other properties/project references match the registered predecessor.",
+      "supersession": {
+        "source_id": "SRC-0316",
+        "actor": "Genepool Analyzer",
+        "reason": "Owner-authorized R04 Step1 VS2026/.NET10 migration; exact predecessor preserved before editing.",
+        "record_ids": [
+          "FACT-0065",
+          "DEC-0042"
+        ],
+        "observed_at": "2026-09-09T11:50:10+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "14b39d984555897e88c279ed21651df7c114e05d",
+          "path": "Fistnet.Genepool.Visualization/Fistnet.Genepool.Visualization.csproj",
+          "blob_oid": "82945e3de37b83942dfadb2c204ddabf7938e3b8",
+          "transform": "lf_to_crlf"
+        }
+      }
     },
     {
       "source_id": "SRC-0069",
@@ -2007,7 +2075,24 @@
       "observed_at_utc": "2026-09-06T13:08:48+00:00",
       "supersedes": "SRC-0003",
       "status": "Seed cleanup explicitly requested by owner; build and fast checks verified",
-      "coverage": "Complete project-file diff/read. Only stale Newtonsoft.Json reference removed; VS2022 Release full-solution rebuild and38 fast checks passed."
+      "coverage": "Complete project-file diff/read. Only stale Newtonsoft.Json reference removed; VS2022 Release full-solution rebuild and38 fast checks passed.",
+      "supersession": {
+        "source_id": "SRC-0317",
+        "actor": "Genepool Analyzer",
+        "reason": "Owner-authorized R04 Step1 VS2026/.NET10 migration; exact predecessor preserved before editing.",
+        "record_ids": [
+          "FACT-0065",
+          "DEC-0042"
+        ],
+        "observed_at": "2026-09-09T11:50:10+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "14b39d984555897e88c279ed21651df7c114e05d",
+          "path": "Fistnet.Genepool.Control/Fistnet.Genepool.Control.csproj",
+          "blob_oid": "4de4856462fe92ef2bba22892dcf7e1f516f429c",
+          "transform": "lf_to_crlf"
+        }
+      }
     },
     {
       "source_id": "SRC-0070",
@@ -2021,7 +2106,24 @@
       "observed_at_utc": "2026-09-06T13:08:48+00:00",
       "supersedes": "SRC-0004",
       "status": "Seed cleanup explicitly requested by owner; build and fast checks verified",
-      "coverage": "Complete project-file diff/read. Only stale Newtonsoft.Json reference removed; VS2022 Release full-solution rebuild and38 fast checks passed."
+      "coverage": "Complete project-file diff/read. Only stale Newtonsoft.Json reference removed; VS2022 Release full-solution rebuild and38 fast checks passed.",
+      "supersession": {
+        "source_id": "SRC-0318",
+        "actor": "Genepool Analyzer",
+        "reason": "Owner-authorized R04 Step1 VS2026/.NET10 migration; exact predecessor preserved before editing.",
+        "record_ids": [
+          "FACT-0065",
+          "DEC-0042"
+        ],
+        "observed_at": "2026-09-09T11:50:11+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "14b39d984555897e88c279ed21651df7c114e05d",
+          "path": "Fistnet.Genepool.Dna/Fistnet.Genepool.Dna.csproj",
+          "blob_oid": "e803a3a00141ae38611c01d05e4a237c01f976ae",
+          "transform": "lf_to_crlf"
+        }
+      }
     },
     {
       "source_id": "SRC-0071",
@@ -4036,6 +4138,23 @@
         "actor": "Seed Analyzer",
         "type": "authorized_R02_Part3_implementation",
         "attribution": "Transient viewer, backend and performance helpers; root integration and canonical verification."
+      },
+      "supersession": {
+        "source_id": "SRC-0261",
+        "actor": "Genepool Analyzer",
+        "reason": "Authorized R03 Step4 implementation and verification",
+        "record_ids": [
+          "DEC-0033",
+          "FACT-0055"
+        ],
+        "observed_at": "2026-09-08T01:54:14+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "14b39d984555897e88c279ed21651df7c114e05d",
+          "path": "Fistnet.Genepool.Control/ViewFrame.cs",
+          "blob_oid": "e9d32eb19b5ad716e4cd8e4abea90355a3aef140",
+          "transform": "raw"
+        }
       }
     },
     {
@@ -4145,6 +4264,23 @@
           "FACT-0043"
         ],
         "purpose": "Register specialized governance identity for future retrieval and integrity verification."
+      },
+      "supersession": {
+        "source_id": "SRC-0319",
+        "actor": "Genepool Analyzer",
+        "reason": "Owner-authorized R04 Step1 VS2026/.NET10 migration; exact predecessor preserved before editing.",
+        "record_ids": [
+          "FACT-0065",
+          "DEC-0042"
+        ],
+        "observed_at": "2026-09-09T11:50:11+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "14b39d984555897e88c279ed21651df7c114e05d",
+          "path": "AGENTS.md",
+          "blob_oid": "0102b49750b4ffa1e793693740690740b64d0b30",
+          "transform": "lf_to_crlf"
+        }
       }
     },
     {
@@ -4166,6 +4302,23 @@
           "FACT-0043"
         ],
         "purpose": "Register specialized governance identity for future retrieval and integrity verification."
+      },
+      "supersession": {
+        "source_id": "SRC-0320",
+        "actor": "Genepool Analyzer",
+        "reason": "Owner-authorized R04 Step1 VS2026/.NET10 migration; exact predecessor preserved before editing.",
+        "record_ids": [
+          "FACT-0065",
+          "DEC-0042"
+        ],
+        "observed_at": "2026-09-09T11:50:11+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "14b39d984555897e88c279ed21651df7c114e05d",
+          "path": ".SeedAnalyzer/CONSTITUTION.md",
+          "blob_oid": "dfb6f01b3579e30058f5b02ce7da330e03f8c62a",
+          "transform": "lf_to_crlf"
+        }
       }
     },
     {
@@ -4299,6 +4452,23 @@
         "actor": "Genepool Analyzer",
         "type": "authorized_R02_Part4_implementation",
         "attribution": "Transient founder, metrics and runner helpers; root integration, review, execution and canonical KB."
+      },
+      "supersession": {
+        "source_id": "SRC-0328",
+        "actor": "Genepool Analyzer",
+        "reason": "Owner-authorized R04 Step1 VS2026/.NET10 migration; exact predecessor preserved before editing.",
+        "record_ids": [
+          "FACT-0065",
+          "DEC-0042"
+        ],
+        "observed_at": "2026-09-09T11:50:14+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "14b39d984555897e88c279ed21651df7c114e05d",
+          "path": "Fistnet.Genepool.Control/SimulationSnapshot.cs",
+          "blob_oid": "e67e03cd2fb44f99327029a70a4c8f87ffa77dbb",
+          "transform": "raw"
+        }
       }
     },
     {
@@ -4318,6 +4488,23 @@
         "actor": "Genepool Analyzer",
         "type": "authorized_R02_Part4_implementation",
         "attribution": "Transient founder, metrics and runner helpers; root integration, review, execution and canonical KB."
+      },
+      "supersession": {
+        "source_id": "SRC-0262",
+        "actor": "Genepool Analyzer",
+        "reason": "Authorized R03 Step4 implementation and verification",
+        "record_ids": [
+          "DEC-0033",
+          "FACT-0055"
+        ],
+        "observed_at": "2026-09-08T01:54:14+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "14b39d984555897e88c279ed21651df7c114e05d",
+          "path": "Fistnet.Genepool.Control/ViewCollector.cs",
+          "blob_oid": "f4bf417db62d2335ad2c6cce8503d9260542e7b8",
+          "transform": "raw"
+        }
       }
     },
     {
@@ -4423,6 +4610,20 @@
         "actor": "Genepool Analyzer",
         "type": "authorized_R02_Part4_implementation",
         "attribution": "Transient founder, metrics and runner helpers; root integration, review, execution and canonical KB."
+      },
+      "supersession": {
+        "source_id": "SRC-0263",
+        "actor": "Genepool Analyzer",
+        "reason": "Authorized R03 Step4 implementation and verification",
+        "record_ids": [
+          "DEC-0033",
+          "FACT-0055"
+        ],
+        "observed_at": "2026-09-08T01:54:15+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/step4-SRC-0166.md"
+        }
       }
     },
     {
@@ -4929,7 +5130,18 @@
       "origin": {
         "actor": "Genepool Analyzer",
         "type": "authorized_R03_Step1_public_research"
-      }
+      },
+      "coverage_updates": [
+        {
+          "actor": "Genepool Analyzer",
+          "observed_at_utc": "2026-09-08T12:37:34.620464+00:00",
+          "coverage": "Refreshed Nature Kit listing: CC0 3D vegetation; no matching mould model verified.",
+          "record_ids": [
+            "CLAIM-0009",
+            "REC-0012"
+          ]
+        }
+      ]
     },
     {
       "source_id": "SRC-0199",
@@ -5130,7 +5342,18 @@
       "origin": {
         "actor": "Genepool Analyzer",
         "type": "authorized_R03_Step2_planning"
-      }
+      },
+      "coverage_updates": [
+        {
+          "actor": "Genepool Analyzer",
+          "observed_at_utc": "2026-09-08T12:37:34.620464+00:00",
+          "coverage": "Refreshed SDK10.0.400/VS18.9 pairing, net10 requires VS18+, and down-level targeting.",
+          "record_ids": [
+            "CLAIM-0009",
+            "REC-0012"
+          ]
+        }
+      ]
     },
     {
       "source_id": "SRC-0212",
@@ -5214,7 +5437,18 @@
       "origin": {
         "actor": "Genepool Analyzer",
         "type": "authorized_R03_Step2_planning"
-      }
+      },
+      "coverage_updates": [
+        {
+          "actor": "Genepool Analyzer",
+          "observed_at_utc": "2026-09-08T12:37:34.620464+00:00",
+          "coverage": "Refreshed 3D shared instance geometry/colour/custom data and whole-MultiMesh culling limits.",
+          "record_ids": [
+            "CLAIM-0009",
+            "REC-0012"
+          ]
+        }
+      ]
     },
     {
       "source_id": "SRC-0218",
@@ -5326,7 +5560,21 @@
       "observed_at_utc": "2026-09-07T19:22:26+00:00",
       "supersedes": "SRC-0165",
       "status": "registered current working-file version",
-      "coverage": "Exact current bytes hashed; substantive coverage must be recorded separately."
+      "coverage": "Exact current bytes hashed; substantive coverage must be recorded separately.",
+      "supersession": {
+        "source_id": "SRC-0264",
+        "actor": "Genepool Analyzer",
+        "reason": "Authorized R03 Step4 implementation and verification",
+        "record_ids": [
+          "DEC-0033",
+          "FACT-0055"
+        ],
+        "observed_at": "2026-09-08T01:54:15+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/step4-SRC-0225.cs"
+        }
+      }
     },
     {
       "source_id": "SRC-0226",
@@ -5421,7 +5669,24 @@
           "DEC-0025"
         ]
       },
-      "coverage": "Complete new implementation/configuration source; compiled and exercised where applicable. Godot UID files are editor-generated identity metadata, not simulation evidence."
+      "coverage": "Complete new implementation/configuration source; compiled and exercised where applicable. Godot UID files are editor-generated identity metadata, not simulation evidence.",
+      "supersession": {
+        "source_id": "SRC-0321",
+        "actor": "Genepool Analyzer",
+        "reason": "Owner-authorized R04 Step1 VS2026/.NET10 migration; exact predecessor preserved before editing.",
+        "record_ids": [
+          "FACT-0065",
+          "DEC-0042"
+        ],
+        "observed_at": "2026-09-09T11:50:12+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "14b39d984555897e88c279ed21651df7c114e05d",
+          "path": "Fistnet.Genepool.Godot/Fistnet.Genepool.Godot.csproj",
+          "blob_oid": "5d27b34fd1c9113fc54210e2352470a619257947",
+          "transform": "raw"
+        }
+      }
     },
     {
       "source_id": "SRC-0231",
@@ -5478,7 +5743,24 @@
           "DEC-0025"
         ]
       },
-      "coverage": "Complete new implementation/configuration source; compiled and exercised where applicable. Godot UID files are editor-generated identity metadata, not simulation evidence."
+      "coverage": "Complete new implementation/configuration source; compiled and exercised where applicable. Godot UID files are editor-generated identity metadata, not simulation evidence.",
+      "supersession": {
+        "source_id": "SRC-0265",
+        "actor": "Genepool Analyzer",
+        "reason": "Authorized R03 Step4 implementation and verification",
+        "record_ids": [
+          "DEC-0033",
+          "FACT-0055"
+        ],
+        "observed_at": "2026-09-08T01:54:15+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "14b39d984555897e88c279ed21651df7c114e05d",
+          "path": "Fistnet.Genepool.Godot/Main.cs",
+          "blob_oid": "ff0cde887b612460081924bdeb275e12b4b1c44f",
+          "transform": "raw"
+        }
+      }
     },
     {
       "source_id": "SRC-0234",
@@ -5516,7 +5798,24 @@
           "DEC-0025"
         ]
       },
-      "coverage": "Complete new implementation/configuration source; compiled and exercised where applicable. Godot UID files are editor-generated identity metadata, not simulation evidence."
+      "coverage": "Complete new implementation/configuration source; compiled and exercised where applicable. Godot UID files are editor-generated identity metadata, not simulation evidence.",
+      "supersession": {
+        "source_id": "SRC-0266",
+        "actor": "Genepool Analyzer",
+        "reason": "Authorized R03 Step4 implementation and verification",
+        "record_ids": [
+          "DEC-0033",
+          "FACT-0055"
+        ],
+        "observed_at": "2026-09-08T01:54:16+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "14b39d984555897e88c279ed21651df7c114e05d",
+          "path": "Fistnet.Genepool.Godot/Main.Inspector.cs",
+          "blob_oid": "0d502de7edb3d960ee6dc9aa0016aa8ba98ae93b",
+          "transform": "raw"
+        }
+      }
     },
     {
       "source_id": "SRC-0236",
@@ -5554,7 +5853,24 @@
           "DEC-0025"
         ]
       },
-      "coverage": "Complete new implementation/configuration source; compiled and exercised where applicable. Godot UID files are editor-generated identity metadata, not simulation evidence."
+      "coverage": "Complete new implementation/configuration source; compiled and exercised where applicable. Godot UID files are editor-generated identity metadata, not simulation evidence.",
+      "supersession": {
+        "source_id": "SRC-0267",
+        "actor": "Genepool Analyzer",
+        "reason": "Authorized R03 Step4 implementation and verification",
+        "record_ids": [
+          "DEC-0033",
+          "FACT-0055"
+        ],
+        "observed_at": "2026-09-08T01:54:16+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "14b39d984555897e88c279ed21651df7c114e05d",
+          "path": "Fistnet.Genepool.Godot/Main.Layout.cs",
+          "blob_oid": "b644e90073f77cea5d69a234a165400f6a903bf7",
+          "transform": "raw"
+        }
+      }
     },
     {
       "source_id": "SRC-0238",
@@ -5592,7 +5908,24 @@
           "DEC-0025"
         ]
       },
-      "coverage": "Complete new implementation/configuration source; compiled and exercised where applicable. Godot UID files are editor-generated identity metadata, not simulation evidence."
+      "coverage": "Complete new implementation/configuration source; compiled and exercised where applicable. Godot UID files are editor-generated identity metadata, not simulation evidence.",
+      "supersession": {
+        "source_id": "SRC-0322",
+        "actor": "Genepool Analyzer",
+        "reason": "Owner-authorized R04 Step1 VS2026/.NET10 migration; exact predecessor preserved before editing.",
+        "record_ids": [
+          "FACT-0065",
+          "DEC-0042"
+        ],
+        "observed_at": "2026-09-09T11:50:12+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "14b39d984555897e88c279ed21651df7c114e05d",
+          "path": "Fistnet.Genepool.Godot/packages.Debug.lock.json",
+          "blob_oid": "abb0afd18f23084022fc7f63bec1bbca96ca625b",
+          "transform": "lf_to_crlf"
+        }
+      }
     },
     {
       "source_id": "SRC-0240",
@@ -5611,7 +5944,24 @@
           "DEC-0025"
         ]
       },
-      "coverage": "Complete new implementation/configuration source; compiled and exercised where applicable. Godot UID files are editor-generated identity metadata, not simulation evidence."
+      "coverage": "Complete new implementation/configuration source; compiled and exercised where applicable. Godot UID files are editor-generated identity metadata, not simulation evidence.",
+      "supersession": {
+        "source_id": "SRC-0323",
+        "actor": "Genepool Analyzer",
+        "reason": "Owner-authorized R04 Step1 VS2026/.NET10 migration; exact predecessor preserved before editing.",
+        "record_ids": [
+          "FACT-0065",
+          "DEC-0042"
+        ],
+        "observed_at": "2026-09-09T11:50:13+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "14b39d984555897e88c279ed21651df7c114e05d",
+          "path": "Fistnet.Genepool.Godot/packages.ExportRelease.lock.json",
+          "blob_oid": "d1c2a95d43137a40d7e409c006a98453bd185a77",
+          "transform": "lf_to_crlf"
+        }
+      }
     },
     {
       "source_id": "SRC-0241",
@@ -5649,7 +5999,24 @@
           "DEC-0025"
         ]
       },
-      "coverage": "Complete new viewer setup, operation and verification documentation."
+      "coverage": "Complete new viewer setup, operation and verification documentation.",
+      "supersession": {
+        "source_id": "SRC-0268",
+        "actor": "Genepool Analyzer",
+        "reason": "Authorized R03 Step4 implementation and verification",
+        "record_ids": [
+          "DEC-0033",
+          "FACT-0055"
+        ],
+        "observed_at": "2026-09-08T01:54:17+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "14b39d984555897e88c279ed21651df7c114e05d",
+          "path": "Fistnet.Genepool.Godot/README.md",
+          "blob_oid": "3d35788a6e0043ccb7f1588624f080d10c33c246",
+          "transform": "raw"
+        }
+      }
     },
     {
       "source_id": "SRC-0243",
@@ -5744,7 +6111,24 @@
           "DEC-0025"
         ]
       },
-      "coverage": "Complete new implementation/configuration source; compiled and exercised where applicable. Godot UID files are editor-generated identity metadata, not simulation evidence."
+      "coverage": "Complete new implementation/configuration source; compiled and exercised where applicable. Godot UID files are editor-generated identity metadata, not simulation evidence.",
+      "supersession": {
+        "source_id": "SRC-0324",
+        "actor": "Genepool Analyzer",
+        "reason": "Owner-authorized R04 Step1 VS2026/.NET10 migration; exact predecessor preserved before editing.",
+        "record_ids": [
+          "FACT-0065",
+          "DEC-0042"
+        ],
+        "observed_at": "2026-09-09T11:50:13+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "14b39d984555897e88c279ed21651df7c114e05d",
+          "path": "Fistnet.Genepool.Godot/tools/Launch.ps1",
+          "blob_oid": "acc1222fa9105fa482be5a1cca099ee3634fdd29",
+          "transform": "raw"
+        }
+      }
     },
     {
       "source_id": "SRC-0248",
@@ -5782,7 +6166,24 @@
           "DEC-0025"
         ]
       },
-      "coverage": "Complete new implementation/configuration source; compiled and exercised where applicable. Godot UID files are editor-generated identity metadata, not simulation evidence."
+      "coverage": "Complete new implementation/configuration source; compiled and exercised where applicable. Godot UID files are editor-generated identity metadata, not simulation evidence.",
+      "supersession": {
+        "source_id": "SRC-0269",
+        "actor": "Genepool Analyzer",
+        "reason": "Authorized R03 Step4 implementation and verification",
+        "record_ids": [
+          "DEC-0033",
+          "FACT-0055"
+        ],
+        "observed_at": "2026-09-08T01:54:17+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "14b39d984555897e88c279ed21651df7c114e05d",
+          "path": "Fistnet.Genepool.Godot/Verification/VerificationRunner.cs",
+          "blob_oid": "b91c3a86247d11f5b8a3712d434afde7baa2b7c1",
+          "transform": "raw"
+        }
+      }
     },
     {
       "source_id": "SRC-0250",
@@ -5975,7 +6376,1304 @@
         ],
         "purpose": "Local KB usage reference adaptation, not a simulation or role change."
       }
+    },
+    {
+      "source_id": "SRC-0261",
+      "title": "Fistnet.Genepool.Control/ViewFrame.cs (R02 Part3)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\ViewFrame.cs"
+      },
+      "sha256": "A4551BD84938088F61D3F814E4530C6FF19B69BC3E819304E4045A79683616C1",
+      "size_bytes": 2729,
+      "observed_at_utc": "2026-09-08T01:54:14+00:00",
+      "supersedes": "SRC-0149",
+      "status": "registered current working-file version",
+      "coverage": "Relevant implementation or documentation changes inspected by root and bounded helpers; integrated builds and checks documented in IMPROVEMENT_RESULT_R03_STEP4.md. Exact current bytes hashed."
+    },
+    {
+      "source_id": "SRC-0262",
+      "title": "Fistnet.Genepool.Control/ViewCollector.cs (R02 Part4)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\ViewCollector.cs"
+      },
+      "sha256": "68839A8D40666E9530CE5F7BF4D1256251E61923671079D8D3908FACD8ADF616",
+      "size_bytes": 11364,
+      "observed_at_utc": "2026-09-08T01:54:14+00:00",
+      "supersedes": "SRC-0162",
+      "status": "registered current working-file version",
+      "coverage": "Relevant implementation or documentation changes inspected by root and bounded helpers; integrated builds and checks documented in IMPROVEMENT_RESULT_R03_STEP4.md. Exact current bytes hashed."
+    },
+    {
+      "source_id": "SRC-0263",
+      "title": "Fistnet.Genepool.Tests/README.md (R02 Part4)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\README.md"
+      },
+      "sha256": "667D7196276FF0680FBB4A5FF501773440C4263BA83DE41703FA9F38233CFCD5",
+      "size_bytes": 25078,
+      "observed_at_utc": "2026-09-08T01:54:15+00:00",
+      "supersedes": "SRC-0166",
+      "status": "registered current working-file version",
+      "coverage": "Relevant implementation or documentation changes inspected by root and bounded helpers; integrated builds and checks documented in IMPROVEMENT_RESULT_R03_STEP4.md. Exact current bytes hashed.",
+      "supersession": {
+        "source_id": "SRC-0325",
+        "actor": "Genepool Analyzer",
+        "reason": "Owner-authorized R04 Step1 VS2026/.NET10 migration; exact predecessor preserved before editing.",
+        "record_ids": [
+          "FACT-0065",
+          "DEC-0042"
+        ],
+        "observed_at": "2026-09-09T11:50:13+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/r04-step1-SRC-0263.md"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0264",
+      "title": "Fistnet.Genepool.Tests/Program.cs (R02 Part4)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\Program.cs"
+      },
+      "sha256": "A5A3A8AFD9848A5B2EA8C23330A94F689ADB2AE2C17CFCE64D13BF8C81CE1ED0",
+      "size_bytes": 7376,
+      "observed_at_utc": "2026-09-08T01:54:15+00:00",
+      "supersedes": "SRC-0225",
+      "status": "registered current working-file version",
+      "coverage": "Relevant implementation or documentation changes inspected by root and bounded helpers; integrated builds and checks documented in IMPROVEMENT_RESULT_R03_STEP4.md. Exact current bytes hashed."
+    },
+    {
+      "source_id": "SRC-0265",
+      "title": "Fistnet.Genepool.Godot/Main.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Main.cs"
+      },
+      "sha256": "C0A6595C2909AD095360BC448DE589914B9A085691FEF09075EE552B33590B6A",
+      "size_bytes": 9261,
+      "observed_at_utc": "2026-09-08T01:54:15+00:00",
+      "supersedes": "SRC-0233",
+      "status": "registered current working-file version",
+      "coverage": "Relevant implementation or documentation changes inspected by root and bounded helpers; integrated builds and checks documented in IMPROVEMENT_RESULT_R03_STEP4.md. Exact current bytes hashed."
+    },
+    {
+      "source_id": "SRC-0266",
+      "title": "Fistnet.Genepool.Godot/Main.Inspector.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Main.Inspector.cs"
+      },
+      "sha256": "F86F40C6BBA8474E6BA193066ECD2FB3C8F47B46DBAE52DDA0D13A3A4C4B1B17",
+      "size_bytes": 11668,
+      "observed_at_utc": "2026-09-08T01:54:16+00:00",
+      "supersedes": "SRC-0235",
+      "status": "registered current working-file version",
+      "coverage": "Relevant implementation or documentation changes inspected by root and bounded helpers; integrated builds and checks documented in IMPROVEMENT_RESULT_R03_STEP4.md. Exact current bytes hashed.",
+      "supersession": {
+        "source_id": "SRC-0299",
+        "actor": "Genepool Analyzer",
+        "reason": "R03 final graphics polish with owner-requested original full RGB colours",
+        "record_ids": [
+          "DEC-0037",
+          "FACT-0061"
+        ],
+        "observed_at": "2026-09-08T11:25:16+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/step5-SRC-0266.cs"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0267",
+      "title": "Fistnet.Genepool.Godot/Main.Layout.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Main.Layout.cs"
+      },
+      "sha256": "5B5C45F4C91BC4ECFD763D583A8EA941B0E110CB010B634658748C8339BFD5A7",
+      "size_bytes": 16582,
+      "observed_at_utc": "2026-09-08T01:54:16+00:00",
+      "supersedes": "SRC-0237",
+      "status": "registered current working-file version",
+      "coverage": "Relevant implementation or documentation changes inspected by root and bounded helpers; integrated builds and checks documented in IMPROVEMENT_RESULT_R03_STEP4.md. Exact current bytes hashed."
+    },
+    {
+      "source_id": "SRC-0268",
+      "title": "Fistnet.Genepool.Godot/README.md",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\README.md"
+      },
+      "sha256": "CF11F630D7299D9D5A6A248B5218AA5BC83903CAB37EA743D6E71DAC214168F3",
+      "size_bytes": 11450,
+      "observed_at_utc": "2026-09-08T01:54:17+00:00",
+      "supersedes": "SRC-0242",
+      "status": "registered current working-file version",
+      "coverage": "Relevant implementation or documentation changes inspected by root and bounded helpers; integrated builds and checks documented in IMPROVEMENT_RESULT_R03_STEP4.md. Exact current bytes hashed.",
+      "supersession": {
+        "source_id": "SRC-0279",
+        "actor": "Genepool Analyzer",
+        "reason": "Owner-approved R03 Step4 perspective correction",
+        "record_ids": [
+          "DEC-0034",
+          "FACT-0058"
+        ],
+        "observed_at": "2026-09-08T09:43:48+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/perspective-SRC-0268.md"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0269",
+      "title": "Fistnet.Genepool.Godot/Verification/VerificationRunner.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Verification\\VerificationRunner.cs"
+      },
+      "sha256": "694F34275C245C5E5739F9A814F42D155888BCAA353F542D7ED233837DD625C1",
+      "size_bytes": 30396,
+      "observed_at_utc": "2026-09-08T01:54:17+00:00",
+      "supersedes": "SRC-0249",
+      "status": "registered current working-file version",
+      "coverage": "Relevant implementation or documentation changes inspected by root and bounded helpers; integrated builds and checks documented in IMPROVEMENT_RESULT_R03_STEP4.md. Exact current bytes hashed.",
+      "supersession": {
+        "source_id": "SRC-0326",
+        "actor": "Genepool Analyzer",
+        "reason": "Owner-authorized R04 Step1 VS2026/.NET10 migration; exact predecessor preserved before editing.",
+        "record_ids": [
+          "FACT-0065",
+          "DEC-0042"
+        ],
+        "observed_at": "2026-09-09T11:50:14+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/r04-step1-SRC-0269.cs"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0270",
+      "title": "Fistnet.Genepool.Godot/BoardView3D.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\BoardView3D.cs"
+      },
+      "sha256": "80D29246CF9B0BA9C9D829EFFEA5C46E8B802698F1A57A9F2BE1E1B762BEF475",
+      "size_bytes": 19476,
+      "observed_at_utc": "2026-09-08T01:54:13.964569+00:00",
+      "status": "implemented current working-tree source; owner review pending",
+      "coverage": "New implementation authored by root or bounded transient helper, reviewed and integrated; relevant contracts verified in R03 Step4 current reports. Exact bytes hashed.",
+      "supersession": {
+        "source_id": "SRC-0280",
+        "actor": "Genepool Analyzer",
+        "reason": "Owner-approved R03 Step4 perspective correction",
+        "record_ids": [
+          "DEC-0034",
+          "FACT-0058"
+        ],
+        "observed_at": "2026-09-08T09:43:49+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/perspective-SRC-0270.cs"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0271",
+      "title": "Fistnet.Genepool.Godot/BoardView3D.Materials.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\BoardView3D.Materials.cs"
+      },
+      "sha256": "8E4FAA1A0DA675EAE0E9C79698A10557E55CCCF03AA0257E06E19D192FD63D97",
+      "size_bytes": 4912,
+      "observed_at_utc": "2026-09-08T01:54:13.964569+00:00",
+      "status": "implemented current working-tree source; owner review pending",
+      "coverage": "New implementation authored by root or bounded transient helper, reviewed and integrated; relevant contracts verified in R03 Step4 current reports. Exact bytes hashed.",
+      "supersession": {
+        "source_id": "SRC-0295",
+        "actor": "Genepool Analyzer",
+        "reason": "R03 final graphics polish with owner-requested original full RGB colours",
+        "record_ids": [
+          "DEC-0037",
+          "FACT-0061"
+        ],
+        "observed_at": "2026-09-08T11:25:15+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/step5-SRC-0271.cs"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0272",
+      "title": "Fistnet.Genepool.Godot/BoardView3D.Actions.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\BoardView3D.Actions.cs"
+      },
+      "sha256": "D8D0B75A3E294DC6CD8E811E30D096F27975C1F57C5C853036F95BD28DF11C3C",
+      "size_bytes": 16419,
+      "observed_at_utc": "2026-09-08T01:54:13.964569+00:00",
+      "status": "implemented current working-tree source; owner review pending",
+      "coverage": "New implementation authored by root or bounded transient helper, reviewed and integrated; relevant contracts verified in R03 Step4 current reports. Exact bytes hashed.",
+      "supersession": {
+        "source_id": "SRC-0281",
+        "actor": "Genepool Analyzer",
+        "reason": "Owner-approved R03 Step4 perspective correction",
+        "record_ids": [
+          "DEC-0034",
+          "FACT-0058"
+        ],
+        "observed_at": "2026-09-08T09:43:49+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/perspective-SRC-0272.cs"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0273",
+      "title": "Fistnet.Genepool.Godot/Main.Views.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Main.Views.cs"
+      },
+      "sha256": "E3074C3420013B8B3E695CC819731949F4ACE2E7C28FD80AA805BB17F0643042",
+      "size_bytes": 3945,
+      "observed_at_utc": "2026-09-08T01:54:13.964569+00:00",
+      "status": "implemented current working-tree source; owner review pending",
+      "coverage": "New implementation authored by root or bounded transient helper, reviewed and integrated; relevant contracts verified in R03 Step4 current reports. Exact bytes hashed.",
+      "supersession": {
+        "source_id": "SRC-0282",
+        "actor": "Genepool Analyzer",
+        "reason": "Owner-approved R03 Step4 perspective correction",
+        "record_ids": [
+          "DEC-0034",
+          "FACT-0058"
+        ],
+        "observed_at": "2026-09-08T09:43:49+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/perspective-SRC-0273.cs"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0274",
+      "title": "Fistnet.Genepool.Godot/MinimapView.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\MinimapView.cs"
+      },
+      "sha256": "E43B2B7785C132262920DB6CA8FFFB427A112012B45BDFF96E1AA2388D6EB664",
+      "size_bytes": 4009,
+      "observed_at_utc": "2026-09-08T01:54:13.964569+00:00",
+      "status": "implemented current working-tree source; owner review pending",
+      "coverage": "New implementation authored by root or bounded transient helper, reviewed and integrated; relevant contracts verified in R03 Step4 current reports. Exact bytes hashed.",
+      "supersession": {
+        "source_id": "SRC-0283",
+        "actor": "Genepool Analyzer",
+        "reason": "Owner-approved R03 Step4 perspective correction",
+        "record_ids": [
+          "DEC-0034",
+          "FACT-0058"
+        ],
+        "observed_at": "2026-09-08T09:43:50+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/perspective-SRC-0274.cs"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0275",
+      "title": "Fistnet.Genepool.Godot/Verification/Step4Fixtures.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Verification\\Step4Fixtures.cs"
+      },
+      "sha256": "C30E23F3113C45F3C662C0CB2D295CE7394186CB5BDDA5E33F4DCC9530652C19",
+      "size_bytes": 2855,
+      "observed_at_utc": "2026-09-08T01:54:13.964569+00:00",
+      "status": "implemented current working-tree source; owner review pending",
+      "coverage": "New implementation authored by root or bounded transient helper, reviewed and integrated; relevant contracts verified in R03 Step4 current reports. Exact bytes hashed."
+    },
+    {
+      "source_id": "SRC-0276",
+      "title": "Fistnet.Genepool.Godot/Verification/VerificationRunner.Step4.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Verification\\VerificationRunner.Step4.cs"
+      },
+      "sha256": "344C0B89007AB0C1F960D857EBA602BA7AE9E91FF4F3613D50043D9D8F9D61CD",
+      "size_bytes": 27600,
+      "observed_at_utc": "2026-09-08T01:54:13.964569+00:00",
+      "status": "implemented current working-tree source; owner review pending",
+      "coverage": "New implementation authored by root or bounded transient helper, reviewed and integrated; relevant contracts verified in R03 Step4 current reports. Exact bytes hashed.",
+      "supersession": {
+        "source_id": "SRC-0284",
+        "actor": "Genepool Analyzer",
+        "reason": "Owner-approved R03 Step4 perspective correction",
+        "record_ids": [
+          "DEC-0034",
+          "FACT-0058"
+        ],
+        "observed_at": "2026-09-08T09:43:50+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/perspective-SRC-0276.cs"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0277",
+      "title": "Fistnet.Genepool.Tests/SeasonObservationTests.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\SeasonObservationTests.cs"
+      },
+      "sha256": "7217B4A0F3BC15DAB7D588C4809964C8E041855B19380C681FB178AAE155B9BE",
+      "size_bytes": 15317,
+      "observed_at_utc": "2026-09-08T01:54:13.964569+00:00",
+      "status": "implemented current working-tree source; owner review pending",
+      "coverage": "New implementation authored by root or bounded transient helper, reviewed and integrated; relevant contracts verified in R03 Step4 current reports. Exact bytes hashed."
+    },
+    {
+      "source_id": "SRC-0278",
+      "title": "Fistnet.Genepool.Tests/SeasonObservationBenchmark.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\SeasonObservationBenchmark.cs"
+      },
+      "sha256": "03BBE23DC6860FB411B0319E8C7D84AC84999647C26FDD833EA0E64A85099904",
+      "size_bytes": 9378,
+      "observed_at_utc": "2026-09-08T01:54:13.964569+00:00",
+      "status": "implemented current working-tree source; owner review pending",
+      "coverage": "New implementation authored by root or bounded transient helper, reviewed and integrated; relevant contracts verified in R03 Step4 current reports. Exact bytes hashed."
+    },
+    {
+      "source_id": "SRC-0279",
+      "title": "Fistnet.Genepool.Godot/README.md",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\README.md"
+      },
+      "sha256": "D7FFC9BD7C9723D0BE7B0FB4E394964FF1AD79FAC1A6B996140A0455388CD1CC",
+      "size_bytes": 11912,
+      "observed_at_utc": "2026-09-08T09:43:48+00:00",
+      "supersedes": "SRC-0268",
+      "status": "registered current working-file version",
+      "coverage": "Current perspective camera/navigation/overlay change inspected and integrated; checks and limitations in R03_STEP4_PERSPECTIVE_RESULT.md. Exact bytes hashed.",
+      "supersession": {
+        "source_id": "SRC-0289",
+        "actor": "Genepool Analyzer",
+        "reason": "Owner-requested centred trapezoid and neutral Organisms ground",
+        "record_ids": [
+          "DEC-0035",
+          "FACT-0060"
+        ],
+        "observed_at": "2026-09-08T10:48:27+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/trapezoid-SRC-0279.md"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0280",
+      "title": "Fistnet.Genepool.Godot/BoardView3D.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\BoardView3D.cs"
+      },
+      "sha256": "8EB61096053E4F9E6C9FCEF18ACE6EBEAF8900F260685C5F11F1344BA294031C",
+      "size_bytes": 18353,
+      "observed_at_utc": "2026-09-08T09:43:49+00:00",
+      "supersedes": "SRC-0270",
+      "status": "registered current working-file version",
+      "coverage": "Current perspective camera/navigation/overlay change inspected and integrated; checks and limitations in R03_STEP4_PERSPECTIVE_RESULT.md. Exact bytes hashed.",
+      "supersession": {
+        "source_id": "SRC-0290",
+        "actor": "Genepool Analyzer",
+        "reason": "Owner-requested centred trapezoid and neutral Organisms ground",
+        "record_ids": [
+          "DEC-0035",
+          "FACT-0060"
+        ],
+        "observed_at": "2026-09-08T10:48:28+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/trapezoid-SRC-0280.cs"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0281",
+      "title": "Fistnet.Genepool.Godot/BoardView3D.Actions.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\BoardView3D.Actions.cs"
+      },
+      "sha256": "A534C007582F8D17C310C2F4530F3F028747545AA0B657F38E5EA596D32A60B5",
+      "size_bytes": 17292,
+      "observed_at_utc": "2026-09-08T09:43:49+00:00",
+      "supersedes": "SRC-0272",
+      "status": "registered current working-file version",
+      "coverage": "Current perspective camera/navigation/overlay change inspected and integrated; checks and limitations in R03_STEP4_PERSPECTIVE_RESULT.md. Exact bytes hashed."
+    },
+    {
+      "source_id": "SRC-0282",
+      "title": "Fistnet.Genepool.Godot/Main.Views.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Main.Views.cs"
+      },
+      "sha256": "1022CD6841CB86D0AB42B6307CD00CAADF0829137469F391E982D5F3A87E318B",
+      "size_bytes": 4003,
+      "observed_at_utc": "2026-09-08T09:43:49+00:00",
+      "supersedes": "SRC-0273",
+      "status": "registered current working-file version",
+      "coverage": "Current perspective camera/navigation/overlay change inspected and integrated; checks and limitations in R03_STEP4_PERSPECTIVE_RESULT.md. Exact bytes hashed."
+    },
+    {
+      "source_id": "SRC-0283",
+      "title": "Fistnet.Genepool.Godot/MinimapView.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\MinimapView.cs"
+      },
+      "sha256": "FD205106A0D1EFB0F8F113D1FD3B5DC88613655B5D14D5A3BE0089F73ED670E4",
+      "size_bytes": 5871,
+      "observed_at_utc": "2026-09-08T09:43:50+00:00",
+      "supersedes": "SRC-0274",
+      "status": "registered current working-file version",
+      "coverage": "Current perspective camera/navigation/overlay change inspected and integrated; checks and limitations in R03_STEP4_PERSPECTIVE_RESULT.md. Exact bytes hashed.",
+      "supersession": {
+        "source_id": "SRC-0291",
+        "actor": "Genepool Analyzer",
+        "reason": "Owner-requested centred trapezoid and neutral Organisms ground",
+        "record_ids": [
+          "DEC-0035",
+          "FACT-0060"
+        ],
+        "observed_at": "2026-09-08T10:48:28+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/trapezoid-SRC-0283.cs"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0284",
+      "title": "Fistnet.Genepool.Godot/Verification/VerificationRunner.Step4.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Verification\\VerificationRunner.Step4.cs"
+      },
+      "sha256": "F36FDA3D5D8C51C29CA6ADF95D902B2E330DDD752791811443C68437349E8B6F",
+      "size_bytes": 28360,
+      "observed_at_utc": "2026-09-08T09:43:50+00:00",
+      "supersedes": "SRC-0276",
+      "status": "registered current working-file version",
+      "coverage": "Current perspective camera/navigation/overlay change inspected and integrated; checks and limitations in R03_STEP4_PERSPECTIVE_RESULT.md. Exact bytes hashed.",
+      "supersession": {
+        "source_id": "SRC-0292",
+        "actor": "Genepool Analyzer",
+        "reason": "Owner-requested centred trapezoid and neutral Organisms ground",
+        "record_ids": [
+          "DEC-0035",
+          "FACT-0060"
+        ],
+        "observed_at": "2026-09-08T10:48:28+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/trapezoid-SRC-0284.cs"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0285",
+      "title": "Fistnet.Genepool.Godot/BoardView3D.Projection.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\BoardView3D.Projection.cs"
+      },
+      "sha256": "E4AA37F5F649137C77DD4FE9726D7F27C72A70D0C9540323397908F6E68E092A",
+      "size_bytes": 9143,
+      "observed_at_utc": "2026-09-08T09:43:48.412388+00:00",
+      "status": "implemented working source; owner review pending",
+      "coverage": "Authored by bounded helper, independently reviewed and integrated; native-camera and GPU evidence in current R03 perspective result.",
+      "supersession": {
+        "source_id": "SRC-0293",
+        "actor": "Genepool Analyzer",
+        "reason": "Owner-requested centred trapezoid and neutral Organisms ground",
+        "record_ids": [
+          "DEC-0035",
+          "FACT-0060"
+        ],
+        "observed_at": "2026-09-08T10:48:29+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/trapezoid-SRC-0285.cs"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0286",
+      "title": "Fistnet.Genepool.Godot/Verification/VerificationRunner.Perspective.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Verification\\VerificationRunner.Perspective.cs"
+      },
+      "sha256": "18CC472B76CA1A095DABD1AE389C8EC89E1B988A6ED6D72D97AF3B3D4D77E25B",
+      "size_bytes": 24537,
+      "observed_at_utc": "2026-09-08T09:43:48.412388+00:00",
+      "status": "implemented working source; owner review pending",
+      "coverage": "Authored by bounded helper, independently reviewed and integrated; native-camera and GPU evidence in current R03 perspective result.",
+      "supersession": {
+        "source_id": "SRC-0294",
+        "actor": "Genepool Analyzer",
+        "reason": "Owner-requested centred trapezoid and neutral Organisms ground",
+        "record_ids": [
+          "DEC-0035",
+          "FACT-0060"
+        ],
+        "observed_at": "2026-09-08T10:48:29+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/trapezoid-SRC-0286.cs"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0287",
+      "title": "Official C#2.5D demo README",
+      "locator": {
+        "type": "url",
+        "url": "https://raw.githubusercontent.com/godotengine/godot-demo-projects/master/mono/2.5d/README.md"
+      },
+      "observed_at_utc": "2026-09-08T09:43:48.412388+00:00",
+      "coverage": "Complete39line README, correspondence to owner Store URL and stated design.",
+      "status": "reference inspected; not adopted as dependency"
+    },
+    {
+      "source_id": "SRC-0288",
+      "title": "Official C#2.5D demo Transform25D.cs",
+      "locator": {
+        "type": "url",
+        "url": "https://raw.githubusercontent.com/godotengine/godot-demo-projects/master/mono/2.5d/addons/node25d-cs/Transform25D.cs"
+      },
+      "observed_at_utc": "2026-09-08T09:43:48.412388+00:00",
+      "coverage": "Complete125line source; FlatTransform and FlatPosition lines27-44 inspected statically; no execution.",
+      "status": "reference inspected; not adopted as dependency"
+    },
+    {
+      "source_id": "SRC-0289",
+      "title": "Fistnet.Genepool.Godot\\README.md",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\README.md"
+      },
+      "sha256": "22E26203B4661ABC474B4A2C9AF0D98D86D3899F1D8BC70146EE213A2D3A4C85",
+      "size_bytes": 12228,
+      "observed_at_utc": "2026-09-08T10:48:27+00:00",
+      "supersedes": "SRC-0279",
+      "status": "registered current working-file version",
+      "coverage": "Bounded camera/grey-ground refinement inspected and verified; relevant locators and limits in FACT-0060. Exact working bytes hashed.",
+      "supersession": {
+        "source_id": "SRC-0296",
+        "actor": "Genepool Analyzer",
+        "reason": "R03 final graphics polish with owner-requested original full RGB colours",
+        "record_ids": [
+          "DEC-0037",
+          "FACT-0061"
+        ],
+        "observed_at": "2026-09-08T11:25:15+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/step5-SRC-0289.md"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0290",
+      "title": "Fistnet.Genepool.Godot\\BoardView3D.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\BoardView3D.cs"
+      },
+      "sha256": "F155B6C4FE5AAFCF6B794AC0E36DAE2FC7C633C6182766EE4345DF826AFFF1B4",
+      "size_bytes": 18516,
+      "observed_at_utc": "2026-09-08T10:48:28+00:00",
+      "supersedes": "SRC-0280",
+      "status": "registered current working-file version",
+      "coverage": "Bounded camera/grey-ground refinement inspected and verified; relevant locators and limits in FACT-0060. Exact working bytes hashed.",
+      "supersession": {
+        "source_id": "SRC-0297",
+        "actor": "Genepool Analyzer",
+        "reason": "R03 final graphics polish with owner-requested original full RGB colours",
+        "record_ids": [
+          "DEC-0037",
+          "FACT-0061"
+        ],
+        "observed_at": "2026-09-08T11:25:16+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/step5-SRC-0290.cs"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0291",
+      "title": "Fistnet.Genepool.Godot\\MinimapView.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\MinimapView.cs"
+      },
+      "sha256": "D39CC2642C2B80843F6782010B6A520780A9A9281C6EACCF2D528E854A2FF165",
+      "size_bytes": 6098,
+      "observed_at_utc": "2026-09-08T10:48:28+00:00",
+      "supersedes": "SRC-0283",
+      "status": "registered current working-file version",
+      "coverage": "Bounded camera/grey-ground refinement inspected and verified; relevant locators and limits in FACT-0060. Exact working bytes hashed."
+    },
+    {
+      "source_id": "SRC-0292",
+      "title": "Fistnet.Genepool.Godot\\Verification\\VerificationRunner.Step4.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Verification\\VerificationRunner.Step4.cs"
+      },
+      "sha256": "600E6B0667C970B790EB9FA52C6FEF14C07D9A6AB0CC95C3D89A4641EDA55EDB",
+      "size_bytes": 28354,
+      "observed_at_utc": "2026-09-08T10:48:28+00:00",
+      "supersedes": "SRC-0284",
+      "status": "registered current working-file version",
+      "coverage": "Bounded camera/grey-ground refinement inspected and verified; relevant locators and limits in FACT-0060. Exact working bytes hashed.",
+      "supersession": {
+        "source_id": "SRC-0300",
+        "actor": "Genepool Analyzer",
+        "reason": "R03 final graphics polish with owner-requested original full RGB colours",
+        "record_ids": [
+          "DEC-0037",
+          "FACT-0061"
+        ],
+        "observed_at": "2026-09-08T11:25:17+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/step5-SRC-0292.cs"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0293",
+      "title": "Fistnet.Genepool.Godot\\BoardView3D.Projection.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\BoardView3D.Projection.cs"
+      },
+      "sha256": "3ACBFB0275C4C314C31A6D05443FCB3755D486242926A8F6BCFF30355B62F01A",
+      "size_bytes": 9246,
+      "observed_at_utc": "2026-09-08T10:48:29+00:00",
+      "supersedes": "SRC-0285",
+      "status": "registered current working-file version",
+      "coverage": "Bounded camera/grey-ground refinement inspected and verified; relevant locators and limits in FACT-0060. Exact working bytes hashed."
+    },
+    {
+      "source_id": "SRC-0294",
+      "title": "Fistnet.Genepool.Godot\\Verification\\VerificationRunner.Perspective.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Verification\\VerificationRunner.Perspective.cs"
+      },
+      "sha256": "ADE4A9653763D7AB65F890F50FD7073F614BEF2ECF3D3D75CB38C52FD1C7DCBB",
+      "size_bytes": 30237,
+      "observed_at_utc": "2026-09-08T10:48:29+00:00",
+      "supersedes": "SRC-0286",
+      "status": "registered current working-file version",
+      "coverage": "Bounded camera/grey-ground refinement inspected and verified; relevant locators and limits in FACT-0060. Exact working bytes hashed.",
+      "supersession": {
+        "source_id": "SRC-0298",
+        "actor": "Genepool Analyzer",
+        "reason": "R03 final graphics polish with owner-requested original full RGB colours",
+        "record_ids": [
+          "DEC-0037",
+          "FACT-0061"
+        ],
+        "observed_at": "2026-09-08T11:25:16+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/step5-SRC-0294.cs"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0295",
+      "title": "Fistnet.Genepool.Godot\\BoardView3D.Materials.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\BoardView3D.Materials.cs"
+      },
+      "sha256": "C2B56F2B11020688AA4ABA6AD0733A043D790A9049F3C055854210C1119CF6F0",
+      "size_bytes": 6276,
+      "observed_at_utc": "2026-09-08T11:25:15+00:00",
+      "supersedes": "SRC-0271",
+      "status": "registered current working-file version",
+      "coverage": "Bounded full-RGB graphics and associated tests/docs inspected; current verification, provenance and limits in FACT-0061.",
+      "supersession": {
+        "source_id": "SRC-0302",
+        "actor": "Genepool Analyzer",
+        "reason": "Owner requests borderless View 1 organisms; preserve closer-view appearance",
+        "record_ids": [
+          "DEC-0038",
+          "FACT-0062"
+        ],
+        "observed_at": "2026-09-08T11:51:00+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/world-border-SRC-0295.cs"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0296",
+      "title": "Fistnet.Genepool.Godot\\README.md",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\README.md"
+      },
+      "sha256": "18CFF3DD0032539831C5DB2B4DEFD5A503A5DF5E8DAE18D5E8B2A826F5E30A13",
+      "size_bytes": 13323,
+      "observed_at_utc": "2026-09-08T11:25:15+00:00",
+      "supersedes": "SRC-0289",
+      "status": "registered current working-file version",
+      "coverage": "Bounded full-RGB graphics and associated tests/docs inspected; current verification, provenance and limits in FACT-0061.",
+      "supersession": {
+        "source_id": "SRC-0303",
+        "actor": "Genepool Analyzer",
+        "reason": "Owner requests borderless View 1 organisms; preserve closer-view appearance",
+        "record_ids": [
+          "DEC-0038",
+          "FACT-0062"
+        ],
+        "observed_at": "2026-09-08T11:51:00+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/world-border-SRC-0296.md"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0297",
+      "title": "Fistnet.Genepool.Godot\\BoardView3D.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\BoardView3D.cs"
+      },
+      "sha256": "360DA390AA3EFF5536B9225D59973EEE23600E3A99A2A4CF8D2A8F8D5664F788",
+      "size_bytes": 18315,
+      "observed_at_utc": "2026-09-08T11:25:16+00:00",
+      "supersedes": "SRC-0290",
+      "status": "registered current working-file version",
+      "coverage": "Bounded full-RGB graphics and associated tests/docs inspected; current verification, provenance and limits in FACT-0061."
+    },
+    {
+      "source_id": "SRC-0298",
+      "title": "Fistnet.Genepool.Godot\\Verification\\VerificationRunner.Perspective.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Verification\\VerificationRunner.Perspective.cs"
+      },
+      "sha256": "589CE9137CB2DBD20EF24A448C66018211DF786FAB15B8C7809545EDA6506D61",
+      "size_bytes": 30312,
+      "observed_at_utc": "2026-09-08T11:25:16+00:00",
+      "supersedes": "SRC-0294",
+      "status": "registered current working-file version",
+      "coverage": "Bounded full-RGB graphics and associated tests/docs inspected; current verification, provenance and limits in FACT-0061."
+    },
+    {
+      "source_id": "SRC-0299",
+      "title": "Fistnet.Genepool.Godot\\Main.Inspector.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Main.Inspector.cs"
+      },
+      "sha256": "EE172FE41DF90FCDA00B7AAE76B48F6BABBEE4604D0576BF4807225B64E1488F",
+      "size_bytes": 11761,
+      "observed_at_utc": "2026-09-08T11:25:16+00:00",
+      "supersedes": "SRC-0266",
+      "status": "registered current working-file version",
+      "coverage": "Bounded full-RGB graphics and associated tests/docs inspected; current verification, provenance and limits in FACT-0061."
+    },
+    {
+      "source_id": "SRC-0300",
+      "title": "Fistnet.Genepool.Godot\\Verification\\VerificationRunner.Step4.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Verification\\VerificationRunner.Step4.cs"
+      },
+      "sha256": "54BB139F961FAF3F815354D599733CFF8057812B122D427A9765FD2407AB3499",
+      "size_bytes": 28584,
+      "observed_at_utc": "2026-09-08T11:25:17+00:00",
+      "supersedes": "SRC-0292",
+      "status": "registered current working-file version",
+      "coverage": "Bounded full-RGB graphics and associated tests/docs inspected; current verification, provenance and limits in FACT-0061."
+    },
+    {
+      "source_id": "SRC-0301",
+      "title": "Fistnet.Genepool.Godot\\Verification\\VerificationRunner.Step5.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Verification\\VerificationRunner.Step5.cs"
+      },
+      "sha256": "FF361148C3CEA402DE60DD00367EEC666EE4A72A3E0182504067C7DE21168704",
+      "size_bytes": 14302,
+      "observed_at_utc": "2026-09-08T11:25:14.948365+00:00",
+      "status": "implemented working source; owner review pending",
+      "coverage": "Authored RGB mapping and actual GPU readability checks plus current previews; reviewed and executed under bounded Step5 scope.",
+      "supersession": {
+        "source_id": "SRC-0304",
+        "actor": "Genepool Analyzer",
+        "reason": "Owner requests borderless View 1 organisms; preserve closer-view appearance",
+        "record_ids": [
+          "DEC-0038",
+          "FACT-0062"
+        ],
+        "observed_at": "2026-09-08T11:51:01+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/world-border-SRC-0301.cs"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0302",
+      "title": "Fistnet.Genepool.Godot\\BoardView3D.Materials.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\BoardView3D.Materials.cs"
+      },
+      "sha256": "72F412CE9BC4D7A8446D2F365107377BFE13E8508E3F27AABFD2F228A5DB6B8A",
+      "size_bytes": 6285,
+      "observed_at_utc": "2026-09-08T11:51:00+00:00",
+      "supersedes": "SRC-0295",
+      "status": "registered current working-file version",
+      "coverage": "Inspected bounded World-outline change and relevant GPU checks; results and limits in FACT-0062."
+    },
+    {
+      "source_id": "SRC-0303",
+      "title": "Fistnet.Genepool.Godot\\README.md",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\README.md"
+      },
+      "sha256": "F65300205853BCFFD2A3D08D5266B42E2C0C75A393719DAC05D85FDFBDB77A3F",
+      "size_bytes": 13310,
+      "observed_at_utc": "2026-09-08T11:51:00+00:00",
+      "supersedes": "SRC-0296",
+      "status": "registered current working-file version",
+      "coverage": "Inspected bounded World-outline change and relevant GPU checks; results and limits in FACT-0062.",
+      "supersession": {
+        "source_id": "SRC-0327",
+        "actor": "Genepool Analyzer",
+        "reason": "Owner-authorized R04 Step1 VS2026/.NET10 migration; exact predecessor preserved before editing.",
+        "record_ids": [
+          "FACT-0065",
+          "DEC-0042"
+        ],
+        "observed_at": "2026-09-09T11:50:14+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/r04-step1-SRC-0303.md"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0304",
+      "title": "Fistnet.Genepool.Godot\\Verification\\VerificationRunner.Step5.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Verification\\VerificationRunner.Step5.cs"
+      },
+      "sha256": "11431EBEE8ACF67771B02444B2E6A96ED09A4317357AE0904BFC37F11DC8C343",
+      "size_bytes": 18395,
+      "observed_at_utc": "2026-09-08T11:51:01+00:00",
+      "supersedes": "SRC-0301",
+      "status": "registered current working-file version",
+      "coverage": "Inspected bounded World-outline change and relevant GPU checks; results and limits in FACT-0062."
+    },
+    {
+      "source_id": "SRC-0305",
+      "title": "Microsoft Visual Studio 2026 compatibility",
+      "locator": {
+        "type": "url",
+        "url": "https://learn.microsoft.com/en-us/visualstudio/releases/2026/compatibility"
+      },
+      "observed_at_utc": "2026-09-08T12:37:34.620464+00:00",
+      "coverage": "Supported .NET versions; VS2026 can host the existing .NET9 baseline.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "R04_planning_primary_research"
+      },
+      "limitations": "URL registration does not archive bytes or establish local integration."
+    },
+    {
+      "source_id": "SRC-0306",
+      "title": "Microsoft .NET support policy",
+      "locator": {
+        "type": "url",
+        "url": "https://dotnet.microsoft.com/en-us/platform/support/policy/dotnet-core"
+      },
+      "observed_at_utc": "2026-09-08T12:37:34.620464+00:00",
+      "coverage": "Support dates: .NET9 2026-11-10; .NET10 LTS 2028-11-14.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "R04_planning_primary_research"
+      },
+      "limitations": "URL registration does not archive bytes or establish local integration."
+    },
+    {
+      "source_id": "SRC-0307",
+      "title": "Godot 4.7.2 exact managed API project",
+      "locator": {
+        "type": "url",
+        "url": "https://raw.githubusercontent.com/godotengine/godot/4.7.2-stable/modules/mono/glue/GodotSharp/GodotSharp/GodotSharp.csproj"
+      },
+      "observed_at_utc": "2026-09-08T12:37:34.620464+00:00",
+      "coverage": "TargetFramework net8.0; minimum library target, not local net10 runtime verification.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "R04_planning_primary_research"
+      },
+      "limitations": "URL registration does not archive bytes or establish local integration."
+    },
+    {
+      "source_id": "SRC-0308",
+      "title": "GodotSharp 4.7.2 official NuGet package",
+      "locator": {
+        "type": "url",
+        "url": "https://www.nuget.org/packages/GodotSharp/4.7.2"
+      },
+      "observed_at_utc": "2026-09-08T12:37:34.620464+00:00",
+      "coverage": "Published API package and computed .NET10 compatibility; no local integration claim.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "R04_planning_primary_research"
+      },
+      "limitations": "URL registration does not archive bytes or establish local integration."
+    },
+    {
+      "source_id": "SRC-0309",
+      "title": "Godot explanation of API and application frameworks",
+      "locator": {
+        "type": "url",
+        "url": "https://godotengine.org/article/godotsharp-packages-net8/"
+      },
+      "observed_at_utc": "2026-09-08T12:37:34.620464+00:00",
+      "coverage": "Distinction between library minimum framework and application retargeting; historical lifecycle wording not used.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "R04_planning_primary_research"
+      },
+      "limitations": "URL registration does not archive bytes or establish local integration."
+    },
+    {
+      "source_id": "SRC-0310",
+      "title": "Godot stable renderer comparison",
+      "locator": {
+        "type": "url",
+        "url": "https://docs.godotengine.org/en/stable/tutorials/rendering/renderers.html"
+      },
+      "observed_at_utc": "2026-09-08T12:37:34.620464+00:00",
+      "coverage": "Compatibility core3D suitability and implications of switching backend; no local Forward+ benchmark.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "R04_planning_primary_research"
+      },
+      "limitations": "URL registration does not archive bytes or establish local integration."
+    },
+    {
+      "source_id": "SRC-0311",
+      "title": "Godot ArrayMesh C# examples",
+      "locator": {
+        "type": "url",
+        "url": "https://docs.godotengine.org/en/stable/tutorials/3d/procedural_geometry/arraymesh.html"
+      },
+      "observed_at_utc": "2026-09-08T12:37:34.620464+00:00",
+      "coverage": "Reusable procedural-mesh C# starting example, not a ready-made mould asset.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "R04_planning_primary_research"
+      },
+      "limitations": "URL registration does not archive bytes or establish local integration."
+    },
+    {
+      "source_id": "SRC-0312",
+      "title": "Official Godot demo projects",
+      "locator": {
+        "type": "url",
+        "url": "https://github.com/godotengine/godot-demo-projects"
+      },
+      "observed_at_utc": "2026-09-08T12:37:34.620464+00:00",
+      "coverage": "MIT examples/version branches; 3D lighting/material references mostly GDScript need C# adaptation.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "R04_planning_primary_research"
+      },
+      "limitations": "URL registration does not archive bytes or establish local integration."
+    },
+    {
+      "source_id": "SRC-0313",
+      "title": "Fistnet.Genepool.App\\Fistnet.Genepool.App.csproj",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.App\\Fistnet.Genepool.App.csproj"
+      },
+      "sha256": "34C03086B15ACEBDACB937CDC85386FB7CE5B331D4D9B3359EEE42667B416DDD",
+      "size_bytes": 2061,
+      "observed_at_utc": "2026-09-09T11:50:08+00:00",
+      "supersedes": "SRC-0002",
+      "status": "registered current working-file version",
+      "coverage": "Exact current bytes hashed; substantive coverage must be recorded separately."
+    },
+    {
+      "source_id": "SRC-0314",
+      "title": "Fistnet.Genepool.Tests\\Fistnet.Genepool.Tests.csproj",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\Fistnet.Genepool.Tests.csproj"
+      },
+      "sha256": "8F423E99EA78C2D2A5847002DC01E4E2EC317B4CE2F91FB1C6FCF49E9F138FB4",
+      "size_bytes": 740,
+      "observed_at_utc": "2026-09-09T11:50:09+00:00",
+      "supersedes": "SRC-0056",
+      "status": "registered current working-file version",
+      "coverage": "Exact current bytes hashed; substantive coverage must be recorded separately."
+    },
+    {
+      "source_id": "SRC-0315",
+      "title": "global.json",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\global.json"
+      },
+      "sha256": "CE61F5AE207D33D00594C77C5999C7F0DC66434E85A85F38090335D588438974",
+      "size_bytes": 109,
+      "observed_at_utc": "2026-09-09T11:50:09+00:00",
+      "supersedes": "SRC-0067",
+      "status": "registered current working-file version",
+      "coverage": "Exact current bytes hashed; substantive coverage must be recorded separately."
+    },
+    {
+      "source_id": "SRC-0316",
+      "title": "Fistnet.Genepool.Visualization\\Fistnet.Genepool.Visualization.csproj",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Visualization\\Fistnet.Genepool.Visualization.csproj"
+      },
+      "sha256": "5EEB2BC255A8DE35F4B9DF97DECB15A7A3433282094D0009D006336C70AEAEB4",
+      "size_bytes": 725,
+      "observed_at_utc": "2026-09-09T11:50:10+00:00",
+      "supersedes": "SRC-0068",
+      "status": "registered current working-file version",
+      "coverage": "Exact current bytes hashed; substantive coverage must be recorded separately."
+    },
+    {
+      "source_id": "SRC-0317",
+      "title": "Fistnet.Genepool.Control\\Fistnet.Genepool.Control.csproj",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\Fistnet.Genepool.Control.csproj"
+      },
+      "sha256": "4CD26298FE8547C1BCF51E9258A6B7DC0A98BAB97296366AA77327A39161DB03",
+      "size_bytes": 520,
+      "observed_at_utc": "2026-09-09T11:50:10+00:00",
+      "supersedes": "SRC-0069",
+      "status": "registered current working-file version",
+      "coverage": "Exact current bytes hashed; substantive coverage must be recorded separately."
+    },
+    {
+      "source_id": "SRC-0318",
+      "title": "Fistnet.Genepool.Dna\\Fistnet.Genepool.Dna.csproj",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Fistnet.Genepool.Dna.csproj"
+      },
+      "sha256": "9D051B1D4C85D5DFA9AF4DEB6002DC92BC4BA07E6323D4636EAB195712B07577",
+      "size_bytes": 393,
+      "observed_at_utc": "2026-09-09T11:50:11+00:00",
+      "supersedes": "SRC-0070",
+      "status": "registered current working-file version",
+      "coverage": "Exact current bytes hashed; substantive coverage must be recorded separately."
+    },
+    {
+      "source_id": "SRC-0319",
+      "title": "Genepool Analyzer project entry instructions",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\AGENTS.md"
+      },
+      "sha256": "503B2DB6A8854E5F190EC46D69B6C23A59139364FD60829B9DE2E5D04D594EB3",
+      "size_bytes": 8388,
+      "observed_at_utc": "2026-09-09T11:50:11+00:00",
+      "supersedes": "SRC-0154",
+      "status": "registered current working-file version",
+      "coverage": "Exact current bytes hashed; substantive coverage must be recorded separately."
+    },
+    {
+      "source_id": "SRC-0320",
+      "title": "Genepool Analyzer Operating Constitution GA-R02",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\.SeedAnalyzer\\CONSTITUTION.md"
+      },
+      "sha256": "58CF8F4F016D6505CD04D7DCF48BE89D88964BD3201975CECCC3CDC22AE01685",
+      "size_bytes": 21465,
+      "observed_at_utc": "2026-09-09T11:50:11+00:00",
+      "supersedes": "SRC-0155",
+      "status": "registered current working-file version",
+      "coverage": "Exact current bytes hashed; substantive coverage must be recorded separately."
+    },
+    {
+      "source_id": "SRC-0321",
+      "title": "Fistnet.Genepool.Godot/Fistnet.Genepool.Godot.csproj",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Fistnet.Genepool.Godot.csproj"
+      },
+      "sha256": "58488649DE67D90D520FAE29C75C87AD7E3957A58A21BDAABF07C1E30EFFF16C",
+      "size_bytes": 1556,
+      "observed_at_utc": "2026-09-09T11:50:12+00:00",
+      "supersedes": "SRC-0230",
+      "status": "registered current working-file version",
+      "coverage": "Exact current bytes hashed; substantive coverage must be recorded separately."
+    },
+    {
+      "source_id": "SRC-0322",
+      "title": "Fistnet.Genepool.Godot/packages.Debug.lock.json",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\packages.Debug.lock.json"
+      },
+      "sha256": "AF74828D8BD52E6B4EDB9993EB09DE6FF879A34C9365833BF2A049F2919760F0",
+      "size_bytes": 1122,
+      "observed_at_utc": "2026-09-09T11:50:12+00:00",
+      "supersedes": "SRC-0239",
+      "status": "registered current working-file version",
+      "coverage": "Exact current bytes hashed; substantive coverage must be recorded separately."
+    },
+    {
+      "source_id": "SRC-0323",
+      "title": "Fistnet.Genepool.Godot/packages.ExportRelease.lock.json",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\packages.ExportRelease.lock.json"
+      },
+      "sha256": "FE89010C2445A573BE98D3C299A400665C7969055A56797D9F45C3DC95CA6E29",
+      "size_bytes": 804,
+      "observed_at_utc": "2026-09-09T11:50:13+00:00",
+      "supersedes": "SRC-0240",
+      "status": "registered current working-file version",
+      "coverage": "Exact current bytes hashed; substantive coverage must be recorded separately."
+    },
+    {
+      "source_id": "SRC-0324",
+      "title": "Fistnet.Genepool.Godot/tools/Launch.ps1",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\tools\\Launch.ps1"
+      },
+      "sha256": "BA8F91960D50A6076692D018F733639A2660B4FFC6EC530542D35BBB65E25C4C",
+      "size_bytes": 2291,
+      "observed_at_utc": "2026-09-09T11:50:13+00:00",
+      "supersedes": "SRC-0247",
+      "status": "registered current working-file version",
+      "coverage": "Exact current bytes hashed; substantive coverage must be recorded separately."
+    },
+    {
+      "source_id": "SRC-0325",
+      "title": "Fistnet.Genepool.Tests/README.md (R02 Part4)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\README.md"
+      },
+      "sha256": "7D899E15AE04F748C90049ADF26FBAC5240CB1BC93DC4AED860E861B015D79F1",
+      "size_bytes": 25897,
+      "observed_at_utc": "2026-09-09T11:50:13+00:00",
+      "supersedes": "SRC-0263",
+      "status": "registered current working-file version",
+      "coverage": "Exact current bytes hashed; substantive coverage must be recorded separately."
+    },
+    {
+      "source_id": "SRC-0326",
+      "title": "Fistnet.Genepool.Godot/Verification/VerificationRunner.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Verification\\VerificationRunner.cs"
+      },
+      "sha256": "9D612362EA139C8E98FDD237F45A5BE5226E0C304C9E883CE2330E99ABCC014B",
+      "size_bytes": 34373,
+      "observed_at_utc": "2026-09-09T11:50:14+00:00",
+      "supersedes": "SRC-0269",
+      "status": "registered current working-file version",
+      "coverage": "Exact current bytes hashed; substantive coverage must be recorded separately."
+    },
+    {
+      "source_id": "SRC-0327",
+      "title": "Fistnet.Genepool.Godot\\README.md",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\README.md"
+      },
+      "sha256": "76D6332C1FD633CA0504CD2BFDC7570FFB31D13BBD4E7A47CB6A2871F5E41AE6",
+      "size_bytes": 14417,
+      "observed_at_utc": "2026-09-09T11:50:14+00:00",
+      "supersedes": "SRC-0303",
+      "status": "registered current working-file version",
+      "coverage": "Exact current bytes hashed; substantive coverage must be recorded separately."
+    },
+    {
+      "source_id": "SRC-0328",
+      "title": "Fistnet.Genepool.Control/SimulationSnapshot.cs (R02 Part4)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\SimulationSnapshot.cs"
+      },
+      "sha256": "BCD8411437BA3F8B1375F7C1C14912594244359C233A310E89EF35F59E34D698",
+      "size_bytes": 12133,
+      "observed_at_utc": "2026-09-09T11:50:14+00:00",
+      "supersedes": "SRC-0161",
+      "status": "registered current working-file version",
+      "coverage": "Exact current bytes hashed; substantive coverage must be recorded separately."
+    },
+    {
+      "source_id": "SRC-0329",
+      "title": "VS2026 primary XML solution with six preserved project mappings",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.slnx"
+      },
+      "sha256": "7EEE97BF50BDB8191D140CF53E6DB25DD306F9A9C128880E3496B4BBFB6824FE",
+      "size_bytes": 887,
+      "observed_at_utc": "2026-09-09T11:50:08.538452+00:00",
+      "coverage": "Generated from retained .sln, checked using installed solution parser and built in Debug and Release.",
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "record_ids": [
+          "DEC-0042",
+          "FACT-0065"
+        ]
+      }
     }
   ],
-  "updated_at": "2026-09-08T00:19:23+00:00"
+  "updated_at": "2026-09-09T11:55:52+00:00"
 }

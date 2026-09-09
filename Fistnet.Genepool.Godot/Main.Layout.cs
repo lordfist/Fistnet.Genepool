@@ -7,6 +7,9 @@ public partial class Main
 {
     public static readonly Color Background = new("0b111a"), Surface = new("131c28"), Ink = new("e1ebf5"), Muted = new("96a9be"), Accent = new("62d9ba"), Warm = new("ffdb85"), Error = new("ff8b95");
     public BoardView2D BoardView { get; private set; } = null!;
+    public BoardView3D DepthView { get; private set; } = null!;
+    public OptionButton CameraBox { get; private set; } = null!;
+    public MinimapView Minimap { get; private set; } = null!;
     public Button RunButton { get; private set; } = null!;
     public Button PauseButton { get; private set; } = null!;
     public Button StepButton { get; private set; } = null!;
@@ -60,27 +63,50 @@ public partial class Main
         SpeedBox.TooltipText = "Requested target, not a guaranteed rate. Actual completed seasons per second appear above."; playback.AddChild(SpeedBox);
         var views = new HFlowContainer(); views.AddThemeConstantOverride("h_separation", 8); views.AddThemeConstantOverride("v_separation", 5); root.AddChild(views);
         views.AddChild(MakeLabel("VIEW", 12, Muted));
+        CameraBox = MakeOptions("CameraBox", "Habitat · angled", "Habitat · top-down", "Original 2D");
+        CameraBox.ItemSelected += index => SetViewMode((int)index); views.AddChild(CameraBox);
         LayerBox = MakeOptions("LayerBox", "Combined", "Organisms", "Food"); LayerBox.Select(0); views.AddChild(LayerBox);
-        LayerBox.ItemSelected += index => BoardView.Layer = index == 0 ? BoardLayer.Combined : index == 1 ? BoardLayer.Organisms : BoardLayer.Food;
-        views.AddChild(MakeButton("FitButton", "Fit", () => BoardView.Fit()));
-        views.AddChild(MakeButton("ZoomOutButton", "−", () => BoardView.ZoomBy(.8f)));
-        views.AddChild(MakeButton("ZoomInButton", "+", () => BoardView.ZoomBy(1.25f)));
+        LayerBox.ItemSelected += index => { var layer = index == 0 ? BoardLayer.Combined : index == 1 ? BoardLayer.Organisms : BoardLayer.Food; BoardView.Layer = layer; DepthView.Layer = layer; Minimap.Layer = layer; };
+        views.AddChild(MakeButton("FitButton", "Fit", FitView));
+        views.AddChild(MakeButton("ZoomOutButton", "−", () => ZoomView(.8f)));
+        views.AddChild(MakeButton("ZoomInButton", "+", () => ZoomView(1.25f)));
+        views.AddChild(MakeButton("FocusButton", "Zoom to selection", FocusView));
         ZoomLabel = MakeLabel("100%", 13, Muted); ZoomLabel.CustomMinimumSize = new Vector2(45, 0); views.AddChild(ZoomLabel);
-        TrailToggle = new CheckBox { Name = "TrailToggle", Text = "Selected trail" }; TrailToggle.Toggled += value => BoardView.ShowTrail = value; views.AddChild(TrailToggle);
-        MarkersToggle = new CheckBox { Name = "MarkersToggle", Text = "Event markers" }; MarkersToggle.Toggled += value => BoardView.ShowMarkers = value; views.AddChild(MarkersToggle);
-        MarkersToggle.TooltipText = "Births, deaths and the selected organism's committed action. At most 64 markers from the latest published season; fast playback may skip events.";
+        TrailToggle = new CheckBox { Name = "TrailToggle", Text = "Selected trail" }; TrailToggle.Toggled += value => { BoardView.ShowTrail = value; DepthView.ShowTrail = value; }; views.AddChild(TrailToggle);
+        MarkersToggle = new CheckBox { Name = "MarkersToggle", Text = "Actions", ButtonPressed = true }; MarkersToggle.Toggled += value => { BoardView.ShowMarkers = value; DepthView.ShowMarkers = value; }; views.AddChild(MarkersToggle);
+        MarkersToggle.TooltipText = "Habitat: quiet. Organism: muted outcomes throughout the visible area. Inspect: selected organism only. The latest completed season is shown; fast playback can skip seasons. Original 2D retains its limited event markers.";
         HistoryToggle = new CheckBox { Name = "HistoryToggle", Text = "History" }; HistoryToggle.Toggled += value => { historyPreference = value; AdaptHistory(); }; views.AddChild(HistoryToggle);
         HistoryToggle.TooltipText = "Recent sampled history. Hidden initially in shorter windows to give the board more space; you can show it explicitly.";
         var legend = new HBoxContainer(); legend.AddThemeConstantOverride("separation", 2); legend.AddChild(MakeLabel("  Food 0 ", 12, Muted));
-        for (int i = 0; i <= 10; i++) { float t = i / 10f; legend.AddChild(new ColorRect { Color = Color.Color8((byte)(17 + 99 * t), (byte)(28 + 160 * t), (byte)(37 + 99 * t)), CustomMinimumSize = new Vector2(9, 12), SizeFlagsVertical = SizeFlags.ShrinkCenter, MouseFilter = MouseFilterEnum.Ignore }); }
+        for (int i = 0; i <= 10; i++) { var swatch = new ColorRect { Color = BoardView3D.FoodColor(i), CustomMinimumSize = new Vector2(9, 12), SizeFlagsVertical = SizeFlags.ShrinkCenter, MouseFilter = MouseFilterEnum.Ignore }; foodSwatches.Add(swatch); legend.AddChild(swatch); }
         legend.AddChild(MakeLabel(" 10", 12, Muted)); views.AddChild(legend);
+        var detailBar = new HBoxContainer(); detailBar.AddThemeConstantOverride("separation", 7); root.AddChild(detailBar);
+        foreach (var (level, label) in new[] { (1, "1 · World"), (2, "2 · Habitat"), (3, "3 · Organism"), (4, "4 · Inspect") })
+        {
+            int requested = level;
+            var button = MakeButton("DetailLevel" + level, label, () => { if (!IsDepthView) SetViewMode(0); DepthView.SetDetailLevel(requested); });
+            button.ToggleMode = true; detailButtons.Add(button);
+            detailBar.AddChild(button);
+        }
+        ViewHint = MakeLabel("Whole world · zoom in to explore", 12, Muted); ViewHint.SizeFlagsHorizontal = SizeFlags.ExpandFill;
+        ViewHint.AutowrapMode = TextServer.AutowrapMode.WordSmart; detailBar.AddChild(ViewHint);
         var content = new HBoxContainer { SizeFlagsVertical = SizeFlags.ExpandFill }; content.AddThemeConstantOverride("separation", 12); root.AddChild(content);
         var boardPanel = new PanelContainer { SizeFlagsHorizontal = SizeFlags.ExpandFill, SizeFlagsVertical = SizeFlags.ExpandFill }; content.AddChild(boardPanel);
         var boardColumn = new VBoxContainer(); boardColumn.AddThemeConstantOverride("separation", 3); boardPanel.AddChild(boardColumn);
         StatisticsLabel = MakeLabel("A fresh population is being prepared…", 14); StatisticsLabel.Name = "StatisticsLabel"; boardColumn.AddChild(StatisticsLabel);
         BoardView = new BoardView2D { Name = "BoardView", SizeFlagsHorizontal = SizeFlags.ExpandFill, SizeFlagsVertical = SizeFlags.ExpandFill };
-        BoardView.CellPicked += SelectCell; boardColumn.AddChild(BoardView);
-        DetailTabs = new TabContainer { Name = "DetailTabs", CustomMinimumSize = new Vector2(385, 0), SizeFlagsVertical = SizeFlags.ExpandFill }; content.AddChild(DetailTabs);
+        var boardSurface = new Godot.Control { SizeFlagsHorizontal = SizeFlags.ExpandFill, SizeFlagsVertical = SizeFlags.ExpandFill, CustomMinimumSize = new Vector2(240,240), ClipContents = true };
+        boardColumn.AddChild(boardSurface);
+        BoardView.CellPicked += SelectCell; boardSurface.AddChild(BoardView); BoardView.SetAnchorsAndOffsetsPreset(LayoutPreset.FullRect);
+        DepthView = new BoardView3D { Name = "DepthView", ShowMarkers = true };
+        DepthView.CellPicked += SelectCell; boardSurface.AddChild(DepthView); DepthView.SetAnchorsAndOffsetsPreset(LayoutPreset.FullRect);
+        Minimap = new MinimapView { Name = "Minimap", MouseFilter = MouseFilterEnum.Stop };
+        Minimap.Navigate += (x, y) => DepthView.CenterOn(x, y);
+        boardSurface.AddChild(Minimap); Minimap.SetAnchorsAndOffsetsPreset(LayoutPreset.TopRight);
+        Minimap.OffsetLeft = -142; Minimap.OffsetTop = 12; Minimap.OffsetRight = -12; Minimap.OffsetBottom = 157;
+        DepthView.ViewChanged += UpdateViewStatus;
+        SetViewMode(0);
+        DetailTabs = new TabContainer { Name = "DetailTabs", CustomMinimumSize = new Vector2(340, 0), SizeFlagsVertical = SizeFlags.ExpandFill }; content.AddChild(DetailTabs);
         var inspector = new MarginContainer { Name = "Organism" }; Pad(inspector, 12); DetailTabs.AddChild(inspector);
         InspectorText = TextPanel("InspectorText"); inspector.AddChild(InspectorText);
         var patterns = new MarginContainer { Name = "Patterns" }; Pad(patterns, 12); DetailTabs.AddChild(patterns);

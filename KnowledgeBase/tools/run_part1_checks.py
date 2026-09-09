@@ -11,6 +11,7 @@ from pathlib import Path
 import subprocess
 import tempfile
 import time
+from build_identity import capture_outputs, project_output, project_target, report_path, verify_build, verify_loaded
 
 ROOT = Path(__file__).resolve().parents[2]
 KB = ROOT / "KnowledgeBase"
@@ -46,11 +47,24 @@ def validate_child_arguments(arguments):
     return list(arguments)
 
 
-def execute(arguments, configuration, timeout):
+def execute(arguments, configuration, timeout, *, build_report=None, build_stage=None):
     arguments = validate_child_arguments(arguments)
-    executable = ROOT / f"Fistnet.Genepool.Tests/bin/{configuration}/net9.0-windows7.0/Fistnet.Genepool.Tests.exe"
+    project = "Fistnet.Genepool.Tests"
+    directory = project_output(project, configuration)
+    executable = directory / (project + ".exe")
     row = {"arguments": arguments, "configuration": configuration,
+           "target_framework": project_target(project), "executable": str(executable),
            "at_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(), "budget_seconds": timeout}
+    expected = None
+    if build_report is not None or build_stage is not None:
+        assemblies = ["Fistnet.Genepool." + name for name in ("Tests", "Control", "Dna", "Visualization", "App")]
+        required = [directory / (name + ".dll") for name in assemblies]
+        required += [executable, directory / (project + ".runtimeconfig.json"), directory / (project + ".deps.json")]
+        row["build_identity"] = verify_build(build_report, build_stage, configuration, required)
+        expected = capture_outputs(directory, assemblies)
+        row["expected_assembly_sha256"] = expected
+    else:
+        row["build_identity"] = {"verified": False, "reason": "Legacy invocation supplied no build report/stage; fresh-build identity is unproven."}
     started = time.monotonic()
     with tempfile.TemporaryDirectory(prefix=".diagnostics-", dir=KB) as scratch:
         env = os.environ.copy()
@@ -81,13 +95,27 @@ def execute(arguments, configuration, timeout):
         row["messages"] = [line for line in non_json if not line.startswith("PASS ")]
         row["stderr"] = error.decode("utf-8", errors="replace")
     row["scratch_removed"] = not Path(scratch).exists()
+    if expected is not None:
+        try:
+            verify_loaded(expected, capture_outputs(directory, expected))
+            verify_build(build_report, build_stage, configuration, required)
+            if arguments[0] in ("--all", "--group"):
+                last = row["records"][-1] if row["records"] else {}
+                verify_loaded(expected, last.get("assemblySha256"))
+                row["loaded_assembly_identity_verified"] = True
+            else:
+                row["loaded_assembly_identity_verified"] = False
+                row["identity_limit"] = "Command has no loaded-assembly report; executed output matched the build before and after dispatch."
+        except (OSError, ValueError) as error:
+            row["identity_error"] = str(error)
+            row["exit_code"] = row["exit_code"] or 1
     return row
 
 
-def save(stage, value):
-    data = json.loads(RESULT.read_text(encoding="utf-8"))
+def save(stage, value, destination=RESULT):
+    data = json.loads(destination.read_text(encoding="utf-8")) if destination.exists() else {"actor": "Genepool Analyzer"}
     data.setdefault("checks", {})[stage] = value
-    RESULT.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
+    destination.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
 
 
 def main(argv=None):
@@ -96,6 +124,9 @@ def main(argv=None):
     parser.add_argument("--configuration", choices=["Debug", "Release"], default="Release")
     parser.add_argument("--timeout", type=int, default=120)
     parser.add_argument("--batch", choices=["reference", "production"])
+    parser.add_argument("--report", help="Current JSON report directly inside KnowledgeBase; leaves prior reports untouched")
+    parser.add_argument("--build-report", help="Build evidence report directly inside KnowledgeBase")
+    parser.add_argument("--build-stage", help="Exact successful stage used to build the executed configuration")
     parser.add_argument("arguments", nargs=argparse.REMAINDER)
     args = parser.parse_args(argv)
     if not 1 <= args.timeout <= 120:
@@ -108,8 +139,15 @@ def main(argv=None):
             arguments = validate_child_arguments(arguments or ["--all"])
         except ValueError as error:
             parser.error(str(error))
-    if not RESULT.exists():
+    if bool(args.build_report) != bool(args.build_stage):
+        parser.error("--build-report and --build-stage must be supplied together")
+    try:
+        destination = report_path(args.report) if args.report else RESULT
+    except ValueError as error:
+        parser.error(str(error))
+    if not args.report and not RESULT.exists():
         parser.error("Capture the unchanged pre-instrumentation baseline first")
+    proof = {"build_report": args.build_report, "build_stage": args.build_stage} if args.build_report else {}
     if args.batch:
         budget = 300 if args.batch == "reference" else 600
         jobs = []
@@ -140,19 +178,19 @@ def main(argv=None):
             if remaining < 1:
                 batch["unstarted"] = [j[0] for j in jobs[index:]]
                 break
-            result = execute(arguments, args.configuration, min(timeout, remaining))
+            result = execute(arguments, args.configuration, min(timeout, remaining), **proof)
             result["name"] = name
             batch["runs"].append(result)
             batch["wall_seconds"] = time.monotonic() - started
-            save(args.stage, batch)
+            save(args.stage, batch, destination)
             print(json.dumps({"name": name, "exit_code": result["exit_code"],
                               "wall_seconds": result["wall_seconds"], "records": len(result["records"]),
                               "incomplete": result.get("incomplete")}), flush=True)
         batch["wall_seconds"] = time.monotonic() - started
-        save(args.stage, batch)
+        save(args.stage, batch, destination)
         return 0 if not batch["unstarted"] and all(r["exit_code"] == 0 for r in batch["runs"]) else 1
-    result = execute(arguments, args.configuration, args.timeout)
-    save(args.stage, result)
+    result = execute(arguments, args.configuration, args.timeout, **proof)
+    save(args.stage, result, destination)
     last = result["records"][-1] if result["records"] else {}
     print(json.dumps({"stage": args.stage, "exit_code": result["exit_code"], "wall_seconds": result["wall_seconds"],
                       "result": {k: v for k, v in last.items() if k in ("total", "passed", "failed", "seconds")},

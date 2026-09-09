@@ -1,0 +1,1555 @@
+{
+  "actor": "Genepool Analyzer",
+  "note": "Complete owner-approved R03Step4 perspective correction; preserve histories and stop for review.",
+  "upsert_records": [
+    {
+      "id": "DEC-0034",
+      "kind": "owner_decision",
+      "status": "active",
+      "statement": "Owner approves the R03 Step4 correction: closer/wider front edge, farther/narrower back edge, visibly receding grid, and modest diagonal orientation. Implement and verify that bounded perspective correction; completed-result acceptance remains pending.",
+      "source_refs": [],
+      "related_record_ids": [
+        "FACT-0057",
+        "DEC-0033",
+        "FACT-0058"
+      ],
+      "origin": {
+        "type": "direct_owner_message",
+        "actor": "User",
+        "recorded_by": "Genepool Analyzer",
+        "recorded_at_utc": "2026-09-08T09:43:48.412388+00:00",
+        "quote": "Yes, exaclty, this is what we need: 1. A closer, wider front edge and a farther, narrower back edge. 2. Grid lines visibly receding into the distance. 3. A modest diagonal orientation that reinforces the sense of looking across the ground."
+      }
+    },
+    {
+      "id": "FACT-0058",
+      "kind": "observed_fact",
+      "status": "active",
+      "statement": "R03 Step4 perspective correction implemented and verified: perspective50deg elevation/18deg yaw, front edge about39% wider, receding grid; native ground picking/zoom/drag, polygon culling/minimap and projected cues. Tight depth bounds repair fragmented mould rendering. VS2022 Debug/Release builds pass;170GPU,145headless,62retained2D checks pass. Prior159tests/config reused after all five non-Godot binaries match. Benchmark initial11/12 with marginal empty miss; one quiet repeat12/12,57-60FPS, variable timings.",
+      "uncertainty": "Awaiting owner implementation review. Current capture fixtures are synthetic; no ecology conclusion or new trial. Initial timing miss cause unproven; repeat pass is not constant60FPS guarantee.106existingCA1416warnings; IDEdebugging and physicalDPI unverified. HistoricalSRC0115 exact-byte gap remains. No new dependencies, simulation rules/RNG, Step5 or food cycle.",
+      "source_refs": [
+        "SRC-0279",
+        "SRC-0280",
+        "SRC-0281",
+        "SRC-0282",
+        "SRC-0283",
+        "SRC-0284",
+        "SRC-0285",
+        "SRC-0286",
+        "SRC-0287",
+        "SRC-0288"
+      ],
+      "related_record_ids": [
+        "DEC-0034",
+        "FACT-0057",
+        "FACT-0055",
+        "FACT-0056",
+        "DEC-0030",
+        "DEC-0027"
+      ],
+      "tags": [
+        "R03",
+        "step4",
+        "perspective",
+        "angle",
+        "rendering",
+        "Godot",
+        "2.5D demo"
+      ],
+      "origin": {
+        "type": "authorized_implementation_and_verification",
+        "actor": "Genepool Analyzer",
+        "recorded_at_utc": "2026-09-08T09:43:48.412388+00:00",
+        "contributors": "Bounded transient camera, test and independent-review helpers; root integration, GPU verification and canonical KB writer."
+      },
+      "derivation": {
+        "source_horizon_utc": "2026-09-08T09:43:48.412388+00:00",
+        "base_commit": "14b39d984555897e88c279ed21651df7c114e05d",
+        "artifacts": [
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_STEP4_PERSPECTIVE_RESULT.md",
+            "sha256": "D895D6AAE0B70005DD59D117F9014B6749E601375BF9A3FE4156AAF56311EAD6",
+            "bytes": 8383
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_perspective_builds.json",
+            "sha256": "E4667635158BD67EEEE3DF9226D0E2ED7414BBDA5CBC7070E19C301AE94300DE",
+            "bytes": 88235
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step4_verification.json",
+            "sha256": "08BC50E466EACD35BC27324F423545DD67F03958B3310E13D544EC8375521E07",
+            "bytes": 27981
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step4_headless.json",
+            "sha256": "484C14F45AEBA0B87772A1FDEF6367629B74C9657AFCD9325504D62A0FE30390",
+            "bytes": 21414
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_godot_verification.json",
+            "sha256": "19024BD14D2D6FA9F5B0AD7F0D643A0DEF29CA57237AE94D3375B9DF65DE367C",
+            "bytes": 9360
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step4_benchmark.json",
+            "sha256": "B5C9EBF57D14B401DB53B8C7B97BD4BABCBE4EA6DFD65AF02F41CFF8F6DE3E3D",
+            "bytes": 7121
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step4_tests_debug.json",
+            "sha256": "23B46089D67AF4DE8EAC9E16488B83005E722414B684E9A2EC22D8BB739F7763",
+            "bytes": 6685
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step4_tests_release.json",
+            "sha256": "2677191E7B376DEB866DF93A31BCB675E39DAC8323E0BAC509973CE47E4F813E",
+            "bytes": 6687
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_perspective_interventions.json",
+            "sha256": "1E9FCF192CF5563C8EE3C4D9496FBE928D760A5FC000BDCE6A59BF182C7C208E",
+            "bytes": 2378
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_perspective_world.png",
+            "sha256": "3737664F11A9CBC18DB6E6DE9F8CE91081DBE42A5A590E5A04720472AB73C2BE",
+            "bytes": 296149
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_perspective_detail.png",
+            "sha256": "A291D0F78E4359A35CAA1F2D1D733C4052FF4D8043262C0C7CCD93C7258437D9",
+            "bytes": 2035139
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_perspective_topdown.png",
+            "sha256": "2D2419551E1C03819A0236C5D85435469F53667AD216EBA02E51F442BF86E3C9",
+            "bytes": 284544
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step4_habitat.png",
+            "sha256": "B453687F9136048CADA8426C8BC57235454C2A54089A70071AF1C962CBD0B85B",
+            "bytes": 2042024
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step4_organism.png",
+            "sha256": "A7D586B46B8DBDD219661F5CE042E4C9DDD99F9AA8936AF1B272FA08643D08FA",
+            "bytes": 1805756
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step4_inspect.png",
+            "sha256": "B73A6B25EEB58CCD80969D1BF8D4509739C669991AD49EBBC1EC5675AF542B76",
+            "bytes": 1493931
+          }
+        ],
+        "godot_binaries": [
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\.godot\\mono\\temp\\bin\\Debug\\Fistnet.Genepool.Godot.dll",
+            "sha256": "AE762A66B765809A505EB3D591BAC1A1AB5299A0383AC0874ECA0A81DF3B60AA",
+            "bytes": 349696
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\.godot\\mono\\temp\\bin\\ExportRelease\\Fistnet.Genepool.Godot.dll",
+            "sha256": "6F01091BC765230617A92A92B5CAE931F0A8C42196D78F95B7877EEFF605B00F",
+            "bytes": 322048
+          }
+        ],
+        "reused_console_evidence": [
+          {
+            "configuration": "Debug",
+            "passing_report": "r03_step4_tests_debug.json",
+            "tests": 159,
+            "all_five_assembly_hashes_match": true,
+            "hashes": {
+              "Fistnet.Genepool.Tests": "6F0049925942FCAFD6377C6DCC4E2313D65C1F39CEC61DAF93549BAC08EBAC31",
+              "Fistnet.Genepool.Control": "4B7B1DF5CBD42A54B0F62EB5F45989099D062B778C887DFA8F25088EFEA17DFA",
+              "Fistnet.Genepool.Dna": "FD7B5EAAC17F9FAC83FFFAD6D13E5BA8035B12E38281A5F733AC400542A344FF",
+              "Fistnet.Genepool.Visualization": "5F57A941A76B64E8831BF420459907F2429675D1630B2EC33EDC9457039F8B96",
+              "Fistnet.Genepool.App": "3998257D4544A92C102F5219D3E2AB050846DE61AA92F7569BEA2500CB3980D6"
+            },
+            "execution": "Prior passing suite reused after exact current binary comparison; not rerun this correction."
+          },
+          {
+            "configuration": "Release",
+            "passing_report": "r03_step4_tests_release.json",
+            "tests": 159,
+            "all_five_assembly_hashes_match": true,
+            "hashes": {
+              "Fistnet.Genepool.Tests": "F9EF42729A131A8EF7DFE29612C4BCB7626441A9C2C19A22650427BF09D89BDF",
+              "Fistnet.Genepool.Control": "43480F2ADF97BAB6F893091599B7B1671E3F717F24DB55FB996251DC7F212449",
+              "Fistnet.Genepool.Dna": "2A5E4B6E48624B82CCF7A9981BC3C1E1E85272A8715F8A95915C5EDA0DCF745D",
+              "Fistnet.Genepool.Visualization": "9ED74A67549CC3D7B6355137F1B1BC8DD72CFF1D9008A1549B6813254151A502",
+              "Fistnet.Genepool.App": "AC9A926AA2B3AD1A105A1D10C8F1A63CA4E5D67F54AA7A1CE9BD165506F5AB36"
+            },
+            "execution": "Prior passing suite reused after exact current binary comparison; not rerun this correction."
+          }
+        ],
+        "gpu_colony_measurements": [
+          {
+            "kind": "perspective_colony_coverage",
+            "detailLevel": 2,
+            "sampleCount": 36,
+            "minimumBodyCoverage": 0.31091370558375636,
+            "maximumBodyCoverage": 0.326984126984127,
+            "minimumCoreCoverage": 1,
+            "minimumConnectedShare": 0.9950980392156863,
+            "oracle": "Actual GPU Combined minus Food-only pixels, native Camera3D projected cells, central 20%-width square; 8-connected visible body mask.",
+            "thresholds": "RGB distance >0.08 identifies the body; area15%-60% of cell, central square>=90%, largest component>=85%."
+          },
+          {
+            "kind": "perspective_colony_coverage",
+            "detailLevel": 3,
+            "sampleCount": 36,
+            "minimumBodyCoverage": 0.3035532994923858,
+            "maximumBodyCoverage": 0.31109550561797755,
+            "minimumCoreCoverage": 1,
+            "minimumConnectedShare": 0.9909297052154195,
+            "oracle": "Actual GPU Combined minus Food-only pixels, native Camera3D projected cells, central 20%-width square; 8-connected visible body mask.",
+            "thresholds": "RGB distance >0.08 identifies the body; area15%-60% of cell, central square>=90%, largest component>=85%."
+          }
+        ],
+        "benchmark_measurements": [
+          {
+            "kind": "depth_renderer",
+            "population": 0,
+            "detailLevel": 1,
+            "angled": true,
+            "width": 1920,
+            "height": 1080,
+            "visibleFoodInstances": 10000,
+            "visibleOrganismInstances": 0,
+            "visibleActionCues": 0,
+            "requestedWarmupSeconds": 3,
+            "requestedSampleSeconds": 7,
+            "actualSampleSeconds": 7.0163835,
+            "requestedSnapshotHz": 10,
+            "expectedSampleSnapshots": 70,
+            "sampleSnapshotsReplayed": 70,
+            "sampleSnapshotsSkipped": 0,
+            "frames": 421,
+            "averageFps": 60.00242147539399,
+            "p95FrameMilliseconds": 16.6781,
+            "maxFrameMilliseconds": 16.7576,
+            "p95UploadMilliseconds": 5.1071,
+            "sampleCoverageComplete": true,
+            "replayCoverageComplete": true,
+            "frameBudgetPassed": true,
+            "simulationCalculationIncluded": false,
+            "notes": "Detached snapshots. Dense detail3 includes full 10000-outcome batches at10Hz; no spatial event cap. Intervals include replay stamping and UI upload, but exclude simulation calculation. Main-loop observations, not hardware presentation timings."
+          },
+          {
+            "kind": "depth_renderer",
+            "population": 1000,
+            "detailLevel": 1,
+            "angled": true,
+            "width": 1920,
+            "height": 1080,
+            "visibleFoodInstances": 10000,
+            "visibleOrganismInstances": 1000,
+            "visibleActionCues": 0,
+            "requestedWarmupSeconds": 3,
+            "requestedSampleSeconds": 7,
+            "actualSampleSeconds": 7.0163739,
+            "requestedSnapshotHz": 10,
+            "expectedSampleSnapshots": 70,
+            "sampleSnapshotsReplayed": 70,
+            "sampleSnapshotsSkipped": 0,
+            "frames": 421,
+            "averageFps": 60.002503572393714,
+            "p95FrameMilliseconds": 16.7104,
+            "maxFrameMilliseconds": 25.5931,
+            "p95UploadMilliseconds": 5.69,
+            "sampleCoverageComplete": true,
+            "replayCoverageComplete": true,
+            "frameBudgetPassed": true,
+            "simulationCalculationIncluded": false,
+            "notes": "Detached snapshots. Dense detail3 includes full 10000-outcome batches at10Hz; no spatial event cap. Intervals include replay stamping and UI upload, but exclude simulation calculation. Main-loop observations, not hardware presentation timings."
+          },
+          {
+            "kind": "depth_renderer",
+            "population": 10000,
+            "detailLevel": 1,
+            "angled": true,
+            "width": 1920,
+            "height": 1080,
+            "visibleFoodInstances": 10000,
+            "visibleOrganismInstances": 10000,
+            "visibleActionCues": 0,
+            "requestedWarmupSeconds": 3,
+            "requestedSampleSeconds": 7,
+            "actualSampleSeconds": 7.0137926,
+            "requestedSnapshotHz": 10,
+            "expectedSampleSnapshots": 70,
+            "sampleSnapshotsReplayed": 70,
+            "sampleSnapshotsSkipped": 0,
+            "frames": 400,
+            "averageFps": 57.03048590287656,
+            "p95FrameMilliseconds": 22.8957,
+            "maxFrameMilliseconds": 52.8587,
+            "p95UploadMilliseconds": 7.4601,
+            "sampleCoverageComplete": true,
+            "replayCoverageComplete": true,
+            "frameBudgetPassed": true,
+            "simulationCalculationIncluded": false,
+            "notes": "Detached snapshots. Dense detail3 includes full 10000-outcome batches at10Hz; no spatial event cap. Intervals include replay stamping and UI upload, but exclude simulation calculation. Main-loop observations, not hardware presentation timings."
+          },
+          {
+            "kind": "depth_renderer",
+            "population": 10000,
+            "detailLevel": 3,
+            "angled": true,
+            "width": 1920,
+            "height": 1080,
+            "visibleFoodInstances": 393,
+            "visibleOrganismInstances": 393,
+            "visibleActionCues": 393,
+            "requestedWarmupSeconds": 3,
+            "requestedSampleSeconds": 7,
+            "actualSampleSeconds": 7.0330532,
+            "requestedSnapshotHz": 10,
+            "expectedSampleSnapshots": 70,
+            "sampleSnapshotsReplayed": 70,
+            "sampleSnapshotsSkipped": 0,
+            "frames": 422,
+            "averageFps": 60.00238985821975,
+            "p95FrameMilliseconds": 16.7932,
+            "maxFrameMilliseconds": 29.7369,
+            "p95UploadMilliseconds": 0.5328,
+            "sampleCoverageComplete": true,
+            "replayCoverageComplete": true,
+            "frameBudgetPassed": true,
+            "simulationCalculationIncluded": false,
+            "notes": "Detached snapshots. Dense detail3 includes full 10000-outcome batches at10Hz; no spatial event cap. Intervals include replay stamping and UI upload, but exclude simulation calculation. Main-loop observations, not hardware presentation timings."
+          }
+        ],
+        "interventions": [
+          {
+            "stage": "first_gpu",
+            "issue": "Godot Fov property setter rejects below1deg at80x zoom, leaves40deg while cache advances; native-camera test detected divergence (509.99,414.02 cached vs752.92,319.20 native).",
+            "resolution": "Public SetPerspective applies complete camera projection; max80x native camera agreement passed on next run."
+          },
+          {
+            "stage": "second_gpu",
+            "issue": "Maximum-zoom native camera checks now pass. Injected middle-drag expected(753.64,321.56), observed(1193,149); investigate live input interleaving vs handler.",
+            "resolution": "Input test now flushes buffered events and delivers press/motion/release synchronously through the real Godot GUI route with temporary nonaccumulated input, restoring it afterward. A passive event observer proves all three intended local-coordinate events arrived. Original suspected OS-motion interleaving was not proven because the first attempt had no delivery log; native projection and 1.5px threshold unchanged. Subsequent GPU run passed."
+          },
+          {
+            "stage": "visual_inspection_after_159_passes",
+            "issue": "Actual angled Habitat screenshot showed many organism silhouettes as thin shards, including selected body almost absent. Existing angled pixel test only checked cues; body checks were top-down.",
+            "resolution": "Camera clip range bounded to the entire world with full height margin, rather than Near .01 and Far>=500. Rerender shows intact patches; 72 actual GPU colony samples across levels2/3 cover30.36–32.70% of cells, all central cores fully present and minimum99.09% connected mat. No shader, world layer height, or simulation rule changed."
+          },
+          {
+            "stage": "first_final_perspective_benchmark",
+            "issue": "11/12 checks passed. Empty-board p95 frame interval33.6896ms missed33.3ms budget (55.95FPS); 1k/fulloverview/dense393cue cases ~60FPS and16.70–16.73ms p95. All cases delivered70/70updates without skips. No engineerrors.",
+            "resolution": "One quiet repeat passed12/12checks with all70/70updates delivered. Full overview57.03FPS,p9522.8957ms,max52.8587ms; dense393cue view60.00FPS,p9516.7932ms. Empty and1k samples passed. No code, threshold or workload changed. Web retrieval overlapped the initial empty-board sample, but its contribution was not measured; timing variability remains unexplained and the first miss is retained. No further reruns."
+          }
+        ],
+        "locators": [
+          "BoardView3D.Projection.cs: ProjectGround/GroundAt/RefreshProjection/BoardClipDistances/IsCellVisible",
+          "BoardView3D.cs: ZoomAt/PanBy/CellAt/_GuiInput",
+          "BoardView3D.Actions.cs: DrawOverlay/VisibleAction/ClipLineToView",
+          "MinimapView.cs: ViewFootprint/ClipFootprint",
+          "VerificationRunner.Perspective.cs: native geometry and actualGPU oracles"
+        ],
+        "demo_reference": {
+          "owner_url": "https://store.godotengine.org/asset/godot-foundation/project-with-csharp-2-5d-demo/",
+          "store_direct_retrieval": "failed; corresponding official README links exact page",
+          "assessment": "Official README and Transform25D reviewed. Inference: fixed affine 2D projection does not give near/far perspective scaling; useful future sprite/height/shadow reference. No import/install/execution."
+        }
+      }
+    },
+    {
+      "id": "FACT-0055",
+      "kind": "observed_fact",
+      "status": "active",
+      "statement": "R03 Step4 implemented: Godot depth viewport with angled/top-down cameras, brown-green procedural terrain, identity-stable mould colonies, four detail presets, visible-cell batching, true world edges, minimap/focus navigation, complete detached season outcomes and level3 all-visible muted versus level4 focused feedback. Existing Godot2D and WinForms entry points remain.",
+      "uncertainty": "Working implementation awaiting owner review. Finite colors and procedural shapes are display aids; effects refer to action-time cells. Fast playback samples whole seasons. Step5 and deferred food mechanics remain unstarted; no simulation rules/RNG changed.",
+      "source_refs": [
+        "SRC-0261",
+        "SRC-0262",
+        "SRC-0263",
+        "SRC-0264",
+        "SRC-0265",
+        "SRC-0266",
+        "SRC-0267",
+        "SRC-0268",
+        "SRC-0269",
+        "SRC-0270",
+        "SRC-0271",
+        "SRC-0272",
+        "SRC-0273",
+        "SRC-0274",
+        "SRC-0275",
+        "SRC-0276",
+        "SRC-0277",
+        "SRC-0278"
+      ],
+      "related_record_ids": [
+        "DEC-0033",
+        "DEC-0031",
+        "REC-0010",
+        "FACT-0056",
+        "DEC-0027"
+      ],
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_implementation_and_verification",
+        "recorded_at_utc": "2026-09-08T01:54:13.964569+00:00"
+      },
+      "derivation": {
+        "artifacts": [
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\IMPROVEMENT_RESULT_R03_STEP4.md",
+            "sha256": "494F4602109CEFFC5283000B4D202E48E2011015D20679C43167936249119AD7",
+            "bytes": 10498
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step4_builds.json",
+            "sha256": "EB810AAE73D99C6F4F6D71B3EC03C225C78075B7319B8752F869151268758ED0",
+            "bytes": 105486
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step4_tests_debug.json",
+            "sha256": "23B46089D67AF4DE8EAC9E16488B83005E722414B684E9A2EC22D8BB739F7763",
+            "bytes": 6685
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step4_tests_release.json",
+            "sha256": "2677191E7B376DEB866DF93A31BCB675E39DAC8323E0BAC509973CE47E4F813E",
+            "bytes": 6687
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step4_verification.json",
+            "sha256": "1A111A0AFFF4364A55491839B373608AD7EA895C3E31D3CA84DE64D4DD5104C5",
+            "bytes": 14704
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step4_headless.json",
+            "sha256": "0D4A389EF06DEE1C48A9F130603DCD1BB2D0D069AF4B7B4A0A9FB195DF5204D6",
+            "bytes": 13120
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step4_benchmark.json",
+            "sha256": "91402A060A7B31D092D6518F40A6C07063372655A08C12F3E1956A2E66413FD7",
+            "bytes": 7122
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_godot_verification.json",
+            "sha256": "AE92839B116FA3EBFA21BF60237697F5C0E6AF04EBE2853BCFFFDCD55AE17A45",
+            "bytes": 9359
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step4_habitat.png",
+            "sha256": "139D7A238609D702AC16F8739EE397B0CDE51E485095304AADE1EAD7DD348AFD",
+            "bytes": 1877594
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step4_organism.png",
+            "sha256": "CA8B3F1791268C15DB24136685A86ED6E958D2D9BF36F3BDF4093D4D007FA926",
+            "bytes": 1672289
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step4_inspect.png",
+            "sha256": "203D2BB5D0D6B38B4642D859E1A9F800A7423505F8B82BC46AFEF2170D6C2991",
+            "bytes": 1385903
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\tools\\run_godot_checks.py",
+            "sha256": "6543DB25A6A5CB10F7098EB763988512F8DB46A9EE97787BF7643075550F8847",
+            "bytes": 3250
+          }
+        ],
+        "source_horizon_utc": "2026-09-08T01:54:13.964569+00:00",
+        "base_commit": "14b39d984555897e88c279ed21651df7c114e05d",
+        "owner_acceptance": "pending",
+        "author": "Genepool Analyzer with bounded transient helper contributions",
+        "locators": [
+          "BoardView3D: camera/culling/material batches",
+          "BoardView3D.Actions: actual outcomes, death/history and batched muted geometry",
+          "ViewCollector.ActorCompleted/Born/Capture: complete current cohort and actual child placement",
+          "Main.Views/MinimapView: navigation and viewer selection"
+        ]
+      },
+      "created_at": "2026-09-08T02:00:33+00:00",
+      "updated_at": "2026-09-08T09:06:07+00:00",
+      "resolution_notes": [
+        {
+          "actor": "Genepool Analyzer",
+          "at_utc": "2026-09-08T09:05:37.278164+00:00",
+          "note": "Owner review exposes a visual shortcoming in angled mode: real orthographic tilt reads as a wider rectangle. See FACT-0057 for mechanism and proposed correction; implementation acceptance remains pending.",
+          "record_ids": [
+            "FACT-0057"
+          ]
+        },
+        {
+          "actor": "Genepool Analyzer",
+          "at_utc": "2026-09-08T09:43:48.412388+00:00",
+          "note": "Owner-approved perspective correction implemented and verified in FACT-0058 / R03_STEP4_PERSPECTIVE_RESULT.md. Earlier claim/evidence retained as dated; current runner reports/previews replaced. Overall Step4 implementation acceptance pending.",
+          "record_ids": [
+            "DEC-0034",
+            "FACT-0058"
+          ]
+        }
+      ],
+      "current_resolution": {
+        "statement": "Owner-approved perspective correction implemented and verified in FACT-0058 / R03_STEP4_PERSPECTIVE_RESULT.md. Earlier claim/evidence retained as dated; current runner reports/previews replaced. Overall Step4 implementation acceptance pending.",
+        "record_ids": [
+          "FACT-0058",
+          "DEC-0034"
+        ]
+      }
+    },
+    {
+      "id": "FACT-0056",
+      "kind": "observed_fact",
+      "status": "active",
+      "statement": "R03 Step4 verification passed: whole-solution VS2022 Debug/Release zero-error builds,159/159 console checks in each;106 GPU,94 headless and62 retained2D checks. RX6800 1920x1080 overview0/1000/10000 and denseL3 all about60FPS,p95 about16.7ms,complete10Hz replay. Initial denseL3 p9542.94ms repaired through batched cues without dropping364visible outcomes.",
+      "uncertainty": "Local bounded synthetic workloads, not ecological or physical presentation results.106existingCA1416warnings. Full collector-versus-none cost is measured separately and is not the incremental regression from the old viewer. IDEdebugging/physicalDPI/export not newly established. KnownSRC0115historical-byte gap persists.",
+      "source_refs": [
+        "SRC-0261",
+        "SRC-0262",
+        "SRC-0263",
+        "SRC-0264",
+        "SRC-0265",
+        "SRC-0266",
+        "SRC-0267",
+        "SRC-0268",
+        "SRC-0269",
+        "SRC-0270",
+        "SRC-0271",
+        "SRC-0272",
+        "SRC-0273",
+        "SRC-0274",
+        "SRC-0275",
+        "SRC-0276",
+        "SRC-0277",
+        "SRC-0278"
+      ],
+      "related_record_ids": [
+        "FACT-0055",
+        "DEC-0033"
+      ],
+      "origin": {
+        "actor": "Genepool Analyzer",
+        "type": "authorized_implementation_and_verification",
+        "recorded_at_utc": "2026-09-08T01:54:13.964569+00:00"
+      },
+      "derivation": {
+        "artifacts": [
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\IMPROVEMENT_RESULT_R03_STEP4.md",
+            "sha256": "494F4602109CEFFC5283000B4D202E48E2011015D20679C43167936249119AD7",
+            "bytes": 10498
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step4_builds.json",
+            "sha256": "EB810AAE73D99C6F4F6D71B3EC03C225C78075B7319B8752F869151268758ED0",
+            "bytes": 105486
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step4_tests_debug.json",
+            "sha256": "23B46089D67AF4DE8EAC9E16488B83005E722414B684E9A2EC22D8BB739F7763",
+            "bytes": 6685
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step4_tests_release.json",
+            "sha256": "2677191E7B376DEB866DF93A31BCB675E39DAC8323E0BAC509973CE47E4F813E",
+            "bytes": 6687
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step4_verification.json",
+            "sha256": "1A111A0AFFF4364A55491839B373608AD7EA895C3E31D3CA84DE64D4DD5104C5",
+            "bytes": 14704
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step4_headless.json",
+            "sha256": "0D4A389EF06DEE1C48A9F130603DCD1BB2D0D069AF4B7B4A0A9FB195DF5204D6",
+            "bytes": 13120
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step4_benchmark.json",
+            "sha256": "91402A060A7B31D092D6518F40A6C07063372655A08C12F3E1956A2E66413FD7",
+            "bytes": 7122
+          },
+          {
+            "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_godot_verification.json",
+            "sha256": "AE92839B116FA3EBFA21BF60237697F5C0E6AF04EBE2853BCFFFDCD55AE17A45",
+            "bytes": 9359
+          }
+        ],
+        "gpu_measurements": [
+          {
+            "kind": "depth_renderer",
+            "population": 0,
+            "detailLevel": 1,
+            "angled": true,
+            "width": 1920,
+            "height": 1080,
+            "visibleFoodInstances": 10000,
+            "visibleOrganismInstances": 0,
+            "visibleActionCues": 0,
+            "requestedWarmupSeconds": 3,
+            "requestedSampleSeconds": 7,
+            "actualSampleSeconds": 7.0163914,
+            "requestedSnapshotHz": 10,
+            "expectedSampleSnapshots": 70,
+            "sampleSnapshotsReplayed": 70,
+            "sampleSnapshotsSkipped": 0,
+            "frames": 421,
+            "averageFps": 60.00235391657313,
+            "p95FrameMilliseconds": 16.6805,
+            "maxFrameMilliseconds": 16.8966,
+            "p95UploadMilliseconds": 4.6682,
+            "sampleCoverageComplete": true,
+            "replayCoverageComplete": true,
+            "frameBudgetPassed": true,
+            "simulationCalculationIncluded": false,
+            "notes": "Detached snapshots. Dense detail3 includes full 10000-outcome batches at10Hz; no spatial event cap. Intervals include replay stamping and UI upload, but exclude simulation calculation. Main-loop observations, not hardware presentation timings."
+          },
+          {
+            "kind": "depth_renderer",
+            "population": 1000,
+            "detailLevel": 1,
+            "angled": true,
+            "width": 1920,
+            "height": 1080,
+            "visibleFoodInstances": 10000,
+            "visibleOrganismInstances": 1000,
+            "visibleActionCues": 0,
+            "requestedWarmupSeconds": 3,
+            "requestedSampleSeconds": 7,
+            "actualSampleSeconds": 7.0163853,
+            "requestedSnapshotHz": 10,
+            "expectedSampleSnapshots": 70,
+            "sampleSnapshotsReplayed": 70,
+            "sampleSnapshotsSkipped": 0,
+            "frames": 421,
+            "averageFps": 60.002406082231545,
+            "p95FrameMilliseconds": 16.6803,
+            "maxFrameMilliseconds": 29.953,
+            "p95UploadMilliseconds": 5.3669,
+            "sampleCoverageComplete": true,
+            "replayCoverageComplete": true,
+            "frameBudgetPassed": true,
+            "simulationCalculationIncluded": false,
+            "notes": "Detached snapshots. Dense detail3 includes full 10000-outcome batches at10Hz; no spatial event cap. Intervals include replay stamping and UI upload, but exclude simulation calculation. Main-loop observations, not hardware presentation timings."
+          },
+          {
+            "kind": "depth_renderer",
+            "population": 10000,
+            "detailLevel": 1,
+            "angled": true,
+            "width": 1920,
+            "height": 1080,
+            "visibleFoodInstances": 10000,
+            "visibleOrganismInstances": 10000,
+            "visibleActionCues": 0,
+            "requestedWarmupSeconds": 3,
+            "requestedSampleSeconds": 7,
+            "actualSampleSeconds": 7.016387,
+            "requestedSnapshotHz": 10,
+            "expectedSampleSnapshots": 70,
+            "sampleSnapshotsReplayed": 70,
+            "sampleSnapshotsSkipped": 0,
+            "frames": 421,
+            "averageFps": 60.00239154425205,
+            "p95FrameMilliseconds": 16.6804,
+            "maxFrameMilliseconds": 23.7773,
+            "p95UploadMilliseconds": 7.2231,
+            "sampleCoverageComplete": true,
+            "replayCoverageComplete": true,
+            "frameBudgetPassed": true,
+            "simulationCalculationIncluded": false,
+            "notes": "Detached snapshots. Dense detail3 includes full 10000-outcome batches at10Hz; no spatial event cap. Intervals include replay stamping and UI upload, but exclude simulation calculation. Main-loop observations, not hardware presentation timings."
+          },
+          {
+            "kind": "depth_renderer",
+            "population": 10000,
+            "detailLevel": 3,
+            "angled": true,
+            "width": 1920,
+            "height": 1080,
+            "visibleFoodInstances": 364,
+            "visibleOrganismInstances": 364,
+            "visibleActionCues": 364,
+            "requestedWarmupSeconds": 3,
+            "requestedSampleSeconds": 7,
+            "actualSampleSeconds": 7.0163868,
+            "requestedSnapshotHz": 10,
+            "expectedSampleSnapshots": 70,
+            "sampleSnapshotsReplayed": 70,
+            "sampleSnapshotsSkipped": 0,
+            "frames": 421,
+            "averageFps": 60.00239325460221,
+            "p95FrameMilliseconds": 16.6924,
+            "maxFrameMilliseconds": 28.6855,
+            "p95UploadMilliseconds": 0.5976,
+            "sampleCoverageComplete": true,
+            "replayCoverageComplete": true,
+            "frameBudgetPassed": true,
+            "simulationCalculationIncluded": false,
+            "notes": "Detached snapshots. Dense detail3 includes full 10000-outcome batches at10Hz; no spatial event cap. Intervals include replay stamping and UI upload, but exclude simulation calculation. Main-loop observations, not hardware presentation timings."
+          }
+        ],
+        "observation_cost_report": "r03_step4_tests_release.json",
+        "initial_failures": [
+          "Sandbox NuGet access; host build resolved it",
+          "Incorrect KeepHeight enum and Material hiding warning fixed",
+          "Sandbox GPU certificate-store error; host run clean",
+          "DenseL3 initial54.16FPS,p9542.94ms,max58.48ms; same364cue workload passes after batching"
+        ],
+        "debug_assembly_identities_rechecked": true
+      },
+      "created_at": "2026-09-08T02:00:33+00:00",
+      "updated_at": "2026-09-08T09:06:07+00:00",
+      "resolution_notes": [
+        {
+          "actor": "Genepool Analyzer",
+          "at_utc": "2026-09-08T09:05:37.278164+00:00",
+          "note": "Previous passing tests and performance results remain scoped evidence. They did not establish convincing perceived angle; the shared mapping round trips and top-down pixel checks missed this visual issue. See FACT-0057.",
+          "record_ids": [
+            "FACT-0057"
+          ]
+        },
+        {
+          "actor": "Genepool Analyzer",
+          "at_utc": "2026-09-08T09:43:48.412388+00:00",
+          "note": "Owner-approved perspective correction implemented and verified in FACT-0058 / R03_STEP4_PERSPECTIVE_RESULT.md. Earlier claim/evidence retained as dated; current runner reports/previews replaced. Overall Step4 implementation acceptance pending.",
+          "record_ids": [
+            "DEC-0034",
+            "FACT-0058"
+          ]
+        }
+      ],
+      "current_resolution": {
+        "statement": "Owner-approved perspective correction implemented and verified in FACT-0058 / R03_STEP4_PERSPECTIVE_RESULT.md. Earlier claim/evidence retained as dated; current runner reports/previews replaced. Overall Step4 implementation acceptance pending.",
+        "record_ids": [
+          "FACT-0058",
+          "DEC-0034"
+        ]
+      }
+    },
+    {
+      "id": "FACT-0057",
+      "kind": "observed_fact",
+      "status": "active",
+      "statement": "R03 Step4 owner review identifies that Habitat angled looks like a wider rectangle rather than a clearly sloping board. Static inspection confirms a real camera tilt at offset (0,80,60), about 53.13 degrees above the XZ board, but orthographic projection with no yaw leaves a flat axis-aligned rectangle. Vertical foreshortening is 0.8; when height limits Fit, compensating magnification makes width 1.25 times top-down width. Flat unshaded materials provide little additional depth information.",
+      "uncertainty": "Diagnosis combines inspected implementation with the two owner-supplied screenshots; no new build or runtime measurement. Camera geometry is tilted, so calling it only an artificial board stretch would be inaccurate. Visual intent remains unsatisfied in this owner review; other Step4 work is not rejected wholesale, and overall acceptance is not inferred.",
+      "source_refs": [
+        "SRC-0270",
+        "SRC-0271",
+        "SRC-0276"
+      ],
+      "origin": {
+        "type": "owner_review_and_static_code_inspection",
+        "actor": "Genepool Analyzer",
+        "recorded_at_utc": "2026-09-08T09:05:37.278164+00:00",
+        "owner_feedback": "This is great but I am confused on your implementation of angled view; screenshots show a fatter board, and the owner asks whether the view should actually look angled.",
+        "attachments": [
+          "codex-clipboard-ab5d4bda-0fb0-4b30-a95b-d0598e2e7286.png",
+          "codex-clipboard-b4f25910-572f-4cd7-ab27-9a7cbc4dfb2e.png"
+        ]
+      },
+      "derivation": {
+        "locators": [
+          "BoardView3D.cs:86-89 (foreshortening/Fit),118-121 (orthographic),290-314 (mapping/camera)",
+          "BoardView3D.Materials.cs:7-8,54-55 (unshaded flat patches)",
+          "VerificationRunner.Step4.cs:26-66 (Boolean/round-trip checks),217 onward (top-down rendered pixel/input checks),271 (preview capture)"
+        ],
+        "external_reference": {
+          "url": "https://docs.godotengine.org/en/stable/classes/class_camera3d.html",
+          "locator": "ProjectionType: PROJECTION_PERSPECTIVE and PROJECTION_ORTHOGONAL",
+          "retrieved_at_utc": "2026-09-08T09:05:37.278164+00:00",
+          "claim": "Orthographic projection does not reduce apparent object size with distance; perspective does."
+        },
+        "verification_gap": "Existing angled Boolean and CellAt(CellCenter) round trips share the affine mapping; they do not prove perceived depth. Inspected material/pick pixel test switches to top-down. Generated angled screenshots were visually reviewed but the widened-rectangle problem was missed. Previous measured passes remain valid within their exercised scope.",
+        "recommendation": "Keep top-down for exact reading; revise angled toward a visibly oblique camera with gentle perspective and slight yaw. Validate same-frame projected corners and near/far cell sizes, then rendered appearance, picking, panning, minimap, culling and action alignment. This is an Analyzer recommendation, not a newly accepted design or implementation."
+      },
+      "related_record_ids": [
+        "FACT-0055",
+        "FACT-0056",
+        "REC-0010",
+        "DEC-0033"
+      ],
+      "created_at": "2026-09-08T09:06:07+00:00",
+      "updated_at": "2026-09-08T09:06:07+00:00",
+      "resolution_notes": [
+        {
+          "actor": "Genepool Analyzer",
+          "at_utc": "2026-09-08T09:43:48.412388+00:00",
+          "note": "Owner-approved perspective correction implemented and verified in FACT-0058 / R03_STEP4_PERSPECTIVE_RESULT.md. Earlier claim/evidence retained as dated; current runner reports/previews replaced. Overall Step4 implementation acceptance pending.",
+          "record_ids": [
+            "DEC-0034",
+            "FACT-0058"
+          ]
+        }
+      ],
+      "current_resolution": {
+        "statement": "Owner-approved perspective correction implemented and verified in FACT-0058 / R03_STEP4_PERSPECTIVE_RESULT.md. Earlier claim/evidence retained as dated; current runner reports/previews replaced. Overall Step4 implementation acceptance pending.",
+        "record_ids": [
+          "FACT-0058",
+          "DEC-0034"
+        ]
+      }
+    }
+  ],
+  "upsert_sources": [
+    {
+      "source_id": "SRC-0268",
+      "title": "Fistnet.Genepool.Godot/README.md",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\README.md"
+      },
+      "sha256": "CF11F630D7299D9D5A6A248B5218AA5BC83903CAB37EA743D6E71DAC214168F3",
+      "size_bytes": 11450,
+      "observed_at_utc": "2026-09-08T01:54:17+00:00",
+      "supersedes": "SRC-0242",
+      "status": "registered current working-file version",
+      "coverage": "Relevant implementation or documentation changes inspected by root and bounded helpers; integrated builds and checks documented in IMPROVEMENT_RESULT_R03_STEP4.md. Exact current bytes hashed.",
+      "supersession": {
+        "source_id": "SRC-0279",
+        "actor": "Genepool Analyzer",
+        "reason": "Owner-approved R03 Step4 perspective correction",
+        "record_ids": [
+          "DEC-0034",
+          "FACT-0058"
+        ],
+        "observed_at": "2026-09-08T09:43:48+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/perspective-SRC-0268.md"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0279",
+      "title": "Fistnet.Genepool.Godot/README.md",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\README.md"
+      },
+      "sha256": "D7FFC9BD7C9723D0BE7B0FB4E394964FF1AD79FAC1A6B996140A0455388CD1CC",
+      "size_bytes": 11912,
+      "observed_at_utc": "2026-09-08T09:43:48+00:00",
+      "supersedes": "SRC-0268",
+      "status": "registered current working-file version",
+      "coverage": "Current perspective camera/navigation/overlay change inspected and integrated; checks and limitations in R03_STEP4_PERSPECTIVE_RESULT.md. Exact bytes hashed."
+    },
+    {
+      "source_id": "SRC-0270",
+      "title": "Fistnet.Genepool.Godot/BoardView3D.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\BoardView3D.cs"
+      },
+      "sha256": "80D29246CF9B0BA9C9D829EFFEA5C46E8B802698F1A57A9F2BE1E1B762BEF475",
+      "size_bytes": 19476,
+      "observed_at_utc": "2026-09-08T01:54:13.964569+00:00",
+      "status": "implemented current working-tree source; owner review pending",
+      "coverage": "New implementation authored by root or bounded transient helper, reviewed and integrated; relevant contracts verified in R03 Step4 current reports. Exact bytes hashed.",
+      "supersession": {
+        "source_id": "SRC-0280",
+        "actor": "Genepool Analyzer",
+        "reason": "Owner-approved R03 Step4 perspective correction",
+        "record_ids": [
+          "DEC-0034",
+          "FACT-0058"
+        ],
+        "observed_at": "2026-09-08T09:43:49+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/perspective-SRC-0270.cs"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0280",
+      "title": "Fistnet.Genepool.Godot/BoardView3D.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\BoardView3D.cs"
+      },
+      "sha256": "8EB61096053E4F9E6C9FCEF18ACE6EBEAF8900F260685C5F11F1344BA294031C",
+      "size_bytes": 18353,
+      "observed_at_utc": "2026-09-08T09:43:49+00:00",
+      "supersedes": "SRC-0270",
+      "status": "registered current working-file version",
+      "coverage": "Current perspective camera/navigation/overlay change inspected and integrated; checks and limitations in R03_STEP4_PERSPECTIVE_RESULT.md. Exact bytes hashed."
+    },
+    {
+      "source_id": "SRC-0272",
+      "title": "Fistnet.Genepool.Godot/BoardView3D.Actions.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\BoardView3D.Actions.cs"
+      },
+      "sha256": "D8D0B75A3E294DC6CD8E811E30D096F27975C1F57C5C853036F95BD28DF11C3C",
+      "size_bytes": 16419,
+      "observed_at_utc": "2026-09-08T01:54:13.964569+00:00",
+      "status": "implemented current working-tree source; owner review pending",
+      "coverage": "New implementation authored by root or bounded transient helper, reviewed and integrated; relevant contracts verified in R03 Step4 current reports. Exact bytes hashed.",
+      "supersession": {
+        "source_id": "SRC-0281",
+        "actor": "Genepool Analyzer",
+        "reason": "Owner-approved R03 Step4 perspective correction",
+        "record_ids": [
+          "DEC-0034",
+          "FACT-0058"
+        ],
+        "observed_at": "2026-09-08T09:43:49+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/perspective-SRC-0272.cs"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0281",
+      "title": "Fistnet.Genepool.Godot/BoardView3D.Actions.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\BoardView3D.Actions.cs"
+      },
+      "sha256": "A534C007582F8D17C310C2F4530F3F028747545AA0B657F38E5EA596D32A60B5",
+      "size_bytes": 17292,
+      "observed_at_utc": "2026-09-08T09:43:49+00:00",
+      "supersedes": "SRC-0272",
+      "status": "registered current working-file version",
+      "coverage": "Current perspective camera/navigation/overlay change inspected and integrated; checks and limitations in R03_STEP4_PERSPECTIVE_RESULT.md. Exact bytes hashed."
+    },
+    {
+      "source_id": "SRC-0273",
+      "title": "Fistnet.Genepool.Godot/Main.Views.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Main.Views.cs"
+      },
+      "sha256": "E3074C3420013B8B3E695CC819731949F4ACE2E7C28FD80AA805BB17F0643042",
+      "size_bytes": 3945,
+      "observed_at_utc": "2026-09-08T01:54:13.964569+00:00",
+      "status": "implemented current working-tree source; owner review pending",
+      "coverage": "New implementation authored by root or bounded transient helper, reviewed and integrated; relevant contracts verified in R03 Step4 current reports. Exact bytes hashed.",
+      "supersession": {
+        "source_id": "SRC-0282",
+        "actor": "Genepool Analyzer",
+        "reason": "Owner-approved R03 Step4 perspective correction",
+        "record_ids": [
+          "DEC-0034",
+          "FACT-0058"
+        ],
+        "observed_at": "2026-09-08T09:43:49+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/perspective-SRC-0273.cs"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0282",
+      "title": "Fistnet.Genepool.Godot/Main.Views.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Main.Views.cs"
+      },
+      "sha256": "1022CD6841CB86D0AB42B6307CD00CAADF0829137469F391E982D5F3A87E318B",
+      "size_bytes": 4003,
+      "observed_at_utc": "2026-09-08T09:43:49+00:00",
+      "supersedes": "SRC-0273",
+      "status": "registered current working-file version",
+      "coverage": "Current perspective camera/navigation/overlay change inspected and integrated; checks and limitations in R03_STEP4_PERSPECTIVE_RESULT.md. Exact bytes hashed."
+    },
+    {
+      "source_id": "SRC-0274",
+      "title": "Fistnet.Genepool.Godot/MinimapView.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\MinimapView.cs"
+      },
+      "sha256": "E43B2B7785C132262920DB6CA8FFFB427A112012B45BDFF96E1AA2388D6EB664",
+      "size_bytes": 4009,
+      "observed_at_utc": "2026-09-08T01:54:13.964569+00:00",
+      "status": "implemented current working-tree source; owner review pending",
+      "coverage": "New implementation authored by root or bounded transient helper, reviewed and integrated; relevant contracts verified in R03 Step4 current reports. Exact bytes hashed.",
+      "supersession": {
+        "source_id": "SRC-0283",
+        "actor": "Genepool Analyzer",
+        "reason": "Owner-approved R03 Step4 perspective correction",
+        "record_ids": [
+          "DEC-0034",
+          "FACT-0058"
+        ],
+        "observed_at": "2026-09-08T09:43:50+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/perspective-SRC-0274.cs"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0283",
+      "title": "Fistnet.Genepool.Godot/MinimapView.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\MinimapView.cs"
+      },
+      "sha256": "FD205106A0D1EFB0F8F113D1FD3B5DC88613655B5D14D5A3BE0089F73ED670E4",
+      "size_bytes": 5871,
+      "observed_at_utc": "2026-09-08T09:43:50+00:00",
+      "supersedes": "SRC-0274",
+      "status": "registered current working-file version",
+      "coverage": "Current perspective camera/navigation/overlay change inspected and integrated; checks and limitations in R03_STEP4_PERSPECTIVE_RESULT.md. Exact bytes hashed."
+    },
+    {
+      "source_id": "SRC-0276",
+      "title": "Fistnet.Genepool.Godot/Verification/VerificationRunner.Step4.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Verification\\VerificationRunner.Step4.cs"
+      },
+      "sha256": "344C0B89007AB0C1F960D857EBA602BA7AE9E91FF4F3613D50043D9D8F9D61CD",
+      "size_bytes": 27600,
+      "observed_at_utc": "2026-09-08T01:54:13.964569+00:00",
+      "status": "implemented current working-tree source; owner review pending",
+      "coverage": "New implementation authored by root or bounded transient helper, reviewed and integrated; relevant contracts verified in R03 Step4 current reports. Exact bytes hashed.",
+      "supersession": {
+        "source_id": "SRC-0284",
+        "actor": "Genepool Analyzer",
+        "reason": "Owner-approved R03 Step4 perspective correction",
+        "record_ids": [
+          "DEC-0034",
+          "FACT-0058"
+        ],
+        "observed_at": "2026-09-08T09:43:50+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/perspective-SRC-0276.cs"
+        }
+      }
+    },
+    {
+      "source_id": "SRC-0284",
+      "title": "Fistnet.Genepool.Godot/Verification/VerificationRunner.Step4.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Verification\\VerificationRunner.Step4.cs"
+      },
+      "sha256": "F36FDA3D5D8C51C29CA6ADF95D902B2E330DDD752791811443C68437349E8B6F",
+      "size_bytes": 28360,
+      "observed_at_utc": "2026-09-08T09:43:50+00:00",
+      "supersedes": "SRC-0276",
+      "status": "registered current working-file version",
+      "coverage": "Current perspective camera/navigation/overlay change inspected and integrated; checks and limitations in R03_STEP4_PERSPECTIVE_RESULT.md. Exact bytes hashed."
+    },
+    {
+      "source_id": "SRC-0285",
+      "title": "Fistnet.Genepool.Godot/BoardView3D.Projection.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\BoardView3D.Projection.cs"
+      },
+      "sha256": "E4AA37F5F649137C77DD4FE9726D7F27C72A70D0C9540323397908F6E68E092A",
+      "size_bytes": 9143,
+      "observed_at_utc": "2026-09-08T09:43:48.412388+00:00",
+      "status": "implemented working source; owner review pending",
+      "coverage": "Authored by bounded helper, independently reviewed and integrated; native-camera and GPU evidence in current R03 perspective result."
+    },
+    {
+      "source_id": "SRC-0286",
+      "title": "Fistnet.Genepool.Godot/Verification/VerificationRunner.Perspective.cs",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Verification\\VerificationRunner.Perspective.cs"
+      },
+      "sha256": "18CC472B76CA1A095DABD1AE389C8EC89E1B988A6ED6D72D97AF3B3D4D77E25B",
+      "size_bytes": 24537,
+      "observed_at_utc": "2026-09-08T09:43:48.412388+00:00",
+      "status": "implemented working source; owner review pending",
+      "coverage": "Authored by bounded helper, independently reviewed and integrated; native-camera and GPU evidence in current R03 perspective result."
+    },
+    {
+      "source_id": "SRC-0287",
+      "title": "Official C#2.5D demo README",
+      "locator": {
+        "type": "url",
+        "url": "https://raw.githubusercontent.com/godotengine/godot-demo-projects/master/mono/2.5d/README.md"
+      },
+      "observed_at_utc": "2026-09-08T09:43:48.412388+00:00",
+      "coverage": "Complete39line README, correspondence to owner Store URL and stated design.",
+      "status": "reference inspected; not adopted as dependency"
+    },
+    {
+      "source_id": "SRC-0288",
+      "title": "Official C#2.5D demo Transform25D.cs",
+      "locator": {
+        "type": "url",
+        "url": "https://raw.githubusercontent.com/godotengine/godot-demo-projects/master/mono/2.5d/addons/node25d-cs/Transform25D.cs"
+      },
+      "observed_at_utc": "2026-09-08T09:43:48.412388+00:00",
+      "coverage": "Complete125line source; FlatTransform and FlatPosition lines27-44 inspected statically; no execution.",
+      "status": "reference inspected; not adopted as dependency"
+    }
+  ],
+  "core_patch": {
+    "experiment": {
+      "root": "D:\\Posao\\Fistnet.Genepool",
+      "purpose": "Make this experiment a better simulation and more fun to watch.",
+      "purpose_origin_record": "DEC-0002",
+      "status": "R03_Step4_implemented_verified_awaiting_owner_review",
+      "phase": "EVOLUTION",
+      "root_semantics": "Exact physical experiment root explicitly assigned by User; KB tools bound to this root.",
+      "model": "Provisional artificial-life sandbox with inherited action repertoires and individual learning.",
+      "model_record": "INF-0001",
+      "model_accepted": false,
+      "design_accepted": true,
+      "trial_authorized": false,
+      "trial_scope": "R02 ecological evaluation closed as INCONCLUSIVE by DEC-0020. Prior 16 comparisons remain time-limited; reserved confirmation was not run. No active or newly authorized trial.",
+      "design_accepted_scope": "R02 closed with ecology inconclusive; R03Godot2D accepted; Step4 design accepted DEC0031 and implemented under DEC0033. Result review pending; no active trial."
+    },
+    "authority": {
+      "assignment_record": "DEC-0001",
+      "actor": "Genepool Analyzer",
+      "knowledgebase_root": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase",
+      "continuing_kb_authority": "Routine in-root KB retrieval, validation, preparation and transactions remain authorized. DEC-0006 permits adapting tools with proportionate checks. The earlier unversioned-KB premise is superseded for canonical files by FACT-0027; current edits still require normal revision/preview/verification safeguards.",
+      "originals": "Owner-authorized bounded Step4 edits, builds and verification completed; stop before next part.",
+      "next_action": "Stop for owner review of corrected Step4 perspective (FACT-0058).",
+      "current_stage_record": "DEC-0034",
+      "environment_assessment": "Historical environment assessment used installed metadata and disposable synthetic probes; subsequent bounded source repair is recorded separately in FACT-0019.",
+      "current_research_scope": "Narrow official Godot design documentation and generated visual mockups; no installs or active ecology.",
+      "specialization_record": "DEC-0016"
+    },
+    "proposal": {
+      "id": "R03_Step4",
+      "record_id": "REC-0010",
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_STEP4_DESIGN_PROPOSAL.md",
+      "sha256": "7BEE013BBE2DF0570A2CD9CD2568BB56DD612E6D2AE9CC460C32FCBEB529B31B",
+      "status": "IMPLEMENTED_VERIFIED_AWAITING_OWNER_REVIEW",
+      "engine": "Godot C#",
+      "engine_selection_record": "DEC-0024",
+      "design_authority_record": "DEC-0028",
+      "implementation_authorized": true,
+      "limits": "Current implementation and bounded checks completed; result acceptance pending. Step5/deferred food remain later.",
+      "previous_accepted_plan_record": "REC-0009",
+      "organism_appearance": "Owner-preferred mould-like flat patches with irregular branching edges",
+      "appearance_decision_record": "DEC-0029",
+      "appearance_addendum": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_STEP4_MOULD_DIRECTION.md",
+      "design_revision": 2,
+      "ground_appearance": "Grass/dirt appearance approved by DEC-0030",
+      "viewport_rule": "Levels2–4 draw visible area only; board rim only at actual world boundary; visible panning affordance",
+      "action_scope_by_level": {
+        "3": "Muted actual-action cues for all visible board cells",
+        "4": "Full cues only for focused organism and its affected targets"
+      },
+      "viewport_and_ground_decision_record": "DEC-0030",
+      "latest_mockups": {
+        "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_STEP4_REVIEW_MOCKUPS.md",
+        "sha256": "7A94EE802B3BFFFAD475FAB13F67FE8A09842CBFEFA971AC47FE520299FF182C",
+        "images": [
+          "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_STEP4_DESIGN\\concept-e-habitat.png",
+          "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_STEP4_DESIGN\\concept-f-organism.png",
+          "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_STEP4_DESIGN\\concept-g-inspect.png"
+        ],
+        "status": "OWNER_ACCEPTED_CURRENT_VISUAL_DIRECTION"
+      },
+      "owner_acceptance_record": "DEC-0031",
+      "implementation_authority_record": "DEC-0033",
+      "result_record": "FACT-0058",
+      "result_path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_STEP4_PERSPECTIVE_RESULT.md"
+    },
+    "current_iteration_part": {
+      "id": "R03_Step4",
+      "status": "IMPLEMENTED_VERIFIED_AWAITING_OWNER_REVIEW",
+      "record_ids": [
+        "DEC-0034",
+        "FACT-0058",
+        "DEC-0033",
+        "FACT-0055",
+        "FACT-0056",
+        "REC-0010"
+      ],
+      "report": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_STEP4_PERSPECTIVE_RESULT.md",
+      "verification": "VS2022 Debug/Release builds;170GPU145headless62retained2D pass;159tests/config reused by exactbinarymatch. Benchmark11/12 then12/12; timing varies.",
+      "limits": "Owner implementation review pending. No new ecological trial; Step5, export and food-cycle remain deferred.",
+      "appearance_decision_record": "DEC-0029",
+      "owner_design_acceptance_record": "DEC-0031",
+      "review_issue_record_ids": [
+        "FACT-0057"
+      ],
+      "review_status": "Angled correction implemented/verified underDEC0034; awaiting owner visual review."
+    },
+    "routes": {
+      "orientation": {
+        "record_ids": [
+          "FACT-0001",
+          "FACT-0002",
+          "FACT-0011",
+          "INF-0001"
+        ]
+      },
+      "mechanics": {
+        "record_ids": [
+          "FACT-0003",
+          "FACT-0004",
+          "FACT-0005",
+          "INF-0003"
+        ]
+      },
+      "watchability": {
+        "record_ids": [
+          "DEC-0002",
+          "FACT-0006",
+          "FACT-0009",
+          "REC-0001"
+        ]
+      },
+      "material_findings": {
+        "record_ids": [
+          "FACT-0007",
+          "FACT-0008",
+          "FACT-0010",
+          "INF-0002",
+          "FACT-0023"
+        ]
+      },
+      "proposal_and_tests": {
+        "record_ids": [
+          "DEC-0003",
+          "REC-0002",
+          "FACT-0012",
+          "Q-0001",
+          "Q-0002",
+          "DEC-0007",
+          "FACT-0024",
+          "FACT-0025",
+          "FACT-0028",
+          "FACT-0029",
+          "INF-0004",
+          "DEC-0009"
+        ]
+      },
+      "environment_capabilities": {
+        "record_ids": [
+          "DEC-0004",
+          "FACT-0013",
+          "FACT-0014",
+          "FACT-0015",
+          "FACT-0016",
+          "REC-0003",
+          "Q-0002",
+          "CLAIM-0001",
+          "FACT-0017",
+          "FACT-0018",
+          "REC-0004",
+          "DEC-0005",
+          "FACT-0019",
+          "CLAIM-0002",
+          "FACT-0021",
+          "FACT-0049",
+          "FACT-0051"
+        ]
+      },
+      "kb_tooling": {
+        "record_ids": [
+          "FACT-0054",
+          "DEC-0006",
+          "FACT-0039",
+          "FACT-0036",
+          "FACT-0020",
+          "FACT-0019",
+          "DEC-0013",
+          "FACT-0045"
+        ]
+      },
+      "current_implementation": {
+        "record_ids": [
+          "FACT-0058",
+          "DEC-0034",
+          "FACT-0057",
+          "FACT-0055",
+          "FACT-0056",
+          "DEC-0033",
+          "DEC-0026",
+          "FACT-0051",
+          "FACT-0050",
+          "FACT-0049",
+          "DEC-0025"
+        ]
+      },
+      "r02_research_and_proposal": {
+        "record_ids": [
+          "DEC-0010",
+          "CLAIM-0004",
+          "FACT-0030",
+          "FACT-0031",
+          "FACT-0032",
+          "INF-0005",
+          "CLAIM-0005",
+          "REC-0005",
+          "Q-0001",
+          "DEC-0011",
+          "Q-0003",
+          "DEC-0012",
+          "DEC-0019",
+          "DEC-0020"
+        ]
+      },
+      "r02_part1_result": {
+        "record_ids": [
+          "DEC-0012",
+          "FACT-0033",
+          "FACT-0034",
+          "FACT-0035",
+          "INF-0006",
+          "Q-0003"
+        ]
+      },
+      "r02_part2_result": {
+        "record_ids": [
+          "DEC-0014",
+          "FACT-0037",
+          "FACT-0038",
+          "REC-0006",
+          "INF-0007",
+          "Q-0003",
+          "DEC-0015"
+        ]
+      },
+      "r02_part3_result": {
+        "record_ids": [
+          "DEC-0015",
+          "FACT-0040",
+          "FACT-0041",
+          "FACT-0042",
+          "INF-0008",
+          "DEC-0017"
+        ]
+      },
+      "governance": {
+        "record_ids": [
+          "DEC-0016",
+          "FACT-0043",
+          "DEC-0001",
+          "DEC-0006"
+        ]
+      },
+      "r02_part4_result": {
+        "record_ids": [
+          "DEC-0017",
+          "DEC-0018",
+          "Q-0003",
+          "FACT-0044",
+          "FACT-0045",
+          "FACT-0046",
+          "INF-0009",
+          "DEC-0019",
+          "DEC-0020"
+        ]
+      },
+      "r02_closure": {
+        "record_ids": [
+          "DEC-0020",
+          "FACT-0046",
+          "INF-0009",
+          "DEC-0019",
+          "REC-0005"
+        ]
+      },
+      "r03_outline": {
+        "record_ids": [
+          "DEC-0021",
+          "REC-0007",
+          "DEC-0004",
+          "DEC-0022",
+          "DEC-0023",
+          "REC-0008",
+          "DEC-0026",
+          "DEC-0028",
+          "REC-0010"
+        ]
+      },
+      "r03_research": {
+        "record_ids": [
+          "DEC-0022",
+          "DEC-0023",
+          "FACT-0047",
+          "CLAIM-0006",
+          "CLAIM-0007",
+          "REC-0008",
+          "DEC-0024",
+          "REC-0009"
+        ]
+      },
+      "r03_implementation_plan": {
+        "record_ids": [
+          "DEC-0024",
+          "FACT-0048",
+          "CLAIM-0008",
+          "REC-0009",
+          "REC-0008",
+          "DEC-0025"
+        ]
+      },
+      "r03_2d_result": {
+        "record_ids": [
+          "DEC-0026",
+          "FACT-0051",
+          "FACT-0050",
+          "FACT-0049",
+          "DEC-0025",
+          "REC-0009"
+        ]
+      },
+      "deferred_improvements": {
+        "record_ids": [
+          "DEC-0027"
+        ]
+      },
+      "r03_step4_design": {
+        "record_ids": [
+          "FACT-0058",
+          "DEC-0034",
+          "FACT-0057",
+          "FACT-0055",
+          "FACT-0056",
+          "DEC-0033",
+          "DEC-0031",
+          "REC-0010",
+          "DEC-0030",
+          "DEC-0029",
+          "FACT-0053",
+          "DEC-0028"
+        ]
+      },
+      "recovery_review": {
+        "record_ids": [
+          "FACT-0052"
+        ]
+      },
+      "r03_step4_result": {
+        "record_ids": [
+          "FACT-0058",
+          "DEC-0034",
+          "FACT-0057",
+          "FACT-0055",
+          "FACT-0056",
+          "DEC-0033",
+          "REC-0010",
+          "DEC-0031"
+        ]
+      }
+    },
+    "owner_decision_ids": [
+      "DEC-0001",
+      "DEC-0002",
+      "DEC-0003",
+      "DEC-0004",
+      "DEC-0005",
+      "DEC-0006",
+      "DEC-0007",
+      "DEC-0008",
+      "DEC-0009",
+      "DEC-0010",
+      "DEC-0011",
+      "DEC-0012",
+      "DEC-0013",
+      "DEC-0014",
+      "DEC-0015",
+      "DEC-0016",
+      "DEC-0017",
+      "DEC-0018",
+      "DEC-0019",
+      "DEC-0020",
+      "DEC-0021",
+      "DEC-0022",
+      "DEC-0023",
+      "DEC-0024",
+      "DEC-0025",
+      "DEC-0026",
+      "DEC-0027",
+      "DEC-0028",
+      "DEC-0029",
+      "DEC-0030",
+      "DEC-0031",
+      "DEC-0032",
+      "DEC-0033",
+      "DEC-0034"
+    ],
+    "environment": {
+      "status": "Perspective: VS2022 Debug/Release builds pass,170GPU145headless62original2D;159consolechecks/config reused by exactbinarymatch.",
+      "sdk_for_vs2022": "9.0.315",
+      "report": {
+        "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\ENVIRONMENT_CAPABILITIES_R01.md",
+        "sha256": "102A4FE72EA9CC4ACA43A0DEF81E2507CA5BD3D1ADC78FFBCC2B254E81939731",
+        "bytes": 10515,
+        "status": "Environment assessment with dated owner-build clarification"
+      },
+      "vs2022_requirement_record": "DEC-0004",
+      "record_ids": [
+        "FACT-0013",
+        "FACT-0014",
+        "FACT-0015",
+        "FACT-0016",
+        "FACT-0019",
+        "FACT-0021",
+        "FACT-0024",
+        "FACT-0028",
+        "FACT-0038",
+        "FACT-0042",
+        "FACT-0046",
+        "FACT-0047",
+        "FACT-0048",
+        "FACT-0049",
+        "FACT-0051",
+        "FACT-0056",
+        "FACT-0058"
+      ],
+      "refresh": "Existing paths/cache isolation in KnowledgeBase/tools/build_solution.py; recheck material inputs before a future changed build.",
+      "r03_gpu_research": "PerspectiveRX6800: repeat57-60FPS,p9516.7-22.9ms; initialempty33.69ms miss. Complete10Hz replay; no fixed60FPS guarantee. FACT0058."
+    },
+    "tooling": {
+      "record_id": "FACT-0054",
+      "policy": ".SeedAnalyzer/KB.md",
+      "source_revision_command": "KnowledgeBase/tools/kb.py revise-source",
+      "verification": "49 distinct KB checks passed,1actual-symlink check skipped; current retrieval/tool identities in FACT-0054.",
+      "source_history": "Pinned local Git and exact KB snapshots retain identities. SRC-0115 exact mixed-newline predecessor unavailable; prepared history retained with explicit deep-validation warning (FACT-0042).",
+      "knowledgebase_is_git_versioned": true,
+      "knowledgebase_git_scope": "BaseHEAD14b39d984555897e88c279ed21651df7c114e05d. PreviousStep4 edits and currentcorrection uncommitted; no commit/push.",
+      "knowledgebase_owner_decision": "DEC-0008: Keep the KnowledgeBase in Git.",
+      "source_version_record_id": "FACT-0020",
+      "current_maintenance_authority": "DEC-0032",
+      "current_verification_receipt": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\kb_retrieval_upgrade_receipt.json"
+    },
+    "next_iteration": {
+      "id": "R03",
+      "status": "R03_STEP4_IMPLEMENTED_AWAITING_REVIEW",
+      "owner_outline_record": "DEC-0021",
+      "preliminary_opinion_record": "REC-0007",
+      "scope": "GPU visualization: research -> plan -> familiar 2D -> either 2.5D or 3D -> improved graphics",
+      "constraints": [
+        "Free for non-commercial use",
+        "Whole solution compatible with Visual Studio 2022",
+        "Useful examples and reusable2D/3D assets",
+        "Proportionate simulation visuals"
+      ],
+      "research_started": true,
+      "plan_started": true,
+      "implementation_started": true,
+      "start_authorized": true,
+      "next_action": "Stop for owner review of Step4 perspective correction; Step5 needs next instruction.",
+      "start_scope": "Step4 implemented underDEC0033; result awaitingreview.",
+      "current_recommendation_record": "REC-0010",
+      "engine_selection_record": "DEC-0024",
+      "implementation_authorization_record": "DEC-0025",
+      "current_implementation_acceptance_record": "DEC-0026",
+      "step4_design_authorization_record": "DEC-0028",
+      "step4_implementation_authorized": true,
+      "step4_design_acceptance_record": "DEC-0031",
+      "step4_implementation_authority_record": "DEC-0033"
+    },
+    "last_maintenance": {
+      "at": "2026-09-08T09:43:48.412388+00:00",
+      "actor": "Genepool Analyzer",
+      "note": "Record approved perspective correction, actual checks and retained failures; stop for owner review."
+    }
+  }
+}

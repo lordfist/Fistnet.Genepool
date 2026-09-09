@@ -1,0 +1,511 @@
+{
+  "actor": "Genepool Analyzer",
+  "at_utc": "2026-09-09T11:41:17.724129+00:00",
+  "status": "complete",
+  "scope": "Existing Debug binaries; 4 accepted seeds x128 reference seasons on net9 and net10; no project or source edits",
+  "normalization": "Only objects[*].type JSON string tokens: System.Private.CoreLib, Version=10.0.0.0, to Version=9.0.0.0,",
+  "seeds": [
+    {
+      "seed": 11,
+      "seasons": 128,
+      "accepted_hash": "9F48B02B3E1E752A8448BA87F703DD65CC77BAA5EB0AC3316145B8DFEFF600B6",
+      "accepted_draws": 843754,
+      "old_runtime": "9.0.20",
+      "new_runtime": "10.0.12",
+      "old_raw_hash": "9F48B02B3E1E752A8448BA87F703DD65CC77BAA5EB0AC3316145B8DFEFF600B6",
+      "new_raw_hash": "A79FDDD35A39CC83F3F5DBB880152F8F95FE49E55150A7DF4CEF37BA070DE81C",
+      "new_normalized_hash": "9F48B02B3E1E752A8448BA87F703DD65CC77BAA5EB0AC3316145B8DFEFF600B6",
+      "old_draws": 843754,
+      "new_draws": 843754,
+      "old_random": {
+        "algorithm": "xorshift32-v1",
+        "state": "64FABC4E",
+        "drawCount": 843754
+      },
+      "new_random": {
+        "algorithm": "xorshift32-v1",
+        "state": "64FABC4E",
+        "drawCount": 843754
+      },
+      "raw_diff": {
+        "count": 5692,
+        "type_label_count": 5692,
+        "other_count": 0,
+        "examples": [
+          {
+            "path": "$.objects[1].type",
+            "old": "System.Collections.Concurrent.ConcurrentDictionary`2[[Fistnet.Genepool.Dna.DnaTypes, Fistnet.Genepool.Dna, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "new": "System.Collections.Concurrent.ConcurrentDictionary`2[[Fistnet.Genepool.Dna.DnaTypes, Fistnet.Genepool.Dna, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"
+          },
+          {
+            "path": "$.objects[2].type",
+            "old": "System.Collections.Concurrent.ConcurrentDictionary`2[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "new": "System.Collections.Concurrent.ConcurrentDictionary`2[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"
+          },
+          {
+            "path": "$.objects[13520].type",
+            "old": "System.Collections.Generic.Dictionary`2[[System.Byte, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Fistnet.Genepool.Dna.GeneIdentity, Fistnet.Genepool.Dna, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "new": "System.Collections.Generic.Dictionary`2[[System.Byte, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Fistnet.Genepool.Dna.GeneIdentity, Fistnet.Genepool.Dna, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+          },
+          {
+            "path": "$.objects[13521].type",
+            "old": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.Dictionary`2[[System.Byte, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Single, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "new": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.Dictionary`2[[System.Byte, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Single, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"
+          },
+          {
+            "path": "$.objects[13522].type",
+            "old": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int64, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "new": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int64, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"
+          },
+          {
+            "path": "$.objects[13523].type",
+            "old": "System.Collections.Generic.Dictionary`2[[System.Byte, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int64, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "new": "System.Collections.Generic.Dictionary`2[[System.Byte, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int64, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"
+          },
+          {
+            "path": "$.objects[13534].type",
+            "old": "System.Collections.Generic.Dictionary`2[[System.Byte, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Fistnet.Genepool.Dna.GeneIdentity, Fistnet.Genepool.Dna, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "new": "System.Collections.Generic.Dictionary`2[[System.Byte, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Fistnet.Genepool.Dna.GeneIdentity, Fistnet.Genepool.Dna, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+          },
+          {
+            "path": "$.objects[13535].type",
+            "old": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.Dictionary`2[[System.Byte, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Single, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "new": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.Dictionary`2[[System.Byte, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Single, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"
+          }
+        ]
+      },
+      "normalized_diff": {
+        "count": 0,
+        "type_label_count": 0,
+        "other_count": 0,
+        "examples": []
+      },
+      "normalized_type_label_count": 5692,
+      "exact_normalized_bytes_equal": true,
+      "trajectory_equal": true,
+      "old_assemblies": {
+        "Fistnet.Genepool.App": {
+          "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\bin\\Debug\\net9.0-windows7.0\\Fistnet.Genepool.App.dll",
+          "sha256": "01F89CDC90645CF692819E08A0A91D611B9B2E5728F00861A2B074253FE9EB37"
+        },
+        "Fistnet.Genepool.Control": {
+          "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\bin\\Debug\\net9.0-windows7.0\\Fistnet.Genepool.Control.dll",
+          "sha256": "9B21EC955C869D3F8E001BCCCB92E4D0E776EFE9636D177B039E5A08D63F8EA3"
+        },
+        "Fistnet.Genepool.Dna": {
+          "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\bin\\Debug\\net9.0-windows7.0\\Fistnet.Genepool.Dna.dll",
+          "sha256": "74C1163643580F051BA399E546B8AF47420F05B397B836EE4D9B9CC8AE1F8B34"
+        },
+        "Fistnet.Genepool.Tests": {
+          "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\bin\\Debug\\net9.0-windows7.0\\Fistnet.Genepool.Tests.dll",
+          "sha256": "FA36281E95C74876CEA2193DB82D785D1BE1E1F665B815C15E6C6EC2E2EB91F7"
+        },
+        "Fistnet.Genepool.Visualization": {
+          "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\bin\\Debug\\net9.0-windows7.0\\Fistnet.Genepool.Visualization.dll",
+          "sha256": "507F4D24F8465D004C8878A49DBED81E031586979F85E5939B263788FBD8BBE6"
+        }
+      },
+      "new_assemblies": {
+        "Fistnet.Genepool.App": {
+          "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\bin\\Debug\\net10.0-windows7.0\\Fistnet.Genepool.App.dll",
+          "sha256": "A9CBB1E498CC68FC1295ABE660B2D1B72430C58F103CD7DF29EF4E327979E370"
+        },
+        "Fistnet.Genepool.Control": {
+          "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\bin\\Debug\\net10.0-windows7.0\\Fistnet.Genepool.Control.dll",
+          "sha256": "EC79B3C518D31C7DBEA689946D0F207D40822C5C0F937544E4D077AE0DAC62EE"
+        },
+        "Fistnet.Genepool.Dna": {
+          "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\bin\\Debug\\net10.0-windows7.0\\Fistnet.Genepool.Dna.dll",
+          "sha256": "989A1519177BDBE0AB2398D011B206661BFF965529060A7B37C816B017CF306D"
+        },
+        "Fistnet.Genepool.Tests": {
+          "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\bin\\Debug\\net10.0-windows7.0\\Fistnet.Genepool.Tests.dll",
+          "sha256": "CCA116514E8D5FA0A291070339B0E92850C33258B1368A24A4AB86AB079722AF"
+        },
+        "Fistnet.Genepool.Visualization": {
+          "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\bin\\Debug\\net10.0-windows7.0\\Fistnet.Genepool.Visualization.dll",
+          "sha256": "6F3410F3FAD488995671BF084C4360659E79399F57B3E2E04A3449C59CB8476C"
+        }
+      },
+      "ok": true
+    },
+    {
+      "seed": 29,
+      "seasons": 128,
+      "accepted_hash": "AB4EF8C91070F6C53AFB9FC2BB1217E3D61898FA3CE2BD660156181424A194E2",
+      "accepted_draws": 935898,
+      "old_runtime": "9.0.20",
+      "new_runtime": "10.0.12",
+      "old_raw_hash": "AB4EF8C91070F6C53AFB9FC2BB1217E3D61898FA3CE2BD660156181424A194E2",
+      "new_raw_hash": "9FA691B3D6FC9FE6BEDEAAF112F98DB11CAC66572356CB7B108E97C14C5199C9",
+      "new_normalized_hash": "AB4EF8C91070F6C53AFB9FC2BB1217E3D61898FA3CE2BD660156181424A194E2",
+      "old_draws": 935898,
+      "new_draws": 935898,
+      "old_random": {
+        "algorithm": "xorshift32-v1",
+        "state": "F240F404",
+        "drawCount": 935898
+      },
+      "new_random": {
+        "algorithm": "xorshift32-v1",
+        "state": "F240F404",
+        "drawCount": 935898
+      },
+      "raw_diff": {
+        "count": 9501,
+        "type_label_count": 9501,
+        "other_count": 0,
+        "examples": [
+          {
+            "path": "$.objects[1].type",
+            "old": "System.Collections.Concurrent.ConcurrentDictionary`2[[Fistnet.Genepool.Dna.DnaTypes, Fistnet.Genepool.Dna, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "new": "System.Collections.Concurrent.ConcurrentDictionary`2[[Fistnet.Genepool.Dna.DnaTypes, Fistnet.Genepool.Dna, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"
+          },
+          {
+            "path": "$.objects[2].type",
+            "old": "System.Collections.Concurrent.ConcurrentDictionary`2[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "new": "System.Collections.Concurrent.ConcurrentDictionary`2[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"
+          },
+          {
+            "path": "$.objects[14861].type",
+            "old": "System.Collections.Generic.Dictionary`2[[System.Byte, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Fistnet.Genepool.Dna.GeneIdentity, Fistnet.Genepool.Dna, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "new": "System.Collections.Generic.Dictionary`2[[System.Byte, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Fistnet.Genepool.Dna.GeneIdentity, Fistnet.Genepool.Dna, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+          },
+          {
+            "path": "$.objects[14862].type",
+            "old": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.Dictionary`2[[System.Byte, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Single, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "new": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.Dictionary`2[[System.Byte, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Single, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"
+          },
+          {
+            "path": "$.objects[14863].type",
+            "old": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int64, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "new": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int64, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"
+          },
+          {
+            "path": "$.objects[14864].type",
+            "old": "System.Collections.Generic.Dictionary`2[[System.Byte, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int64, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "new": "System.Collections.Generic.Dictionary`2[[System.Byte, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int64, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"
+          },
+          {
+            "path": "$.objects[14874].type",
+            "old": "System.Collections.Generic.Dictionary`2[[System.Byte, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Fistnet.Genepool.Dna.GeneIdentity, Fistnet.Genepool.Dna, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "new": "System.Collections.Generic.Dictionary`2[[System.Byte, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Fistnet.Genepool.Dna.GeneIdentity, Fistnet.Genepool.Dna, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+          },
+          {
+            "path": "$.objects[14875].type",
+            "old": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.Dictionary`2[[System.Byte, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Single, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "new": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.Dictionary`2[[System.Byte, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Single, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"
+          }
+        ]
+      },
+      "normalized_diff": {
+        "count": 0,
+        "type_label_count": 0,
+        "other_count": 0,
+        "examples": []
+      },
+      "normalized_type_label_count": 9501,
+      "exact_normalized_bytes_equal": true,
+      "trajectory_equal": true,
+      "old_assemblies": {
+        "Fistnet.Genepool.App": {
+          "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\bin\\Debug\\net9.0-windows7.0\\Fistnet.Genepool.App.dll",
+          "sha256": "01F89CDC90645CF692819E08A0A91D611B9B2E5728F00861A2B074253FE9EB37"
+        },
+        "Fistnet.Genepool.Control": {
+          "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\bin\\Debug\\net9.0-windows7.0\\Fistnet.Genepool.Control.dll",
+          "sha256": "9B21EC955C869D3F8E001BCCCB92E4D0E776EFE9636D177B039E5A08D63F8EA3"
+        },
+        "Fistnet.Genepool.Dna": {
+          "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\bin\\Debug\\net9.0-windows7.0\\Fistnet.Genepool.Dna.dll",
+          "sha256": "74C1163643580F051BA399E546B8AF47420F05B397B836EE4D9B9CC8AE1F8B34"
+        },
+        "Fistnet.Genepool.Tests": {
+          "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\bin\\Debug\\net9.0-windows7.0\\Fistnet.Genepool.Tests.dll",
+          "sha256": "FA36281E95C74876CEA2193DB82D785D1BE1E1F665B815C15E6C6EC2E2EB91F7"
+        },
+        "Fistnet.Genepool.Visualization": {
+          "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\bin\\Debug\\net9.0-windows7.0\\Fistnet.Genepool.Visualization.dll",
+          "sha256": "507F4D24F8465D004C8878A49DBED81E031586979F85E5939B263788FBD8BBE6"
+        }
+      },
+      "new_assemblies": {
+        "Fistnet.Genepool.App": {
+          "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\bin\\Debug\\net10.0-windows7.0\\Fistnet.Genepool.App.dll",
+          "sha256": "A9CBB1E498CC68FC1295ABE660B2D1B72430C58F103CD7DF29EF4E327979E370"
+        },
+        "Fistnet.Genepool.Control": {
+          "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\bin\\Debug\\net10.0-windows7.0\\Fistnet.Genepool.Control.dll",
+          "sha256": "EC79B3C518D31C7DBEA689946D0F207D40822C5C0F937544E4D077AE0DAC62EE"
+        },
+        "Fistnet.Genepool.Dna": {
+          "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\bin\\Debug\\net10.0-windows7.0\\Fistnet.Genepool.Dna.dll",
+          "sha256": "989A1519177BDBE0AB2398D011B206661BFF965529060A7B37C816B017CF306D"
+        },
+        "Fistnet.Genepool.Tests": {
+          "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\bin\\Debug\\net10.0-windows7.0\\Fistnet.Genepool.Tests.dll",
+          "sha256": "CCA116514E8D5FA0A291070339B0E92850C33258B1368A24A4AB86AB079722AF"
+        },
+        "Fistnet.Genepool.Visualization": {
+          "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\bin\\Debug\\net10.0-windows7.0\\Fistnet.Genepool.Visualization.dll",
+          "sha256": "6F3410F3FAD488995671BF084C4360659E79399F57B3E2E04A3449C59CB8476C"
+        }
+      },
+      "ok": true
+    },
+    {
+      "seed": 47,
+      "seasons": 128,
+      "accepted_hash": "E3A0251A828379FD3C11A594697467D31A0ED34E03E5711996B83C5D86B124E7",
+      "accepted_draws": 868307,
+      "old_runtime": "9.0.20",
+      "new_runtime": "10.0.12",
+      "old_raw_hash": "E3A0251A828379FD3C11A594697467D31A0ED34E03E5711996B83C5D86B124E7",
+      "new_raw_hash": "9838969BF149DC5AC2E56943113845FA0E3DDF53F431B918DE6D82119108D0B5",
+      "new_normalized_hash": "E3A0251A828379FD3C11A594697467D31A0ED34E03E5711996B83C5D86B124E7",
+      "old_draws": 868307,
+      "new_draws": 868307,
+      "old_random": {
+        "algorithm": "xorshift32-v1",
+        "state": "AED4FE7E",
+        "drawCount": 868307
+      },
+      "new_random": {
+        "algorithm": "xorshift32-v1",
+        "state": "AED4FE7E",
+        "drawCount": 868307
+      },
+      "raw_diff": {
+        "count": 6108,
+        "type_label_count": 6108,
+        "other_count": 0,
+        "examples": [
+          {
+            "path": "$.objects[1].type",
+            "old": "System.Collections.Concurrent.ConcurrentDictionary`2[[Fistnet.Genepool.Dna.DnaTypes, Fistnet.Genepool.Dna, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "new": "System.Collections.Concurrent.ConcurrentDictionary`2[[Fistnet.Genepool.Dna.DnaTypes, Fistnet.Genepool.Dna, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"
+          },
+          {
+            "path": "$.objects[2].type",
+            "old": "System.Collections.Concurrent.ConcurrentDictionary`2[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "new": "System.Collections.Concurrent.ConcurrentDictionary`2[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"
+          },
+          {
+            "path": "$.objects[13618].type",
+            "old": "System.Collections.Generic.Dictionary`2[[System.Byte, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Fistnet.Genepool.Dna.GeneIdentity, Fistnet.Genepool.Dna, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "new": "System.Collections.Generic.Dictionary`2[[System.Byte, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Fistnet.Genepool.Dna.GeneIdentity, Fistnet.Genepool.Dna, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+          },
+          {
+            "path": "$.objects[13619].type",
+            "old": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.Dictionary`2[[System.Byte, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Single, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "new": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.Dictionary`2[[System.Byte, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Single, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"
+          },
+          {
+            "path": "$.objects[13620].type",
+            "old": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int64, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "new": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int64, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"
+          },
+          {
+            "path": "$.objects[13621].type",
+            "old": "System.Collections.Generic.Dictionary`2[[System.Byte, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int64, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "new": "System.Collections.Generic.Dictionary`2[[System.Byte, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int64, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"
+          },
+          {
+            "path": "$.objects[13631].type",
+            "old": "System.Collections.Generic.Dictionary`2[[System.Byte, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Fistnet.Genepool.Dna.GeneIdentity, Fistnet.Genepool.Dna, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "new": "System.Collections.Generic.Dictionary`2[[System.Byte, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Fistnet.Genepool.Dna.GeneIdentity, Fistnet.Genepool.Dna, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+          },
+          {
+            "path": "$.objects[13632].type",
+            "old": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.Dictionary`2[[System.Byte, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Single, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "new": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.Dictionary`2[[System.Byte, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Single, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"
+          }
+        ]
+      },
+      "normalized_diff": {
+        "count": 0,
+        "type_label_count": 0,
+        "other_count": 0,
+        "examples": []
+      },
+      "normalized_type_label_count": 6108,
+      "exact_normalized_bytes_equal": true,
+      "trajectory_equal": true,
+      "old_assemblies": {
+        "Fistnet.Genepool.App": {
+          "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\bin\\Debug\\net9.0-windows7.0\\Fistnet.Genepool.App.dll",
+          "sha256": "01F89CDC90645CF692819E08A0A91D611B9B2E5728F00861A2B074253FE9EB37"
+        },
+        "Fistnet.Genepool.Control": {
+          "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\bin\\Debug\\net9.0-windows7.0\\Fistnet.Genepool.Control.dll",
+          "sha256": "9B21EC955C869D3F8E001BCCCB92E4D0E776EFE9636D177B039E5A08D63F8EA3"
+        },
+        "Fistnet.Genepool.Dna": {
+          "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\bin\\Debug\\net9.0-windows7.0\\Fistnet.Genepool.Dna.dll",
+          "sha256": "74C1163643580F051BA399E546B8AF47420F05B397B836EE4D9B9CC8AE1F8B34"
+        },
+        "Fistnet.Genepool.Tests": {
+          "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\bin\\Debug\\net9.0-windows7.0\\Fistnet.Genepool.Tests.dll",
+          "sha256": "FA36281E95C74876CEA2193DB82D785D1BE1E1F665B815C15E6C6EC2E2EB91F7"
+        },
+        "Fistnet.Genepool.Visualization": {
+          "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\bin\\Debug\\net9.0-windows7.0\\Fistnet.Genepool.Visualization.dll",
+          "sha256": "507F4D24F8465D004C8878A49DBED81E031586979F85E5939B263788FBD8BBE6"
+        }
+      },
+      "new_assemblies": {
+        "Fistnet.Genepool.App": {
+          "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\bin\\Debug\\net10.0-windows7.0\\Fistnet.Genepool.App.dll",
+          "sha256": "A9CBB1E498CC68FC1295ABE660B2D1B72430C58F103CD7DF29EF4E327979E370"
+        },
+        "Fistnet.Genepool.Control": {
+          "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\bin\\Debug\\net10.0-windows7.0\\Fistnet.Genepool.Control.dll",
+          "sha256": "EC79B3C518D31C7DBEA689946D0F207D40822C5C0F937544E4D077AE0DAC62EE"
+        },
+        "Fistnet.Genepool.Dna": {
+          "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\bin\\Debug\\net10.0-windows7.0\\Fistnet.Genepool.Dna.dll",
+          "sha256": "989A1519177BDBE0AB2398D011B206661BFF965529060A7B37C816B017CF306D"
+        },
+        "Fistnet.Genepool.Tests": {
+          "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\bin\\Debug\\net10.0-windows7.0\\Fistnet.Genepool.Tests.dll",
+          "sha256": "CCA116514E8D5FA0A291070339B0E92850C33258B1368A24A4AB86AB079722AF"
+        },
+        "Fistnet.Genepool.Visualization": {
+          "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\bin\\Debug\\net10.0-windows7.0\\Fistnet.Genepool.Visualization.dll",
+          "sha256": "6F3410F3FAD488995671BF084C4360659E79399F57B3E2E04A3449C59CB8476C"
+        }
+      },
+      "ok": true
+    },
+    {
+      "seed": 83,
+      "seasons": 128,
+      "accepted_hash": "0C6021B6F48DAF361B927E4BBF29F60FC0A1F46603796B4286449BF1AFB33A21",
+      "accepted_draws": 840616,
+      "old_runtime": "9.0.20",
+      "new_runtime": "10.0.12",
+      "old_raw_hash": "0C6021B6F48DAF361B927E4BBF29F60FC0A1F46603796B4286449BF1AFB33A21",
+      "new_raw_hash": "B4AF8E7B4B82D712ECC984E01489A66243C3B89DD1CD2EF93281EEC864659BC3",
+      "new_normalized_hash": "0C6021B6F48DAF361B927E4BBF29F60FC0A1F46603796B4286449BF1AFB33A21",
+      "old_draws": 840616,
+      "new_draws": 840616,
+      "old_random": {
+        "algorithm": "xorshift32-v1",
+        "state": "B41ED7C7",
+        "drawCount": 840616
+      },
+      "new_random": {
+        "algorithm": "xorshift32-v1",
+        "state": "B41ED7C7",
+        "drawCount": 840616
+      },
+      "raw_diff": {
+        "count": 6551,
+        "type_label_count": 6551,
+        "other_count": 0,
+        "examples": [
+          {
+            "path": "$.objects[1].type",
+            "old": "System.Collections.Concurrent.ConcurrentDictionary`2[[Fistnet.Genepool.Dna.DnaTypes, Fistnet.Genepool.Dna, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "new": "System.Collections.Concurrent.ConcurrentDictionary`2[[Fistnet.Genepool.Dna.DnaTypes, Fistnet.Genepool.Dna, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"
+          },
+          {
+            "path": "$.objects[2].type",
+            "old": "System.Collections.Concurrent.ConcurrentDictionary`2[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "new": "System.Collections.Concurrent.ConcurrentDictionary`2[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"
+          },
+          {
+            "path": "$.objects[13606].type",
+            "old": "System.Collections.Generic.Dictionary`2[[System.Byte, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Fistnet.Genepool.Dna.GeneIdentity, Fistnet.Genepool.Dna, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "new": "System.Collections.Generic.Dictionary`2[[System.Byte, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Fistnet.Genepool.Dna.GeneIdentity, Fistnet.Genepool.Dna, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+          },
+          {
+            "path": "$.objects[13607].type",
+            "old": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.Dictionary`2[[System.Byte, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Single, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "new": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.Dictionary`2[[System.Byte, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Single, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"
+          },
+          {
+            "path": "$.objects[13608].type",
+            "old": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int64, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "new": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int64, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"
+          },
+          {
+            "path": "$.objects[13609].type",
+            "old": "System.Collections.Generic.Dictionary`2[[System.Byte, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int64, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "new": "System.Collections.Generic.Dictionary`2[[System.Byte, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int64, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"
+          },
+          {
+            "path": "$.objects[13619].type",
+            "old": "System.Collections.Generic.Dictionary`2[[System.Byte, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Fistnet.Genepool.Dna.GeneIdentity, Fistnet.Genepool.Dna, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "new": "System.Collections.Generic.Dictionary`2[[System.Byte, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Fistnet.Genepool.Dna.GeneIdentity, Fistnet.Genepool.Dna, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+          },
+          {
+            "path": "$.objects[13620].type",
+            "old": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.Dictionary`2[[System.Byte, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Single, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "new": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.Dictionary`2[[System.Byte, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Single, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"
+          }
+        ]
+      },
+      "normalized_diff": {
+        "count": 0,
+        "type_label_count": 0,
+        "other_count": 0,
+        "examples": []
+      },
+      "normalized_type_label_count": 6551,
+      "exact_normalized_bytes_equal": true,
+      "trajectory_equal": true,
+      "old_assemblies": {
+        "Fistnet.Genepool.App": {
+          "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\bin\\Debug\\net9.0-windows7.0\\Fistnet.Genepool.App.dll",
+          "sha256": "01F89CDC90645CF692819E08A0A91D611B9B2E5728F00861A2B074253FE9EB37"
+        },
+        "Fistnet.Genepool.Control": {
+          "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\bin\\Debug\\net9.0-windows7.0\\Fistnet.Genepool.Control.dll",
+          "sha256": "9B21EC955C869D3F8E001BCCCB92E4D0E776EFE9636D177B039E5A08D63F8EA3"
+        },
+        "Fistnet.Genepool.Dna": {
+          "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\bin\\Debug\\net9.0-windows7.0\\Fistnet.Genepool.Dna.dll",
+          "sha256": "74C1163643580F051BA399E546B8AF47420F05B397B836EE4D9B9CC8AE1F8B34"
+        },
+        "Fistnet.Genepool.Tests": {
+          "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\bin\\Debug\\net9.0-windows7.0\\Fistnet.Genepool.Tests.dll",
+          "sha256": "FA36281E95C74876CEA2193DB82D785D1BE1E1F665B815C15E6C6EC2E2EB91F7"
+        },
+        "Fistnet.Genepool.Visualization": {
+          "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\bin\\Debug\\net9.0-windows7.0\\Fistnet.Genepool.Visualization.dll",
+          "sha256": "507F4D24F8465D004C8878A49DBED81E031586979F85E5939B263788FBD8BBE6"
+        }
+      },
+      "new_assemblies": {
+        "Fistnet.Genepool.App": {
+          "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\bin\\Debug\\net10.0-windows7.0\\Fistnet.Genepool.App.dll",
+          "sha256": "A9CBB1E498CC68FC1295ABE660B2D1B72430C58F103CD7DF29EF4E327979E370"
+        },
+        "Fistnet.Genepool.Control": {
+          "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\bin\\Debug\\net10.0-windows7.0\\Fistnet.Genepool.Control.dll",
+          "sha256": "EC79B3C518D31C7DBEA689946D0F207D40822C5C0F937544E4D077AE0DAC62EE"
+        },
+        "Fistnet.Genepool.Dna": {
+          "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\bin\\Debug\\net10.0-windows7.0\\Fistnet.Genepool.Dna.dll",
+          "sha256": "989A1519177BDBE0AB2398D011B206661BFF965529060A7B37C816B017CF306D"
+        },
+        "Fistnet.Genepool.Tests": {
+          "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\bin\\Debug\\net10.0-windows7.0\\Fistnet.Genepool.Tests.dll",
+          "sha256": "CCA116514E8D5FA0A291070339B0E92850C33258B1368A24A4AB86AB079722AF"
+        },
+        "Fistnet.Genepool.Visualization": {
+          "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\bin\\Debug\\net10.0-windows7.0\\Fistnet.Genepool.Visualization.dll",
+          "sha256": "6F3410F3FAD488995671BF084C4360659E79399F57B3E2E04A3449C59CB8476C"
+        }
+      },
+      "ok": true
+    }
+  ],
+  "ok": true,
+  "probe_source_sha256": "ECF2FD573CD2C298BCA8239ED331E4E8F0E1F8C9F0F8FBD923F3779D932ED56C",
+  "probe_compiler_sdk": "10.0.401",
+  "probe_reference_pack": "Microsoft.NETCore.App.Ref/9.0.20/net9.0",
+  "scratch_removed": true,
+  "elapsed_seconds": 30.14
+}

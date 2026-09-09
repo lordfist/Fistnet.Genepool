@@ -1,0 +1,34 @@
+{
+  "actor": "Genepool Analyzer",
+  "at_utc": "2026-09-08T12:40:28.136235+00:00",
+  "from_revision": 62,
+  "to_revision": 63,
+  "transaction_sha256": "B83E08E29192A0CE903C7558FA9EA234ECC8DA1A982CF36472AC8F456B290DFC",
+  "preview": {
+    "pages_inspected": 5,
+    "changes_inspected": 292,
+    "preview_time": "2026-09-08T12:37:47+00:00"
+  },
+  "apply": {
+    "commit_completed": true,
+    "verification_completed": true,
+    "recovery_required": false,
+    "cleanup_errors": []
+  },
+  "post_apply_deep_validation": {
+    "ok": true,
+    "errors": [],
+    "existing_warning": "SRC-0115 historical bytes unavailable; FACT-0042",
+    "records": 136,
+    "sources": 312,
+    "historical_sources": 118,
+    "prepared_sources": 21
+  },
+  "retrieval": "r04_plan leads to DEC-0040 and REC-0012; REC-0011 and FACT-0062 disclose owner acceptance DEC-0039.",
+  "artifact_hash_checks": [
+    "FACT-0063",
+    "REC-0012"
+  ],
+  "inspected_source_and_helper_hashes_unchanged": 16,
+  "scope": "KB-only derived changes; no solution/Godot implementation, builds, installs or application runs."
+}

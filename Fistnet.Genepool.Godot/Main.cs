@@ -57,7 +57,7 @@ public partial class Main : Godot.Control
     public override void _Process(double delta)
     {
         if (!built) return;
-        ZoomLabel.Text = $"{BoardView.Zoom * 100:0}%";
+        UpdateViewStatus();
         if (!closing && simulation?.LatestFrame is { } frame) DisplayFrame(frame);
     }
 
@@ -71,13 +71,19 @@ public partial class Main : Godot.Control
         {
             selectedId = null; selectedCell = null; selectionCommand = 0; patternKey = null;
             BoardView.SelectedCell = null; BoardView.SelectedOrganismId = null; BoardView.HighlightedPattern = null;
+            DepthView.SelectedCell = null; DepthView.SelectedOrganismId = null; DepthView.HighlightedPattern = null;
         }
         DisplayedFrame = frame;
         if (newRun || frame.AcknowledgedCommand >= pendingCommand) activeOptions = frame.Options;
         if (PassiveMode && newRun) selectedId = frame.Selected?.Id;
-        if (changed) BoardView.SetFrame(frame);
+        if (changed)
+        {
+            if (IsDepthView) DepthView.SetFrame(frame); else BoardView.SetFrame(frame);
+            Minimap.SetFrame(frame);
+        }
         BoardView.SelectedOrganismId = selectedId;
-        if (newRun) BoardView.Fit();
+        DepthView.SelectedOrganismId = selectedId;
+        if (newRun) { BoardView.Fit(); DepthView.Fit(); }
         if (pendingCommand != 0 && frame.AcknowledgedCommand >= pendingCommand)
         {
             if (settlementRequest != null)
@@ -135,6 +141,7 @@ public partial class Main : Godot.Control
         StepButton.Disabled = CycleButton.Disabled = blocked || running || stepping || pending;
         RestartButton.Disabled = SettingsButton.Disabled = SpeedBox.Disabled = blocked || pending;
         BoardView.MouseFilter = closing || unavailable || frame?.Fault != null ? MouseFilterEnum.Ignore : MouseFilterEnum.Stop;
+        DepthView.MouseFilter = BoardView.MouseFilter;
     }
 
     public void SelectCell(int x, int y)
@@ -145,6 +152,7 @@ public partial class Main : Godot.Control
         if (!PassiveMode && !TryCommand(() => simulation!.Select(cell.OrganismId), out command)) return;
         selectedCell = (x, y); selectedId = cell.OrganismId; selectionCommand = command;
         BoardView.SelectedCell = selectedCell; BoardView.SelectedOrganismId = selectedId;
+        DepthView.SelectedCell = selectedCell; DepthView.SelectedOrganismId = selectedId;
         DetailTabs.CurrentTab = 0; InspectorText.GetVScrollBar().Value = 0; UpdateInspector();
     }
 

@@ -2,10 +2,10 @@
 
 This application uses the existing Control/Dna simulation in a Godot window. The original Windows Forms application is still a startup choice in the same solution. Starting both applications creates independent simulations.
 
-## Visual Studio 2022
+## Visual Studio 2026 and .NET 10
 
 1. Close the portable Godot editor before regenerating its settings. From the repository root, run `& .\Fistnet.Genepool.Godot\tools\Setup.ps1` in PowerShell. Run Setup again after moving the checkout; it regenerates local absolute paths and selects Visual Studio as Godot's C# editor.
-2. Open the root `Fistnet.Genepool.sln` in Visual Studio 2022. Keep the existing .NET SDK 9.0.315 pin and use **Debug**.
+2. Open the primary root `Fistnet.Genepool.slnx` in Visual Studio 2026 and use **Debug**. All six projects target .NET 10; `global.json` requests SDK `10.0.401` with `latestPatch` roll-forward and prerelease SDKs disabled. The legacy `.sln` remains available with matching project/configuration mappings.
 3. Set **Fistnet.Genepool.Godot** as the startup project and select the **Genepool (Godot)** executable launch profile. Build, then press **F5**.
 4. For the original viewer, select **Fistnet.Genepool.App** as the startup project.
 
@@ -45,20 +45,64 @@ Run/Pause, one-season Step, an eight-season Cycle, Restart, New simulation and t
 
 Use the wheel to zoom, right/middle drag to pan, and Fit to return to the whole board. Combined view leaves local food visible around each organism; Organisms and Food isolate the layers. Click an organism for its DNA and completed actions, or an empty cell for food. Patterns group ordered action types and can be highlighted; they are not species or fitness rankings. Activity and the optional history explain what was observed and what was sampled. History starts hidden in shorter windows and can be enabled with its checkbox.
 
-The board uses two reusable GPU instance batches and detached completed snapshots. Camera and controls keep updating while the worker calculates; this rendering change does not speed up simulation calculations or change the ecosystem rules.
+The original 2D board uses two reusable GPU instance batches and detached completed snapshots. Camera and controls keep updating while the worker calculates; this rendering change does not speed up simulation calculations or change the ecosystem rules.
+
+## Habitat and depth views — R03 Step 4
+
+The default viewer uses a Godot 3D viewport with a centred, shallow perspective view across the board. Its level front edge is wider than its level back edge, forming a trapezoid, and the grid recedes into the distance. Choose **Habitat · top-down** for a direct overhead orthographic view, or **Original 2D** for the earlier renderer. All three observe the same running world; switching views does not restart it. The Windows Forms application remains a separate startup project.
+
+The terrain runs from brown dirt through olive to green using the existing food quantity. Close views reveal small grass fans. Organisms look like flat, irregular mould colonies with fuzzy edges. Their decorative shape stays stable as they move. Base colours use the same full 24-bit RGB mapping as WinForms: the eight ordered DNA action types provide three bits each. Target directions and learned preferences are not encoded, so matching colours do not imply identical behaviour or a species. These materials are generated on the GPU and require no downloaded artwork or new dependency.
+
+In the Habitat views, **Organisms** replaces the food terrain with light grey ground and hides the grass, clearly distinguishing hidden food from empty brown soil. Its minimap uses the same grey ground and a dark viewport outline. **Combined** and **Food** retain the brown-to-green food scale; switching layers preserves the world's food quantities.
+
+Four detail buttons complement smooth wheel zoom:
+
+| Level | Display |
+| --- | --- |
+| 1 · World | Whole-board distribution, simple colony dots and food colors. |
+| 2 · Habitat | A quiet neighborhood with textured ground and mould silhouettes. |
+| 3 · Organism | Muted actual outcomes across every relevant visible cell. |
+| 4 · Inspect | Full cues only for the focused organism; no unrelated action effects. |
+
+Right/middle drag pans the view. The minimap shows the whole board and the camera's visible ground outline, including its perspective taper; click it to navigate. **Zoom to selection** centers the selected life. At close levels only cells intersecting the actual camera footprint are submitted to the GPU. A clipped viewport is a view into the continuing world: borders appear only at the real world edge. Angled/top-down switching preserves the viewed location and center detail scale. Perspective makes distant cells smaller than nearby cells; detail presets use the projected size at the view center.
+
+Action cues come from the displayed completed season's entire observed cohort, including unsuccessful choices. Fast playback may skip complete seasons. Paused outcomes remain available for inspection; running cues expire without restarting on a same-season acknowledgment. Food gathering, reserve consumption, healing, damage, actual movement, placed children and confirmed DNA changes have distinct feedback. Choosing an action alone does not create its success effect. Target cells mark where an effect happened; affected organisms may move later in that season. A dead selected life retains a muted last-location marker and its inspector, without selecting a replacement occupant.
+
+The sixteen-entry focused history and earlier 2D marker behavior are retained. The separately requested grow/grow/hold/decay food cycle remains deferred. No simulation policy, scheduling or randomness was changed for the new appearance.
+
+## Final graphics polish — R03 Step 5
+
+The owner accepted Step 4's camera, ground and navigation, then requested the original WinForms RGB spectrum instead of pastel display groups. Habitat and its minimap now use each completed cell's actual RGB value without reducing it to a small palette. Black, white and grey remain valid DNA colours. **View 1 (World) has no organism outline**, keeping the small RGB dots colourful. Views 2–4 retain contrasting irregular edges and flat, branching mould detail. World-level organisms retain their larger display footprint. Pattern highlighting still dims unrelated organisms deliberately.
+
+Step 5's implementation review and current renderer captures are in `KnowledgeBase/R03_STEP5_GRAPHICS_RESULT.md`. Passing checks do not establish owner visual acceptance or close R03 automatically.
 
 ## Repeatable verification
 
 After building the root solution, run the existing console test suite in either configuration:
 
 ```powershell
-& .\Fistnet.Genepool.Tests\bin\Debug\net9.0-windows7.0\Fistnet.Genepool.Tests.exe --all
-& .\Fistnet.Genepool.Tests\bin\Release\net9.0-windows7.0\Fistnet.Genepool.Tests.exe --all
+& .\Fistnet.Genepool.Tests\bin\Debug\net10.0-windows7.0\Fistnet.Genepool.Tests.exe --all
+& .\Fistnet.Genepool.Tests\bin\Release\net10.0-windows7.0\Fistnet.Genepool.Tests.exe --all
 ```
 
 The opt-in `Scenes/Verification.tscn` exercises real Godot controls, transformed selection, pixels, settings, simulation passivity and shutdown. `KnowledgeBase/tools/run_godot_checks.py` runs it with an external deadline and current-result files. With an existing Python 3.11+ runtime, use `--mode headless` for logic, `--mode smoke` for the actual GPU window, or `--mode benchmark` for the 45-second renderer workload. Run graphics measurements while the desktop is otherwise idle. The runner deliberately replaces its current reports and previews; it does not create historical test archives. See the implementation review for the verified local Python path.
 
-## Verified implementation status
+For Habitat and its Step 5 polish, use `--mode step4-headless`, `--mode step4`, and `--mode step4-benchmark` respectively. The existing Habitat suite includes the RGB and actual-pixel readability regressions. The benchmark includes 0/1,000/10,000-organism overview fixtures plus a dense close view with complete outcome batches. These opt-in scenes close their own window and simulation worker when finished. Current results and screenshots are linked in `KnowledgeBase/R03_STEP5_GRAPHICS_RESULT.md`; Step 4 reports remain dated evidence of the accepted baseline.
+
+For R04 Step 1, supply `--build-report r04_step1_builds.json` and `--build-stage <exact Debug stage>` together. Select the matching current `--report` name for each mode:
+
+| Mode | Current report |
+| --- | --- |
+| `headless` | `r04_step1_godot_headless.json` |
+| `smoke` | `r04_step1_godot_verification.json` |
+| `benchmark` | `r04_step1_godot_benchmark.json` |
+| `step4-headless` | `r04_step1_godot_step4_headless.json` |
+| `step4` | `r04_step1_godot_step4_verification.json` |
+| `step4-benchmark` | `r04_step1_godot_step4_benchmark.json` |
+
+The build evidence must identify the Debug assembly used by these development checks. Solution Release builds compile the Godot ExportRelease configuration; these Debug runtime checks do not verify an exported Release application. Use an existing Python 3.11+ runtime with `-X utf8 -B` and preserve the runner's bounded process and current-result cleanup behavior.
+
+## Earlier 2D verification
 
 Whole-solution **Visual Studio 2022 MSBuild Debug and Release builds passed**, preserving SDK9.0.315 and the net9 target. The existing suite plus new board/settings checks passed **149/149 in each configuration**. The 106 CA1416 Windows platform warnings remain in the existing application/visualization code; the new Godot project compiled without warnings.
 
@@ -66,4 +110,4 @@ Actual Compatibility rendering on the **AMD Radeon RX 6800** passed pixel, layou
 
 Godot's native host selected the already-installed **.NET10.0.9** through its own roll-forward policy; the project still targets **net9** and builds with **SDK9.0.315**. Actual **VS2022 F5, breakpoint binding, stepping and inspecting locals remain for owner review**. Command launches and VS2022 builds have passed; they do not establish IDE debugger interaction. The profile follows the official Godot workflow. Do not force the host down to .NET8, which cannot load the net9 application.
 
-Results and the review are in `KnowledgeBase/IMPROVEMENT_RESULT_R03_2D.md`. R03 depth/3D, graphics polish and standalone export remain separate checkpoints. Owner acceptance of this viewer is pending.
+These are the earlier 2D measurements, retained in `KnowledgeBase/IMPROVEMENT_RESULT_R03_2D.md`; that practical viewer was accepted by the owner. Step 4's accepted result is recorded in `KnowledgeBase/R03_STEP4_TRAPEZOID_RESULT.md`, with acceptance in KB decision DEC-0036. Final Step 5 graphics polish is recorded in `KnowledgeBase/R03_STEP5_GRAPHICS_RESULT.md`. Standalone export remains deferred.

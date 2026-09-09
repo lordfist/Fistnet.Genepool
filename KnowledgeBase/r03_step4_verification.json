@@ -1,0 +1,1344 @@
+{
+  "atUtc": "2026-09-08T11:50:31.323319+00:00",
+  "mode": "step4",
+  "ok": true,
+  "failures": 0,
+  "backend": "Windows",
+  "adapter": "AMD Radeon RX 6800",
+  "runtime": ".NET 10.0.9",
+  "engine": "4.7.2-stable (official)",
+  "gpuExecuted": true,
+  "externalProcessWatchdogRequired": true,
+  "limits": "Synthetic viewer fixtures and bounded engineering checks. No ecological trial. Frame intervals are main-loop observations, not hardware presentation timings. UI timing covers injected Godot input/signals, not physical mouse-to-photon latency. In-scene waits cannot time out a stalled main loop; the launcher must enforce an external process deadline.",
+  "checks": [
+    {
+      "name": "depth surface is passive and shares the displayed snapshot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth camera mode 0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth full-board instance coverage mode 0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth fitted view exposes four actual world edges mode 0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth fitted picking mode 0 cell (0, 0)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth fitted picking mode 0 cell (50, 50)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth fitted picking mode 0 cell (99, 99)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth outside picking mode 0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth preset 1 mode 0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth center picking level 1 mode 0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth visible-area batches level 1 mode 0",
+      "passed": true,
+      "detail": "bounds=(0, 0), (100, 100); food=10000/10000; organisms=1000/1000"
+    },
+    {
+      "name": "depth preset 2 mode 0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth center picking level 2 mode 0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth visible-area batches level 2 mode 0",
+      "passed": true,
+      "detail": "bounds=(31, 35), (38, 28); food=1020/1020; organisms=101/101"
+    },
+    {
+      "name": "depth interior crop is smaller than the world level 2 mode 0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth interior crop does not create a false world border level 2 mode 0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth preset 3 mode 0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth center picking level 3 mode 0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth visible-area batches level 3 mode 0",
+      "passed": true,
+      "detail": "bounds=(40, 43), (20, 14); food=258/258; organisms=26/26"
+    },
+    {
+      "name": "depth interior crop is smaller than the world level 3 mode 0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth interior crop does not create a false world border level 3 mode 0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth preset 4 mode 0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth center picking level 4 mode 0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth visible-area batches level 4 mode 0",
+      "passed": true,
+      "detail": "bounds=(45, 46), (10, 8); food=80/80; organisms=8/8"
+    },
+    {
+      "name": "depth interior crop is smaller than the world level 4 mode 0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth interior crop does not create a false world border level 4 mode 0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth panned picking mode 0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth focus locates selected identity mode 0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth extreme pan remains finite mode 0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth top-left world edge remains identifiable mode 0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth camera mode 1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth full-board instance coverage mode 1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth fitted view exposes four actual world edges mode 1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth fitted picking mode 1 cell (0, 0)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth fitted picking mode 1 cell (50, 50)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth fitted picking mode 1 cell (99, 99)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth outside picking mode 1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth preset 1 mode 1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth center picking level 1 mode 1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth visible-area batches level 1 mode 1",
+      "passed": true,
+      "detail": "bounds=(0, 0), (100, 100); food=10000/10000; organisms=1000/1000"
+    },
+    {
+      "name": "depth preset 2 mode 1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth center picking level 2 mode 1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth visible-area batches level 2 mode 1",
+      "passed": true,
+      "detail": "bounds=(18, 36), (64, 28); food=1792/1792; organisms=181/181"
+    },
+    {
+      "name": "depth interior crop is smaller than the world level 2 mode 1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth interior crop does not create a false world border level 2 mode 1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth preset 3 mode 1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth center picking level 3 mode 1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth visible-area batches level 3 mode 1",
+      "passed": true,
+      "detail": "bounds=(34, 43), (32, 14); food=448/448; organisms=45/45"
+    },
+    {
+      "name": "depth interior crop is smaller than the world level 3 mode 1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth interior crop does not create a false world border level 3 mode 1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth preset 4 mode 1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth center picking level 4 mode 1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth visible-area batches level 4 mode 1",
+      "passed": true,
+      "detail": "bounds=(42, 46), (16, 8); food=128/128; organisms=13/13"
+    },
+    {
+      "name": "depth interior crop is smaller than the world level 4 mode 1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth interior crop does not create a false world border level 4 mode 1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth panned picking mode 1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth focus locates selected identity mode 1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth extreme pan remains finite mode 1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth top-left world edge remains identifiable mode 1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "DNA RGB reaches the renderer without a restricted palette",
+      "passed": true,
+      "detail": "distinct inputs=4352; distinct outputs=4352; mapping errors=0"
+    },
+    {
+      "name": "same DNA RGB is independent of pattern labels location identity and food",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "organism RGB stays opaque regardless of incoming ARGB alpha",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "decorative mould shape follows identity independently of DNA colour and movement",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "angled uses actual perspective camera (1366, 768)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "centred trapezoid has the owner's stronger front-to-back taper (1366, 768)",
+      "passed": true,
+      "detail": "front=785.06px; back=481.42px; ratio=1.631"
+    },
+    {
+      "name": "centred trapezoid keeps both front and back edges horizontal (1366, 768)",
+      "passed": true,
+      "detail": "back=(238.28905, 98.89617)->(719.71094, 98.89617); front=(86.470024, 453)->(871.52997, 453)"
+    },
+    {
+      "name": "centred trapezoid is left-right symmetric around the viewport centre (1366, 768)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "centred trapezoid has a visibly low oblique silhouette (1366, 768)",
+      "passed": true,
+      "detail": "height/front-width=0.451"
+    },
+    {
+      "name": "grid rows and spacing visibly recede with distance (1366, 768)",
+      "passed": true,
+      "detail": "rows=1.475; gaps=1.970"
+    },
+    {
+      "name": "perspective fit includes all four real board corners (1366, 768)",
+      "passed": true,
+      "detail": "(238.28905, 98.89617); (719.71094, 98.89617); (871.52997, 453); (86.470024, 453); size=(958, 467)"
+    },
+    {
+      "name": "native clip planes preserve all ground and colony corners (1366, 768)",
+      "passed": true,
+      "detail": "near=65.44286; far=215.90785"
+    },
+    {
+      "name": "native rendered projection agrees with overlay cell (0, 0) (1366, 768)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "native projected near/far cell picks correctly (0, 0) (1366, 768)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "native rendered projection agrees with overlay cell (12, 10) (1366, 768)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "native projected near/far cell picks correctly (12, 10) (1366, 768)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "native rendered projection agrees with overlay cell (50, 50) (1366, 768)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "native projected near/far cell picks correctly (50, 50) (1366, 768)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "native rendered projection agrees with overlay cell (84, 87) (1366, 768)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "native projected near/far cell picks correctly (84, 87) (1366, 768)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "native rendered projection agrees with overlay cell (99, 99) (1366, 768)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "native projected near/far cell picks correctly (99, 99) (1366, 768)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "empty space inside projected bounding box is not a board cell (1366, 768)",
+      "passed": true,
+      "detail": "(125.72302, 116.601364)"
+    },
+    {
+      "name": "top-down remains orthographic and unskewed (1366, 768)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "angled uses actual perspective camera (1920, 1080)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "centred trapezoid has the owner's stronger front-to-back taper (1920, 1080)",
+      "passed": true,
+      "detail": "front=1087.28px; back=662.41px; ratio=1.641"
+    },
+    {
+      "name": "centred trapezoid keeps both front and back edges horizontal (1920, 1080)",
+      "passed": true,
+      "detail": "back=(424.79465, 132.79236)->(1087.2053, 132.79236); front=(212.35939, 622)->(1299.6406, 622)"
+    },
+    {
+      "name": "centred trapezoid is left-right symmetric around the viewport centre (1920, 1080)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "centred trapezoid has a visibly low oblique silhouette (1920, 1080)",
+      "passed": true,
+      "detail": "height/front-width=0.450"
+    },
+    {
+      "name": "grid rows and spacing visibly recede with distance (1920, 1080)",
+      "passed": true,
+      "detail": "rows=1.482; gaps=1.988"
+    },
+    {
+      "name": "perspective fit includes all four real board corners (1920, 1080)",
+      "passed": true,
+      "detail": "(424.79465, 132.79236); (1087.2053, 132.79236); (1299.6406, 622); (212.35939, 622); size=(1512, 636)"
+    },
+    {
+      "name": "native clip planes preserve all ground and colony corners (1920, 1080)",
+      "passed": true,
+      "detail": "near=64.34756; far=213.71724"
+    },
+    {
+      "name": "native rendered projection agrees with overlay cell (0, 0) (1920, 1080)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "native projected near/far cell picks correctly (0, 0) (1920, 1080)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "native rendered projection agrees with overlay cell (12, 10) (1920, 1080)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "native projected near/far cell picks correctly (12, 10) (1920, 1080)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "native rendered projection agrees with overlay cell (50, 50) (1920, 1080)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "native projected near/far cell picks correctly (50, 50) (1920, 1080)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "native rendered projection agrees with overlay cell (84, 87) (1920, 1080)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "native projected near/far cell picks correctly (84, 87) (1920, 1080)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "native rendered projection agrees with overlay cell (99, 99) (1920, 1080)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "native projected near/far cell picks correctly (99, 99) (1920, 1080)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "empty space inside projected bounding box is not a board cell (1920, 1080)",
+      "passed": true,
+      "detail": "(266.72345, 157.25275)"
+    },
+    {
+      "name": "top-down remains orthographic and unskewed (1920, 1080)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "perspective zoom preserves ground under the pointer",
+      "passed": true,
+      "detail": "before=(908.81335, 403.45218); after=(908.81335, 403.45236)"
+    },
+    {
+      "name": "perspective pan translates the center ground anchor by the requested pixels",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "perspective drag traverses the real Godot GUI input route",
+      "passed": true,
+      "detail": "press@(710.64, 292.56); motion@(753.64, 321.56); release@(753.64, 321.56)"
+    },
+    {
+      "name": "actual Godot middle-drag keeps the grabbed ground point under the cursor",
+      "passed": true,
+      "detail": "expected=(753.64, 321.56); actual=(753.63995, 321.55966); GUI events=press@(710.64, 292.56); motion@(753.64, 321.56); release@(753.64, 321.56)"
+    },
+    {
+      "name": "maximum perspective zoom has a finite native ground footprint",
+      "passed": true,
+      "detail": "zoom=80; native FOV=0.32411692; footprint=(48.847294, 49.13292);(51.152706, 49.13292);(51.14308, 50.859863);(48.85692, 50.859863)"
+    },
+    {
+      "name": "native clip planes retain board depths at maximum zoom",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "maximum zoom cached projection matches native camera (50, 50)",
+      "passed": true,
+      "detail": "cached=(756, 318); native=(756, 318); FOV=0.32411692"
+    },
+    {
+      "name": "maximum zoom cached projection matches native camera (49.5, 50.5)",
+      "passed": true,
+      "detail": "cached=(425.8939, 502.593); native=(425.8939, 502.5967); FOV=0.32411692"
+    },
+    {
+      "name": "maximum zoom cached projection matches native camera (50.5, 49.5)",
+      "passed": true,
+      "detail": "cached=(1084.5068, 134.30133); native=(1084.5068, 134.30267); FOV=0.32411692"
+    },
+    {
+      "name": "perspective culling matches independent native-ray polygon clipping",
+      "passed": true,
+      "detail": "expected=258; actual=258; missed=0; extra=0"
+    },
+    {
+      "name": "perspective culling excludes bounding-box corners",
+      "passed": true,
+      "detail": "bounding cells=280; polygon cells=258"
+    },
+    {
+      "name": "published footprint matches native corner ray intersections",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "minimap receives perspective polygon instead of a bounding rectangle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "perspective action pixels appear at native projected near and far cells",
+      "passed": true,
+      "detail": "near/far changed pixels=35,34; outside35px=0; cues=2"
+    },
+    {
+      "name": "perspective colony coverage samples 36 distinct near and far cells level 2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "perspective colonies retain visible body area level 2",
+      "passed": true,
+      "detail": "(37, 40): body=31.7%, core=100.0%, connected=100.0%; (42, 40): body=32.2%, core=100.0%, connected=100.0%; (47, 40): body=32.2%, core=100.0%, connected=99.7%; (52, 40): body=32.0%, core=100.0%, connected=100.0%; (57, 40): body=33.3%, core=100.0%, connected=99.7%; (62, 40): body=32.1%, core=100.0%, connected=100.0%"
+    },
+    {
+      "name": "perspective colonies retain their central body level 2",
+      "passed": true,
+      "detail": "(37, 40): body=31.7%, core=100.0%, connected=100.0%; (42, 40): body=32.2%, core=100.0%, connected=100.0%; (47, 40): body=32.2%, core=100.0%, connected=99.7%; (52, 40): body=32.0%, core=100.0%, connected=100.0%; (57, 40): body=33.3%, core=100.0%, connected=99.7%; (62, 40): body=32.1%, core=100.0%, connected=100.0%"
+    },
+    {
+      "name": "perspective colonies form one connected mat level 2",
+      "passed": true,
+      "detail": "(37, 40): body=31.7%, core=100.0%, connected=100.0%; (42, 40): body=32.2%, core=100.0%, connected=100.0%; (47, 40): body=32.2%, core=100.0%, connected=99.7%; (52, 40): body=32.0%, core=100.0%, connected=100.0%; (57, 40): body=33.3%, core=100.0%, connected=99.7%; (62, 40): body=32.1%, core=100.0%, connected=100.0%"
+    },
+    {
+      "name": "perspective colony coverage samples 36 distinct near and far cells level 3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "perspective colonies retain visible body area level 3",
+      "passed": true,
+      "detail": "(43, 45): body=31.1%, core=100.0%, connected=99.4%; (46, 45): body=31.0%, core=100.0%, connected=99.7%; (48, 45): body=31.0%, core=100.0%, connected=99.2%; (51, 45): body=31.4%, core=100.0%, connected=99.6%; (53, 45): body=31.1%, core=100.0%, connected=99.3%; (56, 45): body=31.4%, core=100.0%, connected=99.4%"
+    },
+    {
+      "name": "perspective colonies retain their central body level 3",
+      "passed": true,
+      "detail": "(43, 45): body=31.1%, core=100.0%, connected=99.4%; (46, 45): body=31.0%, core=100.0%, connected=99.7%; (48, 45): body=31.0%, core=100.0%, connected=99.2%; (51, 45): body=31.4%, core=100.0%, connected=99.6%; (53, 45): body=31.1%, core=100.0%, connected=99.3%; (56, 45): body=31.4%, core=100.0%, connected=99.4%"
+    },
+    {
+      "name": "perspective colonies form one connected mat level 3",
+      "passed": true,
+      "detail": "(43, 45): body=31.1%, core=100.0%, connected=99.4%; (46, 45): body=31.0%, core=100.0%, connected=99.7%; (48, 45): body=31.0%, core=100.0%, connected=99.2%; (51, 45): body=31.4%, core=100.0%, connected=99.6%; (53, 45): body=31.1%, core=100.0%, connected=99.3%; (56, 45): body=31.4%, core=100.0%, connected=99.4%"
+    },
+    {
+      "name": "Combined preserves food0 brown and food10 green mode 0",
+      "passed": true,
+      "detail": "food0=(0.44561833, 0.3098839, 0.21848747, 1); food10=(0.38375342, 0.6116047, 0.2459384, 1)"
+    },
+    {
+      "name": "Organisms layer selector reaches both renderers and minimap mode 0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Organisms-only ground is light neutral grey at both food amounts mode 0",
+      "passed": true,
+      "detail": "food0=(0.74485785, 0.74485785, 0.74485785, 1); food10=(0.77695054, 0.77695054, 0.77695054, 1)"
+    },
+    {
+      "name": "Organisms-only grey is independent of changing food quantities mode 0",
+      "passed": true,
+      "detail": "cell48 difference=0.0000; cell51 difference=0.0000"
+    },
+    {
+      "name": "returning to Combined restores the actual food palette mode 0",
+      "passed": true,
+      "detail": "food0=(0.44561833, 0.3098839, 0.21848747, 1); food10=(0.38375342, 0.6116047, 0.2459384, 1)"
+    },
+    {
+      "name": "Combined preserves food0 brown and food10 green mode 1",
+      "passed": true,
+      "detail": "food0=(0.44529822, 0.30948377, 0.21856749, 1); food10=(0.38199273, 0.60880363, 0.24497803, 1)"
+    },
+    {
+      "name": "Organisms layer selector reaches both renderers and minimap mode 1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Organisms-only ground is light neutral grey at both food amounts mode 1",
+      "passed": true,
+      "detail": "food0=(0.74477786, 0.74477786, 0.74477786, 1); food10=(0.77350914, 0.77350914, 0.77350914, 1)"
+    },
+    {
+      "name": "Organisms-only grey is independent of changing food quantities mode 1",
+      "passed": true,
+      "detail": "cell48 difference=0.0000; cell51 difference=0.0000"
+    },
+    {
+      "name": "returning to Combined restores the actual food palette mode 1",
+      "passed": true,
+      "detail": "food0=(0.44529822, 0.30948377, 0.21856749, 1); food10=(0.38199273, 0.60880363, 0.24497803, 1)"
+    },
+    {
+      "name": "World renders RGB without dark or pale outlines on grey: World fit",
+      "passed": true,
+      "detail": "grey-ground match: contrast=0/36, outlinePixels=0, RGBerror=0.757; mid-grey: contrast=6/40, outlinePixels=0, RGBerror=0.035; olive match: contrast=8/32, outlinePixels=0, RGBerror=0.569; green-ground match: contrast=8/32, outlinePixels=0, RGBerror=0.565; violet: contrast=11/42, outlinePixels=0, RGBerror=0.071"
+    },
+    {
+      "name": "World renders RGB without dark or pale outlines on grey: World just below detail threshold",
+      "passed": true,
+      "detail": "grey-ground match: contrast=4/282, outlinePixels=0, RGBerror=0.041; mid-grey: contrast=52/259, outlinePixels=0, RGBerror=0.027; olive match: contrast=63/286, outlinePixels=0, RGBerror=0.030; green-ground match: contrast=68/284, outlinePixels=0, RGBerror=0.028; brown match: contrast=67/273, outlinePixels=0, RGBerror=0.022"
+    },
+    {
+      "name": "closer-detail dark and pale outlines remain just above the 12-pixel threshold",
+      "passed": true,
+      "detail": "actual projected size=12.200; orange: contrast=78/256, outlinePixels=53, RGBerror=0.052; white: contrast=76/264, outlinePixels=52, RGBerror=0.046; grey-ground match: contrast=45/270, outlinePixels=50, RGBerror=0.041; near-black: contrast=67/264, outlinePixels=49, RGBerror=0.027; red: contrast=73/261, outlinePixels=49, RGBerror=0.044"
+    },
+    {
+      "name": "full RGB bodies or edges remain visible on grey at detail 2",
+      "passed": true,
+      "detail": "violet: contrast=338/1028, outlinePixels=126, RGBerror=0.007; magenta: contrast=339/1025, outlinePixels=120, RGBerror=0.009; orange: contrast=329/1023, outlinePixels=117, RGBerror=0.011; red: contrast=316/972, outlinePixels=117, RGBerror=0.012; yellow: contrast=329/1027, outlinePixels=116, RGBerror=0.009"
+    },
+    {
+      "name": "full RGB central bodies preserve source channels on grey at detail 2",
+      "passed": true,
+      "detail": "violet: contrast=338/1028, outlinePixels=126, RGBerror=0.007; magenta: contrast=339/1025, outlinePixels=120, RGBerror=0.009; orange: contrast=329/1023, outlinePixels=117, RGBerror=0.011; red: contrast=316/972, outlinePixels=117, RGBerror=0.012; yellow: contrast=329/1027, outlinePixels=116, RGBerror=0.009"
+    },
+    {
+      "name": "full RGB bodies or edges remain visible on grey at detail 3",
+      "passed": true,
+      "detail": "yellow: contrast=1280/4099, outlinePixels=299, RGBerror=0.007; green: contrast=1233/3893, outlinePixels=293, RGBerror=0.008; red: contrast=1218/3882, outlinePixels=287, RGBerror=0.008; white: contrast=1312/4253, outlinePixels=280, RGBerror=0.013; magenta: contrast=1270/4112, outlinePixels=277, RGBerror=0.009"
+    },
+    {
+      "name": "full RGB central bodies preserve source channels on grey at detail 3",
+      "passed": true,
+      "detail": "yellow: contrast=1280/4099, outlinePixels=299, RGBerror=0.007; green: contrast=1233/3893, outlinePixels=293, RGBerror=0.008; red: contrast=1218/3882, outlinePixels=287, RGBerror=0.008; white: contrast=1312/4253, outlinePixels=280, RGBerror=0.013; magenta: contrast=1270/4112, outlinePixels=277, RGBerror=0.009"
+    },
+    {
+      "name": "World renders RGB without dark or pale outlines on brown: World fit",
+      "passed": true,
+      "detail": "brown match: contrast=0/36, outlinePixels=0, RGBerror=0.451; orange: contrast=11/45, outlinePixels=0, RGBerror=0.071; near-black: contrast=11/45, outlinePixels=0, RGBerror=0.027; black: contrast=10/40, outlinePixels=0, RGBerror=0.000; mid-grey: contrast=10/40, outlinePixels=0, RGBerror=0.035"
+    },
+    {
+      "name": "full RGB bodies or edges remain visible on brown at detail 2",
+      "passed": true,
+      "detail": "near-black: contrast=335/1094, outlinePixels=122, RGBerror=0.025; black: contrast=340/1085, outlinePixels=120, RGBerror=0.000; olive match: contrast=313/1104, outlinePixels=117, RGBerror=0.006; grey-ground match: contrast=327/1102, outlinePixels=111, RGBerror=0.007; blue: contrast=310/976, outlinePixels=110, RGBerror=0.004"
+    },
+    {
+      "name": "full RGB central bodies preserve source channels on brown at detail 2",
+      "passed": true,
+      "detail": "near-black: contrast=335/1094, outlinePixels=122, RGBerror=0.025; black: contrast=340/1085, outlinePixels=120, RGBerror=0.000; olive match: contrast=313/1104, outlinePixels=117, RGBerror=0.006; grey-ground match: contrast=327/1102, outlinePixels=111, RGBerror=0.007; blue: contrast=310/976, outlinePixels=110, RGBerror=0.004"
+    },
+    {
+      "name": "full RGB bodies or edges remain visible on brown at detail 3",
+      "passed": true,
+      "detail": "near-black: contrast=1302/4255, outlinePixels=304, RGBerror=0.025; black: contrast=1328/4257, outlinePixels=298, RGBerror=0.000; olive match: contrast=1274/4498, outlinePixels=266, RGBerror=0.005; mid-grey: contrast=1256/4258, outlinePixels=263, RGBerror=0.007; green-ground match: contrast=1338/4501, outlinePixels=262, RGBerror=0.006"
+    },
+    {
+      "name": "full RGB central bodies preserve source channels on brown at detail 3",
+      "passed": true,
+      "detail": "near-black: contrast=1302/4255, outlinePixels=304, RGBerror=0.025; black: contrast=1328/4257, outlinePixels=298, RGBerror=0.000; olive match: contrast=1274/4498, outlinePixels=266, RGBerror=0.005; mid-grey: contrast=1256/4258, outlinePixels=263, RGBerror=0.007; green-ground match: contrast=1338/4501, outlinePixels=262, RGBerror=0.006"
+    },
+    {
+      "name": "World renders RGB without dark or pale outlines on olive: World fit",
+      "passed": true,
+      "detail": "brown match: contrast=0/36, outlinePixels=0, RGBerror=0.451; olive match: contrast=0/32, outlinePixels=0, RGBerror=0.569; green-ground match: contrast=0/32, outlinePixels=0, RGBerror=0.565; mid-grey: contrast=6/40, outlinePixels=0, RGBerror=0.035; orange: contrast=11/45, outlinePixels=0, RGBerror=0.071"
+    },
+    {
+      "name": "full RGB bodies or edges remain visible on olive at detail 2",
+      "passed": true,
+      "detail": "grey-ground match: contrast=349/1102, outlinePixels=124, RGBerror=0.007; near-black: contrast=327/1094, outlinePixels=117, RGBerror=0.025; black: contrast=333/1085, outlinePixels=114, RGBerror=0.000; orange: contrast=317/1023, outlinePixels=114, RGBerror=0.011; magenta: contrast=328/1025, outlinePixels=111, RGBerror=0.009"
+    },
+    {
+      "name": "full RGB central bodies preserve source channels on olive at detail 2",
+      "passed": true,
+      "detail": "grey-ground match: contrast=349/1102, outlinePixels=124, RGBerror=0.007; near-black: contrast=327/1094, outlinePixels=117, RGBerror=0.025; black: contrast=333/1085, outlinePixels=114, RGBerror=0.000; orange: contrast=317/1023, outlinePixels=114, RGBerror=0.011; magenta: contrast=328/1025, outlinePixels=111, RGBerror=0.009"
+    },
+    {
+      "name": "full RGB bodies or edges remain visible on olive at detail 3",
+      "passed": true,
+      "detail": "near-black: contrast=1301/4255, outlinePixels=299, RGBerror=0.025; black: contrast=1314/4257, outlinePixels=292, RGBerror=0.000; yellow: contrast=1251/4099, outlinePixels=273, RGBerror=0.007; green: contrast=1210/3893, outlinePixels=265, RGBerror=0.008; orange: contrast=1241/4109, outlinePixels=264, RGBerror=0.009"
+    },
+    {
+      "name": "full RGB central bodies preserve source channels on olive at detail 3",
+      "passed": true,
+      "detail": "near-black: contrast=1301/4255, outlinePixels=299, RGBerror=0.025; black: contrast=1314/4257, outlinePixels=292, RGBerror=0.000; yellow: contrast=1251/4099, outlinePixels=273, RGBerror=0.007; green: contrast=1210/3893, outlinePixels=265, RGBerror=0.008; orange: contrast=1241/4109, outlinePixels=264, RGBerror=0.009"
+    },
+    {
+      "name": "World renders RGB without dark or pale outlines on green: World fit",
+      "passed": true,
+      "detail": "green-ground match: contrast=0/32, outlinePixels=0, RGBerror=0.565; brown match: contrast=5/36, outlinePixels=0, RGBerror=0.451; olive match: contrast=6/32, outlinePixels=0, RGBerror=0.569; mid-grey: contrast=8/40, outlinePixels=0, RGBerror=0.035; orange: contrast=11/45, outlinePixels=0, RGBerror=0.071"
+    },
+    {
+      "name": "full RGB bodies or edges remain visible on green at detail 2",
+      "passed": true,
+      "detail": "grey-ground match: contrast=343/1102, outlinePixels=125, RGBerror=0.007; near-black: contrast=329/1094, outlinePixels=121, RGBerror=0.025; olive match: contrast=323/1104, outlinePixels=120, RGBerror=0.006; violet: contrast=322/1028, outlinePixels=119, RGBerror=0.007; black: contrast=335/1085, outlinePixels=115, RGBerror=0.000"
+    },
+    {
+      "name": "full RGB central bodies preserve source channels on green at detail 2",
+      "passed": true,
+      "detail": "grey-ground match: contrast=343/1102, outlinePixels=125, RGBerror=0.007; near-black: contrast=329/1094, outlinePixels=121, RGBerror=0.025; olive match: contrast=323/1104, outlinePixels=120, RGBerror=0.006; violet: contrast=322/1028, outlinePixels=119, RGBerror=0.007; black: contrast=335/1085, outlinePixels=115, RGBerror=0.000"
+    },
+    {
+      "name": "full RGB bodies or edges remain visible on green at detail 3",
+      "passed": true,
+      "detail": "near-black: contrast=1303/4255, outlinePixels=302, RGBerror=0.025; black: contrast=1321/4257, outlinePixels=297, RGBerror=0.000; brown match: contrast=1357/4507, outlinePixels=282, RGBerror=0.005; yellow: contrast=1242/4099, outlinePixels=276, RGBerror=0.007; green: contrast=1198/3893, outlinePixels=276, RGBerror=0.008"
+    },
+    {
+      "name": "full RGB central bodies preserve source channels on green at detail 3",
+      "passed": true,
+      "detail": "near-black: contrast=1303/4255, outlinePixels=302, RGBerror=0.025; black: contrast=1321/4257, outlinePixels=297, RGBerror=0.000; brown match: contrast=1357/4507, outlinePixels=282, RGBerror=0.005; yellow: contrast=1242/4099, outlinePixels=276, RGBerror=0.007; green: contrast=1198/3893, outlinePixels=276, RGBerror=0.008"
+    },
+    {
+      "name": "pattern filtering preserves correct body and boundary emphasis: medium RGB threshold crossing",
+      "passed": true,
+      "detail": "covered=1319; brightened=0; largest channel-sum decrease=0.553; largest RGB change=0.319"
+    },
+    {
+      "name": "pattern filtering preserves correct body and boundary emphasis: near-black pale boundary",
+      "passed": true,
+      "detail": "covered=1110; brightened=0; largest channel-sum decrease=1.478; largest RGB change=0.854"
+    },
+    {
+      "name": "pattern filtering preserves correct body and boundary emphasis: matched RGB",
+      "passed": true,
+      "detail": "covered=1302; brightened=0; largest channel-sum decrease=0.000; largest RGB change=0.000"
+    },
+    {
+      "name": "Habitat keeps action cues quiet",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Organism detail draws every visible completed action without a 64-item cap",
+      "passed": true,
+      "detail": "visible=448; cues=448"
+    },
+    {
+      "name": "Inspect draws only the focused organism's current action",
+      "passed": true,
+      "detail": "cues=1"
+    },
+    {
+      "name": "Inspect requires an explicit focused organism",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "paused completed outcomes remain available for inspection",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "new running season displays the focused completed action",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "same-season acknowledgment cannot replay expired depth actions",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "new completed season re-enables focused action",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stale event batches are not presented as current actions",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "movement cue requires a completed movement",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "attack cue requires recorded damage",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "eating carried food is distinct from gathering and healing",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "birth and mutation cues require recorded effects",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "viewport includes actions intersecting by source target or actual child placement",
+      "passed": true,
+      "detail": "cues=3"
+    },
+    {
+      "name": "panning drops offscreen cues without retaining an old viewport subset",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "panning back restores every visible paused outcome",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "colony shape seed follows identity across movement",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "death retains the followed identity rather than adopting a replacement occupant",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "dead selection inspector labels the retained life",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "replacement actions do not impersonate the deceased focused life",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "explicit selection can follow the replacement life",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Godot minimap input navigates the depth camera",
+      "passed": true,
+      "detail": "center=(22.457626, 25.864208)"
+    },
+    {
+      "name": "minimap navigation preserves selected life and completed frame",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "minimap outline follows native perspective ground footprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth resize keeps picking coherent (1366, 768)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth board and details do not overlap (1366, 768)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth camera selector fits (1366, 768)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth resize keeps picking coherent (1920, 1080)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth board and details do not overlap (1920, 1080)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth camera selector fits (1920, 1080)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth restart clears selection and pattern",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "original 2D remains selectable on the same world",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth empty-food terrain is brown",
+      "passed": true,
+      "detail": "rgb=0.441,0.307,0.216"
+    },
+    {
+      "name": "depth plentiful-food terrain is green",
+      "passed": true,
+      "detail": "rgb=0.382,0.609,0.245"
+    },
+    {
+      "name": "depth food quantities are visibly distinct",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "mould body separates from its food background",
+      "passed": true,
+      "detail": "organism=(0.4007745, 0.80314666, 0.8152018, 1); food=(0.40246898, 0.58402306, 0.24420235, 1)"
+    },
+    {
+      "name": "black DNA retains a black body visible against its actual ground",
+      "passed": true,
+      "detail": "body=(0, 0, 0, 1); bare ground=(0.37317842, 0.59530354, 0.2392158, 1)"
+    },
+    {
+      "name": "depth GPU input picks the visible empty cell",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "capture actual perspective correction world",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "capture actual Organisms-only light-grey board",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "capture actual perspective correction detail",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "capture actual perspective correction topdown",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth preview uses requested detail habitat",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth current preview habitat",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth preview uses requested detail organism",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth current preview organism",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth preview uses requested detail inspect",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth current preview inspect",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "capture actual Step5 RGB overview",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "capture actual Step5 RGB habitat",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "capture actual Step5 RGB inspect",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth inspection selects a real organism without a simulation step",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth camera layers zoom pan and view switching preserve paused state and RNG",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth renderer switches keep the same simulation run",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth view remains attached after worker step",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth live step supplies a complete current-season action batch",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "depth live worker shuts down",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "measurements": [
+    {
+      "kind": "perspective_colony_coverage",
+      "detailLevel": 2,
+      "sampleCount": 36,
+      "minimumBodyCoverage": 0.31217481789802287,
+      "maximumBodyCoverage": 0.3365477338476374,
+      "minimumCoreCoverage": 1,
+      "minimumConnectedShare": 0.9941002949852508,
+      "oracle": "Actual GPU Combined minus Food-only pixels, native Camera3D projected cells, central 20%-width square; 8-connected visible body mask.",
+      "thresholds": "RGB distance >0.08 identifies the body; area15%-60% of cell, central square>=90%, largest component>=85%."
+    },
+    {
+      "kind": "perspective_colony_coverage",
+      "detailLevel": 3,
+      "sampleCount": 36,
+      "minimumBodyCoverage": 0.30742132456552373,
+      "maximumBodyCoverage": 0.3170387779083431,
+      "minimumCoreCoverage": 1,
+      "minimumConnectedShare": 0.9876352395672334,
+      "oracle": "Actual GPU Combined minus Food-only pixels, native Camera3D projected cells, central 20%-width square; 8-connected visible body mask.",
+      "thresholds": "RGB distance >0.08 identifies the body; area15%-60% of cell, central square>=90%, largest component>=85%."
+    },
+    {
+      "kind": "organisms_ground_pixels",
+      "angled": true,
+      "combinedFood0": "(0.44561833, 0.3098839, 0.21848747, 1)",
+      "combinedFood10": "(0.38375342, 0.6116047, 0.2459384, 1)",
+      "organismsFood0": "(0.74485785, 0.74485785, 0.74485785, 1)",
+      "organismsFood10": "(0.77695054, 0.77695054, 0.77695054, 1)",
+      "oracle": "Actual GPU image patches at native-camera-projected empty cells; UI layer signals and same-cell food quantity swap."
+    },
+    {
+      "kind": "organisms_ground_pixels",
+      "angled": false,
+      "combinedFood0": "(0.44529822, 0.30948377, 0.21856749, 1)",
+      "combinedFood10": "(0.38199273, 0.60880363, 0.24497803, 1)",
+      "organismsFood0": "(0.74477786, 0.74477786, 0.74477786, 1)",
+      "organismsFood10": "(0.77350914, 0.77350914, 0.77350914, 1)",
+      "oracle": "Actual GPU image patches at native-camera-projected empty cells; UI layer signals and same-cell food quantity swap."
+    },
+    {
+      "kind": "step5_rgb_visibility",
+      "backdrop": "grey",
+      "detailLevel": 1,
+      "view": "World fit",
+      "projectedCellPixels": 4.6036377,
+      "sampleCount": 16,
+      "minimumContrastPixels": 0,
+      "minimumContrastFraction": 0,
+      "outlinePixels": 0,
+      "maximumCoreChannelError": null,
+      "oracle": "Native-camera projected cells; actual GPU with organisms minus identical bare-ground snapshot. RGB includes black/white/grey and terrain-matching colours.",
+      "criteria": "World: per-channel pixels stay between exact bare ground and source RGB times[0.80,1.08], tolerance0.02, bounds rounded outward to the 8-bit capture grid; no mandatory contrast. Grey checkpoints at11.8/12.2px check outline boundary. Normal levels2/3 retain RGB distance>=0.18 in2.5% of cell and core channel error<=0.12. No saturation or restricted-palette criterion."
+    },
+    {
+      "kind": "step5_rgb_visibility",
+      "backdrop": "grey",
+      "detailLevel": 1,
+      "view": "World just below detail threshold",
+      "projectedCellPixels": 11.800018,
+      "sampleCount": 16,
+      "minimumContrastPixels": 4,
+      "minimumContrastFraction": 0.014184397163120567,
+      "outlinePixels": 0,
+      "maximumCoreChannelError": null,
+      "oracle": "Native-camera projected cells; actual GPU with organisms minus identical bare-ground snapshot. RGB includes black/white/grey and terrain-matching colours.",
+      "criteria": "World: per-channel pixels stay between exact bare ground and source RGB times[0.80,1.08], tolerance0.02, bounds rounded outward to the 8-bit capture grid; no mandatory contrast. Grey checkpoints at11.8/12.2px check outline boundary. Normal levels2/3 retain RGB distance>=0.18 in2.5% of cell and core channel error<=0.12. No saturation or restricted-palette criterion."
+    },
+    {
+      "kind": "step5_rgb_visibility",
+      "backdrop": "grey",
+      "detailLevel": 2,
+      "view": "Habitat just above detail threshold",
+      "projectedCellPixels": 12.199982,
+      "sampleCount": 16,
+      "minimumContrastPixels": 45,
+      "minimumContrastFraction": 0.16666666666666666,
+      "outlinePixels": 727,
+      "maximumCoreChannelError": 0.05228757858276367,
+      "oracle": "Native-camera projected cells; actual GPU with organisms minus identical bare-ground snapshot. RGB includes black/white/grey and terrain-matching colours.",
+      "criteria": "World: per-channel pixels stay between exact bare ground and source RGB times[0.80,1.08], tolerance0.02, bounds rounded outward to the 8-bit capture grid; no mandatory contrast. Grey checkpoints at11.8/12.2px check outline boundary. Normal levels2/3 retain RGB distance>=0.18 in2.5% of cell and core channel error<=0.12. No saturation or restricted-palette criterion."
+    },
+    {
+      "kind": "step5_rgb_visibility",
+      "backdrop": "grey",
+      "detailLevel": 2,
+      "view": "Habitat",
+      "projectedCellPixels": 24.000061,
+      "sampleCount": 16,
+      "minimumContrastPixels": 118,
+      "minimumContrastFraction": 0.10707803992740472,
+      "outlinePixels": 1413,
+      "maximumCoreChannelError": 0.025070030242204666,
+      "oracle": "Native-camera projected cells; actual GPU with organisms minus identical bare-ground snapshot. RGB includes black/white/grey and terrain-matching colours.",
+      "criteria": "World: per-channel pixels stay between exact bare ground and source RGB times[0.80,1.08], tolerance0.02, bounds rounded outward to the 8-bit capture grid; no mandatory contrast. Grey checkpoints at11.8/12.2px check outline boundary. Normal levels2/3 retain RGB distance>=0.18 in2.5% of cell and core channel error<=0.12. No saturation or restricted-palette criterion."
+    },
+    {
+      "kind": "step5_rgb_visibility",
+      "backdrop": "grey",
+      "detailLevel": 3,
+      "view": "Organism",
+      "projectedCellPixels": 48.00009,
+      "sampleCount": 16,
+      "minimumContrastPixels": 266,
+      "minimumContrastFraction": 0.05917686318131257,
+      "outlinePixels": 3506,
+      "maximumCoreChannelError": 0.025170069187879562,
+      "oracle": "Native-camera projected cells; actual GPU with organisms minus identical bare-ground snapshot. RGB includes black/white/grey and terrain-matching colours.",
+      "criteria": "World: per-channel pixels stay between exact bare ground and source RGB times[0.80,1.08], tolerance0.02, bounds rounded outward to the 8-bit capture grid; no mandatory contrast. Grey checkpoints at11.8/12.2px check outline boundary. Normal levels2/3 retain RGB distance>=0.18 in2.5% of cell and core channel error<=0.12. No saturation or restricted-palette criterion."
+    },
+    {
+      "kind": "step5_rgb_visibility",
+      "backdrop": "brown",
+      "detailLevel": 1,
+      "view": "World fit",
+      "projectedCellPixels": 4.6036377,
+      "sampleCount": 16,
+      "minimumContrastPixels": 0,
+      "minimumContrastFraction": 0,
+      "outlinePixels": 0,
+      "maximumCoreChannelError": null,
+      "oracle": "Native-camera projected cells; actual GPU with organisms minus identical bare-ground snapshot. RGB includes black/white/grey and terrain-matching colours.",
+      "criteria": "World: per-channel pixels stay between exact bare ground and source RGB times[0.80,1.08], tolerance0.02, bounds rounded outward to the 8-bit capture grid; no mandatory contrast. Grey checkpoints at11.8/12.2px check outline boundary. Normal levels2/3 retain RGB distance>=0.18 in2.5% of cell and core channel error<=0.12. No saturation or restricted-palette criterion."
+    },
+    {
+      "kind": "step5_rgb_visibility",
+      "backdrop": "brown",
+      "detailLevel": 2,
+      "view": "Habitat",
+      "projectedCellPixels": 24.000061,
+      "sampleCount": 16,
+      "minimumContrastPixels": 80,
+      "minimumContrastFraction": 0.07272727272727272,
+      "outlinePixels": 1606,
+      "maximumCoreChannelError": 0.025070030242204666,
+      "oracle": "Native-camera projected cells; actual GPU with organisms minus identical bare-ground snapshot. RGB includes black/white/grey and terrain-matching colours.",
+      "criteria": "World: per-channel pixels stay between exact bare ground and source RGB times[0.80,1.08], tolerance0.02, bounds rounded outward to the 8-bit capture grid; no mandatory contrast. Grey checkpoints at11.8/12.2px check outline boundary. Normal levels2/3 retain RGB distance>=0.18 in2.5% of cell and core channel error<=0.12. No saturation or restricted-palette criterion."
+    },
+    {
+      "kind": "step5_rgb_visibility",
+      "backdrop": "brown",
+      "detailLevel": 3,
+      "view": "Organism",
+      "projectedCellPixels": 48.00009,
+      "sampleCount": 16,
+      "minimumContrastPixels": 226,
+      "minimumContrastFraction": 0.05014422010206346,
+      "outlinePixels": 3964,
+      "maximumCoreChannelError": 0.025170069187879562,
+      "oracle": "Native-camera projected cells; actual GPU with organisms minus identical bare-ground snapshot. RGB includes black/white/grey and terrain-matching colours.",
+      "criteria": "World: per-channel pixels stay between exact bare ground and source RGB times[0.80,1.08], tolerance0.02, bounds rounded outward to the 8-bit capture grid; no mandatory contrast. Grey checkpoints at11.8/12.2px check outline boundary. Normal levels2/3 retain RGB distance>=0.18 in2.5% of cell and core channel error<=0.12. No saturation or restricted-palette criterion."
+    },
+    {
+      "kind": "step5_rgb_visibility",
+      "backdrop": "olive",
+      "detailLevel": 1,
+      "view": "World fit",
+      "projectedCellPixels": 4.6036377,
+      "sampleCount": 16,
+      "minimumContrastPixels": 0,
+      "minimumContrastFraction": 0,
+      "outlinePixels": 0,
+      "maximumCoreChannelError": null,
+      "oracle": "Native-camera projected cells; actual GPU with organisms minus identical bare-ground snapshot. RGB includes black/white/grey and terrain-matching colours.",
+      "criteria": "World: per-channel pixels stay between exact bare ground and source RGB times[0.80,1.08], tolerance0.02, bounds rounded outward to the 8-bit capture grid; no mandatory contrast. Grey checkpoints at11.8/12.2px check outline boundary. Normal levels2/3 retain RGB distance>=0.18 in2.5% of cell and core channel error<=0.12. No saturation or restricted-palette criterion."
+    },
+    {
+      "kind": "step5_rgb_visibility",
+      "backdrop": "olive",
+      "detailLevel": 2,
+      "view": "Habitat",
+      "projectedCellPixels": 24.000061,
+      "sampleCount": 16,
+      "minimumContrastPixels": 97,
+      "minimumContrastFraction": 0.08786231884057971,
+      "outlinePixels": 1642,
+      "maximumCoreChannelError": 0.025070030242204666,
+      "oracle": "Native-camera projected cells; actual GPU with organisms minus identical bare-ground snapshot. RGB includes black/white/grey and terrain-matching colours.",
+      "criteria": "World: per-channel pixels stay between exact bare ground and source RGB times[0.80,1.08], tolerance0.02, bounds rounded outward to the 8-bit capture grid; no mandatory contrast. Grey checkpoints at11.8/12.2px check outline boundary. Normal levels2/3 retain RGB distance>=0.18 in2.5% of cell and core channel error<=0.12. No saturation or restricted-palette criterion."
+    },
+    {
+      "kind": "step5_rgb_visibility",
+      "backdrop": "olive",
+      "detailLevel": 3,
+      "view": "Organism",
+      "projectedCellPixels": 48.00009,
+      "sampleCount": 16,
+      "minimumContrastPixels": 221,
+      "minimumContrastFraction": 0.049132947976878616,
+      "outlinePixels": 4038,
+      "maximumCoreChannelError": 0.025170069187879562,
+      "oracle": "Native-camera projected cells; actual GPU with organisms minus identical bare-ground snapshot. RGB includes black/white/grey and terrain-matching colours.",
+      "criteria": "World: per-channel pixels stay between exact bare ground and source RGB times[0.80,1.08], tolerance0.02, bounds rounded outward to the 8-bit capture grid; no mandatory contrast. Grey checkpoints at11.8/12.2px check outline boundary. Normal levels2/3 retain RGB distance>=0.18 in2.5% of cell and core channel error<=0.12. No saturation or restricted-palette criterion."
+    },
+    {
+      "kind": "step5_rgb_visibility",
+      "backdrop": "green",
+      "detailLevel": 1,
+      "view": "World fit",
+      "projectedCellPixels": 4.6036377,
+      "sampleCount": 16,
+      "minimumContrastPixels": 0,
+      "minimumContrastFraction": 0,
+      "outlinePixels": 0,
+      "maximumCoreChannelError": null,
+      "oracle": "Native-camera projected cells; actual GPU with organisms minus identical bare-ground snapshot. RGB includes black/white/grey and terrain-matching colours.",
+      "criteria": "World: per-channel pixels stay between exact bare ground and source RGB times[0.80,1.08], tolerance0.02, bounds rounded outward to the 8-bit capture grid; no mandatory contrast. Grey checkpoints at11.8/12.2px check outline boundary. Normal levels2/3 retain RGB distance>=0.18 in2.5% of cell and core channel error<=0.12. No saturation or restricted-palette criterion."
+    },
+    {
+      "kind": "step5_rgb_visibility",
+      "backdrop": "green",
+      "detailLevel": 2,
+      "view": "Habitat",
+      "projectedCellPixels": 24.000061,
+      "sampleCount": 16,
+      "minimumContrastPixels": 79,
+      "minimumContrastFraction": 0.07175295186194369,
+      "outlinePixels": 1693,
+      "maximumCoreChannelError": 0.025070030242204666,
+      "oracle": "Native-camera projected cells; actual GPU with organisms minus identical bare-ground snapshot. RGB includes black/white/grey and terrain-matching colours.",
+      "criteria": "World: per-channel pixels stay between exact bare ground and source RGB times[0.80,1.08], tolerance0.02, bounds rounded outward to the 8-bit capture grid; no mandatory contrast. Grey checkpoints at11.8/12.2px check outline boundary. Normal levels2/3 retain RGB distance>=0.18 in2.5% of cell and core channel error<=0.12. No saturation or restricted-palette criterion."
+    },
+    {
+      "kind": "step5_rgb_visibility",
+      "backdrop": "green",
+      "detailLevel": 3,
+      "view": "Organism",
+      "projectedCellPixels": 48.00009,
+      "sampleCount": 16,
+      "minimumContrastPixels": 229,
+      "minimumContrastFraction": 0.0508775827593868,
+      "outlinePixels": 4141,
+      "maximumCoreChannelError": 0.025170069187879562,
+      "oracle": "Native-camera projected cells; actual GPU with organisms minus identical bare-ground snapshot. RGB includes black/white/grey and terrain-matching colours.",
+      "criteria": "World: per-channel pixels stay between exact bare ground and source RGB times[0.80,1.08], tolerance0.02, bounds rounded outward to the 8-bit capture grid; no mandatory contrast. Grey checkpoints at11.8/12.2px check outline boundary. Normal levels2/3 retain RGB distance>=0.18 in2.5% of cell and core channel error<=0.12. No saturation or restricted-palette criterion."
+    }
+  ],
+  "process": {
+    "exitCode": 0,
+    "elapsedSeconds": 15.062,
+    "deadlineSeconds": 90,
+    "engineErrors": []
+  }
+}

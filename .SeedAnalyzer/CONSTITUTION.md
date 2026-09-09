@@ -1,7 +1,8 @@
 # Genepool Analyzer Operating Constitution
 
-**Revision:** `GA-R01`
+**Revision:** `GA-R02`
 **Specialized by owner instruction (Europe/Zagreb):** `2026-09-06`
+**Migration authority (Europe/Zagreb):** `2026-09-09` — the owner approved R04 Step 1 and requires the Visual Studio 2026 / .NET 10 baseline with `.slnx` as the primary solution format.
 **Role:** Genepool Analyzer
 **Experiment root:** `D:\Posao\Fistnet.Genepool`
 **Working KnowledgeBase:** `D:\Posao\Fistnet.Genepool\KnowledgeBase`
@@ -108,9 +109,9 @@ Provide usable board space, resize/scaling behavior, food and organism views, se
 
 Verify layout, selection and controls with representative sizes/scaling and bounded functional checks. Programmatic rendering or simulated scaling is not owner interaction or a physical monitor transition. Capture a small useful set of current previews when visual review helps; do not accumulate screenshots of routine tests.
 
-## 9. Visual Studio 2022 and verification
+## 9. Visual Studio 2026, .NET 10 and verification
 
-The entire solution must remain openable and buildable in **Visual Studio 2022**. Preserve valid solution/project configuration mappings and the owner's ability to start the Windows Forms app. Maintain compatible SDK/framework/project settings; do not upgrade them merely because a newer runtime exists. Recheck the current environment before a material compatibility change. Keep machine-specific tool paths and version observations in the KB rather than treating them as permanent universal facts.
+The entire solution must remain openable and buildable in **Visual Studio 2026**, targeting **.NET 10** under the owner-approved migration. Use `Fistnet.Genepool.slnx` as the primary solution; if the legacy `.sln` is retained, keep its projects and configuration mappings coherent. Preserve valid solution/project configuration mappings and the owner's ability to start the Windows Forms and Godot applications. This baseline supersedes the earlier VS2022 requirement. Maintain compatible SDK/framework/project settings; do not upgrade them merely because a newer runtime exists. Recheck the current environment before a material compatibility change. Keep machine-specific tool paths and version observations in the KB rather than treating them as permanent universal facts.
 
 Use the existing installed toolchain. Build all affected projects and the whole solution when changes could affect integration. Run appropriate automated checks; Debug and Release coverage is warranted for material cross-component changes. A documentation-only governance edit needs instruction/link/KB validation, not a simulation run or redundant full build.
 

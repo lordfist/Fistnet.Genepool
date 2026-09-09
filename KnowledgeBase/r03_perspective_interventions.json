@@ -1,0 +1,23 @@
+[
+  {
+    "stage": "first_gpu",
+    "issue": "Godot Fov property setter rejects below1deg at80x zoom, leaves40deg while cache advances; native-camera test detected divergence (509.99,414.02 cached vs752.92,319.20 native).",
+    "resolution": "Public SetPerspective applies complete camera projection; max80x native camera agreement passed on next run."
+  },
+  {
+    "stage": "second_gpu",
+    "issue": "Maximum-zoom native camera checks now pass. Injected middle-drag expected(753.64,321.56), observed(1193,149); investigate live input interleaving vs handler.",
+    "resolution": "Input test now flushes buffered events and delivers press/motion/release synchronously through the real Godot GUI route with temporary nonaccumulated input, restoring it afterward. A passive event observer proves all three intended local-coordinate events arrived. Original suspected OS-motion interleaving was not proven because the first attempt had no delivery log; native projection and 1.5px threshold unchanged. Subsequent GPU run passed."
+  },
+  {
+    "stage": "visual_inspection_after_159_passes",
+    "issue": "Actual angled Habitat screenshot showed many organism silhouettes as thin shards, including selected body almost absent. Existing angled pixel test only checked cues; body checks were top-down.",
+    "resolution": "Camera clip range bounded to the entire world with full height margin, rather than Near .01 and Far>=500. Rerender shows intact patches; 72 actual GPU colony samples across levels2/3 cover30.36–32.70% of cells, all central cores fully present and minimum99.09% connected mat. No shader, world layer height, or simulation rule changed."
+  }
+,
+{
+  "stage": "first_final_perspective_benchmark",
+  "issue": "11/12 checks passed. Empty-board p95 frame interval33.6896ms missed33.3ms budget (55.95FPS); 1k/fulloverview/dense393cue cases ~60FPS and16.70–16.73ms p95. All cases delivered70/70updates without skips. No engineerrors.",
+  "resolution": "One quiet repeat passed12/12checks with all70/70updates delivered. Full overview57.03FPS,p9522.8957ms,max52.8587ms; dense393cue view60.00FPS,p9516.7932ms. Empty and1k samples passed. No code, threshold or workload changed. Web retrieval overlapped the initial empty-board sample, but its contribution was not measured; timing variability remains unexplained and the first miss is retained. No further reruns."
+}
+]

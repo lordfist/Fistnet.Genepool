@@ -1,0 +1,139 @@
+{
+  "actor": "Genepool Analyzer",
+  "recorded_at_utc": "2026-09-08T12:37:34.620464+00:00",
+  "observation_date": "2026-09-08",
+  "scope": "Read-only installed-tool metadata, selected project sources and derived build helpers; public primary documentation. No project execution or installation.",
+  "installed_metadata": {
+    "visual_studio_2026": {
+      "display_version": "18.9.2",
+      "installation_version": "18.9.12120.119",
+      "path": "C:\\Program Files\\Microsoft Visual Studio\\18\\Community",
+      "complete": true,
+      "launchable": true,
+      "managed_desktop_workload_and_msbuild_present": true
+    },
+    "visual_studio_2022": {
+      "display_version": "17.14.39",
+      "path": "D:\\Program Files\\Microsoft Visual Studio\\2022\\Community",
+      "role": "Historical development baseline; still installed"
+    },
+    "relevant_dotnet_sdks": [
+      "9.0.317",
+      "10.0.301",
+      "10.0.400"
+    ],
+    "dotnet10_core_and_desktop_runtime": "10.0.11",
+    "godot_file_product_version": "4.7.2.stable.mono.official",
+    "godot_path": "D:\\Posao\\Fistnet.Genepool\\.tools\\godot\\4.7.2\\Godot_v4.7.2-stable_mono_win64_console.exe"
+  },
+  "metadata_probes": [
+    "vswhere -all -products * -format json (relevant installations only retained)",
+    "vswhere -version [18.0,19.0) -products * -requires Microsoft.VisualStudio.Workload.ManagedDesktop Microsoft.Component.MSBuild -property installationPath",
+    "C:\\Program Files\\dotnet\\dotnet.exe --list-sdks",
+    "C:\\Program Files\\dotnet\\dotnet.exe --list-runtimes",
+    "Test-Path for VS2026 MSBuild and missing SDK directory; FileVersionInfo for installed Godot"
+  ],
+  "project_observations": {
+    "all_six_target_frameworks": "net9.0-windows7.0",
+    "global_sdk": {
+      "version": "9.0.315",
+      "rollForward": "latestPatch",
+      "allowPrerelease": false
+    },
+    "stale_helper_sdk_directory": "C:\\Program Files\\dotnet\\sdk\\9.0.315",
+    "stale_helper_sdk_directory_exists": false,
+    "interpretation": "The helper pins an absent SDK. No build was attempted, and no compilation failure is claimed. Normal global.json policy may roll to installed 9.0.317; actual resolver/build not exercised.",
+    "godot_sdk": "Godot.NET.Sdk/4.7.2",
+    "renderer": "gl_compatibility",
+    "geometry": "Real Camera3D/SubViewport, food and organism PlaneMesh batches; organism Y=.024; fixed-pose projection and ground picking need extension for raised bodies/free camera."
+  },
+  "local_evidence_identities": [
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\global.json",
+      "sha256": "F5027F7B2D82128C9715C687359EEE846D57DA45AEAB8986CD265107EB32C47A",
+      "size_bytes": 108
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.sln",
+      "sha256": "742BB4890FA19EAD4D3E1A65919DE1420CC922D9FD5B8E26D655AABF3B86C688",
+      "size_bytes": 7362
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.App\\Fistnet.Genepool.App.csproj",
+      "sha256": "D79B44B872561468641D6D2A56E592B6E264EDB92C680862AC2A629446350746",
+      "size_bytes": 2060
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Control\\Fistnet.Genepool.Control.csproj",
+      "sha256": "2A98C92C1375F84A267B8C49F2CA8EFE73549B75FAC73815771C667E556B7CE7",
+      "size_bytes": 519
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Fistnet.Genepool.Dna.csproj",
+      "sha256": "8F3E4C3504EF0BB4429B2B5E255F8669865B4459509EC0C55BF460C4EDF984E7",
+      "size_bytes": 392
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Visualization\\Fistnet.Genepool.Visualization.csproj",
+      "sha256": "9F420B4D3CE6E2497AA545D71A782880A9D411B06FA31DFF59C28B650758581A",
+      "size_bytes": 724
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Tests\\Fistnet.Genepool.Tests.csproj",
+      "sha256": "C9517DF945C421AF55E5B0607714857E3DCA02AB8364EEDCB3C5D13965DAB5D2",
+      "size_bytes": 739
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Fistnet.Genepool.Godot.csproj",
+      "sha256": "1D4174B55D085193027E31A2C30BEADEC253E4C786B0490B5D9149D34BE9DD84",
+      "size_bytes": 1555
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\project.godot",
+      "sha256": "0B287CB5DAED0837505E1544C0EDE873F7803BE92D62B043D241E34DFE6EE970",
+      "size_bytes": 787
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\BoardView3D.cs",
+      "sha256": "360DA390AA3EFF5536B9225D59973EEE23600E3A99A2A4CF8D2A8F8D5664F788",
+      "size_bytes": 18315
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\BoardView3D.Materials.cs",
+      "sha256": "72F412CE9BC4D7A8446D2F365107377BFE13E8508E3F27AABFD2F228A5DB6B8A",
+      "size_bytes": 6285
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\BoardView3D.Projection.cs",
+      "sha256": "3ACBFB0275C4C314C31A6D05443FCB3755D486242926A8F6BCFF30355B62F01A",
+      "size_bytes": 9246
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\MinimapView.cs",
+      "sha256": "D39CC2642C2B80843F6782010B6A520780A9A9281C6EACCF2D528E854A2FF165",
+      "size_bytes": 6098
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Main.Views.cs",
+      "sha256": "1022CD6841CB86D0AB42B6307CD00CAADF0829137469F391E982D5F3A87E318B",
+      "size_bytes": 4003
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\tools\\build_solution.py",
+      "sha256": "E229D0DC5343BCEA494C7F337E78153E28248BA3EC9E8E85497625630D32274A",
+      "size_bytes": 6182
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\tools\\run_godot_checks.py",
+      "sha256": "6543DB25A6A5CB10F7098EB763988512F8DB46A9EE97787BF7643075550F8847",
+      "size_bytes": 3250
+    }
+  ],
+  "verification_not_performed": [
+    "VS2026 solution loading/designer/debugger",
+    "net10 builds/tests/runtime launch",
+    "new 3D models/rendering/performance",
+    "export integration"
+  ],
+  "limits": "Metadata and static architecture evidence only. URL observations are dated published claims, not installed integration results or archived page bytes."
+}

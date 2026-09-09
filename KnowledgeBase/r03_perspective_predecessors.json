@@ -1,0 +1,66 @@
+{
+  "head": "14b39d984555897e88c279ed21651df7c114e05d",
+  "kb_revision": 56,
+  "sources": [
+    {
+      "source_id": "SRC-0268",
+      "path": "Fistnet.Genepool.Godot/README.md",
+      "sha256": "CF11F630D7299D9D5A6A248B5218AA5BC83903CAB37EA743D6E71DAC214168F3",
+      "history": {
+        "kind": "kb_snapshot",
+        "path": "source-history/perspective-SRC-0268.md"
+      }
+    },
+    {
+      "source_id": "SRC-0269",
+      "path": "Fistnet.Genepool.Godot/Verification/VerificationRunner.cs",
+      "sha256": "694F34275C245C5E5739F9A814F42D155888BCAA353F542D7ED233837DD625C1",
+      "outcome": "Unchanged by perspective correction; unnecessary task-owned snapshot removed after exact comparison."
+    },
+    {
+      "source_id": "SRC-0270",
+      "path": "Fistnet.Genepool.Godot/BoardView3D.cs",
+      "sha256": "80D29246CF9B0BA9C9D829EFFEA5C46E8B802698F1A57A9F2BE1E1B762BEF475",
+      "history": {
+        "kind": "kb_snapshot",
+        "path": "source-history/perspective-SRC-0270.cs"
+      }
+    },
+    {
+      "source_id": "SRC-0272",
+      "path": "Fistnet.Genepool.Godot/BoardView3D.Actions.cs",
+      "sha256": "D8D0B75A3E294DC6CD8E811E30D096F27975C1F57C5C853036F95BD28DF11C3C",
+      "history": {
+        "kind": "kb_snapshot",
+        "path": "source-history/perspective-SRC-0272.cs"
+      }
+    },
+    {
+      "source_id": "SRC-0273",
+      "path": "Fistnet.Genepool.Godot/Main.Views.cs",
+      "sha256": "E3074C3420013B8B3E695CC819731949F4ACE2E7C28FD80AA805BB17F0643042",
+      "history": {
+        "kind": "kb_snapshot",
+        "path": "source-history/perspective-SRC-0273.cs"
+      }
+    },
+    {
+      "source_id": "SRC-0274",
+      "path": "Fistnet.Genepool.Godot/MinimapView.cs",
+      "sha256": "E43B2B7785C132262920DB6CA8FFFB427A112012B45BDFF96E1AA2388D6EB664",
+      "history": {
+        "kind": "kb_snapshot",
+        "path": "source-history/perspective-SRC-0274.cs"
+      }
+    },
+    {
+      "source_id": "SRC-0276",
+      "path": "Fistnet.Genepool.Godot/Verification/VerificationRunner.Step4.cs",
+      "sha256": "344C0B89007AB0C1F960D857EBA602BA7AE9E91FF4F3613D50043D9D8F9D61CD",
+      "history": {
+        "kind": "kb_snapshot",
+        "path": "source-history/perspective-SRC-0276.cs"
+      }
+    }
+  ]
+}

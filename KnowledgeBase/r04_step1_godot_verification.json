@@ -1,0 +1,409 @@
+{
+  "atUtc": "2026-09-09T11:45:04.411928+00:00",
+  "mode": "smoke",
+  "ok": true,
+  "failures": 0,
+  "backend": "Windows",
+  "adapter": "AMD Radeon RX 6800",
+  "runtime": ".NET 10.0.12",
+  "assemblySha256": {
+    "Fistnet.Genepool.Godot": "C539CFFDCEAD4DCE92BBD45B9D7D3B1949075AC15651B6699E693722BD8B1BD8",
+    "Fistnet.Genepool.Control": "19D3B2C237AA952763F49AD46BC54AC21E9700AD30710BAE43B41FB97836C9CB",
+    "Fistnet.Genepool.Dna": "989A1519177BDBE0AB2398D011B206661BFF965529060A7B37C816B017CF306D"
+  },
+  "assemblyInfo": [
+    {
+      "name": "Fistnet.Genepool.Godot",
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\.godot\\mono\\temp\\bin\\Debug\\Fistnet.Genepool.Godot.dll",
+      "location": "",
+      "locationEmpty": true,
+      "identityMethod": "expected Debug file matched loaded module MVID",
+      "targetFramework": ".NETCoreApp,Version=v10.0",
+      "configuration": "Debug",
+      "fileModuleVersionId": "d9547bce-cbce-4b78-93e0-3b3f9953c0cf",
+      "loadedModuleVersionId": "d9547bce-cbce-4b78-93e0-3b3f9953c0cf",
+      "sha256": "C539CFFDCEAD4DCE92BBD45B9D7D3B1949075AC15651B6699E693722BD8B1BD8"
+    },
+    {
+      "name": "Fistnet.Genepool.Control",
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\.godot\\mono\\temp\\bin\\Debug\\Fistnet.Genepool.Control.dll",
+      "location": "",
+      "locationEmpty": true,
+      "identityMethod": "expected Debug file matched loaded module MVID",
+      "targetFramework": ".NETCoreApp,Version=v10.0",
+      "configuration": "",
+      "fileModuleVersionId": "0a4bd072-1d30-4429-8721-e1a5bebd6b0f",
+      "loadedModuleVersionId": "0a4bd072-1d30-4429-8721-e1a5bebd6b0f",
+      "sha256": "19D3B2C237AA952763F49AD46BC54AC21E9700AD30710BAE43B41FB97836C9CB"
+    },
+    {
+      "name": "Fistnet.Genepool.Dna",
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\.godot\\mono\\temp\\bin\\Debug\\Fistnet.Genepool.Dna.dll",
+      "location": "",
+      "locationEmpty": true,
+      "identityMethod": "expected Debug file matched loaded module MVID",
+      "targetFramework": ".NETCoreApp,Version=v10.0",
+      "configuration": "",
+      "fileModuleVersionId": "e8a5daff-4f2a-49b0-aec2-bb8db20157df",
+      "loadedModuleVersionId": "e8a5daff-4f2a-49b0-aec2-bb8db20157df",
+      "sha256": "989A1519177BDBE0AB2398D011B206661BFF965529060A7B37C816B017CF306D"
+    }
+  ],
+  "engine": "4.7.2-stable (official)",
+  "gpuExecuted": true,
+  "externalProcessWatchdogRequired": true,
+  "limits": "Synthetic viewer fixtures and bounded engineering checks. No ecological trial. Frame intervals are main-loop observations, not hardware presentation timings. UI timing covers injected Godot input/signals, not physical mouse-to-photon latency. Assembly hashes identify files whose metadata MVID matches the loaded module; they are not hashes of loaded memory. In-scene waits cannot time out a stalled main loop; the launcher must enforce an external process deadline.",
+  "checks": [
+    {
+      "name": "passive viewer owns no simulation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "two populated instance buffers",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "fitted picking (0, 0)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "fitted picking (50, 50)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "fitted picking (99, 99)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "outside picking rejected",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "zoomed and panned picking",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "inspector explains DNA and actual actions",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "fresh season markers visible",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "acknowledgment cannot revive expired markers",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reset begins with active highlight and selection",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reset clears highlight and selection",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "GPU food zero sample lies inside image",
+      "passed": true,
+      "detail": "point=(455.04, 17.04); image=1512x636"
+    },
+    {
+      "name": "GPU food zero",
+      "passed": true,
+      "detail": "pixel(455,17)=17,28,37; expected 17,28,37, tolerance2"
+    },
+    {
+      "name": "GPU food under organism sample lies inside image",
+      "passed": true,
+      "detail": "point=(473.28, 41.36); image=1512x636"
+    },
+    {
+      "name": "GPU food under organism",
+      "passed": true,
+      "detail": "pixel(473,41)=46,76,66; expected 46,76,66, tolerance2"
+    },
+    {
+      "name": "GPU food maximum and axes sample lies inside image",
+      "passed": true,
+      "detail": "point=(479.36, 35.28); image=1512x636"
+    },
+    {
+      "name": "GPU food maximum and axes",
+      "passed": true,
+      "detail": "pixel(479,35)=116,188,136; expected 116,188,136, tolerance2"
+    },
+    {
+      "name": "GPU black DNA stays visible sample lies inside image",
+      "passed": true,
+      "detail": "point=(473.28, 41.36); image=1512x636"
+    },
+    {
+      "name": "GPU black DNA stays visible",
+      "passed": true,
+      "detail": "pixel(473,41)=95,112,133; expected 95,112,133, tolerance2"
+    },
+    {
+      "name": "GPU organism color sample lies inside image",
+      "passed": true,
+      "detail": "point=(485.44003, 41.36); image=1512x636"
+    },
+    {
+      "name": "GPU organism color",
+      "passed": true,
+      "detail": "pixel(485,41)=255,96,96; expected 255,96,96, tolerance2"
+    },
+    {
+      "name": "GPU other patterns dim rather than disappear sample lies inside image",
+      "passed": true,
+      "detail": "point=(485.44003, 41.36); image=1512x636"
+    },
+    {
+      "name": "GPU other patterns dim rather than disappear",
+      "passed": true,
+      "detail": "pixel(485,41)=79,40,44; expected 79,40,44, tolerance2"
+    },
+    {
+      "name": "GPU combined organism center sample lies inside image",
+      "passed": true,
+      "detail": "point=(473.28, 41.36); image=1512x636"
+    },
+    {
+      "name": "GPU combined organism center",
+      "passed": true,
+      "detail": "pixel(473,41)=95,112,133; expected 95,112,133, tolerance2"
+    },
+    {
+      "name": "GPU combined food surround sample lies inside image",
+      "passed": true,
+      "detail": "point=(470.9696, 39.049606); image=1512x636"
+    },
+    {
+      "name": "GPU combined food surround",
+      "passed": true,
+      "detail": "pixel(470,39)=46,76,66; expected 46,76,66, tolerance2"
+    },
+    {
+      "name": "Godot input selects the displayed empty cell",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "capture dimensions (1920, 1080)",
+      "passed": true,
+      "detail": "actual=1920x1080"
+    },
+    {
+      "name": "capture (1920, 1080)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "board and details do not overlap (1920, 1080)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "toolbar fits (1920, 1080)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "capture dimensions (1366, 768)",
+      "passed": true,
+      "detail": "actual=1366x768"
+    },
+    {
+      "name": "capture (1366, 768)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "board and details do not overlap (1366, 768)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "toolbar fits (1366, 768)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "live viewer owns one worker",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "initial speed matches UI",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "actual Godot observation preserves full paused state and RNG",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "single step settles exactly one season",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "cycle settles exactly eight seasons",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "restart preserves configured seed and state",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "camera remains responsive during blocked simulation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pause handler acknowledges without waiting for simulation",
+      "passed": true,
+      "detail": "0.19 ms"
+    },
+    {
+      "name": "pause settles at completed boundary",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "new simulation button opens random-seed settings",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "signed seed typing preserves an unfinished minus",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "typed signed seed and all numeric settings are read",
+      "passed": true,
+      "detail": "seed=-123; density=0; food=7; regrowth=2; reserves=8; seedText=-123"
+    },
+    {
+      "name": "settings retain hidden execution and policy values",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preset event resets fields and restores random choice",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "settings preview captured",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "cancel leaves world and RNG unchanged",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "create applies settings at a new paused run",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "speed menu controls worker target",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "history rates use actual sampled season gaps",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Godot initializes existing random founder setup",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "transformed selection follows a real organism without stepping",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "real DNA and completed actions reach the inspector",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "populated world retains bounded detached history",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "live world preview captured",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "shutdown completes",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "measurements": [
+    {
+      "kind": "input_handler",
+      "input": "Pause signal during blocked season",
+      "acknowledgeMilliseconds": 0.1922,
+      "excludes": "OS input delivery and physical display latency"
+    },
+    {
+      "kind": "bounded_live_world",
+      "seed": 29,
+      "initialPopulationPercent": 10,
+      "completedSeasons": 8,
+      "endingPopulation": 959,
+      "selectedId": 492,
+      "mode": "DeterministicReference",
+      "ecologicalEvaluation": false
+    }
+  ],
+  "process": {
+    "exitCode": 0,
+    "elapsedSeconds": 4.484,
+    "deadlineSeconds": 90,
+    "engineErrors": []
+  },
+  "target_framework": "net10.0-windows7.0",
+  "executed_configuration": "Debug",
+  "configuration_limit": "Godot verification scene loads Debug; solution Release is a separate ExportRelease compilation check.",
+  "loaded_assembly_identity_verified": true,
+  "expected_assembly_sha256": {
+    "Fistnet.Genepool.Godot": "c539cffdcead4dce92bbd45b9d7d3b1949075ac15651b6699e693722bd8b1bd8",
+    "Fistnet.Genepool.Control": "19d3b2c237aa952763f49ad46bc54ac21e9700ad30710bae43b41fb97836c9cb",
+    "Fistnet.Genepool.Dna": "989a1519177bdbe0ab2398d011b206661bff965529060a7b37c816b017cf306d"
+  },
+  "build_identity": {
+    "report": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r04_step1_builds.json",
+    "stage": "net10-debug",
+    "configuration": "Debug",
+    "report_sha256": "dc60e7a5099997032ae2f9013f158f0d9b0094a0036ee4eb6168ab32a93e3090",
+    "sources_verified": 122,
+    "outputs_verified": 5
+  }
+}

@@ -22,7 +22,7 @@ if ($profile.commandName -ne 'Executable' -or
 }
 $debugAssembly = Join-Path $viewerRoot '.godot\mono\temp\bin\Debug\Fistnet.Genepool.Godot.dll'
 if (-not (Test-Path -LiteralPath $debugAssembly -PathType Leaf)) {
-    throw 'Build the Godot project in Debug using the root solution in Visual Studio 2022 before launching.'
+    throw 'Build the Godot project in Debug using Fistnet.Genepool.slnx in Visual Studio 2026 before launching.'
 }
 
 $arguments = [string]$profile.commandLineArgs

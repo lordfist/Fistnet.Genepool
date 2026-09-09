@@ -1,0 +1,206 @@
+{
+  "atUtc": "2026-09-09T11:46:10.5474473+00:00",
+  "mode": "benchmark",
+  "ok": true,
+  "failures": 0,
+  "backend": "Windows",
+  "adapter": "AMD Radeon RX 6800",
+  "runtime": ".NET 10.0.12",
+  "assemblySha256": {
+    "Fistnet.Genepool.Godot": "C539CFFDCEAD4DCE92BBD45B9D7D3B1949075AC15651B6699E693722BD8B1BD8",
+    "Fistnet.Genepool.Control": "19D3B2C237AA952763F49AD46BC54AC21E9700AD30710BAE43B41FB97836C9CB",
+    "Fistnet.Genepool.Dna": "989A1519177BDBE0AB2398D011B206661BFF965529060A7B37C816B017CF306D"
+  },
+  "assemblyInfo": [
+    {
+      "name": "Fistnet.Genepool.Godot",
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\.godot\\mono\\temp\\bin\\Debug\\Fistnet.Genepool.Godot.dll",
+      "location": "",
+      "locationEmpty": true,
+      "identityMethod": "expected Debug file matched loaded module MVID",
+      "targetFramework": ".NETCoreApp,Version=v10.0",
+      "configuration": "Debug",
+      "fileModuleVersionId": "d9547bce-cbce-4b78-93e0-3b3f9953c0cf",
+      "loadedModuleVersionId": "d9547bce-cbce-4b78-93e0-3b3f9953c0cf",
+      "sha256": "C539CFFDCEAD4DCE92BBD45B9D7D3B1949075AC15651B6699E693722BD8B1BD8"
+    },
+    {
+      "name": "Fistnet.Genepool.Control",
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\.godot\\mono\\temp\\bin\\Debug\\Fistnet.Genepool.Control.dll",
+      "location": "",
+      "locationEmpty": true,
+      "identityMethod": "expected Debug file matched loaded module MVID",
+      "targetFramework": ".NETCoreApp,Version=v10.0",
+      "configuration": "",
+      "fileModuleVersionId": "0a4bd072-1d30-4429-8721-e1a5bebd6b0f",
+      "loadedModuleVersionId": "0a4bd072-1d30-4429-8721-e1a5bebd6b0f",
+      "sha256": "19D3B2C237AA952763F49AD46BC54AC21E9700AD30710BAE43B41FB97836C9CB"
+    },
+    {
+      "name": "Fistnet.Genepool.Dna",
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\.godot\\mono\\temp\\bin\\Debug\\Fistnet.Genepool.Dna.dll",
+      "location": "",
+      "locationEmpty": true,
+      "identityMethod": "expected Debug file matched loaded module MVID",
+      "targetFramework": ".NETCoreApp,Version=v10.0",
+      "configuration": "",
+      "fileModuleVersionId": "e8a5daff-4f2a-49b0-aec2-bb8db20157df",
+      "loadedModuleVersionId": "e8a5daff-4f2a-49b0-aec2-bb8db20157df",
+      "sha256": "989A1519177BDBE0AB2398D011B206661BFF965529060A7B37C816B017CF306D"
+    }
+  ],
+  "engine": "4.7.2-stable (official)",
+  "gpuExecuted": true,
+  "externalProcessWatchdogRequired": true,
+  "limits": "Synthetic viewer fixtures and bounded engineering checks. No ecological trial. Frame intervals are main-loop observations, not hardware presentation timings. UI timing covers injected Godot input/signals, not physical mouse-to-photon latency. Assembly hashes identify files whose metadata MVID matches the loaded module; they are not hashes of loaded memory. In-scene waits cannot time out a stalled main loop; the launcher must enforce an external process deadline.",
+  "checks": [
+    {
+      "name": "renderer sample coverage at population 0",
+      "passed": true,
+      "detail": "10.016 s across 601 frame intervals"
+    },
+    {
+      "name": "renderer replay coverage at population 0",
+      "passed": true,
+      "detail": "100/100 sample snapshots; 0 skipped"
+    },
+    {
+      "name": "renderer frame budget at population 0",
+      "passed": true,
+      "detail": "16.69 ms p95"
+    },
+    {
+      "name": "renderer sample coverage at population 1000",
+      "passed": true,
+      "detail": "10.016 s across 601 frame intervals"
+    },
+    {
+      "name": "renderer replay coverage at population 1000",
+      "passed": true,
+      "detail": "100/100 sample snapshots; 0 skipped"
+    },
+    {
+      "name": "renderer frame budget at population 1000",
+      "passed": true,
+      "detail": "16.91 ms p95"
+    },
+    {
+      "name": "renderer sample coverage at population 10000",
+      "passed": true,
+      "detail": "10.016 s across 601 frame intervals"
+    },
+    {
+      "name": "renderer replay coverage at population 10000",
+      "passed": true,
+      "detail": "100/100 sample snapshots; 0 skipped"
+    },
+    {
+      "name": "renderer frame budget at population 10000",
+      "passed": true,
+      "detail": "16.72 ms p95"
+    }
+  ],
+  "measurements": [
+    {
+      "population": 0,
+      "width": 1920,
+      "height": 1080,
+      "requestedWarmupSeconds": 5,
+      "requestedSampleSeconds": 10,
+      "actualSampleSeconds": 10.0162621,
+      "sampleIntervalStartSeconds": 4.9936116,
+      "sampleIntervalEndSeconds": 15.0098737,
+      "requestedSnapshotHz": 10,
+      "sampleSnapshotsReplayed": 100,
+      "sampleSnapshotsSkipped": 0,
+      "expectedSampleSnapshots": 100,
+      "actualReplayHzDuringRequestedSample": 10,
+      "totalSnapshotsReplayed": 149,
+      "totalSnapshotsSkipped": 0,
+      "frames": 601,
+      "averageFps": 60.00242345894682,
+      "p95FrameMilliseconds": 16.6935,
+      "maxFrameMilliseconds": 17.0915,
+      "p95UploadMilliseconds": 0.9283,
+      "sampleCoverageComplete": true,
+      "replayCoverageComplete": true,
+      "frameBudgetPassed": true,
+      "simulationCalculationIncluded": false
+    },
+    {
+      "population": 1000,
+      "width": 1920,
+      "height": 1080,
+      "requestedWarmupSeconds": 5,
+      "requestedSampleSeconds": 10,
+      "actualSampleSeconds": 10.0162515,
+      "sampleIntervalStartSeconds": 4.9961153,
+      "sampleIntervalEndSeconds": 15.0123668,
+      "requestedSnapshotHz": 10,
+      "sampleSnapshotsReplayed": 100,
+      "sampleSnapshotsSkipped": 0,
+      "expectedSampleSnapshots": 100,
+      "actualReplayHzDuringRequestedSample": 10,
+      "totalSnapshotsReplayed": 149,
+      "totalSnapshotsSkipped": 0,
+      "frames": 601,
+      "averageFps": 60.00248695831969,
+      "p95FrameMilliseconds": 16.9083,
+      "maxFrameMilliseconds": 22.2473,
+      "p95UploadMilliseconds": 1.3472,
+      "sampleCoverageComplete": true,
+      "replayCoverageComplete": true,
+      "frameBudgetPassed": true,
+      "simulationCalculationIncluded": false
+    },
+    {
+      "population": 10000,
+      "width": 1920,
+      "height": 1080,
+      "requestedWarmupSeconds": 5,
+      "requestedSampleSeconds": 10,
+      "actualSampleSeconds": 10.0162656,
+      "sampleIntervalStartSeconds": 4.9871281,
+      "sampleIntervalEndSeconds": 15.0033937,
+      "requestedSnapshotHz": 10,
+      "sampleSnapshotsReplayed": 100,
+      "sampleSnapshotsSkipped": 0,
+      "expectedSampleSnapshots": 100,
+      "actualReplayHzDuringRequestedSample": 10,
+      "totalSnapshotsReplayed": 149,
+      "totalSnapshotsSkipped": 0,
+      "frames": 601,
+      "averageFps": 60.00240249220228,
+      "p95FrameMilliseconds": 16.7208,
+      "maxFrameMilliseconds": 17.4352,
+      "p95UploadMilliseconds": 1.4084,
+      "sampleCoverageComplete": true,
+      "replayCoverageComplete": true,
+      "frameBudgetPassed": true,
+      "simulationCalculationIncluded": false
+    }
+  ],
+  "process": {
+    "exitCode": 0,
+    "elapsedSeconds": 46.656,
+    "deadlineSeconds": 100,
+    "engineErrors": []
+  },
+  "target_framework": "net10.0-windows7.0",
+  "executed_configuration": "Debug",
+  "configuration_limit": "Godot verification scene loads Debug; solution Release is a separate ExportRelease compilation check.",
+  "loaded_assembly_identity_verified": true,
+  "expected_assembly_sha256": {
+    "Fistnet.Genepool.Godot": "c539cffdcead4dce92bbd45b9d7d3b1949075ac15651b6699e693722bd8b1bd8",
+    "Fistnet.Genepool.Control": "19d3b2c237aa952763f49ad46bc54ac21e9700ad30710bae43b41fb97836c9cb",
+    "Fistnet.Genepool.Dna": "989a1519177bdbe0ab2398d011b206661bff965529060a7b37c816b017cf306d"
+  },
+  "build_identity": {
+    "report": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r04_step1_builds.json",
+    "stage": "net10-debug",
+    "configuration": "Debug",
+    "report_sha256": "dc60e7a5099997032ae2f9013f158f0d9b0094a0036ee4eb6168ab32a93e3090",
+    "sources_verified": 122,
+    "outputs_verified": 5
+  }
+}

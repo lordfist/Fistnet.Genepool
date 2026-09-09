@@ -1,0 +1,314 @@
+{
+  "actor": "Genepool Analyzer",
+  "note": "Record owner clarification: brown ground was the selected Organisms filter, not a restart bug. No source change or test run.",
+  "upsert_records": [
+    {
+      "id": "FACT-0059",
+      "kind": "observed_fact",
+      "status": "resolved",
+      "statement": "The reported brown ground despite food10/10 after Run/Pause/Restart was resolved by the owner as an incorrectly selected Organisms filter. That layer deliberately uses constant brown terrain and suppresses food/grass; Combined displays organisms plus food shading, and Food displays food alone. No restart rendering defect established and no source fix needed.",
+      "source_refs": [
+        "SRC-0280",
+        "SRC-0267"
+      ],
+      "related_record_ids": [
+        "FACT-0058"
+      ],
+      "tags": [
+        "R03",
+        "ground",
+        "food",
+        "brown",
+        "green",
+        "filter",
+        "restart",
+        "resolved"
+      ],
+      "origin": {
+        "type": "owner_clarification_and_static_inspection",
+        "actor": "Genepool Analyzer",
+        "recorded_at_utc": "2026-09-08 10:25:27 UTC",
+        "owner_report": "Ground stayed brown after run/pause/restart in angled view despite food10/10.",
+        "owner_clarification": "You are right, it was not a bug. I incorrectly set the filter :D my mistake :D"
+      },
+      "derivation": {
+        "locators": [
+          "Main.Layout.cs:68–69 — Combined/Organisms/Food selector mapping",
+          "BoardView3D.cs:192–194 — Organisms layer uses constant brown and food amount zero"
+        ],
+        "scope": "Read-only lifecycle and layer inspection. Proposed new regression stopped before edits when owner clarified. No builds, simulation runs or renderer runs; temporary exact source safeguard removed unused after matching its bytes."
+      },
+      "uncertainty": "Owner clarification resolves this report; it does not establish overall Step4 acceptance or prove absence of unrelated defects."
+    }
+  ],
+  "upsert_sources": [],
+  "core_patch": {
+    "routes": {
+      "orientation": {
+        "record_ids": [
+          "FACT-0001",
+          "FACT-0002",
+          "FACT-0011",
+          "INF-0001"
+        ]
+      },
+      "mechanics": {
+        "record_ids": [
+          "FACT-0003",
+          "FACT-0004",
+          "FACT-0005",
+          "INF-0003"
+        ]
+      },
+      "watchability": {
+        "record_ids": [
+          "DEC-0002",
+          "FACT-0006",
+          "FACT-0009",
+          "REC-0001"
+        ]
+      },
+      "material_findings": {
+        "record_ids": [
+          "FACT-0007",
+          "FACT-0008",
+          "FACT-0010",
+          "INF-0002",
+          "FACT-0023"
+        ]
+      },
+      "proposal_and_tests": {
+        "record_ids": [
+          "DEC-0003",
+          "REC-0002",
+          "FACT-0012",
+          "Q-0001",
+          "Q-0002",
+          "DEC-0007",
+          "FACT-0024",
+          "FACT-0025",
+          "FACT-0028",
+          "FACT-0029",
+          "INF-0004",
+          "DEC-0009"
+        ]
+      },
+      "environment_capabilities": {
+        "record_ids": [
+          "DEC-0004",
+          "FACT-0013",
+          "FACT-0014",
+          "FACT-0015",
+          "FACT-0016",
+          "REC-0003",
+          "Q-0002",
+          "CLAIM-0001",
+          "FACT-0017",
+          "FACT-0018",
+          "REC-0004",
+          "DEC-0005",
+          "FACT-0019",
+          "CLAIM-0002",
+          "FACT-0021",
+          "FACT-0049",
+          "FACT-0051"
+        ]
+      },
+      "kb_tooling": {
+        "record_ids": [
+          "FACT-0054",
+          "DEC-0006",
+          "FACT-0039",
+          "FACT-0036",
+          "FACT-0020",
+          "FACT-0019",
+          "DEC-0013",
+          "FACT-0045"
+        ]
+      },
+      "current_implementation": {
+        "record_ids": [
+          "FACT-0058",
+          "DEC-0034",
+          "FACT-0057",
+          "FACT-0055",
+          "FACT-0056",
+          "DEC-0033",
+          "DEC-0026",
+          "FACT-0051",
+          "FACT-0050",
+          "FACT-0049",
+          "DEC-0025"
+        ]
+      },
+      "r02_research_and_proposal": {
+        "record_ids": [
+          "DEC-0010",
+          "CLAIM-0004",
+          "FACT-0030",
+          "FACT-0031",
+          "FACT-0032",
+          "INF-0005",
+          "CLAIM-0005",
+          "REC-0005",
+          "Q-0001",
+          "DEC-0011",
+          "Q-0003",
+          "DEC-0012",
+          "DEC-0019",
+          "DEC-0020"
+        ]
+      },
+      "r02_part1_result": {
+        "record_ids": [
+          "DEC-0012",
+          "FACT-0033",
+          "FACT-0034",
+          "FACT-0035",
+          "INF-0006",
+          "Q-0003"
+        ]
+      },
+      "r02_part2_result": {
+        "record_ids": [
+          "DEC-0014",
+          "FACT-0037",
+          "FACT-0038",
+          "REC-0006",
+          "INF-0007",
+          "Q-0003",
+          "DEC-0015"
+        ]
+      },
+      "r02_part3_result": {
+        "record_ids": [
+          "DEC-0015",
+          "FACT-0040",
+          "FACT-0041",
+          "FACT-0042",
+          "INF-0008",
+          "DEC-0017"
+        ]
+      },
+      "governance": {
+        "record_ids": [
+          "DEC-0016",
+          "FACT-0043",
+          "DEC-0001",
+          "DEC-0006"
+        ]
+      },
+      "r02_part4_result": {
+        "record_ids": [
+          "DEC-0017",
+          "DEC-0018",
+          "Q-0003",
+          "FACT-0044",
+          "FACT-0045",
+          "FACT-0046",
+          "INF-0009",
+          "DEC-0019",
+          "DEC-0020"
+        ]
+      },
+      "r02_closure": {
+        "record_ids": [
+          "DEC-0020",
+          "FACT-0046",
+          "INF-0009",
+          "DEC-0019",
+          "REC-0005"
+        ]
+      },
+      "r03_outline": {
+        "record_ids": [
+          "DEC-0021",
+          "REC-0007",
+          "DEC-0004",
+          "DEC-0022",
+          "DEC-0023",
+          "REC-0008",
+          "DEC-0026",
+          "DEC-0028",
+          "REC-0010"
+        ]
+      },
+      "r03_research": {
+        "record_ids": [
+          "DEC-0022",
+          "DEC-0023",
+          "FACT-0047",
+          "CLAIM-0006",
+          "CLAIM-0007",
+          "REC-0008",
+          "DEC-0024",
+          "REC-0009"
+        ]
+      },
+      "r03_implementation_plan": {
+        "record_ids": [
+          "DEC-0024",
+          "FACT-0048",
+          "CLAIM-0008",
+          "REC-0009",
+          "REC-0008",
+          "DEC-0025"
+        ]
+      },
+      "r03_2d_result": {
+        "record_ids": [
+          "DEC-0026",
+          "FACT-0051",
+          "FACT-0050",
+          "FACT-0049",
+          "DEC-0025",
+          "REC-0009"
+        ]
+      },
+      "deferred_improvements": {
+        "record_ids": [
+          "DEC-0027"
+        ]
+      },
+      "r03_step4_design": {
+        "record_ids": [
+          "FACT-0058",
+          "DEC-0034",
+          "FACT-0057",
+          "FACT-0055",
+          "FACT-0056",
+          "DEC-0033",
+          "DEC-0031",
+          "REC-0010",
+          "DEC-0030",
+          "DEC-0029",
+          "FACT-0053",
+          "DEC-0028"
+        ]
+      },
+      "recovery_review": {
+        "record_ids": [
+          "FACT-0052"
+        ]
+      },
+      "r03_step4_result": {
+        "record_ids": [
+          "FACT-0058",
+          "DEC-0034",
+          "FACT-0057",
+          "FACT-0055",
+          "FACT-0056",
+          "DEC-0033",
+          "REC-0010",
+          "DEC-0031"
+        ]
+      },
+      "ground_food_colours": {
+        "record_ids": [
+          "FACT-0059",
+          "FACT-0058"
+        ]
+      }
+    }
+  }
+}

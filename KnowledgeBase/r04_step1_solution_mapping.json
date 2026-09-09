@@ -1,0 +1,396 @@
+{
+  "actor": "Genepool Analyzer",
+  "checked_at_utc": "2026-09-09T11:24:59.5468473Z",
+  "ok": true,
+  "projects": 6,
+  "configuration_mappings": 36,
+  "mismatches": 0,
+  "sln_unchanged": true,
+  "slnx_modified_by_this_check": false,
+  "source_identity_stable_during_check": true,
+  "sln_sha256": "742BB4890FA19EAD4D3E1A65919DE1420CC922D9FD5B8E26D655AABF3B86C688",
+  "slnx_sha256": "7EEE97BF50BDB8191D140CF53E6DB25DD306F9A9C128880E3496B4BBFB6824FE",
+  "predecessor_sln_sha256": "742BB4890FA19EAD4D3E1A65919DE1420CC922D9FD5B8E26D655AABF3B86C688",
+  "method": "Installed Visual Studio 2026 Microsoft.Build.Construction.SolutionFile.Parse; compares all project paths, solution configurations, project FullName values and IncludeInBuild flags. No project build/evaluation or application execution.",
+  "parser": {
+    "path": "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Build.dll",
+    "identity": "Microsoft.Build, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a",
+    "file_version": "18.9.1.35102",
+    "sha256": "31BE4651C3B6DC8DDF433E7BDAAD49FC41F036F1B510908C28E68043749431B4",
+    "host_runtime": "10.0.11"
+  },
+  "solution_persistence": {
+    "path": "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\MSBuild\\Current\\Bin\\Microsoft.VisualStudio.SolutionPersistence.dll",
+    "identity": "Microsoft.VisualStudio.SolutionPersistence, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a",
+    "file_version": "1.0.52.6595",
+    "sha256": "A9D80E519C246B04E3764D8B39A2938E076E8D8DDED37695D550D339F5B02511"
+  },
+  "review_correction": {
+    "initial_concern": "A source-only review incorrectly read the legacy App Debug|x86 and Release|x86 project mappings as x86.",
+    "original_evidence_rechecked": "The original captured .sln text and current lines 54-61 both map those solution configurations to Any CPU; the legacy solution SHA256 is unchanged.",
+    "parser_result": "All 36 project/configuration mappings and build flags match without editing either solution.",
+    "intervention": "Retracted the erroneous review finding; no solution fix was necessary or applied."
+  },
+  "checks": [
+    {
+      "project": "Fistnet.Genepool.App",
+      "path": "Fistnet.Genepool.App/Fistnet.Genepool.App.csproj",
+      "solution": "Debug|Any CPU",
+      "expectedProjectConfiguration": "Debug|AnyCPU",
+      "actualProjectConfiguration": "Debug|AnyCPU",
+      "expectedBuild": true,
+      "actualBuild": true,
+      "matches": true
+    },
+    {
+      "project": "Fistnet.Genepool.App",
+      "path": "Fistnet.Genepool.App/Fistnet.Genepool.App.csproj",
+      "solution": "Debug|Mixed Platforms",
+      "expectedProjectConfiguration": "Debug|AnyCPU",
+      "actualProjectConfiguration": "Debug|AnyCPU",
+      "expectedBuild": true,
+      "actualBuild": true,
+      "matches": true
+    },
+    {
+      "project": "Fistnet.Genepool.App",
+      "path": "Fistnet.Genepool.App/Fistnet.Genepool.App.csproj",
+      "solution": "Debug|x86",
+      "expectedProjectConfiguration": "Debug|AnyCPU",
+      "actualProjectConfiguration": "Debug|AnyCPU",
+      "expectedBuild": true,
+      "actualBuild": true,
+      "matches": true
+    },
+    {
+      "project": "Fistnet.Genepool.App",
+      "path": "Fistnet.Genepool.App/Fistnet.Genepool.App.csproj",
+      "solution": "Release|Any CPU",
+      "expectedProjectConfiguration": "Release|AnyCPU",
+      "actualProjectConfiguration": "Release|AnyCPU",
+      "expectedBuild": true,
+      "actualBuild": true,
+      "matches": true
+    },
+    {
+      "project": "Fistnet.Genepool.App",
+      "path": "Fistnet.Genepool.App/Fistnet.Genepool.App.csproj",
+      "solution": "Release|Mixed Platforms",
+      "expectedProjectConfiguration": "Release|AnyCPU",
+      "actualProjectConfiguration": "Release|AnyCPU",
+      "expectedBuild": true,
+      "actualBuild": true,
+      "matches": true
+    },
+    {
+      "project": "Fistnet.Genepool.App",
+      "path": "Fistnet.Genepool.App/Fistnet.Genepool.App.csproj",
+      "solution": "Release|x86",
+      "expectedProjectConfiguration": "Release|AnyCPU",
+      "actualProjectConfiguration": "Release|AnyCPU",
+      "expectedBuild": true,
+      "actualBuild": true,
+      "matches": true
+    },
+    {
+      "project": "Fistnet.Genepool.Dna",
+      "path": "Fistnet.Genepool.Dna/Fistnet.Genepool.Dna.csproj",
+      "solution": "Debug|Any CPU",
+      "expectedProjectConfiguration": "Debug|AnyCPU",
+      "actualProjectConfiguration": "Debug|AnyCPU",
+      "expectedBuild": true,
+      "actualBuild": true,
+      "matches": true
+    },
+    {
+      "project": "Fistnet.Genepool.Dna",
+      "path": "Fistnet.Genepool.Dna/Fistnet.Genepool.Dna.csproj",
+      "solution": "Debug|Mixed Platforms",
+      "expectedProjectConfiguration": "Debug|AnyCPU",
+      "actualProjectConfiguration": "Debug|AnyCPU",
+      "expectedBuild": true,
+      "actualBuild": true,
+      "matches": true
+    },
+    {
+      "project": "Fistnet.Genepool.Dna",
+      "path": "Fistnet.Genepool.Dna/Fistnet.Genepool.Dna.csproj",
+      "solution": "Debug|x86",
+      "expectedProjectConfiguration": "Debug|AnyCPU",
+      "actualProjectConfiguration": "Debug|AnyCPU",
+      "expectedBuild": false,
+      "actualBuild": false,
+      "matches": true
+    },
+    {
+      "project": "Fistnet.Genepool.Dna",
+      "path": "Fistnet.Genepool.Dna/Fistnet.Genepool.Dna.csproj",
+      "solution": "Release|Any CPU",
+      "expectedProjectConfiguration": "Release|AnyCPU",
+      "actualProjectConfiguration": "Release|AnyCPU",
+      "expectedBuild": true,
+      "actualBuild": true,
+      "matches": true
+    },
+    {
+      "project": "Fistnet.Genepool.Dna",
+      "path": "Fistnet.Genepool.Dna/Fistnet.Genepool.Dna.csproj",
+      "solution": "Release|Mixed Platforms",
+      "expectedProjectConfiguration": "Release|AnyCPU",
+      "actualProjectConfiguration": "Release|AnyCPU",
+      "expectedBuild": true,
+      "actualBuild": true,
+      "matches": true
+    },
+    {
+      "project": "Fistnet.Genepool.Dna",
+      "path": "Fistnet.Genepool.Dna/Fistnet.Genepool.Dna.csproj",
+      "solution": "Release|x86",
+      "expectedProjectConfiguration": "Release|AnyCPU",
+      "actualProjectConfiguration": "Release|AnyCPU",
+      "expectedBuild": false,
+      "actualBuild": false,
+      "matches": true
+    },
+    {
+      "project": "Fistnet.Genepool.Control",
+      "path": "Fistnet.Genepool.Control/Fistnet.Genepool.Control.csproj",
+      "solution": "Debug|Any CPU",
+      "expectedProjectConfiguration": "Debug|AnyCPU",
+      "actualProjectConfiguration": "Debug|AnyCPU",
+      "expectedBuild": true,
+      "actualBuild": true,
+      "matches": true
+    },
+    {
+      "project": "Fistnet.Genepool.Control",
+      "path": "Fistnet.Genepool.Control/Fistnet.Genepool.Control.csproj",
+      "solution": "Debug|Mixed Platforms",
+      "expectedProjectConfiguration": "Debug|AnyCPU",
+      "actualProjectConfiguration": "Debug|AnyCPU",
+      "expectedBuild": true,
+      "actualBuild": true,
+      "matches": true
+    },
+    {
+      "project": "Fistnet.Genepool.Control",
+      "path": "Fistnet.Genepool.Control/Fistnet.Genepool.Control.csproj",
+      "solution": "Debug|x86",
+      "expectedProjectConfiguration": "Debug|AnyCPU",
+      "actualProjectConfiguration": "Debug|AnyCPU",
+      "expectedBuild": false,
+      "actualBuild": false,
+      "matches": true
+    },
+    {
+      "project": "Fistnet.Genepool.Control",
+      "path": "Fistnet.Genepool.Control/Fistnet.Genepool.Control.csproj",
+      "solution": "Release|Any CPU",
+      "expectedProjectConfiguration": "Release|AnyCPU",
+      "actualProjectConfiguration": "Release|AnyCPU",
+      "expectedBuild": true,
+      "actualBuild": true,
+      "matches": true
+    },
+    {
+      "project": "Fistnet.Genepool.Control",
+      "path": "Fistnet.Genepool.Control/Fistnet.Genepool.Control.csproj",
+      "solution": "Release|Mixed Platforms",
+      "expectedProjectConfiguration": "Release|AnyCPU",
+      "actualProjectConfiguration": "Release|AnyCPU",
+      "expectedBuild": true,
+      "actualBuild": true,
+      "matches": true
+    },
+    {
+      "project": "Fistnet.Genepool.Control",
+      "path": "Fistnet.Genepool.Control/Fistnet.Genepool.Control.csproj",
+      "solution": "Release|x86",
+      "expectedProjectConfiguration": "Release|AnyCPU",
+      "actualProjectConfiguration": "Release|AnyCPU",
+      "expectedBuild": false,
+      "actualBuild": false,
+      "matches": true
+    },
+    {
+      "project": "Fistnet.Genepool.Visualization",
+      "path": "Fistnet.Genepool.Visualization/Fistnet.Genepool.Visualization.csproj",
+      "solution": "Debug|Any CPU",
+      "expectedProjectConfiguration": "Debug|AnyCPU",
+      "actualProjectConfiguration": "Debug|AnyCPU",
+      "expectedBuild": true,
+      "actualBuild": true,
+      "matches": true
+    },
+    {
+      "project": "Fistnet.Genepool.Visualization",
+      "path": "Fistnet.Genepool.Visualization/Fistnet.Genepool.Visualization.csproj",
+      "solution": "Debug|Mixed Platforms",
+      "expectedProjectConfiguration": "Debug|AnyCPU",
+      "actualProjectConfiguration": "Debug|AnyCPU",
+      "expectedBuild": true,
+      "actualBuild": true,
+      "matches": true
+    },
+    {
+      "project": "Fistnet.Genepool.Visualization",
+      "path": "Fistnet.Genepool.Visualization/Fistnet.Genepool.Visualization.csproj",
+      "solution": "Debug|x86",
+      "expectedProjectConfiguration": "Debug|AnyCPU",
+      "actualProjectConfiguration": "Debug|AnyCPU",
+      "expectedBuild": false,
+      "actualBuild": false,
+      "matches": true
+    },
+    {
+      "project": "Fistnet.Genepool.Visualization",
+      "path": "Fistnet.Genepool.Visualization/Fistnet.Genepool.Visualization.csproj",
+      "solution": "Release|Any CPU",
+      "expectedProjectConfiguration": "Release|AnyCPU",
+      "actualProjectConfiguration": "Release|AnyCPU",
+      "expectedBuild": true,
+      "actualBuild": true,
+      "matches": true
+    },
+    {
+      "project": "Fistnet.Genepool.Visualization",
+      "path": "Fistnet.Genepool.Visualization/Fistnet.Genepool.Visualization.csproj",
+      "solution": "Release|Mixed Platforms",
+      "expectedProjectConfiguration": "Release|AnyCPU",
+      "actualProjectConfiguration": "Release|AnyCPU",
+      "expectedBuild": true,
+      "actualBuild": true,
+      "matches": true
+    },
+    {
+      "project": "Fistnet.Genepool.Visualization",
+      "path": "Fistnet.Genepool.Visualization/Fistnet.Genepool.Visualization.csproj",
+      "solution": "Release|x86",
+      "expectedProjectConfiguration": "Release|AnyCPU",
+      "actualProjectConfiguration": "Release|AnyCPU",
+      "expectedBuild": false,
+      "actualBuild": false,
+      "matches": true
+    },
+    {
+      "project": "Fistnet.Genepool.Tests",
+      "path": "Fistnet.Genepool.Tests/Fistnet.Genepool.Tests.csproj",
+      "solution": "Debug|Any CPU",
+      "expectedProjectConfiguration": "Debug|AnyCPU",
+      "actualProjectConfiguration": "Debug|AnyCPU",
+      "expectedBuild": true,
+      "actualBuild": true,
+      "matches": true
+    },
+    {
+      "project": "Fistnet.Genepool.Tests",
+      "path": "Fistnet.Genepool.Tests/Fistnet.Genepool.Tests.csproj",
+      "solution": "Debug|Mixed Platforms",
+      "expectedProjectConfiguration": "Debug|AnyCPU",
+      "actualProjectConfiguration": "Debug|AnyCPU",
+      "expectedBuild": true,
+      "actualBuild": true,
+      "matches": true
+    },
+    {
+      "project": "Fistnet.Genepool.Tests",
+      "path": "Fistnet.Genepool.Tests/Fistnet.Genepool.Tests.csproj",
+      "solution": "Debug|x86",
+      "expectedProjectConfiguration": "Debug|AnyCPU",
+      "actualProjectConfiguration": "Debug|AnyCPU",
+      "expectedBuild": true,
+      "actualBuild": true,
+      "matches": true
+    },
+    {
+      "project": "Fistnet.Genepool.Tests",
+      "path": "Fistnet.Genepool.Tests/Fistnet.Genepool.Tests.csproj",
+      "solution": "Release|Any CPU",
+      "expectedProjectConfiguration": "Release|AnyCPU",
+      "actualProjectConfiguration": "Release|AnyCPU",
+      "expectedBuild": true,
+      "actualBuild": true,
+      "matches": true
+    },
+    {
+      "project": "Fistnet.Genepool.Tests",
+      "path": "Fistnet.Genepool.Tests/Fistnet.Genepool.Tests.csproj",
+      "solution": "Release|Mixed Platforms",
+      "expectedProjectConfiguration": "Release|AnyCPU",
+      "actualProjectConfiguration": "Release|AnyCPU",
+      "expectedBuild": true,
+      "actualBuild": true,
+      "matches": true
+    },
+    {
+      "project": "Fistnet.Genepool.Tests",
+      "path": "Fistnet.Genepool.Tests/Fistnet.Genepool.Tests.csproj",
+      "solution": "Release|x86",
+      "expectedProjectConfiguration": "Release|AnyCPU",
+      "actualProjectConfiguration": "Release|AnyCPU",
+      "expectedBuild": true,
+      "actualBuild": true,
+      "matches": true
+    },
+    {
+      "project": "Fistnet.Genepool.Godot",
+      "path": "Fistnet.Genepool.Godot/Fistnet.Genepool.Godot.csproj",
+      "solution": "Debug|Any CPU",
+      "expectedProjectConfiguration": "Debug|AnyCPU",
+      "actualProjectConfiguration": "Debug|AnyCPU",
+      "expectedBuild": true,
+      "actualBuild": true,
+      "matches": true
+    },
+    {
+      "project": "Fistnet.Genepool.Godot",
+      "path": "Fistnet.Genepool.Godot/Fistnet.Genepool.Godot.csproj",
+      "solution": "Debug|Mixed Platforms",
+      "expectedProjectConfiguration": "Debug|AnyCPU",
+      "actualProjectConfiguration": "Debug|AnyCPU",
+      "expectedBuild": true,
+      "actualBuild": true,
+      "matches": true
+    },
+    {
+      "project": "Fistnet.Genepool.Godot",
+      "path": "Fistnet.Genepool.Godot/Fistnet.Genepool.Godot.csproj",
+      "solution": "Debug|x86",
+      "expectedProjectConfiguration": "Debug|AnyCPU",
+      "actualProjectConfiguration": "Debug|AnyCPU",
+      "expectedBuild": true,
+      "actualBuild": true,
+      "matches": true
+    },
+    {
+      "project": "Fistnet.Genepool.Godot",
+      "path": "Fistnet.Genepool.Godot/Fistnet.Genepool.Godot.csproj",
+      "solution": "Release|Any CPU",
+      "expectedProjectConfiguration": "ExportRelease|AnyCPU",
+      "actualProjectConfiguration": "ExportRelease|AnyCPU",
+      "expectedBuild": true,
+      "actualBuild": true,
+      "matches": true
+    },
+    {
+      "project": "Fistnet.Genepool.Godot",
+      "path": "Fistnet.Genepool.Godot/Fistnet.Genepool.Godot.csproj",
+      "solution": "Release|Mixed Platforms",
+      "expectedProjectConfiguration": "ExportRelease|AnyCPU",
+      "actualProjectConfiguration": "ExportRelease|AnyCPU",
+      "expectedBuild": true,
+      "actualBuild": true,
+      "matches": true
+    },
+    {
+      "project": "Fistnet.Genepool.Godot",
+      "path": "Fistnet.Genepool.Godot/Fistnet.Genepool.Godot.csproj",
+      "solution": "Release|x86",
+      "expectedProjectConfiguration": "ExportRelease|AnyCPU",
+      "actualProjectConfiguration": "ExportRelease|AnyCPU",
+      "expectedBuild": true,
+      "actualBuild": true,
+      "matches": true
+    }
+  ]
+}

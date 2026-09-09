@@ -1,0 +1,146 @@
+{
+  "actor": "Genepool Analyzer",
+  "at_utc": "2026-09-08T09:43:48.412388+00:00",
+  "input_revision": 56,
+  "sources_added": [
+    "SRC-0279",
+    "SRC-0280",
+    "SRC-0281",
+    "SRC-0282",
+    "SRC-0283",
+    "SRC-0284",
+    "SRC-0285",
+    "SRC-0286",
+    "SRC-0287",
+    "SRC-0288"
+  ],
+  "registered_predecessors_updated": 6,
+  "records_added": [
+    "DEC-0034",
+    "FACT-0058"
+  ],
+  "records_updated": [
+    "FACT-0055",
+    "FACT-0056",
+    "FACT-0057"
+  ],
+  "reused_console_evidence": [
+    {
+      "configuration": "Debug",
+      "passing_report": "r03_step4_tests_debug.json",
+      "tests": 159,
+      "all_five_assembly_hashes_match": true,
+      "hashes": {
+        "Fistnet.Genepool.Tests": "6F0049925942FCAFD6377C6DCC4E2313D65C1F39CEC61DAF93549BAC08EBAC31",
+        "Fistnet.Genepool.Control": "4B7B1DF5CBD42A54B0F62EB5F45989099D062B778C887DFA8F25088EFEA17DFA",
+        "Fistnet.Genepool.Dna": "FD7B5EAAC17F9FAC83FFFAD6D13E5BA8035B12E38281A5F733AC400542A344FF",
+        "Fistnet.Genepool.Visualization": "5F57A941A76B64E8831BF420459907F2429675D1630B2EC33EDC9457039F8B96",
+        "Fistnet.Genepool.App": "3998257D4544A92C102F5219D3E2AB050846DE61AA92F7569BEA2500CB3980D6"
+      },
+      "execution": "Prior passing suite reused after exact current binary comparison; not rerun this correction."
+    },
+    {
+      "configuration": "Release",
+      "passing_report": "r03_step4_tests_release.json",
+      "tests": 159,
+      "all_five_assembly_hashes_match": true,
+      "hashes": {
+        "Fistnet.Genepool.Tests": "F9EF42729A131A8EF7DFE29612C4BCB7626441A9C2C19A22650427BF09D89BDF",
+        "Fistnet.Genepool.Control": "43480F2ADF97BAB6F893091599B7B1671E3F717F24DB55FB996251DC7F212449",
+        "Fistnet.Genepool.Dna": "2A5E4B6E48624B82CCF7A9981BC3C1E1E85272A8715F8A95915C5EDA0DCF745D",
+        "Fistnet.Genepool.Visualization": "9ED74A67549CC3D7B6355137F1B1BC8DD72CFF1D9008A1549B6813254151A502",
+        "Fistnet.Genepool.App": "AC9A926AA2B3AD1A105A1D10C8F1A63CA4E5D67F54AA7A1CE9BD165506F5AB36"
+      },
+      "execution": "Prior passing suite reused after exact current binary comparison; not rerun this correction."
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_STEP4_PERSPECTIVE_RESULT.md",
+      "sha256": "D895D6AAE0B70005DD59D117F9014B6749E601375BF9A3FE4156AAF56311EAD6",
+      "bytes": 8383
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_perspective_builds.json",
+      "sha256": "E4667635158BD67EEEE3DF9226D0E2ED7414BBDA5CBC7070E19C301AE94300DE",
+      "bytes": 88235
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step4_verification.json",
+      "sha256": "08BC50E466EACD35BC27324F423545DD67F03958B3310E13D544EC8375521E07",
+      "bytes": 27981
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step4_headless.json",
+      "sha256": "484C14F45AEBA0B87772A1FDEF6367629B74C9657AFCD9325504D62A0FE30390",
+      "bytes": 21414
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_godot_verification.json",
+      "sha256": "19024BD14D2D6FA9F5B0AD7F0D643A0DEF29CA57237AE94D3375B9DF65DE367C",
+      "bytes": 9360
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step4_benchmark.json",
+      "sha256": "B5C9EBF57D14B401DB53B8C7B97BD4BABCBE4EA6DFD65AF02F41CFF8F6DE3E3D",
+      "bytes": 7121
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step4_tests_debug.json",
+      "sha256": "23B46089D67AF4DE8EAC9E16488B83005E722414B684E9A2EC22D8BB739F7763",
+      "bytes": 6685
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step4_tests_release.json",
+      "sha256": "2677191E7B376DEB866DF93A31BCB675E39DAC8323E0BAC509973CE47E4F813E",
+      "bytes": 6687
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_perspective_interventions.json",
+      "sha256": "1E9FCF192CF5563C8EE3C4D9496FBE928D760A5FC000BDCE6A59BF182C7C208E",
+      "bytes": 2378
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_perspective_world.png",
+      "sha256": "3737664F11A9CBC18DB6E6DE9F8CE91081DBE42A5A590E5A04720472AB73C2BE",
+      "bytes": 296149
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_perspective_detail.png",
+      "sha256": "A291D0F78E4359A35CAA1F2D1D733C4052FF4D8043262C0C7CCD93C7258437D9",
+      "bytes": 2035139
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_perspective_topdown.png",
+      "sha256": "2D2419551E1C03819A0236C5D85435469F53667AD216EBA02E51F442BF86E3C9",
+      "bytes": 284544
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step4_habitat.png",
+      "sha256": "B453687F9136048CADA8426C8BC57235454C2A54089A70071AF1C962CBD0B85B",
+      "bytes": 2042024
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step4_organism.png",
+      "sha256": "A7D586B46B8DBDD219661F5CE042E4C9DDD99F9AA8936AF1B272FA08643D08FA",
+      "bytes": 1805756
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r03_step4_inspect.png",
+      "sha256": "B73A6B25EEB58CCD80969D1BF8D4509739C669991AD49EBBC1EC5675AF542B76",
+      "bytes": 1493931
+    }
+  ],
+  "godot_binaries": [
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\.godot\\mono\\temp\\bin\\Debug\\Fistnet.Genepool.Godot.dll",
+      "sha256": "AE762A66B765809A505EB3D591BAC1A1AB5299A0383AC0874ECA0A81DF3B60AA",
+      "bytes": 349696
+    },
+    {
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\.godot\\mono\\temp\\bin\\ExportRelease\\Fistnet.Genepool.Godot.dll",
+      "sha256": "6F01091BC765230617A92A92B5CAE931F0A8C42196D78F95B7877EEFF605B00F",
+      "bytes": 322048
+    }
+  ]
+}

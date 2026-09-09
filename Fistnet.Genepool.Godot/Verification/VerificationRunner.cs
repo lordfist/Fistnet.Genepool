@@ -1,4 +1,9 @@
 using System.Diagnostics;
+using System.Reflection;
+using System.Reflection.Metadata;
+using System.Reflection.PortableExecutable;
+using System.Runtime.Versioning;
+using System.Security.Cryptography;
 using System.Text.Json;
 using Fistnet.Genepool.Control;
 using Fistnet.Genepool.Control.Gameboard;
@@ -28,12 +33,15 @@ public partial class VerificationRunner : Node
         {
             output = Path.GetFullPath(arguments.FirstOrDefault(a => a.StartsWith("--output="))?[9..]
                 ?? Path.Combine(root, "KnowledgeBase", "r03_godot_verification.json"));
-            string[] allowedReports = { "r03_godot_verification.json", "r03_godot_headless.json", "r03_godot_benchmark.json" };
+            string[] allowedReports = { "r03_godot_verification.json", "r03_godot_headless.json", "r03_godot_benchmark.json",
+                "r03_step4_verification.json", "r03_step4_headless.json", "r03_step4_benchmark.json",
+                "r04_step1_godot_verification.json", "r04_step1_godot_headless.json", "r04_step1_godot_benchmark.json",
+                "r04_step1_godot_step4_verification.json", "r04_step1_godot_step4_headless.json", "r04_step1_godot_step4_benchmark.json" };
             if (!string.Equals(Path.GetDirectoryName(output), Path.Combine(root, "KnowledgeBase"), StringComparison.OrdinalIgnoreCase) ||
                 !allowedReports.Contains(Path.GetFileName(output), StringComparer.OrdinalIgnoreCase))
-                throw new ArgumentException("Verification output must use an approved r03_godot report filename directly inside the project KnowledgeBase.");
+                throw new ArgumentException("Verification output must use an approved report filename directly inside the project KnowledgeBase.");
             outputValidated = true;
-            if (mode is not ("smoke" or "benchmark" or "preview")) throw new ArgumentException("Unknown verification mode.");
+            if (mode is not ("smoke" or "benchmark" or "preview" or "step4" or "step4-benchmark")) throw new ArgumentException("Unknown verification mode.");
             Engine.MaxFps = 60;
             gpu = DisplayServer.GetName() != "headless";
             string adapter = RenderingServer.GetVideoAdapterName();
@@ -43,6 +51,14 @@ public partial class VerificationRunner : Node
             viewer = NewViewer(true);
             await Frames(3);
             if (mode == "benchmark") await Benchmark();
+            else if (mode == "step4-benchmark") await DepthBenchmark();
+            else if (mode == "step4")
+            {
+                await DepthPassiveChecks();
+                if (gpu) await DepthPixelChecks();
+                await DepthPreviews();
+                await DepthLiveChecks();
+            }
             else
             {
                 await PassiveChecks();
@@ -59,34 +75,91 @@ public partial class VerificationRunner : Node
         }
         finally
         {
-            if (viewer != null && IsInstanceValid(viewer))
+            try
             {
-                try { await viewer.StopSimulationAsync().WaitAsync(TimeSpan.FromSeconds(10)); }
-                catch (Exception ex) { failures++; checks.Add(new { name = "shutdown", passed = false, error = ex.Message }); }
+                if (viewer != null && IsInstanceValid(viewer))
+                {
+                    try { await viewer.StopSimulationAsync().WaitAsync(TimeSpan.FromSeconds(10)); }
+                    catch (Exception ex) { failures++; checks.Add(new { name = "shutdown", passed = false, error = ex.Message }); }
+                }
+                if (outputValidated)
+                {
+                    var assemblyHashes = new Dictionary<string, string>();
+                    var assemblyInfo = new List<object>();
+                    foreach (Assembly assembly in new[] { typeof(VerificationRunner).Assembly, typeof(Board).Assembly, typeof(DnaCommon).Assembly })
+                    {
+                        try
+                        {
+                            var identity = CaptureAssemblyIdentity(assembly, root);
+                            assemblyHashes.Add(identity.Name, identity.Sha256);
+                            assemblyInfo.Add(identity.Detail);
+                        }
+                        catch (Exception ex)
+                        {
+                            failures++;
+                            checks.Add(new { name = "loaded assembly identity: " + assembly.GetName().Name, passed = false, error = ex.ToString() });
+                            GD.PushError(ex.ToString());
+                        }
+                    }
+                    var report = new { atUtc = DateTimeOffset.UtcNow, mode, ok = failures == 0, failures,
+                        backend = DisplayServer.GetName(), adapter = RenderingServer.GetVideoAdapterName(),
+                        runtime = System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription,
+                        assemblySha256 = assemblyHashes, assemblyInfo,
+                        engine = Engine.GetVersionInfo()["string"].AsString(), gpuExecuted = gpu,
+                        externalProcessWatchdogRequired = true,
+                        limits = "Synthetic viewer fixtures and bounded engineering checks. No ecological trial. Frame intervals are main-loop observations, not hardware presentation timings. UI timing covers injected Godot input/signals, not physical mouse-to-photon latency. Assembly hashes identify files whose metadata MVID matches the loaded module; they are not hashes of loaded memory. In-scene waits cannot time out a stalled main loop; the launcher must enforce an external process deadline.",
+                        checks, measurements };
+                    File.WriteAllText(output, JsonSerializer.Serialize(report, new JsonSerializerOptions { WriteIndented = true }) + "\n");
+                    GD.Print($"GENEPOOL_VERIFICATION {(failures == 0 ? "PASS" : "FAIL")} {mode}: {output}");
+                }
             }
-            if (outputValidated)
+            catch (Exception ex)
             {
-                var report = new { atUtc = DateTimeOffset.UtcNow, mode, ok = failures == 0, failures,
-                    backend = DisplayServer.GetName(), adapter = RenderingServer.GetVideoAdapterName(),
-                    runtime = System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription,
-                    engine = Engine.GetVersionInfo()["string"].AsString(), gpuExecuted = gpu,
-                    externalProcessWatchdogRequired = true,
-                    limits = "Synthetic viewer fixtures and bounded engineering checks. No ecological trial. Frame intervals are main-loop observations, not hardware presentation timings. UI timing covers injected Godot input/signals, not physical mouse-to-photon latency. In-scene waits cannot time out a stalled main loop; the launcher must enforce an external process deadline.",
-                    checks, measurements };
-                File.WriteAllText(output, JsonSerializer.Serialize(report, new JsonSerializerOptions { WriteIndented = true }) + "\n");
-                GD.Print($"GENEPOOL_VERIFICATION {(failures == 0 ? "PASS" : "FAIL")} {mode}: {output}");
+                failures++;
+                GD.PushError("Verification report failed: " + ex);
+                if (outputValidated)
+                {
+                    try { File.WriteAllText(output, JsonSerializer.Serialize(new { atUtc = DateTimeOffset.UtcNow, mode, ok = false, failures, reportError = ex.ToString(), checks, measurements }) + "\n"); }
+                    catch (Exception writeError) { GD.PushError("Failure report could not be written: " + writeError.Message); }
+                }
             }
-            GetTree().Quit(failures == 0 ? 0 : 1);
+            finally { GetTree().Quit(failures == 0 ? 0 : 1); }
         }
     }
 
-    private Main NewViewer(bool passive)
+    private static (string Name, string Sha256, object Detail) CaptureAssemblyIdentity(Assembly assembly, string root)
+    {
+        string name = assembly.GetName().Name ?? throw new InvalidOperationException("Loaded assembly has no name.");
+        string location = assembly.Location;
+        bool locationEmpty = string.IsNullOrEmpty(location);
+        string path = locationEmpty
+            ? Path.Combine(root, "Fistnet.Genepool.Godot", ".godot", "mono", "temp", "bin", "Debug", name + ".dll")
+            : location;
+        byte[] bytes = File.ReadAllBytes(path);
+        using var stream = new MemoryStream(bytes, writable: false);
+        using var pe = new PEReader(stream);
+        MetadataReader metadata = pe.GetMetadataReader();
+        Guid fileModuleVersionId = metadata.GetGuid(metadata.GetModuleDefinition().Mvid);
+        Guid loadedModuleVersionId = assembly.ManifestModule.ModuleVersionId;
+        if (fileModuleVersionId != loadedModuleVersionId)
+            throw new InvalidOperationException($"Assembly {name} file MVID {fileModuleVersionId} does not match loaded MVID {loadedModuleVersionId}: {path}");
+        string sha256 = Convert.ToHexString(SHA256.HashData(bytes));
+        return (name, sha256, new { name, path, location, locationEmpty,
+            identityMethod = locationEmpty ? "expected Debug file matched loaded module MVID" : "assembly-location file matched loaded module MVID",
+            targetFramework = assembly.GetCustomAttribute<TargetFrameworkAttribute>()?.FrameworkName,
+            configuration = assembly.GetCustomAttribute<AssemblyConfigurationAttribute>()?.Configuration,
+            fileModuleVersionId, loadedModuleVersionId, sha256 });
+    }
+
+    private Main NewViewer(bool passive, int initialPopulationPercent = 0)
     {
         Main main = GD.Load<PackedScene>("res://Scenes/Main.tscn").Instantiate<Main>();
         main.PassiveMode = passive;
         if (!passive) main.InitialOptions = new SimulationRunOptions
-            { Mode = SimulationMode.DeterministicReference, Seed = 29, InitialPopulationPercent = 0 };
+            { Mode = SimulationMode.DeterministicReference, Seed = 29, InitialPopulationPercent = initialPopulationPercent };
         AddChild(main);
+        // Preserve the original renderer's regression and performance baselines explicitly.
+        main.SetViewMode(2);
         return main;
     }
 

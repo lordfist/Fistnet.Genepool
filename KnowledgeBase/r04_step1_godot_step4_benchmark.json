@@ -1,0 +1,255 @@
+{
+  "atUtc": "2026-09-09T11:46:52.4507441+00:00",
+  "mode": "step4-benchmark",
+  "ok": true,
+  "failures": 0,
+  "backend": "Windows",
+  "adapter": "AMD Radeon RX 6800",
+  "runtime": ".NET 10.0.12",
+  "assemblySha256": {
+    "Fistnet.Genepool.Godot": "C539CFFDCEAD4DCE92BBD45B9D7D3B1949075AC15651B6699E693722BD8B1BD8",
+    "Fistnet.Genepool.Control": "19D3B2C237AA952763F49AD46BC54AC21E9700AD30710BAE43B41FB97836C9CB",
+    "Fistnet.Genepool.Dna": "989A1519177BDBE0AB2398D011B206661BFF965529060A7B37C816B017CF306D"
+  },
+  "assemblyInfo": [
+    {
+      "name": "Fistnet.Genepool.Godot",
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\.godot\\mono\\temp\\bin\\Debug\\Fistnet.Genepool.Godot.dll",
+      "location": "",
+      "locationEmpty": true,
+      "identityMethod": "expected Debug file matched loaded module MVID",
+      "targetFramework": ".NETCoreApp,Version=v10.0",
+      "configuration": "Debug",
+      "fileModuleVersionId": "d9547bce-cbce-4b78-93e0-3b3f9953c0cf",
+      "loadedModuleVersionId": "d9547bce-cbce-4b78-93e0-3b3f9953c0cf",
+      "sha256": "C539CFFDCEAD4DCE92BBD45B9D7D3B1949075AC15651B6699E693722BD8B1BD8"
+    },
+    {
+      "name": "Fistnet.Genepool.Control",
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\.godot\\mono\\temp\\bin\\Debug\\Fistnet.Genepool.Control.dll",
+      "location": "",
+      "locationEmpty": true,
+      "identityMethod": "expected Debug file matched loaded module MVID",
+      "targetFramework": ".NETCoreApp,Version=v10.0",
+      "configuration": "",
+      "fileModuleVersionId": "0a4bd072-1d30-4429-8721-e1a5bebd6b0f",
+      "loadedModuleVersionId": "0a4bd072-1d30-4429-8721-e1a5bebd6b0f",
+      "sha256": "19D3B2C237AA952763F49AD46BC54AC21E9700AD30710BAE43B41FB97836C9CB"
+    },
+    {
+      "name": "Fistnet.Genepool.Dna",
+      "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\.godot\\mono\\temp\\bin\\Debug\\Fistnet.Genepool.Dna.dll",
+      "location": "",
+      "locationEmpty": true,
+      "identityMethod": "expected Debug file matched loaded module MVID",
+      "targetFramework": ".NETCoreApp,Version=v10.0",
+      "configuration": "",
+      "fileModuleVersionId": "e8a5daff-4f2a-49b0-aec2-bb8db20157df",
+      "loadedModuleVersionId": "e8a5daff-4f2a-49b0-aec2-bb8db20157df",
+      "sha256": "989A1519177BDBE0AB2398D011B206661BFF965529060A7B37C816B017CF306D"
+    }
+  ],
+  "engine": "4.7.2-stable (official)",
+  "gpuExecuted": true,
+  "externalProcessWatchdogRequired": true,
+  "limits": "Synthetic viewer fixtures and bounded engineering checks. No ecological trial. Frame intervals are main-loop observations, not hardware presentation timings. UI timing covers injected Godot input/signals, not physical mouse-to-photon latency. Assembly hashes identify files whose metadata MVID matches the loaded module; they are not hashes of loaded memory. In-scene waits cannot time out a stalled main loop; the launcher must enforce an external process deadline.",
+  "checks": [
+    {
+      "name": "depth benchmark sample coverage population 0 detail 1",
+      "passed": true,
+      "detail": "7.016s"
+    },
+    {
+      "name": "depth benchmark replay coverage population 0 detail 1",
+      "passed": true,
+      "detail": "70/70; skipped 0"
+    },
+    {
+      "name": "depth benchmark frame budget population 0 detail 1",
+      "passed": true,
+      "detail": "p95 16.69ms"
+    },
+    {
+      "name": "depth benchmark sample coverage population 1000 detail 1",
+      "passed": true,
+      "detail": "7.016s"
+    },
+    {
+      "name": "depth benchmark replay coverage population 1000 detail 1",
+      "passed": true,
+      "detail": "70/70; skipped 0"
+    },
+    {
+      "name": "depth benchmark frame budget population 1000 detail 1",
+      "passed": true,
+      "detail": "p95 16.81ms"
+    },
+    {
+      "name": "depth benchmark sample coverage population 10000 detail 1",
+      "passed": true,
+      "detail": "7.017s"
+    },
+    {
+      "name": "depth benchmark replay coverage population 10000 detail 1",
+      "passed": true,
+      "detail": "70/70; skipped 0"
+    },
+    {
+      "name": "depth benchmark frame budget population 10000 detail 1",
+      "passed": true,
+      "detail": "p95 16.74ms"
+    },
+    {
+      "name": "depth benchmark sample coverage population 10000 detail 3",
+      "passed": true,
+      "detail": "7.016s"
+    },
+    {
+      "name": "depth benchmark replay coverage population 10000 detail 3",
+      "passed": true,
+      "detail": "70/70; skipped 0"
+    },
+    {
+      "name": "depth benchmark frame budget population 10000 detail 3",
+      "passed": true,
+      "detail": "p95 16.69ms"
+    }
+  ],
+  "measurements": [
+    {
+      "kind": "depth_renderer",
+      "population": 0,
+      "detailLevel": 1,
+      "angled": true,
+      "width": 1920,
+      "height": 1080,
+      "visibleFoodInstances": 10000,
+      "visibleOrganismInstances": 0,
+      "visibleActionCues": 0,
+      "requestedWarmupSeconds": 3,
+      "requestedSampleSeconds": 7,
+      "actualSampleSeconds": 7.0163892,
+      "requestedSnapshotHz": 10,
+      "expectedSampleSnapshots": 70,
+      "sampleSnapshotsReplayed": 70,
+      "sampleSnapshotsSkipped": 0,
+      "frames": 421,
+      "averageFps": 60.00237273040669,
+      "p95FrameMilliseconds": 16.6858,
+      "maxFrameMilliseconds": 16.8948,
+      "p95UploadMilliseconds": 4.9782,
+      "sampleCoverageComplete": true,
+      "replayCoverageComplete": true,
+      "frameBudgetPassed": true,
+      "simulationCalculationIncluded": false,
+      "notes": "Detached snapshots. Dense detail3 includes full 10000-outcome batches at10Hz; no spatial event cap. Intervals include replay stamping and UI upload, but exclude simulation calculation. Main-loop observations, not hardware presentation timings."
+    },
+    {
+      "kind": "depth_renderer",
+      "population": 1000,
+      "detailLevel": 1,
+      "angled": true,
+      "width": 1920,
+      "height": 1080,
+      "visibleFoodInstances": 10000,
+      "visibleOrganismInstances": 1000,
+      "visibleActionCues": 0,
+      "requestedWarmupSeconds": 3,
+      "requestedSampleSeconds": 7,
+      "actualSampleSeconds": 7.0163616,
+      "requestedSnapshotHz": 10,
+      "expectedSampleSnapshots": 70,
+      "sampleSnapshotsReplayed": 70,
+      "sampleSnapshotsSkipped": 0,
+      "frames": 421,
+      "averageFps": 60.002608759502934,
+      "p95FrameMilliseconds": 16.8074,
+      "maxFrameMilliseconds": 25.2224,
+      "p95UploadMilliseconds": 5.4785,
+      "sampleCoverageComplete": true,
+      "replayCoverageComplete": true,
+      "frameBudgetPassed": true,
+      "simulationCalculationIncluded": false,
+      "notes": "Detached snapshots. Dense detail3 includes full 10000-outcome batches at10Hz; no spatial event cap. Intervals include replay stamping and UI upload, but exclude simulation calculation. Main-loop observations, not hardware presentation timings."
+    },
+    {
+      "kind": "depth_renderer",
+      "population": 10000,
+      "detailLevel": 1,
+      "angled": true,
+      "width": 1920,
+      "height": 1080,
+      "visibleFoodInstances": 10000,
+      "visibleOrganismInstances": 10000,
+      "visibleActionCues": 0,
+      "requestedWarmupSeconds": 3,
+      "requestedSampleSeconds": 7,
+      "actualSampleSeconds": 7.0165182,
+      "requestedSnapshotHz": 10,
+      "expectedSampleSnapshots": 70,
+      "sampleSnapshotsReplayed": 70,
+      "sampleSnapshotsSkipped": 0,
+      "frames": 421,
+      "averageFps": 60.00126957555672,
+      "p95FrameMilliseconds": 16.7387,
+      "maxFrameMilliseconds": 22.918,
+      "p95UploadMilliseconds": 5.7691,
+      "sampleCoverageComplete": true,
+      "replayCoverageComplete": true,
+      "frameBudgetPassed": true,
+      "simulationCalculationIncluded": false,
+      "notes": "Detached snapshots. Dense detail3 includes full 10000-outcome batches at10Hz; no spatial event cap. Intervals include replay stamping and UI upload, but exclude simulation calculation. Main-loop observations, not hardware presentation timings."
+    },
+    {
+      "kind": "depth_renderer",
+      "population": 10000,
+      "detailLevel": 3,
+      "angled": true,
+      "width": 1920,
+      "height": 1080,
+      "visibleFoodInstances": 258,
+      "visibleOrganismInstances": 258,
+      "visibleActionCues": 258,
+      "requestedWarmupSeconds": 3,
+      "requestedSampleSeconds": 7,
+      "actualSampleSeconds": 7.0163828,
+      "requestedSnapshotHz": 10,
+      "expectedSampleSnapshots": 70,
+      "sampleSnapshotsReplayed": 70,
+      "sampleSnapshotsSkipped": 0,
+      "frames": 421,
+      "averageFps": 60.002427461625956,
+      "p95FrameMilliseconds": 16.6916,
+      "maxFrameMilliseconds": 26.6409,
+      "p95UploadMilliseconds": 0.3953,
+      "sampleCoverageComplete": true,
+      "replayCoverageComplete": true,
+      "frameBudgetPassed": true,
+      "simulationCalculationIncluded": false,
+      "notes": "Detached snapshots. Dense detail3 includes full 10000-outcome batches at10Hz; no spatial event cap. Intervals include replay stamping and UI upload, but exclude simulation calculation. Main-loop observations, not hardware presentation timings."
+    }
+  ],
+  "process": {
+    "exitCode": 0,
+    "elapsedSeconds": 41.719,
+    "deadlineSeconds": 100,
+    "engineErrors": []
+  },
+  "target_framework": "net10.0-windows7.0",
+  "executed_configuration": "Debug",
+  "configuration_limit": "Godot verification scene loads Debug; solution Release is a separate ExportRelease compilation check.",
+  "loaded_assembly_identity_verified": true,
+  "expected_assembly_sha256": {
+    "Fistnet.Genepool.Godot": "c539cffdcead4dce92bbd45b9d7d3b1949075ac15651b6699e693722bd8b1bd8",
+    "Fistnet.Genepool.Control": "19d3b2c237aa952763f49ad46bc54ac21e9700ad30710bae43b41fb97836c9cb",
+    "Fistnet.Genepool.Dna": "989a1519177bdbe0ab2398d011b206661bff965529060a7b37c816b017cf306d"
+  },
+  "build_identity": {
+    "report": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r04_step1_builds.json",
+    "stage": "net10-debug",
+    "configuration": "Debug",
+    "report_sha256": "dc60e7a5099997032ae2f9013f158f0d9b0094a0036ee4eb6168ab32a93e3090",
+    "sources_verified": 122,
+    "outputs_verified": 5
+  }
+}

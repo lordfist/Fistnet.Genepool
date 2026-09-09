@@ -1,0 +1,2288 @@
+{
+  "actor": "Genepool Analyzer",
+  "issues": [
+    {
+      "stage": "initial-net9-debug-discovery",
+      "outcome": "Stopped before restore/build",
+      "error": [
+        "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets(93,5): error MSB4184: The expression \"[Microsoft.Build.Utilities.ToolLocationHelper]::GetPlatformSDKLocation(Windows, 7.0)\" cannot be evaluated. Access to the path 'C:\\Users\\lordf\\AppData\\Local\\Microsoft SDKs' is denied."
+      ],
+      "intervention": "Fixed by discovering installed Windows Kits root and passing supported Windows platform SDK properties; .NET SDK selection unchanged"
+    },
+    {
+      "stage": "second-net9-debug-build",
+      "outcome": "Locked restore passed; VS MSBuild compiled five projects but Godot SDK resolution failed",
+      "error": [
+        "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Fistnet.Genepool.Godot.csproj : error : Could not resolve SDK \"Godot.NET.Sdk\". Exactly one of the probing messages below indicates why we could not resolve the SDK. Investigate and resolve that message to correctly specify the SDK.",
+        "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Fistnet.Genepool.Godot.csproj : error :   C:\\Program Files\\dotnet\\sdk\\9.0.317\\Sdks\\Godot.NET.Sdk\\Sdk not found. Check that a recent enough .NET SDK is installed and/or increase the version specified in global.json.",
+        "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Fistnet.Genepool.Godot.csproj : error :   Failed to load NuGet settings. Failed to read NuGet.Config due to unauthorized access. Path: 'C:\\Users\\lordf\\AppData\\Roaming\\NuGet\\NuGet.Config'.",
+        "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Fistnet.Genepool.Godot.csproj : error :   MSB4276: The default SDK resolver failed to resolve SDK \"Godot.NET.Sdk\" because directory \"C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\MSBuild\\Sdks\\Godot.NET.Sdk\\Sdk\" did not exist.",
+        "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Godot\\Fistnet.Genepool.Godot.csproj : error MSB4236: The SDK 'Godot.NET.Sdk/4.7.2' specified could not be found."
+      ],
+      "intervention": "VS desktop NuGet SDK resolver requires normal supported user configuration access; authorized normal-access build passed. Helper now preflights Godot and documents resolver settings chain."
+    },
+    {
+      "stage": "net9-godot-benchmark-identity-report",
+      "outcome": "Failed at report/shutdown; 100-second watchdog terminated owned process",
+      "error": [
+        "ERROR: System.ArgumentException: The value cannot be an empty string. (Parameter 'path')",
+        "   at System.ArgumentException.ThrowNullOrEmptyException(String argument, String paramName)",
+        "   at System.IO.File.ReadAllBytes(String path)"
+      ],
+      "intervention": "Stream-loaded MVID/file-hash fix now passes all3 assembly identity checks and exits normally. Five console assembly bytes remained identical after Debug rebuild.",
+      "benchmark_pass_claimed": false
+    },
+    {
+      "stage": "net9-godot-benchmark-sandbox-certificate",
+      "outcome": "9 renderer checks and assembly identities passed, exit0; wrapper correctly failed on Godot root-certificate-store error",
+      "error": "ERROR: Failed to read the root certificate store.",
+      "intervention": "Run Godot checks with the same normal supported host access used for the earlier build, preserving strict engine-error checking"
+    },
+    {
+      "stage": "initial-net10-debug-reference-checks",
+      "outcome": "155/159 passed; four saved reference hash assertions failed before draw comparison",
+      "runtime": "10.0.12",
+      "failures": [
+        {
+          "name": "reference seed 11: repeatability and observer independence over 128 seasons",
+          "error": "System.InvalidOperationException: Part 3 changed accepted default reference state expected=9F48B02B3E1E752A8448BA87F703DD65CC77BAA5EB0AC3316145B8DFEFF600B6, actual=A79FDDD35A39CC83F3F5DBB880152F8F95FE49E55150A7DF4CEF37BA070DE81C"
+        },
+        {
+          "name": "reference seed 29: repeatability and observer independence over 128 seasons",
+          "error": "System.InvalidOperationException: Part 3 changed accepted default reference state expected=AB4EF8C91070F6C53AFB9FC2BB1217E3D61898FA3CE2BD660156181424A194E2, actual=9FA691B3D6FC9FE6BEDEAAF112F98DB11CAC66572356CB7B108E97C14C5199C9"
+        },
+        {
+          "name": "reference seed 47: repeatability and observer independence over 128 seasons",
+          "error": "System.InvalidOperationException: Part 3 changed accepted default reference state expected=E3A0251A828379FD3C11A594697467D31A0ED34E03E5711996B83C5D86B124E7, actual=9838969BF149DC5AC2E56943113845FA0E3DDF53F431B918DE6D82119108D0B5"
+        },
+        {
+          "name": "reference seed 83: repeatability and observer independence over 128 seasons",
+          "error": "System.InvalidOperationException: Part 3 changed accepted default reference state expected=0C6021B6F48DAF361B927E4BBF29F60FC0A1F46603796B4286449BF1AFB33A21, actual=B4AF8E7B4B82D712ECC984E01489A66243C3B89DD1CD2EF93281EEC864659BC3"
+        }
+      ],
+      "report_sha256": "9BADDB3B5643E700538B5D975007906092F6AB4487F2AEE2A52803C63D2BD595",
+      "intervention": "Complete four-seed raw snapshots proved type-label corelib version text was the only difference. Freeze only that exact identity in schema-v2 type labels; original hash expectations and simulation rules unchanged. Final Debug/Release regression results recorded separately."
+    },
+    {
+      "stage": "net10-winforms-runtime-label",
+      "outcome": "App started/responded/closed gracefully; helper incorrectly rejected comma-formatted native coreclr ProductVersion",
+      "error": "coreclr ProductVersion 10,0,1226,... differs from dotted managed servicing version10.0.12",
+      "intervention": "Parse loaded System.Private.CoreLib servicing version; retain original native module metadata and paths"
+    }
+  ],
+  "baseline": {
+    "console_Debug": {
+      "ok": true,
+      "target_framework": "net9.0-windows7.0",
+      "wall_seconds": 50.734,
+      "build_identity": {
+        "report": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r04_step1_builds.json",
+        "stage": "net9-debug",
+        "configuration": "Debug",
+        "report_sha256": "ede6dd6a2dd96277a52eb08c6d9c7b4628a558caa0db81080ae42abf7814f6c7",
+        "sources_verified": 122,
+        "outputs_verified": 8
+      },
+      "loaded_assembly_identity_verified": true,
+      "suite": {
+        "total": 159,
+        "passed": 159,
+        "failed": 0,
+        "seconds": 50.5962785,
+        "runtime": "9.0.20",
+        "assemblySha256": {
+          "Fistnet.Genepool.Tests": "FA36281E95C74876CEA2193DB82D785D1BE1E1F665B815C15E6C6EC2E2EB91F7",
+          "Fistnet.Genepool.Control": "9B21EC955C869D3F8E001BCCCB92E4D0E776EFE9636D177B039E5A08D63F8EA3",
+          "Fistnet.Genepool.Dna": "74C1163643580F051BA399E546B8AF47420F05B397B836EE4D9B9CC8AE1F8B34",
+          "Fistnet.Genepool.Visualization": "507F4D24F8465D004C8878A49DBED81E031586979F85E5939B263788FBD8BBE6",
+          "Fistnet.Genepool.App": "01F89CDC90645CF692819E08A0A91D611B9B2E5728F00861A2B074253FE9EB37"
+        },
+        "uiDiagnostics": {
+          "coverage": "Actual offscreen WinForms controls over detached true 0%, random 10%, and 100% start frames. Overlays off/on use explicitly synthetic selected movement plus birth/death/action marker geometry so empty-board overlays are exercised without altering world occupancy. Marker display lifetimes restart per sample. Two warm-up samples discarded per condition. Board/complete-form DrawToBitmap, forced detailed refresh, and programmatic selection measured separately; no physical input-to-display or owner visual acceptance claim.",
+          "measurements": [
+            {
+              "initialPopulationPercent": 0,
+              "Population": 0,
+              "retainedSamples": 20,
+              "boardDrawToBitmapP95Milliseconds": 3.7642,
+              "completeFormDrawToBitmapP95Milliseconds": 17.2779,
+              "detailedUiUpdateP95Milliseconds": 16.5419,
+              "selectionHandlerP95Milliseconds": 2.7176,
+              "boardPaintTargetMet": true,
+              "inputTargetMet": true
+            },
+            {
+              "initialPopulationPercent": 10,
+              "Population": 1043,
+              "retainedSamples": 20,
+              "boardDrawToBitmapP95Milliseconds": 3.8584,
+              "completeFormDrawToBitmapP95Milliseconds": 15.7769,
+              "detailedUiUpdateP95Milliseconds": 17.712,
+              "selectionHandlerP95Milliseconds": 2.8642,
+              "boardPaintTargetMet": true,
+              "inputTargetMet": true
+            },
+            {
+              "initialPopulationPercent": 100,
+              "Population": 10000,
+              "retainedSamples": 20,
+              "boardDrawToBitmapP95Milliseconds": 3.3445,
+              "completeFormDrawToBitmapP95Milliseconds": 14.0651,
+              "detailedUiUpdateP95Milliseconds": 15.5957,
+              "selectionHandlerP95Milliseconds": 2.5888,
+              "boardPaintTargetMet": true,
+              "inputTargetMet": true
+            }
+          ],
+          "slowWorker": {
+            "pauseHandlerAcknowledgmentMilliseconds": 1.2757,
+            "pauseClickToSettlementMilliseconds": 184.7846,
+            "displayedSettlementMilliseconds": 173.842,
+            "artificialBoundaryHoldAfterClickMilliseconds": 150,
+            "acknowledgmentTargetMet": true,
+            "coverage": "Real MainForm pause handler while its single simulation worker was held at a completed-season callback; no physical input latency claim."
+          }
+        },
+        "seasonObservationCost": {
+          "schema": "r03-step4-observation-cost-v1",
+          "complete": true,
+          "requestedPairs": 2,
+          "completedPairs": 2,
+          "population": 10000,
+          "warmupSeasons": 3,
+          "measuredSeasonsPerRun": 5,
+          "elapsedSeconds": 6.2882537,
+          "pairs": [
+            {
+              "repeat": 1,
+              "executionOrder": "off, on",
+              "observerOff": {
+                "Observed": false,
+                "SeasonMilliseconds": [
+                  159.9196,
+                  138.0839,
+                  138.7631,
+                  166.1558,
+                  147.4088
+                ],
+                "CaptureMilliseconds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "SeasonAllocatedBytes": [
+                  34601512,
+                  34598456,
+                  34598728,
+                  34598760,
+                  34598456
+                ],
+                "CaptureAllocatedBytes": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "Digest": "77A7D91B5FB95683B91566161A3D9DBBCD2763B1D23252DE7829E6DD7556ACD0",
+                "RandomState": "1CB75793",
+                "RandomDraws": 329992,
+                "Population": 10000,
+                "CompletedSeasons": 8
+              },
+              "observerOn": {
+                "Observed": true,
+                "SeasonMilliseconds": [
+                  172.4947,
+                  144.8466,
+                  172.2749,
+                  160.162,
+                  146.5414
+                ],
+                "CaptureMilliseconds": [
+                  4.4092,
+                  4.2729,
+                  4.4904,
+                  4.5798,
+                  4.4053
+                ],
+                "SeasonAllocatedBytes": [
+                  36842392,
+                  36844808,
+                  36841240,
+                  36841000,
+                  36839856
+                ],
+                "CaptureAllocatedBytes": [
+                  483120,
+                  483216,
+                  483136,
+                  483144,
+                  483152
+                ],
+                "Digest": "77A7D91B5FB95683B91566161A3D9DBBCD2763B1D23252DE7829E6DD7556ACD0",
+                "RandomState": "1CB75793",
+                "RandomDraws": 329992,
+                "Population": 10000,
+                "CompletedSeasons": 8
+              },
+              "meanSeasonOverheadMilliseconds": 9.197679999999991,
+              "meanSeasonOverheadPercent": 6.1290800649099975,
+              "meanCaptureMilliseconds": 4.43152,
+              "meanAdditionalSeasonAllocatedBytes": 2242676.8000000045,
+              "meanCaptureAllocatedBytes": 483153.6
+            },
+            {
+              "repeat": 2,
+              "executionOrder": "on, off",
+              "observerOff": {
+                "Observed": false,
+                "SeasonMilliseconds": [
+                  145.5335,
+                  152.1916,
+                  151.0146,
+                  174.3262,
+                  155.6259
+                ],
+                "CaptureMilliseconds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "SeasonAllocatedBytes": [
+                  34598456,
+                  34598472,
+                  34598800,
+                  34600528,
+                  34598456
+                ],
+                "CaptureAllocatedBytes": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "Digest": "77A7D91B5FB95683B91566161A3D9DBBCD2763B1D23252DE7829E6DD7556ACD0",
+                "RandomState": "1CB75793",
+                "RandomDraws": 329992,
+                "Population": 10000,
+                "CompletedSeasons": 8
+              },
+              "observerOn": {
+                "Observed": true,
+                "SeasonMilliseconds": [
+                  162.7801,
+                  195.1545,
+                  150.1521,
+                  145.6952,
+                  240.8168
+                ],
+                "CaptureMilliseconds": [
+                  5.2365,
+                  4.9003,
+                  5.5667,
+                  4.6116,
+                  4.2642
+                ],
+                "SeasonAllocatedBytes": [
+                  36839592,
+                  36841264,
+                  36839576,
+                  36839576,
+                  36841256
+                ],
+                "CaptureAllocatedBytes": [
+                  483120,
+                  483216,
+                  483136,
+                  483144,
+                  483152
+                ],
+                "Digest": "77A7D91B5FB95683B91566161A3D9DBBCD2763B1D23252DE7829E6DD7556ACD0",
+                "RandomState": "1CB75793",
+                "RandomDraws": 329992,
+                "Population": 10000,
+                "CompletedSeasons": 8
+              },
+              "meanSeasonOverheadMilliseconds": 23.18137999999999,
+              "meanSeasonOverheadPercent": 14.88482349499507,
+              "meanCaptureMilliseconds": 4.91586,
+              "meanAdditionalSeasonAllocatedBytes": 2241310.3999999985,
+              "meanCaptureAllocatedBytes": 483153.6
+            }
+          ],
+          "partial": [],
+          "boundary": "10-second cooperative budget checked before setup and between completed seasons. An already-running season finishes; no timing threshold determines test success.",
+          "workload": "Deterministic reference mode, serial cell phases, seed 17293, 10000 occupied cells, fixed Move/Self repertoire, no births/deaths/movement. No selected organism. First three seasons and captures discarded; five measured seasons per run. Pair order alternates; setup, checks and compact digest are outside phase measurements.",
+          "allocationScope": "GC.GetAllocatedBytesForCurrentThread; fixture engine and collector both execute synchronously on this thread. No forced GC. Engine phase includes BeginSeason and observation callbacks; capture is measured separately.",
+          "verificationScope": "Paired digest compares every cell's food and occupant ID/position/health/reserves/age/sequence age/lifetime/DNA code and all gene slot/type/target/codes, plus board season/rule and RNG state/draw count. It excludes learning internals and does not replace the separate full-state passivity regression.",
+          "limitations": "Synthetic full occupancy with one action type measures this host/run only. It does not establish mixed-action or long-history throughput, and percentage differences can include JIT, GC and other host activity. Incomplete pairs are reported without comparison."
+        }
+      },
+      "scenarios": [
+        {
+          "Mode": "DeterministicReference",
+          "Seed": 11,
+          "Seasons": 128,
+          "InitialPopulationPercent": 10,
+          "RandomAlgorithm": "xorshift32-v1",
+          "RandomDraws": 843754,
+          "StateSha256": "9F48B02B3E1E752A8448BA87F703DD65CC77BAA5EB0AC3316145B8DFEFF600B6",
+          "FirstExtinctionSeason": null,
+          "Seconds": 2.2626865,
+          "Runtime": "9.0.20",
+          "AssemblySha256": {
+            "Fistnet.Genepool.Tests": "FA36281E95C74876CEA2193DB82D785D1BE1E1F665B815C15E6C6EC2E2EB91F7",
+            "Fistnet.Genepool.Control": "9B21EC955C869D3F8E001BCCCB92E4D0E776EFE9636D177B039E5A08D63F8EA3",
+            "Fistnet.Genepool.Dna": "74C1163643580F051BA399E546B8AF47420F05B397B836EE4D9B9CC8AE1F8B34",
+            "Fistnet.Genepool.Visualization": "507F4D24F8465D004C8878A49DBED81E031586979F85E5939B263788FBD8BBE6",
+            "Fistnet.Genepool.App": "01F89CDC90645CF692819E08A0A91D611B9B2E5728F00861A2B074253FE9EB37"
+          }
+        },
+        {
+          "Mode": "DeterministicReference",
+          "Seed": 29,
+          "Seasons": 128,
+          "InitialPopulationPercent": 10,
+          "RandomAlgorithm": "xorshift32-v1",
+          "RandomDraws": 935898,
+          "StateSha256": "AB4EF8C91070F6C53AFB9FC2BB1217E3D61898FA3CE2BD660156181424A194E2",
+          "FirstExtinctionSeason": null,
+          "Seconds": 2.1047696,
+          "Runtime": "9.0.20",
+          "AssemblySha256": {
+            "Fistnet.Genepool.Tests": "FA36281E95C74876CEA2193DB82D785D1BE1E1F665B815C15E6C6EC2E2EB91F7",
+            "Fistnet.Genepool.Control": "9B21EC955C869D3F8E001BCCCB92E4D0E776EFE9636D177B039E5A08D63F8EA3",
+            "Fistnet.Genepool.Dna": "74C1163643580F051BA399E546B8AF47420F05B397B836EE4D9B9CC8AE1F8B34",
+            "Fistnet.Genepool.Visualization": "507F4D24F8465D004C8878A49DBED81E031586979F85E5939B263788FBD8BBE6",
+            "Fistnet.Genepool.App": "01F89CDC90645CF692819E08A0A91D611B9B2E5728F00861A2B074253FE9EB37"
+          }
+        },
+        {
+          "Mode": "DeterministicReference",
+          "Seed": 47,
+          "Seasons": 128,
+          "InitialPopulationPercent": 10,
+          "RandomAlgorithm": "xorshift32-v1",
+          "RandomDraws": 868307,
+          "StateSha256": "E3A0251A828379FD3C11A594697467D31A0ED34E03E5711996B83C5D86B124E7",
+          "FirstExtinctionSeason": null,
+          "Seconds": 1.8113753,
+          "Runtime": "9.0.20",
+          "AssemblySha256": {
+            "Fistnet.Genepool.Tests": "FA36281E95C74876CEA2193DB82D785D1BE1E1F665B815C15E6C6EC2E2EB91F7",
+            "Fistnet.Genepool.Control": "9B21EC955C869D3F8E001BCCCB92E4D0E776EFE9636D177B039E5A08D63F8EA3",
+            "Fistnet.Genepool.Dna": "74C1163643580F051BA399E546B8AF47420F05B397B836EE4D9B9CC8AE1F8B34",
+            "Fistnet.Genepool.Visualization": "507F4D24F8465D004C8878A49DBED81E031586979F85E5939B263788FBD8BBE6",
+            "Fistnet.Genepool.App": "01F89CDC90645CF692819E08A0A91D611B9B2E5728F00861A2B074253FE9EB37"
+          }
+        },
+        {
+          "Mode": "DeterministicReference",
+          "Seed": 83,
+          "Seasons": 128,
+          "InitialPopulationPercent": 10,
+          "RandomAlgorithm": "xorshift32-v1",
+          "RandomDraws": 840616,
+          "StateSha256": "0C6021B6F48DAF361B927E4BBF29F60FC0A1F46603796B4286449BF1AFB33A21",
+          "FirstExtinctionSeason": null,
+          "Seconds": 1.9225853,
+          "Runtime": "9.0.20",
+          "AssemblySha256": {
+            "Fistnet.Genepool.Tests": "FA36281E95C74876CEA2193DB82D785D1BE1E1F665B815C15E6C6EC2E2EB91F7",
+            "Fistnet.Genepool.Control": "9B21EC955C869D3F8E001BCCCB92E4D0E776EFE9636D177B039E5A08D63F8EA3",
+            "Fistnet.Genepool.Dna": "74C1163643580F051BA399E546B8AF47420F05B397B836EE4D9B9CC8AE1F8B34",
+            "Fistnet.Genepool.Visualization": "507F4D24F8465D004C8878A49DBED81E031586979F85E5939B263788FBD8BBE6",
+            "Fistnet.Genepool.App": "01F89CDC90645CF692819E08A0A91D611B9B2E5728F00861A2B074253FE9EB37"
+          }
+        }
+      ]
+    },
+    "console_Release": {
+      "ok": true,
+      "target_framework": "net9.0-windows7.0",
+      "wall_seconds": 40.75,
+      "build_identity": {
+        "report": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r04_step1_builds.json",
+        "stage": "net9-release",
+        "configuration": "Release",
+        "report_sha256": "b4edbf03de92aa70bc26f8074116a41bc74223b6f3c6341e35c1f50fe3d88f87",
+        "sources_verified": 122,
+        "outputs_verified": 8
+      },
+      "loaded_assembly_identity_verified": true,
+      "suite": {
+        "total": 159,
+        "passed": 159,
+        "failed": 0,
+        "seconds": 40.6266346,
+        "runtime": "9.0.20",
+        "assemblySha256": {
+          "Fistnet.Genepool.Tests": "114835CF863372FA15191C3608E7BF662F6531B6DA79AD172B03906BAF423766",
+          "Fistnet.Genepool.Control": "0E12C2EF94B6DC82092AA255EE9AE0DE0DF0E79630A741162BB81DC2856DB15D",
+          "Fistnet.Genepool.Dna": "81421979897220F1E5D7D342B1A70052A2739C736C19DA913CF0EEC683B9C014",
+          "Fistnet.Genepool.Visualization": "1A8F0F2CAA97364F327A45B761B774A76A155A8BD3CAE2120B447603AFAFAC6A",
+          "Fistnet.Genepool.App": "D29947CA58D3F3D52EBAE632873021EC8C7BC8B9FAB641C370F3D2D39C336D90"
+        },
+        "uiDiagnostics": {
+          "coverage": "Actual offscreen WinForms controls over detached true 0%, random 10%, and 100% start frames. Overlays off/on use explicitly synthetic selected movement plus birth/death/action marker geometry so empty-board overlays are exercised without altering world occupancy. Marker display lifetimes restart per sample. Two warm-up samples discarded per condition. Board/complete-form DrawToBitmap, forced detailed refresh, and programmatic selection measured separately; no physical input-to-display or owner visual acceptance claim.",
+          "measurements": [
+            {
+              "initialPopulationPercent": 0,
+              "Population": 0,
+              "retainedSamples": 20,
+              "boardDrawToBitmapP95Milliseconds": 3.7807,
+              "completeFormDrawToBitmapP95Milliseconds": 17.3532,
+              "detailedUiUpdateP95Milliseconds": 18.4487,
+              "selectionHandlerP95Milliseconds": 2.5313,
+              "boardPaintTargetMet": true,
+              "inputTargetMet": true
+            },
+            {
+              "initialPopulationPercent": 10,
+              "Population": 1043,
+              "retainedSamples": 20,
+              "boardDrawToBitmapP95Milliseconds": 3.5571,
+              "completeFormDrawToBitmapP95Milliseconds": 15.2354,
+              "detailedUiUpdateP95Milliseconds": 15.2645,
+              "selectionHandlerP95Milliseconds": 3,
+              "boardPaintTargetMet": true,
+              "inputTargetMet": true
+            },
+            {
+              "initialPopulationPercent": 100,
+              "Population": 10000,
+              "retainedSamples": 20,
+              "boardDrawToBitmapP95Milliseconds": 3.5516,
+              "completeFormDrawToBitmapP95Milliseconds": 15.8014,
+              "detailedUiUpdateP95Milliseconds": 15.5014,
+              "selectionHandlerP95Milliseconds": 2.4973,
+              "boardPaintTargetMet": true,
+              "inputTargetMet": true
+            }
+          ],
+          "slowWorker": {
+            "pauseHandlerAcknowledgmentMilliseconds": 1.6072,
+            "pauseClickToSettlementMilliseconds": 190.2218,
+            "displayedSettlementMilliseconds": 169.074,
+            "artificialBoundaryHoldAfterClickMilliseconds": 150,
+            "acknowledgmentTargetMet": true,
+            "coverage": "Real MainForm pause handler while its single simulation worker was held at a completed-season callback; no physical input latency claim."
+          }
+        },
+        "seasonObservationCost": {
+          "schema": "r03-step4-observation-cost-v1",
+          "complete": true,
+          "requestedPairs": 2,
+          "completedPairs": 2,
+          "population": 10000,
+          "warmupSeasons": 3,
+          "measuredSeasonsPerRun": 5,
+          "elapsedSeconds": 4.4479069,
+          "pairs": [
+            {
+              "repeat": 1,
+              "executionOrder": "off, on",
+              "observerOff": {
+                "Observed": false,
+                "SeasonMilliseconds": [
+                  104.4423,
+                  95.8075,
+                  91.5078,
+                  112.8894,
+                  132.3798
+                ],
+                "CaptureMilliseconds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "SeasonAllocatedBytes": [
+                  34598776,
+                  34599688,
+                  34598456,
+                  34598728,
+                  34599152
+                ],
+                "CaptureAllocatedBytes": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "Digest": "77A7D91B5FB95683B91566161A3D9DBBCD2763B1D23252DE7829E6DD7556ACD0",
+                "RandomState": "1CB75793",
+                "RandomDraws": 329992,
+                "Population": 10000,
+                "CompletedSeasons": 8
+              },
+              "observerOn": {
+                "Observed": true,
+                "SeasonMilliseconds": [
+                  91.0975,
+                  156.3567,
+                  115.7533,
+                  118.2435,
+                  130.469
+                ],
+                "CaptureMilliseconds": [
+                  3.1693,
+                  3.0526,
+                  2.963,
+                  3.078,
+                  2.6687
+                ],
+                "SeasonAllocatedBytes": [
+                  36840968,
+                  36841328,
+                  36843456,
+                  36842432,
+                  36839576
+                ],
+                "CaptureAllocatedBytes": [
+                  483120,
+                  483216,
+                  483136,
+                  483144,
+                  483152
+                ],
+                "Digest": "77A7D91B5FB95683B91566161A3D9DBBCD2763B1D23252DE7829E6DD7556ACD0",
+                "RandomState": "1CB75793",
+                "RandomDraws": 329992,
+                "Population": 10000,
+                "CompletedSeasons": 8
+              },
+              "meanSeasonOverheadMilliseconds": 14.97863999999997,
+              "meanSeasonOverheadPercent": 13.94589618246238,
+              "meanCaptureMilliseconds": 2.9863199999999996,
+              "meanAdditionalSeasonAllocatedBytes": 2242592,
+              "meanCaptureAllocatedBytes": 483153.6
+            },
+            {
+              "repeat": 2,
+              "executionOrder": "on, off",
+              "observerOff": {
+                "Observed": false,
+                "SeasonMilliseconds": [
+                  173.9423,
+                  70.9595,
+                  88.0771,
+                  75.2865,
+                  135.9877
+                ],
+                "CaptureMilliseconds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "SeasonAllocatedBytes": [
+                  34599080,
+                  34598456,
+                  34598456,
+                  34598456,
+                  34599600
+                ],
+                "CaptureAllocatedBytes": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "Digest": "77A7D91B5FB95683B91566161A3D9DBBCD2763B1D23252DE7829E6DD7556ACD0",
+                "RandomState": "1CB75793",
+                "RandomDraws": 329992,
+                "Population": 10000,
+                "CompletedSeasons": 8
+              },
+              "observerOn": {
+                "Observed": true,
+                "SeasonMilliseconds": [
+                  88.4303,
+                  84.0829,
+                  184.879,
+                  75.5085,
+                  86.3236
+                ],
+                "CaptureMilliseconds": [
+                  2.8851,
+                  2.7943,
+                  2.5143,
+                  2.4092,
+                  2.8109
+                ],
+                "SeasonAllocatedBytes": [
+                  36839576,
+                  36839576,
+                  36841304,
+                  36839576,
+                  36840968
+                ],
+                "CaptureAllocatedBytes": [
+                  483120,
+                  483216,
+                  483136,
+                  483144,
+                  483152
+                ],
+                "Digest": "77A7D91B5FB95683B91566161A3D9DBBCD2763B1D23252DE7829E6DD7556ACD0",
+                "RandomState": "1CB75793",
+                "RandomDraws": 329992,
+                "Population": 10000,
+                "CompletedSeasons": 8
+              },
+              "meanSeasonOverheadMilliseconds": -5.005759999999967,
+              "meanSeasonOverheadPercent": -4.598742754060536,
+              "meanCaptureMilliseconds": 2.68276,
+              "meanAdditionalSeasonAllocatedBytes": 2241390.3999999985,
+              "meanCaptureAllocatedBytes": 483153.6
+            }
+          ],
+          "partial": [],
+          "boundary": "10-second cooperative budget checked before setup and between completed seasons. An already-running season finishes; no timing threshold determines test success.",
+          "workload": "Deterministic reference mode, serial cell phases, seed 17293, 10000 occupied cells, fixed Move/Self repertoire, no births/deaths/movement. No selected organism. First three seasons and captures discarded; five measured seasons per run. Pair order alternates; setup, checks and compact digest are outside phase measurements.",
+          "allocationScope": "GC.GetAllocatedBytesForCurrentThread; fixture engine and collector both execute synchronously on this thread. No forced GC. Engine phase includes BeginSeason and observation callbacks; capture is measured separately.",
+          "verificationScope": "Paired digest compares every cell's food and occupant ID/position/health/reserves/age/sequence age/lifetime/DNA code and all gene slot/type/target/codes, plus board season/rule and RNG state/draw count. It excludes learning internals and does not replace the separate full-state passivity regression.",
+          "limitations": "Synthetic full occupancy with one action type measures this host/run only. It does not establish mixed-action or long-history throughput, and percentage differences can include JIT, GC and other host activity. Incomplete pairs are reported without comparison."
+        }
+      },
+      "scenarios": [
+        {
+          "Mode": "DeterministicReference",
+          "Seed": 11,
+          "Seasons": 128,
+          "InitialPopulationPercent": 10,
+          "RandomAlgorithm": "xorshift32-v1",
+          "RandomDraws": 843754,
+          "StateSha256": "9F48B02B3E1E752A8448BA87F703DD65CC77BAA5EB0AC3316145B8DFEFF600B6",
+          "FirstExtinctionSeason": null,
+          "Seconds": 2.3312853,
+          "Runtime": "9.0.20",
+          "AssemblySha256": {
+            "Fistnet.Genepool.Tests": "114835CF863372FA15191C3608E7BF662F6531B6DA79AD172B03906BAF423766",
+            "Fistnet.Genepool.Control": "0E12C2EF94B6DC82092AA255EE9AE0DE0DF0E79630A741162BB81DC2856DB15D",
+            "Fistnet.Genepool.Dna": "81421979897220F1E5D7D342B1A70052A2739C736C19DA913CF0EEC683B9C014",
+            "Fistnet.Genepool.Visualization": "1A8F0F2CAA97364F327A45B761B774A76A155A8BD3CAE2120B447603AFAFAC6A",
+            "Fistnet.Genepool.App": "D29947CA58D3F3D52EBAE632873021EC8C7BC8B9FAB641C370F3D2D39C336D90"
+          }
+        },
+        {
+          "Mode": "DeterministicReference",
+          "Seed": 29,
+          "Seasons": 128,
+          "InitialPopulationPercent": 10,
+          "RandomAlgorithm": "xorshift32-v1",
+          "RandomDraws": 935898,
+          "StateSha256": "AB4EF8C91070F6C53AFB9FC2BB1217E3D61898FA3CE2BD660156181424A194E2",
+          "FirstExtinctionSeason": null,
+          "Seconds": 1.5227789,
+          "Runtime": "9.0.20",
+          "AssemblySha256": {
+            "Fistnet.Genepool.Tests": "114835CF863372FA15191C3608E7BF662F6531B6DA79AD172B03906BAF423766",
+            "Fistnet.Genepool.Control": "0E12C2EF94B6DC82092AA255EE9AE0DE0DF0E79630A741162BB81DC2856DB15D",
+            "Fistnet.Genepool.Dna": "81421979897220F1E5D7D342B1A70052A2739C736C19DA913CF0EEC683B9C014",
+            "Fistnet.Genepool.Visualization": "1A8F0F2CAA97364F327A45B761B774A76A155A8BD3CAE2120B447603AFAFAC6A",
+            "Fistnet.Genepool.App": "D29947CA58D3F3D52EBAE632873021EC8C7BC8B9FAB641C370F3D2D39C336D90"
+          }
+        },
+        {
+          "Mode": "DeterministicReference",
+          "Seed": 47,
+          "Seasons": 128,
+          "InitialPopulationPercent": 10,
+          "RandomAlgorithm": "xorshift32-v1",
+          "RandomDraws": 868307,
+          "StateSha256": "E3A0251A828379FD3C11A594697467D31A0ED34E03E5711996B83C5D86B124E7",
+          "FirstExtinctionSeason": null,
+          "Seconds": 1.1481394,
+          "Runtime": "9.0.20",
+          "AssemblySha256": {
+            "Fistnet.Genepool.Tests": "114835CF863372FA15191C3608E7BF662F6531B6DA79AD172B03906BAF423766",
+            "Fistnet.Genepool.Control": "0E12C2EF94B6DC82092AA255EE9AE0DE0DF0E79630A741162BB81DC2856DB15D",
+            "Fistnet.Genepool.Dna": "81421979897220F1E5D7D342B1A70052A2739C736C19DA913CF0EEC683B9C014",
+            "Fistnet.Genepool.Visualization": "1A8F0F2CAA97364F327A45B761B774A76A155A8BD3CAE2120B447603AFAFAC6A",
+            "Fistnet.Genepool.App": "D29947CA58D3F3D52EBAE632873021EC8C7BC8B9FAB641C370F3D2D39C336D90"
+          }
+        },
+        {
+          "Mode": "DeterministicReference",
+          "Seed": 83,
+          "Seasons": 128,
+          "InitialPopulationPercent": 10,
+          "RandomAlgorithm": "xorshift32-v1",
+          "RandomDraws": 840616,
+          "StateSha256": "0C6021B6F48DAF361B927E4BBF29F60FC0A1F46603796B4286449BF1AFB33A21",
+          "FirstExtinctionSeason": null,
+          "Seconds": 1.2140535,
+          "Runtime": "9.0.20",
+          "AssemblySha256": {
+            "Fistnet.Genepool.Tests": "114835CF863372FA15191C3608E7BF662F6531B6DA79AD172B03906BAF423766",
+            "Fistnet.Genepool.Control": "0E12C2EF94B6DC82092AA255EE9AE0DE0DF0E79630A741162BB81DC2856DB15D",
+            "Fistnet.Genepool.Dna": "81421979897220F1E5D7D342B1A70052A2739C736C19DA913CF0EEC683B9C014",
+            "Fistnet.Genepool.Visualization": "1A8F0F2CAA97364F327A45B761B774A76A155A8BD3CAE2120B447603AFAFAC6A",
+            "Fistnet.Genepool.App": "D29947CA58D3F3D52EBAE632873021EC8C7BC8B9FAB641C370F3D2D39C336D90"
+          }
+        }
+      ]
+    },
+    "console_debug_outputs_after_reporter_fix_match": {
+      "Fistnet.Genepool.Tests": true,
+      "Fistnet.Genepool.Control": true,
+      "Fistnet.Genepool.Dna": true,
+      "Fistnet.Genepool.Visualization": true,
+      "Fistnet.Genepool.App": true
+    },
+    "godot_benchmark": {
+      "ok": true,
+      "mode": "benchmark",
+      "runtime": ".NET 10.0.12",
+      "engine": "4.7.2-stable (official)",
+      "backend": "Windows",
+      "adapter": "AMD Radeon RX 6800",
+      "measurements": [
+        {
+          "population": 0,
+          "width": 1920,
+          "height": 1080,
+          "requestedWarmupSeconds": 5,
+          "requestedSampleSeconds": 10,
+          "actualSampleSeconds": 10.016268,
+          "sampleIntervalStartSeconds": 4.9929281,
+          "sampleIntervalEndSeconds": 15.0091961,
+          "requestedSnapshotHz": 10,
+          "sampleSnapshotsReplayed": 100,
+          "sampleSnapshotsSkipped": 0,
+          "expectedSampleSnapshots": 100,
+          "actualReplayHzDuringRequestedSample": 10,
+          "totalSnapshotsReplayed": 149,
+          "totalSnapshotsSkipped": 0,
+          "frames": 601,
+          "averageFps": 60.00238811501449,
+          "p95FrameMilliseconds": 16.8346,
+          "maxFrameMilliseconds": 17.2284,
+          "p95UploadMilliseconds": 0.8987,
+          "sampleCoverageComplete": true,
+          "replayCoverageComplete": true,
+          "frameBudgetPassed": true,
+          "simulationCalculationIncluded": false
+        },
+        {
+          "population": 1000,
+          "width": 1920,
+          "height": 1080,
+          "requestedWarmupSeconds": 5,
+          "requestedSampleSeconds": 10,
+          "actualSampleSeconds": 10.0162665,
+          "sampleIntervalStartSeconds": 4.9960845,
+          "sampleIntervalEndSeconds": 15.012351,
+          "requestedSnapshotHz": 10,
+          "sampleSnapshotsReplayed": 100,
+          "sampleSnapshotsSkipped": 0,
+          "expectedSampleSnapshots": 100,
+          "actualReplayHzDuringRequestedSample": 10,
+          "totalSnapshotsReplayed": 149,
+          "totalSnapshotsSkipped": 0,
+          "frames": 601,
+          "averageFps": 60.002397100756056,
+          "p95FrameMilliseconds": 16.88,
+          "maxFrameMilliseconds": 20.5802,
+          "p95UploadMilliseconds": 1.1084,
+          "sampleCoverageComplete": true,
+          "replayCoverageComplete": true,
+          "frameBudgetPassed": true,
+          "simulationCalculationIncluded": false
+        },
+        {
+          "population": 10000,
+          "width": 1920,
+          "height": 1080,
+          "requestedWarmupSeconds": 5,
+          "requestedSampleSeconds": 10,
+          "actualSampleSeconds": 10.0162686,
+          "sampleIntervalStartSeconds": 4.9870308,
+          "sampleIntervalEndSeconds": 15.0032994,
+          "requestedSnapshotHz": 10,
+          "sampleSnapshotsReplayed": 100,
+          "sampleSnapshotsSkipped": 0,
+          "expectedSampleSnapshots": 100,
+          "actualReplayHzDuringRequestedSample": 10,
+          "totalSnapshotsReplayed": 149,
+          "totalSnapshotsSkipped": 0,
+          "frames": 601,
+          "averageFps": 60.00238452071862,
+          "p95FrameMilliseconds": 17.0435,
+          "maxFrameMilliseconds": 21.4886,
+          "p95UploadMilliseconds": 1.399,
+          "sampleCoverageComplete": true,
+          "replayCoverageComplete": true,
+          "frameBudgetPassed": true,
+          "simulationCalculationIncluded": false
+        }
+      ],
+      "process": {
+        "exitCode": 0,
+        "elapsedSeconds": 46.625,
+        "deadlineSeconds": 100,
+        "engineErrors": []
+      },
+      "target_framework": "net9.0-windows7.0",
+      "executed_configuration": "Debug",
+      "build_identity": {
+        "report": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r04_step1_builds.json",
+        "stage": "net9-debug",
+        "configuration": "Debug",
+        "report_sha256": "1a17c039cda646f1319b1f7793df9015f94564eedf6cd5832be7cb02c4748f75",
+        "sources_verified": 122,
+        "outputs_verified": 5
+      },
+      "loaded_assembly_identity_verified": true,
+      "check_count": 9
+    },
+    "godot_step4-benchmark": {
+      "ok": true,
+      "mode": "step4-benchmark",
+      "runtime": ".NET 10.0.12",
+      "engine": "4.7.2-stable (official)",
+      "backend": "Windows",
+      "adapter": "AMD Radeon RX 6800",
+      "measurements": [
+        {
+          "kind": "depth_renderer",
+          "population": 0,
+          "detailLevel": 1,
+          "angled": true,
+          "width": 1920,
+          "height": 1080,
+          "visibleFoodInstances": 10000,
+          "visibleOrganismInstances": 0,
+          "visibleActionCues": 0,
+          "requestedWarmupSeconds": 3,
+          "requestedSampleSeconds": 7,
+          "actualSampleSeconds": 7.0163875,
+          "requestedSnapshotHz": 10,
+          "expectedSampleSnapshots": 70,
+          "sampleSnapshotsReplayed": 70,
+          "sampleSnapshotsSkipped": 0,
+          "frames": 421,
+          "averageFps": 60.00238726837706,
+          "p95FrameMilliseconds": 16.6793,
+          "maxFrameMilliseconds": 17.1213,
+          "p95UploadMilliseconds": 4.9322,
+          "sampleCoverageComplete": true,
+          "replayCoverageComplete": true,
+          "frameBudgetPassed": true,
+          "simulationCalculationIncluded": false,
+          "notes": "Detached snapshots. Dense detail3 includes full 10000-outcome batches at10Hz; no spatial event cap. Intervals include replay stamping and UI upload, but exclude simulation calculation. Main-loop observations, not hardware presentation timings."
+        },
+        {
+          "kind": "depth_renderer",
+          "population": 1000,
+          "detailLevel": 1,
+          "angled": true,
+          "width": 1920,
+          "height": 1080,
+          "visibleFoodInstances": 10000,
+          "visibleOrganismInstances": 1000,
+          "visibleActionCues": 0,
+          "requestedWarmupSeconds": 3,
+          "requestedSampleSeconds": 7,
+          "actualSampleSeconds": 7.0163888,
+          "requestedSnapshotHz": 10,
+          "expectedSampleSnapshots": 70,
+          "sampleSnapshotsReplayed": 70,
+          "sampleSnapshotsSkipped": 0,
+          "frames": 421,
+          "averageFps": 60.00237615110497,
+          "p95FrameMilliseconds": 16.6871,
+          "maxFrameMilliseconds": 24.8323,
+          "p95UploadMilliseconds": 5.3527,
+          "sampleCoverageComplete": true,
+          "replayCoverageComplete": true,
+          "frameBudgetPassed": true,
+          "simulationCalculationIncluded": false,
+          "notes": "Detached snapshots. Dense detail3 includes full 10000-outcome batches at10Hz; no spatial event cap. Intervals include replay stamping and UI upload, but exclude simulation calculation. Main-loop observations, not hardware presentation timings."
+        },
+        {
+          "kind": "depth_renderer",
+          "population": 10000,
+          "detailLevel": 1,
+          "angled": true,
+          "width": 1920,
+          "height": 1080,
+          "visibleFoodInstances": 10000,
+          "visibleOrganismInstances": 10000,
+          "visibleActionCues": 0,
+          "requestedWarmupSeconds": 3,
+          "requestedSampleSeconds": 7,
+          "actualSampleSeconds": 7.0164029,
+          "requestedSnapshotHz": 10,
+          "expectedSampleSnapshots": 70,
+          "sampleSnapshotsReplayed": 70,
+          "sampleSnapshotsSkipped": 0,
+          "frames": 421,
+          "averageFps": 60.002255571726074,
+          "p95FrameMilliseconds": 16.6827,
+          "maxFrameMilliseconds": 23.2056,
+          "p95UploadMilliseconds": 5.9814,
+          "sampleCoverageComplete": true,
+          "replayCoverageComplete": true,
+          "frameBudgetPassed": true,
+          "simulationCalculationIncluded": false,
+          "notes": "Detached snapshots. Dense detail3 includes full 10000-outcome batches at10Hz; no spatial event cap. Intervals include replay stamping and UI upload, but exclude simulation calculation. Main-loop observations, not hardware presentation timings."
+        },
+        {
+          "kind": "depth_renderer",
+          "population": 10000,
+          "detailLevel": 3,
+          "angled": true,
+          "width": 1920,
+          "height": 1080,
+          "visibleFoodInstances": 258,
+          "visibleOrganismInstances": 258,
+          "visibleActionCues": 258,
+          "requestedWarmupSeconds": 3,
+          "requestedSampleSeconds": 7,
+          "actualSampleSeconds": 7.0163845,
+          "requestedSnapshotHz": 10,
+          "expectedSampleSnapshots": 70,
+          "sampleSnapshotsReplayed": 70,
+          "sampleSnapshotsSkipped": 0,
+          "frames": 421,
+          "averageFps": 60.0024129236361,
+          "p95FrameMilliseconds": 16.6915,
+          "maxFrameMilliseconds": 26.8543,
+          "p95UploadMilliseconds": 0.3951,
+          "sampleCoverageComplete": true,
+          "replayCoverageComplete": true,
+          "frameBudgetPassed": true,
+          "simulationCalculationIncluded": false,
+          "notes": "Detached snapshots. Dense detail3 includes full 10000-outcome batches at10Hz; no spatial event cap. Intervals include replay stamping and UI upload, but exclude simulation calculation. Main-loop observations, not hardware presentation timings."
+        }
+      ],
+      "process": {
+        "exitCode": 0,
+        "elapsedSeconds": 41.75,
+        "deadlineSeconds": 100,
+        "engineErrors": []
+      },
+      "target_framework": "net9.0-windows7.0",
+      "executed_configuration": "Debug",
+      "build_identity": {
+        "report": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r04_step1_builds.json",
+        "stage": "net9-debug",
+        "configuration": "Debug",
+        "report_sha256": "1a17c039cda646f1319b1f7793df9015f94564eedf6cd5832be7cb02c4748f75",
+        "sources_verified": 122,
+        "outputs_verified": 5
+      },
+      "loaded_assembly_identity_verified": true,
+      "check_count": 12
+    }
+  },
+  "migrated": {
+    "console_Debug": {
+      "ok": true,
+      "target_framework": "net10.0-windows7.0",
+      "wall_seconds": 43.172,
+      "build_identity": {
+        "report": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r04_step1_builds.json",
+        "stage": "net10-debug",
+        "configuration": "Debug",
+        "report_sha256": "dc60e7a5099997032ae2f9013f158f0d9b0094a0036ee4eb6168ab32a93e3090",
+        "sources_verified": 122,
+        "outputs_verified": 8
+      },
+      "loaded_assembly_identity_verified": true,
+      "suite": {
+        "total": 159,
+        "passed": 159,
+        "failed": 0,
+        "seconds": 43.0449274,
+        "runtime": "10.0.12",
+        "assemblySha256": {
+          "Fistnet.Genepool.Tests": "CCA116514E8D5FA0A291070339B0E92850C33258B1368A24A4AB86AB079722AF",
+          "Fistnet.Genepool.Control": "19D3B2C237AA952763F49AD46BC54AC21E9700AD30710BAE43B41FB97836C9CB",
+          "Fistnet.Genepool.Dna": "989A1519177BDBE0AB2398D011B206661BFF965529060A7B37C816B017CF306D",
+          "Fistnet.Genepool.Visualization": "6F3410F3FAD488995671BF084C4360659E79399F57B3E2E04A3449C59CB8476C",
+          "Fistnet.Genepool.App": "A9CBB1E498CC68FC1295ABE660B2D1B72430C58F103CD7DF29EF4E327979E370"
+        },
+        "uiDiagnostics": {
+          "coverage": "Actual offscreen WinForms controls over detached true 0%, random 10%, and 100% start frames. Overlays off/on use explicitly synthetic selected movement plus birth/death/action marker geometry so empty-board overlays are exercised without altering world occupancy. Marker display lifetimes restart per sample. Two warm-up samples discarded per condition. Board/complete-form DrawToBitmap, forced detailed refresh, and programmatic selection measured separately; no physical input-to-display or owner visual acceptance claim.",
+          "measurements": [
+            {
+              "initialPopulationPercent": 0,
+              "Population": 0,
+              "retainedSamples": 20,
+              "boardDrawToBitmapP95Milliseconds": 3.2478,
+              "completeFormDrawToBitmapP95Milliseconds": 14.7905,
+              "detailedUiUpdateP95Milliseconds": 16.4933,
+              "selectionHandlerP95Milliseconds": 3.0966,
+              "boardPaintTargetMet": true,
+              "inputTargetMet": true
+            },
+            {
+              "initialPopulationPercent": 10,
+              "Population": 1043,
+              "retainedSamples": 20,
+              "boardDrawToBitmapP95Milliseconds": 3.2075,
+              "completeFormDrawToBitmapP95Milliseconds": 15.1517,
+              "detailedUiUpdateP95Milliseconds": 16.669,
+              "selectionHandlerP95Milliseconds": 3.2786,
+              "boardPaintTargetMet": true,
+              "inputTargetMet": true
+            },
+            {
+              "initialPopulationPercent": 100,
+              "Population": 10000,
+              "retainedSamples": 20,
+              "boardDrawToBitmapP95Milliseconds": 3.1701,
+              "completeFormDrawToBitmapP95Milliseconds": 13.5528,
+              "detailedUiUpdateP95Milliseconds": 16.4073,
+              "selectionHandlerP95Milliseconds": 2.7026,
+              "boardPaintTargetMet": true,
+              "inputTargetMet": true
+            }
+          ],
+          "slowWorker": {
+            "pauseHandlerAcknowledgmentMilliseconds": 1.3778,
+            "pauseClickToSettlementMilliseconds": 192.2105,
+            "displayedSettlementMilliseconds": 169.9626,
+            "artificialBoundaryHoldAfterClickMilliseconds": 150,
+            "acknowledgmentTargetMet": true,
+            "coverage": "Real MainForm pause handler while its single simulation worker was held at a completed-season callback; no physical input latency claim."
+          }
+        },
+        "seasonObservationCost": {
+          "schema": "r03-step4-observation-cost-v1",
+          "complete": true,
+          "requestedPairs": 2,
+          "completedPairs": 2,
+          "population": 10000,
+          "warmupSeasons": 3,
+          "measuredSeasonsPerRun": 5,
+          "elapsedSeconds": 5.397562,
+          "pairs": [
+            {
+              "repeat": 1,
+              "executionOrder": "off, on",
+              "observerOff": {
+                "Observed": false,
+                "SeasonMilliseconds": [
+                  102.3772,
+                  144.3172,
+                  126.3538,
+                  134.6807,
+                  138.0073
+                ],
+                "CaptureMilliseconds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "SeasonAllocatedBytes": [
+                  34598480,
+                  34602432,
+                  34598768,
+                  34598480,
+                  34598760
+                ],
+                "CaptureAllocatedBytes": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "Digest": "77A7D91B5FB95683B91566161A3D9DBBCD2763B1D23252DE7829E6DD7556ACD0",
+                "RandomState": "1CB75793",
+                "RandomDraws": 329992,
+                "Population": 10000,
+                "CompletedSeasons": 8
+              },
+              "observerOn": {
+                "Observed": true,
+                "SeasonMilliseconds": [
+                  141.762,
+                  176.6797,
+                  135.3202,
+                  149.3267,
+                  134.1791
+                ],
+                "CaptureMilliseconds": [
+                  4.5402,
+                  3.8567,
+                  3.7963,
+                  4.0964,
+                  3.9225
+                ],
+                "SeasonAllocatedBytes": [
+                  36839920,
+                  36841352,
+                  36839632,
+                  36841392,
+                  36841096
+                ],
+                "CaptureAllocatedBytes": [
+                  483120,
+                  483216,
+                  483136,
+                  483144,
+                  483152
+                ],
+                "Digest": "77A7D91B5FB95683B91566161A3D9DBBCD2763B1D23252DE7829E6DD7556ACD0",
+                "RandomState": "1CB75793",
+                "RandomDraws": 329992,
+                "Population": 10000,
+                "CompletedSeasons": 8
+              },
+              "meanSeasonOverheadMilliseconds": 18.306299999999965,
+              "meanSeasonOverheadPercent": 14.174751237424799,
+              "meanCaptureMilliseconds": 4.04242,
+              "meanAdditionalSeasonAllocatedBytes": 2241294.3999999985,
+              "meanCaptureAllocatedBytes": 483153.6
+            },
+            {
+              "repeat": 2,
+              "executionOrder": "on, off",
+              "observerOff": {
+                "Observed": false,
+                "SeasonMilliseconds": [
+                  132.463,
+                  130.9887,
+                  185.4808,
+                  100.4688,
+                  119.3764
+                ],
+                "CaptureMilliseconds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "SeasonAllocatedBytes": [
+                  34598784,
+                  34598760,
+                  34598840,
+                  34598480,
+                  34598784
+                ],
+                "CaptureAllocatedBytes": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "Digest": "77A7D91B5FB95683B91566161A3D9DBBCD2763B1D23252DE7829E6DD7556ACD0",
+                "RandomState": "1CB75793",
+                "RandomDraws": 329992,
+                "Population": 10000,
+                "CompletedSeasons": 8
+              },
+              "observerOn": {
+                "Observed": true,
+                "SeasonMilliseconds": [
+                  210.7096,
+                  104.9366,
+                  121.223,
+                  146.195,
+                  139.7203
+                ],
+                "CaptureMilliseconds": [
+                  3.9599,
+                  3.6987,
+                  3.8911,
+                  4.4388,
+                  3.5997
+                ],
+                "SeasonAllocatedBytes": [
+                  36841320,
+                  36839616,
+                  36841032,
+                  36844112,
+                  36840712
+                ],
+                "CaptureAllocatedBytes": [
+                  483120,
+                  483216,
+                  483136,
+                  483144,
+                  483152
+                ],
+                "Digest": "77A7D91B5FB95683B91566161A3D9DBBCD2763B1D23252DE7829E6DD7556ACD0",
+                "RandomState": "1CB75793",
+                "RandomDraws": 329992,
+                "Population": 10000,
+                "CompletedSeasons": 8
+              },
+              "meanSeasonOverheadMilliseconds": 10.801359999999988,
+              "meanSeasonOverheadPercent": 8.075448687957131,
+              "meanCaptureMilliseconds": 3.9176399999999996,
+              "meanAdditionalSeasonAllocatedBytes": 2242628.799999997,
+              "meanCaptureAllocatedBytes": 483153.6
+            }
+          ],
+          "partial": [],
+          "boundary": "10-second cooperative budget checked before setup and between completed seasons. An already-running season finishes; no timing threshold determines test success.",
+          "workload": "Deterministic reference mode, serial cell phases, seed 17293, 10000 occupied cells, fixed Move/Self repertoire, no births/deaths/movement. No selected organism. First three seasons and captures discarded; five measured seasons per run. Pair order alternates; setup, checks and compact digest are outside phase measurements.",
+          "allocationScope": "GC.GetAllocatedBytesForCurrentThread; fixture engine and collector both execute synchronously on this thread. No forced GC. Engine phase includes BeginSeason and observation callbacks; capture is measured separately.",
+          "verificationScope": "Paired digest compares every cell's food and occupant ID/position/health/reserves/age/sequence age/lifetime/DNA code and all gene slot/type/target/codes, plus board season/rule and RNG state/draw count. It excludes learning internals and does not replace the separate full-state passivity regression.",
+          "limitations": "Synthetic full occupancy with one action type measures this host/run only. It does not establish mixed-action or long-history throughput, and percentage differences can include JIT, GC and other host activity. Incomplete pairs are reported without comparison."
+        }
+      },
+      "scenarios": [
+        {
+          "Mode": "DeterministicReference",
+          "Seed": 11,
+          "Seasons": 128,
+          "InitialPopulationPercent": 10,
+          "RandomAlgorithm": "xorshift32-v1",
+          "RandomDraws": 843754,
+          "StateSha256": "9F48B02B3E1E752A8448BA87F703DD65CC77BAA5EB0AC3316145B8DFEFF600B6",
+          "FirstExtinctionSeason": null,
+          "Seconds": 2.1337166,
+          "Runtime": "10.0.12",
+          "AssemblySha256": {
+            "Fistnet.Genepool.Tests": "CCA116514E8D5FA0A291070339B0E92850C33258B1368A24A4AB86AB079722AF",
+            "Fistnet.Genepool.Control": "19D3B2C237AA952763F49AD46BC54AC21E9700AD30710BAE43B41FB97836C9CB",
+            "Fistnet.Genepool.Dna": "989A1519177BDBE0AB2398D011B206661BFF965529060A7B37C816B017CF306D",
+            "Fistnet.Genepool.Visualization": "6F3410F3FAD488995671BF084C4360659E79399F57B3E2E04A3449C59CB8476C",
+            "Fistnet.Genepool.App": "A9CBB1E498CC68FC1295ABE660B2D1B72430C58F103CD7DF29EF4E327979E370"
+          }
+        },
+        {
+          "Mode": "DeterministicReference",
+          "Seed": 29,
+          "Seasons": 128,
+          "InitialPopulationPercent": 10,
+          "RandomAlgorithm": "xorshift32-v1",
+          "RandomDraws": 935898,
+          "StateSha256": "AB4EF8C91070F6C53AFB9FC2BB1217E3D61898FA3CE2BD660156181424A194E2",
+          "FirstExtinctionSeason": null,
+          "Seconds": 1.7146907,
+          "Runtime": "10.0.12",
+          "AssemblySha256": {
+            "Fistnet.Genepool.Tests": "CCA116514E8D5FA0A291070339B0E92850C33258B1368A24A4AB86AB079722AF",
+            "Fistnet.Genepool.Control": "19D3B2C237AA952763F49AD46BC54AC21E9700AD30710BAE43B41FB97836C9CB",
+            "Fistnet.Genepool.Dna": "989A1519177BDBE0AB2398D011B206661BFF965529060A7B37C816B017CF306D",
+            "Fistnet.Genepool.Visualization": "6F3410F3FAD488995671BF084C4360659E79399F57B3E2E04A3449C59CB8476C",
+            "Fistnet.Genepool.App": "A9CBB1E498CC68FC1295ABE660B2D1B72430C58F103CD7DF29EF4E327979E370"
+          }
+        },
+        {
+          "Mode": "DeterministicReference",
+          "Seed": 47,
+          "Seasons": 128,
+          "InitialPopulationPercent": 10,
+          "RandomAlgorithm": "xorshift32-v1",
+          "RandomDraws": 868307,
+          "StateSha256": "E3A0251A828379FD3C11A594697467D31A0ED34E03E5711996B83C5D86B124E7",
+          "FirstExtinctionSeason": null,
+          "Seconds": 1.4575004,
+          "Runtime": "10.0.12",
+          "AssemblySha256": {
+            "Fistnet.Genepool.Tests": "CCA116514E8D5FA0A291070339B0E92850C33258B1368A24A4AB86AB079722AF",
+            "Fistnet.Genepool.Control": "19D3B2C237AA952763F49AD46BC54AC21E9700AD30710BAE43B41FB97836C9CB",
+            "Fistnet.Genepool.Dna": "989A1519177BDBE0AB2398D011B206661BFF965529060A7B37C816B017CF306D",
+            "Fistnet.Genepool.Visualization": "6F3410F3FAD488995671BF084C4360659E79399F57B3E2E04A3449C59CB8476C",
+            "Fistnet.Genepool.App": "A9CBB1E498CC68FC1295ABE660B2D1B72430C58F103CD7DF29EF4E327979E370"
+          }
+        },
+        {
+          "Mode": "DeterministicReference",
+          "Seed": 83,
+          "Seasons": 128,
+          "InitialPopulationPercent": 10,
+          "RandomAlgorithm": "xorshift32-v1",
+          "RandomDraws": 840616,
+          "StateSha256": "0C6021B6F48DAF361B927E4BBF29F60FC0A1F46603796B4286449BF1AFB33A21",
+          "FirstExtinctionSeason": null,
+          "Seconds": 1.4208939,
+          "Runtime": "10.0.12",
+          "AssemblySha256": {
+            "Fistnet.Genepool.Tests": "CCA116514E8D5FA0A291070339B0E92850C33258B1368A24A4AB86AB079722AF",
+            "Fistnet.Genepool.Control": "19D3B2C237AA952763F49AD46BC54AC21E9700AD30710BAE43B41FB97836C9CB",
+            "Fistnet.Genepool.Dna": "989A1519177BDBE0AB2398D011B206661BFF965529060A7B37C816B017CF306D",
+            "Fistnet.Genepool.Visualization": "6F3410F3FAD488995671BF084C4360659E79399F57B3E2E04A3449C59CB8476C",
+            "Fistnet.Genepool.App": "A9CBB1E498CC68FC1295ABE660B2D1B72430C58F103CD7DF29EF4E327979E370"
+          }
+        }
+      ]
+    },
+    "console_Release": {
+      "ok": true,
+      "target_framework": "net10.0-windows7.0",
+      "wall_seconds": 37.922,
+      "build_identity": {
+        "report": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r04_step1_builds.json",
+        "stage": "net10-release",
+        "configuration": "Release",
+        "report_sha256": "dc60e7a5099997032ae2f9013f158f0d9b0094a0036ee4eb6168ab32a93e3090",
+        "sources_verified": 122,
+        "outputs_verified": 8
+      },
+      "loaded_assembly_identity_verified": true,
+      "suite": {
+        "total": 159,
+        "passed": 159,
+        "failed": 0,
+        "seconds": 37.7867355,
+        "runtime": "10.0.12",
+        "assemblySha256": {
+          "Fistnet.Genepool.Tests": "1E366CE4B68B30487A2C597B0EA8394F8B39EE227E153E46DC8683C1F613D311",
+          "Fistnet.Genepool.Control": "A3A26DB89840A43E8244E27A5E8FA8E6CDE7FF97ADE4BA3A7040AC9E8530288F",
+          "Fistnet.Genepool.Dna": "9AF69628D907DD354D36EC2088BECB7FAA0502DDBDD75C8BF21140388AED9EC2",
+          "Fistnet.Genepool.Visualization": "2AAA679055F8AA0AD82B825DF794CFF0F4658ABE612398BA4F4A53040E56DE04",
+          "Fistnet.Genepool.App": "B06836E9BC4C4B2EE7D4C14D4BDC871DD3DBCC3F4E62F6ABF9CB35C71FD7E986"
+        },
+        "uiDiagnostics": {
+          "coverage": "Actual offscreen WinForms controls over detached true 0%, random 10%, and 100% start frames. Overlays off/on use explicitly synthetic selected movement plus birth/death/action marker geometry so empty-board overlays are exercised without altering world occupancy. Marker display lifetimes restart per sample. Two warm-up samples discarded per condition. Board/complete-form DrawToBitmap, forced detailed refresh, and programmatic selection measured separately; no physical input-to-display or owner visual acceptance claim.",
+          "measurements": [
+            {
+              "initialPopulationPercent": 0,
+              "Population": 0,
+              "retainedSamples": 20,
+              "boardDrawToBitmapP95Milliseconds": 3.2391,
+              "completeFormDrawToBitmapP95Milliseconds": 15.3341,
+              "detailedUiUpdateP95Milliseconds": 16.8262,
+              "selectionHandlerP95Milliseconds": 2.2902,
+              "boardPaintTargetMet": true,
+              "inputTargetMet": true
+            },
+            {
+              "initialPopulationPercent": 10,
+              "Population": 1043,
+              "retainedSamples": 20,
+              "boardDrawToBitmapP95Milliseconds": 3.2374,
+              "completeFormDrawToBitmapP95Milliseconds": 14.8287,
+              "detailedUiUpdateP95Milliseconds": 15.461,
+              "selectionHandlerP95Milliseconds": 2.3958,
+              "boardPaintTargetMet": true,
+              "inputTargetMet": true
+            },
+            {
+              "initialPopulationPercent": 100,
+              "Population": 10000,
+              "retainedSamples": 20,
+              "boardDrawToBitmapP95Milliseconds": 3.1807,
+              "completeFormDrawToBitmapP95Milliseconds": 14.0638,
+              "detailedUiUpdateP95Milliseconds": 15.353,
+              "selectionHandlerP95Milliseconds": 2.0578,
+              "boardPaintTargetMet": true,
+              "inputTargetMet": true
+            }
+          ],
+          "slowWorker": {
+            "pauseHandlerAcknowledgmentMilliseconds": 1.0394,
+            "pauseClickToSettlementMilliseconds": 180.2376,
+            "displayedSettlementMilliseconds": 159.2472,
+            "artificialBoundaryHoldAfterClickMilliseconds": 150,
+            "acknowledgmentTargetMet": true,
+            "coverage": "Real MainForm pause handler while its single simulation worker was held at a completed-season callback; no physical input latency claim."
+          }
+        },
+        "seasonObservationCost": {
+          "schema": "r03-step4-observation-cost-v1",
+          "complete": true,
+          "requestedPairs": 2,
+          "completedPairs": 2,
+          "population": 10000,
+          "warmupSeasons": 3,
+          "measuredSeasonsPerRun": 5,
+          "elapsedSeconds": 4.0593394,
+          "pairs": [
+            {
+              "repeat": 1,
+              "executionOrder": "off, on",
+              "observerOff": {
+                "Observed": false,
+                "SeasonMilliseconds": [
+                  118.2526,
+                  159.1726,
+                  83.3285,
+                  81.4194,
+                  97.1748
+                ],
+                "CaptureMilliseconds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "SeasonAllocatedBytes": [
+                  34598784,
+                  34598808,
+                  34598760,
+                  34598832,
+                  34602392
+                ],
+                "CaptureAllocatedBytes": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "Digest": "77A7D91B5FB95683B91566161A3D9DBBCD2763B1D23252DE7829E6DD7556ACD0",
+                "RandomState": "1CB75793",
+                "RandomDraws": 329992,
+                "Population": 10000,
+                "CompletedSeasons": 8
+              },
+              "observerOn": {
+                "Observed": true,
+                "SeasonMilliseconds": [
+                  124.7123,
+                  108.5696,
+                  76.5934,
+                  93.2478,
+                  99.1261
+                ],
+                "CaptureMilliseconds": [
+                  3.203,
+                  2.27,
+                  2.8444,
+                  2.6208,
+                  2.3013
+                ],
+                "SeasonAllocatedBytes": [
+                  36842480,
+                  36839616,
+                  36841032,
+                  36841064,
+                  36839904
+                ],
+                "CaptureAllocatedBytes": [
+                  483120,
+                  483216,
+                  483136,
+                  483144,
+                  483152
+                ],
+                "Digest": "77A7D91B5FB95683B91566161A3D9DBBCD2763B1D23252DE7829E6DD7556ACD0",
+                "RandomState": "1CB75793",
+                "RandomDraws": 329992,
+                "Population": 10000,
+                "CompletedSeasons": 8
+              },
+              "meanSeasonOverheadMilliseconds": -7.41973999999999,
+              "meanSeasonOverheadPercent": -6.8784359779652355,
+              "meanCaptureMilliseconds": 2.6478999999999995,
+              "meanAdditionalSeasonAllocatedBytes": 2241304,
+              "meanCaptureAllocatedBytes": 483153.6
+            },
+            {
+              "repeat": 2,
+              "executionOrder": "on, off",
+              "observerOff": {
+                "Observed": false,
+                "SeasonMilliseconds": [
+                  67.1898,
+                  90.9886,
+                  93.922,
+                  69.063,
+                  126.7262
+                ],
+                "CaptureMilliseconds": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "SeasonAllocatedBytes": [
+                  34598480,
+                  34598528,
+                  34598816,
+                  34598480,
+                  34599064
+                ],
+                "CaptureAllocatedBytes": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "Digest": "77A7D91B5FB95683B91566161A3D9DBBCD2763B1D23252DE7829E6DD7556ACD0",
+                "RandomState": "1CB75793",
+                "RandomDraws": 329992,
+                "Population": 10000,
+                "CompletedSeasons": 8
+              },
+              "observerOn": {
+                "Observed": true,
+                "SeasonMilliseconds": [
+                  67.9979,
+                  82.463,
+                  119.4752,
+                  98.7115,
+                  111.3063
+                ],
+                "CaptureMilliseconds": [
+                  2.2506,
+                  2.9761,
+                  2.677,
+                  2.3396,
+                  2.7366
+                ],
+                "SeasonAllocatedBytes": [
+                  36839616,
+                  36841032,
+                  36841352,
+                  36839944,
+                  36842496
+                ],
+                "CaptureAllocatedBytes": [
+                  483120,
+                  483216,
+                  483136,
+                  483144,
+                  483152
+                ],
+                "Digest": "77A7D91B5FB95683B91566161A3D9DBBCD2763B1D23252DE7829E6DD7556ACD0",
+                "RandomState": "1CB75793",
+                "RandomDraws": 329992,
+                "Population": 10000,
+                "CompletedSeasons": 8
+              },
+              "meanSeasonOverheadMilliseconds": 6.412859999999995,
+              "meanSeasonOverheadPercent": 7.158973997163587,
+              "meanCaptureMilliseconds": 2.59598,
+              "meanAdditionalSeasonAllocatedBytes": 2242214.3999999985,
+              "meanCaptureAllocatedBytes": 483153.6
+            }
+          ],
+          "partial": [],
+          "boundary": "10-second cooperative budget checked before setup and between completed seasons. An already-running season finishes; no timing threshold determines test success.",
+          "workload": "Deterministic reference mode, serial cell phases, seed 17293, 10000 occupied cells, fixed Move/Self repertoire, no births/deaths/movement. No selected organism. First three seasons and captures discarded; five measured seasons per run. Pair order alternates; setup, checks and compact digest are outside phase measurements.",
+          "allocationScope": "GC.GetAllocatedBytesForCurrentThread; fixture engine and collector both execute synchronously on this thread. No forced GC. Engine phase includes BeginSeason and observation callbacks; capture is measured separately.",
+          "verificationScope": "Paired digest compares every cell's food and occupant ID/position/health/reserves/age/sequence age/lifetime/DNA code and all gene slot/type/target/codes, plus board season/rule and RNG state/draw count. It excludes learning internals and does not replace the separate full-state passivity regression.",
+          "limitations": "Synthetic full occupancy with one action type measures this host/run only. It does not establish mixed-action or long-history throughput, and percentage differences can include JIT, GC and other host activity. Incomplete pairs are reported without comparison."
+        }
+      },
+      "scenarios": [
+        {
+          "Mode": "DeterministicReference",
+          "Seed": 11,
+          "Seasons": 128,
+          "InitialPopulationPercent": 10,
+          "RandomAlgorithm": "xorshift32-v1",
+          "RandomDraws": 843754,
+          "StateSha256": "9F48B02B3E1E752A8448BA87F703DD65CC77BAA5EB0AC3316145B8DFEFF600B6",
+          "FirstExtinctionSeason": null,
+          "Seconds": 1.9475299,
+          "Runtime": "10.0.12",
+          "AssemblySha256": {
+            "Fistnet.Genepool.Tests": "1E366CE4B68B30487A2C597B0EA8394F8B39EE227E153E46DC8683C1F613D311",
+            "Fistnet.Genepool.Control": "A3A26DB89840A43E8244E27A5E8FA8E6CDE7FF97ADE4BA3A7040AC9E8530288F",
+            "Fistnet.Genepool.Dna": "9AF69628D907DD354D36EC2088BECB7FAA0502DDBDD75C8BF21140388AED9EC2",
+            "Fistnet.Genepool.Visualization": "2AAA679055F8AA0AD82B825DF794CFF0F4658ABE612398BA4F4A53040E56DE04",
+            "Fistnet.Genepool.App": "B06836E9BC4C4B2EE7D4C14D4BDC871DD3DBCC3F4E62F6ABF9CB35C71FD7E986"
+          }
+        },
+        {
+          "Mode": "DeterministicReference",
+          "Seed": 29,
+          "Seasons": 128,
+          "InitialPopulationPercent": 10,
+          "RandomAlgorithm": "xorshift32-v1",
+          "RandomDraws": 935898,
+          "StateSha256": "AB4EF8C91070F6C53AFB9FC2BB1217E3D61898FA3CE2BD660156181424A194E2",
+          "FirstExtinctionSeason": null,
+          "Seconds": 1.2261703,
+          "Runtime": "10.0.12",
+          "AssemblySha256": {
+            "Fistnet.Genepool.Tests": "1E366CE4B68B30487A2C597B0EA8394F8B39EE227E153E46DC8683C1F613D311",
+            "Fistnet.Genepool.Control": "A3A26DB89840A43E8244E27A5E8FA8E6CDE7FF97ADE4BA3A7040AC9E8530288F",
+            "Fistnet.Genepool.Dna": "9AF69628D907DD354D36EC2088BECB7FAA0502DDBDD75C8BF21140388AED9EC2",
+            "Fistnet.Genepool.Visualization": "2AAA679055F8AA0AD82B825DF794CFF0F4658ABE612398BA4F4A53040E56DE04",
+            "Fistnet.Genepool.App": "B06836E9BC4C4B2EE7D4C14D4BDC871DD3DBCC3F4E62F6ABF9CB35C71FD7E986"
+          }
+        },
+        {
+          "Mode": "DeterministicReference",
+          "Seed": 47,
+          "Seasons": 128,
+          "InitialPopulationPercent": 10,
+          "RandomAlgorithm": "xorshift32-v1",
+          "RandomDraws": 868307,
+          "StateSha256": "E3A0251A828379FD3C11A594697467D31A0ED34E03E5711996B83C5D86B124E7",
+          "FirstExtinctionSeason": null,
+          "Seconds": 1.103599,
+          "Runtime": "10.0.12",
+          "AssemblySha256": {
+            "Fistnet.Genepool.Tests": "1E366CE4B68B30487A2C597B0EA8394F8B39EE227E153E46DC8683C1F613D311",
+            "Fistnet.Genepool.Control": "A3A26DB89840A43E8244E27A5E8FA8E6CDE7FF97ADE4BA3A7040AC9E8530288F",
+            "Fistnet.Genepool.Dna": "9AF69628D907DD354D36EC2088BECB7FAA0502DDBDD75C8BF21140388AED9EC2",
+            "Fistnet.Genepool.Visualization": "2AAA679055F8AA0AD82B825DF794CFF0F4658ABE612398BA4F4A53040E56DE04",
+            "Fistnet.Genepool.App": "B06836E9BC4C4B2EE7D4C14D4BDC871DD3DBCC3F4E62F6ABF9CB35C71FD7E986"
+          }
+        },
+        {
+          "Mode": "DeterministicReference",
+          "Seed": 83,
+          "Seasons": 128,
+          "InitialPopulationPercent": 10,
+          "RandomAlgorithm": "xorshift32-v1",
+          "RandomDraws": 840616,
+          "StateSha256": "0C6021B6F48DAF361B927E4BBF29F60FC0A1F46603796B4286449BF1AFB33A21",
+          "FirstExtinctionSeason": null,
+          "Seconds": 1.1313332,
+          "Runtime": "10.0.12",
+          "AssemblySha256": {
+            "Fistnet.Genepool.Tests": "1E366CE4B68B30487A2C597B0EA8394F8B39EE227E153E46DC8683C1F613D311",
+            "Fistnet.Genepool.Control": "A3A26DB89840A43E8244E27A5E8FA8E6CDE7FF97ADE4BA3A7040AC9E8530288F",
+            "Fistnet.Genepool.Dna": "9AF69628D907DD354D36EC2088BECB7FAA0502DDBDD75C8BF21140388AED9EC2",
+            "Fistnet.Genepool.Visualization": "2AAA679055F8AA0AD82B825DF794CFF0F4658ABE612398BA4F4A53040E56DE04",
+            "Fistnet.Genepool.App": "B06836E9BC4C4B2EE7D4C14D4BDC871DD3DBCC3F4E62F6ABF9CB35C71FD7E986"
+          }
+        }
+      ]
+    },
+    "godot_headless": {
+      "ok": true,
+      "mode": "smoke",
+      "runtime": ".NET 10.0.12",
+      "engine": "4.7.2-stable (official)",
+      "backend": "headless",
+      "adapter": "",
+      "measurements": [
+        {
+          "kind": "input_handler",
+          "input": "Pause signal during blocked season",
+          "acknowledgeMilliseconds": 0.1932,
+          "excludes": "OS input delivery and physical display latency"
+        },
+        {
+          "kind": "bounded_live_world",
+          "seed": 29,
+          "initialPopulationPercent": 10,
+          "completedSeasons": 8,
+          "endingPopulation": 959,
+          "selectedId": 492,
+          "mode": "DeterministicReference",
+          "ecologicalEvaluation": false
+        }
+      ],
+      "process": {
+        "exitCode": 0,
+        "elapsedSeconds": 3.156,
+        "deadlineSeconds": 90,
+        "engineErrors": []
+      },
+      "target_framework": "net10.0-windows7.0",
+      "executed_configuration": "Debug",
+      "build_identity": {
+        "report": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r04_step1_builds.json",
+        "stage": "net10-debug",
+        "configuration": "Debug",
+        "report_sha256": "dc60e7a5099997032ae2f9013f158f0d9b0094a0036ee4eb6168ab32a93e3090",
+        "sources_verified": 122,
+        "outputs_verified": 5
+      },
+      "loaded_assembly_identity_verified": true,
+      "check_count": 35
+    },
+    "godot_smoke": {
+      "ok": true,
+      "mode": "smoke",
+      "runtime": ".NET 10.0.12",
+      "engine": "4.7.2-stable (official)",
+      "backend": "Windows",
+      "adapter": "AMD Radeon RX 6800",
+      "measurements": [
+        {
+          "kind": "input_handler",
+          "input": "Pause signal during blocked season",
+          "acknowledgeMilliseconds": 0.1922,
+          "excludes": "OS input delivery and physical display latency"
+        },
+        {
+          "kind": "bounded_live_world",
+          "seed": 29,
+          "initialPopulationPercent": 10,
+          "completedSeasons": 8,
+          "endingPopulation": 959,
+          "selectedId": 492,
+          "mode": "DeterministicReference",
+          "ecologicalEvaluation": false
+        }
+      ],
+      "process": {
+        "exitCode": 0,
+        "elapsedSeconds": 4.484,
+        "deadlineSeconds": 90,
+        "engineErrors": []
+      },
+      "target_framework": "net10.0-windows7.0",
+      "executed_configuration": "Debug",
+      "build_identity": {
+        "report": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r04_step1_builds.json",
+        "stage": "net10-debug",
+        "configuration": "Debug",
+        "report_sha256": "dc60e7a5099997032ae2f9013f158f0d9b0094a0036ee4eb6168ab32a93e3090",
+        "sources_verified": 122,
+        "outputs_verified": 5
+      },
+      "loaded_assembly_identity_verified": true,
+      "check_count": 62
+    },
+    "godot_step4-headless": {
+      "ok": true,
+      "mode": "step4",
+      "runtime": ".NET 10.0.12",
+      "engine": "4.7.2-stable (official)",
+      "backend": "headless",
+      "adapter": "",
+      "measurements": [],
+      "process": {
+        "exitCode": 0,
+        "elapsedSeconds": 5.75,
+        "deadlineSeconds": 90,
+        "engineErrors": []
+      },
+      "target_framework": "net10.0-windows7.0",
+      "executed_configuration": "Debug",
+      "build_identity": {
+        "report": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r04_step1_builds.json",
+        "stage": "net10-debug",
+        "configuration": "Debug",
+        "report_sha256": "dc60e7a5099997032ae2f9013f158f0d9b0094a0036ee4eb6168ab32a93e3090",
+        "sources_verified": 122,
+        "outputs_verified": 5
+      },
+      "loaded_assembly_identity_verified": true,
+      "check_count": 153
+    },
+    "godot_step4": {
+      "ok": true,
+      "mode": "step4",
+      "runtime": ".NET 10.0.12",
+      "engine": "4.7.2-stable (official)",
+      "backend": "Windows",
+      "adapter": "AMD Radeon RX 6800",
+      "measurements": [
+        {
+          "kind": "perspective_colony_coverage",
+          "detailLevel": 2,
+          "sampleCount": 36,
+          "minimumBodyCoverage": 0.31217481789802287,
+          "maximumBodyCoverage": 0.3365477338476374,
+          "minimumCoreCoverage": 1,
+          "minimumConnectedShare": 0.9941002949852508,
+          "oracle": "Actual GPU Combined minus Food-only pixels, native Camera3D projected cells, central 20%-width square; 8-connected visible body mask.",
+          "thresholds": "RGB distance >0.08 identifies the body; area15%-60% of cell, central square>=90%, largest component>=85%."
+        },
+        {
+          "kind": "perspective_colony_coverage",
+          "detailLevel": 3,
+          "sampleCount": 36,
+          "minimumBodyCoverage": 0.30742132456552373,
+          "maximumBodyCoverage": 0.3170387779083431,
+          "minimumCoreCoverage": 1,
+          "minimumConnectedShare": 0.9876352395672334,
+          "oracle": "Actual GPU Combined minus Food-only pixels, native Camera3D projected cells, central 20%-width square; 8-connected visible body mask.",
+          "thresholds": "RGB distance >0.08 identifies the body; area15%-60% of cell, central square>=90%, largest component>=85%."
+        },
+        {
+          "kind": "organisms_ground_pixels",
+          "angled": true,
+          "combinedFood0": "(0.44561833, 0.3098839, 0.21848747, 1)",
+          "combinedFood10": "(0.38375342, 0.6116047, 0.2459384, 1)",
+          "organismsFood0": "(0.74485785, 0.74485785, 0.74485785, 1)",
+          "organismsFood10": "(0.77695054, 0.77695054, 0.77695054, 1)",
+          "oracle": "Actual GPU image patches at native-camera-projected empty cells; UI layer signals and same-cell food quantity swap."
+        },
+        {
+          "kind": "organisms_ground_pixels",
+          "angled": false,
+          "combinedFood0": "(0.44529822, 0.30948377, 0.21856749, 1)",
+          "combinedFood10": "(0.38199273, 0.60880363, 0.24497803, 1)",
+          "organismsFood0": "(0.74477786, 0.74477786, 0.74477786, 1)",
+          "organismsFood10": "(0.77350914, 0.77350914, 0.77350914, 1)",
+          "oracle": "Actual GPU image patches at native-camera-projected empty cells; UI layer signals and same-cell food quantity swap."
+        },
+        {
+          "kind": "step5_rgb_visibility",
+          "backdrop": "grey",
+          "detailLevel": 1,
+          "view": "World fit",
+          "projectedCellPixels": 4.6036377,
+          "sampleCount": 16,
+          "minimumContrastPixels": 0,
+          "minimumContrastFraction": 0,
+          "outlinePixels": 0,
+          "maximumCoreChannelError": null,
+          "oracle": "Native-camera projected cells; actual GPU with organisms minus identical bare-ground snapshot. RGB includes black/white/grey and terrain-matching colours.",
+          "criteria": "World: per-channel pixels stay between exact bare ground and source RGB times[0.80,1.08], tolerance0.02, bounds rounded outward to the 8-bit capture grid; no mandatory contrast. Grey checkpoints at11.8/12.2px check outline boundary. Normal levels2/3 retain RGB distance>=0.18 in2.5% of cell and core channel error<=0.12. No saturation or restricted-palette criterion."
+        },
+        {
+          "kind": "step5_rgb_visibility",
+          "backdrop": "grey",
+          "detailLevel": 1,
+          "view": "World just below detail threshold",
+          "projectedCellPixels": 11.800018,
+          "sampleCount": 16,
+          "minimumContrastPixels": 4,
+          "minimumContrastFraction": 0.014184397163120567,
+          "outlinePixels": 0,
+          "maximumCoreChannelError": null,
+          "oracle": "Native-camera projected cells; actual GPU with organisms minus identical bare-ground snapshot. RGB includes black/white/grey and terrain-matching colours.",
+          "criteria": "World: per-channel pixels stay between exact bare ground and source RGB times[0.80,1.08], tolerance0.02, bounds rounded outward to the 8-bit capture grid; no mandatory contrast. Grey checkpoints at11.8/12.2px check outline boundary. Normal levels2/3 retain RGB distance>=0.18 in2.5% of cell and core channel error<=0.12. No saturation or restricted-palette criterion."
+        },
+        {
+          "kind": "step5_rgb_visibility",
+          "backdrop": "grey",
+          "detailLevel": 2,
+          "view": "Habitat just above detail threshold",
+          "projectedCellPixels": 12.199982,
+          "sampleCount": 16,
+          "minimumContrastPixels": 45,
+          "minimumContrastFraction": 0.16666666666666666,
+          "outlinePixels": 727,
+          "maximumCoreChannelError": 0.05228757858276367,
+          "oracle": "Native-camera projected cells; actual GPU with organisms minus identical bare-ground snapshot. RGB includes black/white/grey and terrain-matching colours.",
+          "criteria": "World: per-channel pixels stay between exact bare ground and source RGB times[0.80,1.08], tolerance0.02, bounds rounded outward to the 8-bit capture grid; no mandatory contrast. Grey checkpoints at11.8/12.2px check outline boundary. Normal levels2/3 retain RGB distance>=0.18 in2.5% of cell and core channel error<=0.12. No saturation or restricted-palette criterion."
+        },
+        {
+          "kind": "step5_rgb_visibility",
+          "backdrop": "grey",
+          "detailLevel": 2,
+          "view": "Habitat",
+          "projectedCellPixels": 24.000061,
+          "sampleCount": 16,
+          "minimumContrastPixels": 118,
+          "minimumContrastFraction": 0.10707803992740472,
+          "outlinePixels": 1413,
+          "maximumCoreChannelError": 0.025070030242204666,
+          "oracle": "Native-camera projected cells; actual GPU with organisms minus identical bare-ground snapshot. RGB includes black/white/grey and terrain-matching colours.",
+          "criteria": "World: per-channel pixels stay between exact bare ground and source RGB times[0.80,1.08], tolerance0.02, bounds rounded outward to the 8-bit capture grid; no mandatory contrast. Grey checkpoints at11.8/12.2px check outline boundary. Normal levels2/3 retain RGB distance>=0.18 in2.5% of cell and core channel error<=0.12. No saturation or restricted-palette criterion."
+        },
+        {
+          "kind": "step5_rgb_visibility",
+          "backdrop": "grey",
+          "detailLevel": 3,
+          "view": "Organism",
+          "projectedCellPixels": 48.00009,
+          "sampleCount": 16,
+          "minimumContrastPixels": 266,
+          "minimumContrastFraction": 0.05917686318131257,
+          "outlinePixels": 3506,
+          "maximumCoreChannelError": 0.025170069187879562,
+          "oracle": "Native-camera projected cells; actual GPU with organisms minus identical bare-ground snapshot. RGB includes black/white/grey and terrain-matching colours.",
+          "criteria": "World: per-channel pixels stay between exact bare ground and source RGB times[0.80,1.08], tolerance0.02, bounds rounded outward to the 8-bit capture grid; no mandatory contrast. Grey checkpoints at11.8/12.2px check outline boundary. Normal levels2/3 retain RGB distance>=0.18 in2.5% of cell and core channel error<=0.12. No saturation or restricted-palette criterion."
+        },
+        {
+          "kind": "step5_rgb_visibility",
+          "backdrop": "brown",
+          "detailLevel": 1,
+          "view": "World fit",
+          "projectedCellPixels": 4.6036377,
+          "sampleCount": 16,
+          "minimumContrastPixels": 0,
+          "minimumContrastFraction": 0,
+          "outlinePixels": 0,
+          "maximumCoreChannelError": null,
+          "oracle": "Native-camera projected cells; actual GPU with organisms minus identical bare-ground snapshot. RGB includes black/white/grey and terrain-matching colours.",
+          "criteria": "World: per-channel pixels stay between exact bare ground and source RGB times[0.80,1.08], tolerance0.02, bounds rounded outward to the 8-bit capture grid; no mandatory contrast. Grey checkpoints at11.8/12.2px check outline boundary. Normal levels2/3 retain RGB distance>=0.18 in2.5% of cell and core channel error<=0.12. No saturation or restricted-palette criterion."
+        },
+        {
+          "kind": "step5_rgb_visibility",
+          "backdrop": "brown",
+          "detailLevel": 2,
+          "view": "Habitat",
+          "projectedCellPixels": 24.000061,
+          "sampleCount": 16,
+          "minimumContrastPixels": 80,
+          "minimumContrastFraction": 0.07272727272727272,
+          "outlinePixels": 1606,
+          "maximumCoreChannelError": 0.025070030242204666,
+          "oracle": "Native-camera projected cells; actual GPU with organisms minus identical bare-ground snapshot. RGB includes black/white/grey and terrain-matching colours.",
+          "criteria": "World: per-channel pixels stay between exact bare ground and source RGB times[0.80,1.08], tolerance0.02, bounds rounded outward to the 8-bit capture grid; no mandatory contrast. Grey checkpoints at11.8/12.2px check outline boundary. Normal levels2/3 retain RGB distance>=0.18 in2.5% of cell and core channel error<=0.12. No saturation or restricted-palette criterion."
+        },
+        {
+          "kind": "step5_rgb_visibility",
+          "backdrop": "brown",
+          "detailLevel": 3,
+          "view": "Organism",
+          "projectedCellPixels": 48.00009,
+          "sampleCount": 16,
+          "minimumContrastPixels": 226,
+          "minimumContrastFraction": 0.05014422010206346,
+          "outlinePixels": 3964,
+          "maximumCoreChannelError": 0.025170069187879562,
+          "oracle": "Native-camera projected cells; actual GPU with organisms minus identical bare-ground snapshot. RGB includes black/white/grey and terrain-matching colours.",
+          "criteria": "World: per-channel pixels stay between exact bare ground and source RGB times[0.80,1.08], tolerance0.02, bounds rounded outward to the 8-bit capture grid; no mandatory contrast. Grey checkpoints at11.8/12.2px check outline boundary. Normal levels2/3 retain RGB distance>=0.18 in2.5% of cell and core channel error<=0.12. No saturation or restricted-palette criterion."
+        },
+        {
+          "kind": "step5_rgb_visibility",
+          "backdrop": "olive",
+          "detailLevel": 1,
+          "view": "World fit",
+          "projectedCellPixels": 4.6036377,
+          "sampleCount": 16,
+          "minimumContrastPixels": 0,
+          "minimumContrastFraction": 0,
+          "outlinePixels": 0,
+          "maximumCoreChannelError": null,
+          "oracle": "Native-camera projected cells; actual GPU with organisms minus identical bare-ground snapshot. RGB includes black/white/grey and terrain-matching colours.",
+          "criteria": "World: per-channel pixels stay between exact bare ground and source RGB times[0.80,1.08], tolerance0.02, bounds rounded outward to the 8-bit capture grid; no mandatory contrast. Grey checkpoints at11.8/12.2px check outline boundary. Normal levels2/3 retain RGB distance>=0.18 in2.5% of cell and core channel error<=0.12. No saturation or restricted-palette criterion."
+        },
+        {
+          "kind": "step5_rgb_visibility",
+          "backdrop": "olive",
+          "detailLevel": 2,
+          "view": "Habitat",
+          "projectedCellPixels": 24.000061,
+          "sampleCount": 16,
+          "minimumContrastPixels": 97,
+          "minimumContrastFraction": 0.08786231884057971,
+          "outlinePixels": 1642,
+          "maximumCoreChannelError": 0.025070030242204666,
+          "oracle": "Native-camera projected cells; actual GPU with organisms minus identical bare-ground snapshot. RGB includes black/white/grey and terrain-matching colours.",
+          "criteria": "World: per-channel pixels stay between exact bare ground and source RGB times[0.80,1.08], tolerance0.02, bounds rounded outward to the 8-bit capture grid; no mandatory contrast. Grey checkpoints at11.8/12.2px check outline boundary. Normal levels2/3 retain RGB distance>=0.18 in2.5% of cell and core channel error<=0.12. No saturation or restricted-palette criterion."
+        },
+        {
+          "kind": "step5_rgb_visibility",
+          "backdrop": "olive",
+          "detailLevel": 3,
+          "view": "Organism",
+          "projectedCellPixels": 48.00009,
+          "sampleCount": 16,
+          "minimumContrastPixels": 221,
+          "minimumContrastFraction": 0.049132947976878616,
+          "outlinePixels": 4038,
+          "maximumCoreChannelError": 0.025170069187879562,
+          "oracle": "Native-camera projected cells; actual GPU with organisms minus identical bare-ground snapshot. RGB includes black/white/grey and terrain-matching colours.",
+          "criteria": "World: per-channel pixels stay between exact bare ground and source RGB times[0.80,1.08], tolerance0.02, bounds rounded outward to the 8-bit capture grid; no mandatory contrast. Grey checkpoints at11.8/12.2px check outline boundary. Normal levels2/3 retain RGB distance>=0.18 in2.5% of cell and core channel error<=0.12. No saturation or restricted-palette criterion."
+        },
+        {
+          "kind": "step5_rgb_visibility",
+          "backdrop": "green",
+          "detailLevel": 1,
+          "view": "World fit",
+          "projectedCellPixels": 4.6036377,
+          "sampleCount": 16,
+          "minimumContrastPixels": 0,
+          "minimumContrastFraction": 0,
+          "outlinePixels": 0,
+          "maximumCoreChannelError": null,
+          "oracle": "Native-camera projected cells; actual GPU with organisms minus identical bare-ground snapshot. RGB includes black/white/grey and terrain-matching colours.",
+          "criteria": "World: per-channel pixels stay between exact bare ground and source RGB times[0.80,1.08], tolerance0.02, bounds rounded outward to the 8-bit capture grid; no mandatory contrast. Grey checkpoints at11.8/12.2px check outline boundary. Normal levels2/3 retain RGB distance>=0.18 in2.5% of cell and core channel error<=0.12. No saturation or restricted-palette criterion."
+        },
+        {
+          "kind": "step5_rgb_visibility",
+          "backdrop": "green",
+          "detailLevel": 2,
+          "view": "Habitat",
+          "projectedCellPixels": 24.000061,
+          "sampleCount": 16,
+          "minimumContrastPixels": 79,
+          "minimumContrastFraction": 0.07175295186194369,
+          "outlinePixels": 1693,
+          "maximumCoreChannelError": 0.025070030242204666,
+          "oracle": "Native-camera projected cells; actual GPU with organisms minus identical bare-ground snapshot. RGB includes black/white/grey and terrain-matching colours.",
+          "criteria": "World: per-channel pixels stay between exact bare ground and source RGB times[0.80,1.08], tolerance0.02, bounds rounded outward to the 8-bit capture grid; no mandatory contrast. Grey checkpoints at11.8/12.2px check outline boundary. Normal levels2/3 retain RGB distance>=0.18 in2.5% of cell and core channel error<=0.12. No saturation or restricted-palette criterion."
+        },
+        {
+          "kind": "step5_rgb_visibility",
+          "backdrop": "green",
+          "detailLevel": 3,
+          "view": "Organism",
+          "projectedCellPixels": 48.00009,
+          "sampleCount": 16,
+          "minimumContrastPixels": 229,
+          "minimumContrastFraction": 0.0508775827593868,
+          "outlinePixels": 4141,
+          "maximumCoreChannelError": 0.025170069187879562,
+          "oracle": "Native-camera projected cells; actual GPU with organisms minus identical bare-ground snapshot. RGB includes black/white/grey and terrain-matching colours.",
+          "criteria": "World: per-channel pixels stay between exact bare ground and source RGB times[0.80,1.08], tolerance0.02, bounds rounded outward to the 8-bit capture grid; no mandatory contrast. Grey checkpoints at11.8/12.2px check outline boundary. Normal levels2/3 retain RGB distance>=0.18 in2.5% of cell and core channel error<=0.12. No saturation or restricted-palette criterion."
+        }
+      ],
+      "process": {
+        "exitCode": 0,
+        "elapsedSeconds": 13.25,
+        "deadlineSeconds": 90,
+        "engineErrors": []
+      },
+      "target_framework": "net10.0-windows7.0",
+      "executed_configuration": "Debug",
+      "build_identity": {
+        "report": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r04_step1_builds.json",
+        "stage": "net10-debug",
+        "configuration": "Debug",
+        "report_sha256": "dc60e7a5099997032ae2f9013f158f0d9b0094a0036ee4eb6168ab32a93e3090",
+        "sources_verified": 122,
+        "outputs_verified": 5
+      },
+      "loaded_assembly_identity_verified": true,
+      "check_count": 217
+    },
+    "godot_benchmark": {
+      "ok": true,
+      "mode": "benchmark",
+      "runtime": ".NET 10.0.12",
+      "engine": "4.7.2-stable (official)",
+      "backend": "Windows",
+      "adapter": "AMD Radeon RX 6800",
+      "measurements": [
+        {
+          "population": 0,
+          "width": 1920,
+          "height": 1080,
+          "requestedWarmupSeconds": 5,
+          "requestedSampleSeconds": 10,
+          "actualSampleSeconds": 10.0162621,
+          "sampleIntervalStartSeconds": 4.9936116,
+          "sampleIntervalEndSeconds": 15.0098737,
+          "requestedSnapshotHz": 10,
+          "sampleSnapshotsReplayed": 100,
+          "sampleSnapshotsSkipped": 0,
+          "expectedSampleSnapshots": 100,
+          "actualReplayHzDuringRequestedSample": 10,
+          "totalSnapshotsReplayed": 149,
+          "totalSnapshotsSkipped": 0,
+          "frames": 601,
+          "averageFps": 60.00242345894682,
+          "p95FrameMilliseconds": 16.6935,
+          "maxFrameMilliseconds": 17.0915,
+          "p95UploadMilliseconds": 0.9283,
+          "sampleCoverageComplete": true,
+          "replayCoverageComplete": true,
+          "frameBudgetPassed": true,
+          "simulationCalculationIncluded": false
+        },
+        {
+          "population": 1000,
+          "width": 1920,
+          "height": 1080,
+          "requestedWarmupSeconds": 5,
+          "requestedSampleSeconds": 10,
+          "actualSampleSeconds": 10.0162515,
+          "sampleIntervalStartSeconds": 4.9961153,
+          "sampleIntervalEndSeconds": 15.0123668,
+          "requestedSnapshotHz": 10,
+          "sampleSnapshotsReplayed": 100,
+          "sampleSnapshotsSkipped": 0,
+          "expectedSampleSnapshots": 100,
+          "actualReplayHzDuringRequestedSample": 10,
+          "totalSnapshotsReplayed": 149,
+          "totalSnapshotsSkipped": 0,
+          "frames": 601,
+          "averageFps": 60.00248695831969,
+          "p95FrameMilliseconds": 16.9083,
+          "maxFrameMilliseconds": 22.2473,
+          "p95UploadMilliseconds": 1.3472,
+          "sampleCoverageComplete": true,
+          "replayCoverageComplete": true,
+          "frameBudgetPassed": true,
+          "simulationCalculationIncluded": false
+        },
+        {
+          "population": 10000,
+          "width": 1920,
+          "height": 1080,
+          "requestedWarmupSeconds": 5,
+          "requestedSampleSeconds": 10,
+          "actualSampleSeconds": 10.0162656,
+          "sampleIntervalStartSeconds": 4.9871281,
+          "sampleIntervalEndSeconds": 15.0033937,
+          "requestedSnapshotHz": 10,
+          "sampleSnapshotsReplayed": 100,
+          "sampleSnapshotsSkipped": 0,
+          "expectedSampleSnapshots": 100,
+          "actualReplayHzDuringRequestedSample": 10,
+          "totalSnapshotsReplayed": 149,
+          "totalSnapshotsSkipped": 0,
+          "frames": 601,
+          "averageFps": 60.00240249220228,
+          "p95FrameMilliseconds": 16.7208,
+          "maxFrameMilliseconds": 17.4352,
+          "p95UploadMilliseconds": 1.4084,
+          "sampleCoverageComplete": true,
+          "replayCoverageComplete": true,
+          "frameBudgetPassed": true,
+          "simulationCalculationIncluded": false
+        }
+      ],
+      "process": {
+        "exitCode": 0,
+        "elapsedSeconds": 46.656,
+        "deadlineSeconds": 100,
+        "engineErrors": []
+      },
+      "target_framework": "net10.0-windows7.0",
+      "executed_configuration": "Debug",
+      "build_identity": {
+        "report": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r04_step1_builds.json",
+        "stage": "net10-debug",
+        "configuration": "Debug",
+        "report_sha256": "dc60e7a5099997032ae2f9013f158f0d9b0094a0036ee4eb6168ab32a93e3090",
+        "sources_verified": 122,
+        "outputs_verified": 5
+      },
+      "loaded_assembly_identity_verified": true,
+      "check_count": 9
+    },
+    "godot_step4-benchmark": {
+      "ok": true,
+      "mode": "step4-benchmark",
+      "runtime": ".NET 10.0.12",
+      "engine": "4.7.2-stable (official)",
+      "backend": "Windows",
+      "adapter": "AMD Radeon RX 6800",
+      "measurements": [
+        {
+          "kind": "depth_renderer",
+          "population": 0,
+          "detailLevel": 1,
+          "angled": true,
+          "width": 1920,
+          "height": 1080,
+          "visibleFoodInstances": 10000,
+          "visibleOrganismInstances": 0,
+          "visibleActionCues": 0,
+          "requestedWarmupSeconds": 3,
+          "requestedSampleSeconds": 7,
+          "actualSampleSeconds": 7.0163892,
+          "requestedSnapshotHz": 10,
+          "expectedSampleSnapshots": 70,
+          "sampleSnapshotsReplayed": 70,
+          "sampleSnapshotsSkipped": 0,
+          "frames": 421,
+          "averageFps": 60.00237273040669,
+          "p95FrameMilliseconds": 16.6858,
+          "maxFrameMilliseconds": 16.8948,
+          "p95UploadMilliseconds": 4.9782,
+          "sampleCoverageComplete": true,
+          "replayCoverageComplete": true,
+          "frameBudgetPassed": true,
+          "simulationCalculationIncluded": false,
+          "notes": "Detached snapshots. Dense detail3 includes full 10000-outcome batches at10Hz; no spatial event cap. Intervals include replay stamping and UI upload, but exclude simulation calculation. Main-loop observations, not hardware presentation timings."
+        },
+        {
+          "kind": "depth_renderer",
+          "population": 1000,
+          "detailLevel": 1,
+          "angled": true,
+          "width": 1920,
+          "height": 1080,
+          "visibleFoodInstances": 10000,
+          "visibleOrganismInstances": 1000,
+          "visibleActionCues": 0,
+          "requestedWarmupSeconds": 3,
+          "requestedSampleSeconds": 7,
+          "actualSampleSeconds": 7.0163616,
+          "requestedSnapshotHz": 10,
+          "expectedSampleSnapshots": 70,
+          "sampleSnapshotsReplayed": 70,
+          "sampleSnapshotsSkipped": 0,
+          "frames": 421,
+          "averageFps": 60.002608759502934,
+          "p95FrameMilliseconds": 16.8074,
+          "maxFrameMilliseconds": 25.2224,
+          "p95UploadMilliseconds": 5.4785,
+          "sampleCoverageComplete": true,
+          "replayCoverageComplete": true,
+          "frameBudgetPassed": true,
+          "simulationCalculationIncluded": false,
+          "notes": "Detached snapshots. Dense detail3 includes full 10000-outcome batches at10Hz; no spatial event cap. Intervals include replay stamping and UI upload, but exclude simulation calculation. Main-loop observations, not hardware presentation timings."
+        },
+        {
+          "kind": "depth_renderer",
+          "population": 10000,
+          "detailLevel": 1,
+          "angled": true,
+          "width": 1920,
+          "height": 1080,
+          "visibleFoodInstances": 10000,
+          "visibleOrganismInstances": 10000,
+          "visibleActionCues": 0,
+          "requestedWarmupSeconds": 3,
+          "requestedSampleSeconds": 7,
+          "actualSampleSeconds": 7.0165182,
+          "requestedSnapshotHz": 10,
+          "expectedSampleSnapshots": 70,
+          "sampleSnapshotsReplayed": 70,
+          "sampleSnapshotsSkipped": 0,
+          "frames": 421,
+          "averageFps": 60.00126957555672,
+          "p95FrameMilliseconds": 16.7387,
+          "maxFrameMilliseconds": 22.918,
+          "p95UploadMilliseconds": 5.7691,
+          "sampleCoverageComplete": true,
+          "replayCoverageComplete": true,
+          "frameBudgetPassed": true,
+          "simulationCalculationIncluded": false,
+          "notes": "Detached snapshots. Dense detail3 includes full 10000-outcome batches at10Hz; no spatial event cap. Intervals include replay stamping and UI upload, but exclude simulation calculation. Main-loop observations, not hardware presentation timings."
+        },
+        {
+          "kind": "depth_renderer",
+          "population": 10000,
+          "detailLevel": 3,
+          "angled": true,
+          "width": 1920,
+          "height": 1080,
+          "visibleFoodInstances": 258,
+          "visibleOrganismInstances": 258,
+          "visibleActionCues": 258,
+          "requestedWarmupSeconds": 3,
+          "requestedSampleSeconds": 7,
+          "actualSampleSeconds": 7.0163828,
+          "requestedSnapshotHz": 10,
+          "expectedSampleSnapshots": 70,
+          "sampleSnapshotsReplayed": 70,
+          "sampleSnapshotsSkipped": 0,
+          "frames": 421,
+          "averageFps": 60.002427461625956,
+          "p95FrameMilliseconds": 16.6916,
+          "maxFrameMilliseconds": 26.6409,
+          "p95UploadMilliseconds": 0.3953,
+          "sampleCoverageComplete": true,
+          "replayCoverageComplete": true,
+          "frameBudgetPassed": true,
+          "simulationCalculationIncluded": false,
+          "notes": "Detached snapshots. Dense detail3 includes full 10000-outcome batches at10Hz; no spatial event cap. Intervals include replay stamping and UI upload, but exclude simulation calculation. Main-loop observations, not hardware presentation timings."
+        }
+      ],
+      "process": {
+        "exitCode": 0,
+        "elapsedSeconds": 41.719,
+        "deadlineSeconds": 100,
+        "engineErrors": []
+      },
+      "target_framework": "net10.0-windows7.0",
+      "executed_configuration": "Debug",
+      "build_identity": {
+        "report": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r04_step1_builds.json",
+        "stage": "net10-debug",
+        "configuration": "Debug",
+        "report_sha256": "dc60e7a5099997032ae2f9013f158f0d9b0094a0036ee4eb6168ab32a93e3090",
+        "sources_verified": 122,
+        "outputs_verified": 5
+      },
+      "loaded_assembly_identity_verified": true,
+      "check_count": 12
+    }
+  },
+  "lock_review": {
+    "ok": true,
+    "change": "Only target framework key net9.0-windows7.0 to net10.0-windows7.0; all package versions and content hashes unchanged; Debug editor dependency retained and absent in ExportRelease."
+  },
+  "reference_expectations_unchanged": true
+}

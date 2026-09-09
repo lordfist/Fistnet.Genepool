@@ -1,0 +1,52 @@
+{
+  "ok": true,
+  "status": "completed",
+  "atUtc": "2026-09-09T11:48:12.877969+00:00",
+  "configuration": "Debug",
+  "targetFramework": "net10.0-windows7.0",
+  "executable": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.App\\bin\\Debug\\net10.0-windows7.0\\Fistnet.Genepool.App.exe",
+  "limits": "Actual apphost and hidden message-loop startup/shutdown only. No debugger, designer or physical UI-interaction claim.",
+  "buildIdentity": {
+    "report": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\r04_step1_builds.json",
+    "stage": "net10-debug",
+    "configuration": "Debug",
+    "report_sha256": "dc60e7a5099997032ae2f9013f158f0d9b0094a0036ee4eb6168ab32a93e3090",
+    "sources_verified": 122,
+    "outputs_verified": 7
+  },
+  "probeExitCode": 0,
+  "stderr": "",
+  "probe": {
+    "ok": true,
+    "windowFound": true,
+    "responding": true,
+    "modules": [
+      {
+        "name": "coreclr.dll",
+        "path": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.12\\coreclr.dll",
+        "productVersion": "10,0,1226,42308 @Commit: 95017c711e6afc1085133d440e42b4bd78155701"
+      },
+      {
+        "name": "System.Private.CoreLib.dll",
+        "path": "C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App\\10.0.12\\System.Private.CoreLib.dll",
+        "productVersion": "10.0.12-servicing.26422.108+95017c711e6afc1085133d440e42b4bd78155701"
+      }
+    ],
+    "gracefulClose": true,
+    "forcedTermination": false,
+    "cleanupVerified": true,
+    "pid": 51224,
+    "processStartedAtUtc": "2026-09-09T11:48:13.2254305Z",
+    "windowHidden": true,
+    "windowHandle": 7999264,
+    "executable": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.App\\bin\\Debug\\net10.0-windows7.0\\Fistnet.Genepool.App.exe",
+    "closeMainWindowAccepted": false,
+    "hiddenWindowClosePosted": true,
+    "exitCode": 0
+  },
+  "runtimeModuleObserved": true,
+  "runtimeVersion": "10.0.12",
+  "runtimeVersionEvidence": "Loaded System.Private.CoreLib ProductVersion; coreclr module path also recorded",
+  "runtimeMatchesTarget": true,
+  "scratchRemoved": true
+}

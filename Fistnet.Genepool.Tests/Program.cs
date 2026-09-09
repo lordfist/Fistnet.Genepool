@@ -94,7 +94,8 @@ internal static class Program
         Console.WriteLine(JsonSerializer.Serialize(new { total = cases.Count, passed = cases.Count - failed, failed,
             seconds = total.Elapsed.TotalSeconds, runtime = Environment.Version.ToString(),
             assemblySha256 = AssemblyIdentities(), results,
-            scenarios = ScenarioRunner.EvaluationResults, uiDiagnostics = UiDiagnosticsTests.LatestMeasurement }));
+            scenarios = ScenarioRunner.EvaluationResults, uiDiagnostics = UiDiagnosticsTests.LatestMeasurement,
+            seasonObservationCost = SeasonObservationBenchmark.LatestMeasurement }));
         return failed == 0 ? 0 : 1;
     }
 
@@ -117,6 +118,8 @@ internal static class Program
         cases.AddRange(ViewerBackendTests.Cases());
         cases.AddRange(GodotBoardTests.Cases());
         cases.AddRange(GodotSettingsTests.Cases());
+        cases.AddRange(SeasonObservationTests.Cases());
+        cases.AddRange(SeasonObservationBenchmark.Cases());
         cases.AddRange(PerformanceBenchmarks.Cases());
         cases.AddRange(FounderSetupTests.Cases());
         cases.AddRange(EcologyTests.Cases());

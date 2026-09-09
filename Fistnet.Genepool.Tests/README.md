@@ -6,16 +6,19 @@ selected rendering pixels and geometry, UI control boundaries, deterministic
 reference scenarios and production smoke checks. A passing run establishes these
 contracts; whether the simulation is more enjoyable to watch remains a human check.
 
-## Visual Studio 2022
+## Visual Studio 2026 and .NET 10
 
-Open the entire `D:\Posao\Fistnet.Genepool\Fistnet.Genepool.sln` in Visual Studio
-2022. All five projects remain in the solution. The projects target
-`net9.0-windows7.0`; the App and Tests execute as x64 processes.
+Open the primary `D:\Posao\Fistnet.Genepool\Fistnet.Genepool.slnx` in Visual
+Studio 2026. All six projects, including the Godot viewer, remain in the solution;
+the legacy `.sln` is retained with matching project/configuration mappings.
+The projects target `net10.0-windows7.0`; the App and Tests execute as x64
+processes. The Windows platform suffix retains the existing API targeting intent;
+it is not a claim of supported deployment on Windows 7.
 
-The solution's `global.json` requests the existing .NET SDK `9.0.315`, permits
+The solution's `global.json` requests .NET SDK `10.0.401`, permits
 `latestPatch` roll-forward and excludes prerelease SDKs. This keeps SDK selection
-within the specified .NET 9 feature band. The established environment is Visual
-Studio 2022 17.14; building requires an installed SDK compatible with the pin.
+within the specified .NET 10 feature band. Use Visual Studio 2026 and an installed
+SDK that satisfies this policy.
 
 Build the solution in Debug or Release. Set **Fistnet.Genepool.Tests** as the startup
 project and press **Ctrl+F5** to run the default checks. Set
@@ -25,6 +28,18 @@ This suite uses its own named-case runner and failure exit codes. No Test Explor
 adapter or additional test-framework NuGet package is required. Run the executable
 to execute the assertions; Test Explorer does not discover these custom cases.
 
+## Bounded regression wrapper
+
+After rebuilding, an existing Python 3.11+ runtime can invoke
+`KnowledgeBase/tools/run_r03_regressions.py` with `-X utf8 -B` and
+`--configuration Debug|Release`. For R04 Step 1, supply
+`--report r04_step1_regressions.json --build-report r04_step1_builds.json`
+and `--build-stage <exact-stage>` for the matching configuration. The build
+report/stage arguments must be supplied together; they bind the checks to the
+selected build evidence. Keep one current report instead of accumulating test
+history. The wrapper's R03 name identifies the existing tool, not the iteration
+that owns the new result.
+
 ## Running a built test executable
 
 From PowerShell, use the configuration you have just built:
@@ -33,15 +48,15 @@ From PowerShell, use the configuration you have just built:
 Set-Location -LiteralPath 'D:\Posao\Fistnet.Genepool'
 
 # Default checks, excluding the longer scenarios group.
-& '.\Fistnet.Genepool.Tests\bin\Debug\net9.0-windows7.0\Fistnet.Genepool.Tests.exe'
+& '.\Fistnet.Genepool.Tests\bin\Debug\net10.0-windows7.0\Fistnet.Genepool.Tests.exe'
 $LASTEXITCODE
 
 # All checks, including the reference comparison scenarios.
-& '.\Fistnet.Genepool.Tests\bin\Release\net9.0-windows7.0\Fistnet.Genepool.Tests.exe' --all
+& '.\Fistnet.Genepool.Tests\bin\Release\net10.0-windows7.0\Fistnet.Genepool.Tests.exe' --all
 $LASTEXITCODE
 
 # Only the reference comparison scenarios.
-& '.\Fistnet.Genepool.Tests\bin\Debug\net9.0-windows7.0\Fistnet.Genepool.Tests.exe' --group scenarios
+& '.\Fistnet.Genepool.Tests\bin\Debug\net10.0-windows7.0\Fistnet.Genepool.Tests.exe' --group scenarios
 $LASTEXITCODE
 ```
 
@@ -49,6 +64,18 @@ The default is the fast feedback selection, not a guaranteed duration. It includ
 the integration group's bounded production smoke checks. Actual elapsed times are
 reported for each case and the whole run. `--group NAME` selects the cases whose
 group matches that exact name; `--group scenarios` runs the longer comparisons.
+
+The `season-observation` group checks the whole-season action feed used by the
+Godot habitat view: all actors beyond the older 64-marker limit, detached
+published batches, acknowledgments and reset, actual movement/birth locations,
+mutation counts, unknown no-choice deltas, newborn timing and observer passivity.
+Godot camera, viewport, material pixels, action scope and minimap interaction are
+checked in its own opt-in verification scene; see the Godot viewer README.
+
+The `season-observation-cost` group measures a controlled 10,000-organism workload
+with the observer off/on and frame capture timed separately. Its report includes
+allocations, workload equality checks and explicit completion under a cooperative
+budget. It is a cost measurement, with no machine-dependent timing pass threshold.
 
 Normal suite runs print a PASS/FAIL line per case, followed by one JSON summary on
 the final stdout line. That summary contains case results, errors, timings, runtime
@@ -58,7 +85,7 @@ checks passed, **1** means a check failed, and **2** means malformed selection o
 To run one bounded scenario and receive its result as JSON on stdout:
 
 ```powershell
-& '.\Fistnet.Genepool.Tests\bin\Release\net9.0-windows7.0\Fistnet.Genepool.Tests.exe' --scenario 11 128 reference
+& '.\Fistnet.Genepool.Tests\bin\Release\net10.0-windows7.0\Fistnet.Genepool.Tests.exe' --scenario 11 128 reference
 ```
 
 The last argument is `reference` or `production`. The CLI accepts **1 through 128
@@ -132,8 +159,8 @@ candidates, and equivalent full execution state under serial/bounded cell phases
 Timing measurements are separate opt-in commands:
 
 ```powershell
-& '.\Fistnet.Genepool.Tests\bin\Release\net9.0-windows7.0\Fistnet.Genepool.Tests.exe' --performance-micro
-& '.\Fistnet.Genepool.Tests\bin\Release\net9.0-windows7.0\Fistnet.Genepool.Tests.exe' --performance-fixture 100 large serial 4
+& '.\Fistnet.Genepool.Tests\bin\Release\net10.0-windows7.0\Fistnet.Genepool.Tests.exe' --performance-micro
+& '.\Fistnet.Genepool.Tests\bin\Release\net10.0-windows7.0\Fistnet.Genepool.Tests.exe' --performance-fixture 100 large serial 4
 ```
 
 Micro measurements use fixed decision/completion and child-construction work,
@@ -146,7 +173,7 @@ constant; these are computation measurements, not population-survival trials.
 ## Runner checks and optional output
 
 ```powershell
-& '.\Fistnet.Genepool.Tests\bin\Debug\net9.0-windows7.0\Fistnet.Genepool.Tests.exe' --runner-negative-control
+& '.\Fistnet.Genepool.Tests\bin\Debug\net10.0-windows7.0\Fistnet.Genepool.Tests.exe' --runner-negative-control
 $LASTEXITCODE  # Expected: 7
 ```
 
@@ -197,8 +224,8 @@ original `--scenario` command and its 1..128 season range remain unchanged.
 Longer diagnostic measurements use a separate explicitly invoked command:
 
 ```powershell
-& '.\Fistnet.Genepool.Tests\bin\Release\net9.0-windows7.0\Fistnet.Genepool.Tests.exe' --diagnostic-scenario 11 2048 reference on 1 no-render
-& '.\Fistnet.Genepool.Tests\bin\Release\net9.0-windows7.0\Fistnet.Genepool.Tests.exe' --diagnostic-scenario 29 512 production off 8 render 10
+& '.\Fistnet.Genepool.Tests\bin\Release\net10.0-windows7.0\Fistnet.Genepool.Tests.exe' --diagnostic-scenario 11 2048 reference on 1 no-render
+& '.\Fistnet.Genepool.Tests\bin\Release\net10.0-windows7.0\Fistnet.Genepool.Tests.exe' --diagnostic-scenario 29 512 production off 8 render 10
 ```
 
 Arguments are seed, requested seasons (1..2048), mode (`reference`/`production`),
@@ -262,7 +289,7 @@ checkpoint maximum or individual season reports when a maximum is required.
 For repeatable *synthetic workload* measurements at fixed occupancy:
 
 ```powershell
-& '.\Fistnet.Genepool.Tests\bin\Release\net9.0-windows7.0\Fistnet.Genepool.Tests.exe' --diagnostic-fixture 50 large on 4
+& '.\Fistnet.Genepool.Tests\bin\Release\net10.0-windows7.0\Fistnet.Genepool.Tests.exe' --diagnostic-fixture 50 large on 4
 ```
 
 Fixture arguments are occupancy (0/10/50/100 percent), history (`early`/`large`),
@@ -346,7 +373,7 @@ comparison. None is automatically selected as a new default.
 The explicit scenario command is:
 
 ```powershell
-& .\Fistnet.Genepool.Tests\bin\Release\net9.0-windows7.0\Fistnet.Genepool.Tests.exe --ecology-scenario 11 2048 production default on
+& .\Fistnet.Genepool.Tests\bin\Release\net10.0-windows7.0\Fistnet.Genepool.Tests.exe --ecology-scenario 11 2048 production default on
 ```
 
 Arguments after the command are a signed integer seed, 1..2048 seasons,

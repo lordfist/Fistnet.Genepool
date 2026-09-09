@@ -1,0 +1,40 @@
+[
+  {
+    "stage": "first_step5_gpu",
+    "result": "211/215 checks passed; 4 overview readability checks failed",
+    "failures": [
+      {
+        "name": "full RGB bodies or edges remain visible on grey at detail 1",
+        "passed": false,
+        "detail": "grey-ground match: contrast=0/36, RGBerror=0.757; white: contrast=6/40, RGBerror=0.071; black: contrast=9/40, RGBerror=0.000; near-black: contrast=11/45, RGBerror=0.027; blue: contrast=8/32, RGBerror=0.078"
+      },
+      {
+        "name": "full RGB bodies or edges remain visible on brown at detail 1",
+        "passed": false,
+        "detail": "brown match: contrast=0/36, RGBerror=0.451; near-black: contrast=4/45, RGBerror=0.027; black: contrast=5/40, RGBerror=0.000; mid-grey: contrast=7/40, RGBerror=0.035; red: contrast=6/34, RGBerror=0.071"
+      },
+      {
+        "name": "full RGB bodies or edges remain visible on olive at detail 1",
+        "passed": false,
+        "detail": "olive match: contrast=0/32, RGBerror=0.569; green-ground match: contrast=0/32, RGBerror=0.565; brown match: contrast=2/36, RGBerror=0.451; mid-grey: contrast=4/40, RGBerror=0.035; near-black: contrast=5/45, RGBerror=0.027"
+      },
+      {
+        "name": "full RGB bodies or edges remain visible on green at detail 1",
+        "passed": false,
+        "detail": "green-ground match: contrast=0/32, RGBerror=0.565; mid-grey: contrast=4/40, RGBerror=0.035; near-black: contrast=5/45, RGBerror=0.027; olive match: contrast=5/32, RGBerror=0.569; grey-ground match: contrast=6/36, RGBerror=0.757"
+      }
+    ],
+    "engine_errors": [],
+    "intervention": "Changed only the overview boundary to screen-derived width and stronger opacity, preserving original RGB interiors and all prospective criteria. The subsequent GPU run passed 215/215 checks with zero engine errors. Close-view edge width remained unchanged."
+  },
+  {
+    "stage": "source_review",
+    "issue": "Dimming the source colour before choosing the boundary could turn an unrelated medium-dark organism outline bright.",
+    "intervention": "Choose boundary from original RGB, then apply dim factor to the completed body and boundary. Actual GPU threshold-crossing regression passed."
+  },
+  {
+    "stage": "owner_steering",
+    "issue": "Initial richer seven-colour proposal superseded by explicit full-RGB request before GPU evaluation.",
+    "intervention": "Removed palette quantization; use existing DNA ColorArgb, permitting black/white/grey. Prospective tests revised for true RGB instead of saturation/palette assumptions."
+  }
+]

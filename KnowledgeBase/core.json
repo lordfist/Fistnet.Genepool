@@ -3,7 +3,7 @@
     "root": "D:\\Posao\\Fistnet.Genepool",
     "purpose": "Make this experiment a better simulation and more fun to watch.",
     "purpose_origin_record": "DEC-0002",
-    "status": "R03_Step4_design_accepted_implementation_unstarted",
+    "status": "R04_Step1_awaiting_owner_review",
     "phase": "EVOLUTION",
     "root_semantics": "Exact physical experiment root explicitly assigned by User; KB tools bound to this root.",
     "model": "Provisional artificial-life sandbox with inherited action repertoires and individual learning.",
@@ -12,9 +12,9 @@
     "design_accepted": true,
     "trial_authorized": false,
     "trial_scope": "R02 ecological evaluation closed as INCONCLUSIVE by DEC-0020. Prior 16 comparisons remain time-limited; reserved confirmation was not run. No active or newly authorized trial.",
-    "design_accepted_scope": "R02 Parts1-4 accepted and closed with ecology inconclusive. R03 Godot engine selected by DEC-0024; Step2 plan REC-0009 accepted and bounded setup/2D implementation authorized by DEC-0025. Practical Godot2D viewer positively reviewed in DEC-0026. DEC-0028 starts Step4 proposal/mockups only; REC-0010 revision2 and latest mockups are accepted as the current direction by DEC-0031; later refinement allowed. DEC-0029 prefers mould appearance; DEC-0030 approves grass/dirt and defines visible-area borders and level3/4 action scope. Step4 implementation remains unstarted."
+    "design_accepted_scope": "R03 closed. Revised R04 Step1 toolchain plan accepted by DEC-0042; no Step2 model design acceptance or active ecology trial."
   },
-  "kb_revision": 54,
+  "kb_revision": 66,
   "next_decision_order": [],
   "open_question_ids": [],
   "owner_decision_ids": [
@@ -49,7 +49,17 @@
     "DEC-0029",
     "DEC-0030",
     "DEC-0031",
-    "DEC-0032"
+    "DEC-0032",
+    "DEC-0033",
+    "DEC-0034",
+    "DEC-0035",
+    "DEC-0036",
+    "DEC-0037",
+    "DEC-0038",
+    "DEC-0039",
+    "DEC-0040",
+    "DEC-0041",
+    "DEC-0042"
   ],
   "pinned_record_ids": [
     "DEC-0001",
@@ -116,6 +126,11 @@
     },
     "environment_capabilities": {
       "record_ids": [
+        "FACT-0065",
+        "FACT-0064",
+        "FACT-0063",
+        "DEC-0040",
+        "CLAIM-0009",
         "DEC-0004",
         "FACT-0013",
         "FACT-0014",
@@ -149,6 +164,22 @@
     },
     "current_implementation": {
       "record_ids": [
+        "FACT-0065",
+        "DEC-0039",
+        "FACT-0062",
+        "DEC-0038",
+        "FACT-0061",
+        "DEC-0037",
+        "DEC-0036",
+        "REC-0011",
+        "FACT-0060",
+        "DEC-0035",
+        "FACT-0058",
+        "DEC-0034",
+        "FACT-0057",
+        "FACT-0055",
+        "FACT-0056",
+        "DEC-0033",
         "DEC-0026",
         "FACT-0051",
         "FACT-0050",
@@ -207,6 +238,8 @@
     },
     "governance": {
       "record_ids": [
+        "DEC-0042",
+        "FACT-0065",
         "DEC-0016",
         "FACT-0043",
         "DEC-0001",
@@ -287,6 +320,14 @@
     },
     "r03_step4_design": {
       "record_ids": [
+        "FACT-0060",
+        "DEC-0035",
+        "FACT-0058",
+        "DEC-0034",
+        "FACT-0057",
+        "FACT-0055",
+        "FACT-0056",
+        "DEC-0033",
         "DEC-0031",
         "REC-0010",
         "DEC-0030",
@@ -299,14 +340,81 @@
       "record_ids": [
         "FACT-0052"
       ]
+    },
+    "r03_step4_result": {
+      "record_ids": [
+        "DEC-0036",
+        "FACT-0060",
+        "DEC-0035",
+        "FACT-0058",
+        "DEC-0034",
+        "FACT-0057",
+        "FACT-0055",
+        "FACT-0056",
+        "DEC-0033",
+        "REC-0010",
+        "DEC-0031"
+      ]
+    },
+    "ground_food_colours": {
+      "record_ids": [
+        "FACT-0061",
+        "DEC-0037",
+        "FACT-0060",
+        "DEC-0035",
+        "FACT-0059",
+        "FACT-0058"
+      ]
+    },
+    "r03_step5_graphics": {
+      "record_ids": [
+        "DEC-0039",
+        "FACT-0062",
+        "DEC-0038",
+        "FACT-0061",
+        "DEC-0037",
+        "REC-0011",
+        "DEC-0036",
+        "FACT-0060"
+      ]
+    },
+    "r03_closure": {
+      "record_ids": [
+        "DEC-0039",
+        "FACT-0062",
+        "REC-0011",
+        "DEC-0036"
+      ]
+    },
+    "r04_plan": {
+      "record_ids": [
+        "FACT-0065",
+        "DEC-0042",
+        "DEC-0041",
+        "REC-0012",
+        "FACT-0064",
+        "DEC-0040",
+        "FACT-0063",
+        "CLAIM-0009",
+        "DEC-0039",
+        "DEC-0027"
+      ]
+    },
+    "r04_step1": {
+      "record_ids": [
+        "FACT-0065",
+        "DEC-0042",
+        "REC-0012",
+        "FACT-0064"
+      ]
     }
   },
   "schema_version": 1,
   "state_files": {
-    "records_jsonl_sha256": "7C2AA5454E60F2D098962419A256E9B7863CA1C029F11BFB28390DC149C2B8F4",
-    "sources_json_sha256": "9A620B95C90631BC82146F472C7A908DC7C798F07BD939F140F19277EF371029"
+    "records_jsonl_sha256": "3CE5189C90D4450EF0D2F05410689092DCF83F6246A1A6D71E5963FE36067997",
+    "sources_json_sha256": "3EDE2A18A1BF694489612E6C13135CC0A172BEB9065A84C7211578983BA095A9"
   },
-  "updated_at": "2026-09-08T00:19:23+00:00",
+  "updated_at": "2026-09-09T11:55:52+00:00",
   "discovery": {
     "actor": "Seed Analyzer",
     "source_horizon_utc": "2026-09-06T01:04:55.1867052Z",
@@ -330,56 +438,40 @@
     "actor": "Genepool Analyzer",
     "knowledgebase_root": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase",
     "continuing_kb_authority": "Routine in-root KB retrieval, validation, preparation and transactions remain authorized. DEC-0006 permits adapting tools with proportionate checks. The earlier unversioned-KB premise is superseded for canonical files by FACT-0027; current edits still require normal revision/preview/verification safeguards.",
-    "originals": "Read-only source inspection for Step4 proposal. No simulation/viewer code changes authorized in current request.",
-    "next_action": "Stop for optional KB upgrade review. R03 Step4 design accepted; implementation awaits start instruction.",
-    "current_stage_record": "DEC-0032",
+    "originals": "Step1 implementation complete; stopped for owner review under DEC-0042.",
+    "next_action": "Owner reviews R04 Step1 result; do not start Step2.",
+    "current_stage_record": "DEC-0042",
     "environment_assessment": "Historical environment assessment used installed metadata and disposable synthetic probes; subsequent bounded source repair is recorded separately in FACT-0019.",
-    "current_research_scope": "Narrow official Godot design documentation and generated visual mockups; no installs or active ecology.",
+    "current_research_scope": "Official Microsoft/Godot and original asset publisher documentation for R04 planning.",
     "specialization_record": "DEC-0016"
   },
   "last_maintenance": {
-    "at": "2026-09-08T00:19:23+00:00",
+    "at": "2026-09-09T11:55:52+00:00",
     "actor": "Genepool Analyzer",
-    "note": "Adopt bounded KB retrieval and localized current-answer maintenance; defer recent anchors; preserve required loading and R03 pause."
+    "note": "Complete R04 Step1 migration verification and exact source lineage; stop for owner review before Step2."
   },
   "proposal": {
-    "id": "R03_Step4",
-    "record_id": "REC-0010",
-    "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_STEP4_DESIGN_PROPOSAL.md",
-    "sha256": "7BEE013BBE2DF0570A2CD9CD2568BB56DD612E6D2AE9CC460C32FCBEB529B31B",
-    "status": "DESIGN_ACCEPTED_IMPLEMENTATION_UNSTARTED",
-    "engine": "Godot C#",
-    "engine_selection_record": "DEC-0024",
-    "design_authority_record": "DEC-0028",
-    "implementation_authorized": false,
-    "limits": "Visual concepts only; no new 3D implementation/performance claim. Step3 acceptance DEC-0026 remains valid.",
-    "previous_accepted_plan_record": "REC-0009",
-    "organism_appearance": "Owner-preferred mould-like flat patches with irregular branching edges",
-    "appearance_decision_record": "DEC-0029",
-    "appearance_addendum": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_STEP4_MOULD_DIRECTION.md",
-    "design_revision": 2,
-    "ground_appearance": "Grass/dirt appearance approved by DEC-0030",
-    "viewport_rule": "Levels2–4 draw visible area only; board rim only at actual world boundary; visible panning affordance",
-    "action_scope_by_level": {
-      "3": "Muted actual-action cues for all visible board cells",
-      "4": "Full cues only for focused organism and its affected targets"
-    },
-    "viewport_and_ground_decision_record": "DEC-0030",
-    "latest_mockups": {
-      "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_STEP4_REVIEW_MOCKUPS.md",
-      "sha256": "7A94EE802B3BFFFAD475FAB13F67FE8A09842CBFEFA971AC47FE520299FF182C",
-      "images": [
-        "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_STEP4_DESIGN\\concept-e-habitat.png",
-        "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_STEP4_DESIGN\\concept-f-organism.png",
-        "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_STEP4_DESIGN\\concept-g-inspect.png"
-      ],
-      "status": "OWNER_ACCEPTED_CURRENT_VISUAL_DIRECTION"
-    },
-    "owner_acceptance_record": "DEC-0031"
+    "id": "R04",
+    "record_id": "REC-0012",
+    "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\IMPROVEMENT_PROPOSAL_R04.md",
+    "status": "STEP1_IMPLEMENTED_AWAITING_REVIEW",
+    "implementation_authorized": true,
+    "scope": "VS2026/.NET10 recommendation; full3D design/model; implementation; shaders/lighting; WASD/mouse.",
+    "basis_records": [
+      "DEC-0040",
+      "FACT-0063",
+      "CLAIM-0009"
+    ],
+    "limits": "Retain accepted views/RGB and passive observation. No simulation/ecology/food-policy change.",
+    "review_record_ids": [
+      "DEC-0041",
+      "FACT-0064"
+    ],
+    "implementation_scope": "Step1 only completed; later steps remain unstarted."
   },
   "environment": {
-    "status": "R03 whole-solution VS2022 Debug/Release builds and149/149tests each pass; Godot4.7.2 RX6800 GPU verified.",
-    "sdk_for_vs2022": "9.0.315",
+    "status": "9 September current VS2026/.NET10 migration build and runtime evidence in FACT-0065.",
+    "sdk_for_vs2022": "9.0.315 historical build SDK; no longer present at recorded path",
     "report": {
       "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\ENVIRONMENT_CAPABILITIES_R01.md",
       "sha256": "102A4FE72EA9CC4ACA43A0DEF81E2507CA5BD3D1ADC78FFBCC2B254E81939731",
@@ -402,10 +494,25 @@
       "FACT-0047",
       "FACT-0048",
       "FACT-0049",
-      "FACT-0051"
+      "FACT-0051",
+      "FACT-0056",
+      "FACT-0058",
+      "FACT-0060",
+      "FACT-0061",
+      "FACT-0063",
+      "FACT-0064",
+      "FACT-0065"
     ],
-    "refresh": "Existing paths/cache isolation in KnowledgeBase/tools/build_solution.py; recheck material inputs before a future changed build.",
-    "r03_gpu_research": "Installed portable Godot4.7.2. OpenGL3.3 RX6800:~60FPS/16.7msp95 with0/1000/10000fixtures. SDK9.0.315/net9 retained; Godot host.NET10.0.9. IDE F5/debug interaction unverified."
+    "refresh": "Root and helpers now follow VS2026/SDK10.0.401 and root NuGet policy; precise runtime/build identities in Step1 reports.",
+    "r03_gpu_research": "FACT0061 records currentRGBgraphics timings; detachedrendereronly, notsimulation speed orconstantFPSguarantee.",
+    "current_toolchain": {
+      "ide": "VS2026 Community18.9.3 / MSBuild18.9.1.35102",
+      "sdk": "10.0.401, root latestPatch, CLI and VS MSBuild agree",
+      "target": "All6 projects net10.0-windows7.0",
+      "runtime": "Console/WinForms10.0.12; Godot10.0.12 already used for the current net9-target baseline",
+      "godot": "4.7.2 stable.NET / gl_compatibility"
+    },
+    "migration_decision": "DEC-0042 accepts and authorizes the VS2026/.NET10 migration; supersedes earlier VS2022 baseline for current work."
   },
   "tooling": {
     "record_id": "FACT-0054",
@@ -414,7 +521,7 @@
     "verification": "49 distinct KB checks passed,1actual-symlink check skipped; current retrieval/tool identities in FACT-0054.",
     "source_history": "Pinned local Git and exact KB snapshots retain identities. SRC-0115 exact mixed-newline predecessor unavailable; prepared history retained with explicit deep-validation warning (FACT-0042).",
     "knowledgebase_is_git_versioned": true,
-    "knowledgebase_git_scope": "Local HEAD d5da91152c6d5f915abdd961a0a4f4cb285bdc68 contains Godot2D implementation; current outstanding edits are KB acceptance/design support. Dated review in FACT-0052; no commit/push this turn.",
+    "knowledgebase_git_scope": "Earlier baseHEAD14b39d984555897e88c279ed21651df7c114e05d and dirty-state note are historical. Current commit coverage not re-established in planning; no commit/push.",
     "knowledgebase_owner_decision": "DEC-0008: Keep the KnowledgeBase in Git.",
     "source_version_record_id": "FACT-0020",
     "current_maintenance_authority": "DEC-0032",
@@ -446,80 +553,67 @@
     "ecological_evaluation_status": "INCONCLUSIVE; closed by owner priority decision"
   },
   "current_iteration_part": {
-    "id": "R03_Step4",
-    "status": "DESIGN_ACCEPTED_IMPLEMENTATION_UNSTARTED",
+    "id": "R04_Step1",
+    "status": "IMPLEMENTED_AWAITING_OWNER_REVIEW",
     "record_ids": [
-      "DEC-0028",
-      "FACT-0052",
-      "FACT-0053",
-      "REC-0010",
-      "DEC-0029",
-      "DEC-0030",
-      "DEC-0031"
+      "DEC-0042",
+      "FACT-0065",
+      "REC-0012"
     ],
-    "report": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_STEP4_DESIGN_PROPOSAL.md",
-    "verification": "Static code/documentation review, mockup visual inspection and KB verification only; no builds/tests/trials.",
-    "limits": "Design accepted for now with later refinement allowed. Implementation, performance verification and implementation acceptance remain unstarted.",
-    "appearance_decision_record": "DEC-0029",
-    "owner_design_acceptance_record": "DEC-0031"
+    "report": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R04_STEP1_MIGRATION_RESULT.md",
+    "verification": "Whole .slnx Debug/Release locked builds, identified console/reference/WinForms and Godot headless/GPU checks pass; manual IDE debugger/designer pending.",
+    "next_action": "Owner review; stop before Step2."
   },
   "previous_iteration_part": {
-    "id": "R03_Step3",
-    "status": "OWNER_ACCEPTED_PRACTICAL_2D_VIEWER",
+    "id": "R03_Step5",
+    "status": "OWNER_ACCEPTED_CLOSED",
     "record_ids": [
-      "DEC-0025",
-      "FACT-0049",
-      "FACT-0050",
-      "FACT-0051",
-      "DEC-0026"
+      "DEC-0036",
+      "DEC-0037",
+      "REC-0011",
+      "FACT-0061",
+      "DEC-0038",
+      "FACT-0062",
+      "DEC-0039"
     ],
-    "report": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\IMPROVEMENT_RESULT_R03_2D.md",
-    "verification": "VS2022 whole builds;149/149tests each;GPU/headless/pixels/live controls/renderer budget pass. See evidence and receipt.",
-    "limits": "Specific IDE debugging and monitor transitions unverified. Step4/Step5 and packaging unstarted; no current simulation changes.",
-    "owner_acceptance_record": "DEC-0026"
+    "scope": "Final graphics polish, especially organism colours/ground contrast; accepted Step4 geometry/ground/action scope retained.",
+    "verification": "Current View1 adjustment: VS2022 Debug build and 217 GPU checks pass. Other Step5 evidence remains dated in FACT-0061.",
+    "limits": "Accepted final R03 milestone. Dated verification retained; no reruns for closure.",
+    "report": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_STEP5_GRAPHICS_RESULT.md",
+    "owner_acceptance_record": "DEC-0039"
   },
   "governance": {
     "actor": "Genepool Analyzer",
-    "revision": "GA-R01",
-    "effective_at_utc": "2026-09-06T20:27:30.879617+00:00",
-    "authority_record": "DEC-0016",
-    "result_record": "FACT-0043",
+    "revision": "GA-R02",
+    "effective_at_utc": "2026-09-09T11:50:08.538452+00:00",
+    "authority_record": "DEC-0042",
+    "result_record": "FACT-0065",
     "entry": "AGENTS.md",
     "constitution": ".SeedAnalyzer/CONSTITUTION.md",
     "kb_policy": ".SeedAnalyzer/KB.md",
     "source_ids": [
-      "SRC-0154",
-      "SRC-0155",
+      "SRC-0319",
+      "SRC-0320",
       "SRC-0156",
       "SRC-0260"
     ],
-    "scope": "Permanent project specialization; current iteration and acceptance state remain in their existing core fields."
+    "scope": "VS2026/.NET10 and .slnx baseline; role/root and owner checkpoints preserved."
   },
   "next_iteration": {
-    "id": "R03",
-    "status": "R03_STEP4_DESIGN_ACCEPTED",
-    "owner_outline_record": "DEC-0021",
-    "preliminary_opinion_record": "REC-0007",
-    "scope": "GPU visualization: research -> plan -> familiar 2D -> either 2.5D or 3D -> improved graphics",
-    "constraints": [
-      "Free for non-commercial use",
-      "Whole solution compatible with Visual Studio 2022",
-      "Useful examples and reusable2D/3D assets",
-      "Proportionate simulation visuals"
-    ],
-    "research_started": true,
+    "id": "R04",
+    "status": "STEP1_AWAITING_REVIEW",
+    "owner_outline_record": "DEC-0040",
+    "current_recommendation_record": "REC-0012",
     "plan_started": true,
     "implementation_started": true,
     "start_authorized": true,
-    "next_action": "Proposed next: implement Step4 increment1 ground, mould appearance and depth camera, then working-view review. Await start instruction.",
-    "start_scope": "Step4 design accepted by DEC-0031; implementation unstarted. Step5 polish remains later.",
-    "current_recommendation_record": "REC-0010",
-    "engine_selection_record": "DEC-0024",
-    "implementation_authorization_record": "DEC-0025",
-    "current_implementation_acceptance_record": "DEC-0026",
-    "step4_design_authorization_record": "DEC-0028",
-    "step4_implementation_authorized": false,
-    "step4_design_acceptance_record": "DEC-0031"
+    "next_action": "Owner review of completed Step1; Step2 unstarted.",
+    "constraints": [
+      "VS2026/.NET10 current baseline; .slnx primary",
+      "Proportionate real3D mould visuals and examples in later steps",
+      "Full DNA RGB and retained accepted views",
+      "Step-by-step owner review; passive rendering"
+    ]
   },
   "deferred_improvements": [
     {
@@ -528,5 +622,13 @@
       "status": "DEFERRED_NOT_IMPLEMENTED",
       "path": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\DEFERRED_IMPROVEMENTS.md"
     }
-  ]
+  ],
+  "completed_r03": {
+    "status": "ALL_FIVE_PLANNED_MILESTONES_COMPLETE",
+    "final_step_acceptance": "DEC-0039",
+    "final_result": "FACT-0062",
+    "report": "D:\\Posao\\Fistnet.Genepool\\KnowledgeBase\\R03_STEP5_GRAPHICS_RESULT.md",
+    "prior_outline": "DEC-0021",
+    "limits": "No ecology outcome added by graphics acceptance."
+  }
 }

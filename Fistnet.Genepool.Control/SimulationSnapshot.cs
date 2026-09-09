@@ -119,7 +119,7 @@ namespace Fistnet.Genepool.Control
                 var node = new SortedDictionary<string, object>(StringComparer.Ordinal)
                 {
                     ["id"] = id,
-                    ["type"] = type.FullName
+                    ["type"] = ComparisonTypeName(type)
                 };
                 Type definition = type.IsGenericType ? type.GetGenericTypeDefinition() : type;
                 if (value is IDictionary dictionary &&
@@ -190,6 +190,16 @@ namespace Fistnet.Genepool.Control
                     fields.Add(type, result);
                 }
                 return result;
+            }
+
+            private static string ComparisonTypeName(Type type)
+            {
+                // Schema v2 retains the accepted .NET 9 core-library qualification in
+                // generic type labels. This is a comparison label, not the loaded runtime;
+                // preserve type arguments, domain assembly identities and all state values.
+                return type.FullName.Replace(typeof(object).Assembly.FullName,
+                    "System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e",
+                    StringComparison.Ordinal);
             }
 
             private static string Key(object key)

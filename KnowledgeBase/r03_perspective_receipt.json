@@ -1,0 +1,21 @@
+{
+  "actor": "Genepool Analyzer",
+  "input_revision": 56,
+  "output_revision": 57,
+  "applied_once": true,
+  "transaction_sha256": "81B10CFF44F24F996B94A58962895904763C9B45DDB52F4784AAB7C346A15DE3",
+  "apply_stdout_captured": false,
+  "matching_active_apply_processes_after_host_check": 0,
+  "task_staging_files_observed_after_reconciliation": 0,
+  "capture_issue": "Shell call yielded a still-running session; orchestrator incorrectly attempted to parse its empty output. No second apply was issued.",
+  "reconciliation": "Revision57, every requested record/source/core value and state-file hashes match reviewed transaction; deep validation passes. This is reconstructed evidence, not the lost apply write_outcome.",
+  "expected_state_comparison": true,
+  "artifact_and_godot_binary_identities_verified": true,
+  "context_reaches_current_correction": true,
+  "deep_validation": "PASS with only pre-existing historicalSRC0115 warning",
+  "canonical_state_files": {
+    "records_jsonl_sha256": "D3DF43108796C89DA883A2E592931BF09C1695282392184FD510C1BEA6DC39C8",
+    "sources_json_sha256": "8DE077E54A75A8BE73000B0EF5C691FF1C220BDB1F12369B54DBEE823C5F19A5"
+  },
+  "unresolved": "Original structured apply stdout/cleanup report unavailable; no staging files observed in later inspection."
+}

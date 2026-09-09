@@ -1,0 +1,195 @@
+{
+  "atUtc": "2026-09-08T11:23:35.2893306+00:00",
+  "mode": "step4-benchmark",
+  "ok": true,
+  "failures": 0,
+  "backend": "Windows",
+  "adapter": "AMD Radeon RX 6800",
+  "runtime": ".NET 10.0.9",
+  "engine": "4.7.2-stable (official)",
+  "gpuExecuted": true,
+  "externalProcessWatchdogRequired": true,
+  "limits": "Synthetic viewer fixtures and bounded engineering checks. No ecological trial. Frame intervals are main-loop observations, not hardware presentation timings. UI timing covers injected Godot input/signals, not physical mouse-to-photon latency. In-scene waits cannot time out a stalled main loop; the launcher must enforce an external process deadline.",
+  "checks": [
+    {
+      "name": "depth benchmark sample coverage population 0 detail 1",
+      "passed": true,
+      "detail": "7.016s"
+    },
+    {
+      "name": "depth benchmark replay coverage population 0 detail 1",
+      "passed": true,
+      "detail": "70/70; skipped 0"
+    },
+    {
+      "name": "depth benchmark frame budget population 0 detail 1",
+      "passed": true,
+      "detail": "p95 16.69ms"
+    },
+    {
+      "name": "depth benchmark sample coverage population 1000 detail 1",
+      "passed": true,
+      "detail": "7.016s"
+    },
+    {
+      "name": "depth benchmark replay coverage population 1000 detail 1",
+      "passed": true,
+      "detail": "70/70; skipped 0"
+    },
+    {
+      "name": "depth benchmark frame budget population 1000 detail 1",
+      "passed": true,
+      "detail": "p95 16.69ms"
+    },
+    {
+      "name": "depth benchmark sample coverage population 10000 detail 1",
+      "passed": true,
+      "detail": "7.016s"
+    },
+    {
+      "name": "depth benchmark replay coverage population 10000 detail 1",
+      "passed": true,
+      "detail": "70/70; skipped 0"
+    },
+    {
+      "name": "depth benchmark frame budget population 10000 detail 1",
+      "passed": true,
+      "detail": "p95 16.69ms"
+    },
+    {
+      "name": "depth benchmark sample coverage population 10000 detail 3",
+      "passed": true,
+      "detail": "7.016s"
+    },
+    {
+      "name": "depth benchmark replay coverage population 10000 detail 3",
+      "passed": true,
+      "detail": "70/70; skipped 0"
+    },
+    {
+      "name": "depth benchmark frame budget population 10000 detail 3",
+      "passed": true,
+      "detail": "p95 16.69ms"
+    }
+  ],
+  "measurements": [
+    {
+      "kind": "depth_renderer",
+      "population": 0,
+      "detailLevel": 1,
+      "angled": true,
+      "width": 1920,
+      "height": 1080,
+      "visibleFoodInstances": 10000,
+      "visibleOrganismInstances": 0,
+      "visibleActionCues": 0,
+      "requestedWarmupSeconds": 3,
+      "requestedSampleSeconds": 7,
+      "actualSampleSeconds": 7.0163858,
+      "requestedSnapshotHz": 10,
+      "expectedSampleSnapshots": 70,
+      "sampleSnapshotsReplayed": 70,
+      "sampleSnapshotsSkipped": 0,
+      "frames": 421,
+      "averageFps": 60.00240180635449,
+      "p95FrameMilliseconds": 16.6948,
+      "maxFrameMilliseconds": 16.8311,
+      "p95UploadMilliseconds": 5.0405,
+      "sampleCoverageComplete": true,
+      "replayCoverageComplete": true,
+      "frameBudgetPassed": true,
+      "simulationCalculationIncluded": false,
+      "notes": "Detached snapshots. Dense detail3 includes full 10000-outcome batches at10Hz; no spatial event cap. Intervals include replay stamping and UI upload, but exclude simulation calculation. Main-loop observations, not hardware presentation timings."
+    },
+    {
+      "kind": "depth_renderer",
+      "population": 1000,
+      "detailLevel": 1,
+      "angled": true,
+      "width": 1920,
+      "height": 1080,
+      "visibleFoodInstances": 10000,
+      "visibleOrganismInstances": 1000,
+      "visibleActionCues": 0,
+      "requestedWarmupSeconds": 3,
+      "requestedSampleSeconds": 7,
+      "actualSampleSeconds": 7.0163805,
+      "requestedSnapshotHz": 10,
+      "expectedSampleSnapshots": 70,
+      "sampleSnapshotsReplayed": 70,
+      "sampleSnapshotsSkipped": 0,
+      "frames": 421,
+      "averageFps": 60.00244713068226,
+      "p95FrameMilliseconds": 16.6914,
+      "maxFrameMilliseconds": 25.5872,
+      "p95UploadMilliseconds": 5.4601,
+      "sampleCoverageComplete": true,
+      "replayCoverageComplete": true,
+      "frameBudgetPassed": true,
+      "simulationCalculationIncluded": false,
+      "notes": "Detached snapshots. Dense detail3 includes full 10000-outcome batches at10Hz; no spatial event cap. Intervals include replay stamping and UI upload, but exclude simulation calculation. Main-loop observations, not hardware presentation timings."
+    },
+    {
+      "kind": "depth_renderer",
+      "population": 10000,
+      "detailLevel": 1,
+      "angled": true,
+      "width": 1920,
+      "height": 1080,
+      "visibleFoodInstances": 10000,
+      "visibleOrganismInstances": 10000,
+      "visibleActionCues": 0,
+      "requestedWarmupSeconds": 3,
+      "requestedSampleSeconds": 7,
+      "actualSampleSeconds": 7.0163888,
+      "requestedSnapshotHz": 10,
+      "expectedSampleSnapshots": 70,
+      "sampleSnapshotsReplayed": 70,
+      "sampleSnapshotsSkipped": 0,
+      "frames": 421,
+      "averageFps": 60.00237615110497,
+      "p95FrameMilliseconds": 16.6936,
+      "maxFrameMilliseconds": 22.2176,
+      "p95UploadMilliseconds": 5.9359,
+      "sampleCoverageComplete": true,
+      "replayCoverageComplete": true,
+      "frameBudgetPassed": true,
+      "simulationCalculationIncluded": false,
+      "notes": "Detached snapshots. Dense detail3 includes full 10000-outcome batches at10Hz; no spatial event cap. Intervals include replay stamping and UI upload, but exclude simulation calculation. Main-loop observations, not hardware presentation timings."
+    },
+    {
+      "kind": "depth_renderer",
+      "population": 10000,
+      "detailLevel": 3,
+      "angled": true,
+      "width": 1920,
+      "height": 1080,
+      "visibleFoodInstances": 258,
+      "visibleOrganismInstances": 258,
+      "visibleActionCues": 258,
+      "requestedWarmupSeconds": 3,
+      "requestedSampleSeconds": 7,
+      "actualSampleSeconds": 7.0163792,
+      "requestedSnapshotHz": 10,
+      "expectedSampleSnapshots": 70,
+      "sampleSnapshotsReplayed": 70,
+      "sampleSnapshotsSkipped": 0,
+      "frames": 421,
+      "averageFps": 60.00245824798066,
+      "p95FrameMilliseconds": 16.6893,
+      "maxFrameMilliseconds": 28.3154,
+      "p95UploadMilliseconds": 0.4023,
+      "sampleCoverageComplete": true,
+      "replayCoverageComplete": true,
+      "frameBudgetPassed": true,
+      "simulationCalculationIncluded": false,
+      "notes": "Detached snapshots. Dense detail3 includes full 10000-outcome batches at10Hz; no spatial event cap. Intervals include replay stamping and UI upload, but exclude simulation calculation. Main-loop observations, not hardware presentation timings."
+    }
+  ],
+  "process": {
+    "exitCode": 0,
+    "elapsedSeconds": 41.704,
+    "deadlineSeconds": 100,
+    "engineErrors": []
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "stage": "Initial borderless GPU check",
+  "passed": 212,
+  "total": 217,
+  "failures": [
+    {
+      "name": "World renders RGB without dark or pale outlines on grey: World fit",
+      "passed": false,
+      "detail": "grey-ground match: contrast=0/36, outlinePixels=0, RGBerror=0.757; mid-grey: contrast=6/40, outlinePixels=0, RGBerror=0.035; olive match: contrast=8/32, outlinePixels=0, RGBerror=0.569; green-ground match: contrast=8/32, outlinePixels=0, RGBerror=0.565; violet: contrast=11/42, outlinePixels=0, RGBerror=0.071"
+    },
+    {
+      "name": "World renders RGB without dark or pale outlines on grey: World just below detail threshold",
+      "passed": false,
+      "detail": "grey-ground match: contrast=4/282, outlinePixels=0, RGBerror=0.041; mid-grey: contrast=52/259, outlinePixels=0, RGBerror=0.027; olive match: contrast=63/286, outlinePixels=0, RGBerror=0.030; green-ground match: contrast=68/284, outlinePixels=0, RGBerror=0.028; brown match: contrast=67/273, outlinePixels=0, RGBerror=0.022"
+    },
+    {
+      "name": "World renders RGB without dark or pale outlines on brown: World fit",
+      "passed": false,
+      "detail": "brown match: contrast=0/36, outlinePixels=0, RGBerror=0.451; orange: contrast=11/45, outlinePixels=0, RGBerror=0.071; near-black: contrast=11/45, outlinePixels=3, RGBerror=0.027; black: contrast=10/40, outlinePixels=0, RGBerror=0.000; mid-grey: contrast=10/40, outlinePixels=0, RGBerror=0.035"
+    },
+    {
+      "name": "World renders RGB without dark or pale outlines on olive: World fit",
+      "passed": false,
+      "detail": "brown match: contrast=0/36, outlinePixels=0, RGBerror=0.451; olive match: contrast=0/32, outlinePixels=0, RGBerror=0.569; green-ground match: contrast=0/32, outlinePixels=0, RGBerror=0.565; mid-grey: contrast=6/40, outlinePixels=0, RGBerror=0.035; orange: contrast=11/45, outlinePixels=0, RGBerror=0.071"
+    },
+    {
+      "name": "World renders RGB without dark or pale outlines on green: World fit",
+      "passed": false,
+      "detail": "green-ground match: contrast=0/32, outlinePixels=0, RGBerror=0.565; brown match: contrast=5/36, outlinePixels=0, RGBerror=0.451; olive match: contrast=6/32, outlinePixels=0, RGBerror=0.569; mid-grey: contrast=8/40, outlinePixels=0, RGBerror=0.035; orange: contrast=11/45, outlinePixels=0, RGBerror=0.071"
+    }
+  ],
+  "engineErrors": [],
+  "status": "Resolved: pixel bounds rounded outward to the 8-bit capture grid; shader unchanged after initial requested gate. Final GPU result 217/217 passed, zero engine errors. Close-view criteria unchanged.",
+  "diagnostic": {
+    "offendingSpecimen": "Only near-black (RGB 8/255)",
+    "passed": 212,
+    "actualChannels": "1/255 = 0.003922",
+    "example": "near-black: contrast=14/45, outlinePixels=3, RGBerror=0.027; offender(742,329) R(pixel=0.003922,ground=0.611765,source=0.031373,allowed=[0.005098,0.631765]) G(pixel=0.003922,ground=0.611765,source=0.031373,allowed=[0.005098,0.631765]) B(pixel=0.003922,ground=0.611765,source=0.031373,allowed=[0.005098,0.631765]) | offender(743,329) R(pixel=0.003922,ground=0.611765,source=0.031373,allowed=[0.005098,0.631765]) G(pixel=0.003922,ground=0.611765,source=0.031373,allowed=[0.005098,0.631765]) B(pixel=0.003922,ground=0.611765,source=0.031373,allowed=[0.005098,0.631765]) | offender(744,329) R(pixel=0.003922,ground=0.611765,source=0.031373,allowed=[0.005098,0.631765]) G(pixel=0.003922,ground=0.611765,source=0.031373,allowed=[0.005098,0.631765]) B(pixel=0.003922,ground=0.611765,source=0.031373,allowed=[0.005098,0.631765]); grey-ground match: contrast=0/36, outlinePixels=0, RGBerror=0.757; mid-grey: contrast=6/40, outlinePixels=0, RGBerror=0.035; olive match: contrast=8/32, outlinePixels=0, RGBerror=0.569; green-ground match: contrast=8/32, outlinePixels=0, RGBerror=0.565",
+    "total": 217,
+    "analyticLower": "0.005098 = 1.3/255",
+    "otherSamples": "All other RGB samples had zero offending pixels"
+  }
+}
