@@ -195,7 +195,7 @@ Allowed transaction fields: `actor`, `note`, `upsert_records`, `upsert_sources`,
 
 Use the actual responsible Actor; the string does not establish authority. `apply TRANSACTION --expect-revision N --dry-run` previews; omit `--dry-run` to apply once. Transaction paths must stay inside KnowledgeBase; relative apply paths resolve from the caller's cwd. Record `created_at` is preserved when present; updates supply automatic timestamps/revision. `core_patch` cannot set `schema_version` or `kb_revision`. Record/source deletion is unsupported.
 
-Dry-run returns bounded `changes` with target, ID, JSON Pointer path, added/changed/removed status and automatic-change flag. An object addition/removal has an `object_presence_only` container marker followed by child-field changes; its empty-object value is not complete content. Arrays are atomic. `--preview-values` includes full before/after values; a single oversized value fails explicitly.
+Dry-run returns bounded `changes` with target, ID, JSON Pointer path, added/changed/removed/appended status and automatic-change flag. An object addition/removal has an `object_presence_only` container marker followed by child-field changes; its empty-object value is not complete content. Arrays remain atomic in stored transactions. A strict unchanged-prefix append previews only new items with `before_count`, `appended_count` and, with `--preview-values`, `appended`; whole-array replacement exposes `before_count`/`after_count`. The header is `arrays: atomic_or_appended`. Without preview values, before/after/appended payloads are omitted. A single oversized value fails explicitly.
 
 For preview continuation, keep the revision and transaction bytes fixed. First-page output includes `transaction_sha256`, `preview_time`, `next_offset`. Reissue identical preview arguments with `--offset NEXT --expect-transaction-sha256 HASH --preview-time TIME`; preserve limit/projection/budget choices. Inspect all relevant changes before apply. For the live apply, pass the reviewed `--expect-transaction-sha256 HASH` together with `--expect-revision N`; omit other preview flags. The tool hashes and parses one transaction read, checks both identities, and refuses transaction drift before replacement. Older callers without the hash remain supported. Preview time is prospective; actual apply generates current timestamps. Preview fields paginate without full values. Hashes establish identity/consistency, not approval.
 
@@ -237,3 +237,35 @@ CSV v2 infers comma, semicolon, tab or pipe by strict quote-aware parsing of the
 ODS v2 preserves empty/covered positions and repeats. Positive-repeat limits: 100,000 per-cell repetitions, 10,000,000 row repetitions, 100,000 encoded material rows, 100,000 represented cells/row, 1,000,000 represented material cells/document. Exceeding them fails without silent column shifts; trailing blank repeats use arithmetic without consuming material-cell budgets. `material_data_rows` and aggregates count each encoded nonempty row once, without repetition weighting. `logical_rows_including_repetition` counts repeats, header and blank tails: a different population. Numeric conversion uses displayed paragraphs, without recovering formatted/typed-only/rejected values. Numeric counts may be below nonempty counts; aggregates do not imply full-population coverage. Formulas remain inert; external data is never refreshed.
 
 <!-- END SEED KB REFERENCE -->
+
+## Selective v07 tools adopted 23 October 2026
+
+These are local ports of four features from the owner-named v07 package, not a new Seed installation. The required policy above, Genepool identity, complete-core loading, current brief/ranking behavior, preparation checks, exact source snapshots and reviewed commit engine remain in force. No guest reader, recency sidecar, installer or broader retrieval redesign is installed.
+
+### Draft edits from complete records
+
+`kb_client.py draft` loads full canonical objects and writes a new transaction file; it never applies it. Keep the request and output inside this exact KnowledgeBase, normally in an existing `KnowledgeBase/transactions/` folder. Paths cannot contain links/reparse points, and output must not already exist.
+
+A request has `actor`, optional `note`, optional `records` (each selects an existing `id`), optional `new_records` (complete new objects), and optional `core`. Each edit supports:
+
+- `merge`: recursively update existing object keys, preserving omitted keys. Arrays and scalars are replaced whole. Unknown keys fail to catch misspellings.
+- `add`: JSON Pointer paths to absent keys whose object parents already exist.
+- `append`: JSON Pointer paths to existing arrays, each with a nonempty array of new items. Existing members are retained; overlapping additions, appends or replacements are refused.
+
+Record IDs/timestamps and automatic core fields are protected. Source revision/deletion is not supported by the drafting helper; use the existing source-version procedure when needed. A draft is a mechanical edit proposal, not authority or proof of semantic correctness.
+
+```text
+python -X utf8 -B KnowledgeBase/tools/kb_client.py draft KnowledgeBase/transactions/request.json --output KnowledgeBase/transactions/draft.json --expect-revision N --compact
+```
+
+Review every dry-run page for the returned transaction SHA and revision, then apply exactly those bytes using the existing procedure. The drafting summary never replaces the full preview. The client still allows only kb.py, prepare.py and consolidation_scope.py for checked subprocess calls.
+
+### Page a long record array
+
+`get ID --array resolution_notes` returns one array page while retaining the other selected fields. Nested dotted array paths and `--fields` work together; excluding the requested array is an error. The result is always labelled a projection, even if that page happens to contain the entire array. Never upsert from it.
+
+Use `array_page.next_offset` for continuation and pass the first page's `kb_revision` as `--expect-revision`. Keep ID, array, field selection and page budget fixed. `array_page.omitted_count` includes earlier pages; `remaining_available_count` counts later items. Single oversized items require a larger budget or narrower fields. Oversized ordinary full-record errors list top-level pageable arrays. Arrays in sources, batches, summary/ID-only modes and prepared-locator requests are rejected. Ordinary full `get` is unchanged.
+
+### Match route words deliberately
+
+Partial context-route bonuses now match a whole route-label word or a prefix of at least four characters. Short words such as “is” no longer match inside “genesis.” Exact route names and topic hints still keep authored order. This local port changes context routing only; search and record ranking retain their existing behavior.

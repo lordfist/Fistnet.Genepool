@@ -639,6 +639,14 @@ def route_order(core: dict[str, Any], topics: list[str]) -> dict[str, int]:
     return order
 
 
+def route_matches(name: str, route: dict[str, Any], terms: list[str]) -> bool:
+    """Partial route bonus uses whole label words or prefixes of at least four characters."""
+    labels = [str(name).casefold(), *[str(x).casefold() for x in route.get("topic_hints", [])]]
+    words = [word for label in labels for word in re.findall(r"[^\W_]+", label)]
+    return any(term in labels or any(word == term or (len(term) >= 4 and word.startswith(term))
+                                    for word in words) for term in terms)
+
+
 def compact_record(row: dict[str, Any]) -> dict[str, Any]:
     """A navigation projection, never a replacement record or semantic verdict."""
     clipped: list[str] = []
@@ -807,12 +815,17 @@ def check_read_revision(args: argparse.Namespace, core: dict[str, Any]) -> None:
 def projection_info(args: argparse.Namespace) -> dict[str, Any]:
     fields = getattr(args, "fields", None)
     mode = "brief" if getattr(args, "brief", False) else "ids" if getattr(args, "ids_only", False) else "summary" if getattr(args, "summary", False) else "fields" if fields else "full"
+    array = getattr(args, "array", None)
+    if array:
+        # One array page is never the whole record, even when every other field is complete.
+        return {"is_projection": True, "mode": "array_page" if mode == "full" else mode,
+                "fields": fields or [], "array_field": array}
     return {"is_projection": mode != "full", "mode": mode, "fields": fields or []}
 
 
 def project_value(row: dict[str, Any], args: argparse.Namespace) -> dict[str, Any]:
     info = projection_info(args)
-    if not info["is_projection"]:
+    if not info["is_projection"] or info["mode"] == "array_page":
         return row
     identity = "id" if "id" in row else "source_id" if "source_id" in row else None
     if info["mode"] == "ids":
@@ -925,8 +938,7 @@ def command_context(args: argparse.Namespace) -> None:
     terms = token_terms(" ".join(topics))
     routed_ids: set[str] = set()
     for route_name, route in core.get("routes", {}).items():
-        route_blob = " ".join([str(route_name), *route.get("topic_hints", [])]).casefold()
-        if any(term in route_blob for term in terms):
+        if route_matches(route_name, route, terms):
             routed_ids.update(route.get("record_ids", []))
     ordered = route_order(core, topics)
     scored = [(rank_record(row, terms, history=args.history)[0] + (300 if row["id"] in routed_ids else 0), row) for row in records]
@@ -1093,6 +1105,44 @@ def source_result(source: dict[str, Any], args: argparse.Namespace, *, metadata_
     return result
 
 
+def array_page(result: dict[str, Any], args: argparse.Namespace) -> dict[str, Any]:
+    """Page one array field of a single record value; every other selected field stays complete."""
+    parts = args.array.split(".")
+    value = copy.deepcopy(result["value"])
+    parent: Any = value
+    for part in parts[:-1]:
+        parent = parent.get(part) if isinstance(parent, dict) else None
+    if not isinstance(parent, dict) or not isinstance(parent.get(parts[-1]), list):
+        raise KBError(f"array path is not an array field of the selected record value: {args.array}",
+                      code="invalid_array_path")
+    items, offset = parent[parts[-1]], args.offset
+    available = len(items)
+
+    def page(count: int) -> dict[str, Any]:
+        parent[parts[-1]] = items[offset:offset + count]
+        returned = len(parent[parts[-1]])
+        end = min(offset + returned, available)
+        return {**result, "value": value, "omitted_count": available - returned,
+                "truncated": returned < available, "array_page": {
+                    "path": args.array, "offset": offset, "returned_count": returned,
+                    "total_count": available, "omitted_count": available - returned,
+                    "remaining_available_count": max(0, available - end),
+                    "next_offset": end if end < available else None}}
+
+    if estimate_tokens(page(0)) + 80 > args.budget:
+        raise KBError("record without array items exceeds budget; select fewer --fields or raise --budget",
+                      code="budget_too_small", required_budget=estimate_tokens(page(0)) + 80)
+    count = 0
+    while count < args.limit and offset + count < available:
+        if estimate_tokens(page(count + 1)) + 80 > args.budget:
+            if not count:
+                raise KBError("array item exceeds page budget; raise --budget", code="item_too_large",
+                              offset=offset, required_budget=estimate_tokens(page(1)) + 80)
+            break
+        count += 1
+    return page(count)
+
+
 def command_get(args: argparse.Namespace) -> None:
     core, records, sources = load_state()
     require_valid(core, records, sources)
@@ -1102,17 +1152,29 @@ def command_get(args: argparse.Namespace) -> None:
     if len(args.identifier) == 1:
         identifier = identifiers[0]
         if identifier in by_id:
-            if args.offset:
-                raise KBError("single-record retrieval has no continuation page")
+            if args.offset and not args.array:
+                raise KBError("single-record retrieval has no continuation page; use --array FIELD for array pages")
             result = {"kind": "record", "value": project_value(by_id[identifier], args),
                       "projection": projection_info(args), "omitted_count": 0, "truncated": False}
+            if args.array:
+                result = array_page(result, args)
+        elif identifier in by_source and args.array:
+            raise KBError("array paging applies to one record, not a source", code="unsupported_array_page")
         elif identifier in by_source:
             result = source_result(by_source[identifier], args,
                                    metadata_only=args.metadata_only or args.ids_only or args.summary)
         else:
             raise KBError(f"unknown KnowledgeBase id: {identifier}", code="unknown_id")
         result.update(kb_revision=core["kb_revision"], returned_ids=[identifier], missing_ids=[])
-        emit_bounded(result, args)
+        try:
+            emit_bounded(result, args)
+        except KBError as exc:
+            if exc.details.get("code") != "budget_too_small" or identifier not in by_id or args.array:
+                raise
+            arrays = {key: len(value) for key, value in result["value"].items() if isinstance(value, list)}
+            raise KBError("record exceeds the read budget; select --fields or page one array with --array FIELD",
+                          **{**exc.details, "kb_revision": core["kb_revision"], "array_fields": dict(
+                              sorted(arrays.items(), key=lambda pair: (-pair[1], pair[0]))[:10])}) from exc
         return
     # Batch results contain record values/source metadata; chunks use single-source get.
     rows, missing = [], []
@@ -1361,11 +1423,20 @@ def field_changes(before: Any, after: Any, path: str = "", *, before_exists: boo
             yield from field_changes(left.get(key), right.get(key), pointer,
                                      before_exists=key in left, after_exists=key in right)
         return
+    if (before_exists and after_exists and isinstance(before, list) and isinstance(after, list)
+            and len(after) > len(before) and json_equal(before, after[:len(before)])):
+        # Every earlier item is unchanged and new items follow: show only the appended items.
+        yield {"path": path or "/", "change": "appended", "before_count": len(before),
+               "appended_count": len(after) - len(before), "appended": after[len(before):]}
+        return
     result = {"path": path or "/", "change": "added" if not before_exists else "removed" if not after_exists else "changed"}
     if before_exists:
         result["before"] = before
     if after_exists:
         result["after"] = after
+    if before_exists and after_exists and isinstance(before, list) and isinstance(after, list):
+        # Counts stay visible without values, so a whole-array replacement that drops items is noticeable.
+        result.update(before_count=len(before), after_count=len(after))
     yield result
 
 
@@ -1391,6 +1462,7 @@ def candidate_preview(core: dict[str, Any], records: list[dict[str, Any]], sourc
             if not include_values:
                 item.pop("before", None)
                 item.pop("after", None)
+                item.pop("appended", None)
             changes.append(item)
             affected[target].add(identifier)
 
@@ -1528,7 +1600,7 @@ def _command_apply(args: argparse.Namespace, progress: dict[str, Any]) -> None:
                 "write_outcome": write_outcome(progress, "before_replacement"),
                 "transaction_sha256": transaction_hash,
                 "preview_time": preview_time,
-                "preview": {**preview_counts, "path_format": "json_pointer", "arrays": "atomic",
+                "preview": {**preview_counts, "path_format": "json_pointer", "arrays": "atomic_or_appended",
                             "values_included": args.preview_values, "upserts": "whole_object", "core_patch": "shallow_replacement"},
             }, "changes", changes, args)
         emit_bounded(result, args)
@@ -1651,6 +1723,7 @@ def build_parser() -> argparse.ArgumentParser:
     get.add_argument("identifier", nargs="+")
     get.add_argument("--locator", help="prepared-chunk locator substring")
     get.add_argument("--metadata-only", action="store_true", help="never read or hash prepared contents")
+    get.add_argument("--array", help="page one dotted array field of a single record with --offset/--limit/--budget")
     add_read_output(get, limit=20)
     get.set_defaults(func=command_get)
 
@@ -1722,6 +1795,12 @@ def main(argv: list[str] | None = None) -> int:
         raise KBError("fields must be at most 32 named paths, each at most 120 characters")
     if len(getattr(args, "query", "")) > 500:
         raise KBError("query cannot exceed 500 characters")
+    if getattr(args, "array", None) is not None:
+        if not re.fullmatch(r"[A-Za-z_][\w-]*(?:\.[A-Za-z_][\w-]*)*", args.array) or len(args.array) > 120:
+            raise KBError("array must be one dotted field path of at most 120 characters")
+        if len(args.identifier) != 1 or args.summary or args.ids_only or args.metadata_only or args.locator:
+            raise KBError("array paging applies to exactly one full or field-projected record",
+                          code="unsupported_array_page")
     if args.command == "apply":
         if not args.dry_run and (args.offset or args.preview_values or args.preview_time):
             raise KBError("preview options require --dry-run")

@@ -1,6 +1,6 @@
 # R04 — Visual Studio 2026 and a full 3D Genepool viewer
 
-Genepool Analyzer · Created 8 September 2026; Step 1 revised and accepted 9 September 2026 · **Step 1 implemented and verified; awaiting owner review. Later steps remain unstarted.**
+Genepool Analyzer · Created 8 September 2026; Step 1 plan accepted 9 September 2026; result accepted 1 October 2026 · **Step 1 accepted. Step 2 design prepared for owner review; Step 3 and later implementation remain unstarted.**
 
 ## Decision and scope
 
@@ -64,6 +64,10 @@ Reference mode uses the project's own deterministic generator. If a reference ha
 **Failure handling:** investigate integration regressions within this step. If the .NET 10-targeted Godot build cannot run correctly after a bounded repair attempt, present the precise blocker and the working VS2026/.NET 9-targeted baseline, including its actual runtime. Consider a minimal engine update only if evidence requires it. Do not combine an engine/rendering overhaul with this migration. Stop for review before Step 2.
 
 ## Step 2 — Full 3D design and organism model review
+
+**1 October design revision:** Step 2 was authorized by the owner and its review package is now prepared. The current specification and three illustrative concept sheets are in [R04_STEP2_DESIGN_REVIEW.md](D:/Posao/Fistnet.Genepool/KnowledgeBase/R04_STEP2_DESIGN_REVIEW.md). It recommends coexisting branching-fan, knotted-mantle and folded-bud forms, responding to the later Calyx GIFs and photos. Shape meaning, cell bounds, four detail levels, outcome-driven motion, historical target limits and camera/picking are defined there. Owner design acceptance remains pending; Step 3 has not started.
+
+> The earlier outline below is retained as proposal history. Where it differs, the dated Step 2 review specification is the current recommendation.
 
 **Result:** an approved visual/model specification before implementation. Deliver a small set of images showing a single organism from above and from the side, a mixed-colour group at cell scale, and the proposed board at overview and close range. Label generated concepts as illustrative; they are not proof of engine output.
 
@@ -145,4 +149,4 @@ No builds, application runs, downloads, installations, source edits, new models 
 
 Each implementation step is scoped to be independently reviewable. Inspect the current Git state before editing; preserve unrelated owner work and use normal source-version lineage for changed registered files. Git reversibility is useful, but no automatic commits, destructive resets or redundant backup trees are part of this plan.
 
-The owner accepted the revised **R04 Step 1** plan and authorized implementation on 9 September 2026, additionally requiring a VS2026 `.slnx` and confirmation that the app is buildable (DEC-0042). Step 1 is implemented and verified, with results in [R04_STEP1_MIGRATION_RESULT.md](D:/Posao/Fistnet.Genepool/KnowledgeBase/R04_STEP1_MIGRATION_RESULT.md); it awaits owner review (FACT-0065). Model selection remains reserved for Step 2, which has not been authorized to start; dense 3D performance remains open until its later checkpoint. The implementation result records actual build and runtime verification separately from this plan and its dated baseline observations.
+The owner accepted the revised **R04 Step 1** plan and authorized implementation on 9 September 2026, additionally requiring a VS2026 `.slnx` and confirmation that the app is buildable (DEC-0042). Step 1 is implemented and verified, with results in [R04_STEP1_MIGRATION_RESULT.md](D:/Posao/Fistnet.Genepool/KnowledgeBase/R04_STEP1_MIGRATION_RESULT.md); the owner verified and accepted Step 1 on 1 October 2026 (DEC-0044). The owner subsequently authorized Step 2 on 1 October 2026 (DEC-0046). Its design package is prepared for owner review (REC-0013 / FACT-0068); design acceptance and Step 3 authorization remain pending. Dense 3D performance remains open until its later checkpoint. The implementation result records actual build and runtime verification separately from this plan and its dated baseline observations.

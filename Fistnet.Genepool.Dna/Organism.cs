@@ -54,19 +54,27 @@ namespace Fistnet.Genepool.Dna
 
         #endregion Constants.
 
-
         public List<IDnaElement> DnaSequence { get; protected set; }
         public StrategyNetwork Brain { get; private set; }
         private bool _isActive;
         private byte currentSequenceIndex;
         private byte _reproductionsInAge;
+
         public void Activate() => _isActive = true;
+
         public void Deactivate() => _isActive = false;
+
         public TargetTypes? NextRequestedPosition { get; private set; }
+
         public void MoveDone() => NextRequestedPosition = null;
+
         public int FoodCapacity => Math.Max(0, MAX_FOOD_CARRY - FoodBalance);
-        public int GetAndResetTakenFood() { int taken = TakenFood; TakenFood = 0; return taken; }
+
+        public int GetAndResetTakenFood()
+        { int taken = TakenFood; TakenFood = 0; return taken; }
+
         public void SetAvailableFood(int food) => AvailableFood = Math.Clamp(food, 0, MAX_FOOD_CARRY);
+
         public int ReceiveFood(int requested)
         {
             int actual = Math.Min(Math.Max(0, requested), FoodCapacity);
@@ -74,9 +82,13 @@ namespace Fistnet.Genepool.Dna
             TakenFood += actual;
             return actual;
         }
+
         // Pending construction is retired: a child exists only after a secured placement.
         public Organism Child => null;
-        public void ReleaseChild() { }
+
+        public void ReleaseChild()
+        { }
+
         public GeneIdentity LastAction { get; private set; }
         public ActionOutcome LastOutcome { get; private set; }
 
@@ -84,6 +96,7 @@ namespace Fistnet.Genepool.Dna
         private List<IDnaEffect> _referenceEffects = new List<IDnaEffect>();
         [ThreadStatic] private static List<IDnaEffect> capturedEffects;
         public IReadOnlyList<IDnaEffect> PendingEffects => Common.IsReferenceMode ? _referenceEffects.ToArray() : EffectsStack.ToArray();
+
         public void AddStackedEffect(IDnaEffect effect)
         {
             if (effect == null) throw new ArgumentNullException(nameof(effect));
@@ -91,7 +104,10 @@ namespace Fistnet.Genepool.Dna
             else { EffectsStack.Add(effect); if (Common.IsReferenceMode) _referenceEffects.Add(effect); }
             SimulationDiagnostics.Current?.EffectQueued(this, effect);
         }
-        private void ClearEffects() { EffectsStack = new ConcurrentBag<IDnaEffect>(); _referenceEffects.Clear(); }
+
+        private void ClearEffects()
+        { EffectsStack = new ConcurrentBag<IDnaEffect>(); _referenceEffects.Clear(); }
+
         public void ExecuteEffectStack(Func<Organism, int, int> gather = null, Func<Organism, Organism, bool> birth = null)
         {
             // Compatibility/system-effect entry point. Board DNA actions use ResolveDecision atomically.
@@ -101,6 +117,7 @@ namespace Fistnet.Genepool.Dna
             ClearEffects();
             Starved();
         }
+
         private void Starved()
         {
             if (FoodBalance >= 0) return;
@@ -109,12 +126,15 @@ namespace Fistnet.Genepool.Dna
             FoodBalance = 0;
             SimulationDiagnostics.Current?.Starvation(this, before);
         }
+
         private static int SaturatingAdd(int value, int delta) => (int)Math.Clamp((long)value + delta, int.MinValue, int.MaxValue);
+
         private void ChangeHealth(int delta)
         {
             Health = SaturatingAdd(Health, delta);
             if (HealthRule == HealthPolicy.Capped) Health = Math.Min(Health, Common.Policy.MaximumHealth);
         }
+
         private void ApplyEffect(IDnaEffect effect, ActionOutcome outcome, Func<Organism, int, int> gather,
             Func<Organism, Organism, bool> birth)
         {
@@ -128,6 +148,7 @@ namespace Fistnet.Genepool.Dna
                     if (outcome != null)
                     { outcome.Damage += Math.Max(0, oldHealth - Math.Max(0, recipient.Health)); outcome.Healing += Math.Max(0, recipient.Health - oldHealth); }
                     break;
+
                 case EffectTypes.FoodChange:
                     int food = Convert.ToInt32(effect.Value);
                     if (food > 0)
@@ -139,21 +160,26 @@ namespace Fistnet.Genepool.Dna
                     }
                     else recipient.FoodBalance = SaturatingAdd(recipient.FoodBalance, food);
                     break;
+
                 case EffectTypes.Movement:
                     recipient.NextRequestedPosition = (TargetTypes)effect.Value;
                     break;
+
                 case EffectTypes.Mutate:
                     int mutations = recipient.MutateMe(Convert.ToInt32(effect.Value),
                         ReferenceEquals(recipient, this) ? effect.DnaSequenceIndex : byte.MaxValue);
                     if (outcome != null) outcome.Mutations += mutations;
                     break;
+
                 case EffectTypes.Birth:
                     bool placed = birth != null && birth(recipient, (Organism)effect.Value);
                     if (outcome != null) { outcome.BirthPlaced = placed; if (placed) outcome.FoodSpent += -FOOD_REDUCTION_PER_BIRTH; }
                     break;
+
                 case EffectTypes.AgeChange:
                     recipient.Age = Math.Max(0, SaturatingAdd(recipient.Age, Convert.ToInt32(effect.Value)));
                     break;
+
                 default: throw new NotSupportedException("Unknown effect type.");
             }
             SimulationDiagnostics.Current?.EffectApplied(recipient, effect, before);
@@ -162,6 +188,7 @@ namespace Fistnet.Genepool.Dna
         public bool CanReproduceWith(Organism other) => !IsDead && other != null && !other.IsDead
             && Age >= 1 && Age < MAX_AGE && other.Age >= 1 && other.Age < MAX_AGE
             && FoodBalance >= -FOOD_REDUCTION_PER_BIRTH && _reproductionsInAge < MAX_REPRODUCTIONS_PER_AGE;
+
         public Organism CommitBirth(Organism other)
         {
             if (!CanReproduceWith(other)) return null;
@@ -172,6 +199,7 @@ namespace Fistnet.Genepool.Dna
             SimulationDiagnostics.Current?.ChildCreated(this, other, child);
             return child;
         }
+
         private int MutateMe(int seed, byte protectedSlot)
         {
             IRandomSource random = Common.CreateLocalRandom(seed);
@@ -198,15 +226,20 @@ namespace Fistnet.Genepool.Dna
                 case DnaTypes.Eat: return ReferenceEquals(target, this) && FoodBalance >= -FEED_FOOD_COST;
                 case DnaTypes.Evolve: return ReferenceEquals(target, this);
                 case DnaTypes.GenerateFood: return target != null && !target.IsDead && target.FoodCapacity > 0 && target.AvailableFood > 0;
-                case DnaTypes.Kill: return target != null && !target.IsDead && (Common.Policy.Attack == AttackPolicy.DamageOnly
+                case DnaTypes.Kill:
+                    return target != null && !target.IsDead && (Common.Policy.Attack == AttackPolicy.DamageOnly
                     || (!ReferenceEquals(target, this) && FoodBalance >= Common.Policy.AttackCost));
-                case DnaTypes.Heal: return target != null && !target.IsDead && target.DnaCode == DnaCode && FoodBalance >= -HEAL_POWER_COST
+
+                case DnaTypes.Heal:
+                    return target != null && !target.IsDead && target.DnaCode == DnaCode && FoodBalance >= -HEAL_POWER_COST
                     && target.Health < (target.HealthRule == HealthPolicy.Capped ? Common.Policy.MaximumHealth : OVERWEIGHT_DEATH - HEAL_POWER);
+
                 case DnaTypes.CombineDna: return CanReproduceWith(target);
                 case DnaTypes.Infect: return target != null && !target.IsDead && FoodBalance >= -INFECT_POWER_COST;
                 default: return false;
             }
         }
+
         public ActionDecision PrepareSeason(IReadOnlyList<ActionCandidate> candidates)
         {
             if (!_isActive) return null;
@@ -229,6 +262,7 @@ namespace Fistnet.Genepool.Dna
             currentSequenceIndex++;
             return Brain.Choose(candidates, Common.Policy);
         }
+
         public void ResolveDecision(ActionDecision decision, Func<Organism, int, int> gather,
             Func<Organism, Organism, bool> birth)
         {
@@ -278,7 +312,8 @@ namespace Fistnet.Genepool.Dna
             }
             if (predator && candidate.Target.Health <= 0 && !IsDead && outcome.Damage > 0)
             {
-                // Only this direct lethal transaction transfers reserves; later attacks cannot target a corpse.
+                // Only this direct lethal transaction transfers reserves; later attacks cannot
+                // target a corpse.
                 int transfer = Math.Min(Common.Policy.AttackFoodLimit, Math.Min(FoodCapacity, Math.Max(0, candidate.Target.FoodBalance)));
                 candidate.Target.FoodBalance -= transfer; FoodBalance += transfer; outcome.FoodTransferred = transfer;
             }
@@ -289,6 +324,7 @@ namespace Fistnet.Genepool.Dna
             SimulationDiagnostics.Current?.Count("food.transaction_gathered", outcome.FoodGathered);
             SimulationDiagnostics.Current?.Count("food.predation_transferred", outcome.FoodTransferred);
         }
+
         public void FinishSeason(ActionDecision decision, bool actorPresent, bool targetPresent)
         {
             if (decision == null) return;
@@ -308,8 +344,15 @@ namespace Fistnet.Genepool.Dna
             ResolveDecision(decision, null, null);
             FinishSeason(decision, !IsDead, target != null && !target.IsDead);
         }
-        public Organism() : this(INITAL_FOOD_BALANCE, FounderRepertoire.UnrestrictedRandom) { }
-        public Organism(int initialFood) : this(initialFood, FounderRepertoire.UnrestrictedRandom) { }
+
+        public Organism() : this(INITAL_FOOD_BALANCE, FounderRepertoire.UnrestrictedRandom)
+        {
+        }
+
+        public Organism(int initialFood) : this(initialFood, FounderRepertoire.UnrestrictedRandom)
+        {
+        }
+
         public Organism(int initialFood, FounderRepertoire repertoire)
         {
             if (initialFood < 0 || initialFood > MAX_FOOD_CARRY) throw new ArgumentOutOfRangeException(nameof(initialFood));
@@ -319,6 +362,7 @@ namespace Fistnet.Genepool.Dna
             DnaSequence = DnaElementFactory.GetFounderDnaSequence(this, repertoire);
             DnaCode = Common.CalculateOrganismDnaCode(DnaSequence); Brain = new StrategyNetwork(this);
         }
+
         public Organism(Organism parent1, Organism parent2)
         {
             Id = Common.NextOrganismId(); Parent1Id = parent1.Id; Parent2Id = parent2.Id;
@@ -329,6 +373,7 @@ namespace Fistnet.Genepool.Dna
             SequenceAge = DnaCode == parent1.DnaCode ? parent1.SequenceAge : 0;
             Brain = new StrategyNetwork(this); Brain.LearnFromParents(parent1, parent2);
         }
+
         public Organism(List<IDnaElement> dnaSequence)
         {
             Id = Common.NextOrganismId(); Health = HealthRule == HealthPolicy.Capped ? Math.Min(INITAL_HEALTH, Common.Policy.MaximumHealth) : INITAL_HEALTH; FoodBalance = INITAL_FOOD_BALANCE;

@@ -1,5 +1,5 @@
 {
-  "catalog_revision": 40,
+  "catalog_revision": 44,
   "sources": [
     {
       "source_id": "SRC-0001",
@@ -4395,6 +4395,19 @@
         "actor": "Genepool Analyzer",
         "type": "authorized_R02_Part4_implementation",
         "attribution": "Transient founder, metrics and runner helpers; root integration, review, execution and canonical KB."
+      },
+      "supersession": {
+        "source_id": "SRC-0332",
+        "actor": "Genepool Analyzer",
+        "reason": "Reconcile a pre-existing working-file fingerprint mismatch detected during shared-capability registration; current Organism.cs content remains unreviewed, untested and unaccepted, and no source is edited.",
+        "record_ids": [
+          "FACT-0067"
+        ],
+        "observed_at": "2026-09-20T15:47:52+00:00",
+        "history": {
+          "kind": "unavailable",
+          "reason": "Registered SRC-0158 exact bytes are not reproduced by HEAD 4673c78e4a3e1e0a7269a494d57109a32201596b or the four commits in the exact Organism.cs local path history using raw or LF-to-CRLF bytes; no SRC-0158/Organism predecessor snapshot was found in KB/source-history. Prior source hash, size, records and Git code history remain; exact prior-byte preservation is unverified. No semantic review or acceptance of the current external edit is implied."
+        }
       }
     },
     {
@@ -6375,6 +6388,21 @@
           "FACT-0054"
         ],
         "purpose": "Local KB usage reference adaptation, not a simulation or role change."
+      },
+      "supersession": {
+        "source_id": "SRC-0343",
+        "actor": "Genepool Analyzer",
+        "reason": "Document verified selective v07 drafting, array paging, append previews and context route matching; required policy unchanged.",
+        "record_ids": [
+          "DEC-0006",
+          "DEC-0048",
+          "FACT-0071"
+        ],
+        "observed_at": "2026-10-23T17:39:11+00:00",
+        "history": {
+          "kind": "kb_snapshot",
+          "path": "source-history/SRC-0260-v07-predecessor-KB.md"
+        }
       }
     },
     {
@@ -7527,7 +7555,24 @@
       "observed_at_utc": "2026-09-09T11:50:11+00:00",
       "supersedes": "SRC-0154",
       "status": "registered current working-file version",
-      "coverage": "Exact current bytes hashed; substantive coverage must be recorded separately."
+      "coverage": "Exact current bytes hashed; substantive coverage must be recorded separately.",
+      "supersession": {
+        "source_id": "SRC-0330",
+        "actor": "Genepool Analyzer",
+        "reason": "Owner-authorized governance correction preserves discussion stops and scoped implementation autonomy; domain stage remains paused.",
+        "record_ids": [
+          "DEC-0043",
+          "FACT-0066"
+        ],
+        "observed_at": "2026-09-09T14:21:07+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "4673c78e4a3e1e0a7269a494d57109a32201596b",
+          "path": "AGENTS.md",
+          "blob_oid": "577e66992a330970af4397fa79d50521cfa24a77",
+          "transform": "lf_to_crlf"
+        }
+      }
     },
     {
       "source_id": "SRC-0320",
@@ -7541,7 +7586,24 @@
       "observed_at_utc": "2026-09-09T11:50:11+00:00",
       "supersedes": "SRC-0155",
       "status": "registered current working-file version",
-      "coverage": "Exact current bytes hashed; substantive coverage must be recorded separately."
+      "coverage": "Exact current bytes hashed; substantive coverage must be recorded separately.",
+      "supersession": {
+        "source_id": "SRC-0331",
+        "actor": "Genepool Analyzer",
+        "reason": "Owner-authorized governance correction preserves discussion stops and scoped implementation autonomy; domain stage remains paused.",
+        "record_ids": [
+          "DEC-0043",
+          "FACT-0066"
+        ],
+        "observed_at": "2026-09-09T14:21:07+00:00",
+        "history": {
+          "kind": "git",
+          "commit": "4673c78e4a3e1e0a7269a494d57109a32201596b",
+          "path": ".SeedAnalyzer/CONSTITUTION.md",
+          "blob_oid": "c5f477080b9f67d4fdd3dc9abff986f17b180383",
+          "transform": "lf_to_crlf"
+        }
+      }
     },
     {
       "source_id": "SRC-0321",
@@ -7673,7 +7735,201 @@
           "FACT-0065"
         ]
       }
+    },
+    {
+      "source_id": "SRC-0330",
+      "title": "Genepool Analyzer project entry instructions",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\AGENTS.md"
+      },
+      "sha256": "61E45B41CD3E800B1698EEF36A4CD577FCFBAB4E05157DEF119F3A06F5F49C05",
+      "size_bytes": 8824,
+      "observed_at_utc": "2026-09-09T14:21:07+00:00",
+      "supersedes": "SRC-0319",
+      "status": "registered current working-file version",
+      "coverage": "Complete current instruction text and task diff statically reviewed; required loading references preserved."
+    },
+    {
+      "source_id": "SRC-0331",
+      "title": "Genepool Analyzer Operating Constitution GA-R03",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\.SeedAnalyzer\\CONSTITUTION.md"
+      },
+      "sha256": "CCAD20D549FE6C621932019402F4620F8AFA7EDD6601D92C5EEACA9D357C521E",
+      "size_bytes": 22825,
+      "observed_at_utc": "2026-09-09T14:21:07+00:00",
+      "supersedes": "SRC-0320",
+      "status": "registered current working-file version",
+      "coverage": "Complete current instruction text and task diff statically reviewed; required loading references preserved."
+    },
+    {
+      "source_id": "SRC-0332",
+      "title": "Fistnet.Genepool.Dna/Organism.cs (observed working bytes, unreviewed)",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Dna\\Organism.cs"
+      },
+      "sha256": "7059585E133F33F194683A9E694334DE309C3F2F39E72669284D6EF7C11E2AE2",
+      "size_bytes": 19471,
+      "observed_at_utc": "2026-09-20T15:47:52+00:00",
+      "supersedes": "SRC-0158",
+      "status": "Observed existing working version; not substantively reviewed, tested or accepted",
+      "coverage": "Hash/size and bounded exact-path history inspected only; no current code-content review, execution or edits."
+    },
+    {
+      "source_id": "SRC-0333",
+      "title": "Genepool Designer R04 Step2: COUNTER_PROPOSAL.md",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Claude\\OUTPUT\\COUNTER_PROPOSAL.md"
+      },
+      "sha256": "AFD898B030A3932B3C96CED19D3EEDB6714F848EF765E0A4707CC24A6535B35A",
+      "size_bytes": 23862,
+      "observed_at_utc": "2026-10-01T21:53:43.020179+00:00",
+      "status": "registered Designer review artifact",
+      "coverage": "Complete document read; assertions attributed to Genepool Designer (Claude), separately reviewed in FACT-0070."
+    },
+    {
+      "source_id": "SRC-0334",
+      "title": "Genepool Designer R04 Step2: COMPARISON.md",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Claude\\OUTPUT\\COMPARISON.md"
+      },
+      "sha256": "778DFB467A937A4A415B84CE5B6F3AB3C82D3F6A336BF669008CE0A62F1B24CC",
+      "size_bytes": 9339,
+      "observed_at_utc": "2026-10-01T21:53:43.020179+00:00",
+      "status": "registered Designer review artifact",
+      "coverage": "Complete document read; assertions attributed to Genepool Designer (Claude), separately reviewed in FACT-0070."
+    },
+    {
+      "source_id": "SRC-0335",
+      "title": "Genepool Designer R04 Step2: EVIDENCE_AND_LIMITS.md",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Claude\\OUTPUT\\EVIDENCE_AND_LIMITS.md"
+      },
+      "sha256": "A2A015BEE4F5081A13C740A323C95F214455D9AF3022D443D195CD92D987AE3E",
+      "size_bytes": 10504,
+      "observed_at_utc": "2026-10-01T21:53:43.021177+00:00",
+      "status": "registered Designer review artifact",
+      "coverage": "Complete document read; assertions attributed to Genepool Designer (Claude), separately reviewed in FACT-0070."
+    },
+    {
+      "source_id": "SRC-0336",
+      "title": "Genepool Designer R04 Step2: visuals/01-organism-above-and-side.png",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Claude\\OUTPUT\\visuals\\01-organism-above-and-side.png"
+      },
+      "sha256": "23061261D1D9BBC1E667773F3CC44541B67552D80AB82B3BB1941368C67B1EC2",
+      "size_bytes": 344640,
+      "observed_at_utc": "2026-10-01T21:53:43.022174+00:00",
+      "status": "registered Designer review artifact",
+      "coverage": "Visually inspected concept PNG; synthetic illustrative data, not runtime evidence."
+    },
+    {
+      "source_id": "SRC-0337",
+      "title": "Genepool Designer R04 Step2: visuals/02-dense-patch-and-overview.png",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Claude\\OUTPUT\\visuals\\02-dense-patch-and-overview.png"
+      },
+      "sha256": "91626E4997376B1349C288F6DD8588CB34183CAA0A288315ACDA25446E8A2E68",
+      "size_bytes": 1588329,
+      "observed_at_utc": "2026-10-01T21:53:43.025166+00:00",
+      "status": "registered Designer review artifact",
+      "coverage": "Visually inspected concept PNG; synthetic illustrative data, not runtime evidence."
+    },
+    {
+      "source_id": "SRC-0338",
+      "title": "Genepool Designer R04 Step2: visuals/03-action-storyboard.png",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Claude\\OUTPUT\\visuals\\03-action-storyboard.png"
+      },
+      "sha256": "23B04A596FFA71ED4F1BB548628FFDF3FEA6B48DA39018CD2AB93A2125B9CB4E",
+      "size_bytes": 423067,
+      "observed_at_utc": "2026-10-01T21:53:43.026760+00:00",
+      "status": "registered Designer review artifact",
+      "coverage": "Visually inspected concept PNG; synthetic illustrative data, not runtime evidence."
+    },
+    {
+      "source_id": "SRC-0339",
+      "title": "Genepool Designer R04 Step2: visuals/04-same-board-two-designs.png",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Claude\\OUTPUT\\visuals\\04-same-board-two-designs.png"
+      },
+      "sha256": "2610745285D6A7FEA279FB19FF57AD7AE3EECDC88AB46F5880994F4395EDFD9A",
+      "size_bytes": 1116681,
+      "observed_at_utc": "2026-10-01T21:53:43.029264+00:00",
+      "status": "registered Designer review artifact",
+      "coverage": "Visually inspected concept PNG; synthetic illustrative data, not runtime evidence."
+    },
+    {
+      "source_id": "SRC-0340",
+      "title": "Genepool Designer R04 Step2: visuals/05-detail-levels.png",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Claude\\OUTPUT\\visuals\\05-detail-levels.png"
+      },
+      "sha256": "768A39C418ABD4D0FDB92390EF208F73D553465D3CEA390D3C00424B22496607",
+      "size_bytes": 557842,
+      "observed_at_utc": "2026-10-01T21:53:43.030263+00:00",
+      "status": "registered Designer review artifact",
+      "coverage": "Visually inspected concept PNG; synthetic illustrative data, not runtime evidence."
+    },
+    {
+      "source_id": "SRC-0341",
+      "title": "Genepool Designer R04 Step2: visuals/source/concept.js",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Claude\\OUTPUT\\visuals\\source\\concept.js"
+      },
+      "sha256": "6138E68AB52CB9A56D42D1710ABDA32770C666955B762E2A97CFE1CD8CD30283",
+      "size_bytes": 33795,
+      "observed_at_utc": "2026-10-01T21:53:43.031262+00:00",
+      "status": "registered Designer review artifact",
+      "coverage": "Targeted cord/topology/statistics sections read without executing; unrelated generator sections not reviewed."
+    },
+    {
+      "source_id": "SRC-0342",
+      "title": "Genepool Designer R04 Step2: visuals/source/figures.js",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\Fistnet.Genepool.Claude\\OUTPUT\\visuals\\source\\figures.js"
+      },
+      "sha256": "9028D733C3226796C988F311F766EC1590FB44CC7689F5AE7EF0250FFD62BD38",
+      "size_bytes": 26299,
+      "observed_at_utc": "2026-10-01T21:53:43.031262+00:00",
+      "status": "registered Designer review artifact",
+      "coverage": "Targeted cord/topology/statistics sections read without executing; unrelated generator sections not reviewed."
+    },
+    {
+      "source_id": "SRC-0343",
+      "title": "Genepool KnowledgeBase policy and reference",
+      "locator": {
+        "type": "file",
+        "path": "D:\\Posao\\Fistnet.Genepool\\.SeedAnalyzer\\KB.md"
+      },
+      "sha256": "95B4767F27D342CF780EE35D6957D81D2595DF2821C01333115B1113435DC688",
+      "size_bytes": 37977,
+      "observed_at_utc": "2026-10-23T17:39:11+00:00",
+      "supersedes": "SRC-0260",
+      "status": "registered current working-file version",
+      "coverage": "Required-policy prefix unchanged; reference text documents the four tested selective v07 ports. Exact predecessor snapshot retained.",
+      "provenance": {
+        "actor": "Genepool Analyzer",
+        "record_ids": [
+          "DEC-0048",
+          "FACT-0071"
+        ],
+        "purpose": "Local KB tool/reference successor, not role or simulation changes."
+      }
     }
   ],
-  "updated_at": "2026-09-09T11:55:52+00:00"
+  "updated_at": "2026-10-23T17:45:58+00:00"
 }
