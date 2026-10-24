@@ -25,3 +25,9 @@ ProjectEvaluation
 /.tools/
 **/.godot/
 /Fistnet.Genepool.Godot/Properties/launchSettings.json
+
+# Keep local editor state and agent knowledge out of version control.
+.vs/
+.SeedAnalyzer/
+KnowledgeBase/
+AGENTS.md
